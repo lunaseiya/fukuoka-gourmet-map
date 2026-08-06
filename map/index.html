@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>福岡グルメマップ</title>
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+  :root {
+    --accent: #d63031;
+    --accent-soft: #ffe3e3;
+    --text: #222;
+    --muted: #767676;
+    --border: #e5e5e5;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 12px 8px;
+  }
+  h1 {
+    font-size: 15px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .filters {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  select#areaSelect {
+    border: 1px solid var(--border);
+    border-radius: 999px;
+    padding: 6px 10px;
+    font-size: 13px;
+    background: #fff;
+    color: var(--text);
+    max-width: 40vw;
+  }
+  #map {
+    width: 100%;
+    height: 46vh;
+    min-height: 260px;
+  }
+  #count {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 14px 0;
+  }
+  #list {
+    padding: 8px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: box-shadow .15s, border-color .15s;
+  }
+  .card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .card-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .card-genre {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .card-area {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  .card-verdict {
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .card-kids {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    background: #eef7ee;
+    color: #2f7a2f;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .card-links {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card-links a {
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent-soft);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .maplibregl-popup-content {
+    font-family: inherit;
+    padding: 12px 14px;
+    border-radius: 10px;
+  }
+  .popup-name { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
+  .popup-meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
+  .popup-verdict { font-size: 12px; margin-bottom: 6px; line-height: 1.5; }
+  .popup-links a {
+    font-size: 12px;
+    color: var(--accent);
+    margin-right: 8px;
+    text-decoration: none;
+  }
+  .osm-credit {
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+    padding: 4px 10px 0;
+  }
+  .osm-credit a { color: var(--muted); }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>福岡グルメマップ</h1>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">すべて</button>
+    <button class="filter-btn" data-filter="kids">子連れOK</button>
+    <select id="areaSelect">
+      <option value="">エリアで絞る</option>
+    </select>
+  </div>
+</header>
+
+<div id="map"></div>
+<div class="osm-credit">地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+
+<div id="count"></div>
+<div id="list"></div>
+
+<script>
+const DATA_URL = "../data/spots.json";
+
+const state = {
+  spots: [],
+  filter: "all",
+  area: "",
+  markers: [],
+  selectedId: null
+};
+
+async function loadSpots() {
+  try {
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error("fetch failed: " + res.status);
+    const json = await res.json();
+    return Array.isArray(json) ? json : [];
+  } catch (e) {
+    console.error("spots.json の読み込みに失敗しました", e);
+    return [];
+  }
+}
+
+function isKidsOk(spot) {
+  return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
+}
+
+function applyFilters(spots) {
+  return spots.filter(s => {
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.area && s.area !== state.area) return false;
+    return true;
+  });
+}
+
+function videoLinksHtml(video, cls) {
+  if (!video) return "";
+  const items = [];
+  if (video.youtube) items.push(`<a href="${video.youtube}" target="_blank" rel="noopener">YouTube</a>`);
+  if (video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+  if (video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+  if (!items.length) return "";
+  return `<div class="${cls}">${items.join("")}</div>`;
+}
+
+function escapeHtml(str) {
+  if (str === null || str === undefined) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+function popupHtml(spot) {
+  const area = spot.area ? escapeHtml(spot.area) : "";
+  const genre = spot.genre ? escapeHtml(spot.genre) : "";
+  const meta = [area, genre].filter(Boolean).join(" ・ ");
+  return `
+    <div class="popup-name">${escapeHtml(spot.name)}</div>
+    <div class="popup-meta">${meta}</div>
+    ${spot.verdict ? `<div class="popup-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
+    ${videoLinksHtml(spot.video, "popup-links")}
+  `;
+}
+
+function cardHtml(spot) {
+  const area = spot.area ? escapeHtml(spot.area) : "";
+  const kidsOk = isKidsOk(spot);
+  return `
+    <div class="card-top">
+      <div class="card-name">${escapeHtml(spot.name)}</div>
+      <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
+    </div>
+    <div class="card-area">${area}</div>
+    ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
+    ${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+    ${videoLinksHtml(spot.video, "card-links")}
+  `;
+}
+
+function populateAreaSelect(spots) {
+  const areas = [...new Set(spots.map(s => s.area).filter(Boolean))].sort();
+  const sel = document.getElementById("areaSelect");
+  areas.forEach(a => {
+    const opt = document.createElement("option");
+    opt.value = a;
+    opt.textContent = a;
+    sel.appendChild(opt);
+  });
+}
+
+function clearMarkers() {
+  state.markers.forEach(m => m.marker.remove());
+  state.markers = [];
+}
+
+function focusSpot(spot) {
+  state.selectedId = spot.id;
+  renderList();
+  const m = state.markers.find(x => x.spot.id === spot.id);
+  if (m && window._map) {
+    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true });
+    m.marker.togglePopup();
+  }
+}
+
+function renderList() {
+  const list = document.getElementById("list");
+  const countEl = document.getElementById("count");
+  const filtered = applyFilters(state.spots);
+
+  countEl.textContent = state.spots.length
+    ? `${filtered.length}件表示中(全${state.spots.length}件)`
+    : "";
+
+  if (!state.spots.length) {
+    list.innerHTML = `<div class="empty">まだ登録されたお店がありません。<br>data/spots.json に追加すると、ここと地図に表示されます。</div>`;
+    return;
+  }
+  if (!filtered.length) {
+    list.innerHTML = `<div class="empty">条件に合うお店が見つかりませんでした。</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(s => `
+    <div class="card${s.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(s.id)}">
+      ${cardHtml(s)}
+    </div>
+  `).join("");
+
+  list.querySelectorAll(".card").forEach(el => {
+    el.addEventListener("click", () => {
+      const spot = state.spots.find(s => s.id === el.dataset.id);
+      if (spot && spot.lat !== null && spot.lng !== null) {
+        focusSpot(spot);
+      } else {
+        state.selectedId = spot ? spot.id : null;
+        renderList();
+      }
+    });
+  });
+}
+
+function renderMarkers() {
+  clearMarkers();
+  if (!window._map) return;
+  const filtered = applyFilters(state.spots).filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
+
+  filtered.forEach(spot => {
+    const el = document.createElement("div");
+    el.style.width = "22px";
+    el.style.height = "22px";
+    el.style.borderRadius = "50% 50% 50% 0";
+    el.style.transform = "rotate(-45deg)";
+    el.style.background = "#d63031";
+    el.style.border = "2px solid #fff";
+    el.style.boxShadow = "0 1px 3px rgba(0,0,0,.4)";
+    el.style.cursor = "pointer";
+
+    const popup = new maplibregl.Popup({ offset: 20 }).setHTML(popupHtml(spot));
+    const marker = new maplibregl.Marker({ element: el })
+      .setLngLat([spot.lng, spot.lat])
+      .setPopup(popup)
+      .addTo(window._map);
+
+    el.addEventListener("click", () => {
+      state.selectedId = spot.id;
+      renderList();
+    });
+
+    state.markers.push({ spot, marker });
+  });
+}
+
+function renderAll() {
+  renderMarkers();
+  renderList();
+}
+
+function initMap(spots) {
+  const withCoords = spots.filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
+  const center = withCoords.length
+    ? [withCoords[0].lng, withCoords[0].lat]
+    : [130.4017, 33.5904]; // 福岡市中心をデフォルト表示
+
+  const map = new maplibregl.Map({
+    container: "map",
+    style: {
+      version: 8,
+      sources: {
+        osm: {
+          type: "raster",
+          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+          tileSize: 256,
+          attribution: "&copy; OpenStreetMap contributors"
+        }
+      },
+      layers: [
+        { id: "osm", type: "raster", source: "osm" }
+      ]
+    },
+    center: center,
+    zoom: withCoords.length ? 12 : 10
+  });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+  window._map = map;
+
+  map.on("load", () => {
+    if (withCoords.length > 1) {
+      const bounds = new maplibregl.LngLatBounds();
+      withCoords.forEach(s => bounds.extend([s.lng, s.lat]));
+      map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
+    }
+    renderAll();
+  });
+}
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.filter = btn.dataset.filter;
+    renderAll();
+  });
+});
+
+document.getElementById("areaSelect").addEventListener("change", (e) => {
+  state.area = e.target.value;
+  renderAll();
+});
+
+(async function main() {
+  const spots = await loadSpots();
+  state.spots = spots;
+  populateAreaSelect(spots);
+  initMap(spots);
+  if (!spots.length) {
+    renderList();
+  }
+})();
+</script>
+
+</body>
+</html>

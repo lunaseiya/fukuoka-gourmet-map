@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>ふくおか、こそだてグルメ。</title>
+<meta name="description" content="子連れでも、ちゃんと楽しめるお店を自分たちの目で。福岡近辺の子連れグルメ・お出かけ情報マップ。">
+<style>
+  :root {
+    --accent: #d63031;
+    --accent-soft: #ffe3e3;
+    --text: #222;
+    --muted: #767676;
+    --border: #e5e5e5;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  a { color: inherit; }
+
+  .hero {
+    padding: 64px 24px 48px;
+    text-align: center;
+    background: linear-gradient(160deg, #fff 0%, var(--accent-soft) 100%);
+  }
+  .hero-kicker {
+    display: inline-block;
+    font-size: 12px;
+    letter-spacing: .08em;
+    color: var(--accent);
+    background: #fff;
+    border: 1px solid var(--accent-soft);
+    padding: 5px 14px;
+    border-radius: 999px;
+    margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: 30px;
+    line-height: 1.5;
+    margin: 0 0 14px;
+    font-weight: 800;
+  }
+  .hero p.lead {
+    font-size: 15px;
+    line-height: 1.9;
+    color: #444;
+    max-width: 460px;
+    margin: 0 auto 30px;
+  }
+  .cta {
+    display: inline-block;
+    background: var(--accent);
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 16px 36px;
+    border-radius: 999px;
+    box-shadow: 0 8px 20px rgba(214,48,49,.28);
+  }
+  .cta:active { transform: translateY(1px); }
+  .cta-sub {
+    margin-top: 10px;
+    font-size: 12px;
+    color: var(--muted);
+  }
+
+  section {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 44px 24px;
+  }
+  .features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .feature {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 18px 8px;
+    text-align: center;
+  }
+  .feature .emoji { font-size: 26px; display: block; margin-bottom: 8px; }
+  .feature .label { font-size: 12px; font-weight: 700; line-height: 1.5; }
+
+  .story h2 {
+    font-size: 19px;
+    margin: 0 0 20px;
+    font-weight: 800;
+    border-left: 5px solid var(--accent);
+    padding-left: 12px;
+  }
+  .story p {
+    font-size: 14.5px;
+    line-height: 2;
+    color: #333;
+    margin: 0 0 20px;
+  }
+
+  .stats {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    text-align: center;
+    padding: 8px 24px 4px;
+  }
+  .stats .num { font-size: 26px; font-weight: 800; color: var(--accent); }
+  .stats .cap { font-size: 11px; color: var(--muted); margin-top: 2px; }
+
+  .bottom-cta {
+    text-align: center;
+    padding: 8px 24px 60px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 24px;
+    font-size: 11px;
+    color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<div class="hero">
+  <span class="hero-kicker">FUKUOKA KIDS GOURMET MAP</span>
+  <h1>ふくおか、<br>こそだてグルメ。</h1>
+  <p class="lead">子連れでも、ちゃんと楽しめるお店を、<br>自分たちの目で見つけていくマップです。</p>
+  <a class="cta" href="map/">マップを見る</a>
+  <div class="cta-sub">エリア・子連れ情報つきで探せます</div>
+</div>
+
+<section class="features">
+  <div class="feature"><span class="emoji">👨‍👩‍👧</span><span class="label">子連れ<br>情報つき</span></div>
+  <div class="feature"><span class="emoji">📍</span><span class="label">エリアで<br>絞り込み</span></div>
+  <div class="feature"><span class="emoji">✅</span><span class="label">実際に<br>行った記録</span></div>
+</section>
+
+<section class="story">
+  <h2>このマップを作った理由</h2>
+  <p>子供を連れて、いつも通りに飲食店に入ろうとしたら、思いのほか勝手が効かない——そんな経験が何度もありました。</p>
+  <p>当時、Googleで「子供 飲食店」のようなキーワードで探してみても、欲しい情報は見つからず、結局いつも同じお店に行くか、家で済ませるか。刺激の少ない選択になりがちでした。</p>
+  <p>SNSを見れば、華やかなお店や大人好みの食材はたくさん流れてきます。でも、子供を連れて行ったらうまくいかないんだろうな、と感じることも多くて。</p>
+  <p>それなら、その情報がないなら自分で作ればいい。そう思い立って、このマップを立ち上げました。</p>
+  <p>子供の成長とともに、行ける場所も変わっていきます。そんな変化も含めて、福岡近辺のお店を紹介していけたらと思っています。少しでも多くの人の役に立てば嬉しいです。</p>
+</section>
+
+<div class="stats" id="stats" style="display:none;">
+  <div><div class="num" id="statCount">-</div><div class="cap">掲載スポット</div></div>
+  <div><div class="num" id="statArea">-</div><div class="cap">エリア数</div></div>
+</div>
+
+<div class="bottom-cta">
+  <a class="cta" href="map/">マップを見る</a>
+</div>
+
+<footer>
+  © ふくおか、こそだてグルメ。
+</footer>
+
+<script>
+fetch('data/spots.json').then(r => r.ok ? r.json() : []).then(spots => {
+  if (!Array.isArray(spots) || !spots.length) return;
+  const areas = new Set(spots.map(s => s.area).filter(Boolean));
+  document.getElementById('statCount').textContent = spots.length;
+  document.getElementById('statArea').textContent = areas.size;
+  document.getElementById('stats').style.display = 'flex';
+}).catch(() => {});
+</script>
+
+</body>
+</html>

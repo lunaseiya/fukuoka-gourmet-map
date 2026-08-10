@@ -8796,5 +8796,33 @@
   "thumb": null,
   "wish": true,
   "pref": "福岡県"
+ },
+ {
+  "id": "onojokokoronofurusatokan",
+  "name": "大野城心のふるさと館(おおのじょうシティミュージアム)",
+  "area": "曙町",
+  "city": "大野城市",
+  "pref": "福岡県",
+  "genre": "ミュージアム・こども施設",
+  "lat": 33.534703,
+  "lng": 130.480395,
+  "visited": "2026-08-08",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "3階建てミュージアム。キッズスペースあり。特別展「もっと!こどもの視展」は9/23まで(未就学児無料)",
+  "video": {
+   "youtube": "https://youtube.com/shorts/xH0oyW388xc",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7672525873773317383",
+   "instagram": null
+  },
+  "thumb": "onojokokoronofurusatokan.jpg",
+  "wish": false
  }
 ]

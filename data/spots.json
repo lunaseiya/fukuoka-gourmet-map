@@ -2324,8 +2324,15 @@
   "lng": 130.438654,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場4台、福工大前駅徒歩7分。未就学児可・ベビーカー入店可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2345,7 +2352,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "26席でカウンター席あり、駐車場なし、天神南駅から約440m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2364,8 +2371,15 @@
   "lng": 130.392925,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター10席・テーブル20席、乳児可・ベビーカー可、駐車場なし、赤坂駅443m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2384,8 +2398,15 @@
   "lng": 130.421862,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "座敷・掘りごたつ・個室あり120席、おむつ交換台あり、箱崎宮前駅徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2405,7 +2426,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "196席ソファ席あり、県内最大級キッズルーム完備、無料駐車場あり、道ノ尾駅約2.3km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2425,7 +2446,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場約250台無料。屋内温水プール2時間大人550円・小中330円、屋外に大型遊具と芝生広場あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2445,7 +2466,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり・個室あり。レストラン席構成や子供設備は確認できず。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2464,8 +2485,15 @@
   "lng": 129.786524,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター4・テーブル12・テラス10の26席、駐車場7台、ハウステンボス駅約2.3km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2485,7 +2513,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場なし、唐人町駅から約1km。席構成・子供設備は確認できず。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2504,8 +2532,15 @@
   "lng": 130.428818,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター5席・2人卓3つの11席、駐車場なし、西鉄大橋駅徒歩約5分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2525,7 +2560,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場なし、箱崎駅から約450m。席構成・子供設備は確認できず。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2545,7 +2580,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり、福間駅から約1km。席構成・子供設備は確認できず。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2565,7 +2600,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり(レガネットガーデン敷地内)、福間駅から約780m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2584,8 +2619,15 @@
   "lng": 130.88442,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター6席のみ、駐車場1台分あり、小倉駅徒歩5分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2604,8 +2646,15 @@
   "lng": 130.409194,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター8席+テーブル・テラス計48席、駐車場なし、渡辺通駅徒歩7分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2625,7 +2674,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "別府大学駅から約1.2km。席構成・駐車場は情報なし。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2644,8 +2693,15 @@
   "lng": 131.555486,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場270台無料。授乳室2室・おむつ交換台・キッズスペースあり。入場無料の屋内外複合施設",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2665,7 +2721,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "テイクアウト中心の饅頭店。駐車場あり(台数不明)。最寄駅情報なし。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2684,8 +2740,15 @@
   "lng": 130.398134,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター15席のみ。駐車場なし。薬院駅徒歩7分・西鉄福岡駅徒歩8分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2704,8 +2767,15 @@
   "lng": 130.88523,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席+テーブルの計17席。店舗裏に駐車場8台。香春口三萩野駅530m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2724,8 +2794,15 @@
   "lng": 130.400619,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター+テーブル計18席。駐車場計12台(6台は15時まで)。高宮駅1.8km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2745,7 +2822,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場約400台超。農産物直売所中心の複合施設で屋外芝生広場あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2764,8 +2841,15 @@
   "lng": 130.390518,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター9席+テーブル計30席。乳児可・ベビーカー入店可。駐車場なし。赤坂駅369m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2784,8 +2868,15 @@
   "lng": 130.40694,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター3席+テーブル8席で座敷なし。子供可。駐車場なし。渡辺通駅徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2805,7 +2896,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内施設。常設展大人1050円・未就学児無料。6ヶ月から遊べる屋内遊具こどもジオパーク有(有料)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2825,7 +2916,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内。入館大人500円・小中高200円・未就学無料。専用駐車場有(窓口で無料処理)。授乳室あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2845,7 +2936,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料の屋内科学館。駐車場普通車30台。電動ゴーカート等一部体験は有料(100〜200円)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2865,7 +2956,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内科学館。入館大人420円・4歳〜中学生210円。無料駐車場30台、館内は段差なくスロープ移動可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2885,7 +2976,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料の歴史文化交流館。無料駐車場あり(普通車50台・大型バス3台)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2904,8 +2995,15 @@
   "lng": 130.378231,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内。基本展示室大人510円・小中200円・未就学無料。専用駐車場なし。授乳室・おむつ替え有",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2924,8 +3022,15 @@
   "lng": 131.423778,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内・常設展無料。無料駐車場あり。個室の授乳室2室とおむつ交換台完備",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2944,8 +3049,15 @@
   "lng": 130.035404,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内科学館・入館有料。無料駐車場約400台。授乳室・おむつ替え台・ベビーカー貸出あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2964,8 +3076,15 @@
   "lng": 130.538122,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内。文化交流展大人700円・高校生以下無料。駐車場313台(1回500円)。授乳室・おむつ替え有",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2985,7 +3104,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料、坑洞見学ツアーは有料(大人1000円〜・小学生500円・未就学無料)。坑道内見学が中心",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3004,8 +3123,15 @@
   "lng": 130.882183,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "無料駐車場約130台。おむつ交換台あり。観光坑道と砂金採り体験ができる道の駅",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3024,8 +3150,15 @@
   "lng": 129.88238,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "370席で座敷あり・子供可。敷地内に駐車場あり。唐津駅から車約26分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3044,8 +3177,15 @@
   "lng": 131.681714,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "座敷3部屋+テーブル席の33席。ベビーカー可・キッズルーム有。駐車場有。鶴崎駅956m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3065,7 +3205,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場料大人1000円・小中500円(未就学無料)。波戸岬に無料駐車場あり(一部有料)、塔内は屋内で雨天OK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3085,7 +3225,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "有料駐車場2379台(最初30〜60分無料)。授乳室・展望デッキあり、ターミナルは屋内で雨天OK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3105,7 +3245,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "料理旅館で個室あり(完全予約制)。駐車場16台。嬉野温泉駅から約1.5km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3125,7 +3265,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "200席・個室ありでキッズスペース完備。駐車場あり。豊後国分駅約2.2km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3144,8 +3284,15 @@
   "lng": 130.502691,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・座敷ありの計30席、子供可。駐車場10台以上。JR久留米駅徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3164,8 +3311,15 @@
   "lng": 130.525211,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "テーブル10席+テラス5席。ベビーカー入店可。店前に駐車場10台。篠栗駅約1.7km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3185,7 +3339,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カプセル・個室主体のホテル。所在地は博多駅前2-18-1。駐車場は情報なし。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3205,7 +3359,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カウンター・テーブル28席で個室なし、子供可、駐車場なし、薬院駅徒歩6分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3224,8 +3378,15 @@
   "lng": 130.419321,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター11席のみ、子供可、店前に駐車場2台、馬出九大病院前駅徒歩3分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3244,8 +3405,15 @@
   "lng": 130.194188,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター16席、乳児可・ベビーカー入店可、駐車場7台、筑前前原駅505m",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3265,7 +3433,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。席構成・子供設備は確認できず、土井駅から約3.9kmで車向き",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3284,8 +3452,15 @@
   "lng": 130.93865,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター13席のみ、子供連れ可、隣接駐車場2台、JR門司駅徒歩10分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3304,8 +3479,15 @@
   "lng": 130.443314,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席+4人テーブル1卓の11席、駐車場なし、井尻駅131m",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3325,7 +3507,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カウンター中心32席、駐車場なし、櫛田神社前駅301m・中洲川端駅徒歩6分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3344,8 +3526,15 @@
   "lng": 130.879965,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター9席+テーブル18席、子供可、駐車場なし、平和通駅徒歩2分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3364,8 +3553,15 @@
   "lng": 130.71978,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・座敷あり40席、駐車場あり、小竹駅1.5kmで車向き。全席喫煙可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3384,8 +3580,15 @@
   "lng": 130.436614,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12+テーブル12席、乳児可・子供メニュー有、駐車場9台、東比恵駅徒歩10分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3404,8 +3607,15 @@
   "lng": 130.877961,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・個室の47席、駐車場あり(井筒屋)、平和通駅310m",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3424,8 +3634,15 @@
   "lng": 130.517667,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": false,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター中心18席、子供可だがベビーカー不可、駐車場9台、櫛原駅徒歩12分。26年7月閉店→10月再開予定",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3444,8 +3661,15 @@
   "lng": 133.199522,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターのみ12席、子供連れ可、駐車場なし(近隣コインP)、尾道駅徒歩7分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3464,8 +3688,15 @@
   "lng": 133.202712,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7+テーブル16+テラス10席、子供可、駐車場4台、尾道駅徒歩10分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3484,8 +3715,15 @@
   "lng": 133.201646,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター4席+テーブル22席、子供可・ベビーカー入店可、駐車場2台、尾道駅徒歩15分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3504,8 +3742,15 @@
   "lng": 130.555955,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "80席で座敷・カウンターあり、お子様メニューあり、駐車場35台、東合川バス停徒歩1分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3544,8 +3789,15 @@
   "lng": 130.493489,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "75席でカウンター・座敷あり、駐車場25台、西鉄安武駅・津福駅から徒歩10分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3564,8 +3816,15 @@
   "lng": 130.515889,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター6席+テーブル11席の17席、駐車場約7台、花畑駅徒歩1分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3584,8 +3843,15 @@
   "lng": 130.50486,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター10席+5人掛けテーブル2卓、子供連れ可、駐車場あり、聖マリア病院前駅537m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3604,8 +3870,15 @@
   "lng": 130.530109,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター6席+4人テーブル3卓、子供可・ベビーカー可、駐車場店前4〜5台+第2に7台、櫛原駅徒歩10分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3624,8 +3897,15 @@
   "lng": 130.519386,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター10席+4人テーブル2卓、子供可、駐車場なし(近隣にP)、西鉄久留米駅徒歩1分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3644,8 +3924,15 @@
   "lng": 130.534562,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "口コミではカウンター・テーブル・小上がりあり、店前に駐車場あり、南久留米駅1.4km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3665,7 +3952,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "40席(カウンター6席+テーブル席)、お子様連れ可、駐車場あり、土木事務所前バス停徒歩約4分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3685,7 +3972,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カウンター席あり、子供可、駐車場あり、JR久留米駅徒歩10分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3704,8 +3991,15 @@
   "lng": 130.479736,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12席+テーブル8席の20席、駐車場6台、西鉄安武駅徒歩17分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3724,8 +4018,15 @@
   "lng": 130.534513,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "25席(カウンター5・テーブル8・小上がり12)、駐車場あり、久留米総合庁舎前バス停徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3745,7 +4046,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場は敷地内5台+敷地裏5台の計10台、荒木駅から1.4km。席詳細は不明。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3764,8 +4065,15 @@
   "lng": 130.692096,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター6席+小上がりテーブル3卓、店前に駐車場8台。最寄駅からは遠く車向き",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3784,8 +4092,15 @@
   "lng": 130.395606,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター13席のみ、駐車場なし、天神駅徒歩5分。子供可・ベビーカー入店可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3805,7 +4120,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。席構成・子供設備の情報は確認できず",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3824,8 +4139,15 @@
   "lng": 130.479099,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・小上がりあり28席、駐車場あり。土井駅から約1.5km",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3864,8 +4186,15 @@
   "lng": 130.354009,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席+テーブル3卓の17席、駐車場3台あり。金山駅から約860m",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3885,7 +4214,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。福間駅から約800m。席構成の詳細は確認できず",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3905,7 +4234,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "40席・カウンターあり、駐車場なし、祇園駅徒歩約3分。子供可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3925,7 +4254,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり・子供可。橋本駅から約1.6kmで車向き",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3945,7 +4274,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カウンター中心の20席、駐車場なし、西新駅徒歩2分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3964,8 +4293,15 @@
   "lng": 130.341496,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター6席+4人テーブル3卓、駐車場あり、野芥駅徒歩12分。子供可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3985,7 +4321,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "カウンター含む18席、駐車場あり(隣店と共同)、竹下駅約800m。ラーメン注文できない子供は入店不可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4005,7 +4341,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場なし、渡辺通駅から約580m。席構成は確認できず",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4024,8 +4360,15 @@
   "lng": 130.392155,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席のみ、駐車場なし、赤坂駅徒歩5分",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4045,7 +4388,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "個室なし・駐車場25台あり。小倉駅から約1.8kmで駅からは遠め(バス停徒歩1分)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4064,8 +4407,15 @@
   "lng": 130.588303,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": false,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター9席のみ・駐車場約10台。18歳未満は利用不可のため子連れ不向き。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4084,8 +4434,15 @@
   "lng": 130.45408,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席+テーブル16席・駐車場11台・子供可。博多南駅から約1.6km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4105,7 +4462,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "18席(カウンター中心+テーブル)・店前駐車場7〜10台・子供可。バス停徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4124,8 +4481,15 @@
   "lng": 130.43099,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターのみ14席。駐車場は併設パチンコ店の立体駐車場利用。竹下駅から約1km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4144,8 +4508,15 @@
   "lng": 130.510326,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12席+4人テーブル3卓の24席・駐車場あり。新原駅から徒歩6分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4164,8 +4535,15 @@
   "lng": 130.306667,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターのみ10席・駐車場6〜7台。下山門駅から徒歩2分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4184,8 +4562,15 @@
   "lng": 130.3433,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12席+テーブル4席・店舗前に駐車数台可。野芥駅から約1.3km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4204,8 +4589,15 @@
   "lng": 130.558251,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター16席+テーブル8席・駐車場約10台・乳児可でベビーカー入店可。筑紫駅徒歩約15分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4224,8 +4616,15 @@
   "lng": 130.488548,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターのみ10席・駐車場9台。門松駅から約800m、バス停大隈から徒歩3分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4244,8 +4643,15 @@
   "lng": 130.428539,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター17席+テーブル16席の33席・駐車場なし(近隣コインP)。大橋駅から徒歩2分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4265,7 +4671,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "25席(カウンターあり・個室なし)・駐車場14台。最寄駅から遠く車向き。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4285,7 +4691,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。最寄りの勝野駅から約3.9kmと遠く車前提。席構成は不明。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4304,8 +4710,15 @@
   "lng": 130.722127,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12席+4人テーブル2卓の20席・駐車場あり・子供可。本城駅から徒歩6分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4324,8 +4737,15 @@
   "lng": 130.226613,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターと座敷あり。駐車場あり。子供可。波多江駅から124m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4344,8 +4764,15 @@
   "lng": 130.305495,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・小上がりあり32席。駐車場12台。橋本駅から約1.5km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4364,8 +4791,15 @@
   "lng": 130.475479,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター12席と個室テーブル2卓。ベビーカー可。駐車場あり(ファミマ共用)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4384,8 +4818,15 @@
   "lng": 130.410661,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター15席のみ。駐車場なし。渡辺通駅から658m・薬院駅徒歩15分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4404,8 +4845,15 @@
   "lng": 130.355917,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・座敷あり19席。駐車場8台。梅林駅から249m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4425,7 +4873,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "34席カウンターあり。無料駐車場あり。子供可。武蔵塚駅から約3.6km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4444,8 +4892,15 @@
   "lng": 130.546293,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターと座敷あり。駐車場あり。子供可。西鉄朝倉街道駅徒歩20分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4464,8 +4919,15 @@
   "lng": 130.514806,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター8席のみ。駐車場なし。乳児から子供可。西鉄久留米駅から606m。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4484,8 +4946,15 @@
   "lng": 130.873587,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンターと座敷あり35席。店前・店裏に駐車場あり。モノレール片野駅徒歩8分。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4504,8 +4973,15 @@
   "lng": 130.445524,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・座敷あり44席。駐車場12台。竹下駅から約1.7km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4524,8 +5000,15 @@
   "lng": 130.490085,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター7席・テーブル8席。駐車場あり。須恵中央駅から約1.5km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4545,7 +5028,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "食べログでは閉店表示。駐車場店裏2台・子供可・九産大前駅徒歩1分の情報。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4565,7 +5048,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "ゆめタウン南行橋3階の屋内遊び場で雨天OK、0歳〜小学生対象。敷地内に障がい者専用駐車場あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4585,7 +5068,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内で雨天OK、子供1時間500円・保護者500円(0〜1歳エリアあり)。第1駐車場は最初1時間無料。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4605,7 +5088,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料(ゴーカート等の利用は有料)、無料駐車場400台。屋外中心のレジャー施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4625,7 +5108,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場450台。入浴大人700円・子供500円(3歳以下無料)、屋内温浴+プールで雨天OK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4645,7 +5128,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "筑紫野ベレッサ内の屋内カート施設で雨天OK。1歳から乗れるキッズカーあり、SC駐車場利用可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4665,7 +5148,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "イオンモール福岡の屋外あそび場で利用無料。幼児(3〜6歳)・児童(6〜12歳)の2エリア構成。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4685,7 +5168,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料、敷地内駐車場10台。屋内で雨天OK、地震・強風・消火器(小3以上)等の防災体験可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4705,7 +5188,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "ゆめマート門司2Fの屋内遊び場で雨天OK。平日1時間600円・0歳無料、店舗駐車場利用可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4725,7 +5208,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "リバーウォーク北九州2Fの屋内施設で雨天OK。子供平日1時間500円・0歳無料、0歳から遊べる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4745,7 +5228,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内トランポリン施設で雨天OK、建物前に無料駐車場あり。キッズパーク併設、支払いはキャッシュレスのみ。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4764,8 +5247,15 @@
   "lng": 130.299673,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "アパホテル佐賀駅南口1Fの洋食店。おむつ替えスペース・子供用イスあり、ランチ時は隣接駐車場12台可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4785,7 +5275,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "夏季限定の屋外プール。大人520円・子供310円(3歳以下無料)、駐車場1000台は有料(普通車500円)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4805,7 +5295,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "日帰り入浴は平日大人910円・土日祝960円(小人450円)、駐車場340台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4825,7 +5315,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "ゆめタウン久留米2Fの屋内パークで雨の日OK。平日30分700円等、駐車場はモール共用。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4845,7 +5335,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "イオンモール福岡内の屋内遊び場で雨の日OK。平日30分こども800円〜、モール駐車場無料。対象0〜12歳。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4865,7 +5355,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "料金は大人600円・3歳〜小学生400円。無料駐車場約270台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4885,7 +5375,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "日帰り入浴は大人800円・3歳〜小学生400円(3歳未満無料)。無料駐車場200台。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4905,7 +5395,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場約280台。屋外の遊具広場「こどもわくわくパーク」あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4925,7 +5415,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "日帰り温泉食事プラン(3200円〜)あり、入浴のみも可。駐車場・子連れ設備は未確認。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4945,7 +5435,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "日帰り入浴は大人1200円・小学生600円(11:00〜14:30)。無料駐車場あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4965,7 +5455,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場無料。屋内キッズランド(3歳以上300円)や温泉スパがあり雨の日も遊べる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -4985,7 +5475,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料、無料駐車場約30台。授乳室ありとの情報あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5005,7 +5495,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料、無料駐車場完備(約100台)。いちご狩りやアイス作り等の体験は有料。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5025,7 +5515,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場100台。果物狩りは季節により料金が変わり大人900円・小中学生700円等。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5045,7 +5535,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "金平糖手作り体験1100円(3歳以下入場無料・付添無料)、無料駐車場4台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5085,7 +5575,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園・駐車無料(263台)。観賞温室あり(雨の日も一部OK)、足湯・遊具も。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5104,8 +5594,15 @@
   "lng": 131.243794,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場無料。入園大人1000円・小人400円。授乳室・ベビーシートあり、屋外主体。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5124,8 +5621,15 @@
   "lng": 131.430644,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園・駐車無料(1600台)。物産館入口に授乳室(個室3)・おむつ替えあり。屋外中心。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5145,7 +5649,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場無料。入園一般300円(冬期100円)・高校生以下無料。授乳室完備。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5164,8 +5668,15 @@
   "lng": 129.826299,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園無料・駐車場無料(50台)。くじゃく園無料、屋外中心でベビーカーOK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5185,7 +5696,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料。駐車場は有料(森の駐車場30分50円〜)。屋外の親水公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5205,7 +5716,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園・駐車場無料。大型遊具・じゃぶじゃぶ池あり(屋外)。声かけで授乳室提供。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5225,7 +5736,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料。駐車場は有料(247台・1回220円)。ローラーすべり台等大型遊具あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5244,8 +5755,15 @@
   "lng": 130.453988,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場は2025年9月から有料化。管理棟に授乳室・おむつ替えあり。遊具18種の屋外公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5265,7 +5783,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場無料(北75台・南約185台、9〜17時)。大型複合遊具ありの屋外公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5285,7 +5803,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場有料(250台・普通車300円)。釣台4時間大人1000円小人500円、見学200円。屋外。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5305,7 +5823,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料・駐車無料(40台、9〜17時)。ゴーカート1回50円(4歳〜小学生)。屋外。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5324,8 +5842,15 @@
   "lng": 130.461522,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場有料(20分無料・当日最大500円)。赤ちゃんの駅登録で授乳・おむつ替え可。屋外。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5345,7 +5870,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場・駐車場無料。星の文化館・茶の文化館など屋内有料施設あり、雨の日も可。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5365,7 +5890,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "花畑中心の屋外レジャー施設。入園料は大人1500円・小中800円・3歳以上500円、3歳未満無料",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5385,7 +5910,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内の考古博物館。入館料は大人510円・小中300円、駐車場60台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5405,7 +5930,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内科学館。専用駐車場はなく隣接の鴨池公園駐車場が3時間まで無料",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5424,8 +5949,15 @@
   "lng": 130.778698,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "野外美術館。入園一般320円・小中150円・幼児無料、駐車場無料200台、授乳室・おむつ交換台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5444,8 +5976,15 @@
   "lng": 131.433471,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内科学館。無料駐車場40台、授乳室3か所・おむつ替えあり。展示室は大人550円・小人210円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5464,8 +6003,15 @@
   "lng": 130.801785,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内博物館。常設展大人500円・小中200円・未就学児無料。駐車場無料、授乳室・おむつ台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5485,7 +6031,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "雨でも遊べる屋内体験型美術館。専用駐車場はなく周辺の民間駐車場を利用",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5504,8 +6050,15 @@
   "lng": 129.853474,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内科学館。入館無料(展示・プラネは有料、未就学児無料)、駐車場無料。授乳室・おむつ替え・ベビーカー貸出あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5525,7 +6078,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内の歴史館。入館は無料(満足度に応じた募金制)、駐車場も無料",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5544,8 +6097,15 @@
   "lng": 130.530628,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内美術館。駐車場は有料(24時間最大1000円)、授乳室・おむつ替え台・ベビーカー貸出あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5565,7 +6125,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "旧小学校校舎を使った屋内美術館。入館は大人500円・小中300円(ドリンク付)、駐車場あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5584,8 +6144,15 @@
   "lng": 130.379672,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内美術館。コレクション展一般200円・中学生以下無料。駐車場有料(2時間400円)、2階に授乳室・おむつ替え台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5605,7 +6172,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内ミュージアム。有料展示は大人500円・小中200円、駐車場有料(普通車180台)、授乳室あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5624,8 +6191,15 @@
   "lng": 130.528392,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内科学館。無料駐車場あり、3階に授乳室・おむつ交換台1台。土曜は子ども無料",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5644,8 +6218,15 @@
   "lng": 130.961794,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入館料大人500円・中学生以下250円。屋内本館+屋外車両展示。近隣有料駐車場、1階に授乳室あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5665,7 +6246,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "見学無料の屋内施設。工場見学や手織り体験ができ駐車場あり。営業は月〜土10〜17時。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5685,7 +6266,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "工場見学は無料・要予約(1週間前まで)。屋内見学で小学生向けプログラムあり。土日休み。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5705,7 +6286,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "食品サンプル作り体験(パフェ等)。専用駐車場(普通車4台)あり。営業10〜16時、予約サイトあり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5725,7 +6306,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料の屋内科学館。無料駐車場(普通車37台)あり。開館9:30〜16:30。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5745,7 +6326,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "コカ・コーラ工場の見学施設。見学無料、開催は平日のみ(土日祝休館)。臨時休館あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5764,8 +6345,15 @@
   "lng": 131.160821,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入場料大人1500円・小中1000円・幼児700円。駐車場140台、授乳室・おむつ替え台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5785,7 +6373,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園料大人1000円・小学生400円。駐車場有料(乗用車400円)。屋外の動物園で遊園地併設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5805,7 +6393,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園料大人500円(大分市内小中学生無料)。駐車場有料420円。モノレール往復一般160円。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5825,7 +6413,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内の小さな水族館。入館料高校生以上300円・小中学生200円、無料駐車場あり。水曜休館。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5845,7 +6433,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園料大人1000円・4歳〜中学生500円。放し飼いの動物とふれあえる。平日10〜16時半。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5865,7 +6453,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "道の駅やよい内の淡水魚水族館(屋内展示あり)。入館料中学生以上500円・小学生以下300円。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5884,8 +6472,15 @@
   "lng": 130.998692,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "冷暖房完備の全天候型屋内劇場で雨でもOK。入場料一般1000円、無料駐車場約500台。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5905,7 +6500,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "海に浮かぶ水族館。入館料大人1600円・小中900円・幼児600円。年中無休9時〜。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5925,7 +6520,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋外アスレチック中心で対象は4歳以上(3歳以下は無料・保護者同伴)。雨天OKの施設も一部あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5945,7 +6540,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館料一般800円・小中高400円・幼児無料。屋内外複合施設で第1・第2駐車場あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5964,8 +6559,15 @@
   "lng": 129.689525,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場無料(計377台)。入園大人830円・4歳〜中学生210円。授乳室とベビーカー無料貸出あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5984,8 +6586,15 @@
   "lng": 130.501796,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋外動物園。駐車場普通車400円。授乳室6ヶ所、ベビーカー貸出(200〜500円)あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6004,8 +6613,15 @@
   "lng": 130.444035,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人500円・小中学生100円・未就学児無料。駐車場20分超200円。授乳室・おむつ替え台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6025,7 +6641,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園大人・高校生350円、中学生以下無料。周辺に無料駐車場約370台。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6045,7 +6661,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料で乗り物ごと有料(100〜700円)。専用駐車場なし・周辺有料P利用。屋外遊園地。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6065,7 +6681,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園3歳以上300円。駐車場約200台は基本無料(夏期繁忙日のみ300円)。屋外遊園地。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6085,7 +6701,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内展示施設で雨の日OK。3館共通大人1200円・小中高840円。駐車場普通車400円(40分内無料)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6104,8 +6720,15 @@
   "lng": 130.426242,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場無料。授乳室2室・おむつ替え台2台あり。屋内外複合の商業施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6125,7 +6748,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋外樹上アスレチック。3000〜6000円、小4以上か身長140cm〜(キャノピーは110cm〜)。駐車場30台超。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6144,8 +6767,15 @@
   "lng": 129.797821,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園・駐車場(1300台)無料。赤ちゃん休憩室あり。屋外中心で屋内のあぐりドームは有料。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6165,7 +6795,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場大人620円・小学生310円。駐車場は12時間300円/200円の有料。屋外の海釣り体験施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6184,8 +6814,15 @@
   "lng": 130.397812,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入館無料(一部有料)。専用駐車場なし・周辺有料P利用。授乳室・おむつ替えありの屋内施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6205,7 +6842,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園は大人200円・子ども100円(3歳以下無料)。無料駐車場約70台。屋外中心だが屋内のわんぱく童夢館あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6225,7 +6862,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "国内最大級の屋内型アスレチックで雨OK。駐車場あり。3歳以下向けベビーエリアあり・2歳以下は入場無料。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6245,7 +6882,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋外型の英国コッツウォルズ風ミニテーマパークで、散策・グルメ・買い物が中心。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6265,7 +6902,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。芝生広場・子ども広場のある屋外施設。ゴーカート1周300円等の有料遊具、温泉併設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6284,8 +6921,15 @@
   "lng": 130.38876,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人460円・中学生以下無料。駐車場は普通車310円。おむつ替え可の多目的トイレや屋内展示あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6305,7 +6949,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園大人800円・4歳〜小学生100円。駐車場有料600円/日(約600台)。屋外動物園内に遊園地ゾーンあり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6325,7 +6969,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "小さな子向けアトラクション中心の遊園地。授乳室あり。屋内で遊べる「おもちやのもり」併設で雨でも一部OK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6345,7 +6989,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "リゾート入場無料(水族館等は別料金)。駐車場668台・30分無料以降有料(4時間200円等)。水族館は屋内。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6365,7 +7009,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料で各アトラクションごとに有料の屋内施設。駐車場はPayPayドーム駐車場利用(割引サービスあり)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6385,7 +7029,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "対象3〜15歳の屋内職業体験施設。ららぽーと福岡の駐車場が利用時間分無料になる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6405,7 +7049,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "イオン福岡東2階の屋内型キッズパークで雨の日OK。無料駐車場完備。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6424,8 +7068,15 @@
   "lng": 130.037696,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内キッズパーク。個室授乳室・おむつ替えあり。0歳〜利用可、平日1時間700円等。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6465,7 +7116,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "イオンかのや3階の屋内遊園地。授乳室・ベビーコーナーあり。平日こども1日1000円・保護者700円。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6485,7 +7136,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場1歳以上2,000〜2,200円、博多リバレインモール5・6Fの屋内施設、専用駐車場なし(モール地下等の有料P利用)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6505,7 +7156,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園料大人2,600円・4歳〜中学生1,500円、サファリ形式の屋外施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6524,8 +7175,15 @@
   "lng": 130.908905,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入場大人800円・3歳〜小学生500円、無料駐車場700台、授乳室・ベビーシートあり、屋外広場+屋内体験館。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6544,8 +7202,15 @@
   "lng": 129.783296,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人2,100円・3歳〜小学生1,100円、無料駐車場800台、授乳室2ヶ所・おむつ替え台複数の屋外中心施設。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6565,7 +7230,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園大人平日2,600円(土日祝2,900円)・幼児800円、無料駐車場1,200台、屋外中心で動物ショー施設もあり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6585,7 +7250,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料・24時間利用可、駐車場約100台、大型コンビネーション遊具と多目的トイレのある屋外公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6605,7 +7270,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場大人2,000円・小中学生1,500円・幼児1,000円、無料駐車場50台の広大な屋外農場(冬期休業あり)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6625,7 +7290,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "えほん図書館中心の屋内交流施設で、専用駐車場なし(近隣コインパーキングや鴨池公園駐車場を利用)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6645,7 +7310,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料、駐車場は有料(普通車3時間まで300円・以降1時間100円、バイク・自転車無料)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6665,7 +7330,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場が第1〜第4まで複数あり、巨大船遊具「天拝の船」や75mローラー滑り台のある屋外公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6684,8 +7349,15 @@
   "lng": 129.761746,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "常設展大人500円・小中高250円・未就学児無料の屋内施設、ベビーケアルーム(授乳・おむつ替え)とベビーカー貸出あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6705,7 +7377,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料・無料駐車場約100台、巨大ムツゴロウ遊具や干潟体験のある屋外施設(体験プログラムは有料)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6724,8 +7396,15 @@
   "lng": 130.249332,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "無料駐車場多数(北400台・南180台・西208台)、授乳・おむつ替え室を備えた遊具豊富な屋外公園。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6745,7 +7424,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "北山湖畔のロングスライダー等がある屋外レジャー施設、駐車場あり(約150台、無料/有料の情報が混在)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6764,8 +7443,15 @@
   "lng": 131.608277,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "6階にベビー休憩室(授乳個室4・おむつ替え台6)。提携駐車場あり(買物で無料条件)。屋内",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6785,7 +7471,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "半潜水式グラスボートで所要約80分・1日最大5便、火曜運休。幼児(3〜5歳)500円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6804,8 +7490,15 @@
   "lng": 130.747658,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人500円小中100円幼児無料。駐車場は平日無料・土日祝200円。授乳室3か所・ベビーカー貸出あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6825,7 +7518,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋外の電動モビリティ体験施設。利用料大人1500円〜。子ども用の乗り物もあり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6845,7 +7538,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料・駐車場10台。1〜2階の屋内展示+屋外せせらぎ水路で雨の日も見学可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6865,7 +7558,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "利用料300円・対象6ヶ月〜12歳。屋内外併設の遊び場でボートレース下関の無料駐車場利用可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6884,8 +7577,15 @@
   "lng": 130.728349,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人150円小中70円未就学無料・駐車場300円。屋内の熱帯生態園あり。ベビーカー貸出100円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6904,8 +7604,15 @@
   "lng": 132.797558,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園無料(遊具等は有料)・駐車場300円。屋内のあいあい児童館あり。ベビーカー優先駐車スペースあり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6925,7 +7632,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "2026年4月リニューアル再開。入館一般1000円小中200円未就学無料。屋内施設・市営駐車場を利用",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6945,7 +7652,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館大人1400円・4歳〜小学生500円。専用駐車場なし(市営駐車場等を利用)。屋内展示中心",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6965,7 +7672,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "共通観覧券大人2400円・小中学生1200円。各地獄に無料駐車場あり(計約615台)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -6984,8 +7691,15 @@
   "lng": 131.601361,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場250台(30分無料・以降有料)。1・2階に授乳室、おむつ替え台・キッズスペースあり。屋内",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7004,8 +7718,15 @@
   "lng": 131.485549,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人1300円小人600円(ケーブルカー往復付)2歳以下無料・駐車場300円。ベビールームあり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7024,8 +7745,15 @@
   "lng": 131.5468,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園パスポート3600円。屋外型テーマパーク。駐車場あり、授乳室・おむつ替えあり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7044,8 +7772,15 @@
   "lng": 131.426807,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場2000台(1日500円)、授乳室・ベビーカー貸出あり。入園は大人1500円・こども600円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7064,8 +7799,15 @@
   "lng": 131.535563,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場800台(420円)、授乳室3カ所・ベビーカー貸出あり。屋内で雨OK、大人3000円・小中1500円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7085,7 +7827,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "駐車場あり。カステラ工場見学ができる物販・レストラン施設。料金や授乳室は未確認",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7105,7 +7847,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料。臼杵煎餅の手塗り体験(要予約)や工場見学ができる。駐車場は未確認",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7125,7 +7867,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "見学は抽選予約制で中学生以上800円・小学生300円・未就学児無料。駐車場あり(数に限り)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7144,8 +7886,15 @@
   "lng": 130.189137,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": false,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "見学無料(ラベル体験200円)・駐車場あり・屋内見学だが階段のみでベビーカー不可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7164,8 +7913,15 @@
   "lng": 130.513394,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "見学無料・完全予約制(内容は小学生以上対象)。駐車場乗用車7台、オムツ交換台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7185,7 +7941,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "見学無料・電話予約制(水日休)、所要約30分で年齢制限なし。駐車場5台・売店併設",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7204,8 +7960,15 @@
   "lng": 130.321885,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場4時間無料。授乳室・おむつ替えのベビールーム、ベビーカート貸出・キッズトイレあり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7224,8 +7987,15 @@
   "lng": 130.727978,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "グリーンパーク内。入園大人150円・小中70円、駐車場普通車300円、ベビーカー貸出100円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7244,8 +8014,15 @@
   "lng": 130.3616,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人450円・中学生以下無料、駐車場普通車600円。授乳室6カ所・おむつ替え台あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7265,7 +8042,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料・駐車場無料160台。アトラクションは1歳から有料、フリーパス1800円",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7284,8 +8061,15 @@
   "lng": 129.976392,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人1200円・小人800円、駐車場無料1000台。授乳室あり、屋内ドームで雨でも遊べる",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7305,7 +8089,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場大人1200円・こども800円、駐車場無料300台。授乳室等は未確認",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7325,7 +8109,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園無料、駐車場300円(1100台)。屋外中心の自然公園で陶芸・食の体験工房あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7345,7 +8129,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入場無料(一部施設有料)、駐車場425台。遊具のある子ども広場を備えた屋外公園",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7364,8 +8148,15 @@
   "lng": 130.664637,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "駐車場約5000台。館内にキッズルーム・授乳室・ベビールームがある屋内施設",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7384,8 +8175,15 @@
   "lng": 130.76487,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内施設。大人500円・子300円、市営駐車場は有料(割引券あり)。授乳室・おむつ替え完備",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7405,7 +8203,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "天然温泉・サウナ・レストラン等を備えた屋内複合施設で雨の日も利用可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7425,7 +8223,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料・駐車場無料(30台)。屋内でお茶体験(有料、抹茶碾き等)ができる",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7445,7 +8243,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入館無料(子どもフリーパス500円)・駐車場無料30台。屋内遊びと屋外遊びの両方あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7465,7 +8263,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "大人800円・5歳以上400円の屋内水族館。駐車場有料(1時間100円・入館割引あり)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7485,7 +8283,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "屋内のからくり体験館。大人600円・小人400円・幼児100円、専用駐車場なく周辺P利用",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7504,8 +8302,15 @@
   "lng": 133.892366,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "入園大人1000円・2歳以上800円、駐車場無料1500台。屋内パビリオン充実で雨でもOK",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7525,7 +8330,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "観覧無料・駐車場無料700台。屋外イルミネーション、遊具広場と温泉さくら館併設",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7545,7 +8350,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "無料駐車場2ヶ所。大型複合遊具・幼児遊具のある屋外公園、授乳室あり",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7565,7 +8370,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "REDEE北九州やJOYPOLIS SPORTS等が入る屋内複合施設。駐車場完備",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7584,8 +8389,15 @@
   "lng": 130.8863,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "AIMビル3階の屋内施設。遊び場は子100円・大人200円(0歳無料)、授乳室・おむつ替え完備",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -7605,7 +8417,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": null,
+  "verdict": "入園・駐車場無料。インクルーシブ遊具や夏のプールを備えた屋外公園",
   "video": {
    "youtube": null,
    "tiktok": null,

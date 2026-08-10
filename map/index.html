@@ -238,6 +238,12 @@ async function loadSpots() {
 }
 
 function isKidsOk(spot) {
+  // 行きたい(未訪問)スポットは、ネットで設備の裏が取れたものだけ子連れOK扱いにする
+  // (取り込み時に with:"family" を仮置きしているため、withでは判定しない)
+  if (spot.wish) {
+    const k = spot.kids || {};
+    return ["stroller", "diaper", "tatami", "kidsChair"].some(key => k[key] === true);
+  }
   return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
 }
 

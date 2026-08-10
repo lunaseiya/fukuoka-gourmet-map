@@ -415,9 +415,8 @@ function renderAll() {
 
 function initMap(spots) {
   const withCoords = spots.filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
-  const center = withCoords.length
-    ? [withCoords[0].lng, withCoords[0].lat]
-    : [130.4017, 33.5904]; // 福岡市中心をデフォルト表示
+  // ターゲットは福岡県民のため、初期表示は常に福岡県(福岡都市圏中心)
+  const center = [130.45, 33.55];
 
   const map = new maplibregl.Map({
     container: "map",
@@ -436,17 +435,12 @@ function initMap(spots) {
       ]
     },
     center: center,
-    zoom: withCoords.length ? 12 : 10
+    zoom: 8.7
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
   window._map = map;
 
   map.on("load", () => {
-    if (withCoords.length > 1) {
-      const bounds = new maplibregl.LngLatBounds();
-      withCoords.forEach(s => bounds.extend([s.lng, s.lat]));
-      map.fitBounds(bounds, { padding: 50, maxZoom: 14 });
-    }
     renderAll();
   });
 }

@@ -199,7 +199,7 @@
 <header>
   <h1>福岡グルメマップ</h1>
   <div class="filters">
-    <button class="filter-btn active" data-filter="all">すべて</button>
+    <button class="filter-btn active" data-filter="all">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
     <button class="filter-btn" data-filter="wish">行きたい</button>
     <select id="areaSelect">
@@ -243,7 +243,9 @@ function isKidsOk(spot) {
 
 function applyFilters(spots) {
   return spots.filter(s => {
-    if (state.filter === "kids" && !isKidsOk(s)) return false;
+    // 訪問済み(赤)が基本。青(行きたい)は「行きたい」タブでのみ表示する
+    if (state.filter === "all" && s.wish) return false;
+    if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.area && s.city !== state.area) return false;
     return true;
@@ -303,26 +305,46 @@ function cardHtml(spot) {
 }
 
 function populateAreaSelect(spots) {
-  const cities = [...new Set(spots.map(s => s.city).filter(Boolean))];
-  // 並び順: 福岡市の区 → 福岡県内の市町 → 県外
+  // 現在のタブ(訪問済み/子連れOK/行きたい)に該当するスポットだけで市区一覧と件数を作る
+  const tabSpots = spots.filter(s => {
+    if (state.filter === "all" && s.wish) return false;
+    if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
+    if (state.filter === "wish" && !s.wish) return false;
+    return true;
+  });
+  const prefBy = {};
+  tabSpots.forEach(s => { if (s.city && !prefBy[s.city]) prefBy[s.city] = s.pref || "福岡県"; });
+  const cities = Object.keys(prefBy);
+  // 並び順: 福岡市の区 → 福岡県内の市町 → 県外(県ごと)
   const WARDS = ["福岡市東区", "福岡市博多区", "福岡市中央区", "福岡市南区", "福岡市城南区", "福岡市早良区", "福岡市西区"];
-  const PREF_OUT = ["別府市", "日出町", "熊本市", "阿蘇市", "荒尾市", "長崎市", "佐世保市", "鳥栖市", "尾道市", "大阪市"];
+  const PREFS = ["佐賀県", "長崎県", "大分県", "熊本県", "宮崎県", "鹿児島県", "山口県", "広島県", "岡山県", "愛媛県", "大阪府"];
   const rank = c => {
     const w = WARDS.indexOf(c);
     if (w >= 0) return w;
-    if (!PREF_OUT.includes(c)) return 100; // 福岡県内
-    return 200 + PREF_OUT.indexOf(c);      // 県外
+    if (prefBy[c] === "福岡県") return 100;
+    const p = PREFS.indexOf(prefBy[c]);
+    return 200 + (p >= 0 ? p : PREFS.length); // 県外は県ごとにまとめる
   };
   cities.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, "ja"));
   const sel = document.getElementById("areaSelect");
+  const prev = state.area;
+  while (sel.options.length > 1) sel.remove(1);
   const countBy = {};
-  spots.forEach(s => { if (s.city) countBy[s.city] = (countBy[s.city] || 0) + 1; });
+  tabSpots.forEach(s => { if (s.city) countBy[s.city] = (countBy[s.city] || 0) + 1; });
   cities.forEach(c => {
     const opt = document.createElement("option");
     opt.value = c;
-    opt.textContent = `${c} (${countBy[c]})`;
+    const label = prefBy[c] === "福岡県" ? c : `${prefBy[c]}・${c}`;
+    opt.textContent = `${label} (${countBy[c]})`;
     sel.appendChild(opt);
   });
+  // タブ切替後も選択中の市区が残っていれば維持、消えていればリセット
+  if (prev && cities.includes(prev)) {
+    sel.value = prev;
+  } else {
+    sel.value = "";
+    state.area = "";
+  }
 }
 
 function clearMarkers() {
@@ -450,6 +472,7 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     state.filter = btn.dataset.filter;
+    populateAreaSelect(state.spots);
     renderAll();
   });
 });

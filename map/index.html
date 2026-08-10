@@ -88,6 +88,28 @@
     padding: 12px 14px;
     cursor: pointer;
     transition: box-shadow .15s, border-color .15s;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .card-thumb {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--border);
+  }
+  .card-body { flex: 1; min-width: 0; }
+  .b-wish {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #e3ecff;
+    color: #2b5cc4;
+    border-radius: 999px;
+    padding: 2px 9px;
   }
   .card.selected {
     border-color: var(--accent);
@@ -179,6 +201,7 @@
   <div class="filters">
     <button class="filter-btn active" data-filter="all">すべて</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
+    <button class="filter-btn" data-filter="wish">行きたい</button>
     <select id="areaSelect">
       <option value="">市区で絞る</option>
     </select>
@@ -221,6 +244,7 @@ function isKidsOk(spot) {
 function applyFilters(spots) {
   return spots.filter(s => {
     if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.filter === "wish" && !s.wish) return false;
     if (state.area && s.city !== state.area) return false;
     return true;
   });
@@ -260,15 +284,21 @@ function cardHtml(spot) {
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
   const kidsOk = isKidsOk(spot);
+  const thumb = spot.thumb
+    ? `<img class="card-thumb" src="thumbs/${escapeHtml(spot.thumb)}" alt="" loading="lazy">`
+    : "";
   return `
-    <div class="card-top">
-      <div class="card-name">${escapeHtml(spot.name)}</div>
-      <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
+    ${thumb}
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-name">${escapeHtml(spot.name)}</div>
+        <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
+      </div>
+      <div class="card-area">${cityArea}</div>
+      ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
+      ${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${videoLinksHtml(spot.video, "card-links")}
     </div>
-    <div class="card-area">${cityArea}</div>
-    ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
-    ${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
-    ${videoLinksHtml(spot.video, "card-links")}
   `;
 }
 
@@ -358,7 +388,7 @@ function renderMarkers() {
     el.style.height = "22px";
     el.style.borderRadius = "50% 50% 50% 0";
     el.style.transform = "rotate(-45deg)";
-    el.style.background = "#d63031";
+    el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
     el.style.border = "2px solid #fff";
     el.style.boxShadow = "0 1px 3px rgba(0,0,0,.4)";
     el.style.cursor = "pointer";

@@ -29,7 +29,8 @@
 | `kids` | object \| null | 子連れ情報。下記「kids オブジェクト」参照。`with` が `"solo"` か `"friends"` なら `null` でよい | — |
 | `verdict` | string \| null | 一言まとめ。不明・未執筆なら `null` | `"カウンター中心。抱っこ紐推奨"` |
 | `video` | object | 各SNSのURL。下記「video オブジェクト」参照 | — |
-| `thumb` | string \| null | サムネ画像のファイル名(パスではなくファイル名のみ)。不明なら `null` | `"インスタサムネ_三泉閣.jpg"` |
+| `thumb` | string \| null | サムネ画像のファイル名(`map/thumbs/` 内、幅240pxに縮小したもの)。無ければ `null` | `"sansenkaku-beppu.jpg"` |
+| `wish` | boolean(省略可) | `true` なら「行きたい」(未訪問)スポット。ピンが青になり、動画リンクは無くてよい | `true` |
 
 ### kids オブジェクト
 

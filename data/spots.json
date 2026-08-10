@@ -8809,7 +8809,7 @@
   "visited": "2026-08-08",
   "with": "family",
   "kids": {
-   "stroller": true,
+   "stroller": null,
    "diaper": null,
    "tatami": null,
    "kidsChair": null,

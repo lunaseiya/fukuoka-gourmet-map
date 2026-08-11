@@ -398,7 +398,7 @@
   "verdict": "カウンター+テーブル42席・博多駅デイトス2F直結",
   "video": {
    "youtube": "https://youtube.com/shorts/pS6VNuOkOLg",
-   "tiktok": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7208609739641588993",
    "instagram": null
   },
   "thumb": null,
@@ -2209,7 +2209,7 @@
   "kids": null,
   "verdict": "38席(カウンターあり)・子供連れ可・博多駅直結JR博多シティ10F",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/qiqZ2o5RygQ",
    "tiktok": "https://www.tiktok.com/@tencone/video/7224051400630652161",
    "instagram": null
   },
@@ -10639,5 +10639,469 @@
   "thumb": null,
   "wish": true,
   "category": "onsen"
+ },
+ {
+  "id": "hakatasankimizushiromise",
+  "name": "博多三氣 水城店",
+  "area": "太宰府市水城",
+  "city": "太宰府市",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.52495,
+  "lng": 130.494646,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "52席(カウンター14/テーブル24/座敷12)、駐車場24台あり、下大利駅徒歩15分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/oX8Q2I0Ho7w",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7430586428083555602"
+  },
+  "thumb": null
+ },
+ {
+  "id": "ichirankyanarushiteihakatami",
+  "name": "一蘭 キャナルシティ博多店",
+  "area": "博多区住吉(キャナルシティ博多)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.589628,
+  "lng": 130.411195,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "味集中カウンター23席のみ、櫛田神社前駅95m/祇園・中洲川端駅徒歩7分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/NkupVn8Qy3U",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7383238438994185490"
+  },
+  "thumb": null
+ },
+ {
+  "id": "akanorenkuunyanraamen",
+  "name": "赤のれん クーニャンラーメン",
+  "area": "東区和白",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン・町中華",
+  "lat": 33.686995,
+  "lng": 130.433809,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "和白駅(西鉄)徒歩5分(393m)、駐車場約6台、昭和35年創業の老舗",
+  "video": {
+   "youtube": "https://youtube.com/shorts/B3Uaa-uT06A",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7296399488128699650"
+  },
+  "thumb": null
+ },
+ {
+  "id": "menyawagamondaimyouhonten",
+  "name": "麺屋 わがもん 大名本店",
+  "area": "中央区大名",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ラーメン・居酒屋",
+  "lat": 33.586855,
+  "lng": 130.39246,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "30席(カウンター/座敷/テーブル)、19時〜翌5時営業(金土祝は翌7時)、駐車場なし、赤坂駅徒歩4分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/yeYQuHKg45I",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7291946324545572097"
+  },
+  "thumb": null
+ },
+ {
+  "id": "touchikukensetsubihonshabait",
+  "name": "東筑軒 折尾本社売店",
+  "area": "八幡西区堀川町(折尾駅前)",
+  "city": "北九州市八幡西区",
+  "pref": "福岡県",
+  "genre": "駅弁・かしわめし(テイクアウト)",
+  "lat": 33.863054,
+  "lng": 130.71172,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": false,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "テイクアウト専用・座席なし、JR折尾駅西口前すぐ徒歩2分、06:00-22:00年中無休",
+  "video": {
+   "youtube": "https://youtube.com/shorts/CB07YfY6B8Y",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7270823682400865538"
+  },
+  "thumb": null
+ },
+ {
+  "id": "tenpuratokorohiraoakurosumis",
+  "name": "天麩羅処ひらお アクロス店",
+  "area": "中央区天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "天ぷら",
+  "lat": 33.590967,
+  "lng": 130.402909,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター含む31席・個室なし、天神南駅徒歩7分、10:30-20:00",
+  "video": {
+   "youtube": "https://youtube.com/shorts/wZMw0rBXPWI",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7269605577750285569"
+  },
+  "thumb": null
+ },
+ {
+  "id": "makinoudonnatamise",
+  "name": "牧のうどん 奈多店",
+  "area": "東区奈多",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.689235,
+  "lng": 130.416375,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・座敷あり、駐車場あり、奈多駅徒歩6分、10:00-22:30(第3水休)",
+  "video": {
+   "youtube": "https://youtube.com/shorts/iwhPSFHaA9k",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7236579860590677249"
+  },
+  "thumb": null
+ },
+ {
+  "id": "hakataraamenhakatayakawabata",
+  "name": "博多ラーメン はかたや 川端店",
+  "area": "博多区上川端町",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.593603,
+  "lng": 130.408671,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "24時間営業、カウンター含む20席、中洲川端駅徒歩3分(5番出口) ※動画はリニューアル前の撮影",
+  "video": {
+   "youtube": "https://youtube.com/shorts/zGIiBUJLpDo",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7221386806107950337"
+  },
+  "thumb": null
+ },
+ {
+  "id": "dondonteikogahanamimise",
+  "name": "どんどん亭 古賀花見店",
+  "area": "古賀市花見東",
+  "city": "古賀市",
+  "pref": "福岡県",
+  "genre": "お好み焼き",
+  "lat": 33.745019,
+  "lng": 130.470783,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "座敷・ソファー席あり計96席、駐車場あり、未就学児可の記載あり",
+  "video": {
+   "youtube": "https://youtube.com/shorts/IBRWnqreGag",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7210922459875396866"
+  },
+  "thumb": null
+ },
+ {
+  "id": "menyataisonkasugasouhonten",
+  "name": "麺屋たいそん 春日総本店",
+  "area": "春日市一の谷",
+  "city": "春日市",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.522087,
+  "lng": 130.450837,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター8/テーブル18/小上がり18(計44席)、駐車場前10台+向かい4台",
+  "video": {
+   "youtube": "https://youtube.com/shorts/Af7C6qbM8TM",
+   "tiktok": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "shinmenyamasumotobranchhakat",
+  "name": "辛麺屋 桝元 BRANCH博多パピヨンガーデン店",
+  "area": "博多区千代",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "辛麺",
+  "lat": 33.602283,
+  "lng": 130.420183,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・座敷あり。モール共用駐車場685台。千代県庁口駅徒歩7分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/Jw0Xi22NCL4",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7255170175207607554"
+  },
+  "thumb": null
+ },
+ {
+  "id": "menyawaregaimaizumimise",
+  "name": "麺屋我ガ 今泉店",
+  "area": "中央区今泉",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "とんこつラーメン",
+  "lat": 33.585639,
+  "lng": 130.396681,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター13席+4人テーブル3卓。子供用椅子・食器・エプロンあり。駐車場なし。西鉄天神駅徒歩7分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/Ztnp7IdAMSs",
+   "tiktok": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "kuradashimisomenbaakirazento",
+  "name": "蔵出し味噌 麺場彰膳 東福岡店",
+  "area": "東区松島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "味噌ラーメン",
+  "lat": 33.625548,
+  "lng": 130.44006,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "テーブル4卓・座敷3卓(6名×3)・カウンター7席の計39席。駐車場12台。柚須駅徒歩約18分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/Z_L9o01cVjo",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7236020856378510593"
+  },
+  "thumb": null
+ },
+ {
+  "id": "uesutoshinguumise",
+  "name": "ウエスト 新宮店",
+  "area": "糟屋郡新宮町",
+  "city": "新宮町",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.702721,
+  "lng": 130.454597,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "駐車場あり。新宮中央駅から約1.1km(徒歩13〜15分程度)。席構成・子供椅子は未確認。 ※動画はリニューアル前の撮影",
+  "video": {
+   "youtube": "https://youtube.com/shorts/Ac-nEHKEbkQ",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7231841574232116482"
+  },
+  "thumb": null
+ },
+ {
+  "id": "tonkatsutsufukuokashinguumis",
+  "name": "とんかつ濵かつ 福岡新宮店",
+  "area": "糟屋郡新宮町",
+  "city": "新宮町",
+  "pref": "福岡県",
+  "genre": "とんかつ",
+  "lat": 33.68602,
+  "lng": 130.45382,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "総席数119席。駐車場52台あり。九産大前駅から約1.8km(徒歩30分弱、車移動が主)。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/ATBkPLF59Js",
+   "tiktok": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "raamenmakotoyamunakata3gouse",
+  "name": "ラーメンまこと屋 宗像3号線店",
+  "area": "宗像市",
+  "city": "宗像市",
+  "pref": "福岡県",
+  "genre": "牛骨ラーメン",
+  "lat": 33.783201,
+  "lng": 130.533481,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "カウンター中心。店前駐車場20台あり。JR東郷駅から約1.35km(車移動が主)。",
+  "video": {
+   "youtube": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7465848918073527560"
+  },
+  "thumb": null
+ },
+ {
+  "id": "gansonagahamadoragonshinguum",
+  "name": "元祖長浜ドラゴン 新宮店",
+  "area": "糟屋郡新宮町",
+  "city": "新宮町",
+  "pref": "福岡県",
+  "genre": "長浜ラーメン",
+  "lat": 33.696328,
+  "lng": 130.450374,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "券売機制。駐車場完備(台数記載なし)。席構成・子供椅子・最寄り駅徒歩分は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7377163730301324562"
+  },
+  "thumb": null
+ },
+ {
+  "id": "ajisenraamenkikuyoubaipasumi",
+  "name": "味千ラーメン 菊陽バイパス店",
+  "area": "菊池郡菊陽町",
+  "city": "菊陽町",
+  "pref": "熊本県",
+  "genre": "豚骨ラーメン",
+  "lat": 32.840329,
+  "lng": 130.832523,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "全席禁煙。駐車場あり。原水駅から徒歩7〜8分(611m)。",
+  "video": {
+   "youtube": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7374209891784871175"
+  },
+  "thumb": null
+ },
+ {
+  "id": "shisanudonwajiromise",
+  "name": "資さんうどん 和白店",
+  "area": "東区和白",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.691011,
+  "lng": 130.43222,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "カウンター・テーブル席あり。子供(小学生)可。共用駐車場440台。JR和白駅徒歩5分。 ※動画はリニューアル前(すかいらーく傘下入り前)の撮影",
+  "video": {
+   "youtube": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7218793229016108289"
+  },
+  "thumb": null
+ },
+ {
+  "id": "ougyouzanakasumise",
+  "name": "王餃子 中洲店",
+  "area": "博多区中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "餃子・ラーメン",
+  "lat": 33.591858,
+  "lng": 130.407314,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "26席(カウンター18・テーブル8前後)、座敷なし。駐車場なし。中洲川端駅徒歩5分。",
+  "video": {
+   "youtube": null,
+   "tiktok": "https://www.tiktok.com/@tencone/video/7210750402189446402"
+  },
+  "thumb": null
  }
 ]

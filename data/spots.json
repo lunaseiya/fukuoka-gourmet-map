@@ -10626,7 +10626,7 @@
   "genre": "日帰り温泉・宿",
   "lat": 33.368712,
   "lng": 130.203915,
-  "visited": null,
+  "visited": "2024-09-03",
   "with": "family",
   "kids": null,
   "verdict": "日帰り入浴10:00〜20:00(水曜15時〜)。大人1,300円・小学生650円・未就学児無料。湯船11種類+足湯。",
@@ -10637,8 +10637,9 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
-  "category": "onsen"
+  "wish": false,
+  "category": "onsen",
+  "posted": "2024-09-03"
  },
  {
   "id": "hakatasankimizushiromise",

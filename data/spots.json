@@ -24,7 +24,8 @@
   },
   "thumb": "sansenkaku-beppu.jpg",
   "city": "別府市",
-  "pref": "大分県"
+  "pref": "大分県",
+  "posted": "2026-08-08"
  },
  {
   "id": "sharyo-denjama",
@@ -177,7 +178,7 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "無料P・別府駅から車10分(無料送迎あり/前日要予約)",
+  "verdict": "日帰り入浴大人800円・受付11時〜14時。貸切風呂・家族風呂の設備記載あり(子供料金は不明)。 無料P・別府駅から車10分(無料送迎あり/前日要予約)",
   "video": {
    "youtube": "https://youtube.com/shorts/9gmkCi_tNRE",
    "tiktok": "https://www.tiktok.com/@tencone/video/7666745621444840712",
@@ -185,7 +186,8 @@
   },
   "thumb": "ryochiku-bettei-beppu.jpg",
   "city": "別府市",
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen"
  },
  {
   "id": "oigen-onojo",
@@ -360,7 +362,8 @@
   },
   "thumb": "kananomahoutamagocafe-01.jpg",
   "city": "春日市",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "posted": "2026-08-08"
  },
  {
   "id": "hakataraamenshinshin-02",
@@ -915,7 +918,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "無料P約900台・別府駅から無料シャトル約10分",
+  "verdict": "棚湯9〜23時・アクアガーデン11〜22時。平日大人2,000円・小人1,400円、土日祝2,400円/1,700円。 無料P約900台・別府駅から無料シャトル約10分",
   "video": {
    "youtube": "https://youtube.com/shorts/ZNcd3XyGJvs",
    "tiktok": "https://www.tiktok.com/@tencone/video/7414243683970616583",
@@ -923,7 +926,9 @@
   },
   "thumb": null,
   "city": "別府市",
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen",
+  "bathAge": "小人料金は3歳〜小学生(オムツ児は不明)"
  },
  {
   "id": "riiberuhoteruattousj-27",
@@ -2343,7 +2348,7 @@
   "visited": null,
   "with": "friends",
   "kids": null,
-  "verdict": "完全予約制の貸切(最大3名)・近隣コインP・藤崎駅徒歩1分",
+  "verdict": "完全予約制の貸切プライベートサウナ。120分5,800円〜・最大3名。水風呂・外気浴あり。 完全予約制の貸切(最大3名)・近隣コインP・藤崎駅徒歩1分",
   "video": {
    "youtube": null,
    "tiktok": "https://www.tiktok.com/@tencone/video/7336012315814399233",
@@ -2351,7 +2356,8 @@
   },
   "thumb": null,
   "city": "福岡市早良区",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "onsen"
  },
  {
   "id": "menyakaishin-90",
@@ -2578,7 +2584,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "駐車場あり・個室あり。レストラン席構成や子供設備は確認できず。",
+  "verdict": "日帰り10:00〜21:30(内湯)、大人800円・小人400円。歩行湯バーデゾーンは水着着用(レンタル有)。 駐車場あり・個室あり。レストラン席構成や子供設備は確認できず。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -2586,7 +2592,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen",
+  "bathAge": "オムツが取れていない子は利用不可"
  },
  {
   "id": "jamukoohii",
@@ -3390,7 +3398,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "料理旅館で個室あり(完全予約制)。駐車場16台。嬉野温泉駅から約1.5km。",
+  "verdict": "日帰り大人700円・小人350円、12〜16時頃(要確認)。貸切風呂あり(1人1,000円)。 料理旅館で個室あり(完全予約制)。駐車場16台。嬉野温泉駅から約1.5km。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3398,7 +3406,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "onsen"
  },
  {
   "id": "yakinikukankokuryourikankoku",
@@ -3488,7 +3497,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "カプセル・個室主体のホテル。所在地は博多駅前2-18-1。駐車場は情報なし。",
+  "verdict": "日帰りサウナ利用可。180分1,870円・ロイヤルサウナ2,860円、ほぼ24時間営業。 カプセル・個室主体のホテル。所在地は博多駅前2-18-1。駐車場は情報なし。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3496,7 +3505,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "onsen"
  },
  {
   "id": "chinzatakibiya",
@@ -5329,7 +5339,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "無料駐車場450台。入浴大人700円・子供500円(3歳以下無料)、屋内温浴+プールで雨天OK。",
+  "verdict": "温泉+プールで大人1,250円・小人(4歳〜小学生)700円。営業は土日祝中心12〜18時(夏季10〜19時)。 無料駐車場450台。入浴大人700円・子供500円(3歳以下無料)、屋内温浴+プールで雨天OK。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5337,7 +5347,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "onsen",
+  "bathAge": "3歳以下無料。水遊びパンツで幼児プール可"
  },
  {
   "id": "mobisuku",
@@ -5525,7 +5537,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "日帰り入浴は平日大人910円・土日祝960円(小人450円)、駐車場340台あり。",
+  "verdict": "10〜23時・年中無休。大人平日910円/土日祝960円・小人450円。岩盤浴コース有、家族湯の記載なし。 日帰り入浴は平日大人910円・土日祝960円(小人450円)、駐車場340台あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5533,7 +5545,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "onsen",
+  "bathAge": "小人料金は3歳から(オムツ児は不明)"
  },
  {
   "id": "ritorupuranettoyumetaunkurum",
@@ -5609,7 +5623,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "日帰り入浴は大人800円・3歳〜小学生400円(3歳未満無料)。無料駐車場200台。",
+  "verdict": "日帰り11:30〜21:00、大人800円・3歳〜小学生400円・3歳未満無料。家族湯の記載なし。 日帰り入浴は大人800円・3歳〜小学生400円(3歳未満無料)。無料駐車場200台。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5617,7 +5631,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "onsen",
+  "bathAge": "3歳未満無料(オムツ児可否は不明)"
  },
  {
   "id": "michinoekikanyuushahikosan",
@@ -5672,7 +5688,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "日帰り入浴は大人1200円・小学生600円(11:00〜14:30)。無料駐車場あり。",
+  "verdict": "立ち寄り湯11:00〜14:30(受付14時)・水曜定休。大人1,200円・小学生600円、岩盤浴+500円。 日帰り入浴は大人1200円・小学生600円(11:00〜14:30)。無料駐車場あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5680,7 +5696,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen"
  },
  {
   "id": "ilandnagasaki",
@@ -5693,7 +5710,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "駐車場無料。屋内キッズランド(3歳以上300円)や温泉スパがあり雨の日も遊べる。",
+  "verdict": "日帰り温泉9〜23時、平日大人1,000円/子供700円・土日祝1,200円/900円。Ark Land Spaに家族風呂あり。 駐車場無料。屋内キッズランド(3歳以上300円)や温泉スパがあり雨の日も遊べる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5701,7 +5718,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "onsen"
  },
  {
   "id": "yamadasanchinobokujoumirukun",
@@ -8563,7 +8581,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "天然温泉・サウナ・レストラン等を備えた屋内複合施設で雨の日も利用可",
+  "verdict": "温泉10〜22時・火曜定休。大人750円・小人400円(2026年4月改定)。家族風呂6室あり。 天然温泉・サウナ・レストラン等を備えた屋内複合施設で雨の日も利用可",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -8571,7 +8589,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "onsen",
+  "bathAge": "オムツが取れていない子は大浴場不可"
  },
  {
   "id": "chanobunkakan",
@@ -8823,6 +8843,7 @@
    "instagram": null
   },
   "thumb": "onojokokoronofurusatokan.jpg",
-  "wish": false
+  "wish": false,
+  "posted": "2026-08-10"
  }
 ]

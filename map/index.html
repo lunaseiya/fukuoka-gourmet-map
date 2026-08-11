@@ -35,6 +35,73 @@
     font-weight: 700;
     color: var(--text);
   }
+  .cat-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  .cat-btn {
+    border: none;
+    background: #fff;
+    color: var(--text);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .cat-btn.active {
+    background: #2d3436;
+    color: #fff;
+  }
+  .b-new {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    background: #ffd32a;
+    color: #6d4c00;
+    border-radius: 999px;
+    padding: 2px 9px;
+    animation: newpulse 1.6s ease-in-out infinite;
+  }
+  @keyframes newpulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .55; }
+  }
+  .pin-new {
+    animation: pinpulse 1.6s ease-in-out infinite;
+  }
+  @keyframes pinpulse {
+    0%, 100% { box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 0 rgba(255,211,42,.9); }
+    50% { box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 9px rgba(255,211,42,0); }
+  }
+  .pin-new-label {
+    position: absolute;
+    top: -14px;
+    left: 10px;
+    transform: rotate(45deg);
+    background: #ffd32a;
+    color: #6d4c00;
+    font-size: 9px;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 0 4px;
+    line-height: 14px;
+    pointer-events: none;
+  }
+  .card-bath {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #b05a00;
+    background: #fff3e3;
+    border-radius: 8px;
+    padding: 4px 8px;
+    display: inline-block;
+  }
   .filters {
     display: flex;
     gap: 6px;
@@ -198,6 +265,10 @@
 
 <header>
   <h1>福岡グルメマップ</h1>
+  <div class="cat-toggle">
+    <button class="cat-btn active" data-cat="gourmet">🍜 グルメ・おでかけ</button>
+    <button class="cat-btn" data-cat="onsen">♨ 日帰り温泉</button>
+  </div>
   <div class="filters">
     <button class="filter-btn active" data-filter="all">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
@@ -220,10 +291,18 @@ const DATA_URL = "../data/spots.json";
 const state = {
   spots: [],
   filter: "all",
+  category: "gourmet",
   area: "",
   markers: [],
   selectedId: null
 };
+
+// 投稿から1週間は NEW 扱い
+function isNew(spot) {
+  if (!spot.posted) return false;
+  const d = new Date(spot.posted + "T00:00:00+09:00");
+  return (Date.now() - d.getTime()) <= 7 * 24 * 60 * 60 * 1000;
+}
 
 async function loadSpots() {
   try {
@@ -249,6 +328,8 @@ function isKidsOk(spot) {
 
 function applyFilters(spots) {
   return spots.filter(s => {
+    // カテゴリ: グルメ・おでかけ ⇔ 日帰り温泉
+    if ((s.category === "onsen") !== (state.category === "onsen")) return false;
     // 訪問済み(赤)が基本。青(行きたい)は「行きたい」タブでのみ表示する
     if (state.filter === "all" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
@@ -281,9 +362,10 @@ function popupHtml(spot) {
   const genre = spot.genre ? escapeHtml(spot.genre) : "";
   const meta = [area, genre].filter(Boolean).join(" ・ ");
   return `
-    <div class="popup-name">${escapeHtml(spot.name)}</div>
+    <div class="popup-name">${isNew(spot) ? `<span class="b-new">NEW</span> ` : ""}${escapeHtml(spot.name)}</div>
     <div class="popup-meta">${meta}</div>
     ${spot.verdict ? `<div class="popup-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
+    ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
     ${videoLinksHtml(spot.video, "popup-links")}
   `;
 }
@@ -304,7 +386,8 @@ function cardHtml(spot) {
       </div>
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
-      ${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot.video, "card-links")}
     </div>
   `;
@@ -313,6 +396,7 @@ function cardHtml(spot) {
 function populateAreaSelect(spots) {
   // 現在のタブ(訪問済み/子連れOK/行きたい)に該当するスポットだけで市区一覧と件数を作る
   const tabSpots = spots.filter(s => {
+    if ((s.category === "onsen") !== (state.category === "onsen")) return false;
     if (state.filter === "all" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
@@ -371,7 +455,8 @@ function focusSpot(spot) {
 function renderList() {
   const list = document.getElementById("list");
   const countEl = document.getElementById("count");
-  const filtered = applyFilters(state.spots);
+  // NEW(投稿1週間以内)をリスト最上部に
+  const filtered = applyFilters(state.spots).slice().sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
 
   countEl.textContent = state.spots.length
     ? `${filtered.length}件表示中(全${state.spots.length}件)`
@@ -420,6 +505,13 @@ function renderMarkers() {
     el.style.border = "2px solid #fff";
     el.style.boxShadow = "0 1px 3px rgba(0,0,0,.4)";
     el.style.cursor = "pointer";
+    if (isNew(spot)) {
+      el.classList.add("pin-new");
+      const lab = document.createElement("span");
+      lab.className = "pin-new-label";
+      lab.textContent = "NEW";
+      el.appendChild(lab);
+    }
 
     const popup = new maplibregl.Popup({ offset: 20 }).setHTML(popupHtml(spot));
     const marker = new maplibregl.Marker({ element: el })
@@ -472,6 +564,16 @@ function initMap(spots) {
     renderAll();
   });
 }
+
+document.querySelectorAll(".cat-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.category = btn.dataset.cat;
+    populateAreaSelect(state.spots);
+    renderAll();
+  });
+});
 
 document.querySelectorAll(".filter-btn").forEach(btn => {
   btn.addEventListener("click", () => {

@@ -10616,5 +10616,28 @@
   "thumb": null,
   "wish": true,
   "category": "onsen"
+ },
+ {
+  "id": "koyuonsenoncri",
+  "name": "古湯温泉 ONCRI(おんくり)",
+  "area": "富士町古湯",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "日帰り温泉・宿",
+  "lat": 33.368712,
+  "lng": 130.203915,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "日帰り入浴10:00〜20:00(水曜15時〜)。大人1,300円・小学生650円・未就学児無料。湯船11種類+足湯。",
+  "bathAge": "未就学児は入浴無料(年齢制限の記載なし)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen"
  }
 ]

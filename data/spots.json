@@ -1291,8 +1291,8 @@
   "name": "博多元気一杯!!",
   "area": "下呉服町",
   "genre": "豚骨ラーメン",
-  "lat": null,
-  "lng": null,
+  "lat": 33.601038,
+  "lng": 130.407218,
   "visited": null,
   "with": "solo",
   "kids": null,
@@ -11101,6 +11101,485 @@
   "video": {
    "youtube": null,
    "tiktok": "https://www.tiktok.com/@tencone/video/7210750402189446402"
+  },
+  "thumb": null
+ },
+ {
+  "id": "hakatatenpurasutandomaruniim",
+  "name": "博多天ぷら スタンド◎まるに 今泉店",
+  "area": "今泉(天神)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "天ぷら立ち飲み",
+  "lat": 33.586937,
+  "lng": 130.400483,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター8・立ち飲み4・テーブル18の30席。子供椅子不明。専用駐車場なし(隣にコインP)。天神駅徒歩3分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/T5ntIUYfyTU",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "mentokoroyasuya",
+  "name": "麺処 恭や",
+  "area": "中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "豚骨×家系ラーメン",
+  "lat": 33.592967,
+  "lng": 130.406417,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター14席のみ、テーブル・座敷なし。子供椅子情報なし。駐車場なし。中洲川端駅徒歩5分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/xD5McDPlqi4",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "menyasadotomo",
+  "name": "麺や 佐渡友",
+  "area": "三苫",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン(ラーメンWalker金賞受賞)",
+  "lat": 33.702121,
+  "lng": 130.419749,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター・テーブル・小上がりの24席。子供椅子情報なし。駐車場7台あり。三苫駅徒歩4分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/y103I7D9_PU",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "hakatakumachanraamendaimyouh",
+  "name": "博多くまちゃんらぁめん 大名本店",
+  "area": "大名",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "豚骨ラーメン",
+  "lat": 33.586548,
+  "lng": 130.392598,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "テーブル・カウンターあり(席数詳細不明)。子供椅子・駐車場情報なし。赤坂駅徒歩5分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/faBknWwkCv0",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "gansomotsunaberakutenchitenj",
+  "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "もつ鍋",
+  "lat": 33.590967,
+  "lng": 130.402909,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "個室・半個室・掘りごたつ含む全120席。子供椅子情報なし。駐車場なし。天神駅徒歩5分(直結)",
+  "video": {
+   "youtube": "https://youtube.com/shorts/cWoiLS6svfs",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "sachiryuudaimyoumise",
+  "name": "幸龍 大名店",
+  "area": "大名",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "豚骨ラーメン(深夜営業)",
+  "lat": 33.587267,
+  "lng": 130.392104,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター中心30席。子供椅子情報なし。駐車場なし。赤坂駅徒歩4分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/dJItUpodvkw",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "hanawa",
+  "name": "華和",
+  "area": "麦野(雑餉隈)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "うどん(明太子うどん)",
+  "lat": 33.547581,
+  "lng": 130.463305,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター11+小上がり12の23席。子供椅子情報なし。駐車場なし(近隣CP多数)。雑餉隈駅徒歩2分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/xk92JRg23HQ",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "raamenjinanbouhakatadeitosum",
+  "name": "らーめん二男坊 博多デイトス店",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "豚骨ラーメン",
+  "lat": 33.590076,
+  "lng": 130.420173,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター中心41席(対面カウンター含む)。子供椅子情報なし。提携駐車場あり。博多駅直結",
+  "video": {
+   "youtube": "https://youtube.com/shorts/QlbhIFN2aYs",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "kurumeraamenkiyoshiyoukensuw",
+  "name": "久留米ラーメン清陽軒 諏訪野町本店",
+  "area": "久留米市諏訪野町",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "久留米ラーメン",
+  "lat": 33.302558,
+  "lng": 130.522346,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター22+テーブル20+座敷24の66席。ベビーチェア・おむつ台完備。駐車場あり。西鉄花畑駅徒歩10分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/g0tOTJARaTI",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "itsudemosuiitsumaimatsubaram",
+  "name": "いつでもスイーツ 舞松原店",
+  "area": "舞松原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "24時間無人スイーツ販売",
+  "lat": 33.64309,
+  "lng": 130.445854,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "24時間無人自販店のため客席なし。子供椅子・駐車場情報なし。千早駅東口徒歩12分",
+  "video": {
+   "youtube": "https://youtube.com/shorts/MXAksA1GVHA",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "hakatayakishoukagotsutsumi10",
+  "name": "博多焼き小籠包1010 福岡天神店",
+  "area": "福岡市中央区(天神)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "食べ歩き焼き小籠包",
+  "lat": 33.587686,
+  "lng": 130.395887,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "テイクアウト専門(一部イートイン5席)。駐車場なし・近隣コインパーキング有。西鉄天神駅から徒歩7分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/YIBHND4_tFw",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "raamenhachi",
+  "name": "らーめん八",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "久留米ラーメン",
+  "lat": 33.319805,
+  "lng": 130.553059,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "27席(カウンター9・テーブル18)。駐車場あり。久留米大学前駅から徒歩15分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/XyyVBIop674",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "tachibanaudonkurumemise",
+  "name": "立花うどん 久留米店",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.319621,
+  "lng": 130.552326,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "136席(テーブル88・座敷48)。駐車場あり。久留米大学前駅から徒歩約15分(西鉄バス停から2〜8分)。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/ohaulhWpD3I",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "mutchanmanjuugofukuchoumise",
+  "name": "むっちゃん万十 呉服町店",
+  "area": "福岡市博多区(呉服町エリア/奈良屋町)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ハムエッグ万十",
+  "lat": 33.600284,
+  "lng": 130.405674,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "レジカウンターで注文・受取の形式。駐車場なし。呉服町駅から約440m。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/kRIp3veD5BY",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "seiron",
+  "name": "セイロン",
+  "area": "福岡市中央区(大名)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "スリランカカレー",
+  "lat": 33.587725,
+  "lng": 130.395753,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "26席(テーブル5卓・カウンター8席)。駐車場なし・近隣コインパーキング有。天神駅から徒歩7分、赤坂駅から徒歩5分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/iGjDdnH_yCY",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "rokujoutokihabeppumise",
+  "name": "六盛 トキハ別府店",
+  "area": "大分県別府市",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "別府冷麺",
+  "lat": 33.2801,
+  "lng": 131.505341,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "トキハ百貨店地下フードコート内、カウンター席あり。駐車場あり(百貨店駐車場)。別府駅から徒歩8分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/K1PSMx_zJ60",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "nakasukawabatakirin",
+  "name": "中洲 川端 きりん",
+  "area": "福岡市博多区(中洲川端)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "呼び戻し系豚骨ラーメン",
+  "lat": 33.593603,
+  "lng": 130.408671,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": false,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター席のみ22席。駐車場なし。中洲川端駅から徒歩3分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/FX3-JLOGij4",
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null
+ },
+ {
+  "id": "hakataraamenzenhakozakimise",
+  "name": "博多ラーメン 膳 箱崎店",
+  "area": "福岡市東区(箱崎)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "豚骨ラーメン(320円均一チェーン)",
+  "lat": 33.62067,
+  "lng": 130.418577,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "カウンター席あり(テーブル構成は不明)。駐車場あり(隣接「小麦冶 箱崎本店」と共有)。箱崎九大前駅から徒歩約4分。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/4MJPRI4SNSA",
+   "tiktok": null,
+   "instagram": null
   },
   "thumb": null
  }

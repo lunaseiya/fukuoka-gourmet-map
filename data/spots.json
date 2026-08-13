@@ -11738,5 +11738,36 @@
    "instagram": null
   },
   "thumb": null
+ },
+ {
+  "id": "terihasuparizootobekkan",
+  "name": "照葉スパリゾート別館(TERIHA SPA RESORT ANNEX)",
+  "area": "香椎照葉(アイランドシティ)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "スーパー銭湯・スパ",
+  "lat": 33.663436,
+  "lng": 130.423334,
+  "visited": "2026-08-01",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "一日過ごせる複合スパ。ボドゲ73種・こどもラボ・漫画・夜景ジム・外気浴テラス。平日1,700円〜、博多天神香椎から無料送迎バス",
+  "video": {
+   "youtube": "https://youtube.com/shorts/MfccKeMj-Ls",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7673425449346714887",
+   "instagram": null
+  },
+  "thumb": "terihasuparizootobekkan.jpg",
+  "wish": false,
+  "posted": "2026-08-13",
+  "category": "onsen",
+  "bathAge": null
  }
 ]

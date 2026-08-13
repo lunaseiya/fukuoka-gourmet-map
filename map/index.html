@@ -123,15 +123,6 @@
     border-color: var(--accent);
     color: #fff;
   }
-  select#areaSelect {
-    border: 1px solid var(--border);
-    border-radius: 999px;
-    padding: 6px 10px;
-    font-size: 13px;
-    background: #fff;
-    color: var(--text);
-    max-width: 40vw;
-  }
   #map {
     width: 100%;
     height: 46vh;
@@ -257,6 +248,50 @@
     margin-right: 8px;
     text-decoration: none;
   }
+  .sheet-back {
+    position: fixed; inset: 0; background: rgba(0,0,0,.45);
+    z-index: 40; display: none;
+  }
+  .sheet-back.open { display: block; }
+  .sheet {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 41;
+    background: #fff; border-radius: 16px 16px 0 0;
+    max-height: 78vh; overflow-y: auto; padding: 14px 16px 20px;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+  }
+  .sheet h2 { font-size: 15px; margin: 0 0 10px; }
+  .sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .sheet-actions { display: flex; gap: 8px; }
+  .sheet-actions button {
+    font-size: 13px; border: 1px solid var(--border); background: #fff;
+    border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  }
+  .sheet-actions button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+  .area-group { font-size: 11px; color: var(--muted); margin: 10px 0 4px; font-weight: 700; }
+  .area-item { display: flex; align-items: center; gap: 8px; padding: 7px 2px; font-size: 14px; border-bottom: 1px solid var(--bg); }
+  .area-item input { width: 18px; height: 18px; }
+  .area-item .cnt { color: var(--muted); font-size: 12px; margin-left: auto; }
+  .memo-form label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 3px; }
+  .memo-form input[type=text], .memo-form input[type=date], .memo-form textarea, .memo-form select {
+    width: 100%; font: inherit; font-size: 14px; padding: 8px 10px;
+    border: 1px solid var(--border); border-radius: 8px; background: #fff;
+  }
+  .memo-form textarea { resize: vertical; }
+  .memo-kids { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
+  .memo-kids label { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text); margin: 0; }
+  .memo-hint { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; }
+  .pick-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
+    background: #2d3436; color: #fff; text-align: center;
+    padding: 10px; font-size: 13px; display: none;
+  }
+  .pick-banner.open { display: block; }
+  .b-memo {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #f3e8ff; color: #7b2ff2; border-radius: 999px; padding: 2px 9px;
+  }
+  .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
+  .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .osm-credit {
     font-size: 10px;
     color: var(--muted);
@@ -278,9 +313,8 @@
     <button class="filter-btn active" data-filter="all">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
     <button class="filter-btn" data-filter="wish">行きたい</button>
-    <select id="areaSelect">
-      <option value="">市区で絞る</option>
-    </select>
+    <button class="filter-btn" id="areaBtn">市区で絞る</button>
+    <button class="filter-btn" id="memoBtn">＋メモ登録</button>
   </div>
 </header>
 
@@ -290,6 +324,66 @@
 <div id="count"></div>
 <div id="list"></div>
 
+
+<div class="pick-banner" id="pickBanner">地図をタップして位置を指定してください(タップでピンが立ちます)</div>
+
+<div class="sheet-back" id="areaBack">
+  <div class="sheet" id="areaSheet">
+    <div class="sheet-head">
+      <h2>市区で絞る(複数選択OK)</h2>
+      <div class="sheet-actions">
+        <button id="areaClear">クリア</button>
+        <button class="primary" id="areaApply">適用</button>
+      </div>
+    </div>
+    <div id="areaListBox"></div>
+  </div>
+</div>
+
+<div class="sheet-back" id="memoBack">
+  <div class="sheet memo-form" id="memoSheet">
+    <div class="sheet-head">
+      <h2>来店メモを登録</h2>
+      <div class="sheet-actions">
+        <button id="memoClose">閉じる</button>
+        <button class="primary" id="memoSave">保存</button>
+      </div>
+    </div>
+    <label>店名 *</label>
+    <input type="text" id="mName" placeholder="例: ○○食堂 香椎店">
+    <label>ジャンル</label>
+    <input type="text" id="mGenre" placeholder="例: ラーメン / 定食 / カフェ">
+    <label>市区(エリア)</label>
+    <input type="text" id="mCity" placeholder="例: 福岡市東区">
+    <label>位置</label>
+    <div class="sheet-actions" style="margin:2px 0 4px">
+      <button id="mPick">📍 地図をタップして指定</button>
+      <span id="mLatLng" style="font-size:12px;color:var(--muted);align-self:center">未指定</span>
+    </div>
+    <label>訪問日</label>
+    <input type="date" id="mDate">
+    <label>カテゴリ</label>
+    <select id="mCat"><option value="">グルメ・おでかけ</option><option value="onsen">日帰り温泉</option></select>
+    <label>子連れ情報</label>
+    <div class="memo-kids">
+      <label><input type="checkbox" id="mChair">子供椅子</label>
+      <label><input type="checkbox" id="mTatami">座敷</label>
+      <label><input type="checkbox" id="mDiaper">オムツ替え</label>
+      <label><input type="checkbox" id="mStroller">ベビーカー可</label>
+    </div>
+    <label>ひとことメモ(席・駐車場・提供speed等)</label>
+    <textarea id="mVerdict" rows="3" placeholder="例: 座敷あり・P10台・提供10分。子連れでも安心"></textarea>
+
+    <div id="memoListWrap" style="margin-top:16px">
+      <div class="sheet-head"><h2>この端末のメモ(<span id="memoCount">0</span>件)</h2>
+        <div class="sheet-actions"><button id="memoCopy">本登録用にコピー</button></div>
+      </div>
+      <div class="memo-hint">メモはこの端末のブラウザに保存され、地図に紫バッジ付きで表示されます。「本登録用にコピー」した内容をClaudeに貼ると、全端末で見られる正式データに登録されます。</div>
+      <div id="memoList"></div>
+    </div>
+  </div>
+</div>
+
 <script>
 const DATA_URL = "../data/spots.json";
 
@@ -297,10 +391,25 @@ const state = {
   spots: [],
   filter: "all",
   category: "gourmet",
-  area: "",
+  areas: new Set(),
+  areasDraft: new Set(),
   markers: [],
-  selectedId: null
+  selectedId: null,
+  picking: false,
+  pickMarker: null,
+  pickPos: null
 };
+
+const MEMO_KEY = "aq_memo_spots";
+const PASS_KEY = "aq_memo_unlocked";
+function loadMemos() {
+  try { return JSON.parse(localStorage.getItem(MEMO_KEY) || "[]"); } catch (e) { return []; }
+}
+function saveMemos(list) { localStorage.setItem(MEMO_KEY, JSON.stringify(list)); }
+function mergedSpots(base) {
+  const ids = new Set(base.map(s => s.id));
+  return base.concat(loadMemos().filter(m => !ids.has(m.id)));
+}
 
 // 投稿から1週間は NEW 扱い
 function isNew(spot) {
@@ -314,10 +423,10 @@ async function loadSpots() {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error("fetch failed: " + res.status);
     const json = await res.json();
-    return Array.isArray(json) ? json : [];
+    return mergedSpots(Array.isArray(json) ? json : []);
   } catch (e) {
     console.error("spots.json の読み込みに失敗しました", e);
-    return [];
+    return mergedSpots([]);
   }
 }
 
@@ -339,7 +448,7 @@ function applyFilters(spots) {
     if (state.filter === "all" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
-    if (state.area && s.city !== state.area) return false;
+    if (state.areas.size && !state.areas.has(s.city)) return false;
     return true;
   });
 }
@@ -402,25 +511,27 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
 }
 
-function populateAreaSelect(spots) {
-  // 現在のタブ(訪問済み/子連れOK/行きたい)に該当するスポットだけで市区一覧と件数を作る
-  const tabSpots = spots.filter(s => {
+function areaTabSpots(spots) {
+  return spots.filter(s => {
     if ((s.category === "onsen") !== (state.category === "onsen")) return false;
     if (state.filter === "all" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     return true;
   });
+}
+
+function populateAreaSelect(spots) {
+  const tabSpots = areaTabSpots(spots);
   const prefBy = {};
   tabSpots.forEach(s => { if (s.city && !prefBy[s.city]) prefBy[s.city] = s.pref || "福岡県"; });
   const cities = Object.keys(prefBy);
-  // 並び順: 福岡市の区 → 福岡県内の市町 → 県外(県ごと)
   const WARDS = ["福岡市東区", "福岡市博多区", "福岡市中央区", "福岡市南区", "福岡市城南区", "福岡市早良区", "福岡市西区"];
   const PREFS = ["佐賀県", "長崎県", "大分県", "熊本県", "宮崎県", "鹿児島県", "山口県", "広島県", "岡山県", "愛媛県", "大阪府"];
   const rank = c => {
@@ -428,28 +539,35 @@ function populateAreaSelect(spots) {
     if (w >= 0) return w;
     if (prefBy[c] === "福岡県") return 100;
     const p = PREFS.indexOf(prefBy[c]);
-    return 200 + (p >= 0 ? p : PREFS.length); // 県外は県ごとにまとめる
+    return 200 + (p >= 0 ? p : PREFS.length);
   };
   cities.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, "ja"));
-  const sel = document.getElementById("areaSelect");
-  const prev = state.area;
-  while (sel.options.length > 1) sel.remove(1);
   const countBy = {};
   tabSpots.forEach(s => { if (s.city) countBy[s.city] = (countBy[s.city] || 0) + 1; });
+  // 選択中で消えた市区を落とす
+  [...state.areas].forEach(a => { if (!cities.includes(a)) state.areas.delete(a); });
+  state.areasDraft = new Set(state.areas);
+  const box = document.getElementById("areaListBox");
+  let html = ""; let lastGroup = "";
   cities.forEach(c => {
-    const opt = document.createElement("option");
-    opt.value = c;
-    const label = prefBy[c] === "福岡県" ? c : `${prefBy[c]}・${c}`;
-    opt.textContent = `${label} (${countBy[c]})`;
-    sel.appendChild(opt);
+    const g = rank(c) < 100 ? "福岡市" : (prefBy[c] === "福岡県" ? "福岡県内" : prefBy[c]);
+    if (g !== lastGroup) { html += `<div class="area-group">${g}</div>`; lastGroup = g; }
+    const label = prefBy[c] === "福岡県" ? c : c;
+    html += `<label class="area-item"><input type="checkbox" value="${escapeHtml(c)}" ${state.areasDraft.has(c) ? "checked" : ""}><span>${escapeHtml(label)}</span><span class="cnt">${countBy[c]}</span></label>`;
   });
-  // タブ切替後も選択中の市区が残っていれば維持、消えていればリセット
-  if (prev && cities.includes(prev)) {
-    sel.value = prev;
-  } else {
-    sel.value = "";
-    state.area = "";
-  }
+  box.innerHTML = html || `<div class="memo-hint">このタブに市区データがありません</div>`;
+  box.querySelectorAll("input[type=checkbox]").forEach(cb => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.areasDraft.add(cb.value); else state.areasDraft.delete(cb.value);
+    });
+  });
+  updateAreaBtn();
+}
+
+function updateAreaBtn() {
+  const b = document.getElementById("areaBtn");
+  b.textContent = state.areas.size ? `市区で絞る(${state.areas.size})` : "市区で絞る";
+  b.classList.toggle("active", state.areas.size > 0);
 }
 
 function clearMarkers() {
@@ -578,7 +696,138 @@ function initMap(spots) {
   map.on("load", () => {
     renderAll();
   });
+  map.on("click", (e) => {
+    if (state.picking) onMapPick(e.lngLat);
+  });
 }
+
+
+// ===== 市区パネル =====
+document.getElementById("areaBtn").addEventListener("click", () => {
+  populateAreaSelect(state.spots);
+  document.getElementById("areaBack").classList.add("open");
+});
+document.getElementById("areaBack").addEventListener("click", (e) => {
+  if (e.target.id === "areaBack") document.getElementById("areaBack").classList.remove("open");
+});
+document.getElementById("areaClear").addEventListener("click", () => {
+  state.areasDraft = new Set();
+  document.querySelectorAll("#areaListBox input[type=checkbox]").forEach(cb => cb.checked = false);
+});
+document.getElementById("areaApply").addEventListener("click", () => {
+  state.areas = new Set(state.areasDraft);
+  document.getElementById("areaBack").classList.remove("open");
+  updateAreaBtn();
+  renderAll();
+});
+
+// ===== メモ登録 =====
+const MEMO_PASS = "seiya6019";
+function memoUnlocked() { return sessionStorage.getItem(PASS_KEY) === "1"; }
+document.getElementById("memoBtn").addEventListener("click", () => {
+  if (!memoUnlocked()) {
+    const p = prompt("管理パスワードを入力してください");
+    if (p !== MEMO_PASS) { if (p !== null) alert("パスワードが違います"); return; }
+    sessionStorage.setItem(PASS_KEY, "1");
+  }
+  openMemoSheet();
+});
+function openMemoSheet() {
+  document.getElementById("mDate").value = new Date().toISOString().slice(0, 10);
+  renderMemoList();
+  document.getElementById("memoBack").classList.add("open");
+}
+document.getElementById("memoClose").addEventListener("click", () => {
+  document.getElementById("memoBack").classList.remove("open");
+});
+document.getElementById("memoBack").addEventListener("click", (e) => {
+  if (e.target.id === "memoBack") document.getElementById("memoBack").classList.remove("open");
+});
+
+// 位置指定モード
+document.getElementById("mPick").addEventListener("click", () => {
+  state.picking = true;
+  document.getElementById("memoBack").classList.remove("open");
+  document.getElementById("pickBanner").classList.add("open");
+});
+function onMapPick(lngLat) {
+  state.pickPos = { lat: +lngLat.lat.toFixed(6), lng: +lngLat.lng.toFixed(6) };
+  if (state.pickMarker) state.pickMarker.remove();
+  const el = document.createElement("div");
+  el.style.cssText = "width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b2ff2;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)";
+  state.pickMarker = new maplibregl.Marker({ element: el }).setLngLat([state.pickPos.lng, state.pickPos.lat]).addTo(window._map);
+  state.picking = false;
+  document.getElementById("pickBanner").classList.remove("open");
+  document.getElementById("mLatLng").textContent = `${state.pickPos.lat}, ${state.pickPos.lng}`;
+  document.getElementById("memoBack").classList.add("open");
+}
+
+function slugify(name) {
+  return "memo-" + Date.now().toString(36);
+}
+document.getElementById("memoSave").addEventListener("click", () => {
+  const name = document.getElementById("mName").value.trim();
+  if (!name) { alert("店名を入力してください"); return; }
+  const kids = {
+    stroller: document.getElementById("mStroller").checked || null,
+    diaper: document.getElementById("mDiaper").checked || null,
+    tatami: document.getElementById("mTatami").checked || null,
+    kidsChair: document.getElementById("mChair").checked || null,
+    serveMin: null, noise: null
+  };
+  const entry = {
+    id: slugify(name), name: name, memo: true,
+    area: null, city: document.getElementById("mCity").value.trim() || null, pref: null,
+    genre: document.getElementById("mGenre").value.trim() || null,
+    lat: state.pickPos ? state.pickPos.lat : null,
+    lng: state.pickPos ? state.pickPos.lng : null,
+    visited: document.getElementById("mDate").value || null,
+    with: "family", kids: kids,
+    verdict: document.getElementById("mVerdict").value.trim() || null,
+    video: { youtube: null, tiktok: null, instagram: null },
+    thumb: null
+  };
+  const cat = document.getElementById("mCat").value;
+  if (cat) entry.category = cat;
+  const memos = loadMemos();
+  memos.push(entry);
+  saveMemos(memos);
+  // フォームリセット
+  ["mName", "mGenre", "mCity", "mVerdict"].forEach(i => document.getElementById(i).value = "");
+  ["mChair", "mTatami", "mDiaper", "mStroller"].forEach(i => document.getElementById(i).checked = false);
+  if (state.pickMarker) { state.pickMarker.remove(); state.pickMarker = null; }
+  state.pickPos = null;
+  document.getElementById("mLatLng").textContent = "未指定";
+  state.spots = mergedSpots(state.spots.filter(s => !s.memo));
+  renderMemoList();
+  renderAll();
+  alert("メモを保存しました(この端末のみ)。正式登録は「本登録用にコピー」でClaudeへ");
+});
+
+function renderMemoList() {
+  const memos = loadMemos();
+  document.getElementById("memoCount").textContent = memos.length;
+  document.getElementById("memoList").innerHTML = memos.map(m => `
+    <div class="memo-list-item"><span>${escapeHtml(m.name)}${m.lat ? "" : "(位置未指定)"}</span>
+    <button data-del="${m.id}">削除</button></div>`).join("") || `<div class="memo-hint">まだメモはありません</div>`;
+  document.querySelectorAll("#memoList [data-del]").forEach(b => {
+    b.addEventListener("click", () => {
+      saveMemos(loadMemos().filter(m => m.id !== b.dataset.del));
+      state.spots = mergedSpots(state.spots.filter(s => !s.memo));
+      renderMemoList(); renderAll();
+    });
+  });
+}
+document.getElementById("memoCopy").addEventListener("click", () => {
+  const memos = loadMemos();
+  if (!memos.length) { alert("メモがありません"); return; }
+  const text = "【来店メモの本登録依頼】\n" + JSON.stringify(memos, null, 1);
+  if (navigator.clipboard && window.isSecureContext) {
+    navigator.clipboard.writeText(text).then(() => alert("コピーしました。Claudeのチャットに貼ってください"));
+  } else {
+    prompt("以下を全選択してコピーしてください", text);
+  }
+});
 
 document.querySelectorAll(".cat-btn").forEach(btn => {
   btn.addEventListener("click", () => {
@@ -600,10 +849,7 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   });
 });
 
-document.getElementById("areaSelect").addEventListener("change", (e) => {
-  state.area = e.target.value;
-  renderAll();
-});
+
 
 (async function main() {
   const spots = await loadSpots();

@@ -246,6 +246,11 @@
   .popup-name { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
   .popup-meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
   .popup-verdict { font-size: 12px; margin-bottom: 6px; line-height: 1.5; }
+  .web-btn {
+    background: #2d3436;
+    color: #fff !important;
+    border-color: #2d3436 !important;
+  }
   .popup-links a {
     font-size: 12px;
     color: var(--accent);
@@ -339,13 +344,23 @@ function applyFilters(spots) {
   });
 }
 
-function videoLinksHtml(video, cls) {
-  if (!video) return "";
+function webUrl(spot) {
+  // 公式サイトが登録されていればそれを、無ければGoogleマップの該当スポットを開く
+  if (spot.web) return spot.web;
+  const q = encodeURIComponent(spot.name + " " + (spot.city || ""));
+  if (spot.lat && spot.lng) {
+    return `https://www.google.com/maps/search/?api=1&query=${q}&center=${spot.lat},${spot.lng}`;
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+}
+
+function videoLinksHtml(spot, cls) {
+  const video = spot.video;
   const items = [];
-  if (video.youtube) items.push(`<a href="${video.youtube}" target="_blank" rel="noopener">YouTube</a>`);
-  if (video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
-  if (video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
-  if (!items.length) return "";
+  if (video && video.youtube) items.push(`<a href="${video.youtube}" target="_blank" rel="noopener">YouTube</a>`);
+  if (video && video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+  if (video && video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+  items.push(`<a class="web-btn" href="${webUrl(spot)}" target="_blank" rel="noopener">🌐 詳細</a>`);
   return `<div class="${cls}">${items.join("")}</div>`;
 }
 
@@ -366,7 +381,7 @@ function popupHtml(spot) {
     <div class="popup-meta">${meta}</div>
     ${spot.verdict ? `<div class="popup-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
     ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
-    ${videoLinksHtml(spot.video, "popup-links")}
+    ${videoLinksHtml(spot, "popup-links")}
   `;
 }
 
@@ -388,7 +403,7 @@ function cardHtml(spot) {
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
       ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
-      ${videoLinksHtml(spot.video, "card-links")}
+      ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
 }

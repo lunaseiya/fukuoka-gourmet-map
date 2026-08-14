@@ -307,11 +307,35 @@
   }
   .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
   .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
+  .map-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px 0;
+  }
+  .legend {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .lg-dot {
+    width: 10px; height: 10px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: inline-block;
+    margin: 0 3px 0 6px;
+  }
+  .lg-dot:first-child { margin-left: 0; }
+  .lg-red { background: #d63031; }
+  .lg-blue { background: #2b5cc4; }
   .osm-credit {
     font-size: 10px;
     color: var(--muted);
     text-align: right;
-    padding: 4px 10px 0;
   }
   .osm-credit a { color: var(--muted); }
 </style>
@@ -328,14 +352,20 @@
     <button class="filter-btn active" data-filter="all">すべて</button>
     <button class="filter-btn" data-filter="visited">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
-    <button class="filter-btn" data-filter="wish">行きたい</button>
+    <button class="filter-btn" data-filter="wish">下調べ</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
     <button class="filter-btn" id="memoBtn">＋メモ登録</button>
   </div>
 </header>
 
 <div id="map"></div>
-<div class="osm-credit">地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+<div class="map-foot">
+  <div class="legend">
+    <span class="lg-dot lg-red"></span>行った店
+    <span class="lg-dot lg-blue"></span>下調べ済み
+  </div>
+  <div class="osm-credit">地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+</div>
 
 <div id="count"></div>
 <div id="list"></div>
@@ -516,7 +546,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">行きたい</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;

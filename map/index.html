@@ -229,24 +229,39 @@
     font-size: 14px;
     line-height: 1.7;
   }
-  .maplibregl-popup-content {
-    font-family: inherit;
-    padding: 12px 14px;
-    border-radius: 10px;
-  }
-  .popup-name { font-weight: 700; font-size: 14px; margin-bottom: 2px; }
-  .popup-meta { font-size: 12px; color: var(--muted); margin-bottom: 6px; }
-  .popup-verdict { font-size: 12px; margin-bottom: 6px; line-height: 1.5; }
   .web-btn {
-    background: #2d3436;
+    background: #2d3436 !important;
     color: #fff !important;
     border-color: #2d3436 !important;
   }
-  .popup-links a {
-    font-size: 12px;
-    color: var(--accent);
-    margin-right: 8px;
-    text-decoration: none;
+  /* 選択中ピンの強調(赤リング) */
+  .pin-selected {
+    box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 4px #fff, 0 0 0 7px var(--accent) !important;
+    z-index: 5;
+  }
+  /* ピン/リストタップで下から出る詳細カード */
+  #detail {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+    padding: 10px 16px calc(16px + env(safe-area-inset-bottom));
+    max-height: 45vh; overflow-y: auto;
+    transform: translateY(110%);
+    transition: transform .22s ease;
+  }
+  #detail.open { transform: translateY(0); }
+  #detail .card { border: none; padding: 0 24px 0 0; cursor: default; }
+  .detail-grip {
+    width: 40px; height: 4px; border-radius: 2px;
+    background: var(--border); margin: 0 auto 10px;
+  }
+  .detail-close {
+    position: absolute; top: 12px; right: 12px;
+    border: none; background: var(--bg); color: var(--muted);
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 15px; line-height: 30px; text-align: center;
+    cursor: pointer; padding: 0;
   }
   .sheet-back {
     position: fixed; inset: 0; background: rgba(0,0,0,.45);
@@ -323,6 +338,8 @@
 
 <div id="count"></div>
 <div id="list"></div>
+
+<div id="detail"></div>
 
 
 <div class="pick-banner" id="pickBanner">地図をタップして位置を指定してください(タップでピンが立ちます)</div>
@@ -481,19 +498,6 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;");
 }
 
-function popupHtml(spot) {
-  const area = spot.area ? escapeHtml(spot.area) : "";
-  const genre = spot.genre ? escapeHtml(spot.genre) : "";
-  const meta = [area, genre].filter(Boolean).join(" ・ ");
-  return `
-    <div class="popup-name">${isNew(spot) ? `<span class="b-new">NEW</span> ` : ""}${escapeHtml(spot.name)}</div>
-    <div class="popup-meta">${meta}</div>
-    ${spot.verdict ? `<div class="popup-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
-    ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
-    ${videoLinksHtml(spot, "popup-links")}
-  `;
-}
-
 function cardHtml(spot) {
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
@@ -575,13 +579,38 @@ function clearMarkers() {
   state.markers = [];
 }
 
+// ===== 詳細カード(ピン/リスト共通の詳細表示) =====
+function updatePinHighlight() {
+  state.markers.forEach(({ spot, marker }) => {
+    marker.getElement().classList.toggle("pin-selected", spot.id === state.selectedId);
+  });
+}
+
+function openDetail(spot) {
+  const detail = document.getElementById("detail");
+  detail.innerHTML = `
+    <div class="detail-grip"></div>
+    <button class="detail-close" id="detailClose">✕</button>
+    <div class="card">${cardHtml(spot)}</div>
+  `;
+  detail.classList.add("open");
+  document.getElementById("detailClose").addEventListener("click", closeDetail);
+}
+
+function closeDetail() {
+  document.getElementById("detail").classList.remove("open");
+  state.selectedId = null;
+  renderList();
+  updatePinHighlight();
+}
+
 function focusSpot(spot) {
   state.selectedId = spot.id;
   renderList();
-  const m = state.markers.find(x => x.spot.id === spot.id);
-  if (m && window._map) {
+  updatePinHighlight();
+  openDetail(spot);
+  if (spot.lat !== null && spot.lng !== null && spot.lat !== undefined && spot.lng !== undefined && window._map) {
     window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true });
-    m.marker.togglePopup();
   }
 }
 
@@ -613,12 +642,7 @@ function renderList() {
   list.querySelectorAll(".card").forEach(el => {
     el.addEventListener("click", () => {
       const spot = state.spots.find(s => s.id === el.dataset.id);
-      if (spot && spot.lat !== null && spot.lng !== null) {
-        focusSpot(spot);
-      } else {
-        state.selectedId = spot ? spot.id : null;
-        renderList();
-      }
+      if (spot) focusSpot(spot);
     });
   });
 }
@@ -646,22 +670,26 @@ function renderMarkers() {
       el.appendChild(lab);
     }
 
-    const popup = new maplibregl.Popup({ offset: 20 }).setHTML(popupHtml(spot));
     const marker = new maplibregl.Marker({ element: el })
       .setLngLat([spot.lng, spot.lat])
-      .setPopup(popup)
       .addTo(window._map);
 
-    el.addEventListener("click", () => {
-      state.selectedId = spot.id;
-      renderList();
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      focusSpot(spot);
     });
 
     state.markers.push({ spot, marker });
   });
+  updatePinHighlight();
 }
 
 function renderAll() {
+  // フィルタ変更で選択中の店が対象外になったら詳細カードを閉じる
+  if (state.selectedId !== null && !applyFilters(state.spots).some(s => s.id === state.selectedId)) {
+    document.getElementById("detail").classList.remove("open");
+    state.selectedId = null;
+  }
   renderMarkers();
   renderList();
 }
@@ -697,7 +725,9 @@ function initMap(spots) {
     renderAll();
   });
   map.on("click", (e) => {
-    if (state.picking) onMapPick(e.lngLat);
+    if (state.picking) { onMapPick(e.lngLat); return; }
+    // 地図の空きエリアタップで詳細カードを閉じる
+    if (state.selectedId !== null) closeDetail();
   });
 }
 

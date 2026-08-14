@@ -305,6 +305,10 @@
     display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
     background: #f3e8ff; color: #7b2ff2; border-radius: 999px; padding: 2px 9px;
   }
+  .b-prep {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #f0f0f0; color: #666; border-radius: 999px; padding: 2px 9px;
+  }
   .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
   .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .map-foot {
@@ -533,6 +537,9 @@ function cardHtml(spot) {
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
   const kidsOk = isKidsOk(spot);
+  // 訪問済みだが動画がまだ無い店
+  const v = spot.video || {};
+  const noVideo = !spot.wish && !spot.memo && !v.youtube && !v.tiktok && !v.instagram;
   const thumb = spot.thumb
     ? `<img class="card-thumb" src="thumbs/${escapeHtml(spot.thumb)}" alt="" loading="lazy">`
     : "";
@@ -546,7 +553,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : ""}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;

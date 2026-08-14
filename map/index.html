@@ -158,6 +158,41 @@
     border-radius: 8px;
     background: var(--border);
   }
+  /* サムネが無い店の「のれん風」プレースホルダー */
+  .ph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .ph::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 20px, rgba(255,255,255,.10) 20px 21px),
+      linear-gradient(180deg, rgba(255,255,255,.10) 0 6px, transparent 6px);
+  }
+  .ph-emoji { font-size: 26px; line-height: 1; }
+  .ph-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    opacity: .9;
+    writing-mode: vertical-rl;
+    max-height: 42px;
+    overflow: hidden;
+  }
+  .ph-onsen  { background: linear-gradient(170deg, #2c4a6e, #1d3350); }
+  .ph-ramen  { background: linear-gradient(170deg, #a63a3a, #6e2222); }
+  .ph-cafe   { background: linear-gradient(170deg, #8a6d4b, #5d472e); }
+  .ph-izakaya{ background: linear-gradient(170deg, #b3572d, #7a3618); }
+  .ph-hotel  { background: linear-gradient(170deg, #3e4a72, #272f4e); }
+  .ph-play   { background: linear-gradient(170deg, #3f7a55, #27503a); }
+  .ph-food   { background: linear-gradient(170deg, #566270, #39424d); }
   .card-body { flex: 1; min-width: 0; }
   .b-wish {
     display: inline-block;
@@ -533,6 +568,22 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;");
 }
 
+// ジャンル文字列から「のれん」の見た目(絵文字・色・札の文字)を決める
+function norenStyle(spot) {
+  const g = (spot.genre || "") + (spot.category || "");
+  const has = (...words) => words.some(w => g.includes(w));
+  if (spot.category === "onsen" || has("温泉", "銭湯", "スパ", "サウナ", "湯")) return { cls: "ph-onsen", emoji: "♨️", label: "湯" };
+  if (has("ラーメン", "つけ麺", "豚骨")) return { cls: "ph-ramen", emoji: "🍜", label: "麺" };
+  if (has("うどん", "そば", "蕎麦")) return { cls: "ph-ramen", emoji: "🍜", label: "麺" };
+  if (has("カフェ", "喫茶", "パン", "スイーツ", "ドーナツ", "ケーキ", "デザート")) return { cls: "ph-cafe", emoji: "☕", label: "甘味" };
+  if (has("居酒屋", "屋台", "酒場", "焼鳥", "焼き鳥", "串", "おでん", "餃子")) return { cls: "ph-izakaya", emoji: "🏮", label: "酒場" };
+  if (has("焼肉", "ホルモン", "ステーキ", "ハンバーグ")) return { cls: "ph-izakaya", emoji: "🍖", label: "肉" };
+  if (has("寿司", "鮨", "海鮮", "魚")) return { cls: "ph-food", emoji: "🍣", label: "海鮮" };
+  if (has("ホテル", "旅館", "宿", "リゾート")) return { cls: "ph-hotel", emoji: "🏨", label: "宿" };
+  if (has("公園", "遊", "ミュージアム", "こども", "施設", "テーマ", "動物", "水族館")) return { cls: "ph-play", emoji: "🎡", label: "遊び場" };
+  return { cls: "ph-food", emoji: "🍴", label: "食事処" };
+}
+
 function cardHtml(spot) {
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
@@ -540,9 +591,10 @@ function cardHtml(spot) {
   // 訪問済みだが動画がまだ無い店
   const v = spot.video || {};
   const noVideo = !spot.wish && !spot.memo && !v.youtube && !v.tiktok && !v.instagram;
+  const ph = norenStyle(spot);
   const thumb = spot.thumb
     ? `<img class="card-thumb" src="thumbs/${escapeHtml(spot.thumb)}" alt="" loading="lazy">`
-    : "";
+    : `<div class="card-thumb ph ${ph.cls}"><span class="ph-emoji">${ph.emoji}</span><span class="ph-label">${ph.label}</span></div>`;
   return `
     ${thumb}
     <div class="card-body">

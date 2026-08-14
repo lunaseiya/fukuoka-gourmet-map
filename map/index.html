@@ -325,7 +325,8 @@
     <button class="cat-btn" data-cat="onsen">♨ 日帰り温泉</button>
   </div>
   <div class="filters">
-    <button class="filter-btn active" data-filter="all">訪問済み</button>
+    <button class="filter-btn active" data-filter="all">すべて</button>
+    <button class="filter-btn" data-filter="visited">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
     <button class="filter-btn" data-filter="wish">行きたい</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
@@ -461,8 +462,8 @@ function applyFilters(spots) {
   return spots.filter(s => {
     // カテゴリ: グルメ・おでかけ ⇔ 日帰り温泉
     if ((s.category === "onsen") !== (state.category === "onsen")) return false;
-    // 訪問済み(赤)が基本。青(行きたい)は「行きたい」タブでのみ表示する
-    if (state.filter === "all" && s.wish) return false;
+    // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
+    if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.areas.size && !state.areas.has(s.city)) return false;
@@ -524,7 +525,7 @@ function cardHtml(spot) {
 function areaTabSpots(spots) {
   return spots.filter(s => {
     if ((s.category === "onsen") !== (state.category === "onsen")) return false;
-    if (state.filter === "all" && s.wish) return false;
+    if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     return true;

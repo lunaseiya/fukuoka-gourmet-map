@@ -643,7 +643,11 @@ function renderList() {
   list.querySelectorAll(".card").forEach(el => {
     el.addEventListener("click", () => {
       const spot = state.spots.find(s => s.id === el.dataset.id);
-      if (spot) focusSpot(spot);
+      if (spot) {
+        focusSpot(spot);
+        // リストから選んだら地図までスクロールで戻す(ハイライトを見せる)
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
     });
   });
 }

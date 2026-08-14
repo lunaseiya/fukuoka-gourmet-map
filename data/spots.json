@@ -8866,7 +8866,7 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
+  "wish": false,
   "category": "onsen"
  },
  {
@@ -8912,7 +8912,7 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
+  "wish": false,
   "category": "onsen"
  },
  {
@@ -9004,7 +9004,7 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
+  "wish": false,
   "category": "onsen"
  },
  {
@@ -11746,8 +11746,8 @@
   "city": "福岡市東区",
   "pref": "福岡県",
   "genre": "スーパー銭湯・スパ",
-  "lat": 33.663436,
-  "lng": 130.423334,
+  "lat": 33.665600,
+  "lng": 130.416800,
   "visited": "2026-08-01",
   "with": "family",
   "kids": {
@@ -11769,5 +11769,28 @@
   "posted": "2026-08-13",
   "category": "onsen",
   "bathAge": null
+ },
+ {
+  "id": "hinatanomoriodonoyudokoro",
+  "name": "ヒナタの杜 小戸の湯どころ",
+  "area": "福岡市西区",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "日帰り温浴・岩盤浴",
+  "lat": 33.592421,
+  "lng": 130.317009,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "大人平日1,150円/土日祝1,250円、小人(4歳~)600/700円、3歳以下無料。9:00~24:00(最終入館23:00)、年中無休(メンテ休あり)。内湯・露天6種+高濃度炭酸泉・岩盤浴・サウナ。",
+  "bathAge": "3歳以下は入館無料",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "onsen"
  }
 ]

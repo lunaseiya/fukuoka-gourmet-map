@@ -11816,5 +11816,33 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "gustowajiro",
+  "name": "ガスト 和白店",
+  "area": "和白丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.69094,
+  "lng": 130.434249,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "子供椅子あり。オムツ替え台は女性用トイレのみ。テーブル席メイン。営業8:00~翌2:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false
  }
 ]

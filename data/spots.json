@@ -11773,5 +11773,27 @@
   "thumb": null,
   "wish": false,
   "category": "onsen"
+ },
+ {
+  "id": "ramenyamaokayatsukiguma",
+  "name": "ラーメン山岡家 福岡月隈店",
+  "area": "月隈(立花寺)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン(24時間営業)",
+  "lat": 33.564474,
+  "lng": 130.465909,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "水と豚骨だけで3日間煮込む濃厚豚骨。2026年4月オープン・福岡市内2店舗目。24時間営業・駐車場50台。0歳児連れでも入りやすく、平日昼10時半は並ばず入れた。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/EdrPXgvXPX4",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7673801272545299719",
+   "instagram": "https://www.instagram.com/reel/DcA2FXbI37g/"
+  },
+  "thumb": "ramenyamaokayatsukiguma.jpg",
+  "wish": false,
+  "posted": "2026-08-14"
  }
 ]

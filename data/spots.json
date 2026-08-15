@@ -11795,5 +11795,26 @@
   "thumb": "ramenyamaokayatsukiguma.jpg",
   "wish": false,
   "posted": "2026-08-14"
+ },
+ {
+  "id": "toriebisukasumigaoka",
+  "name": "とり恵びす",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "鶏白湯ラーメン",
+  "lat": 33.669079,
+  "lng": 130.443135,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "鶏ラーメン専門店(鶏白湯スープ)。10:00~22:00(LO21:30)、日曜休。住所は香住ヶ丘2-6-26。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

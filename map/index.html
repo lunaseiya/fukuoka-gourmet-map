@@ -459,6 +459,7 @@
       <label><input type="checkbox" id="mDiaper">オムツ替え</label>
       <label><input type="checkbox" id="mStroller">ベビーカー可</label>
     </div>
+    <div class="memo-kids" id="mExtras" style="margin-top:6px"></div>
     <label>ひとことメモ(席・駐車場・提供speed等)</label>
     <textarea id="mVerdict" rows="3" placeholder="例: 座敷あり・P10台・提供10分。子連れでも安心"></textarea>
 
@@ -863,8 +864,24 @@ document.getElementById("memoBtn").addEventListener("click", () => {
   }
   openMemoSheet();
 });
+// カテゴリごとの追加チェック項目(チェックするとメモ文に自動反映)
+const MEMO_EXTRAS = {
+  "": ["お子様メニューあり", "離乳食持ち込みOK", "取り皿あり", "オムツ替えは女性用トイレのみ"],
+  "play": ["授乳室あり", "飲食持ち込みOK", "おもちゃ貸出あり", "0歳から遊べる"],
+  "onsen": ["オムツ児OK", "オムツ児は不可", "家族風呂あり", "ベビーバスあり"]
+};
+function renderMemoExtras() {
+  const cat = document.getElementById("mCat").value;
+  const box = document.getElementById("mExtras");
+  box.innerHTML = (MEMO_EXTRAS[cat] || []).map(label =>
+    `<label><input type="checkbox" data-extra="${label}">${label}</label>`
+  ).join("");
+}
+document.getElementById("mCat").addEventListener("change", renderMemoExtras);
+
 function openMemoSheet() {
   document.getElementById("mDate").value = new Date().toISOString().slice(0, 10);
+  renderMemoExtras();
   renderMemoList();
   document.getElementById("memoBack").classList.add("open");
 }
@@ -906,6 +923,9 @@ document.getElementById("memoSave").addEventListener("click", () => {
     kidsChair: document.getElementById("mChair").checked || null,
     serveMin: null, noise: null
   };
+  // チェックした追加項目をメモ文の先頭に自動合成
+  const extras = Array.from(document.querySelectorAll("#mExtras input:checked")).map(cb => cb.dataset.extra);
+  const verdictText = [extras.join("・"), document.getElementById("mVerdict").value.trim()].filter(Boolean).join("。");
   const entry = {
     id: slugify(name), name: name, memo: true,
     area: null, city: document.getElementById("mCity").value.trim() || null, pref: null,
@@ -914,7 +934,7 @@ document.getElementById("memoSave").addEventListener("click", () => {
     lng: state.pickPos ? state.pickPos.lng : null,
     visited: document.getElementById("mDate").value || null,
     with: "family", kids: kids,
-    verdict: document.getElementById("mVerdict").value.trim() || null,
+    verdict: verdictText || null,
     video: { youtube: null, tiktok: null, instagram: null },
     thumb: null
   };
@@ -926,6 +946,7 @@ document.getElementById("memoSave").addEventListener("click", () => {
   // フォームリセット
   ["mName", "mGenre", "mCity", "mVerdict"].forEach(i => document.getElementById(i).value = "");
   ["mChair", "mTatami", "mDiaper", "mStroller"].forEach(i => document.getElementById(i).checked = false);
+  renderMemoExtras();
   if (state.pickMarker) { state.pickMarker.remove(); state.pickMarker = null; }
   state.pickPos = null;
   document.getElementById("mLatLng").textContent = "未指定";

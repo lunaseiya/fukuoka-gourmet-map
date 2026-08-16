@@ -11946,5 +11946,63 @@
   },
   "thumb": null,
   "wish": false
+ },
+ {
+  "id": "guruguruyachikushino",
+  "name": "きっずゆうえんち ぐるぐる屋 筑紫野店",
+  "area": "塔原東",
+  "city": "筑紫野市",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.498161,
+  "lng": 130.504671,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "おむつ替え&授乳室あり。飲食持ち込みOK・おもちゃ貸出あり。対象0~12歳(1歳以上有料)。平日10~19時/土日祝10~20時。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "play"
+ },
+ {
+  "id": "guruguruyahakozaki",
+  "name": "きっずゆうえんち ぐるぐる屋 箱崎店",
+  "area": "箱崎(ボックスタウン箱崎2F)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.620139,
+  "lng": 130.417844,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "おむつ替え&授乳室あり。飲食持ち込みOK・おもちゃ貸出あり。ボックスタウン箱崎2F。平日10~19時/土日祝10~20時。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "play"
  }
 ]

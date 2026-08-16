@@ -941,10 +941,20 @@ function initMap(spots) {
     zoom: 8.7
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+  // 現在地ボタン(Googleマップ風。押すと現在地へ移動+青ドット表示)
+  const geolocate = new maplibregl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+    showUserLocation: true,
+    fitBoundsOptions: { maxZoom: 13 }
+  });
+  map.addControl(geolocate, "top-right");
   window._map = map;
 
   map.on("load", () => {
     renderAll();
+    // 開いた時に現在地を中央へ(位置情報が許可されている場合のみ。拒否時は福岡全域表示のまま)
+    try { geolocate.trigger(); } catch (e) {}
   });
   map.on("click", (e) => {
     if (state.picking) { onMapPick(e.lngLat); return; }

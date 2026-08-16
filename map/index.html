@@ -275,6 +275,21 @@
     color: #fff !important;
     border-color: #2d3436 !important;
   }
+  /* 楽天トラベルのアフィリエイトボタン(PR) */
+  .aff-rakuten {
+    background: #bf0000 !important;
+    color: #fff !important;
+    border-color: #bf0000 !important;
+  }
+  .aff-rakuten::before { content: "🏨 "; }
+  .pr-badge {
+    font-size: 10px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 4px;
+    align-self: center;
+  }
   /* 選択中ピンの強調(赤リング) */
   .pin-selected {
     box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 4px #fff, 0 0 0 7px var(--accent) !important;
@@ -599,6 +614,12 @@ function applyFilters(spots) {
   });
 }
 
+// 楽天トラベル(A8)アフィリエイトリンク。宿泊・温泉系のカードに表示
+const AFF_RAKUTEN_TRAVEL = "https://rpx.a8.net/svt/ejp?a8mat=4BA7X5+1FSQEQ+2HOM+6L1YA&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eb4779e.5d30c5ba.0eb4779f.b871e4e3%2Fa26081745747_4BA7X5_1FSQEQ_2HOM_6L1YA%3Fpc%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F";
+function isStaySpot(spot) {
+  return spot.category === "onsen" || /宿|ホテル|旅館|リゾート/.test(spot.genre || "");
+}
+
 function webUrl(spot) {
   // 公式サイトが登録されていればそれを、無ければGoogleマップの該当スポットを開く
   if (spot.web) return spot.web;
@@ -616,6 +637,9 @@ function videoLinksHtml(spot, cls) {
   if (video && video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
   if (video && video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
   items.push(`<a class="web-btn" href="${webUrl(spot)}" target="_blank" rel="noopener">🌐 詳細</a>`);
+  if (isStaySpot(spot)) {
+    items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);
+  }
   return `<div class="${cls}">${items.join("")}</div>`;
 }
 

@@ -13954,5 +13954,33 @@
   "thumb": null,
   "wish": true,
   "category": "play"
+ },
+ {
+  "id": "branchfukuokashimobaru",
+  "name": "ブランチ福岡下原(BRANCH福岡下原)",
+  "area": "下原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.672587,
+  "lng": 130.451635,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "キッズトイレ・おむつ替え台あり。屋外に滑り台など子供が遊べる遊具あり。主なテナント: マックスバリュ・サイゼリヤ・どんどん亭・辛麺屋桝元・マツモトキヨシ等約30店。駐車場340台(最初の1時間無料、以降200円/60分 ※2025年12月から有料化)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false
  }
 ]

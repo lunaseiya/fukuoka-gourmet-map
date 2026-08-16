@@ -1029,7 +1029,8 @@
   },
   "thumb": null,
   "city": "荒尾市",
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "ufufucafetosumotomachimi-31",
@@ -2262,7 +2263,8 @@
   },
   "thumb": null,
   "city": "佐世保市",
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "feafiirudobaimariotsu-86",
@@ -2536,7 +2538,7 @@
   "name": "有明スカイパークふれあい郷",
   "area": "戸ケ里",
   "city": "白石町",
-  "genre": "プール・公園",
+  "genre": "公園・水遊び",
   "lat": 33.145435,
   "lng": 130.124779,
   "visited": null,
@@ -2550,7 +2552,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kuapaakunagayu",
@@ -3021,7 +3024,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "sagabaruunmyuujiamu",
@@ -3042,7 +3046,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "genkaichoujisedaienerugiipaa",
@@ -3063,7 +3068,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "oomutashisekitansangyoukagak",
@@ -3084,7 +3090,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "iwatoyamarekishibunkakouryuu",
@@ -3105,7 +3112,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "fukuokashikagakukan",
@@ -3133,7 +3141,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "miyazakikensougouhakubutsuka",
@@ -3161,7 +3170,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "sagakenritsuuchuukagakukanyu",
@@ -3189,7 +3199,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kyuushuukokuritsuhakubutsuka",
@@ -3217,7 +3228,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "hamadashuzoukanayamakura",
@@ -5250,7 +5262,7 @@
   "name": "行橋市室内型子どもの遊び場あそぼっちゃ",
   "area": "北泉",
   "city": "行橋市",
-  "genre": "こども施設",
+  "genre": "室内遊び場",
   "lat": 33.717413,
   "lng": 130.986069,
   "visited": null,
@@ -5264,14 +5276,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "merittakidssasebo",
   "name": "メリッタKid's SASEBO",
   "area": null,
   "city": "佐世保市",
-  "genre": "屋内キッズ施設",
+  "genre": "室内遊び場",
   "lat": 33.175515,
   "lng": 129.720322,
   "visited": null,
@@ -5285,7 +5298,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "eboshisupootsunosato",
@@ -5420,7 +5434,7 @@
   "name": "ザキッズ リバーウォーク北九州店",
   "area": null,
   "city": "北九州市小倉北区",
-  "genre": "屋内キッズ施設",
+  "genre": "室内遊び場",
   "lat": 33.885813,
   "lng": 130.875805,
   "visited": null,
@@ -5434,7 +5448,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "akuupamunakatamise",
@@ -5490,7 +5505,7 @@
   "name": "芦屋海浜公園レジャープールアクアシアン",
   "area": "芦屋",
   "city": "芦屋町",
-  "genre": "公園",
+  "genre": "水遊び",
   "lat": 33.893557,
   "lng": 130.656405,
   "visited": null,
@@ -5504,7 +5519,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "sagadaiwaonsenhoteruamandi",
@@ -5576,7 +5592,7 @@
   "name": "田川市市民プール",
   "area": "伊田",
   "city": "田川市",
-  "genre": "プール",
+  "genre": "水遊び",
   "lat": 33.6338,
   "lng": 130.811643,
   "visited": null,
@@ -5590,7 +5606,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "sagakawakamikyouonsenhoterur",
@@ -5784,7 +5801,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "ukihakajunomurayamandon",
@@ -5826,7 +5844,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "kujuuhanakouen",
@@ -5854,7 +5873,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "rurupaaku",
@@ -5882,7 +5902,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "kumamotokennougyoukouenkanto",
@@ -5903,7 +5924,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "oosakishizenkouen",
@@ -5931,7 +5953,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "nagasakisuihennomorikouen",
@@ -5952,7 +5975,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "higatayokakouen",
@@ -5973,7 +5997,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "oonojouikoinomorichuuoukouen",
@@ -5994,7 +6019,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "shirouzuooikekouen",
@@ -6022,7 +6048,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "seitanomorikouen",
@@ -6043,7 +6070,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "fukuokashiumizurikouen",
@@ -6064,7 +6092,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kaizukakouen",
@@ -6085,7 +6114,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "touheiokouenootanihiroba",
@@ -6113,7 +6143,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "hoshinofurusatokouen",
@@ -6134,7 +6165,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "nokonoshimaairandopaaku",
@@ -6176,7 +6208,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "kakoshimashiritsukagakukan",
@@ -6197,7 +6230,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "kirishimaaatonomori",
@@ -6281,7 +6315,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "torikku3daatoyufuin",
@@ -6330,7 +6365,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "sagashiromotomarurekishikan",
@@ -6449,7 +6485,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "fukuokakenseishounenkagakuka",
@@ -6477,7 +6514,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kyuushuutetsudoukinenkan",
@@ -6659,7 +6697,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "takasakiyamashizendoubutsuen",
@@ -6680,7 +6719,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "sumiefamiriisuizokukan",
@@ -6701,7 +6741,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "kujuushizendoubutsuen",
@@ -6722,7 +6763,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "banshouosakanakan",
@@ -6792,7 +6834,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "asogenkinomoriasofaamurando",
@@ -6834,7 +6877,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "tsukumoshimadoushokubutsuson",
@@ -6890,7 +6934,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "oomutashidoubutsuen",
@@ -6918,7 +6963,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kurumeshichouruisentaa",
@@ -6981,7 +7027,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "shouwaromankura",
@@ -7240,7 +7287,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "itouzunomorikouensukaipaakuk",
@@ -7261,7 +7309,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "dazaifuyuuenchi",
@@ -7282,7 +7331,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "tsukumoshimapaarushiirizooto",
@@ -7352,7 +7402,7 @@
   "name": "ファンタジーキッズリゾート福岡",
   "area": "別府北",
   "city": "志免町",
-  "genre": "屋内キッズ施設",
+  "genre": "室内遊び場",
   "lat": 33.60781,
   "lng": 130.452614,
   "visited": null,
@@ -7366,14 +7416,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "merittakidstakeo",
   "name": "メリッタKid'sTAKEO",
   "area": "甘久",
   "city": "武雄市",
-  "genre": "屋内キッズ施設",
+  "genre": "室内遊び場",
   "lat": 33.206934,
   "lng": 130.037696,
   "visited": null,
@@ -7394,7 +7445,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "theoutletskitakyushu",
@@ -7422,7 +7474,7 @@
   "name": "キッズランドUS 鹿児島かのや店",
   "area": null,
   "city": "鹿屋市",
-  "genre": "屋内キッズ施設",
+  "genre": "室内遊び場",
   "lat": 31.378628,
   "lng": 130.856212,
   "visited": null,
@@ -7436,7 +7488,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "fukuokaanpanmankodomomyuujia",
@@ -7457,7 +7510,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kyuushuushizendoubutsukouena",
@@ -7478,7 +7532,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "rakunoumazaazuasomirukubokuj",
@@ -7576,7 +7631,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "kujuukougendoushinkaikinoujo",
@@ -7660,7 +7716,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "nagasakishikyouryuuhakubutsu",
@@ -7688,7 +7745,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "yanagawamutsugorourando",
@@ -7737,7 +7795,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "reikusaidokitayamauerukamuse",
@@ -7807,7 +7866,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "kumamotoshidoushokubutsusono",
@@ -7933,7 +7993,7 @@
   "name": "えひめこどもの城",
   "area": "乙",
   "city": "松山市",
-  "genre": "こども施設",
+  "genre": "室内遊び場",
   "lat": 33.761798,
   "lng": 132.797558,
   "visited": null,
@@ -7954,7 +8014,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "愛媛県"
+  "pref": "愛媛県",
+  "category": "play"
  },
  {
   "id": "yamatomyuujiamu",
@@ -7975,7 +8036,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "広島県"
+  "pref": "広島県",
+  "category": "play"
  },
  {
   "id": "yufuinshouwakan",
@@ -8157,7 +8219,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "nagasakikasuterarando",
@@ -8353,7 +8416,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "uminonakamichikaihinkouen",
@@ -8381,7 +8445,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kannokouenkodomoyuuenchi",
@@ -8402,7 +8467,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "moritorisunoyuuenchimeruhenm",
@@ -8430,7 +8496,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "gansoninjamurahizenyumekaido",
@@ -8493,7 +8560,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "boatraceashiya",
@@ -8528,7 +8596,7 @@
   "name": "北九州市立子どもの館",
   "area": "黒崎",
   "city": "北九州市八幡西区",
-  "genre": "こども施設",
+  "genre": "室内遊び場",
   "lat": 33.866528,
   "lng": 130.76487,
   "visited": null,
@@ -8549,7 +8617,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "bengaramuraonsenbengaranoyu",
@@ -8635,7 +8704,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "岡山県"
+  "pref": "岡山県",
+  "category": "play"
  },
  {
   "id": "momotarounokarakurihakubutsu",
@@ -8656,7 +8726,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "岡山県"
+  "pref": "岡山県",
+  "category": "play"
  },
  {
   "id": "omochaoukoku",
@@ -8726,7 +8797,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kickitakyuushuuinobeeshonsen",
@@ -8754,7 +8826,7 @@
   "name": "子育てふれあい交流プラザ 元気のもり",
   "area": "浅野",
   "city": "北九州市小倉北区",
-  "genre": "こども施設",
+  "genre": "室内遊び場",
   "lat": 33.889113,
   "lng": 130.8863,
   "visited": null,
@@ -8775,7 +8847,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "chikuhouryokuchi",
@@ -8825,7 +8898,8 @@
   },
   "thumb": "onojokokoronofurusatokan.jpg",
   "wish": false,
-  "posted": "2026-08-10"
+  "posted": "2026-08-10",
+  "category": "play"
  },
  {
   "id": "chikushinotenhainosato",
@@ -11727,8 +11801,8 @@
   "city": "福岡市東区",
   "pref": "福岡県",
   "genre": "スーパー銭湯・スパ",
-  "lat": 33.665600,
-  "lng": 130.416800,
+  "lat": 33.6656,
+  "lng": 130.4168,
   "visited": "2026-08-01",
   "with": "family",
   "kids": {

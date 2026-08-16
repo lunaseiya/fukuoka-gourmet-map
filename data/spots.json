@@ -10949,7 +10949,8 @@
    "youtube": "https://youtube.com/shorts/IBRWnqreGag",
    "tiktok": "https://www.tiktok.com/@tencone/video/7210922459875396866"
   },
-  "thumb": null
+  "thumb": null,
+  "related": ["dondonteibranchshimobaru"]
  },
  {
   "id": "menyataisonkasugasouhonten",
@@ -14025,14 +14026,26 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "子供歓迎のお好み焼き・鉄板焼きチェーン。子供無料メニューあり。",
+  "verdict": "子供歓迎のお好み焼き・鉄板焼きチェーン。未就学児は「ちびっこおむすび・ドリンクバー・お子様ソフト」の無料3大サービスあり。子供椅子・豆椅子あり、ベンチシート席・タブレット注文で子連れ向き。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
+  "thumb": "dondonteibranchshimobaru.jpg",
   "wish": false,
-  "in": "branchfukuokashimobaru"
+  "in": "branchfukuokashimobaru",
+  "photos": [
+   "dondontei_01.jpg",
+   "dondontei_02.jpg",
+   "dondontei_03.jpg",
+   "dondontei_04.jpg",
+   "dondontei_05.jpg",
+   "dondontei_06.jpg",
+   "dondontei_07.jpg",
+   "dondontei_08.jpg",
+   "dondontei_09.jpg"
+  ],
+  "related": ["dondonteikogahanamimise"]
  }
 ]

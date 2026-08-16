@@ -366,6 +366,23 @@
     padding: 9px 12px; margin-bottom: 6px; cursor: pointer;
   }
   .dc-item .dc-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  /* 写真ギャラリー(詳細カード内・横スワイプ) */
+  .card-photos {
+    display: flex; gap: 8px; overflow-x: auto;
+    margin-top: 10px; padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-photos img {
+    height: 110px; border-radius: 10px; flex: 0 0 auto;
+    cursor: pointer; background: var(--border);
+  }
+  /* 写真タップで拡大表示 */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(0,0,0,.85);
+    z-index: 70; display: none; align-items: center; justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; }
   .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
   .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .map-foot {
@@ -433,6 +450,8 @@
 <div id="list"></div>
 
 <div id="detail"></div>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
 
 
 <div class="pick-banner" id="pickBanner">地図をタップして位置を指定してください(タップでピンが立ちます)</div>
@@ -710,6 +729,9 @@ function updatePinHighlight() {
 
 function openDetail(spot) {
   const detail = document.getElementById("detail");
+  // 写真ギャラリー(横スワイプ、タップで拡大)
+  const photosHtml = (spot.photos && spot.photos.length) ? `
+    <div class="card-photos">${spot.photos.map(p => `<img src="photos/${escapeHtml(p)}" loading="lazy" data-photo="${escapeHtml(p)}" alt="">`).join("")}</div>` : "";
   // この施設内に登録されているスポット(親→子リンク)
   const children = state.spots.filter(s => s.in === spot.id);
   const childrenHtml = children.length ? `
@@ -717,16 +739,37 @@ function openDetail(spot) {
       <div class="dc-title">この施設内のスポット</div>
       ${children.map(c => `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`).join("")}
     </div>` : "";
+  // 関連スポット(同チェーンの動画がある店など)
+  const relatedSpots = (spot.related || []).map(id => state.spots.find(s => s.id === id)).filter(Boolean);
+  const relatedHtml = relatedSpots.length ? `
+    <div class="detail-children">
+      <div class="dc-title">関連スポット(同チェーン等)</div>
+      ${relatedSpots.map(c => { const v = c.video || {}; const hasV = v.youtube || v.tiktok || v.instagram; return `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}${hasV ? " 🎬動画あり" : ""}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`; }).join("")}
+    </div>` : "";
   detail.innerHTML = `
     <div class="detail-grip"></div>
     <button class="detail-close" id="detailClose">✕</button>
     <div class="card">${cardHtml(spot)}</div>
+    ${photosHtml}
     ${childrenHtml}
+    ${relatedHtml}
   `;
   detail.classList.add("open");
   document.getElementById("detailClose").addEventListener("click", closeDetail);
   bindJumpLinks(detail);
+  detail.querySelectorAll("[data-photo]").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.getElementById("lightboxImg").src = "photos/" + el.dataset.photo;
+      document.getElementById("lightbox").classList.add("open");
+    });
+  });
 }
+
+document.getElementById("lightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.remove("open");
+  document.getElementById("lightboxImg").src = "";
+});
 
 // 親子リンク([data-jump])のクリックで対象スポットへ飛ぶ
 function bindJumpLinks(root) {

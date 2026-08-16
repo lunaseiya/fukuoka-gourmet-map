@@ -11918,5 +11918,33 @@
   },
   "thumb": null,
   "wish": false
+ },
+ {
+  "id": "marugenramenmaidashi",
+  "name": "丸源ラーメン 福岡馬出店",
+  "area": "馬出",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン(肉そば)",
+  "lat": 33.610595,
+  "lng": 130.412017,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "子供大歓迎の店。離乳食あり・子供取り皿あり・お子様メニュー(おもちゃ付き)・子供椅子あり。おむつ替え台は店内で見当たらず(NaviTimeには1台ありの記載、要確認)。営業10:30~25:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false
  }
 ]

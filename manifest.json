@@ -1,6 +1,6 @@
 {
   "name": "福岡こそだてグルメマップ",
-  "short_name": "こそだてグルメ",
+  "short_name": "福岡子育てグルメ",
   "start_url": "./map/",
   "display": "standalone",
   "background_color": "#ffffff",

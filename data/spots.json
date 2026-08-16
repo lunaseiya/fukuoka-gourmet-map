@@ -13974,13 +13974,65 @@
    "serveMin": null,
    "noise": "ok"
   },
-  "verdict": "キッズトイレ・おむつ替え台あり。屋外に滑り台など子供が遊べる遊具あり。主なテナント: マックスバリュ・サイゼリヤ・どんどん亭・辛麺屋桝元・マツモトキヨシ等約30店。駐車場340台(最初の1時間無料、以降200円/60分 ※2025年12月から有料化)。",
+  "verdict": "キッズトイレ・おむつ替え台あり。屋外に滑り台など子供が遊べる遊具あり。主なテナント: マックスバリュ・サイゼリヤ・どんどん亭・辛麺屋桝元・マツモトキヨシ・ぷえすたらんど(ガチャガチャ)・2nd STREET等約30店。駐車場340台(最初の1時間無料、以降200円/60分 ※2025年12月から有料化)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "branchfukuokashimobaru.jpg",
+  "wish": false
+ },
+ {
+  "id": "branchshimobaruasobiba",
+  "name": "ブランチ福岡下原 あそびの広場",
+  "area": "下原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.672587,
+  "lng": 130.451635,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "SL汽車型遊具「Happy!! SL」(すべり台付き)やクライミングドーム・幼児向け遊具のある無料の屋外あそび場。ゴムチップ舗装で転んでも安心。キッズトイレ・おむつ替え台はモール内。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "branchshimobaruasobiba.jpg",
+  "wish": false,
+  "category": "play",
+  "in": "branchfukuokashimobaru"
+ },
+ {
+  "id": "dondonteibranchshimobaru",
+  "name": "どんどん亭 ブランチ福岡下原店",
+  "area": "下原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "お好み焼き・鉄板焼き",
+  "lat": 33.672587,
+  "lng": 130.451635,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "子供歓迎のお好み焼き・鉄板焼きチェーン。子供無料メニューあり。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "in": "branchfukuokashimobaru"
  }
 ]

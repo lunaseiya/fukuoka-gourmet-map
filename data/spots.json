@@ -119,7 +119,8 @@
   },
   "thumb": "gyumaru-yumetown-hakata.jpg",
   "city": "福岡市博多区",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "yumetownhakata"
  },
  {
   "id": "neomegusta-akasaka",
@@ -598,7 +599,8 @@
   },
   "thumb": "kaabiikafehakata-11.jpg",
   "city": "福岡市博多区",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "canalcityhakata"
  },
  {
   "id": "hiume-12",
@@ -772,7 +774,8 @@
   },
   "thumb": null,
   "city": "福岡市博多区",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "canalcityhakata"
  },
  {
   "id": "hitsumabushiwashokubinch-20",
@@ -1265,7 +1268,8 @@
   },
   "thumb": null,
   "city": "福岡市博多区",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "canalcityhakata"
  },
  {
   "id": "nagahamananbaawangionmis-41",
@@ -5306,7 +5310,7 @@
   "name": "えぼしスポーツの里",
   "area": null,
   "city": "佐世保市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.1846,
   "lng": 129.7636,
   "visited": null,
@@ -5320,7 +5324,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "taqua",
@@ -5371,7 +5376,7 @@
   "name": "LUCLE PARK ルクルパーク イオンモール福岡",
   "area": "酒殿",
   "city": "粕屋町",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.597546,
   "lng": 130.481721,
   "visited": null,
@@ -5385,14 +5390,16 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "aeonmallfukuoka",
+  "category": "play"
  },
  {
   "id": "fukuokashitamibousaisentaa",
   "name": "福岡市民防災センター",
   "area": "百道浜",
   "city": "福岡市早良区",
-  "genre": "レジャー",
+  "genre": "体験施設",
   "lat": 33.589552,
   "lng": 130.355661,
   "visited": null,
@@ -5406,14 +5413,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "nebaarandomojimise",
   "name": "ネバーランド門司店",
   "area": null,
   "city": "北九州市門司区",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 33.903146,
   "lng": 130.936136,
   "visited": null,
@@ -5427,7 +5435,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "zakizzuribaauookukitakyuushu",
@@ -5449,14 +5458,15 @@
   "thumb": null,
   "wish": true,
   "pref": "福岡県",
-  "category": "play"
+  "category": "play",
+  "in": "riverwalkkitakyushu"
  },
  {
   "id": "akuupamunakatamise",
   "name": "アクーパ 宗像店",
   "area": "くりえいと",
   "city": "宗像市",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 33.813081,
   "lng": 130.563841,
   "visited": null,
@@ -5470,7 +5480,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "grilltakeshita",
@@ -5550,7 +5561,7 @@
   "name": "リトルプラネット ゆめタウン久留米",
   "area": "新合川",
   "city": "久留米市",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 33.321049,
   "lng": 130.537455,
   "visited": null,
@@ -5564,7 +5575,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "in": "yumetownkurume",
+  "category": "play"
  },
  {
   "id": "tagawashishiminpuuru",
@@ -6152,7 +6165,7 @@
   "name": "のこのしまアイランドパーク",
   "area": "能古島",
   "city": "福岡市西区",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.631347,
   "lng": 130.301702,
   "visited": null,
@@ -6166,7 +6179,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "ibusukishikoukohakubutsukant",
@@ -6245,7 +6259,7 @@
   "name": "宮崎科学技術館",
   "area": "宮崎駅東",
   "city": "宮崎市",
-  "genre": "レジャー",
+  "genre": "科学館",
   "lat": 31.914454,
   "lng": 131.433471,
   "visited": null,
@@ -6266,7 +6280,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "mifunemachikyouryuuhakubutsu",
@@ -6501,7 +6516,7 @@
   "name": "九州鉄道記念館",
   "area": "清滝",
   "city": "北九州市門司区",
-  "genre": "レジャー",
+  "genre": "ミュージアム",
   "lat": 33.943149,
   "lng": 130.961794,
   "visited": null,
@@ -6522,7 +6537,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "hakatashokkougeikan",
@@ -6592,7 +6608,7 @@
   "name": "種子島宇宙センター宇宙科学技術館",
   "area": "茎永",
   "city": "南種子町",
-  "genre": "レジャー",
+  "genre": "科学館",
   "lat": 30.374766,
   "lng": 130.957521,
   "visited": null,
@@ -6606,14 +6622,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "guriinpaakuebino",
   "name": "グリーンパークえびの",
   "area": "東川北有留",
   "city": "えびの市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 32.056249,
   "lng": 130.799994,
   "visited": null,
@@ -6627,14 +6644,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "shibushiwandaikokuirukarando",
   "name": "志布志湾大黒イルカランド",
   "area": "高松",
   "city": "串間市",
-  "genre": "レジャー",
+  "genre": "水族館",
   "lat": 31.460393,
   "lng": 131.160821,
   "visited": null,
@@ -6655,7 +6673,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "宮崎県"
+  "pref": "宮崎県",
+  "category": "play"
  },
  {
   "id": "miyazakishifenikkusushizendo",
@@ -6750,7 +6769,7 @@
   "name": "番匠おさかな館",
   "area": "弥生大",
   "city": "佐伯市",
-  "genre": "レジャー",
+  "genre": "水族館",
   "lat": 32.963896,
   "lng": 131.838125,
   "visited": null,
@@ -6764,14 +6783,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "asosarumawashigekijou",
   "name": "阿蘇猿まわし劇場",
   "area": "下野",
   "city": "南阿蘇村",
-  "genre": "レジャー",
+  "genre": "テーマパーク",
   "lat": 32.901516,
   "lng": 130.998692,
   "visited": null,
@@ -6792,7 +6812,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "kaichuusuizokukanshiidoonats",
@@ -6821,7 +6842,7 @@
   "name": "阿蘇元気の森/阿蘇ファームランド",
   "area": "河陽",
   "city": "南阿蘇村",
-  "genre": "レジャー",
+  "genre": "テーマパーク",
   "lat": 32.898322,
   "lng": 131.006757,
   "visited": null,
@@ -6835,7 +6856,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "nagasakipenginsuizokukan",
@@ -6864,7 +6886,7 @@
   "name": "九十九島動植物園森きらら",
   "area": null,
   "city": "佐世保市",
-  "genre": "レジャー",
+  "genre": "動物園",
   "lat": 33.151217,
   "lng": 129.689525,
   "visited": null,
@@ -6885,7 +6907,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "kakoshimaichiheikawadoubutsu",
@@ -6950,7 +6973,7 @@
   "name": "久留米市鳥類センター",
   "area": null,
   "city": "久留米市",
-  "genre": "レジャー",
+  "genre": "動物園",
   "lat": 33.319533,
   "lng": 130.52825,
   "visited": null,
@@ -6964,14 +6987,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "haikarattoyokochou",
   "name": "はい!からっと横丁",
   "area": "あるかぽーと",
   "city": "下関市",
-  "genre": "レジャー",
+  "genre": "遊園地",
   "lat": 33.953088,
   "lng": 130.941272,
   "visited": null,
@@ -6985,7 +7009,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "山口県"
+  "pref": "山口県",
+  "category": "play"
  },
  {
   "id": "dagurimisakiyuuenchi",
@@ -7063,7 +7088,7 @@
   "name": "フォレストアドベンチャー・美里",
   "area": "畝野",
   "city": "美里町",
-  "genre": "レジャー",
+  "genre": "アスレチック",
   "lat": 32.632757,
   "lng": 130.913006,
   "visited": null,
@@ -7077,14 +7102,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "agurinooka",
   "name": "あぐりの丘",
   "area": null,
   "city": "長崎市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 32.802851,
   "lng": 129.797821,
   "visited": null,
@@ -7105,14 +7131,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "ooshimakaiyoutaikenshisetsuu",
   "name": "大島海洋体験施設 うみんぐ大島",
   "area": "大島",
   "city": "宗像市",
-  "genre": "レジャー",
+  "genre": "体験施設",
   "lat": 33.89396,
   "lng": 130.432332,
   "visited": null,
@@ -7126,14 +7153,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "chuuoujidoukaikanaikuru",
   "name": "中央児童会館あいくる",
   "area": "今泉",
   "city": "福岡市中央区",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 33.586197,
   "lng": 130.397812,
   "visited": null,
@@ -7154,14 +7182,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kurumesaikurufamiriipaaku",
   "name": "久留米サイクルファミリーパーク",
   "area": null,
   "city": "久留米市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.300553,
   "lng": 130.546978,
   "visited": null,
@@ -7175,14 +7204,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "nobolt",
   "name": "NOBOLT(ノボルト)",
   "area": "小戸",
   "city": "福岡市西区",
-  "genre": "レジャー",
+  "genre": "室内遊び場(スポーツ)",
   "lat": 33.596153,
   "lng": 130.3214,
   "visited": null,
@@ -7196,7 +7226,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "yufuinfurooraruvirejji",
@@ -7224,7 +7255,7 @@
   "name": "ゆのまえグリーンパレス",
   "area": "野中田",
   "city": "湯前町",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 32.271983,
   "lng": 131.001258,
   "visited": null,
@@ -7238,7 +7269,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "yoshinokesatorekishikouen",
@@ -7318,7 +7350,7 @@
   "name": "九十九島パールシーリゾート",
   "area": null,
   "city": "佐世保市",
-  "genre": "レジャー",
+  "genre": "水族館・リゾート",
   "lat": 33.161575,
   "lng": 129.679352,
   "visited": null,
@@ -7332,14 +7364,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "bossezofukuoka",
   "name": "BOSS E・ZO FUKUOKA",
   "area": "地行浜",
   "city": "福岡市中央区",
-  "genre": "レジャー",
+  "genre": "屋内エンタメ施設",
   "lat": 33.594944,
   "lng": 130.363646,
   "visited": null,
@@ -7353,14 +7386,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kizzaniafukuoka",
   "name": "キッザニア福岡",
   "area": "那珂",
   "city": "福岡市博多区",
-  "genre": "レジャー",
+  "genre": "室内遊び場(職業体験)",
   "lat": 33.565448,
   "lng": 130.439258,
   "visited": null,
@@ -7374,7 +7408,9 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play",
+  "in": "lalaportfukuoka"
  },
  {
   "id": "fantajiikizzurizootofukuoka",
@@ -7432,7 +7468,7 @@
   "name": "THE OUTLETS KITAKYUSHU",
   "area": "東田",
   "city": "北九州市八幡東区",
-  "genre": "レジャー",
+  "genre": "ショッピングモール(アウトレット)",
   "lat": 33.87345,
   "lng": 130.811851,
   "visited": null,
@@ -7547,7 +7583,7 @@
   "name": "長崎バイオパーク",
   "area": "中山郷",
   "city": "西海市",
-  "genre": "レジャー",
+  "genre": "動物園",
   "lat": 32.988119,
   "lng": 129.783296,
   "visited": null,
@@ -7568,14 +7604,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "asokadoriidominion",
   "name": "阿蘇カドリー・ドミニオン",
   "area": "黒川",
   "city": "阿蘇市",
-  "genre": "レジャー",
+  "genre": "動物園",
   "lat": 32.93261,
   "lng": 131.066927,
   "visited": null,
@@ -7589,7 +7626,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "shioishizenkouen",
@@ -7618,7 +7656,7 @@
   "name": "久住高原童心回帰農場",
   "area": "久住",
   "city": "竹田市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.044662,
   "lng": 131.268593,
   "visited": null,
@@ -7632,14 +7670,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "kamoikemirainomori",
   "name": "かもいけみらいの森",
   "area": "鴨池",
   "city": "鹿児島市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 31.565237,
   "lng": 130.546445,
   "visited": null,
@@ -7653,14 +7692,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "aburayamafukuoka",
   "name": "ABURAYAMA FUKUOKA",
   "area": "柏原",
   "city": "福岡市南区",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.509559,
   "lng": 130.377747,
   "visited": null,
@@ -7674,7 +7714,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "chikushinoshisougoukouen",
@@ -7732,7 +7773,7 @@
   "name": "柳川むつごろうランド",
   "area": null,
   "city": "柳川市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.116232,
   "lng": 130.382481,
   "visited": null,
@@ -7746,7 +7787,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "sagakenritsushinrinkouen",
@@ -7803,7 +7845,7 @@
   "name": "トキハ 本店",
   "area": null,
   "city": "大分市",
-  "genre": "レジャー",
+  "genre": "百貨店",
   "lat": 33.236507,
   "lng": 131.608277,
   "visited": null,
@@ -7853,7 +7895,7 @@
   "name": "熊本市動植物園",
   "area": "健軍",
   "city": "熊本市",
-  "genre": "レジャー",
+  "genre": "動物園",
   "lat": 32.774545,
   "lng": 130.747658,
   "visited": null,
@@ -7874,14 +7916,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "ebiikurupaaku",
   "name": "e-ビークルパーク",
   "area": "石動",
   "city": "吉野ヶ里町",
-  "genre": "レジャー",
+  "genre": "体験施設",
   "lat": 33.34986,
   "lng": 130.41064,
   "visited": null,
@@ -7895,14 +7938,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kitakyuushuushihotarukan",
   "name": "北九州市ほたる館",
   "area": "熊谷",
   "city": "北九州市小倉北区",
-  "genre": "レジャー",
+  "genre": "ミュージアム",
   "lat": 33.858234,
   "lng": 130.865993,
   "visited": null,
@@ -7916,14 +7960,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "moovishimonoseki",
   "name": "モーヴィ 下関",
   "area": null,
   "city": "下関市",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 34.019523,
   "lng": 131.00393,
   "visited": null,
@@ -7937,14 +7982,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "山口県"
+  "pref": "山口県",
+  "category": "play"
  },
  {
   "id": "hibikinadaryokuchi",
   "name": "響灘緑地(グリーンパーク)",
   "area": "竹並",
   "city": "北九州市若松区",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.918419,
   "lng": 130.728349,
   "visited": null,
@@ -7965,7 +8011,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "ehimekodomonoshiro",
@@ -8093,7 +8140,7 @@
   "name": "別府ケーブルラクテンチ",
   "area": "流川通り",
   "city": "別府市",
-  "genre": "レジャー",
+  "genre": "遊園地",
   "lat": 33.274793,
   "lng": 131.485549,
   "visited": null,
@@ -8114,14 +8161,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "haamoniirando",
   "name": "ハーモニーランド",
   "area": "藤原",
   "city": "日出町",
-  "genre": "レジャー",
+  "genre": "遊園地",
   "lat": 33.400159,
   "lng": 131.5468,
   "visited": null,
@@ -8142,14 +8190,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "joushimakougenpaaku",
   "name": "城島高原パーク",
   "area": "城島高原",
   "city": "別府市",
-  "genre": "レジャー",
+  "genre": "遊園地",
   "lat": 33.264275,
   "lng": 131.426807,
   "visited": null,
@@ -8170,7 +8219,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "ooitamariinparesusuizokukanu",
@@ -8346,7 +8396,7 @@
   "name": "木の葉モール橋本",
   "area": "橋本",
   "city": "福岡市西区",
-  "genre": "レジャー",
+  "genre": "ショッピングモール",
   "lat": 33.555903,
   "lng": 130.321885,
   "visited": null,
@@ -8483,7 +8533,7 @@
   "name": "元祖忍者村 肥前夢街道",
   "area": "下野甲",
   "city": "嬉野市",
-  "genre": "レジャー",
+  "genre": "テーマパーク",
   "lat": 33.095944,
   "lng": 129.991531,
   "visited": null,
@@ -8497,14 +8547,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "sorarandohiraodai",
   "name": "ソラランド平尾台(平尾台自然の郷)",
   "area": "平尾台",
   "city": "北九州市小倉南区",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.759377,
   "lng": 130.88878,
   "visited": null,
@@ -8518,7 +8569,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "fukutsushisougouundoukouenna",
@@ -8648,7 +8700,7 @@
   "name": "ふるさとわらべ館",
   "area": "下横山",
   "city": "八女市",
-  "genre": "レジャー",
+  "genre": "室内遊び場",
   "lat": 33.276741,
   "lng": 130.627729,
   "visited": null,
@@ -8662,7 +8714,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "shibukawamarinsuizokukan",
@@ -8713,7 +8766,7 @@
   "name": "おもちゃ王国",
   "area": "滝",
   "city": "玉野市",
-  "genre": "レジャー",
+  "genre": "遊園地",
   "lat": 34.472026,
   "lng": 133.892366,
   "visited": null,
@@ -8734,7 +8787,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "岡山県"
+  "pref": "岡山県",
+  "category": "play"
  },
  {
   "id": "ootouirumineeshon",
@@ -8834,7 +8888,7 @@
   "name": "筑豊緑地",
   "area": "仁保",
   "city": "飯塚市",
-  "genre": "レジャー",
+  "genre": "公園",
   "lat": 33.658302,
   "lng": 130.748032,
   "visited": null,
@@ -8848,7 +8902,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "onojokokoronofurusatokan",
@@ -10725,7 +10780,8 @@
    "youtube": "https://youtube.com/shorts/NkupVn8Qy3U",
    "tiktok": "https://www.tiktok.com/@tencone/video/7383238438994185490"
   },
-  "thumb": null
+  "thumb": null,
+  "in": "canalcityhakata"
  },
  {
   "id": "akanorenkuunyanraamen",
@@ -11997,7 +12053,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年6月オープン。中国地方最大級の大型遊具広場。地上高最大20mの複合遊具25基128アイテム、ゴムチップ舗装約3,700㎡。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12009,13 +12069,17 @@
   "city": "山口市",
   "pref": "山口県",
   "genre": "水遊び",
-  "lat": 34.005400,
-  "lng": 131.371400,
+  "lat": 34.0054,
+  "lng": 131.3714,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年7月オープン。きらら博記念公園内に新設。ミスト噴水・樹氷噴水やじゃぶじゃぶ池で水遊びができるエリア。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12033,7 +12097,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年7月リニューアルオープン。アクロスプラザ下関長府A棟2階の屋内遊び場。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12051,7 +12119,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年7月オープン。1-2階が屋内遊び場、9~18時。2~12歳は市内200円/時・市外400円/時、1歳以下無料。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12064,15 +12136,20 @@
   "pref": "山口県",
   "genre": "室内遊び場",
   "lat": 34.006718,
-  "lng": 130.934230,
+  "lng": 130.93423,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年6月オープン。山口県初の次世代型デジタルキッズテーマパーク。平日10~18時。30分子ども500円~、1日フリーパスあり。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "in": "yumecityshimonoseki"
  },
  {
   "id": "kidsoasisseagaia",
@@ -12087,7 +12164,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年4月オープン。シーガイア内インドアパーク。9~20時、2時間550円(2歳以上一律)。0~12歳対象・大人同伴必須。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12105,7 +12186,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年10月リニューアルオープン。全天候型室内遊具施設。滑り台やインクルーシブ遊具のプレイゾーンを新設。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12123,7 +12208,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年4月オープン。県内初の全国大会開催基準を満たすプール。営業9~22時(最終入場21時)。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12136,12 +12225,16 @@
   "pref": "福岡県",
   "genre": "室内遊び場",
   "lat": 33.783822,
-  "lng": 130.730180,
+  "lng": 130.73018,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年8月オープン。室内遊園地。10~19時。子供1時間パック800円・1日パック1,000円、0歳無料。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12154,12 +12247,16 @@
   "pref": "福岡県",
   "genre": "室内遊び場",
   "lat": 33.886944,
-  "lng": 130.764270,
+  "lng": 130.76427,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年4月オープン。ボーネルンドプロデュースの室内遊び場。Baby/Active/Challengeの3ゾーン。子供300円、6か月未満無料。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12177,7 +12274,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年12月オープン。九州最大級の木の遊び場。0~12歳対象。10~17時、水曜定休。平日0-2歳300円・3-12歳800円。カフェ併設。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12195,7 +12296,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年11月リニューアルオープン。誰もが安心して遊べるインクルーシブ遊具5基を新設。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12213,10 +12318,15 @@
   "with": "family",
   "kids": null,
   "verdict": "2025年4月オープン、九州初出店の屋内型こどもの遊び場。0~12歳対象。10~20時。1-2歳900/1,200円、3-12歳1,200/1,600円。モール駐車場無料。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "in": "aeonmallfukuoka"
  },
  {
   "id": "nobikkojumbokumamoto",
@@ -12226,15 +12336,20 @@
   "pref": "熊本県",
   "genre": "室内遊び場",
   "lat": 32.737642,
-  "lng": 130.744350,
+  "lng": 130.74435,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年6月オープン。1日滞在型の屋内プレイ施設。0~12歳対象。飲食持込可・再入場可。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "in": "aeonmallkumamoto"
  },
  {
   "id": "thekidskitashigeyasu",
@@ -12249,7 +12364,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年6月オープン。0歳から遊べる全天候型室内遊び場。平日10~18時/休日10~19時。巨大ジャングルジム・ボールプール等。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12262,12 +12381,16 @@
   "pref": "熊本県",
   "genre": "室内遊び場",
   "lat": 32.991522,
-  "lng": 130.428150,
+  "lng": 130.42815,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年6月オープン。道の駅内の室内遊び場。6か月~小学生対象。平日10~18時/土日祝9~18時、火曜定休。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12279,13 +12402,17 @@
   "city": "荒尾市",
   "pref": "熊本県",
   "genre": "公園",
-  "lat": 32.993000,
-  "lng": 130.426500,
+  "lat": 32.993,
+  "lng": 130.4265,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年6月オープン。高さ13.5mの大型複合遊具・6種の滑り台。インクルーシブ遊具も設置。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12303,7 +12430,11 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年5月オープン。0歳~小学生対象の体験型遊び場。平日10~17時/休日9~18時、火曜定休。60分550円~、0歳無料。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12321,10 +12452,15 @@
   "with": "family",
   "kids": null,
   "verdict": "2026年4月オープン、熊本初出店の次世代型キッズテーマパーク。10~20時、30分制(平日子供500円~)。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "in": "yumetownhikarinomori"
  },
  {
   "id": "sazankakougenpicnicpark",
@@ -12333,13 +12469,17 @@
   "city": "諫早市",
   "pref": "長崎県",
   "genre": "公園",
-  "lat": 32.971130,
-  "lng": 130.144270,
+  "lat": 32.97113,
+  "lng": 130.14427,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2026年4月グランドオープン。高さ約14m・4階建ての大型展望遊具、全長34mローラースライダー等を新設。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"
@@ -12351,13 +12491,1200 @@
   "city": "熊本市北区",
   "pref": "熊本県",
   "genre": "室内遊び場",
-  "lat": 32.886450,
+  "lat": 32.88645,
   "lng": 130.689235,
   "visited": null,
   "with": "family",
   "kids": null,
   "verdict": "2025年12月オープン。完全予約制の屋内型大型アスレチック。3歳以上対象、90分制(平日3-6歳550円~)。",
-  "video": { "youtube": null, "tiktok": null, "instagram": null },
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kannonikekouenmiyakonojo",
+  "name": "観音池公園",
+  "area": null,
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "公園",
+  "lat": 31.835802,
+  "lng": 131.130035,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "63haの総合公園。夏季は屋外「子ども村プール」営業(未就学児100円・小中学生210円)。観覧車・ゴーカート・アスレチック遊具あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kidslandusminamimiyazaki",
+  "name": "キッズランドUS 南宮崎店",
+  "area": null,
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "室内遊び場",
+  "lat": 31.895157,
+  "lng": 131.418869,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "イオン南宮崎店3階。10~20時。スーパージャングルジム・ボールプール・トランポリン完備。子供1時間800円~。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "nojirikopia",
+  "name": "のじりこぴあ",
+  "area": null,
+  "city": "小林市",
+  "pref": "宮崎県",
+  "genre": "水遊び",
+  "lat": 31.961796,
+  "lng": 131.110092,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "入場無料の総合レジャーランド(平日10~17時/土日祝9~17時)。有料でウォータースライダー・こども列車等。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "nichinanshiyueipool",
+  "name": "日南市遊泳プール",
+  "area": null,
+  "city": "日南市",
+  "pref": "宮崎県",
+  "genre": "水遊び",
+  "lat": 31.619543,
+  "lng": 131.38118,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "9:30~16:30。大人520円・児童生徒360円・幼児210円。流れるプール+ウォータースライダー3基のレジャープール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kagoshimakenkounomorikouen",
+  "name": "かごしま健康の森公園",
+  "area": null,
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "公園",
+  "lat": 31.644936,
+  "lng": 130.503296,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "大型コンビネーション遊具のある総合公園。屋内外プール(小中学生150円・大人450円)通年利用可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "littleplanetkagoshimabay",
+  "name": "リトルプラネット イオンモールKAGOSHIMA BAY",
+  "area": null,
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "室内遊び場",
+  "lat": 31.527231,
+  "lng": 130.53653,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "イオンモール内2階。10~20時。子供(4~12歳)平日30分700円~。デジタル体験型キッズテーマパーク。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "in": "aeonmallkagoshimabay"
+ },
+ {
+  "id": "kirishimakokubusougoupool",
+  "name": "霧島市国分総合プール(桷志田泉健康プール)",
+  "area": null,
+  "city": "霧島市",
+  "pref": "鹿児島県",
+  "genre": "水遊び",
+  "lat": 31.744316,
+  "lng": 130.772537,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "通年営業。一般420円・小中高生210円。屋外に渓流下りスライダー(夏季)、屋内に50m・幼児プール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "fukiagehamakaihinkouen",
+  "name": "県立吹上浜海浜公園",
+  "area": null,
+  "city": "南さつま市",
+  "pref": "鹿児島県",
+  "genre": "公園",
+  "lat": 31.441389,
+  "lng": 130.291245,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "キャンプ場・サイクリング・運動広場のある県立公園。夏季(7月中旬~8/31)プール営業、高校生以上250円。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "hachigaminesougoukouen",
+  "name": "蜂ヶ峯総合公園",
+  "area": null,
+  "city": "玖珂郡和木町",
+  "pref": "山口県",
+  "genre": "公園",
+  "lat": 34.196175,
+  "lng": 132.218094,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "入園無料、9~17時。恐竜すべり台11体の「恐竜の森」、アスレチック・ローラー滑り台・ミニSL・観覧車(各300円)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "fukufukukodomokan",
+  "name": "ふくふくこども館",
+  "area": null,
+  "city": "下関市",
+  "pref": "山口県",
+  "genre": "室内遊び場",
+  "lat": 33.949642,
+  "lng": 130.922409,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "JR下関駅ビル3階、入館無料。10~18時。就学前児童向けプレイランド。ボールプール・大型遊具、授乳室完備。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "greenoasisiwakuni",
+  "name": "グリーンオアシス(岩国)",
+  "area": null,
+  "city": "岩国市",
+  "pref": "山口県",
+  "genre": "水遊び",
+  "lat": 34.100464,
+  "lng": 132.092773,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "室内温水プール。平日10:00~19:15(土日祝~17:45)。高校生以上800円。44mスライダー+25m+幼児用プール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "tokiwakouenube",
+  "name": "ときわ公園",
+  "area": null,
+  "city": "宇部市",
+  "pref": "山口県",
+  "genre": "公園",
+  "lat": 33.945312,
+  "lng": 131.284943,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "入園無料・189haの総合公園。じゃぶじゃぶ池は子供200円。動物園・遊園地・植物館を併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "aeonmallfukuoka",
+  "name": "イオンモール福岡",
+  "area": null,
+  "city": "糟屋郡粕屋町",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.596455,
+  "lng": 130.480286,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約197店。トイザらス・ベビーザらス出店。室内遊び場「ちきゅうのにわ」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallkashiihama",
+  "name": "イオンモール香椎浜",
+  "area": null,
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約120店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallfukuokaito",
+  "name": "イオンモール福岡伊都",
+  "area": null,
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.577957,
+  "lng": 130.259354,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約100店。本館は九州初の3層モール構造。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallomuta",
+  "name": "イオンモール大牟田",
+  "area": null,
+  "city": "大牟田市",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.030472,
+  "lng": 130.427765,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約140店。フードコート棟「ありあけコート」にキッズスペースあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallnogata",
+  "name": "イオンモール直方",
+  "area": null,
+  "city": "直方市",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.76894,
+  "lng": 130.749512,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約140店。TOHOシネマズ直方併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallchikushino",
+  "name": "イオンモール筑紫野",
+  "area": null,
+  "city": "筑紫野市",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.480873,
+  "lng": 130.524292,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約180店。3層モールで蔦屋書店・イオンシネマ併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallfukutsu",
+  "name": "イオンモール福津",
+  "area": null,
+  "city": "福津市",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.753025,
+  "lng": 130.492828,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約180店。TOHOシネマズ福津(10スクリーン)併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallyahatahigashi",
+  "name": "イオンモール八幡東",
+  "area": null,
+  "city": "北九州市八幡東区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.870262,
+  "lng": 130.811401,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約148店。隣接THE OUTLETSにASOBLEや科学館スペースLABOあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallsagayamato",
+  "name": "イオンモール佐賀大和",
+  "area": null,
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "ショッピングモール",
+  "lat": 33.303963,
+  "lng": 130.280472,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約100店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmalluki",
+  "name": "イオンモール宇城",
+  "area": null,
+  "city": "宇城市",
+  "pref": "熊本県",
+  "genre": "ショッピングモール",
+  "lat": 32.594955,
+  "lng": 130.705338,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約100店。トイザらス・ベビーザらス、TOHOシネマズ併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallkumamoto",
+  "name": "イオンモール熊本",
+  "area": null,
+  "city": "上益城郡嘉島町",
+  "pref": "熊本県",
+  "genre": "ショッピングモール",
+  "lat": 32.737942,
+  "lng": 130.743988,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "室内遊び場「のびっこジャンボ」あり。※2026年7月の事故で一部休業中(再開未定)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallsanko",
+  "name": "イオンモール三光",
+  "area": null,
+  "city": "中津市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.554157,
+  "lng": 131.195282,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約90店。セントラルシネマ三光(8スクリーン)併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallmiyazaki",
+  "name": "イオンモール宮崎",
+  "area": null,
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "ショッピングモール",
+  "lat": 31.924305,
+  "lng": 131.452423,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店254店。映画館・スポーツクラブ等併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallmiyakonojoekimae",
+  "name": "イオンモール都城駅前",
+  "area": null,
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "ショッピングモール",
+  "lat": 31.735453,
+  "lng": 131.080383,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店約98店。JR都城駅前に立地。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "aeonmallkagoshimabay",
+  "name": "イオンモールKAGOSHIMA BAY",
+  "area": null,
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "ショッピングモール",
+  "lat": 31.527231,
+  "lng": 130.53653,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "専門店205店で鹿児島県内最大規模。室内遊び場「リトルプラネット」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownhakata",
+  "name": "ゆめタウン博多",
+  "area": null,
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.61153,
+  "lng": 130.412064,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ベビールーム・おむつ替え台完備。フードコート・レストラン街あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownkurume",
+  "name": "ゆめタウン久留米",
+  "area": null,
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.321095,
+  "lng": 130.536743,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ベビールーム・おむつ替え台完備。フードコート・レストラン街あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownsaga",
+  "name": "ゆめタウン佐賀",
+  "area": null,
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "ショッピングモール",
+  "lat": 33.275646,
+  "lng": 130.308182,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ベビールーム・おむつ替え台完備。1Fレストラン街・2Fフードコート。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownyumesaito",
+  "name": "ゆめタウン夢彩都",
+  "area": null,
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "ショッピングモール",
+  "lat": 32.74733,
+  "lng": 129.87117,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ベビールーム・おむつ替え台完備。長崎港そばの大型商業施設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownhikarinomori",
+  "name": "ゆめタウン光の森",
+  "area": null,
+  "city": "菊池郡菊陽町",
+  "pref": "熊本県",
+  "genre": "ショッピングモール",
+  "lat": 32.860233,
+  "lng": 130.784576,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "TOHOシネマズ併設。室内遊び場「リトルプラネット」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumetownyamaguchi",
+  "name": "ゆめタウン山口",
+  "area": null,
+  "city": "山口市",
+  "pref": "山口県",
+  "genre": "ショッピングモール",
+  "lat": 34.159306,
+  "lng": 131.490845,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ベビールーム完備。キッズ向け「ゆめキッズ倶楽部」を展開。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "lalaportfukuoka",
+  "name": "ららぽーと福岡",
+  "area": null,
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.564976,
+  "lng": 130.43869,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "全222店。キッザニア福岡が核テナント。実物大νガンダム立像あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "markisfukuokamomochi",
+  "name": "マークイズ福岡ももち",
+  "area": null,
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.594341,
+  "lng": 130.362411,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "3階にキッズスペース・遊び場「あそびばももち」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "canalcityhakata",
+  "name": "キャナルシティ博多",
+  "area": null,
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.589481,
+  "lng": 130.41095,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "運河の噴水ショーが名物の複合施設。劇場・シネコン・ホテル併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "toriushisayama",
+  "name": "トリアス久山(TORIUS)",
+  "area": null,
+  "city": "糟屋郡久山町",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.653015,
+  "lng": 130.489349,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "約160店。コストコ・ユナイテッドシネマ等が核テナント。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "riverwalkkitakyushu",
+  "name": "リバーウォーク北九州",
+  "area": null,
+  "city": "北九州市小倉北区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.885876,
+  "lng": 130.875244,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "美術館分館・芸術劇場等の文化施設併設。室内遊び場「ザキッズ」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sasebogobangai",
+  "name": "させぼ五番街",
+  "area": null,
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "ショッピングモール",
+  "lat": 33.166134,
+  "lng": 129.722687,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "約83店。3階に玩具・ベビー用品テナント。佐世保港沿いに立地。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "amuplazaoita",
+  "name": "JRおおいたシティ(アミュプラザおおいた)",
+  "area": null,
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.233311,
+  "lng": 131.606415,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "駅ビル184店。屋上庭園・TOHOシネマズ・温浴施設併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "amuplazakagoshima",
+  "name": "アミュプラザ鹿児島",
+  "area": null,
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "ショッピングモール",
+  "lat": 31.58415,
+  "lng": 130.542221,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "268店。屋上に観覧車アミュラン、シネコン併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "yumecityshimonoseki",
+  "name": "ゆめシティ(下関)",
+  "area": "伊倉新町",
+  "city": "下関市",
+  "pref": "山口県",
+  "genre": "ショッピングモール",
+  "lat": 34.006718,
+  "lng": 130.93423,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "イズミ系の大型ショッピングモール。室内遊び場「リトルプラネット」あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "matsuurakahankouen",
+  "name": "松浦河畔公園",
+  "area": null,
+  "city": "唐津市",
+  "pref": "佐賀県",
+  "genre": "公園",
+  "lat": 33.42207,
+  "lng": 129.997101,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "海の生きものテーマの複合遊具・木製アスレチック・ターザンロープ。9~19時(10~3月は18時まで)、遊具無料。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "miyakidspark",
+  "name": "みやキッズパーク",
+  "area": null,
+  "city": "三養基郡みやき町",
+  "pref": "佐賀県",
+  "genre": "公園",
+  "lat": 33.327328,
+  "lng": 130.454666,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "「妖精のお城」がテーマの大型複合遊具。すべり台・吊り橋・ロッククライム。入園無料・駐車場無料。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kawachikasenpool",
+  "name": "河内河川プール",
+  "area": null,
+  "city": "鳥栖市",
+  "pref": "佐賀県",
+  "genre": "水遊び",
+  "lat": 33.415691,
+  "lng": 130.464676,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "大木川の水を引き込んだ自然石造りの川プール。夏休み期間限定、9:30~16時。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "waiwaipoolisahaya",
+  "name": "長崎県立総合運動公園わいわいプール",
+  "area": null,
+  "city": "諫早市",
+  "pref": "長崎県",
+  "genre": "水遊び",
+  "lat": 32.837368,
+  "lng": 130.038498,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "夏季限定(7月中旬~8/31)9~18時。25mプール・流水プール150m・ウォータースライダー。大人500円。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "ecokidssasebo",
+  "name": "エコキッズ(エコスパ佐世保内)",
+  "area": null,
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "室内遊び場",
+  "lat": 33.144466,
+  "lng": 129.775757,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "10~21時。1歳~小2は330円、大人無料(1名まで)。滑り台・トランポリンのアクティブエリアと知育エリア。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "in": "ekosupasasebo"
+ },
+ {
+  "id": "hyakkadaikouen",
+  "name": "百花台公園",
+  "area": null,
+  "city": "雲仙市",
+  "pref": "長崎県",
+  "genre": "公園",
+  "lat": 32.826828,
+  "lng": 130.296371,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "入園無料・常時開放。「子どものとりで」「ターザンの森」など遊具エリアと芝生広場のある総合公園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "takaosanshizenkouen",
+  "name": "高尾山自然公園",
+  "area": null,
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "公園",
+  "lat": 33.201115,
+  "lng": 131.656387,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "入園無料、9~21時(木曜休)。「365歩の階段」やちびっこ広場など山の地形を生かした大型自然公園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "hiyoshibaruleisurepool",
+  "name": "日吉原レジャープール",
+  "area": null,
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "水遊び",
+  "lat": 33.239311,
+  "lng": 131.760498,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "大人790円・子供390円。9~19時。大型スライダー2種・流れるプール・幼児用すべり台付きプール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "tsurusakisportspark",
+  "name": "鶴崎スポーツパーク",
+  "area": null,
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "公園",
+  "lat": 33.226578,
+  "lng": 131.691101,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "和船型の大型コンビネーション遊具・ローラースライダー・チューブスライダーのある市営公園。駐車場無料。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "aquabeatbeppu",
+  "name": "アクアビート(杉乃井ホテル)",
+  "area": null,
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "水遊び",
+  "lat": 33.283031,
+  "lng": 131.476624,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "杉乃井ホテル内の日帰り可プール(4~9月営業)。大人2,600円~。ウォータースライダー4種とキッズプール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "in": "suginoihoteru-26"
+ },
+ {
+  "id": "nabetamizuasobikouen",
+  "name": "鍋田水遊び公園",
+  "area": null,
+  "city": "山鹿市",
+  "pref": "熊本県",
+  "genre": "水遊び",
+  "lat": 33.022839,
+  "lng": 130.655838,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "岩野川の水を引いた水路で水遊びできる河川公園。入場無料。夏休み期間は高さ5mほどの噴水も。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "yukidshamasen",
+  "name": "Yukids ゆめタウンはません店",
+  "area": null,
+  "city": "熊本市南区",
+  "pref": "熊本県",
+  "genre": "室内遊び場",
+  "lat": 32.773132,
+  "lng": 130.723999,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "ゆめタウンはません本館3階の屋内遊園地。60分700円(保護者無料)、10~20時。対象0歳~小2。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "anzunookakouen",
+  "name": "あんずの丘公園",
+  "area": null,
+  "city": "山鹿市",
+  "pref": "熊本県",
+  "genre": "公園",
+  "lat": 33.029213,
+  "lng": 130.75737,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "斜面の大型複合遊具・芝スキー・ターザンロープあり。7ha・駐車場約200台、農産物直売所併設。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
   "thumb": null,
   "wish": true,
   "category": "play"

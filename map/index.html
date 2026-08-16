@@ -193,6 +193,7 @@
   .ph-hotel  { background: linear-gradient(170deg, #3e4a72, #272f4e); }
   .ph-play   { background: linear-gradient(170deg, #3f7a55, #27503a); }
   .ph-food   { background: linear-gradient(170deg, #566270, #39424d); }
+  .ph-mall   { background: linear-gradient(170deg, #7a4d8f, #4e2f5e); }
   .card-body { flex: 1; min-width: 0; }
   .b-wish {
     display: inline-block;
@@ -344,6 +345,27 @@
     display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
     background: #f0f0f0; color: #666; border-radius: 999px; padding: 2px 9px;
   }
+  /* 施設内スポットの親チップ */
+  .b-in {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #eef1f7; color: #44506a; border-radius: 999px; padding: 2px 9px;
+    cursor: pointer;
+  }
+  /* 詳細カード内「この施設内のスポット」 */
+  .detail-children {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+  .dc-title { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+  .dc-item {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    width: 100%; text-align: left;
+    font: inherit; font-size: 14px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 9px 12px; margin-bottom: 6px; cursor: pointer;
+  }
+  .dc-item .dc-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
   .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
   .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .map-foot {
@@ -587,6 +609,7 @@ function norenStyle(spot) {
   if (has("居酒屋", "屋台", "酒場", "焼鳥", "焼き鳥", "串", "おでん", "餃子")) return { cls: "ph-izakaya", emoji: "🏮", label: "酒場" };
   if (has("焼肉", "ホルモン", "ステーキ", "ハンバーグ")) return { cls: "ph-izakaya", emoji: "🍖", label: "肉" };
   if (has("寿司", "鮨", "海鮮", "魚")) return { cls: "ph-food", emoji: "🍣", label: "海鮮" };
+  if (has("モール", "ショッピング", "百貨店")) return { cls: "ph-mall", emoji: "🛍️", label: "モール" };
   if (has("ホテル", "旅館", "宿", "リゾート")) return { cls: "ph-hotel", emoji: "🏨", label: "宿" };
   if (has("公園", "遊", "ミュージアム", "こども", "施設", "テーマ", "動物", "水族館")) return { cls: "ph-play", emoji: "🎡", label: "遊び場" };
   return { cls: "ph-food", emoji: "🍴", label: "食事処" };
@@ -603,6 +626,7 @@ function cardHtml(spot) {
   const thumb = spot.thumb
     ? `<img class="card-thumb" src="thumbs/${escapeHtml(spot.thumb)}" alt="" loading="lazy">`
     : `<div class="card-thumb ph ${ph.cls}"><span class="ph-emoji">${ph.emoji}</span><span class="ph-label">${ph.label}</span></div>`;
+  const parent = spot.in ? state.spots.find(p => p.id === spot.in) : null;
   return `
     ${thumb}
     <div class="card-body">
@@ -613,7 +637,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -686,13 +710,53 @@ function updatePinHighlight() {
 
 function openDetail(spot) {
   const detail = document.getElementById("detail");
+  // この施設内に登録されているスポット(親→子リンク)
+  const children = state.spots.filter(s => s.in === spot.id);
+  const childrenHtml = children.length ? `
+    <div class="detail-children">
+      <div class="dc-title">この施設内のスポット</div>
+      ${children.map(c => `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`).join("")}
+    </div>` : "";
   detail.innerHTML = `
     <div class="detail-grip"></div>
     <button class="detail-close" id="detailClose">✕</button>
     <div class="card">${cardHtml(spot)}</div>
+    ${childrenHtml}
   `;
   detail.classList.add("open");
   document.getElementById("detailClose").addEventListener("click", closeDetail);
+  bindJumpLinks(detail);
+}
+
+// 親子リンク([data-jump])のクリックで対象スポットへ飛ぶ
+function bindJumpLinks(root) {
+  root.querySelectorAll("[data-jump]").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const target = state.spots.find(s => s.id === el.dataset.jump);
+      if (target) jumpToSpot(target);
+    });
+  });
+}
+
+function jumpToSpot(spot) {
+  // 別カテゴリのスポットならタブを切り替える
+  const cat = spotCat(spot);
+  if (cat !== state.category) {
+    state.category = cat;
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.toggle("active", b.dataset.cat === cat));
+    populateAreaSelect(state.spots);
+  }
+  // 現在のフィルタで対象が表示されない場合は「すべて」に戻す
+  if (!applyFilters(state.spots).some(s => s.id === spot.id)) {
+    state.filter = "all";
+    state.areas = new Set();
+    updateAreaBtn();
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+  }
+  renderAll();
+  focusSpot(spot);
+  window.scrollTo({ top: 0, behavior: "smooth" });
 }
 
 function closeDetail() {
@@ -747,6 +811,7 @@ function renderList() {
       }
     });
   });
+  bindJumpLinks(list);
 }
 
 function renderMarkers() {
@@ -754,7 +819,19 @@ function renderMarkers() {
   if (!window._map) return;
   const filtered = applyFilters(state.spots).filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
 
+  const childCount = {};
   filtered.forEach(spot => {
+    // 親施設とほぼ同座標の子スポットはピンを少しずらして重なりを防ぐ
+    let pinLat = spot.lat, pinLng = spot.lng;
+    if (spot.in) {
+      const p = state.spots.find(s => s.id === spot.in);
+      if (p && Math.abs(p.lat - spot.lat) < 0.0008 && Math.abs(p.lng - spot.lng) < 0.0008) {
+        const n = childCount[spot.in] = (childCount[spot.in] || 0) + 1;
+        const ang = n * 2.1;
+        pinLat = spot.lat + 0.00035 * Math.sin(ang);
+        pinLng = spot.lng + 0.00042 * Math.cos(ang);
+      }
+    }
     const el = document.createElement("div");
     el.style.width = "22px";
     el.style.height = "22px";
@@ -773,7 +850,7 @@ function renderMarkers() {
     }
 
     const marker = new maplibregl.Marker({ element: el })
-      .setLngLat([spot.lng, spot.lat])
+      .setLngLat([pinLng, pinLat])
       .addTo(window._map);
 
     el.addEventListener("click", (e) => {

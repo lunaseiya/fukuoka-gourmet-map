@@ -14280,5 +14280,26 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "shimikannishijin",
+  "name": "中国北方料理 知味観(シミカン)",
+  "area": "西新",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "中華(町中華・デカ盛り)",
+  "lat": 33.581924,
+  "lng": 130.355362,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "「オモウマい店」でも紹介されたデカ盛り町中華。名物は焼飯に麻婆豆腐をかけた「ヤング」や幻の「知味観盛り」。1,000円以内で満腹級。11:00~14:30/17:30~21:00、火曜+隔週月曜休。西新駅から徒歩約4分。土曜昼は30分待ちも。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

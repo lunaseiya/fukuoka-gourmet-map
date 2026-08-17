@@ -371,6 +371,16 @@
     background: #eef1f7; color: #44506a; border-radius: 999px; padding: 2px 9px;
     cursor: pointer;
   }
+  .b-day {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #e6f4f7; color: #1f6f80; border-radius: 999px; padding: 2px 9px;
+  }
+  .b-stay {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #f2ecff; color: #5b3fa8; border-radius: 999px; padding: 2px 9px;
+  }
+  .onsen-only { display: none; }
+  body.cat-onsen .onsen-only { display: inline-block; }
   /* 詳細カード内「この施設内のスポット」 */
   .detail-children {
     margin-top: 12px;
@@ -444,7 +454,7 @@
   <h1>福岡グルメマップ</h1>
   <div class="cat-toggle">
     <button class="cat-btn active" data-cat="gourmet">🍜 グルメ・おでかけ</button>
-    <button class="cat-btn" data-cat="onsen">♨ 日帰り温泉</button>
+    <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
     <button class="cat-btn" data-cat="play">🎡 遊び場</button>
   </div>
   <div class="filters">
@@ -452,6 +462,8 @@
     <button class="filter-btn" data-filter="visited">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
     <button class="filter-btn" data-filter="wish">下調べ</button>
+    <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
+    <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
     <button class="filter-btn" id="memoBtn">＋メモ登録</button>
   </div>
@@ -595,6 +607,25 @@ function isKidsOk(spot) {
   return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
 }
 
+// 泊まれる施設か(明示フラグ optional: spot.stay)
+function canStay(s) {
+  if (s.stay === true) return true;
+  if (s.stay === false) return false;
+  return /旅館|ホテル|宿|リゾート|ペンション|民宿|別邸/.test((s.genre || "") + (s.name || ""));
+}
+// 日帰り入浴ができるか(明示フラグ optional: spot.dayUse)
+function canDayUse(s) {
+  if (s.dayUse === true) return true;
+  if (s.dayUse === false) return false;
+  const v = s.verdict || "";
+  // 「日帰り不可」等の否定表現が先に来る場合は除外
+  if (/日帰り[^。]{0,12}(不可|いたしており|できません|なし|していません)/.test(v)) return false;
+  if (/日帰り|立ち寄り湯|外来入浴/.test(v)) return true;
+  if (/日帰り|スーパー銭湯|銭湯|温浴|スパ|健康ランド|公衆浴場|家族湯|家族風呂|貸切風呂|サウナ|砂むし/.test(s.genre || "")) return true;
+  // 入浴料が書かれている＝外来利用できるとみなす(「大人1,500円」「小人700円」等)
+  return /(大人|小人|子供|中学生|小学生)[^。]{0,10}[0-9,]{3,6}\s*円/.test(v);
+}
+
 // スポットの所属カテゴリ(グルメ・おでかけ/日帰り温泉/遊び場)
 function spotCat(s) {
   if (s.category === "onsen") return "onsen";
@@ -609,6 +640,8 @@ function applyFilters(spots) {
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
+    if (state.filter === "dayuse" && !canDayUse(s)) return false;
+    if (state.filter === "stay" && !canStay(s)) return false;
     if (state.areas.size && !state.areas.has(s.city)) return false;
     return true;
   });
@@ -690,7 +723,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spot.category === "onsen" && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spot.category === "onsen" && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -702,6 +735,8 @@ function areaTabSpots(spots) {
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;
+    if (state.filter === "dayuse" && !canDayUse(s)) return false;
+    if (state.filter === "stay" && !canStay(s)) return false;
     return true;
   });
 }
@@ -1150,6 +1185,12 @@ document.querySelectorAll(".cat-btn").forEach(btn => {
     document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     state.category = btn.dataset.cat;
+    document.body.classList.toggle("cat-onsen", state.category === "onsen");
+    // 温泉タブ専用フィルタを選んだまま他タブへ移ったら「すべて」に戻す
+    if (state.category !== "onsen" && (state.filter === "dayuse" || state.filter === "stay")) {
+      state.filter = "all";
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+    }
     populateAreaSelect(state.spots);
     renderAll();
   });

@@ -77,7 +77,7 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": null,
+   "stroller": true,
    "diaper": null,
    "tatami": null,
    "kidsChair": null,
@@ -104,10 +104,10 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": null,
+   "stroller": true,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -151,7 +151,14 @@
   "lng": 130.411155,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・P無し近隣コインP・呉服町駅徒歩5分。子供椅子",
   "video": {
    "youtube": "https://youtube.com/shorts/83BH_sgBHvg",
@@ -203,7 +210,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -226,7 +233,14 @@
   "lng": 130.395699,
   "visited": null,
   "with": "friends",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター・テーブル・座敷あり・西鉄福岡駅徒歩7分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/3B9AQhV8JQo",
@@ -296,7 +310,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -351,7 +365,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -435,7 +449,14 @@
   "lng": 130.440324,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+BOX+座敷あり・共用大型P・24時間営業。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/7t9x9CIsFZM",
@@ -457,9 +478,9 @@
   "with": "family",
   "kids": {
    "stroller": null,
-   "diaper": null,
+   "diaper": true,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -509,7 +530,14 @@
   "lng": 130.395596,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル38席・子供メニュー有・P無し近隣コインP。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/_xDOjJ-nCts",
@@ -745,7 +773,14 @@
   "lng": 130.407053,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター席あり。テーブル席もある",
   "video": {
    "youtube": "https://youtube.com/shorts/mMGfWVZ6xFA",
@@ -768,7 +803,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -792,7 +827,14 @@
   "lng": 130.392156,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+個室あり・子供可・駐車場なし",
   "video": {
    "youtube": "https://youtube.com/shorts/_mCbtlWHf7I",
@@ -832,7 +874,14 @@
   "lng": 130.394312,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・子供メニューあり・赤坂駅徒歩2分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/SPf1aXGjmog",
@@ -855,7 +904,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -951,7 +1000,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -996,7 +1045,7 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": null,
+   "stroller": true,
    "diaper": null,
    "tatami": null,
    "kidsChair": null,
@@ -1100,7 +1149,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -1128,7 +1177,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -1151,7 +1200,14 @@
   "lng": 130.38532,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・子供可・近隣コインP",
   "video": {
    "youtube": "https://youtube.com/shorts/4cT1UIinHmc",
@@ -1171,7 +1227,14 @@
   "lng": 130.467545,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター席・子供可・店前P7台※春町1-2-27へ移転済み。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/4612XKpqKfo",
@@ -1191,7 +1254,14 @@
   "lng": 130.406001,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・ベビーカー入店可・渡辺通駅徒歩5分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/PAT1ug8CJ6Y",
@@ -1302,7 +1372,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": true,
    "serveMin": null,
    "noise": null
@@ -1350,7 +1420,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -1373,7 +1443,14 @@
   "lng": 130.428366,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・店前P3台・東比恵駅徒歩5分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/QMkh_wbV5oU",
@@ -1420,7 +1497,14 @@
   "lng": 130.340283,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "座敷・カウンター・テーブルあり・提携駐車場あり。座敷ありなので子供OK、子供椅子あり",
   "video": {
    "youtube": "https://youtube.com/shorts/yw9vu1talAE",
@@ -1550,7 +1634,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -1634,7 +1718,14 @@
   "lng": 130.487389,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+座敷席・店前P3台+150m先に30台。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/c1qoQnGcqTY",
@@ -1674,7 +1765,14 @@
   "lng": null,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター・テーブル・座敷あり・店前駐車場あり",
   "video": {
    "youtube": "https://youtube.com/shorts/7qK4lQnDW4M",
@@ -1737,7 +1835,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -1761,7 +1859,14 @@
   "lng": 130.407732,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・P無し近隣コインP。子供OK。※訪問は福岡空港店(国内線ターミナル3F ラーメン滑走路)の可能性あり。本店は中洲2-5-2に移転済み",
   "video": {
    "youtube": "https://youtube.com/shorts/Q8ldoVnWlqk",
@@ -1781,7 +1886,14 @@
   "lng": 130.460024,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・座敷あり・専用P6台・南福岡駅徒歩1分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/JNhYU0BwAdk",
@@ -1804,7 +1916,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -1882,7 +1994,14 @@
   "lng": 130.71136,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・子供可・提携P(サービス券)・通町筋電停徒歩5分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/eEEAl2jv4h0",
@@ -1933,7 +2052,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -1956,7 +2075,14 @@
   "lng": 130.386691,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "テーブル席32席・食券制・赤坂駅徒歩10分",
   "video": {
    "youtube": "https://youtube.com/shorts/W9108Fzz_YQ",
@@ -1979,7 +2105,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -2003,7 +2129,14 @@
   "lng": 130.400365,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・子供可・P無・西鉄福岡駅徒歩3分。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/B0f7l4aIe5E",
@@ -2043,7 +2176,14 @@
   "lng": 130.419579,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "福岡市中央区大名1-11-27 イルモンド大名TWO 1F。座敷・掘りごたつ・個室あり。※訪問したのは大名店(博多駅東店は別店舗で24時間営業)",
   "video": {
    "youtube": "https://youtube.com/shorts/Tb8QNMgdJu0",
@@ -2083,7 +2223,14 @@
   "lng": 130.412462,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター15席・小学生以下ラーメン無料・P10台・平尾駅徒歩7分。子供ラーメンあり",
   "video": {
    "youtube": "https://youtube.com/shorts/HIf6rAU7FVk",
@@ -2163,7 +2310,14 @@
   "lng": 130.420392,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "38席(カウンターあり)・子供連れ可・博多駅直結JR博多シティ10F。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/qiqZ2o5RygQ",
@@ -2183,7 +2337,14 @@
   "lng": 130.392031,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター+テーブル・子供可・P店前3台・赤坂駅徒歩7分。子供OK",
   "video": {
    "youtube": null,
@@ -2204,7 +2365,7 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": null,
+   "stroller": true,
    "diaper": true,
    "tatami": null,
    "kidsChair": null,
@@ -2285,7 +2446,14 @@
   "lng": null,
   "visited": null,
   "with": "solo",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター15席・全席喫煙可・P無・呉服町駅徒歩9分。テーブル席あり",
   "video": {
    "youtube": "https://youtube.com/shorts/OMHKS9bh_4s",
@@ -10726,7 +10894,14 @@
   "lng": 130.433809,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "和白駅(西鉄)徒歩5分(393m)、駐車場約6台、昭和35年創業の老舗。座敷・テーブルあり、お子様椅子もあり",
   "video": {
    "youtube": "https://youtube.com/shorts/B3Uaa-uT06A",
@@ -11001,7 +11176,14 @@
   "lng": 130.454597,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "駐車場あり。新宮中央駅から約1.1km(徒歩13〜15分程度)。席構成・子供椅子は未確認。 ※動画はリニューアル前の撮影",
   "video": {
    "youtube": "https://youtube.com/shorts/Ac-nEHKEbkQ",
@@ -11020,7 +11202,14 @@
   "lng": 130.45382,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "総席数119席。駐車場52台あり。九産大前駅から約1.8km(徒歩30分弱、車移動が主)。子供歓迎、お子様無料メニューあり",
   "video": {
    "youtube": "https://youtube.com/shorts/ATBkPLF59Js",
@@ -11039,7 +11228,14 @@
   "lng": 130.533481,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター中心。店前駐車場20台あり。JR東郷駅から約1.35km(車移動が主)。テーブル席あり、お子様椅子あり",
   "video": {
    "youtube": null,
@@ -11058,7 +11254,14 @@
   "lng": 130.450374,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "券売機制。駐車場完備(台数記載なし)。席構成・子供椅子・最寄り駅徒歩分は未確認。",
   "video": {
    "youtube": null,
@@ -11077,7 +11280,14 @@
   "lng": 130.832523,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "全席禁煙。駐車場あり。原水駅から徒歩7〜8分(611m)。子供OK",
   "video": {
    "youtube": null,
@@ -11096,7 +11306,14 @@
   "lng": 130.43222,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "カウンター・テーブル席あり。子供(小学生)可。共用駐車場440台。JR和白駅徒歩5分。 ※動画はリニューアル前(すかいらーく傘下入り前)の撮影。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/RBqNmNWp2uo",
@@ -11118,7 +11335,7 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": false,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
@@ -11145,7 +11362,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11171,8 +11388,8 @@
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": false,
-   "kidsChair": null,
+   "tatami": true,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11199,7 +11416,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11222,7 +11439,14 @@
   "lng": 130.392598,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "テーブル・カウンターあり(席数詳細不明)。子供椅子・駐車場情報なし。赤坂駅徒歩5分",
   "video": {
    "youtube": "https://youtube.com/shorts/faBknWwkCv0",
@@ -11246,7 +11470,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11273,7 +11497,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11300,7 +11524,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11327,7 +11551,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11381,7 +11605,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11597,7 +11821,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11701,7 +11925,14 @@
   "lng": 130.435875,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "ファミレス風の広い造り。唐の原駅から徒歩2分(154m)。座席構成・駐車場・子供椅子の詳細記載なし。",
   "video": {
    "youtube": null,
@@ -11725,7 +11956,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11752,7 +11983,7 @@
    "stroller": null,
    "diaper": null,
    "tatami": false,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
@@ -11829,7 +12060,14 @@
   "lng": 130.465909,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "水と豚骨だけで3日間煮込む濃厚豚骨。2026年4月オープン・福岡市内2店舗目。24時間営業・駐車場50台。0歳児連れでも入りやすく、平日昼10時半は並ばず入れた。子供OK",
   "video": {
    "youtube": "https://youtube.com/shorts/EdrPXgvXPX4",
@@ -11902,7 +12140,7 @@
   "with": "family",
   "kids": {
    "stroller": null,
-   "diaper": null,
+   "diaper": true,
    "tatami": null,
    "kidsChair": true,
    "serveMin": null,
@@ -13968,7 +14206,14 @@
   "lng": 130.451635,
   "visited": null,
   "with": "family",
-  "kids": null,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
   "verdict": "子供歓迎のお好み焼き・鉄板焼きチェーン。未就学児は「ちびっこおむすび・ドリンクバー・お子様ソフト」の無料3大サービスあり。子供椅子・豆椅子あり、ベンチシート席・タブレット注文で子連れ向き。子供OK",
   "video": {
    "youtube": null,

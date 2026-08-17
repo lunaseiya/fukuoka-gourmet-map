@@ -13992,5 +13992,48 @@
   "related": [
    "dondonteikogahanamimise"
   ]
+ },
+ {
+  "id": "meishimateimarkis",
+  "name": "名島亭 MARK IS 福岡ももち店",
+  "area": "地行浜(MARK IS 3Fフードコート)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.594341,
+  "lng": 130.362411,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "名島亭のフードコート店。10:00〜21:00(L.O.20:30)。※東区の本店は2022年8月の火災で焼失し閉店、現在はこちらと博多デイトス店で味を継承。フードコートなので子連れでも入りやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "markisfukuokamomochi"
+ },
+ {
+  "id": "meishimateihakatadeitosu",
+  "name": "名島亭 博多デイトス店",
+  "area": "博多駅(JR博多シティ・博多めん街道)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.589912,
+  "lng": 130.420395,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "JR博多シティ「博多めん街道」内。11:00〜23:00。※東区の本店は2022年の火災で閉店、現在はこちらとMARK IS店で営業。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

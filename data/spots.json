@@ -757,27 +757,6 @@
   "pref": "福岡県"
  },
  {
-  "id": "raamenkurumehondashouten-19",
-  "name": "拉麺 久留米 本田商店 ラーメンスタジアム店",
-  "area": "キャナルシティ博多",
-  "genre": "久留米ラーメン",
-  "lat": 33.589628,
-  "lng": 130.411195,
-  "visited": null,
-  "with": "solo",
-  "kids": null,
-  "verdict": "カウンター席・キャナルシティP有※食べログは閉店表記・要確認",
-  "video": {
-   "youtube": "https://youtube.com/shorts/ULraa-k7rXo",
-   "tiktok": "https://www.tiktok.com/@tencone/video/7426865081419402514",
-   "instagram": "https://www.instagram.com/reel/DBPbVR1xz8f/"
-  },
-  "thumb": null,
-  "city": "福岡市博多区",
-  "pref": "福岡県",
-  "in": "canalcityhakata"
- },
- {
   "id": "hitsumabushiwashokubinch-20",
   "name": "ひつまぶし和食備長 中洲川端店",
   "area": "中洲川端",
@@ -1099,7 +1078,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": null,
+  "verdict": "昼は「峠の玄氣屋」(おむすび専門)、夜は「HAKATA MEGUSTA」(立ち飲みバー)の二毛作店舗。博多駅中央街・博多デイトス周辺",
   "video": {
    "youtube": "https://youtube.com/shorts/JTGWWZ-_9G4",
    "tiktok": "https://www.tiktok.com/@tencone/video/7393471266411302152",
@@ -1596,7 +1575,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "個室あり・P無し徒歩2分にコインP・博多駅徒歩5〜8分",
+  "verdict": "個室あり・P無し徒歩2分にコインP・博多駅徒歩5〜8分。※行ったのは中洲側(リバーサイド中洲店・上川端町3-1)の可能性あり。総本店は博多駅東2-9-20",
   "video": {
    "youtube": "https://youtube.com/shorts/SrTW22Q0r88",
    "tiktok": "https://www.tiktok.com/@tencone/video/7294543589206445313",
@@ -1684,33 +1663,6 @@
   },
   "thumb": null,
   "city": "福岡市早良区",
-  "pref": "福岡県"
- },
- {
-  "id": "meishimateihonten-60",
-  "name": "名島亭 本店",
-  "area": "名島",
-  "genre": "豚骨ラーメン",
-  "lat": 33.644198,
-  "lng": 130.427992,
-  "visited": null,
-  "with": "solo",
-  "kids": {
-   "stroller": null,
-   "diaper": null,
-   "tatami": null,
-   "kidsChair": true,
-   "serveMin": null,
-   "noise": null
-  },
-  "verdict": "子供椅子あり・店舗裏P7台+提携Pあり",
-  "video": {
-   "youtube": "https://youtube.com/shorts/kIh9gGDjpcs",
-   "tiktok": "https://www.tiktok.com/@tencone/video/7279314296662805761",
-   "instagram": "https://www.instagram.com/reel/CxRY2t7SIsv/"
-  },
-  "thumb": null,
-  "city": "福岡市東区",
   "pref": "福岡県"
  },
  {
@@ -1810,7 +1762,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "カウンター+テーブル・P無し近隣コインP。子供OK",
+  "verdict": "カウンター+テーブル・P無し近隣コインP。子供OK。※訪問は福岡空港店(国内線ターミナル3F ラーメン滑走路)の可能性あり。本店は中洲2-5-2に移転済み",
   "video": {
    "youtube": "https://youtube.com/shorts/Q8ldoVnWlqk",
    "tiktok": "https://www.tiktok.com/@tencone/video/7251812794998197505",
@@ -2084,22 +2036,22 @@
  },
  {
   "id": "gansotomatoraamenshamiha-77",
-  "name": "元祖トマトラーメン三味(333) 博多駅東店",
-  "area": "千代",
+  "name": "元祖トマトラーメン三味(333) 天神大名総本店",
+  "area": "大名",
   "genre": "トマトラーメン",
   "lat": 33.603606,
   "lng": 130.419579,
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "座敷・掘りごたつ・個室あり・P無・博多駅筑紫口徒歩5分",
+  "verdict": "福岡市中央区大名1-11-27 イルモンド大名TWO 1F。座敷・掘りごたつ・個室あり。※訪問したのは大名店(博多駅東店は別店舗で24時間営業)",
   "video": {
    "youtube": "https://youtube.com/shorts/Tb8QNMgdJu0",
    "tiktok": "https://www.tiktok.com/@tencone/video/7216964809546403073",
    "instagram": null
   },
   "thumb": null,
-  "city": "福岡市博多区",
+  "city": "福岡市中央区",
   "pref": "福岡県"
  },
  {
@@ -2192,7 +2144,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "国内線ターミナル3F(ラーメン滑走路)・福岡空港駅すぐ",
+  "verdict": "国内線ターミナル3F(ラーメン滑走路)・福岡空港駅すぐ。2024年12月オープン、10:00〜21:00で営業中",
   "video": {
    "youtube": "https://youtube.com/shorts/slProBVWnJU",
    "tiktok": null,

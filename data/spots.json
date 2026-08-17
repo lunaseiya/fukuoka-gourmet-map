@@ -14364,5 +14364,28 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "karatsuseasidehotelhigashi",
+  "name": "唐津シーサイドホテル 東館",
+  "area": "東唐津(虹の松原そば)",
+  "city": "唐津市",
+  "pref": "佐賀県",
+  "genre": "温泉ホテル(プール・サウナ)",
+  "lat": 33.450829,
+  "lng": 129.986938,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "唐津湾が目の前・虹の松原に隣接するリゾートホテル。東館は屋上の天然温泉インフィニティプール、屋内プール、4種のサウナ、岩盤浴を完備で子連れ・スパ目的なら東館一択。プールは大人同伴で子供も利用可、赤ちゃんは水遊び用おむつ+水着でOK。東館の温泉・プールは宿泊者専用(日帰り入浴は西館で大人1,800円・小学生1,300円、9:00〜24:00)。",
+  "bathAge": "水遊び用パンツ・水着着用で乳児も利用可(大人同伴)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen"
  }
 ]

@@ -14301,5 +14301,47 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "nagahamaramenhajimehonten",
+  "name": "長浜ラーメン はじめ 本店",
+  "area": "西新",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "ラーメン(長浜・屋台風)",
+  "lat": 33.583401,
+  "lng": 130.36087,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "西新の屋台風長浜ラーメン店。夜営業中心(18:00〜)、火曜定休。西新駅すぐ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "nagahamaramenhajime2gou",
+  "name": "長浜ラーメン はじめ 2号店",
+  "area": "西新",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "ラーメン(長浜・屋台風)",
+  "lat": 33.582329,
+  "lng": 130.35788,
+  "visited": null,
+  "with": "family",
+  "kids": null,
+  "verdict": "本店近くの2号店。11:30〜23:00の通し営業で使いやすい、火曜定休。ワンタンメン880円など。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

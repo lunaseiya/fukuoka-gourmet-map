@@ -516,6 +516,8 @@ async function loadSpots() {
 }
 
 function isKidsOk(spot) {
+  // 温泉は家族風呂・貸切風呂があれば周りに気を遣わず子連れで入れる(=子連れOK扱い)
+  if (/家族風呂|家族湯|貸切風呂|貸切湯/.test((spot.genre || "") + (spot.verdict || ""))) return true;
   // 行きたい(未訪問)スポットは、ネットで設備の裏が取れたものだけ子連れOK扱いにする
   // (取り込み時に with:"family" を仮置きしているため、withでは判定しない)
   if (spot.wish) {

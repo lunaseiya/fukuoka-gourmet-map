@@ -25,7 +25,9 @@
   "thumb": "sansenkaku-beppu.jpg",
   "city": "別府市",
   "pref": "大分県",
-  "posted": "2026-08-08"
+  "posted": "2026-08-08",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "sharyo-denjama",
@@ -600,7 +602,9 @@
   },
   "thumb": "beppuhachiyuonjukunonobe-10.jpg",
   "city": "別府市",
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "kaabiikafehakata-11",
@@ -762,7 +766,9 @@
   },
   "thumb": null,
   "city": "長崎市",
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "kottonfiiruzu-18",
@@ -986,7 +992,9 @@
   },
   "thumb": null,
   "city": "大阪市",
-  "pref": "大阪府"
+  "pref": "大阪府",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "tonkatsuwakahatenjinhont-28",
@@ -1486,7 +1494,9 @@
   },
   "thumb": null,
   "city": "日出町",
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "hakatanagahamaraamenfuub-48",
@@ -2408,7 +2418,9 @@
   },
   "thumb": null,
   "city": "うきは市",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "onsen",
+  "stay": true
  },
  {
   "id": "taikanmine-87",

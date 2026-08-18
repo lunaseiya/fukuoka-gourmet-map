@@ -15314,8 +15314,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_tenpuku_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_tenpuku.jpg"
+  ]
  },
  {
   "id": "spf29da05cf9",
@@ -15335,8 +15338,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_cantine_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_cantine.jpg"
+  ]
  },
  {
   "id": "sp9a9b3dc298",
@@ -15363,8 +15369,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_ajifuku_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_ajifuku.jpg"
+  ]
  },
  {
   "id": "sp91e1ebaa61",
@@ -15391,8 +15400,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_enya_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_enya.jpg"
+  ]
  },
  {
   "id": "sp9c01ddd9b8",
@@ -15412,8 +15424,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": false
+  "thumb": "kasumi_fukuyoshitei_th.jpg",
+  "wish": false,
+  "photos": [
+   "kasumi_fukuyoshitei.jpg"
+  ]
  },
  {
   "id": "sp96adaeaf2c",
@@ -15433,8 +15448,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_butaya_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_butaya.jpg"
+  ]
  },
  {
   "id": "spd6c8a12375",
@@ -15454,8 +15472,12 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_mashimashi_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_mashimashi.jpg",
+   "kasumi_mashimashi2.jpg"
+  ]
  },
  {
   "id": "spdf18453eaf",
@@ -15475,8 +15497,11 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "kasumi_sumippu_th.jpg",
+  "wish": true,
+  "photos": [
+   "kasumi_sumippu.jpg"
+  ]
  },
  {
   "id": "stayce96bc17c7",

@@ -17358,5 +17358,467 @@
   "thumb": null,
   "wish": true,
   "web": "https://tabelog.com/fukuoka/A4001/A400201/40029813/"
+ },
+ {
+  "id": "sp440baf51cb",
+  "name": "Cafe ノットノット",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.662792,
+  "lng": 130.417313,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "10:00〜18:00。ラクレイス香椎照葉1F。子連れ利用可のカフェとして紹介されている。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spc64aa5d4c0",
+  "name": "御膳屋 照葉店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "食堂・定食",
+  "lat": 33.663704,
+  "lng": 130.416656,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "照葉スパリゾート近隣の食事処。人気ランチ店として紹介されている。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spde36dcb1c3",
+  "name": "じげもんちゃんぽん 福岡アイランドアイ店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ちゃんぽん",
+  "lat": 33.667156,
+  "lng": 130.414764,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "アイランドシティの複合施設「island eye」内のちゃんぽん専門店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp37496008af",
+  "name": "シエナ食堂 アイランドアイ店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "食堂",
+  "lat": 33.667156,
+  "lng": 130.414764,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "island eye内の食堂。みなと香椎エリアの飲食店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp5d59229481",
+  "name": "レストラン 空-KU-(The358 SORA)",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "レストラン",
+  "lat": 33.667156,
+  "lng": 130.414764,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "island eye隣接のホテルThe358 SORA内レストラン。みなと香椎の景色が楽しめる。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spcc54d39039",
+  "name": "焼肉 曺苑 照葉店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "焼肉・ホルモン・もつ鍋",
+  "lat": 33.660507,
+  "lng": 130.421249,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "11:30〜24:00。アトレアモール照葉内。A5黒毛和牛の個室型焼肉で、もつ鍋コース4,950円〜。⭐100席・駐車場200台、掘りごたつ個室多数、子供用椅子ありで子連れ歓迎。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spa378b07ea3",
+  "name": "やきとり さるまわし",
+  "area": "松崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "焼き鳥・居酒屋",
+  "lat": 33.635963,
+  "lng": 130.440033,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "松崎の焼き鳥・居酒屋。地元で利用される個人店。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spc173174361",
+  "name": "国産小麦パン工房 フルフル 松崎本店",
+  "area": "松崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "パン・ベーカリー",
+  "lat": 33.636791,
+  "lng": 130.439514,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "看板メニューは明太フランス。⭐駐車場50台以上と広く、車で行きやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp9a97d2c8a3",
+  "name": "キッチン米一 千早店",
+  "area": "千早",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食・洋食",
+  "lat": 33.644245,
+  "lng": 130.432327,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "千早の洋食系定食店。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp7e612ed698",
+  "name": "定食屋 百菜旬 ガーデンズ千早店",
+  "area": "千早",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食",
+  "lat": 33.650047,
+  "lng": 130.436783,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "商業施設「ガーデンズ千早」内の定食店。買い物ついでに寄れる。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp758403f6c3",
+  "name": "HAMORU CAFE",
+  "area": "千早",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.648296,
+  "lng": 130.439255,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "10:00〜19:00。千早駅構内にある花に囲まれたカフェ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp51cb164f19",
+  "name": "直家(名島)",
+  "area": "名島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "中華",
+  "lat": 33.642094,
+  "lng": 130.428574,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "名島の中華料理店。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp247bda1680",
+  "name": "ハネノネ ピッツア&バール",
+  "area": "名島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "イタリアン・ピザ",
+  "lat": 33.641769,
+  "lng": 130.431885,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "ピッツァとバール料理を提供するイタリアン。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spac6a586946",
+  "name": "居酒屋おぎはら",
+  "area": "名島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "居酒屋",
+  "lat": 33.64135,
+  "lng": 130.432037,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "西鉄貝塚線 名島駅から徒歩4分の居酒屋。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spd431112abe",
+  "name": "minamo(名島)",
+  "area": "名島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.637375,
+  "lng": 130.433228,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "2024年10月オープン。多々良川を一望できる絶景カフェで、自家焙煎コーヒー・ランチ・スイーツを提供。11:00〜18:00、日曜定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp7514847efa",
+  "name": "まるしげ(土井)",
+  "area": "土井",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.632614,
+  "lng": 130.462646,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "土井のラーメン店。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spa9b5b5bd90",
+  "name": "MKレストラン 土井店",
+  "area": "土井",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ファミレス(しゃぶしゃぶ)",
+  "lat": 33.632561,
+  "lng": 130.460831,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "九州地盤のファミリーレストランチェーン。しゃぶしゃぶ食べ放題が中心で、子連れ利用しやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spfceabbd349",
+  "name": "ランプ(多々良)",
+  "area": "多々良",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェレストラン",
+  "lat": 33.632786,
+  "lng": 130.452652,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "落ち着いた雰囲気でランチを提供するカフェレストラン。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp83f19e8ed3",
+  "name": "博多うどん うちだ屋 多々良店",
+  "area": "多々良",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "うどん・定食",
+  "lat": 33.632835,
+  "lng": 130.455582,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "1977年創業の老舗和風レストラン。10:00〜22:30。うどん・そば・丼・定食が揃い、カツとじ鉄板並うどん定食1,280円など。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

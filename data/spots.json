@@ -15992,27 +15992,6 @@
   "wish": true
  },
  {
-  "id": "sp72541f51c7",
-  "name": "珈琲うふふ 和白店",
-  "area": "和白",
-  "city": "福岡市東区",
-  "pref": "福岡県",
-  "genre": "カフェ",
-  "lat": 33.690033,
-  "lng": 130.433548,
-  "visited": null,
-  "with": "solo",
-  "kids": null,
-  "verdict": "11:00〜22:00、年中無休(年末年始除く)。珈琲・パフェ・パンケーキ・ハンバーグを提供する喫茶チェーン。",
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": null,
-  "wish": true
- },
- {
   "id": "sp2196e8480a",
   "name": "二葉鮨 三苫店",
   "area": "三苫",
@@ -16161,7 +16140,7 @@
  },
  {
   "id": "sp9bebf86f55",
-  "name": "弐八丸 和白店",
+  "name": "博多弐八丸 和白店",
   "area": "和白",
   "city": "福岡市東区",
   "pref": "福岡県",
@@ -16171,7 +16150,7 @@
   "visited": null,
   "with": "solo",
   "kids": null,
-  "verdict": "2026年7月23日オープン。豚骨ラーメン280円(税抜)という激安価格が話題。業務スーパー近くで30台以上の共同駐車場あり。",
+  "verdict": "2026年7月23日オープン。豚骨ラーメン280円(税込308円)・餃子154円・ご飯154円と福岡最安級。⭐旧「珈琲うふふ和白店」の跡地。業務スーパー近くで30台以上の共同駐車場あり。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -16319,6 +16298,27 @@
   "with": "solo",
   "kids": null,
   "verdict": "美和台の住宅地にある地域密着型の飲食店。営業時間は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp7b5b29ae08",
+  "name": "泰洋軒(たいよう軒)",
+  "area": "名島",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食・食堂",
+  "lat": 33.642868,
+  "lng": 130.428284,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "11:00〜15:00/17:00〜21:00、日祝定休。看板メニューは山盛りの「とり天定食」800円(からし醤油か天つゆを選べる)。隠れた人気メニューに刺身も。席数・駐車場は要確認。",
   "video": {
    "youtube": null,
    "tiktok": null,

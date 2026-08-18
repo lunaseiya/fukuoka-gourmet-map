@@ -12976,15 +12976,30 @@
   "lng": 130.429855,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": "専門店約120店。",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "イオンとユニクロを核とする大型モール。1F=グルメ&サービス中心、2F=ファッション・キッズ、隣接の「かしいいーなてらす」にはま寿司・パデル福岡・SKECHERS OUTLET・焼肉なべしま・ピザクックなど。⭐子連れ設備が充実: 子供用カート(キャラカート含む)多数・ベビールーム(授乳室)・こども写真館スタジオアリス・トイザらス/ベビーザらス・モーリーファンタジー(ゲーム)・Happiness kids(放課後等デイ)・セイハ英語学院/ダンスアカデミー。飲食はバーガーキング/ケンタッキー/ミスド/スタバ/サイゼリヤ/ドミノ・ピザ/庄屋/ペッパーランチ/リンガーハット/マクドナルド/築地銀だこ/えびすやうどん/博多三氣W/Mr.Kebab/中国大明火鍋城/シュシュクレープ/タリーズ/コナズ珈琲など多数。小児科系は森眼科・のぞみ歯科・治どうぶつ病院も入居。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "aeonmallkashiihama.jpg",
+  "wish": true,
+  "photos": [
+   "aeon_kashiihama_01.jpg",
+   "aeon_kashiihama_02.jpg",
+   "aeon_kashiihama_03.jpg",
+   "aeon_kashiihama_04.jpg",
+   "aeon_kashiihama_05.jpg",
+   "aeon_kashiihama_06.jpg"
+  ]
  },
  {
   "id": "aeonmallfukuokaito",
@@ -15213,5 +15228,34 @@
   "category": "onsen",
   "stay": true,
   "web": "http://www.yoshidaya-web.com/ryokan/"
+ },
+ {
+  "id": "burgerkingkashiihama",
+  "name": "バーガーキング イオンモール香椎浜店",
+  "area": "香椎浜(イオンモール1F)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ハンバーガー",
+  "lat": 33.657367,
+  "lng": 130.430275,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "イオンモール香椎浜1Fのバーガーキング(区画135)。営業10:00〜21:00。看板のワッパーに加え、期間限定「ペッパーガーリック ステーキワッパー」単品1,190円/セット1,490円(ダブル1,590円・チーズ1,290円)。直火焼き100%ビーフパティ+牛バラステーキの二段構成。子供椅子あり・ソファ席広めで子連れでも入りやすい。土日は行列しやすいので平日か時間ずらしが吉。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "in": "aeonmallkashiihama"
  }
 ]

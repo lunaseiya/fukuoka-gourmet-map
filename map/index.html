@@ -720,11 +720,26 @@ function openDetail(spot) {
   const photosHtml = (spot.photos && spot.photos.length) ? `
     <div class="card-photos">${spot.photos.map(p => `<img src="photos/${escapeHtml(p)}" loading="lazy" data-photo="${escapeHtml(p)}" alt="">`).join("")}</div>` : "";
   // この施設内に登録されているスポット(親→子リンク)
-  const children = state.spots.filter(s => s.in === spot.id);
+  // 情報が充実しているもの(動画あり>写真あり>訪問済み>ひとことあり)を上に並べる
+  const childScore = c => {
+    const v = c.video || {};
+    let n = 0;
+    if (v.youtube || v.tiktok || v.instagram) n += 8;
+    if (c.photos && c.photos.length) n += 4;
+    if (!c.wish) n += 2;
+    if (c.verdict) n += 1;
+    return n;
+  };
+  const children = state.spots.filter(s => s.in === spot.id)
+    .sort((a, b) => childScore(b) - childScore(a) || (a.name || "").localeCompare(b.name || "", "ja"));
   const childrenHtml = children.length ? `
     <div class="detail-children">
       <div class="dc-title">この施設内のスポット</div>
-      ${children.map(c => `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`).join("")}
+      ${children.map(c => {
+        const v = c.video || {};
+        const mark = (v.youtube || v.tiktok || v.instagram) ? "🎬" : (c.photos && c.photos.length ? "📷" : "");
+        return `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${mark}${escapeHtml(c.name)}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`;
+      }).join("")}
     </div>` : "";
   // 関連スポット(同チェーンの動画がある店など)
   const relatedSpots = (spot.related || []).map(id => state.spots.find(s => s.id === id)).filter(Boolean);

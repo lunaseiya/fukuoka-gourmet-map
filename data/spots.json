@@ -22065,5 +22065,125 @@
   "web": "https://nikani.com/",
   "stay": true,
   "dayUse": true
+ },
+ {
+  "id": "spac77bd6099",
+  "name": "アミューズメントパーク万代 トリアス久山店",
+  "area": "久山",
+  "city": "糟屋郡久山町",
+  "pref": "福岡県",
+  "genre": "室内遊び場・ゲームセンター",
+  "lat": 33.651806,
+  "lng": 130.486893,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐トリアス久山のウエストモールD棟。クレーンゲーム320台以上の地域最大級で、大型キッズスペースを併設しているので小さい子連れでも過ごせる。10:00〜22:00。トリアスの大駐車場が使えて雨の日の逃げ場に便利。TEL 092-405-2365。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://shop.mandai-s.jp/"
+ },
+ {
+  "id": "spd33c1c75c6",
+  "name": "アミューズメントパーク万代 宗像店",
+  "area": "宗像",
+  "city": "宗像市",
+  "pref": "福岡県",
+  "genre": "室内遊び場・ゲームセンター",
+  "lat": 33.800209,
+  "lng": 130.590515,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐大型クレーンゲーム専門店。10:00〜23:00・年中無休で、0歳〜小学生まで幅広い年齢が対象と案内されている。駐車場あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://shop.mandai-s.jp/"
+ },
+ {
+  "id": "spdb79418865",
+  "name": "ラウンドワンスタジアム 博多・半道橋店",
+  "area": "半道橋",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "室内遊び場・スポッチャ",
+  "lat": 33.584148,
+  "lng": 130.437653,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐スポッチャとギガクレーンゲームスタジアムを併設した大型店で、ボウリング・カラオケ・アミューズメントまで屋内で完結する。福岡県の「子育て応援の店」に登録済み(パスポート提示で特典あり)。月〜木10:00〜翌6:00、金・祝前日10:00〜終日、土は24時間営業。駐車場あり。TEL 092-475-6611。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.round1.co.jp/shop/tenpo/fukuoka-hanmichibashi.html"
+ },
+ {
+  "id": "spa1891e0d5d",
+  "name": "ラウンドワン福岡天神店",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "室内遊び場・ボウリング",
+  "lat": 33.589104,
+  "lng": 130.397034,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "天神中心部のラウンドワン。ボウリング・カラオケ・アミューズメントが揃う屋内施設(スポッチャは半道橋店のみ)。街なかのため専用駐車場はなく近隣パーキング利用。TEL 092-720-8101。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.round1.co.jp/shop/tenpo/fukuoka-tenzin.html"
  }
 ]

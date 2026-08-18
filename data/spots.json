@@ -15257,5 +15257,40 @@
   "thumb": null,
   "wish": false,
   "in": "aeonmallkashiihama"
+ },
+ {
+  "id": "cotecoya",
+  "name": "極生プリン専門店 COTECOya(コテコヤ)",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "スイーツ(プリン専門)",
+  "lat": 33.670483,
+  "lng": 130.440353,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "極生プリンの専門店。カップのプリンはSweet380円/Bitter380円/チョコレート400円/抹茶420円、クレームブリュレ390円、チョコバナナ400円、プリンシェイク600円。TOP PICKSはプリンパンケーキ580円とブリュレケーキ390円。ホットプリン(プレーン・抹茶・チョコレート)全種類580円、夏はシャリシャリのミルク氷プリン600円〜。10:00〜19:00(売り切れ次第終了)、定休は月曜+第2・第4日曜。九産大前駅から徒歩7分。⚠駐車場は店前1台(パークメイト40番)のみ。近隣コインパーキング利用ならプリン3個以上の購入で100円引き。TEL 070-9020-2165、期間限定メニューはInstagramで告知。",
+  "photos": [
+   "cotecoya_01.jpg",
+   "cotecoya_02.jpg",
+   "cotecoya_03.jpg",
+   "cotecoya_04.jpg",
+   "cotecoya_05.jpg"
+  ],
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "cotecoya.jpg",
+  "wish": false
  }
 ]

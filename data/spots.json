@@ -15414,5 +15414,68 @@
   },
   "thumb": null,
   "wish": false
+ },
+ {
+  "id": "sp96adaeaf2c",
+  "name": "豚屋食堂 九産大前店",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食・とんかつ",
+  "lat": 33.668983,
+  "lng": 130.443192,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "11:00〜15:00/17:30〜22:30、不定休(米がなくなり次第終了)。厚切り・鉄板仕上げが売りで、豚しょうが焼き・ぶた天丼・チキン南蛮・とんかつ・かつ丼・とんテキなど。平日限定のタイムサービス定食は550〜890円と安い。テイクアウト可。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spd6c8a12375",
+  "name": "マシマシらーめん物語 九産大前店",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン(二郎系)",
+  "lat": 33.668827,
+  "lng": 130.443085,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "月火木金土11:00〜20:00(LO19:30)、日11:00〜16:00(LO15:30)、水曜定休。二郎系のマシマシらーめんと肉脂丼DXが看板。席数12席とコンパクト。⚠2階が入口。駐車場なし(近隣コインパーキング)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spdf18453eaf",
+  "name": "炭火居酒屋 炭っぷ",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "居酒屋・炭火焼",
+  "lat": 33.668827,
+  "lng": 130.443085,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "火〜日・祝前日18:00〜23:30、月曜定休。TEL 092-673-3636。看板に「ご家族連れ大丈夫」の記載あり、学生向け飲み放題1,750円〜・コース3,000円など。席数21席。⚠2階が入口。駐車場なし(近隣コインパーキング)。Instagram(@sumippu)から予約可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

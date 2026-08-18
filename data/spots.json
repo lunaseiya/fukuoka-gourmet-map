@@ -22214,5 +22214,59 @@
   "thumb": null,
   "wish": true,
   "web": "https://aokaze2019.com/access"
+ },
+ {
+  "id": "spfc736bcead",
+  "name": "阿蘇内牧温泉 湯巡追荘(ゆめおいそう)",
+  "area": "阿蘇内牧温泉",
+  "city": "阿蘇市",
+  "pref": "熊本県",
+  "genre": "温泉旅館・貸切家族風呂",
+  "lat": 32.970173,
+  "lng": 131.036224,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "⭐宿泊者は15室の貸切家族風呂を時間制限なし・予約不要・無料で何度でも使える(空いていれば札を替えて入るだけ)。陶器風呂・ヒノキ風呂・石風呂など湯船の種類が違うので子連れの湯めぐりに向く。泉質は天然温泉100%かけ流しで、大浴場・露天・足湯も完備。⭐食事は国産霜降り牛や天草直送の刺身が並ぶ最大120分の食べ放題バイキングで、アルコール込み飲み放題のオールインクルーシブ。毎晩20時からビンゴ大会や縁日ゲームがあり、カラオケ・卓球も無料なので子どもが飽きにくい。露天風呂付き客室あり。宿泊は2名20,900円〜。日帰りの貸切家族風呂利用も可(公式に日帰りページあり・料金は要確認)。熊本ICから車50分、阿蘇駅から車15分。送迎なし。TEL 0967-32-0622。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://yumeoisou.com/",
+  "stay": true,
+  "dayUse": true
+ },
+ {
+  "id": "spa1c2b258ba",
+  "name": "博多豚骨ラーメン 三八(さんぱち)",
+  "area": "古賀",
+  "city": "古賀市",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.737171,
+  "lng": 130.466187,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026年5月18日オープンの博多豚骨ラーメン店。ルミエール古賀店の向かい、古賀駅西口から徒歩8〜10分。⭐19席のうち掘りごたつ席が2卓あるので子連れでも座りやすい(他はカウンター7席・テーブル1卓)。⭐駐車場が約20台と広い。営業は11:30〜15:00、夜は18:00〜21:00(開店当初は昼のみだったため夜営業は要確認)。定休は水曜(食べログ・ラーメンDBは水・土とする情報もあり)。スープがなくなり次第閉店、臨時休業は公式Instagramで告知。焼きめしとのセットが人気。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://tabelog.com/fukuoka/"
  }
 ]

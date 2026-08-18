@@ -15295,5 +15295,124 @@
   },
   "thumb": "cotecoya.jpg",
   "wish": false
+ },
+ {
+  "id": "spe60117ed54",
+  "name": "本格中華料理 天福",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "中華料理",
+  "lat": 33.668736,
+  "lng": 130.4431,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "月〜土11:00〜14:30/17:30〜22:00、日曜定休。九産大前駅から徒歩6分。日替りランチ690円〜、ホルモン炒め定食800円。四川風から東北料理まで幅広く、羊肉料理・手作り涼皮が人気。駐車場あり、個室なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spf29da05cf9",
+  "name": "仏蘭西食堂 カンティーヌ(Cantine)",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "フレンチ・ビストロ",
+  "lat": 33.668568,
+  "lng": 130.443115,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "ランチ11:30〜14:00/ディナー18:00〜21:00頃、不定休。九産大前駅から徒歩7分。ランチコース1,500円〜(前菜・スープ・主菜・デザート・パン)。4人掛け×2+2人掛け×2の小規模店で全席禁煙。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp9a9b3dc298",
+  "name": "味福(あじふく)",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "焼き鳥・居酒屋",
+  "lat": 33.668381,
+  "lng": 130.443146,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "17:30〜24:00(L.O.23:30)、水曜定休。九産大前駅から徒歩7分。もも99円・つくね132円・手羽先165円と安い。⭐座敷30席+カウンター10席で「ご家族連れ大歓迎」の看板あり、子供料金設定あり。から揚げの持ち帰り可。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp91e1ebaa61",
+  "name": "○屋(えんや)",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "居酒屋・焼き鳥",
+  "lat": 33.669056,
+  "lng": 130.443237,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "17:30〜24:00、不定休。九産大前駅から徒歩3分。座席50席、最大55名の宴会対応で個室あり(8〜20名)・貸切可。和牛もつ鍋と鶏炭火焼が名物、コース3,500円〜。子供連れ・ベビーカー可。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp9c01ddd9b8",
+  "name": "博多屋台 麺屋 福芳亭 本店",
+  "area": "香住ヶ丘",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン・中華",
+  "lat": 33.669628,
+  "lng": 130.442856,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "豚骨ラーメン500円・唐揚セット450円と安い。営業は平日11:30〜15:00/17:00〜深夜、土11:30〜深夜、日祝11:30〜22時、月曜は昼のみ(情報により差があるため要確認)。九産大前駅から徒歩6分。カウンター席中心、駐車場あり、子供可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false
  }
 ]

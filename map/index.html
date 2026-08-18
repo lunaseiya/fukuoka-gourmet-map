@@ -342,25 +342,6 @@
   .area-item { display: flex; align-items: center; gap: 8px; padding: 7px 2px; font-size: 14px; border-bottom: 1px solid var(--bg); }
   .area-item input { width: 18px; height: 18px; }
   .area-item .cnt { color: var(--muted); font-size: 12px; margin-left: auto; }
-  .memo-form label { display: block; font-size: 12px; color: var(--muted); margin: 10px 0 3px; }
-  .memo-form input[type=text], .memo-form input[type=date], .memo-form textarea, .memo-form select {
-    width: 100%; font: inherit; font-size: 14px; padding: 8px 10px;
-    border: 1px solid var(--border); border-radius: 8px; background: #fff;
-  }
-  .memo-form textarea { resize: vertical; }
-  .memo-kids { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 4px; }
-  .memo-kids label { display: flex; align-items: center; gap: 4px; font-size: 13px; color: var(--text); margin: 0; }
-  .memo-hint { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin-top: 6px; }
-  .pick-banner {
-    position: fixed; top: 0; left: 0; right: 0; z-index: 50;
-    background: #2d3436; color: #fff; text-align: center;
-    padding: 10px; font-size: 13px; display: none;
-  }
-  .pick-banner.open { display: block; }
-  .b-memo {
-    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
-    background: #f3e8ff; color: #7b2ff2; border-radius: 999px; padding: 2px 9px;
-  }
   .b-prep {
     display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
     background: #f0f0f0; color: #666; border-radius: 999px; padding: 2px 9px;
@@ -413,8 +394,6 @@
   }
   .lightbox.open { display: flex; }
   .lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; }
-  .memo-list-item { display: flex; justify-content: space-between; align-items: center; gap: 8px; padding: 6px 0; font-size: 13px; border-bottom: 1px solid var(--bg); }
-  .memo-list-item button { font-size: 11px; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 3px 10px; cursor: pointer; }
   .map-foot {
     display: flex;
     justify-content: space-between;
@@ -465,7 +444,6 @@
     <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
     <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
-    <button class="filter-btn" id="memoBtn">＋メモ登録</button>
   </div>
 </header>
 
@@ -491,7 +469,6 @@
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
 
 
-<div class="pick-banner" id="pickBanner">地図をタップして位置を指定してください(タップでピンが立ちます)</div>
 
 <div class="sheet-back" id="areaBack">
   <div class="sheet" id="areaSheet">
@@ -506,51 +483,6 @@
   </div>
 </div>
 
-<div class="sheet-back" id="memoBack">
-  <div class="sheet memo-form" id="memoSheet">
-    <div class="sheet-head">
-      <h2>来店メモを登録</h2>
-      <div class="sheet-actions">
-        <button id="memoClose">閉じる</button>
-        <button class="primary" id="memoSave">保存</button>
-      </div>
-    </div>
-    <label>店名 *</label>
-    <input type="text" id="mName" placeholder="例: ○○食堂 香椎店">
-    <label>ジャンル</label>
-    <input type="text" id="mGenre" placeholder="例: ラーメン / 定食 / カフェ">
-    <label>市区(エリア)</label>
-    <input type="text" id="mCity" placeholder="例: 福岡市東区">
-    <label>位置</label>
-    <div class="sheet-actions" style="margin:2px 0 4px">
-      <button id="mPick">📍 地図をタップして指定</button>
-      <span id="mLatLng" style="font-size:12px;color:var(--muted);align-self:center">未指定</span>
-    </div>
-    <label>訪問日</label>
-    <input type="date" id="mDate">
-    <label>カテゴリ</label>
-    <select id="mCat"><option value="">グルメ・おでかけ</option><option value="onsen">日帰り温泉</option><option value="play">遊び場</option></select>
-    <label>子連れ情報</label>
-    <div class="memo-kids">
-      <label><input type="checkbox" id="mChair">子供椅子</label>
-      <label><input type="checkbox" id="mTatami">座敷</label>
-      <label><input type="checkbox" id="mDiaper">オムツ替え</label>
-      <label><input type="checkbox" id="mStroller">ベビーカー可</label>
-    </div>
-    <div class="memo-kids" id="mExtras" style="margin-top:6px"></div>
-    <label>ひとことメモ(席・駐車場・提供speed等)</label>
-    <textarea id="mVerdict" rows="3" placeholder="例: 座敷あり・P10台・提供10分。子連れでも安心"></textarea>
-
-    <div id="memoListWrap" style="margin-top:16px">
-      <div class="sheet-head"><h2>この端末のメモ(<span id="memoCount">0</span>件)</h2>
-        <div class="sheet-actions"><button id="memoCopy">本登録用にコピー</button></div>
-      </div>
-      <div class="memo-hint">メモはこの端末のブラウザに保存され、地図に紫バッジ付きで表示されます。「本登録用にコピー」した内容をClaudeに貼ると、全端末で見られる正式データに登録されます。</div>
-      <div id="memoList"></div>
-    </div>
-  </div>
-</div>
-
 <script>
 const DATA_URL = "../data/spots.json";
 
@@ -561,22 +493,8 @@ const state = {
   areas: new Set(),
   areasDraft: new Set(),
   markers: [],
-  selectedId: null,
-  picking: false,
-  pickMarker: null,
-  pickPos: null
+  selectedId: null
 };
-
-const MEMO_KEY = "aq_memo_spots";
-const PASS_KEY = "aq_memo_unlocked";
-function loadMemos() {
-  try { return JSON.parse(localStorage.getItem(MEMO_KEY) || "[]"); } catch (e) { return []; }
-}
-function saveMemos(list) { localStorage.setItem(MEMO_KEY, JSON.stringify(list)); }
-function mergedSpots(base) {
-  const ids = new Set(base.map(s => s.id));
-  return base.concat(loadMemos().filter(m => !ids.has(m.id)));
-}
 
 // 投稿から1週間は NEW 扱い
 function isNew(spot) {
@@ -590,10 +508,10 @@ async function loadSpots() {
     const res = await fetch(DATA_URL);
     if (!res.ok) throw new Error("fetch failed: " + res.status);
     const json = await res.json();
-    return mergedSpots(Array.isArray(json) ? json : []);
+    return Array.isArray(json) ? json : [];
   } catch (e) {
     console.error("spots.json の読み込みに失敗しました", e);
-    return mergedSpots([]);
+    return [];
   }
 }
 
@@ -723,7 +641,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.memo ? `<span class="b-memo">メモ</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spot.category === "onsen" && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spot.category === "onsen" && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spot.category === "onsen" && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spot.category === "onsen" && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -1026,7 +944,6 @@ function initMap(spots) {
     try { geolocate.trigger(); } catch (e) {}
   });
   map.on("click", (e) => {
-    if (state.picking) { onMapPick(e.lngLat); return; }
     // 地図の空きエリアタップで詳細カードを閉じる
     if (state.selectedId !== null) closeDetail();
   });
@@ -1050,134 +967,6 @@ document.getElementById("areaApply").addEventListener("click", () => {
   document.getElementById("areaBack").classList.remove("open");
   updateAreaBtn();
   renderAll();
-});
-
-// ===== メモ登録 =====
-const MEMO_PASS = "0319";
-function memoUnlocked() { return sessionStorage.getItem(PASS_KEY) === "1"; }
-document.getElementById("memoBtn").addEventListener("click", () => {
-  if (!memoUnlocked()) {
-    const p = prompt("管理パスワードを入力してください");
-    if (p !== MEMO_PASS) { if (p !== null) alert("パスワードが違います"); return; }
-    sessionStorage.setItem(PASS_KEY, "1");
-  }
-  openMemoSheet();
-});
-// カテゴリごとの追加チェック項目(チェックするとメモ文に自動反映)
-const MEMO_EXTRAS = {
-  "": ["お子様メニューあり", "離乳食持ち込みOK", "取り皿あり", "オムツ替えは女性用トイレのみ"],
-  "play": ["授乳室あり", "飲食持ち込みOK", "おもちゃ貸出あり", "0歳から遊べる"],
-  "onsen": ["オムツ児OK", "オムツ児は不可", "家族風呂あり", "ベビーバスあり"]
-};
-function renderMemoExtras() {
-  const cat = document.getElementById("mCat").value;
-  const box = document.getElementById("mExtras");
-  box.innerHTML = (MEMO_EXTRAS[cat] || []).map(label =>
-    `<label><input type="checkbox" data-extra="${label}">${label}</label>`
-  ).join("");
-}
-document.getElementById("mCat").addEventListener("change", renderMemoExtras);
-
-function openMemoSheet() {
-  document.getElementById("mDate").value = new Date().toISOString().slice(0, 10);
-  renderMemoExtras();
-  renderMemoList();
-  document.getElementById("memoBack").classList.add("open");
-}
-document.getElementById("memoClose").addEventListener("click", () => {
-  document.getElementById("memoBack").classList.remove("open");
-});
-document.getElementById("memoBack").addEventListener("click", (e) => {
-  if (e.target.id === "memoBack") document.getElementById("memoBack").classList.remove("open");
-});
-
-// 位置指定モード
-document.getElementById("mPick").addEventListener("click", () => {
-  state.picking = true;
-  document.getElementById("memoBack").classList.remove("open");
-  document.getElementById("pickBanner").classList.add("open");
-});
-function onMapPick(lngLat) {
-  state.pickPos = { lat: +lngLat.lat.toFixed(6), lng: +lngLat.lng.toFixed(6) };
-  if (state.pickMarker) state.pickMarker.remove();
-  const el = document.createElement("div");
-  el.style.cssText = "width:22px;height:22px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:#7b2ff2;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,.4)";
-  state.pickMarker = new maplibregl.Marker({ element: el }).setLngLat([state.pickPos.lng, state.pickPos.lat]).addTo(window._map);
-  state.picking = false;
-  document.getElementById("pickBanner").classList.remove("open");
-  document.getElementById("mLatLng").textContent = `${state.pickPos.lat}, ${state.pickPos.lng}`;
-  document.getElementById("memoBack").classList.add("open");
-}
-
-function slugify(name) {
-  return "memo-" + Date.now().toString(36);
-}
-document.getElementById("memoSave").addEventListener("click", () => {
-  const name = document.getElementById("mName").value.trim();
-  if (!name) { alert("店名を入力してください"); return; }
-  const kids = {
-    stroller: document.getElementById("mStroller").checked || null,
-    diaper: document.getElementById("mDiaper").checked || null,
-    tatami: document.getElementById("mTatami").checked || null,
-    kidsChair: document.getElementById("mChair").checked || null,
-    serveMin: null, noise: null
-  };
-  // チェックした追加項目をメモ文の先頭に自動合成
-  const extras = Array.from(document.querySelectorAll("#mExtras input:checked")).map(cb => cb.dataset.extra);
-  const verdictText = [extras.join("・"), document.getElementById("mVerdict").value.trim()].filter(Boolean).join("。");
-  const entry = {
-    id: slugify(name), name: name, memo: true,
-    area: null, city: document.getElementById("mCity").value.trim() || null, pref: null,
-    genre: document.getElementById("mGenre").value.trim() || null,
-    lat: state.pickPos ? state.pickPos.lat : null,
-    lng: state.pickPos ? state.pickPos.lng : null,
-    visited: document.getElementById("mDate").value || null,
-    with: "family", kids: kids,
-    verdict: verdictText || null,
-    video: { youtube: null, tiktok: null, instagram: null },
-    thumb: null
-  };
-  const cat = document.getElementById("mCat").value;
-  if (cat) entry.category = cat;
-  const memos = loadMemos();
-  memos.push(entry);
-  saveMemos(memos);
-  // フォームリセット
-  ["mName", "mGenre", "mCity", "mVerdict"].forEach(i => document.getElementById(i).value = "");
-  ["mChair", "mTatami", "mDiaper", "mStroller"].forEach(i => document.getElementById(i).checked = false);
-  renderMemoExtras();
-  if (state.pickMarker) { state.pickMarker.remove(); state.pickMarker = null; }
-  state.pickPos = null;
-  document.getElementById("mLatLng").textContent = "未指定";
-  state.spots = mergedSpots(state.spots.filter(s => !s.memo));
-  renderMemoList();
-  renderAll();
-  alert("メモを保存しました(この端末のみ)。正式登録は「本登録用にコピー」でClaudeへ");
-});
-
-function renderMemoList() {
-  const memos = loadMemos();
-  document.getElementById("memoCount").textContent = memos.length;
-  document.getElementById("memoList").innerHTML = memos.map(m => `
-    <div class="memo-list-item"><span>${escapeHtml(m.name)}${m.lat ? "" : "(位置未指定)"}</span>
-    <button data-del="${m.id}">削除</button></div>`).join("") || `<div class="memo-hint">まだメモはありません</div>`;
-  document.querySelectorAll("#memoList [data-del]").forEach(b => {
-    b.addEventListener("click", () => {
-      saveMemos(loadMemos().filter(m => m.id !== b.dataset.del));
-      state.spots = mergedSpots(state.spots.filter(s => !s.memo));
-      renderMemoList(); renderAll();
-    });
-  });
-}
-document.getElementById("memoCopy").addEventListener("click", () => {
-  const memos = loadMemos();
-  if (!memos.length) { alert("メモがありません"); return; }
-  const text = "【来店メモの本登録依頼】\n" + JSON.stringify(memos, null, 1);
-  if (navigator.clipboard && window.isSecureContext) {
-    navigator.clipboard.writeText(text).then(() => alert("コピーしました。Claudeのチャットに貼ってください"));
-  } else {
-    prompt("以下を全選択してコピーしてください", text);
-  }
 });
 
 document.querySelectorAll(".cat-btn").forEach(btn => {

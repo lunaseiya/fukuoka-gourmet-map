@@ -16326,5 +16326,481 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "spc4bd06a47d",
+  "name": "ざいとん 香椎本店",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.660831,
+  "lng": 130.441528,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "火〜金11:30〜15:00/18:00〜21:00、土祝11:30〜15:00、日月定休。中華そば850円が名物。カウンター8席のみ、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spfb9460a9cf",
+  "name": "東京油組総本店 香椎組",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "油そば・まぜそば",
+  "lat": 33.659542,
+  "lng": 130.442795,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "11:00〜23:00(麺がなくなり次第終了)、年中無休。油そばW盛880円。香椎駅から徒歩1分、小学生可。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp21f7f319c5",
+  "name": "辛麺屋 道 香椎店",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "辛麺・ラーメン",
+  "lat": 33.655155,
+  "lng": 130.442703,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "18:00〜翌1:00、年中無休。辛麺968円・唐揚げ660円。20席(カウンター/テーブル)、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spf91d90c082",
+  "name": "博多発祥とり皮・もつ鍋 博多良品",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "居酒屋・もつ鍋",
+  "lat": 33.661324,
+  "lng": 130.440063,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "18:00〜22:00、不定休。名物はねじねじとり皮、もつ鍋コース5,460円〜。30席、駐車場なし(近隣コインパーキング)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp3a6ea19bdb",
+  "name": "焼肉 龍 香椎",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "焼肉・ホルモン",
+  "lat": 33.659554,
+  "lng": 130.441605,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "17:00〜23:00(LO22:30)、水曜定休(祝日は営業)。極上セット2,280円、コース3,500円〜。50席、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spdad9bef7f8",
+  "name": "食堂 海トごはん",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食・食堂",
+  "lat": 33.658951,
+  "lng": 130.443222,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "昼11:00〜16:00/夜18:00〜22:00、年末年始休。あじフライ定食650円が名物。19席、駐車場なし(近隣コインパーキング)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp54928039e6",
+  "name": "ごはんや 香椎",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "定食・カレー",
+  "lat": 33.658321,
+  "lng": 130.44368,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "11:00〜22:00、年中無休。カレー・親子丼が中心、ニラレバ炒め540円。16席。1,000円以上の利用で駅共同駐車場が1時間無料。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp5deba786e0",
+  "name": "L'atelier NOSTALGIE(ラトリエ ノスタルジー)",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ・洋菓子",
+  "lat": 33.658085,
+  "lng": 130.444809,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "火〜木11:30〜23:00、金土11:30〜翌1:00、日11:30〜22:00、月曜定休。桃パフェ1,500円が名物。20席、駐車場あり。JR香椎駅から徒歩1分。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spa6741b99bf",
+  "name": "ウドン ディーラー",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.659554,
+  "lng": 130.441605,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "水〜日12:00〜14:00/18:00〜24:00、月火定休。かき揚げうどん980円が名物。28席、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spf33fca0704",
+  "name": "うどんのモリス",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "うどん",
+  "lat": 33.661003,
+  "lng": 130.441269,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "西鉄香椎駅から徒歩約3分の地元うどん店。営業時間・価格は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp579c822999",
+  "name": "osteria d'Italia OLIVE",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "イタリアン",
+  "lat": 33.658897,
+  "lng": 130.442169,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "火〜日11:00〜22:00(LO21:00)、ランチ11:00〜14:30、月曜定休(月2回追加休あり)。⭐子連れ歓迎の家庭的な雰囲気。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spc296e5da5a",
+  "name": "美松コーヒー 本店",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.660355,
+  "lng": 130.443481,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "火〜日10:00〜22:00、月曜定休。バスク風チーズケーキ・タコライス・クラフトビール4種。20席、駐車場なし。JR香椎駅から徒歩1分。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp2c244405b7",
+  "name": "花佳(香椎)",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ・パンケーキ",
+  "lat": 33.659401,
+  "lng": 130.442825,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "7:00〜22:00、年中無休。パンケーキ・タピオカが人気。香椎駅から徒歩1分、電話予約可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp41dfde9097",
+  "name": "GM cafe",
+  "area": "舞松原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.643185,
+  "lng": 130.446472,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月火木〜日7:00〜18:00、水9:00〜16:00(料理LO17:30)。パンケーキと自家焙煎珈琲が名物。14席、駐車場8台。⭐子供可・テラス席はペット可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp330f619971",
+  "name": "Happily(ハッピリー)",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ・スイーツ",
+  "lat": 33.669453,
+  "lng": 130.419693,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "火〜土10:00〜15:00/19:00〜22:00、日10:00〜15:00、月曜定休。25席、駐車場1台。⭐キッズスペース・ベビーベッドありで子連れ歓迎。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp263b0561b4",
+  "name": "湘南パンケーキ 福岡アイランドアイ店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "パンケーキカフェ",
+  "lat": 33.667156,
+  "lng": 130.414764,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "10:00〜20:00(LO19:00)。白桃のピーチメルバパンケーキ1,848円が名物。福岡アイランドアイ1F、施設内駐車場あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp40ca4a4cd2",
+  "name": "PARK72 ネコCAFE",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "猫カフェ",
+  "lat": 33.660507,
+  "lng": 130.421249,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "香椎照葉の猫カフェ。オリジナルドリンクあり。営業時間・料金は要問合せ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp28214761db",
+  "name": "サイゼリヤ 香椎フェスティバルガーデン店",
+  "area": "香椎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ファミレス・イタリアン",
+  "lat": 33.653721,
+  "lng": 130.435532,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "パスタ・ドリア等がリーズナブルなイタリアン系ファミレス。子連れ利用しやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp8f2eefc547",
+  "name": "花もも 唐原",
+  "area": "唐の原",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "日本料理",
+  "lat": 33.676613,
+  "lng": 130.436523,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "月〜木11:30〜14:30、金土11:30〜14:30/17:30〜20:30、日曜定休。花セット1,080円が名物。42席、駐車場あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "spd5604f4c18",
+  "name": "くいもの屋わん 香椎駅前店",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "居酒屋・海鮮",
+  "lat": 33.659153,
+  "lng": 130.442734,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "17:00〜24:00(LO23:30)。青唐辛子明太子などが名物、個室完備(2〜60名)。136席、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
+ },
+ {
+  "id": "sp8364200df3",
+  "name": "窯焼き×ワイン食堂 バッカナーレ",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "イタリアン・ピザ",
+  "lat": 33.660809,
+  "lng": 130.440491,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "月木11:45〜14:00/17:00〜23:00ほか、火曜定休(ランチは火水休)。石窯ナポリピッツァが名物、コース4,500円〜。28席、駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

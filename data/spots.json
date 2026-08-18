@@ -22185,5 +22185,34 @@
   "wish": true,
   "category": "play",
   "web": "https://www.round1.co.jp/shop/tenpo/fukuoka-tenzin.html"
+ },
+ {
+  "id": "spf03aa8a008",
+  "name": "中華キッチン 蒼風(あおかぜ)",
+  "area": "有田",
+  "city": "西松浦郡有田町",
+  "pref": "佐賀県",
+  "genre": "中華料理",
+  "lat": 33.221573,
+  "lng": 129.848358,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐席が広く座敷ありなので子連れでも入りやすい。ランチ11:30〜14:00(L.O.13:30)、ディナー18:00〜21:30(L.O.20:30・最終入店20:00)。火曜定休、月曜は昼のみ営業。駐車場8〜10台。松浦鉄道大木駅から徒歩6分。予算はランチ1,000円前後。オードブルのテイクアウトもあり。TEL 0955-25-9995。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://aokaze2019.com/access"
  }
 ]

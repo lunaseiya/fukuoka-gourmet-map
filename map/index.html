@@ -282,6 +282,13 @@
     border-color: #bf0000 !important;
   }
   .aff-rakuten::before { content: "🏨 "; }
+  /* 食べログの店舗ページへ */
+  .tabelog-btn {
+    background: #e8730c !important;
+    color: #fff !important;
+    border-color: #e8730c !important;
+  }
+  .tabelog-btn::before { content: "🍽 "; }
   .pr-badge {
     font-size: 10px;
     color: var(--muted);
@@ -593,6 +600,10 @@ function videoLinksHtml(spot, cls) {
   if (video && video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
   if (video && video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
   items.push(`<a class="web-btn" href="${webUrl(spot)}" target="_blank" rel="noopener">🌐 詳細</a>`);
+  // 食べログは「詳細」とは別ボタンにする(詳細=公式サイト/地図、食べログ=口コミ・予約)
+  if (spot.tabelog) {
+    items.push(`<a class="tabelog-btn" href="${spot.tabelog}" target="_blank" rel="noopener">食べログ</a>`);
+  }
   if (isStaySpot(spot)) {
     items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);
   }

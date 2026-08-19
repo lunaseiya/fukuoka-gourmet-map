@@ -22436,5 +22436,62 @@
   "web": "https://www.hotel-grantia.co.jp/wakamiya/",
   "stay": true,
   "dayUse": true
+ },
+ {
+  "id": "sp5dff008b62",
+  "name": "メルキュール福岡宗像リゾート&スパ",
+  "area": "宗像",
+  "city": "宗像市",
+  "pref": "福岡県",
+  "genre": "リゾートホテル・日帰り温泉",
+  "lat": 33.862583,
+  "lng": 130.524399,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐キッズプールがあり子連れに人気のリゾートホテル(旧ロイヤルホテル宗像)。さつき松原に隣接し、松原と大海原の景色が見渡せる。⭐日帰り入浴も可能で15:00〜22:00(最終受付21:00)、平日は大人1,500円・小学生750円・幼児450円、土日祝は大人2,000円・小学生1,000円・幼児600円。公式サイトに「お子様連れのお客様へ」のページがあり子連れ対応の案内が手厚い。福岡市内から車で約60分、JR東郷駅から予約制の送迎バスあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://mercure-fukuokamunakata-resortandspa.jp/",
+  "stay": true,
+  "dayUse": true
+ },
+ {
+  "id": "spf49cc4fda1",
+  "name": "亀の井ホテル 玄界灘",
+  "area": "若松",
+  "city": "北九州市若松区",
+  "pref": "福岡県",
+  "genre": "温泉ホテル・日帰り温泉",
+  "lat": 33.935005,
+  "lng": 130.682831,
+  "visited": null,
+  "with": "solo",
+  "kids": null,
+  "verdict": "旧かんぽの宿北九州。オールインクルーシブの温泉ホテルで、宿泊は1泊2食11,680円〜(チェックイン15時/アウト10時)。日帰り入浴は11:30〜14:30(受付終了13:30)、850円(12歳以上)・450円(6歳以上12歳未満)。⚠火曜・水曜が定休。⚠2026年4月に営業時間と料金の変更があり、情報源によって650円/350円・15:00までとの記載も残るため事前確認を推奨。TEL 093-741-1335。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://kamenoi-hotels.com/genkainada/",
+  "stay": true,
+  "dayUse": true
  }
 ]

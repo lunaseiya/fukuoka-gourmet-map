@@ -460,7 +460,7 @@
 <div id="list"></div>
 
 <footer style="text-align:center; padding:8px 16px 28px; font-size:10.5px; color:var(--muted); line-height:1.8;">
-  ※当サイトはアフィリエイト広告を利用する場合があります<br>
+  ※当サイトはアフィリエイト広告を利用しています<br>
   <a href="../about.html" style="color:var(--muted);">運営者情報</a> ・ <a href="../privacy.html" style="color:var(--muted);">プライバシーポリシー</a>
 </footer>
 
@@ -569,8 +569,11 @@ function applyFilters(spots) {
 
 // 楽天トラベル(A8)アフィリエイトリンク。宿泊・温泉系のカードに表示
 const AFF_RAKUTEN_TRAVEL = "https://rpx.a8.net/svt/ejp?a8mat=4BA7X5+1FSQEQ+2HOM+6L1YA&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eb4779e.5d30c5ba.0eb4779f.b871e4e3%2Fa26081745747_4BA7X5_1FSQEQ_2HOM_6L1YA%3Fpc%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F";
+// 楽天トラベルは宿泊予約サイトなので、実際に泊まれる施設にだけボタンを出す。
+// (日帰り専用のスーパー銭湯・家族湯に宿泊予約リンクを出すのは紹介になっておらず、
+//  楽天アフィリエイト規約の「紹介目的以外の掲載」に触れるため)
 function isStaySpot(spot) {
-  return spot.category === "onsen" || /宿|ホテル|旅館|リゾート/.test(spot.genre || "");
+  return canStay(spot);
 }
 
 function webUrl(spot) {

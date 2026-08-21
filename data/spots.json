@@ -18710,7 +18710,8 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40023796/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40023796/",
+  "reserve": "https://www.kurasushi.co.jp/first_kura/"
  },
  {
   "id": "sp9c74a05810",
@@ -18739,7 +18740,8 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40028623/"
+  "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40028623/",
+  "reserve": "https://www.kurasushi.co.jp/first_kura/"
  },
  {
   "id": "sp20ca48cc55",
@@ -19816,7 +19818,8 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40037403/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40037403/",
+  "reserve": "https://www.kurasushi.co.jp/first_kura/"
  },
  {
   "id": "sp42edfc73d1",
@@ -20522,7 +20525,8 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40020426/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40020426/",
+  "reserve": "https://www.kurasushi.co.jp/first_kura/"
  },
  {
   "id": "sp63d6aa52f2",
@@ -20940,7 +20944,8 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40049584/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40049584/",
+  "reserve": "https://www.kurasushi.co.jp/first_kura/"
  },
  {
   "id": "spcf1f70e359",
@@ -23467,7 +23472,8 @@
    "fukuokaairport_02.jpg",
    "fukuokaairport_03.jpg",
    "fukuokaairport_04.jpg",
-   "fukuokaairport_05.jpg"
+   "fukuokaairport_05.jpg",
+   "fukuokaairport_06.jpg"
   ]
  },
  {
@@ -23542,12 +23548,12 @@
   "kids": {
    "stroller": true,
    "diaper": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "tatami": null,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。ラーメン滑走路。券売機式。",
+  "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。⭐カウンターに子供用ハイチェアあり。ラーメン滑走路。券売機式。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -23774,12 +23780,12 @@
   "kids": {
    "stroller": true,
    "diaper": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "tatami": null,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。おでんと一口餃子の博多食堂。ショーケースに定食サンプルが並ぶので選びやすい。",
+  "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。⭐子供用椅子あり。おでんと一口餃子の博多食堂。ショーケースに定食サンプルが並ぶので選びやすい。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -24215,6 +24221,35 @@
    "noise": null
   },
   "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。⭐福岡空港3Fのフードコート。⭐飛行機の壁画が描かれた小上がり(座敷)の一角があり、靴を脱いで座れるので0〜2歳連れでも安心。因幡うどん・佐世保バーガーC&B・リンガーハット・鉄板焼き天神ホルモン・海鮮丼日の出・ビフテキ屋うえすたん・伽喱本舗・元祖博多ソルたこ などが入る。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "fukuokaairportdomestic"
+ },
+ {
+  "id": "ap64f6682535",
+  "name": "博多鶏sobaナカムラボ 福岡空港店",
+  "area": "福岡空港(3F)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン(鶏soba)",
+  "lat": 33.590687,
+  "lng": 130.450441,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "福岡空港 国内線ターミナル3F(保安検査通過前)。ラーメン滑走路の「SECTION 16」内にある鶏sobaの新店。鶏白湯SOBA 950円/特製鶏白湯SOBA 1,550円、和風醤油SOBAの2本柱。製麺屋慶史の麺を使用。カウンター主体。",
   "video": {
    "youtube": null,
    "tiktok": null,

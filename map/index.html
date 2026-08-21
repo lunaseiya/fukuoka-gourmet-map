@@ -296,6 +296,13 @@
     border-color: #00a5a0 !important;
   }
   .ticket-btn::before { content: "🎟 "; }
+  /* 公式サイトの席予約(アフィリエイトではないのでPRバッジは付けない) */
+  .reserve-btn {
+    background: #1a7f5a !important;
+    color: #fff !important;
+    border-color: #1a7f5a !important;
+  }
+  .reserve-btn::before { content: "🪑 "; }
   .pr-badge {
     font-size: 10px;
     color: var(--muted);
@@ -618,6 +625,10 @@ function videoLinksHtml(spot, cls) {
   // アソビューのWEBチケット(生URL→LinkSwitchが自動変換)
   if (spot.asoview) {
     items.push(`<a class="ticket-btn" href="${spot.asoview}" target="_blank" rel="noopener">チケットを買う</a><span class="pr-badge">PR</span>`);
+  }
+  // 公式サイトの席予約。提携が無く報酬も発生しないのでPR表記は付けない
+  if (spot.reserve) {
+    items.push(`<a class="reserve-btn" href="${spot.reserve}" target="_blank" rel="noopener">席を予約</a>`);
   }
   if (isStaySpot(spot)) {
     items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);

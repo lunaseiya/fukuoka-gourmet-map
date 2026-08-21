@@ -1202,7 +1202,8 @@
   },
   "thumb": null,
   "city": "糸島市",
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "gansoraamennagahamaie-36",
@@ -2057,7 +2058,8 @@
   },
   "thumb": null,
   "city": "熊本市",
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "ishidaichitatsumotomise-72",
@@ -2459,7 +2461,8 @@
   },
   "thumb": null,
   "city": "阿蘇市",
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "mensakabashuratsu-88",
@@ -2954,7 +2957,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "fukumotokouboufukuchanmanjuu",
@@ -3412,7 +3416,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "genkaiikafunetokorokaishuu",
@@ -3489,7 +3494,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kumamotokuukou",
@@ -5480,7 +5486,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "lucleparkrukurupaakuionmooru",
@@ -5599,7 +5606,7 @@
   "name": "GRILL TAKESHITA",
   "area": "駅前中央",
   "city": "佐賀市",
-  "genre": "レジャー",
+  "genre": "洋食",
   "lat": 33.26309,
   "lng": 130.299673,
   "visited": null,
@@ -5754,14 +5761,15 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "irifunesou",
   "name": "入船荘",
   "area": "下宿乙",
   "city": "嬉野市",
-  "genre": "レジャー",
+  "genre": "日帰り温泉",
   "lat": 33.094851,
   "lng": 129.982438,
   "visited": null,
@@ -5775,7 +5783,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "onsen"
  },
  {
   "id": "okuhitaonsenumehibikihigaeri",
@@ -5842,7 +5851,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "oomurayumefaamushushu",
@@ -5863,7 +5873,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "yuuminesonofuruutsurando",
@@ -5884,7 +5895,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "konpeitououkokufukuokamyuuji",
@@ -5927,7 +5939,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "sanoshokubutsukouen",
@@ -6364,7 +6377,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "鹿児島県"
+  "pref": "鹿児島県",
+  "category": "play"
  },
  {
   "id": "miyazakikagakugijutsukan",
@@ -6443,7 +6457,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "nagasakishikagakukan",
@@ -6493,7 +6508,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kurumeshibijutsukan",
@@ -6521,7 +6537,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "tomohoshinosatokurokawainnbi",
@@ -6542,7 +6559,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "fukuokashibijutsukan",
@@ -6570,7 +6588,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kanmonkaikyoumyuujiamu",
@@ -6671,7 +6690,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "toyotajidoushakyuushuuhonsha",
@@ -6692,7 +6712,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "sanpururiki",
@@ -6713,7 +6734,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "shushishimauchuusentaauchuuk",
@@ -7165,7 +7187,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "rizoraterasuamakusa",
@@ -7193,7 +7216,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "foresutoadobenchaamisato",
@@ -7360,7 +7384,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "yunomaeguriinparesu",
@@ -7594,7 +7619,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kizzurandouskakoshimakanoyam",
@@ -7616,7 +7642,8 @@
   "thumb": null,
   "wish": true,
   "pref": "鹿児島県",
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/channel/tickets/n0smLQFqW6/"
  },
  {
   "id": "fukuokaanpanmankodomomyuujia",
@@ -7688,7 +7715,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "熊本県"
+  "pref": "熊本県",
+  "category": "play"
  },
  {
   "id": "nagasakibaiopaaku",
@@ -7950,7 +7978,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "tokihahonten",
@@ -8196,7 +8225,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "beppujigokumeguri",
@@ -8217,7 +8247,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "ooitakentachibijutsukanopam",
@@ -8245,7 +8276,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "beppukeebururakutenchi",
@@ -8382,7 +8414,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "長崎県"
+  "pref": "長崎県",
+  "category": "play"
  },
  {
   "id": "gotouseikahontensekibutsukai",
@@ -8403,7 +8436,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "大分県"
+  "pref": "大分県",
+  "category": "play"
  },
  {
   "id": "ishiishokuhinkaratsukoujou",
@@ -8424,7 +8458,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "tomomasuinryou",
@@ -8452,7 +8487,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "kiyuupiitamagotosukoujou",
@@ -8480,7 +8516,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "佐賀県"
+  "pref": "佐賀県",
+  "category": "play"
  },
  {
   "id": "hiyokohonpoyoshinodouhonamik",
@@ -8501,7 +8538,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "konohamooruhashimoto",
@@ -8529,7 +8567,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "hibikidoubutsuwaarudo",
@@ -8732,7 +8771,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kitakyuushuushitatsukodomono",
@@ -8805,7 +8845,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "furusatowarabekan",
@@ -8921,7 +8962,8 @@
   },
   "thumb": null,
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "chikuzenmachitamokutekiundou",
@@ -8964,7 +9006,8 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "category": "play"
  },
  {
   "id": "kosodatefureaikouryuupurazag",
@@ -12294,7 +12337,8 @@
   },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/channel/tickets/jABKEt7ISB/"
  },
  {
   "id": "kokorobashibushi",
@@ -12410,7 +12454,7 @@
  {
   "id": "kidslandusyahatanishi",
   "name": "キッズランドUS 北九州八幡西店",
-  "area": "真名子(ミスターマックス内)",
+  "area": "八幡西区(真名子)",
   "city": "北九州市八幡西区",
   "pref": "福岡県",
   "genre": "室内遊び場",
@@ -12419,7 +12463,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "2026年8月オープン。室内遊園地。10~19時。子供1時間パック800円・1日パック1,000円、0歳無料。",
+  "verdict": "2026年8月15日オープンの全天候型 屋内遊園地。ミスターマックス真名子店内。⭐0歳は無料、1歳〜小学生が対象。⭐アソビューの事前チケットが安い: 平日こども1日遊び放題800円(定価1,000円/20%OFF)、休日こども3時間遊び放題1,200円(定価1,300円)。保護者は700円。10:00〜19:00・年中無休。TEL 070-5450-8169。買い物ついでに雨の日でも遊べる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -12427,7 +12471,8 @@
   },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/channel/tickets/DdlUMjsloR/"
  },
  {
   "id": "moooviwakamatsu",
@@ -12738,7 +12783,8 @@
   },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/channel/tickets/Mb18jicdJX/"
  },
  {
   "id": "nojirikopia",
@@ -12980,7 +13026,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "aeonmallkashiihama",
@@ -13016,7 +13063,8 @@
    "aeon_kashiihama_04.jpg",
    "aeon_kashiihama_05.jpg",
    "aeon_kashiihama_06.jpg"
-  ]
+  ],
+  "category": "play"
  },
  {
   "id": "aeonmallfukuokaito",
@@ -13037,7 +13085,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallomuta",
@@ -13058,7 +13107,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallnogata",
@@ -13079,7 +13129,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "aeonmallchikushino",
@@ -13100,7 +13151,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "aeonmallfukutsu",
@@ -13121,7 +13173,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "aeonmallyahatahigashi",
@@ -13142,7 +13195,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "aeonmallsagayamato",
@@ -13163,7 +13217,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmalluki",
@@ -13184,7 +13239,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallkumamoto",
@@ -13205,7 +13261,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallsanko",
@@ -13226,7 +13283,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallmiyazaki",
@@ -13247,7 +13305,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallmiyakonojoekimae",
@@ -13268,7 +13327,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "aeonmallkagoshimabay",
@@ -13289,7 +13349,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "yumetownhakata",
@@ -13310,7 +13371,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "yumetownkurume",
@@ -13331,7 +13393,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "yumetownsaga",
@@ -13352,7 +13415,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "yumetownyumesaito",
@@ -13373,7 +13437,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "yumetownhikarinomori",
@@ -13394,7 +13459,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "yumetownyamaguchi",
@@ -13415,7 +13481,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "lalaportfukuoka",
@@ -13436,7 +13503,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "markisfukuokamomochi",
@@ -13457,7 +13525,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "canalcityhakata",
@@ -13478,7 +13547,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "toriushisayama",
@@ -13499,7 +13569,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "riverwalkkitakyushu",
@@ -13520,7 +13591,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "sasebogobangai",
@@ -13541,7 +13613,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "amuplazaoita",
@@ -13562,7 +13635,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "amuplazakagoshima",
@@ -13583,7 +13657,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "yumecityshimonoseki",
@@ -13604,7 +13679,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "matsuurakahankouen",
@@ -14191,7 +14267,8 @@
    "branch_03.jpg"
   ],
   "thumb": "branchfukuokashimobaru.jpg",
-  "wish": false
+  "wish": false,
+  "category": "play"
  },
  {
   "id": "branchshimobaruasobiba",
@@ -22906,7 +22983,8 @@
    "instagram": null
   },
   "thumb": null,
-  "wish": true
+  "wish": true,
+  "category": "play"
  },
  {
   "id": "spc479e3d60e",

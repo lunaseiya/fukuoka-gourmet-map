@@ -457,7 +457,7 @@
 <header>
   <h1>福岡グルメマップ</h1>
   <div class="cat-toggle">
-    <button class="cat-btn active" data-cat="gourmet">🍜 グルメ・おでかけ</button>
+    <button class="cat-btn active" data-cat="gourmet">🍜 お食事</button>
     <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
     <button class="cat-btn" data-cat="play">🎡 遊び場</button>
   </div>
@@ -571,7 +571,7 @@ function canDayUse(s) {
   return /(大人|小人|子供|中学生|小学生)[^。]{0,10}[0-9,]{3,6}\s*円/.test(v);
 }
 
-// スポットの所属カテゴリ(グルメ・おでかけ/日帰り温泉/遊び場)
+// スポットの所属カテゴリ(お食事/宿・温泉/遊び場)  ※おでかけ要素は遊び場に集約
 function spotCat(s) {
   if (s.category === "onsen") return "onsen";
   if (s.category === "play") return "play";

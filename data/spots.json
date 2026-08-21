@@ -7625,7 +7625,7 @@
  {
   "id": "kizzurandouskakoshimakanoyam",
   "name": "キッズランドUS 鹿児島かのや店",
-  "area": null,
+  "area": "鹿屋市",
   "city": "鹿屋市",
   "genre": "室内遊び場",
   "lat": 31.378628,
@@ -7633,7 +7633,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "イオンかのや3階の屋内遊園地。授乳室・ベビーコーナーあり。平日こども1日1000円・保護者700円。",
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 イオンかのや店3F。営業10:00〜20:00。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -12329,7 +12329,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "2026年7月リニューアルオープン。アクロスプラザ下関長府A棟2階の屋内遊び場。",
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 アクロスプラザ下関長府内。 営業10:00〜19:00。TEL 080-4421-3892。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -12463,7 +12463,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "2026年8月15日オープンの全天候型 屋内遊園地。ミスターマックス真名子店内。⭐0歳は無料、1歳〜小学生が対象。⭐アソビューの事前チケットが安い: 平日こども1日遊び放題800円(定価1,000円/20%OFF)、休日こども3時間遊び放題1,200円(定価1,300円)。保護者は700円。10:00〜19:00・年中無休。TEL 070-5450-8169。買い物ついでに雨の日でも遊べる。",
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 ⭐2026年8月15日オープン。ミスターマックス真名子店内。 営業10:00〜19:00。TEL 070-5450-8169。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -12775,7 +12775,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "イオン南宮崎店3階。10~20時。スーパージャングルジム・ボールプール・トランポリン完備。子供1時間800円~。",
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜19:00。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -24336,5 +24336,244 @@
   "thumb": null,
   "wish": true,
   "in": "fukuokaairportdomestic"
+ },
+ {
+  "id": "kidsland-977",
+  "name": "キッズランドUS 福岡アイランドアイ店",
+  "area": "福岡市東区",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.667156,
+  "lng": 130.414764,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 アイランドアイ2F。⭐2026年3月26日リニューアルでセルフ写真館・キャンプコーナー・公園コーナー・牧場コーナーが登場。入場後は設置ゲーム機もフリー。駐車場1,123台(最初の2時間無料、以降30分100円/平日・200円/休日)。 営業10:00〜18:00。TEL 070-6420-7917。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/156986/"
+ },
+ {
+  "id": "kidsland-978",
+  "name": "キッズランドUS MAX 福岡久山店",
+  "area": "糟屋郡久山町",
+  "city": "糟屋郡久山町",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.653946,
+  "lng": 130.493179,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 トリアス久山イーストモールP棟。⭐園内面積 約2,997㎡で九州最大級。駐車場737台・無料。買い物ついでに一日中遊べる。 営業10:00〜20:00。TEL 080-4731-3100。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/156990/"
+ },
+ {
+  "id": "kidsland-979",
+  "name": "キッズランドUS 北九州小倉店",
+  "area": "北九州市小倉南区",
+  "city": "北九州市小倉南区",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.832268,
+  "lng": 130.932846,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 サニーサイドモール小倉3F。 営業10:00〜20:00。TEL 080-4797-3100。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/156988/"
+ },
+ {
+  "id": "kidsland-980",
+  "name": "キッズランドUS 福岡大牟田店",
+  "area": "大牟田市",
+  "city": "大牟田市",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "lat": 33.030472,
+  "lng": 130.427765,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜21:00。TEL 070-1543-3100。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/160626/"
+ },
+ {
+  "id": "kidsland-981",
+  "name": "キッズユーエスランド 佐賀大和店",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "室内遊び場",
+  "lat": 33.303963,
+  "lng": 130.280472,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜20:00。TEL 080-3176-8497。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/156984/"
+ },
+ {
+  "id": "kidsland-982",
+  "name": "キッズランドUS 大分由布挾間店",
+  "area": "由布市",
+  "city": "由布市",
+  "pref": "大分県",
+  "genre": "室内遊び場",
+  "lat": 33.206524,
+  "lng": 131.522598,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜19:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kidsland-983",
+  "name": "キッズランドUS フジグラン山口店",
+  "area": "山口市",
+  "city": "山口市",
+  "pref": "山口県",
+  "genre": "室内遊び場",
+  "lat": 34.129471,
+  "lng": 131.45079,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜19:00。TEL 080-4895-3100。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/156997/"
+ },
+ {
+  "id": "kidsland-984",
+  "name": "キッズランドUS MAX 山口宇部店",
+  "area": "宇部市",
+  "city": "宇部市",
+  "pref": "山口県",
+  "genre": "室内遊び場",
+  "lat": 33.999374,
+  "lng": 131.347626,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "全天候型の屋内遊園地。スーパージャングルジム・サイバーホイール・ボールプール・トランポリン・ふわふわ遊具など。⭐0歳無料、1歳〜小学生が対象。保護者は別途料金。⭐アソビューの事前チケットが定価より安い(平日こども1日800円前後/休日3時間1,200円前後)。雨の日でも遊べるので天気に左右されない。 営業10:00〜19:00。TEL 070-5450-8232。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/163246/"
  }
 ]

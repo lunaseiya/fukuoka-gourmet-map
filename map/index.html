@@ -77,6 +77,67 @@
     0%, 100% { opacity: 1; }
     50% { opacity: .55; }
   }
+  .pin {
+    width: 22px; height: 22px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    cursor: pointer;
+  }
+  /* まとめたピン(中に件数) */
+  .pin-cluster {
+    min-width: 34px; height: 34px;
+    padding: 0 6px;
+    border-radius: 999px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.35);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+  }
+  .pc-blue { background: #2b5cc4; }
+  .pc-red  { background: #d63031; }
+  /* まとめたピンの中身リスト(下から出るシート) */
+  #clusterBox {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+    max-height: 62vh;
+    display: flex; flex-direction: column;
+    transform: translateY(101%);
+    transition: transform .22s ease;
+  }
+  #clusterBox.open { transform: translateY(0); }
+  .cl-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 14px 8px;
+    border-bottom: 1px solid var(--border);
+  }
+  .cl-head h2 { font-size: 15px; margin: 0; flex: 1; font-weight: 700; }
+  .cl-head .n { font-size: 12px; color: var(--muted); }
+  .cl-close {
+    border: none; background: #f0f0f0; color: var(--text);
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 15px; cursor: pointer;
+  }
+  #clusterList { overflow-y: auto; padding: 6px 10px 20px; }
+  .cl-item {
+    display: flex; width: 100%; gap: 10px; align-items: baseline;
+    text-align: left;
+    padding: 11px 10px;
+    border: none; border-bottom: 1px solid var(--border);
+    background: #fff;
+    font-family: inherit; font-size: 14px; color: var(--text);
+    cursor: pointer;
+  }
+  .cl-item:active { background: var(--accent-soft); }
+  .cl-name { flex: 1; font-weight: 600; }
+  .cl-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
   .pin-new {
     animation: pinpulse 1.6s ease-in-out infinite;
   }
@@ -548,6 +609,15 @@
   <a href="../about.html" style="color:var(--muted);">運営者情報</a> ・ <a href="../privacy.html" style="color:var(--muted);">プライバシーポリシー</a>
 </footer>
 
+<div id="clusterBox">
+  <div class="cl-head">
+    <h2 id="clusterTitle"></h2>
+    <span class="n" id="clusterCount"></span>
+    <button class="cl-close" id="clusterClose" aria-label="閉じる">✕</button>
+  </div>
+  <div id="clusterList"></div>
+</div>
+
 <div id="detail"></div>
 
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
@@ -836,8 +906,11 @@ function clearMarkers() {
 
 // ===== 詳細カード(ピン/リスト共通の詳細表示) =====
 function updatePinHighlight() {
-  state.markers.forEach(({ spot, marker }) => {
-    marker.getElement().classList.toggle("pin-selected", spot.id === state.selectedId);
+  state.markers.forEach(({ spot, items, marker }) => {
+    // まとめたピンは中に選択中の店が含まれていれば強調する
+    const on = spot ? spot.id === state.selectedId
+                    : !!(items && items.some(s => s.id === state.selectedId));
+    marker.getElement().classList.toggle("pin-selected", on);
   });
 }
 
@@ -885,6 +958,9 @@ function openDetail(spot) {
   `;
   detail.classList.add("open");
   document.getElementById("detailClose").addEventListener("click", closeDetail);
+document.getElementById("clusterClose").addEventListener("click", () => {
+  document.getElementById("clusterBox").classList.remove("open");
+});
   bindJumpLinks(detail);
   detail.querySelectorAll("[data-photo]").forEach(el => {
     el.addEventListener("click", (e) => {
@@ -990,53 +1066,118 @@ function renderList() {
   bindJumpLinks(list);
 }
 
+// 同じ場所に集まったピンは1つにまとめ、中に件数を出す。
+// 福岡空港やモールのように「1施設に何十軒も入る」場所で、
+// ピンが積み重なってタップできなくなるのを防ぐ目的。
+const CLUSTER_PX = 44;   // この画素数より近いピン同士はまとめる
+
+function makePinEl(spot) {
+  const el = document.createElement("div");
+  el.className = "pin";
+  el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
+  if (isNew(spot)) {
+    el.classList.add("pin-new");
+    const lab = document.createElement("span");
+    lab.className = "pin-new-label";
+    lab.textContent = "NEW";
+    el.appendChild(lab);
+  }
+  return el;
+}
+
+function makeClusterEl(items) {
+  const el = document.createElement("div");
+  el.className = "pin-cluster";
+  // 1件でも未訪問(青)が混ざれば青系、全部訪問済みなら赤系にして一目で分かるように
+  const allVisited = items.every(s => !s.wish);
+  el.classList.add(allVisited ? "pc-red" : "pc-blue");
+  el.textContent = items.length;
+  return el;
+}
+
 function renderMarkers() {
   clearMarkers();
-  if (!window._map) return;
+  const map = window._map;
+  if (!map) return;
   const filtered = applyFilters(state.spots).filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
 
-  const childCount = {};
-  filtered.forEach(spot => {
-    // 親施設とほぼ同座標の子スポットはピンを少しずらして重なりを防ぐ
-    let pinLat = spot.lat, pinLng = spot.lng;
-    if (spot.in) {
-      const p = state.spots.find(s => s.id === spot.in);
-      if (p && Math.abs(p.lat - spot.lat) < 0.0008 && Math.abs(p.lng - spot.lng) < 0.0008) {
-        const n = childCount[spot.in] = (childCount[spot.in] || 0) + 1;
-        const ang = n * 2.1;
-        pinLat = spot.lat + 0.00035 * Math.sin(ang);
-        pinLng = spot.lng + 0.00042 * Math.cos(ang);
-      }
+  // 画面に投影してから近いもの同士をまとめる(ズームすると自然にほどける)
+  const pts = filtered.map(spot => ({ spot, pt: map.project([spot.lng, spot.lat]) }));
+  const used = new Array(pts.length).fill(false);
+  const groups = [];
+  for (let i = 0; i < pts.length; i++) {
+    if (used[i]) continue;
+    const g = [pts[i]];
+    used[i] = true;
+    for (let j = i + 1; j < pts.length; j++) {
+      if (used[j]) continue;
+      const dx = pts[i].pt.x - pts[j].pt.x, dy = pts[i].pt.y - pts[j].pt.y;
+      if (dx * dx + dy * dy < CLUSTER_PX * CLUSTER_PX) { g.push(pts[j]); used[j] = true; }
     }
-    const el = document.createElement("div");
-    el.style.width = "22px";
-    el.style.height = "22px";
-    el.style.borderRadius = "50% 50% 50% 0";
-    el.style.transform = "rotate(-45deg)";
-    el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
-    el.style.border = "2px solid #fff";
-    el.style.boxShadow = "0 1px 3px rgba(0,0,0,.4)";
-    el.style.cursor = "pointer";
-    if (isNew(spot)) {
-      el.classList.add("pin-new");
-      const lab = document.createElement("span");
-      lab.className = "pin-new-label";
-      lab.textContent = "NEW";
-      el.appendChild(lab);
+    groups.push(g);
+  }
+
+  groups.forEach(g => {
+    if (g.length === 1) {
+      const spot = g[0].spot;
+      const el = makePinEl(spot);
+      const marker = new maplibregl.Marker({ element: el })
+        .setLngLat([spot.lng, spot.lat]).addTo(map);
+      el.addEventListener("click", (ev) => { ev.stopPropagation(); focusSpot(spot); });
+      state.markers.push({ spot, marker });
+      return;
     }
-
-    const marker = new maplibregl.Marker({ element: el })
-      .setLngLat([pinLng, pinLat])
-      .addTo(window._map);
-
-    el.addEventListener("click", (e) => {
-      e.stopPropagation();
-      focusSpot(spot);
+    // まとめたピン。中心はグループの平均座標
+    const items = g.map(x => x.spot);
+    const lng = items.reduce((a, s) => a + s.lng, 0) / items.length;
+    const lat = items.reduce((a, s) => a + s.lat, 0) / items.length;
+    const el = makeClusterEl(items);
+    const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+    el.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      openCluster(items, [lng, lat]);
     });
-
-    state.markers.push({ spot, marker });
+    state.markers.push({ spot: null, items, marker });
   });
   updatePinHighlight();
+}
+
+// まとめたピンをタップしたとき。まだ広げられるならズームし、
+// これ以上ズームしても離れない(同じ建物内など)ならリストを出す
+function openCluster(items, center) {
+  const map = window._map;
+  const z = map.getZoom();
+  const spread = Math.max(
+    ...items.map(a => Math.max(...items.map(b => Math.abs(a.lat - b.lat) + Math.abs(a.lng - b.lng))))
+  );
+  if (z < 17.5 && spread > 0.0004) {
+    map.flyTo({ center, zoom: Math.min(18, z + 2.5), essential: true });
+    return;
+  }
+  showClusterList(items);
+}
+
+function showClusterList(items) {
+  const box = document.getElementById("clusterBox");
+  const parent = items[0].in ? state.spots.find(s => s.id === items[0].in) : null;
+  const sameParent = parent && items.every(s => s.in === parent.id);
+  document.getElementById("clusterTitle").textContent =
+    sameParent ? `${parent.name} 内のスポット` : "この場所のスポット";
+  document.getElementById("clusterCount").textContent = `${items.length}件`;
+  document.getElementById("clusterList").innerHTML = items
+    .slice().sort((a, b) => (a.genre || "").localeCompare(b.genre || "", "ja"))
+    .map(s => `<button class="cl-item" data-cid="${escapeHtml(s.id)}">
+        <span class="cl-name">${!s.wish ? "🔴 " : ""}${escapeHtml(s.name)}</span>
+        <span class="cl-genre">${escapeHtml(s.genre || "")}</span>
+      </button>`).join("");
+  box.querySelectorAll("[data-cid]").forEach(b => {
+    b.addEventListener("click", () => {
+      const sp = state.spots.find(x => x.id === b.dataset.cid);
+      box.classList.remove("open");
+      if (sp) focusSpot(sp);
+    });
+  });
+  box.classList.add("open");
 }
 
 function renderAll() {
@@ -1083,6 +1224,13 @@ function initMap(spots) {
   });
   map.addControl(geolocate, "top-right");
   window._map = map;
+
+  // ズーム/移動のたびにまとめ直す(寄れば自然にピンがほどける)
+  let _reMark = null;
+  map.on("moveend", () => {
+    clearTimeout(_reMark);
+    _reMark = setTimeout(() => { if (state.spots.length) renderMarkers(); }, 120);
+  });
 
   map.on("load", () => {
     renderAll();

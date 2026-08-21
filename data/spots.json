@@ -1203,7 +1203,11 @@
   "thumb": null,
   "city": "糸島市",
   "pref": "福岡県",
-  "category": "play"
+  "category": "play",
+  "cats": [
+   "play",
+   "gourmet"
+  ]
  },
  {
   "id": "gansoraamennagahamaie-36",
@@ -2059,7 +2063,11 @@
   "thumb": null,
   "city": "熊本市",
   "pref": "熊本県",
-  "category": "play"
+  "category": "play",
+  "cats": [
+   "play",
+   "gourmet"
+  ]
  },
  {
   "id": "ishidaichitatsumotomise-72",
@@ -2462,7 +2470,11 @@
   "thumb": null,
   "city": "阿蘇市",
   "pref": "熊本県",
-  "category": "play"
+  "category": "play",
+  "cats": [
+   "play",
+   "gourmet"
+  ]
  },
  {
   "id": "mensakabashuratsu-88",
@@ -7385,7 +7397,11 @@
   "thumb": null,
   "wish": true,
   "pref": "大分県",
-  "category": "play"
+  "category": "play",
+  "cats": [
+   "play",
+   "gourmet"
+  ]
  },
  {
   "id": "yunomaeguriinparesu",
@@ -8415,7 +8431,11 @@
   "thumb": null,
   "wish": true,
   "pref": "長崎県",
-  "category": "play"
+  "category": "play",
+  "cats": [
+   "play",
+   "gourmet"
+  ]
  },
  {
   "id": "gotouseikahontensekibutsukai",

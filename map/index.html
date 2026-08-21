@@ -200,6 +200,16 @@
   .ph-food   { background: linear-gradient(170deg, #566270, #39424d); }
   .ph-mall   { background: linear-gradient(170deg, #7a4d8f, #4e2f5e); }
   .card-body { flex: 1; min-width: 0; }
+  .b-both {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #eef3ff;
+    color: #4a5f8a;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
   .b-wish {
     display: inline-block;
     margin-top: 6px;
@@ -572,15 +582,20 @@ function canDayUse(s) {
 }
 
 // スポットの所属カテゴリ(お食事/宿・温泉/遊び場)  ※おでかけ要素は遊び場に集約
-function spotCat(s) {
-  if (s.category === "onsen") return "onsen";
-  if (s.category === "play") return "play";
-  return "gourmet";
+// 1スポットが複数タブに載ることがある(例: 一蘭の森=工場見学だがラーメンを食べに行く場所でもある)。
+// その場合は cats:["play","gourmet"] のように配列で持たせる。cats が無ければ従来の category 単独。
+function spotCats(s) {
+  if (Array.isArray(s.cats) && s.cats.length) return s.cats;
+  if (s.category === "onsen") return ["onsen"];
+  if (s.category === "play") return ["play"];
+  return ["gourmet"];
 }
+// 主カテゴリ(バッジ判定など「1つに決めたい」場面用)
+function spotCat(s) { return spotCats(s)[0]; }
 
 function applyFilters(spots) {
   return spots.filter(s => {
-    if (spotCat(s) !== state.category) return false;
+    if (!spotCats(s).includes(state.category)) return false;
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
@@ -683,7 +698,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spot.category === "onsen" && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spot.category === "onsen" && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -691,7 +706,7 @@ function cardHtml(spot) {
 
 function areaTabSpots(spots) {
   return spots.filter(s => {
-    if (spotCat(s) !== state.category) return false;
+    if (!spotCats(s).includes(state.category)) return false;
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
     if (state.filter === "wish" && !s.wish) return false;

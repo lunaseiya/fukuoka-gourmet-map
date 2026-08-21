@@ -107,6 +107,51 @@
     padding: 4px 8px;
     display: inline-block;
   }
+  .searchbar {
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .searchbar input {
+    width: 100%;
+    padding: 9px 34px 9px 12px;
+    font-size: 15px;   /* 16px未満だとiOSで拡大されるので注意 */
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    -webkit-appearance: none;
+  }
+  .searchbar input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .searchbar input::-webkit-search-cancel-button { display: none; }
+  #qClear {
+    position: absolute;
+    top: 50%; right: 6px;
+    transform: translateY(-50%);
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font-size: 15px;
+    padding: 4px 6px;
+    cursor: pointer;
+  }
+  #qClear.on { display: block; }
+  /* 検索中は全カテゴリを横断するので、どのタブの結果かを示す */
+  .b-cat {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #f0efe8;
+    color: #6b6552;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
   .filters {
     display: flex;
     gap: 6px;
@@ -471,6 +516,10 @@
     <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
     <button class="cat-btn" data-cat="play">🎡 遊び場</button>
   </div>
+  <div class="searchbar">
+    <input id="q" type="search" placeholder="店名・エリア・ジャンルで検索" autocomplete="off" enterkeyhint="search">
+    <button id="qClear" type="button" aria-label="検索をクリア">✕</button>
+  </div>
   <div class="filters">
     <button class="filter-btn active" data-filter="all">すべて</button>
     <button class="filter-btn" data-filter="visited">訪問済み</button>
@@ -525,6 +574,7 @@ const state = {
   spots: [],
   filter: "all",
   category: "gourmet",
+  q: "",
   areas: new Set(),
   areasDraft: new Set(),
   markers: [],
@@ -584,6 +634,7 @@ function canDayUse(s) {
 // スポットの所属カテゴリ(お食事/宿・温泉/遊び場)  ※おでかけ要素は遊び場に集約
 // 1スポットが複数タブに載ることがある(例: 一蘭の森=工場見学だがラーメンを食べに行く場所でもある)。
 // その場合は cats:["play","gourmet"] のように配列で持たせる。cats が無ければ従来の category 単独。
+const CAT_LABEL = { gourmet: "🍜 お食事", onsen: "♨ 宿・温泉", play: "🎡 遊び場" };
 function spotCats(s) {
   if (Array.isArray(s.cats) && s.cats.length) return s.cats;
   if (s.category === "onsen") return ["onsen"];
@@ -593,7 +644,26 @@ function spotCats(s) {
 // 主カテゴリ(バッジ判定など「1つに決めたい」場面用)
 function spotCat(s) { return spotCats(s)[0]; }
 
+// 検索は表記ゆれを吸収するため、カタカナ→ひらがな・大小文字・全半角を寄せて比較する
+function normalize(s) {
+  return (s || "").toLowerCase()
+    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
+    .replace(/[！-～]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+    .replace(/[\s　・･ー\-()（）「」]/g, "");
+}
+function searchBlob(s) {
+  return normalize([s.name, s.area, s.city, s.pref, s.genre, s.verdict].join(" "));
+}
+function matchQuery(s, q) {
+  const terms = q.split(/[\s　]+/).filter(Boolean).map(normalize).filter(Boolean);
+  if (!terms.length) return true;
+  const blob = searchBlob(s);
+  return terms.every(t => blob.includes(t));
+}
+
 function applyFilters(spots) {
+  // 検索中はカテゴリ・絞り込みを無視して全件から探す(タブを跨いで見つけたいため)
+  if (state.q.trim()) return spots.filter(s => matchQuery(s, state.q));
   return spots.filter(s => {
     if (!spotCats(s).includes(state.category)) return false;
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
@@ -698,7 +768,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -842,6 +912,8 @@ function bindJumpLinks(root) {
 }
 
 function jumpToSpot(spot) {
+  // 検索中はカテゴリ横断で出しているので、タブ切り替えはしない
+  if (state.q.trim()) { renderAll(); focusSpot(spot); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
   // 別カテゴリのスポットならタブを切り替える
   const cat = spotCat(spot);
   if (cat !== state.category) {
@@ -884,16 +956,18 @@ function renderList() {
   // NEW(投稿1週間以内)をリスト最上部に
   const filtered = applyFilters(state.spots).slice().sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
 
-  countEl.textContent = state.spots.length
-    ? `${filtered.length}件表示中(全${state.spots.length}件)`
-    : "";
+  countEl.textContent = !state.spots.length ? ""
+    : state.q.trim() ? `「${state.q.trim()}」の検索結果 ${filtered.length}件(全カテゴリから)`
+    : `${filtered.length}件表示中(全${state.spots.length}件)`;
 
   if (!state.spots.length) {
     list.innerHTML = `<div class="empty">まだ登録されたお店がありません。<br>data/spots.json に追加すると、ここと地図に表示されます。</div>`;
     return;
   }
   if (!filtered.length) {
-    list.innerHTML = `<div class="empty">条件に合うお店が見つかりませんでした。</div>`;
+    list.innerHTML = state.q.trim()
+      ? `<div class="empty">「${escapeHtml(state.q.trim())}」に一致するお店はありませんでした。<br>店名の一部・エリア名・ジャンルでも探せます。</div>`
+      : `<div class="empty">条件に合うお店が見つかりませんでした。</div>`;
     return;
   }
 
@@ -1040,6 +1114,21 @@ document.getElementById("areaApply").addEventListener("click", () => {
   updateAreaBtn();
   renderAll();
 });
+
+// 検索ボックス。入力のたびに全件から絞り込む(件数が1000弱なので遅延不要)
+const qInput = document.getElementById("q");
+const qClear = document.getElementById("qClear");
+function applyQuery() {
+  state.q = qInput.value;
+  qClear.classList.toggle("on", !!state.q);
+  // 検索中はカテゴリ・絞り込みの見た目を無効化して、全件検索であることを示す
+  document.querySelector(".cat-toggle").style.opacity = state.q.trim() ? .4 : "";
+  document.querySelector(".filters").style.opacity = state.q.trim() ? .4 : "";
+  renderAll();
+}
+qInput.addEventListener("input", applyQuery);
+qInput.addEventListener("search", applyQuery);
+qClear.addEventListener("click", () => { qInput.value = ""; applyQuery(); qInput.focus(); });
 
 document.querySelectorAll(".cat-btn").forEach(btn => {
   btn.addEventListener("click", () => {

@@ -24595,5 +24595,66 @@
   "wish": true,
   "category": "play",
   "asoview": "https://www.asoview.com/base/163246/"
+ },
+ {
+  "id": "sp86912fa3c4",
+  "name": "PAYAN PAYAN(パヤンパヤン)",
+  "area": "宗像(田野)",
+  "city": "宗像市",
+  "pref": "福岡県",
+  "genre": "カフェ・パフェ",
+  "lat": 33.854076,
+  "lng": 130.527603,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "ファンタジーな世界観のアンティークカフェ。⭐裏メニューだった「ぱやんパフェ」がSNSで広まり看板メニューに。宗像の山あいにある隠れ家。11:00〜17:00、水曜定休。TEL 0940-62-2757。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.city.munakata.lg.jp/"
+ },
+ {
+  "id": "spa0ef135771",
+  "name": "アマネク別府ゆらり",
+  "area": "別府駅前",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "ホテル(温泉)",
+  "lat": 33.280094,
+  "lng": 131.502518,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "kidsChair": null,
+   "tatami": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "JR別府駅東口から徒歩3分のホテル。⭐14階の大浴場は炭酸水素塩泉(美肌の湯)で、屋上にインフィニティプール、最上階にテントサウナ。⚠大浴場・サウナ・プールは宿泊者専用で日帰り入浴は不可。TEL 0977-76-5566。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://amanekhotels.jp/beppu/",
+  "category": "onsen",
+  "stay": true,
+  "dayUse": false
  }
 ]

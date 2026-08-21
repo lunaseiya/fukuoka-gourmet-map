@@ -867,14 +867,14 @@
   "kids": null,
   "verdict": "全18席・博多駅直結デイトス2F・駐車場なし",
   "video": {
-   "youtube": "https://www.youtube.com/shorts/36t_dCKa224",
+   "youtube": "https://youtube.com/shorts/5-Ie741Noig",
    "tiktok": "https://www.tiktok.com/@tencone/video/7419073835778985224",
    "instagram": "https://www.instagram.com/reel/DAZXfdfxpud/"
   },
   "thumb": null,
   "city": "福岡市博多区",
   "pref": "福岡県",
-  "posted": "2026-08-17"
+  "posted": null
  },
  {
   "id": "kitakataraamensakauchite-23",
@@ -4449,13 +4449,13 @@
  },
  {
   "id": "mohikanraamensentaa",
-  "name": "モヒカンラーメンセンター",
+  "name": "モヒカンらーめん 福岡店(東区本店)",
   "area": "蒲田",
   "city": "福岡市東区",
   "genre": "ラーメン",
   "lat": 33.633396,
   "lng": 130.479099,
-  "visited": null,
+  "visited": "2026-08-13",
   "with": "family",
   "kids": {
    "stroller": null,
@@ -4465,15 +4465,16 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "カウンター・テーブル・小上がりあり28席、駐車場あり。土井駅から約1.5km 子供食堂あり",
+  "verdict": "久留米発祥のモヒカンらーめんの福岡店(2018年12月オープン)。豚骨100%×極細麺と名物レモンらーめん880円の二刀流。半チャンセット1,260円。⭐夕方17:00〜20:00は「モヒカンこども食堂」で小学生までラーメン1杯100円(同伴の大人は各自1杯注文)。⭐子供用ソファ椅子あり・小上がりあり28席・駐車場あり。もやしナムルと辛子高菜が無料で取り放題、替玉はタレをかけて食べるスタイル。子ども食堂ガチャ、お持ち帰りコーナー、店頭に餃子無人販売機も。11:00〜15:00/17:00〜20:00。TEL 092-691-5088。",
   "video": {
-   "youtube": null,
+   "youtube": "https://www.youtube.com/shorts/36t_dCKa224",
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
+  "thumb": "mohikan-fukuoka.jpg",
   "wish": false,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "posted": "2026-08-17"
  },
  {
   "id": "hakataryouhin",

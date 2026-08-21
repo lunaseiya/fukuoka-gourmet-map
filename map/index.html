@@ -289,6 +289,13 @@
     border-color: #e8730c !important;
   }
   .tabelog-btn::before { content: "🍽 "; }
+  /* アソビュー等のWEBチケット */
+  .ticket-btn {
+    background: #00a5a0 !important;
+    color: #fff !important;
+    border-color: #00a5a0 !important;
+  }
+  .ticket-btn::before { content: "🎟 "; }
   .pr-badge {
     font-size: 10px;
     color: var(--muted);
@@ -433,6 +440,10 @@
   }
   .osm-credit a { color: var(--muted); }
 </style>
+<!-- バリューコマース LinkSwitch: ページ内の提携先生URL(食べログ等)を自動でアフィリエイトリンクに変換 -->
+<script type="text/javascript" language="javascript">
+    var vc_pid = "892682809";
+</script><script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
 </head>
 <body>
 
@@ -602,7 +613,11 @@ function videoLinksHtml(spot, cls) {
   items.push(`<a class="web-btn" href="${webUrl(spot)}" target="_blank" rel="noopener">🌐 詳細</a>`);
   // 食べログは「詳細」とは別ボタンにする(詳細=公式サイト/地図、食べログ=口コミ・予約)
   if (spot.tabelog) {
-    items.push(`<a class="tabelog-btn" href="${spot.tabelog}" target="_blank" rel="noopener">食べログ</a>`);
+    items.push(`<a class="tabelog-btn" href="${spot.tabelog}" target="_blank" rel="noopener">食べログ</a><span class="pr-badge">PR</span>`);
+  }
+  // アソビューのWEBチケット(生URL→LinkSwitchが自動変換)
+  if (spot.asoview) {
+    items.push(`<a class="ticket-btn" href="${spot.asoview}" target="_blank" rel="noopener">チケットを買う</a><span class="pr-badge">PR</span>`);
   }
   if (isStaySpot(spot)) {
     items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);

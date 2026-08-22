@@ -23586,10 +23586,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23615,10 +23616,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23644,10 +23646,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": true,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23673,10 +23676,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23702,10 +23706,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23731,10 +23736,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23760,10 +23766,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23789,10 +23796,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23818,10 +23826,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23847,10 +23856,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
    "serveMin": null,
    "noise": null
   },
@@ -23876,10 +23886,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": true,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23905,10 +23916,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23934,10 +23946,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23963,10 +23976,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -23992,10 +24006,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24021,10 +24036,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24050,10 +24066,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24079,10 +24096,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24108,10 +24126,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24137,10 +24156,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24166,10 +24186,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24195,10 +24216,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24224,10 +24246,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
    "serveMin": null,
    "noise": null
   },
@@ -24253,10 +24276,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
    "serveMin": null,
    "noise": null
   },
@@ -24282,10 +24306,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24312,9 +24337,10 @@
   "with": "family",
   "kids": {
    "stroller": true,
-   "diaper": true,
+   "diaper": null,
+   "tatami": true,
    "kidsChair": null,
-   "tatami": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
@@ -24340,10 +24366,11 @@
   "visited": null,
   "with": "family",
   "kids": {
-   "stroller": true,
-   "diaper": true,
-   "kidsChair": null,
+   "stroller": null,
+   "diaper": null,
    "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },

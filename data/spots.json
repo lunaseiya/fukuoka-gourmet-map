@@ -25742,5 +25742,470 @@
   "wish": true,
   "category": "play",
   "web": "https://www.town.hiji.lg.jp/gyoseijoho/shisetsuannai/koen/1/1541.html"
+ },
+ {
+  "id": "spb570c29485",
+  "name": "サッポロビール 九州日田工場",
+  "area": "日田",
+  "city": "日田市",
+  "pref": "大分県",
+  "genre": "工場見学",
+  "lat": 33.292564,
+  "lng": 130.945038,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐自由見学は無料で予約不要(10:00〜17:00・受付16:30まで)。月火休。⭐小学生以下はシアターも工場見学ツアーも無料(ツアーは大人1,000円)。ツアーは要予約(WEBは4週間前〜前日15時)。屋内メインで雨の日OK。⚠20歳未満だけでの参加は不可で20歳以上の同伴が必要。授乳室・オムツ替えは不明。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.sapporobeer.jp/brewery/kyushuhita/kengaku/"
+ },
+ {
+  "id": "sp6c65cceb73",
+  "name": "原次郎左衛門蔵(まるはら)",
+  "area": "日田(豆田町)",
+  "city": "日田市",
+  "pref": "大分県",
+  "genre": "工場見学",
+  "lat": 33.313984,
+  "lng": 130.933273,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐見学無料・予約不要(9:00〜17:00、見学受付16:00まで)。味噌醤油蔵に加えて⭐ラムネ工場の案内があり、20〜30分と短いので幼児でも飽きにくい。母屋に九州郷土玩具館を併設。豆田町から徒歩圏。駐車場15台。ほぼ屋内で雨の日OK。⚠古い蔵なのでベビーカーの可否は不明。8/14〜16は工場案内なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "http://www.soysauce.co.jp/access/access.html"
+ },
+ {
+  "id": "sp2103c0c5d0",
+  "name": "フンドーキン醬油 工場見学",
+  "area": "臼杵",
+  "city": "臼杵市",
+  "pref": "大分県",
+  "genre": "工場見学",
+  "lat": 33.099346,
+  "lng": 131.774094,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "醤油・味噌・ドレッシングの3工場から1日1工場を見学(約60分、木樽のみ20分の短縮コースも)。⭐1名から受付で親子OK・年齢制限なし。平日のみ、9:30/10:00/10:30/13:30/14:00開始。⚠完全予約制で電話申込(0972-63-2111)、2ヶ月先まで受付。⚠公式に「充分なバリアフリー対応をしておりません」と明記されておりベビーカーは不向き。料金は公式に記載がないので予約時に確認を。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.fundokin.co.jp/enjoy/factory/"
+ },
+ {
+  "id": "spd3197459dc",
+  "name": "別府市竹細工伝統産業会館",
+  "area": "別府(東荘園)",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "工芸館",
+  "lat": 33.298382,
+  "lng": 131.484818,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐完全屋内で雨の日OK。入館 高校生以上390円/小中学生130円。8:30〜17:00、月曜休。竹林を望むカフェ併設。⚠体験は竹鈴800円が小学3年生以上、四海波花籠3,000円が中学生以上で、未就学児は体験できず展示見学のみ。体験は要事前予約(0977-23-1072)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://takezaikudensankaikan.jp/"
+ },
+ {
+  "id": "sp421c7adf5b",
+  "name": "小鹿田焼の里・日田市立小鹿田焼陶芸館",
+  "area": "日田(源栄町)",
+  "city": "日田市",
+  "pref": "大分県",
+  "genre": "工芸・見学",
+  "lat": 33.32111,
+  "lng": 130.941391,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐入館無料(9:00〜17:00、水曜休)。⭐集落に響く唐臼(からうす)の音と窯元の作業風景が子どもに人気。⚠里全体が屋外で坂道・未舗装が多くベビーカーは不向き。雨天は陶芸館内のみ。⚠窯元は生活の場なので見学マナーに注意。見学の事前連絡について情報に食い違いがあるので0973-29-2020へ確認を。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.city.hita.oita.jp/site/hitanioideyo/1935.html"
+ },
+ {
+  "id": "sp4bc4bccaba",
+  "name": "三和酒類 安心院葡萄酒工房",
+  "area": "安心院",
+  "city": "宇佐市",
+  "pref": "大分県",
+  "genre": "工場見学",
+  "lat": 33.43816,
+  "lng": 131.352478,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐見学無料・予約不要(9:00〜16:00、園内は17:00まで)。火曜休(祝日は営業)。⭐駐車場約160台。ぶどう畑と醸造工程を見学でき、広い園内で子どもが走り回れる。隣接レストラン「朝霧の庄」あり。⚠雨天は屋内工房のみ。ペット同伴不可。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.sanwa-shurui.co.jp/factory/ajimu/"
+ },
+ {
+  "id": "spfc6d495fab",
+  "name": "いいちこ日田蒸留所",
+  "area": "日田(西有田)",
+  "city": "日田市",
+  "pref": "大分県",
+  "genre": "工場見学",
+  "lat": 33.347046,
+  "lng": 130.956009,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐入場無料・予約不要(10:00〜16:00、火曜/お盆/年末年始休)。屋内見学中心で雨の日OK。駐車場約42台。10名以上の団体は要予約。⚠子ども向け展示や授乳室の有無は公式に記載がなく不明。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.sanwa-shurui.co.jp/factory/hita/"
+ },
+ {
+  "id": "sp51ed43da2d",
+  "name": "JX金属 関崎みらい海星館",
+  "area": "佐賀関",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "プラネタリウム・天文台",
+  "lat": 33.265049,
+  "lng": 131.896851,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐大分県内で実質唯一のプラネタリウム施設。⭐1階の展望室・展示コーナーは無料。プラネタリウム 一般540円/小中高生270円・⭐未就学児無料。天体観測室 一般630円・⭐中学生以下無料。平日10:00〜18:00、金土日祝は22:00まで(8月は全日22:00まで)。火曜休。駐車場30台 無料。⚠プラネタリウムは完全予約制。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://kaiseikan.jp/"
+ },
+ {
+  "id": "sp855d5ee44d",
+  "name": "大分県立歴史博物館",
+  "area": "宇佐",
+  "city": "宇佐市",
+  "pref": "大分県",
+  "genre": "博物館",
+  "lat": 33.544495,
+  "lng": 131.370758,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐中学生以下は無料(一般340円/高大学生170円)。9:00〜17:00(入館16:30まで)、月曜休。⭐屋内展示に加えて隣接の屋外「宇佐風土記の丘」で外遊びもできる。土曜は高校生も無料。⚠駐車場・授乳室の情報は公式に記載がなく不明。※住所は公式表記が字までで番地不明。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.pref.oita.jp/site/rekishihakubutsukan/"
+ },
+ {
+  "id": "sp607a817beb",
+  "name": "福澤諭吉旧居・福澤記念館",
+  "area": "中津",
+  "city": "中津市",
+  "pref": "大分県",
+  "genre": "博物館",
+  "lat": 33.598331,
+  "lng": 131.188339,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐未就学児無料(高校生以上400円/中学生以下200円)。9:00〜17:00、⭐休館は12月31日のみ。駐車場 無料。記念館側はエレベーター・多目的トイレあり。夏休みはクイズラリー等の子ども向け企画も。中津城・中津市歴史博物館との3施設共通券1,500円あり。⚠旧居は屋外の茅葺き古民家で段差あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://fukuzawakyukyo.com/"
+ },
+ {
+  "id": "sp2bb8bc920e",
+  "name": "パークプレイス大分",
+  "area": "大分市(公園通り西)",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.195293,
+  "lng": 131.658203,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐子連れ設備が県内随一。⭐駐車場 無料(6:00〜翌1:30)。ほぼ全天候型の屋内中心で雨の日OK。⭐ベビーカー無料貸出、ベビールーム(イオン2F・ベビーベッド6台・哺乳瓶洗浄流し台)、授乳室4か所(2Fフードテラス近くは離乳食用電子レンジと調乳給湯あり)、子ども用トイレ3か所。⭐フードテラス(ガーデンウォーク2F)にベビー・キッズスペース126席(小上がり席・ベビーカー置き場・キッズチェア)。館内にモーリーファンタジーと無料の屋内型公園ごえんファミリーパークあり。ショップ10:00〜21:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://shop.parkplace-oita.com/"
+ },
+ {
+  "id": "spb6fe89ec7a",
+  "name": "トキハわさだタウン",
+  "area": "大分市(玉沢)",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.188679,
+  "lng": 131.581497,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐駐車場 無料 約4,000台。10:00〜20:00。屋内で雨の日OK。⭐ベビーカー無料貸出3種、授乳室(1F北通り7丁目)に加えて⭐2Fマミールームは男性も利用可(電子レンジ・乳幼児身長体重計)。2F南通り2丁目に飲食店が集まる(はなまるうどん・リンガーハット・ミスド等)。館内にくまのがっこうあそびガーデン(ナムコ内)あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.tokiwa-dept.co.jp/wasadatown/"
+ },
+ {
+  "id": "spd7472685b2",
+  "name": "ゆめタウン別府",
+  "area": "別府(楠町)",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.276291,
+  "lng": 131.507645,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐3Fにフードコートあり。⭐3Fの「赤ちゃんの部屋」におむつ交換ベッド・授乳室・調乳用給湯器・シンク・体重計(授乳室エリア以外は男性も利用可)。多目的トイレ、無料給水、無料コインロッカーあり。食品売場9:30〜21:00、専門店10:00〜21:00。屋内で雨の日OK。⚠駐車場の台数・料金は公式に記載なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.izumi.jp/tenpo/beppu"
+ },
+ {
+  "id": "spf96f99af73",
+  "name": "ゆめタウン中津",
+  "area": "中津",
+  "city": "中津市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.602325,
+  "lng": 131.194641,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐駐車場1,261台。⭐2Fの「赤ちゃんの部屋」におむつ交換ベッド・授乳室・調乳用給湯器・身長体重計。3Fにナムコ・ゆめキッズ(ゲームセンター)。多目的トイレ・休憩スペースあり。食品売場9:30〜21:00、専門店10:00〜20:00。屋内で雨の日OK。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.izumi.jp/tenpo/nakatsu"
+ },
+ {
+  "id": "sp5619dd49b3",
+  "name": "あけのアクロスタウン",
+  "area": "大分市(明野東)",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ショッピングモール",
+  "lat": 33.224041,
+  "lng": 131.65271,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐駐車場1,600台。本館地階・1F 9:30〜20:00、本館2〜4F・新館 10:00〜20:00、新館レストラン街11:00〜。屋内で雨の日OK。西松屋(本館4F)などが入居。⚠授乳室・オムツ替え・キッズスペースは公式サイトに記載がなく不明(多目的トイレの記載のみ)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.tokiwa-industry.co.jp/shops/facility1.html"
  }
 ]

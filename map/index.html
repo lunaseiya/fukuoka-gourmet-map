@@ -943,6 +943,9 @@ function updatePinHighlight() {
 }
 
 function openDetail(spot) {
+  // 施設リストが開いたままだと、同じ下寄せのシート同士が重なって詳細カードが隠れてしまう
+  const cbox = document.getElementById("clusterBox");
+  if (cbox) cbox.classList.remove("open");
   const detail = document.getElementById("detail");
   // 写真ギャラリー(横スワイプ、タップで拡大)
   const photosHtml = (spot.photos && spot.photos.length) ? `

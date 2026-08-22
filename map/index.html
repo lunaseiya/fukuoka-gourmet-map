@@ -99,6 +99,13 @@
     cursor: pointer;
   }
   .pc-blue { background: #2b5cc4; }
+  /* 同じ施設のまとまり。押すと必ずリストが出るので、丸ピンと形を変えて区別する */
+  .pin-cluster.pc-facility {
+    border-radius: 9px;
+    min-width: 38px;
+    height: 30px;
+  }
+  .pin-cluster.pc-facility::before { content: "🏢"; font-size: 11px; margin-right: 3px; }
   .pc-red  { background: #d63031; }
   /* まとめたピンの中身リスト(下から出るシート) */
   #clusterBox {
@@ -1101,8 +1108,31 @@ function renderMarkers() {
   if (!map) return;
   const filtered = applyFilters(state.spots).filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
 
-  // 画面に投影してから近いもの同士をまとめる(ズームすると自然にほどける)
-  const pts = filtered.map(spot => ({ spot, pt: map.project([spot.lng, spot.lat]) }));
+  // ① まず「同じ施設に入っている店」を1つの単位にまとめる。
+  //    施設を最小単位として扱うので、いくらズームしてもここは分散させない
+  //    (福岡空港のように1棟に何十軒も入る場所は、バラすと同じ施設だと分からなくなるため)
+  const byParent = {};
+  const singles = [];
+  filtered.forEach(s => {
+    if (s.in && state.spots.some(p => p.id === s.in)) {
+      (byParent[s.in] = byParent[s.in] || []).push(s);
+    } else singles.push(s);
+  });
+  const units = [];   // {items, lat, lng, facility}
+  Object.keys(byParent).forEach(pid => {
+    const kids = byParent[pid];
+    if (kids.length === 1) { singles.push(kids[0]); return; }
+    const par = state.spots.find(p => p.id === pid);
+    units.push({
+      items: kids, facility: par || null,
+      lat: par ? par.lat : kids.reduce((a, s) => a + s.lat, 0) / kids.length,
+      lng: par ? par.lng : kids.reduce((a, s) => a + s.lng, 0) / kids.length
+    });
+  });
+  singles.forEach(s => units.push({ items: [s], facility: null, lat: s.lat, lng: s.lng }));
+
+  // ② その上で、画面上で近い単位同士をまとめる(ズームすれば単位ごとにほどける)
+  const pts = units.map(u => ({ u, pt: map.project([u.lng, u.lat]) }));
   const used = new Array(pts.length).fill(false);
   const groups = [];
   for (let i = 0; i < pts.length; i++) {
@@ -1118,24 +1148,28 @@ function renderMarkers() {
   }
 
   groups.forEach(g => {
-    if (g.length === 1) {
-      const spot = g[0].spot;
+    const us = g.map(x => x.u);
+    const items = us.flatMap(u => u.items);
+    const lng = us.reduce((a, u) => a + u.lng, 0) / us.length;
+    const lat = us.reduce((a, u) => a + u.lat, 0) / us.length;
+
+    if (items.length === 1) {
+      const spot = items[0];
       const el = makePinEl(spot);
-      const marker = new maplibregl.Marker({ element: el })
-        .setLngLat([spot.lng, spot.lat]).addTo(map);
+      const marker = new maplibregl.Marker({ element: el }).setLngLat([spot.lng, spot.lat]).addTo(map);
       el.addEventListener("click", (ev) => { ev.stopPropagation(); focusSpot(spot); });
       state.markers.push({ spot, marker });
       return;
     }
-    // まとめたピン。中心はグループの平均座標
-    const items = g.map(x => x.spot);
-    const lng = items.reduce((a, s) => a + s.lng, 0) / items.length;
-    const lat = items.reduce((a, s) => a + s.lat, 0) / items.length;
+    // 単位が1つだけ = 同じ施設のまとまり。ズームしても割れないので、押したら必ずリストを出す
+    const soleFacility = us.length === 1 && us[0].facility ? us[0].facility : null;
     const el = makeClusterEl(items);
+    if (soleFacility) el.classList.add("pc-facility");
     const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
     el.addEventListener("click", (ev) => {
       ev.stopPropagation();
-      openCluster(items, [lng, lat]);
+      if (soleFacility) showClusterList(items, soleFacility);
+      else openCluster(items, [lng, lat]);
     });
     state.markers.push({ spot: null, items, marker });
   });
@@ -1157,9 +1191,9 @@ function openCluster(items, center) {
   showClusterList(items);
 }
 
-function showClusterList(items) {
+function showClusterList(items, facility) {
   const box = document.getElementById("clusterBox");
-  const parent = items[0].in ? state.spots.find(s => s.id === items[0].in) : null;
+  const parent = facility || (items[0].in ? state.spots.find(s => s.id === items[0].in) : null);
   const sameParent = parent && items.every(s => s.in === parent.id);
   document.getElementById("clusterTitle").textContent =
     sameParent ? `${parent.name} 内のスポット` : "この場所のスポット";

@@ -26687,5 +26687,755 @@
   "thumb": null,
   "wish": true,
   "tabelog": "https://tabelog.com/oita/A4402/A440202/44004949/"
+ },
+ {
+  "id": "cocos-64c9be6d",
+  "name": "ココス 大橋店",
+  "area": "大橋",
+  "city": "福岡市南区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.560051,
+  "lng": 130.427979,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐九州1号店。6:00〜翌4:00と最長営業で、⭐朝食バイキングを毎日実施(他店は土日祝のみ)。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-df1e5949",
+  "name": "ココス 二又瀬店",
+  "area": "二又瀬(社領)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.607487,
+  "lng": 130.437592,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。土日祝は朝食バイキングあり。⚠おむつ替え台は女性トイレ側にあり、男子トイレにはなし(2026-08-22に実地で確認)。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-0c13f9d8",
+  "name": "ココス 福重店",
+  "area": "福重",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.568005,
+  "lng": 130.322296,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-34aa8359",
+  "name": "ココス 福岡干隈店",
+  "area": "干隈",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.551823,
+  "lng": 130.34906,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-5247d290",
+  "name": "ココス 小倉到津店",
+  "area": "小倉(上到津)",
+  "city": "北九州市小倉北区",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.873844,
+  "lng": 130.851242,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-2a7f5867",
+  "name": "ココス 久留米中央公園店",
+  "area": "久留米(野中町)",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.31398,
+  "lng": 130.530304,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-3d7bb2f0",
+  "name": "ココス 飯塚柏の森店",
+  "area": "飯塚(柏の森)",
+  "city": "飯塚市",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.645924,
+  "lng": 130.707993,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-9d95017f",
+  "name": "ココス 行橋店",
+  "area": "行橋",
+  "city": "行橋市",
+  "pref": "福岡県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.73497,
+  "lng": 130.96521,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜24:00、土日祝7:00〜24:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-b9cc391e",
+  "name": "ココス 佐賀日の出店",
+  "area": "佐賀(日の出)",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.275383,
+  "lng": 130.298965,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⚠改装のため2026年8/18〜9/10は休業、9/11 10:00にリニューアルオープン。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-01e240d1",
+  "name": "ココス 文教町店",
+  "area": "長崎(文教町)",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "ファミリーレストラン",
+  "lat": 32.787384,
+  "lng": 129.869934,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-7493f78f",
+  "name": "ココス 大村店",
+  "area": "大村",
+  "city": "大村市",
+  "pref": "長崎県",
+  "genre": "ファミリーレストラン",
+  "lat": 32.929157,
+  "lng": 129.951492,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-cb90c937",
+  "name": "ココス 熊本上代店",
+  "area": "熊本(上代)",
+  "city": "熊本市西区",
+  "pref": "熊本県",
+  "genre": "ファミリーレストラン",
+  "lat": 32.781113,
+  "lng": 130.673386,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-f7243479",
+  "name": "ココス 熊本小峯店",
+  "area": "熊本(小峯)",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "ファミリーレストラン",
+  "lat": 32.802441,
+  "lng": 130.777802,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-0cda2f95",
+  "name": "ココス 八代店",
+  "area": "八代",
+  "city": "八代市",
+  "pref": "熊本県",
+  "genre": "ファミリーレストラン",
+  "lat": 32.51506,
+  "lng": 130.597794,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜24:00、土日祝7:00〜24:00。⚠2026年7/28の地震の影響で一部商品のみの販売、営業時間10:00〜24:00で運営中(8/17時点)。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-9f43da49",
+  "name": "ココス 大分浜町店",
+  "area": "大分(勢家)",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.246273,
+  "lng": 131.603806,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-5dcecb02",
+  "name": "ココス 宮崎大島店",
+  "area": "宮崎(大島町)",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "ファミリーレストラン",
+  "lat": 31.936052,
+  "lng": 131.438248,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-65b83c51",
+  "name": "ココス 都城店",
+  "area": "都城",
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "ファミリーレストラン",
+  "lat": 31.734753,
+  "lng": 131.07016,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-f4ceea37",
+  "name": "ココス 鹿児島宇宿店",
+  "area": "鹿児島(宇宿)",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "ファミリーレストラン",
+  "lat": 31.538263,
+  "lng": 130.53743,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-a9b5129d",
+  "name": "ココス 鹿屋店",
+  "area": "鹿屋",
+  "city": "鹿屋市",
+  "pref": "鹿児島県",
+  "genre": "ファミリーレストラン",
+  "lat": 31.387075,
+  "lng": 130.883759,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-6ef7f98e",
+  "name": "ココス 霧島隼人店",
+  "area": "霧島(隼人)",
+  "city": "霧島市",
+  "pref": "鹿児島県",
+  "genre": "ファミリーレストラン",
+  "lat": 31.73671,
+  "lng": 130.737991,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-dd2214db",
+  "name": "ココス 周陽店",
+  "area": "周南(周陽)",
+  "city": "周南市",
+  "pref": "山口県",
+  "genre": "ファミリーレストラン",
+  "lat": 34.048122,
+  "lng": 131.831512,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-c4533f42",
+  "name": "ココス 下関あるかぽーと店",
+  "area": "下関(あるかぽーと)",
+  "city": "下関市",
+  "pref": "山口県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.952129,
+  "lng": 130.939301,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐リゾナーレ下関や海響館と同じあるかぽーと地区。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-c7f43b66",
+  "name": "ココス 宇部店",
+  "area": "宇部(文京町)",
+  "city": "宇部市",
+  "pref": "山口県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.972588,
+  "lng": 131.230927,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-b8ca5e24",
+  "name": "ココス 山口宇部空港店",
+  "area": "山口宇部空港",
+  "city": "宇部市",
+  "pref": "山口県",
+  "genre": "ファミリーレストラン",
+  "lat": 33.932217,
+  "lng": 131.275024,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "8:45〜19:00。⚠空港店舗のためドリンクバーとアルコールの取り扱いなし。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
+ },
+ {
+  "id": "cocos-00e67312",
+  "name": "ココス 山口吉敷店",
+  "area": "山口(吉敷)",
+  "city": "山口市",
+  "pref": "山口県",
+  "genre": "ファミリーレストラン",
+  "lat": 34.162304,
+  "lng": 131.446075,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "月〜金10:00〜翌2:00、土日祝7:00〜翌2:00。⭐おこさまメニューが豊富(小学6年生まで)。ワクワクセット ハンバーグ924円、おこさまラーメン/ナポリタン/パンケーキ 各594円、おこさまうどん484円、⭐おこさまドリンクバー132円。低アレルゲンメニュー(ハンバーグプレート759円・カレー594円・米粉パン110円)や、⭐離乳食に近いリゾット330円・しらす雑炊165円もある。ラスカルのぬりえを配布中。⭐子供用の椅子・キッズ食器・取り分け皿あり。ベビーシート設置店。プレミアムドリンクバー462円。⚠22時以降は食事代に10%の深夜料金。ラストオーダーは閉店30分前。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://www.cocos-jpn.co.jp/"
  }
 ]

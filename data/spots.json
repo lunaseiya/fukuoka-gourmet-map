@@ -24683,5 +24683,214 @@
   "category": "onsen",
   "stay": true,
   "dayUse": false
+ },
+ {
+  "id": "spf59c8a215a",
+  "name": "THEM 福岡(ゼム)",
+  "area": "中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ダイニングバー",
+  "lat": 33.591408,
+  "lng": 130.407181,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "中洲のリバーサイドにある隠れ家ダイニング。博多ビューテラス6・7Fで、川と屋台を見下ろす席がある。⭐完全個室あり。名物はウニパスタ。19:00〜翌5:00・年中無休。TEL 092-271-0392。中洲川端駅から徒歩3分。⚠深夜営業の大人向けの店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40062655/"
+ },
+ {
+  "id": "sp1a8faa156d",
+  "name": "娘娘麻辣湯 中洲店(ニャンニャンマーラータン)",
+  "area": "中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "麻辣湯(薬膳スープ)",
+  "lat": 33.592739,
+  "lng": 130.406982,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "具材とスープの辛さを自分で選ぶ薬膳スープ専門店。⭐20:00〜翌4:00の深夜営業で、飲んだあとの〆に使える。日曜定休。中洲川端駅(出口4)から徒歩3分。予算1,000〜2,000円。※博多駅前店は11:00〜22:00で昼も営業。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40058585/"
+ },
+ {
+  "id": "sp8adbd093b4",
+  "name": "元祖中洲そうめん 臣屋(じんや)",
+  "area": "中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "そうめん",
+  "lat": 33.592049,
+  "lng": 130.406921,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "〆のそうめんという文化を作った店。⭐看板の「臣屋そうめん きぬいと」は1,000円前後で、深夜でも重くない。月〜木19:00〜翌4:00、金土は翌5:00まで。日曜定休。全19席。TEL 092-409-1302。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40028745/"
+ },
+ {
+  "id": "sp751fcdbaef",
+  "name": "ラーメン海鳴 中洲店",
+  "area": "中洲",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.593361,
+  "lng": 130.407562,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "魚介豚骨とラーメンジェノバで知られる海鳴の中洲店。⭐18:00〜翌6:00と朝まで営業。日曜定休(連休の場合は最終日)。和田ビル1F。TEL 092-281-8278。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40007111/"
+ },
+ {
+  "id": "spfc270b5004",
+  "name": "ラーメン海鳴 博多デイトス店",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.589912,
+  "lng": 130.420395,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "博多駅直結のデイトス内。⭐新幹線・在来線の乗り換えついでに寄れる。名物はラーメンジェノバ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/"
+ },
+ {
+  "id": "sp15c2619405",
+  "name": "ラーメン海鳴 清川店",
+  "area": "清川",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.581375,
+  "lng": 130.407867,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "海鳴の店舗のひとつ。魚介豚骨とラーメンジェノバ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40024136/"
+ },
+ {
+  "id": "spba3b4cbfbb",
+  "name": "ラーメン海鳴 みずほPayPayドーム福岡店",
+  "area": "地行浜(PayPayドーム)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.594341,
+  "lng": 130.362411,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2020年オープンの海鳴7号店。⚠みずほPayPayドーム内の限定営業店舗なので、試合・イベント開催日に球場へ入らないと利用できない。魚介とんこつ1,000円/ラーメンジェノバ1,100円/海鳴セット1,450円。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true
  }
 ]

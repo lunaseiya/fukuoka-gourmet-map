@@ -17513,34 +17513,6 @@
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40029813/"
  },
  {
-  "id": "sp440baf51cb",
-  "name": "Cafe ノットノット",
-  "area": "香椎照葉",
-  "city": "福岡市東区",
-  "pref": "福岡県",
-  "genre": "カフェ",
-  "lat": 33.662792,
-  "lng": 130.417313,
-  "visited": null,
-  "with": "family",
-  "kids": {
-   "stroller": true,
-   "diaper": null,
-   "tatami": null,
-   "kidsChair": null,
-   "serveMin": null,
-   "noise": null
-  },
-  "verdict": "10:00〜18:00。ラクレイス香椎照葉1F。子連れ利用可のカフェとして紹介されている。",
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": null,
-  "wish": true
- },
- {
   "id": "spc64aa5d4c0",
   "name": "御膳屋 照葉店",
   "area": "香椎照葉",
@@ -24892,5 +24864,317 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "spcbb4d99faa",
+  "name": "佐賀牛の宿 光陽閣",
+  "area": "嬉野温泉",
+  "city": "嬉野市",
+  "pref": "佐賀県",
+  "genre": "旅館(温泉)",
+  "lat": 33.096931,
+  "lng": 129.986221,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "嬉野温泉の宿。⭐日本三大美肌の湯を露天風呂で。佐賀牛・伊勢海老・湯豆腐が名物。全20室。⭐立ち寄り入浴も10:00〜21:00で可能。大浴場は15:00〜24:00と翌6:00〜9:30。チェックイン15:00〜18:30/アウト10:00。嬉野ICから車で5分。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://www.koyokaku.com/",
+  "stay": true,
+  "dayUse": true
+ },
+ {
+  "id": "sp086e3707cb",
+  "name": "パティスリー オー フィル ドゥ ジュール",
+  "area": "桜坂",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ケーキ・洋菓子",
+  "lat": 33.578732,
+  "lng": 130.387543,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "桜坂の閑静な住宅街にあるパティスリー。イスパハン1F。10:00〜19:00。地下鉄七隈線 桜坂駅から徒歩2〜3分(181m)。TEL 092-707-0130。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.aufildujour.co.jp/",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40001686/"
+ },
+ {
+  "id": "spe8acbe27b5",
+  "name": "湯らっくす(熊本本店)",
+  "area": "熊本市中央区",
+  "city": "熊本市中央区",
+  "pref": "熊本県",
+  "genre": "サウナ・天然温泉",
+  "lat": 32.785553,
+  "lng": 130.702194,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "サウナ好きに知られる24時間営業の天然温泉(8:00〜10:00は浴室清掃で入浴不可)。⭐入浴のみ 大人 平日900円/土日祝1,000円、小人(4歳〜小学生)300円、4歳未満は無料。湯らっくすコース(休憩・2F利用込み)は平日1,650円/土日祝2,000円。ドミトリー宿泊も可。⭐駐車場170台 無料。TEL 096-362-1126。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://www.yulax.info/",
+  "stay": true,
+  "dayUse": true
+ },
+ {
+  "id": "sp67b7758121",
+  "name": "湯らっくす 福岡天神(今泉店)",
+  "area": "天神(今泉)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "サウナ・温浴",
+  "lat": 33.584728,
+  "lng": 130.39679,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "熊本の人気サウナ「湯らっくす」の福岡店。西鉄福岡(天神)駅から近い都市型店舗。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "dayUse": true
+ },
+ {
+  "id": "sp84245d44b1",
+  "name": "麺どころ 千屋",
+  "area": "香椎駅前",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.660831,
+  "lng": 130.441528,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "西鉄香椎駅から徒歩1分(39m)、香椎名店街内。11:00〜14:00/18:00〜翌2:30と深夜まで営業。日曜定休(祝日により変動)。TEL 092-671-0565。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40001069/"
+ },
+ {
+  "id": "sp38d0e23b0c",
+  "name": "焼肉AZUMA 香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "焼肉",
+  "lat": 33.657818,
+  "lng": 130.429062,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "イオン香椎浜のそば。⭐和牛の食べ放題があり、質が良いと評判。個室・掘りごたつあり。平日17:00〜22:30、土日祝は11:00〜22:30(OS22:00)。予算4,000〜7,000円。TEL 092-609-9131。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40021069/"
+ },
+ {
+  "id": "sp63f9c49d7f",
+  "name": "生そばあずま 香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "蕎麦",
+  "lat": 33.657818,
+  "lng": 130.429062,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "焼肉AZUMAの隣。⭐そば+カツ丼セット990円などコスパが良く、予算1,000〜2,000円。ウエスト系列で子連れでも入りやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40001222/"
+ },
+ {
+  "id": "spe622e1f6e5",
+  "name": "焼肉慶州 今泉店",
+  "area": "今泉",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "焼肉",
+  "lat": 33.584461,
+  "lng": 130.400314,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "炭火七輪で味わう極上焼肉。17:00〜24:00(LO23:00)・年中無休・駐車場なし。予算4,000〜5,000円。TEL 092-717-2288。※春吉店は17:00〜翌4:00と朝まで営業。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40000566/"
+ },
+ {
+  "id": "sp83c56125dd",
+  "name": "レクー沖縄北谷スパ&リゾート",
+  "area": "北谷(美浜)",
+  "city": "中頭郡北谷町",
+  "pref": "沖縄県",
+  "genre": "リゾートホテル(温泉)",
+  "lat": 26.311689,
+  "lng": 127.761368,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐最上階に海とつながるインフィニティプール、天然温泉の大浴場(北谷温泉)あり。アメリカンビレッジ・サンセットビーチまで徒歩圏。沖縄料理の朝食が充実。那覇空港から車で約40分。TEL 098-979-5433。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "web": "https://www.vessel-hotel.jp/lequ/okinawa/",
+  "stay": true
+ },
+ {
+  "id": "spe88d48ce5d",
+  "name": "星野リゾート リゾナーレ下関",
+  "area": "下関(あるかぽーと)",
+  "city": "下関市",
+  "pref": "山口県",
+  "genre": "リゾートホテル",
+  "lat": 33.952087,
+  "lng": 130.940308,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "関門海峡を望む星野リゾート。⭐プールは通年営業。「ふぐプール」は9:00〜19:00で大人も子供も楽しめる。⭐インフィニティプールは12歳以上限定で、朝(7:00〜9:00・4/1〜11/30)と夜(19:00〜21:00・通年、最終入場20:30)の時間帯限定。唐戸市場まで徒歩圏。JR下関駅から車・バスで約5分。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://hoshinoresorts.com/ja/hotels/risonareshimonoseki/",
+  "stay": true
  }
 ]

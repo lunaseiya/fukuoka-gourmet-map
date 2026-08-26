@@ -25506,27 +25506,32 @@
   "genre": "博物館",
   "lat": 33.312305,
   "lng": 131.49054,
-  "visited": null,
+  "visited": "2026-08-26",
   "with": "family",
   "kids": {
    "stroller": null,
-   "diaper": null,
+   "diaper": true,
    "tatami": null,
    "kidsChair": null,
    "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "全館屋内で雨の日OK。一般700円/高校大学生500円/小中学生300円。10:00〜18:00、第3木曜休。駐車場26台 無料。⭐香水づくり体験(3,000円前後)や匂い袋づくりが要予約であり。エレベーター・ベビーカー可・ベビーベッドあり(授乳室はなし)。※体験料金は情報源で食い違いがあるので事前確認を。",
+  "verdict": "全館屋内で雨の日OK。10:00〜18:00、第3木曜休。駐車場26台 無料。⭐香水づくり・匂い袋づくり体験が要予約であり、天然温泉の足湯も。女性トイレにおむつ替えシートあり(現地確認)。エレベーター・ベビーカー可。※入館料は情報源で食い違いがあるので事前確認を。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
+  "thumb": "oitakaorinohakubutsukan.jpg",
+  "wish": false,
   "category": "play",
-  "web": "https://oita-kaori.jp/"
+  "web": "https://oita-kaori.jp/",
+  "address": "別府市北石垣48-1",
+  "photos": [
+   "kaori_01_gaikan.jpg",
+   "kaori_02_omutsu.jpg"
+  ]
  },
  {
   "id": "spb7d077b7ae",

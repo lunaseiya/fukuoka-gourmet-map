@@ -16963,17 +16963,33 @@
   "genre": "カフェ",
   "lat": 33.660355,
   "lng": 130.443481,
-  "visited": null,
-  "with": "solo",
-  "kids": null,
-  "verdict": "火〜日10:00〜22:00、月曜定休。バスク風チーズケーキ・タコライス・クラフトビール4種。20席、駐車場なし。JR香椎駅から徒歩1分。",
+  "visited": "2026-08-21",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "自家焙煎の珈琲専門店。ランチはそば粉のガレット(メキシカンガレット 税込1,700円)。ティラミス・アフォガート500円。豆の量り売りあり。10:00〜22:00、ランチは15:00まで、月曜定休。⚠子連れは「可」というレベルで設備は整っていない。ベビーカーのまま入れたが店内は少し狭め。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true
+  "thumb": "mimatsucoffee-honten.jpg",
+  "wish": false,
+  "address": "福岡市東区香椎駅前1-14-19 浜男ビル1F",
+  "web": "https://www.instagram.com/mimatsucoffee/",
+  "photos": [
+   "mimatsu_01_gaikan.jpg",
+   "mimatsu_02_kanban.jpg",
+   "mimatsu_03_mame.jpg",
+   "mimatsu_04_galette.jpg"
+  ]
  },
  {
   "id": "sp2c244405b7",
@@ -30909,11 +30925,11 @@
    "diaper": null,
    "tatami": true,
    "kidsChair": true,
-   "kidsMenu": null,
+   "kidsMenu": true,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "⭐子連れだと最後に駄菓子を1つ選ばせてもらえる。座敷(小上がり)あり、座敷用の子供椅子3脚+ベビーチェアも完備。7upやPEPSIのレトロ看板が並ぶロックな内装。11:00〜23:30 L.O、年末年始を除き無休。",
+  "verdict": "⭐お子様セット税込650円(半ラーメン・ごはん・アップルジュース・ゼリー・おもちゃ付/小学生まで)。食後に駄菓子を1つ選ばせてもらえる。座敷(小上がり)+座敷用の子供椅子3脚+ベビーチェアあり。夏は期間限定の別府冷麺(税込930円/大盛1050円)。替玉120円。7upやPEPSIのレトロ看板が並ぶロックな内装。11:00〜23:30 L.O、年末年始を除き無休。",
   "video": {
    "youtube": null,
    "tiktok": null,

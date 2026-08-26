@@ -16038,34 +16038,46 @@
  {
   "id": "stayf0fc87e55c",
   "name": "亀の井ホテル 別府",
-  "area": "別府温泉",
+  "area": "別府(中央町)",
   "city": "別府市",
   "pref": "大分県",
   "genre": "ホテル",
   "lat": 33.276245,
   "lng": 131.500107,
-  "visited": null,
+  "visited": "2026-08-25",
   "with": "family",
   "kids": {
    "stroller": null,
    "diaper": true,
-   "tatami": null,
-   "kidsChair": null,
+   "tatami": true,
+   "kidsChair": true,
+   "kidsMenu": null,
    "serveMin": null,
-   "noise": null
+   "noise": "ok"
   },
-  "verdict": "⭐子連れ設備が手厚く、ベビーベッド完備の「ベビールーム」客室(42㎡・定員1〜4名、電子レンジ・知育玩具・絵本つき)あり。3階にキッズコーナー(ボールプール・絵本)と駄菓子コーナーも。JR別府駅から徒歩4分。料金・貸切風呂は要問合せ(0977-22-3301)。",
+  "verdict": "⭐3階に「昔なつかしい駄菓子屋 別府亀の井商店」と縁日(スーパーボールすくい)があり17:00〜22:00、ゲームコーナーは24:00まで。ボールプール・ソフト遊具のキッズスペース・プラレール・エアホッケー・マンガコーナー・マッサージチェアもあって館内だけで一日持つ。温泉卓球は30分500円(17:00〜24:00)。ランドリーは24時間。⭐ベビールームは絵本・おもちゃ・ベビーベッド・ベビーバス・ベビー椅子・子供用の踏み台と便座・子供用歯ブラシ・ピジョンの保温ポット付きで部屋も広い。洗面のお湯は捻れば適温で出る。浴衣は子供用135cm/110cmと子供用スリッパあり。大浴場(露天・サウナ・水風呂)は3階で5:00〜10:00/16:00〜24:00、混雑状況が館内アプリで見られる。子供でも入れるぬる湯があり、整いスペースも。夕食は九州各県のバイキング(とり天・県産しいたけ・かぼすジュース・熊本ラーメン等)で全体に美味しい。レストランはおしゃれでベビーチェアの種類も豊富。⚠食事の時間帯は混雑するので早めに。明治44年に油屋熊八が創業した宿の系譜で、おもてなしの文化を感じる。JR別府駅から徒歩5分。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
+  "thumb": "kamenoi-beppu.jpg",
+  "wish": false,
   "category": "onsen",
   "stay": true,
   "web": "https://www.kamenoi-hotels.com/beppu/",
-  "booking": "https://www.jalan.net/yad335627/"
+  "booking": "https://www.jalan.net/yad335627/",
+  "address": "別府市中央町5-17",
+  "photos": [
+   "kamenoi_01_dagashi.jpg",
+   "kamenoi_02_ennichi.jpg",
+   "kamenoi_03_ballpool.jpg",
+   "kamenoi_04_omocha.jpg",
+   "kamenoi_05_babybath.jpg",
+   "kamenoi_06_yukata.jpg",
+   "kamenoi_07_toriten.jpg"
+  ],
+  "bathAge": "大浴場に子供でも入れるぬる湯あり(現地確認)。サウナ・水風呂・整いスペースは大人向けに本格的"
  },
  {
   "id": "sp8e2881196e",
@@ -25533,7 +25545,7 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "全館屋内で雨の日OK。一般700円/高校・大学生500円/小・中学生300円。10:00〜18:00、第3木曜休。駐車場26台 無料。⭐香水づくり・匂い袋づくり体験が要予約であり、天然温泉の足湯も。女性トイレにおむつ替えシートあり(現地確認)。エレベーター・ベビーカー可。",
+  "verdict": "全館屋内で雨の日OK。一般700円/高校・大学生500円/小・中学生300円。10:00〜18:00、第3木曜休。駐車場26台 無料。⭐入館チケットに5種類から好きな香りを1滴つけられて子供に人気。香水づくり・匂い袋づくり体験も要予約であり、天然温泉の足湯も。香水瓶がずらり並ぶ常設展示や調香台の再現も見応えあり。女性トイレにおむつ替えシートあり(現地確認)。エレベーター・ベビーカー可。※2026/9/23までは3Fでキャラクター香水の企画展「香りで逢える展」(ONE PIECE・エヴァ・ガンダム・進撃の巨人ほか)を開催中。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -25546,6 +25558,9 @@
   "address": "別府市北石垣48-1",
   "photos": [
    "kaori_01_gaikan.jpg",
+   "kaori_03_onepiece.jpg",
+   "kaori_04_kaorizuke.jpg",
+   "kaori_05_kousuibin.jpg",
    "kaori_02_omutsu.jpg"
   ]
  },
@@ -30943,5 +30958,45 @@
    "kikunoya_04_dagashi.jpg"
   ],
   "wish": false
+ },
+ {
+  "id": "oita-airport",
+  "name": "大分空港(大分ハローキティ空港)",
+  "area": "国東(安岐町)",
+  "city": "国東市",
+  "pref": "大分県",
+  "genre": "空港ターミナル",
+  "lat": 33.471866,
+  "lng": 131.728293,
+  "address": "国東市安岐町下原13",
+  "visited": "2026-08-25",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": false,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐2階のキッズスペース(滑り台遊具・月と星のクッション)が無料。1階到着ロビーの足湯も無料で9:30〜19:00、別府温泉の源泉かけ流し。授乳室はサンリオ柄で調乳用のお湯・電子レンジ付き。ベビーカーと車椅子の貸出あり。階段・トイレ・自販機・ベンチまでサンリオ装飾で、温泉桶のフォトスポットも。3Fの和風レストラン なゝ瀬(10:00〜19:30)はとり天うどん・りゅうきゅう丼、お子様ランチはハローキティのプレート。飛行機に乗らなくても入れる。※愛称「大分ハローキティ空港」は2027/3/31まで。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "oita-airport.jpg",
+  "photos": [
+   "oitaap_01_kaidan.jpg",
+   "oitaap_02_photospot.jpg",
+   "oitaap_03_kidsspace.jpg",
+   "oitaap_04_yugu.jpg",
+   "oitaap_05_ashiyu.jpg",
+   "oitaap_06_junyushitsu.jpg"
+  ],
+  "wish": false,
+  "category": "play",
+  "web": "https://www.oita-airport.jp/"
  }
 ]

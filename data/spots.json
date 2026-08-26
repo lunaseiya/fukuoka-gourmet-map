@@ -12489,7 +12489,8 @@
   },
   "thumb": null,
   "wish": false,
-  "category": "play"
+  "category": "play",
+  "in": "boxtownhakozaki"
  },
  {
   "id": "kiraramemorialyuuguhiroba",
@@ -30278,5 +30279,35 @@
   "category": "play",
   "in": "sp2bb8bc920e",
   "asoview": "https://www.asoview.com/base/162662/"
+ },
+ {
+  "id": "boxtownhakozaki",
+  "name": "BOX TOWN 箱崎(ボックスタウン箱崎)",
+  "area": "箱崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ショッピングモール",
+  "lat": 33.620139,
+  "lng": 130.417844,
+  "address": "福岡県福岡市東区箱崎4-7-55",
+  "visited": "2026-08-24",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入口に子供乗せカートが多数用意されている(前カゴ付きベビーシート型が4台以上+ステップ付きの幼児用)。買い物中に子どもを乗せられるので赤ちゃん連れでも回りやすい。⭐駐車場474台と広く、車で行きやすい。スーパーセカンドストリート・激安の殿堂ルミエール・スターバックス・清香園(焼肉)などが入り、2Fには室内遊び場「きっずゆうえんち ぐるぐる屋 箱崎店」がある。箱崎宮前駅から徒歩約5分。⚠テナントごとに営業時間が異なる。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "play"
  }
 ]

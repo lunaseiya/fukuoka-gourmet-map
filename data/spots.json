@@ -30891,5 +30891,41 @@
   "thumb": null,
   "wish": true,
   "in": "gemstreet-kashii"
+ },
+ {
+  "id": "kikunoya-beppu",
+  "name": "ラーメン 菊の屋 別府店",
+  "area": "別府(鉄輪東)",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "ラーメン",
+  "lat": 33.312418,
+  "lng": 131.482669,
+  "address": "別府市鉄輪東2-2",
+  "visited": "2026-08-26",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐子連れだと最後に駄菓子を1つ選ばせてもらえる。座敷(小上がり)あり、座敷用の子供椅子3脚+ベビーチェアも完備。7upやPEPSIのレトロ看板が並ぶロックな内装。11:00〜23:30 L.O、年末年始を除き無休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kikunoya-beppu.jpg",
+  "photos": [
+   "kikunoya_01_gaikan.jpg",
+   "kikunoya_02_zashiki.jpg",
+   "kikunoya_03_kidschair.jpg",
+   "kikunoya_04_dagashi.jpg"
+  ],
+  "wish": false
  }
 ]

@@ -18,7 +18,7 @@
   - 予約リンク(booking/asoview)は個別ページにも置く。SEO流入がそのまま収益導線になる
   - 各ページからマップ本体へ導線を張り、回遊させる
 """
-import json, io, os, re, html, datetime, shutil
+import json, io, os, re, html, datetime, shutil, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SPOTS = os.path.join(ROOT, 'data', 'spots.json')
@@ -223,7 +223,7 @@ def build():
                          '<a href="../area/%s.html">%s の一覧をすべて見る</a></div>'
                          % (esc(lname),
                             ''.join('<a href="%s.html">%s</a>' % (esc(x['id']), esc(x['name'])) for x in sibs),
-                            esc(lslug), esc(lname)))
+                            esc(urllib.parse.quote(lslug)), esc(lname)))
 
         htmlstr = SPOT_TPL.format(
             title=esc(page_title(s)), desc=esc(meta_desc(s)), site=SITE, id=esc(s['id']),
@@ -250,7 +250,7 @@ def build():
             title=esc('%s の子連れで行けるお店・おでかけ %d件' % (city, len(items))),
             desc=esc('%s で子連れでも行けるお店とおでかけ先を%d件。ベビーカー可否・おむつ替え台・キッズチェアの有無つき。'
                      % (city, len(items))),
-            site=SITE, slug=esc(sg), css=CSS, city=esc(city), n=len(items), list_html=lis)
+            site=SITE, slug=esc(urllib.parse.quote(sg)), css=CSS, city=esc(city), n=len(items), list_html=lis)
         io.open(os.path.join(adir, sg + '.html'), 'w', encoding='utf-8').write(htmlstr)
         written[adir].add(sg + '.html')
         urls.append(('%s/area/%s.html' % (SITE, sg), '0.8'))
@@ -268,11 +268,20 @@ def build():
         print('  古いページを削除', removed, '件')
 
     # ---- sitemap / robots ----
+    def enc_url(u):
+        # スキーム+ホストはそのまま、パス部分だけをパーセントエンコードする。
+        # (sitemap.xml の <loc> は RFC3986 のエスケープが必須)
+        m = re.match(r'^(https?://[^/]+)(/.*)?$', u)
+        if not m:
+            return u
+        host, path = m.group(1), m.group(2) or '/'
+        return host + urllib.parse.quote(path, safe='/._-~')
+
     sm = ['<?xml version="1.0" encoding="UTF-8"?>',
           '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
     for u, pr in urls:
         sm.append('<url><loc>%s</loc><lastmod>%s</lastmod><priority>%s</priority></url>'
-                  % (html.escape(u), TODAY, pr))
+                  % (html.escape(enc_url(u)), TODAY, pr))
     sm.append('</urlset>')
     io.open(os.path.join(ROOT, 'sitemap.xml'), 'w', encoding='utf-8').write('\n'.join(sm))
     io.open(os.path.join(ROOT, 'robots.txt'), 'w', encoding='utf-8').write(

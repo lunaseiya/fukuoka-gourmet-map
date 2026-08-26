@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lunaseiya.github.io/fukuoka-gourmet-map/sitemap.xml

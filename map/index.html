@@ -426,6 +426,13 @@
     border-color: #bf0000 !important;
   }
   .aff-rakuten::before { content: "🏨 "; }
+  /* じゃらんのアフィリエイトボタン(PR)。生URL→LinkSwitchが自動変換する */
+  .aff-jalan {
+    background: #f36f21 !important;
+    color: #fff !important;
+    border-color: #f36f21 !important;
+  }
+  .aff-jalan::before { content: "🛏 "; }
   /* 食べログの店舗ページへ */
   .tabelog-btn {
     background: #e8730c !important;
@@ -814,7 +821,13 @@ function videoLinksHtml(spot, cls) {
     items.push(`<a class="reserve-btn" href="${spot.reserve}" target="_blank" rel="noopener">席を予約</a>`);
   }
   if (isStaySpot(spot)) {
-    items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);
+    // その宿のじゃらんページが分かっていれば直リンクする。
+    // トップページ着地より成約率が高いので、booking があるときは楽天(トップ)は出さない。
+    if (spot.booking) {
+      items.push(`<a class="aff-jalan" href="${spot.booking}" target="_blank" rel="nofollow noopener">じゃらんで予約</a><span class="pr-badge">PR</span>`);
+    } else {
+      items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);
+    }
   }
   return `<div class="${cls}">${items.join("")}</div>`;
 }

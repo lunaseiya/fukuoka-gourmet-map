@@ -773,7 +773,8 @@ function applyFilters(spots) {
     if (!spotCats(s).includes(state.category)) return false;
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
     if (state.filter === "visited" && s.wish) return false;
-    if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
+    // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
@@ -879,7 +880,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">子連れOK</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -889,7 +890,7 @@ function areaTabSpots(spots) {
   return spots.filter(s => {
     if (!spotCats(s).includes(state.category)) return false;
     if (state.filter === "visited" && s.wish) return false;
-    if (state.filter === "kids" && (!isKidsOk(s) || s.wish)) return false;
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;

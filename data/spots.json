@@ -32383,7 +32383,7 @@
   "until": "2026-09-06",
   "untilLabel": "9月6日",
   "web": "https://www.jrta.co.jp/daipinchi-ten/",
-  "asoview": "https://www.asoview.com/base/167862/"
+  "asoview": "https://www.asoview.com/base/164474/"
  },
  {
   "id": "aso_moomin_fukuoka",
@@ -32409,7 +32409,8 @@
   "category": "play",
   "until": "2026-08-30",
   "untilLabel": "8月30日",
-  "web": "https://tove-moomins.exhibit.jp/"
+  "web": "https://tove-moomins.exhibit.jp/",
+  "asoview": "https://www.asoview.com/base/164475/"
  },
  {
   "id": "aso_gogh_saga",
@@ -32435,6 +32436,7 @@
   "category": "play",
   "until": "2026-09-06",
   "untilLabel": "9月6日",
-  "web": "https://www.sagatv.co.jp/nx/gogh2026/"
+  "web": "https://www.sagatv.co.jp/nx/gogh2026/",
+  "asoview": "https://www.asoview.com/base/164962/"
  }
 ]

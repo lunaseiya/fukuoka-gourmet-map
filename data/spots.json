@@ -519,7 +519,14 @@
   "city": "福岡市東区",
   "pref": "福岡県",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40033455/",
-  "wish": false
+  "wish": false,
+  "campaign": {
+   "title": "ハローキティ コラボ",
+   "label": "キティコラボ",
+   "until": "2026-09-06",
+   "untilLabel": "9月6日",
+   "url": "https://www.akindo-sushiro.co.jp/"
+  }
  },
  {
   "id": "raamenkoubounihei-07",
@@ -18994,7 +19001,14 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40033455/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40033455/",
+  "campaign": {
+   "title": "ハローキティ コラボ",
+   "label": "キティコラボ",
+   "until": "2026-09-06",
+   "untilLabel": "9月6日",
+   "url": "https://www.akindo-sushiro.co.jp/"
+  }
  },
  {
   "id": "spbf70b4d966",
@@ -19023,7 +19037,14 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40030267/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40030267/",
+  "campaign": {
+   "title": "ハローキティ コラボ",
+   "label": "キティコラボ",
+   "until": "2026-09-06",
+   "untilLabel": "9月6日",
+   "url": "https://www.akindo-sushiro.co.jp/"
+  }
  },
  {
   "id": "sp77f3d2b0a6",
@@ -19634,7 +19655,14 @@
   },
   "thumb": null,
   "wish": false,
-  "web": "https://search.yahoo.co.jp/search?p=%E3%82%B9%E3%82%B7%E3%83%AD%E3%83%BC+%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA+%E5%A7%AA%E6%B5%9C+%E4%BD%8F%E6%89%80"
+  "web": "https://search.yahoo.co.jp/search?p=%E3%82%B9%E3%82%B7%E3%83%AD%E3%83%BC+%E7%A6%8F%E5%B2%A1%E5%B8%82%E8%A5%BF%E5%8C%BA+%E5%A7%AA%E6%B5%9C+%E4%BD%8F%E6%89%80",
+  "campaign": {
+   "title": "ハローキティ コラボ",
+   "label": "キティコラボ",
+   "until": "2026-09-06",
+   "untilLabel": "9月6日",
+   "url": "https://www.akindo-sushiro.co.jp/"
+  }
  },
  {
   "id": "spe4f3427e91",
@@ -21568,7 +21596,14 @@
   },
   "thumb": null,
   "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40026380/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40026380/",
+  "campaign": {
+   "title": "ハローキティ コラボ",
+   "label": "キティコラボ",
+   "until": "2026-09-06",
+   "untilLabel": "9月6日",
+   "url": "https://www.akindo-sushiro.co.jp/"
+  }
  },
  {
   "id": "sp4de9174fa2",

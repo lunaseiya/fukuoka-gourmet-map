@@ -74,17 +74,36 @@
     animation: newpulse 1.6s ease-in-out infinite;
   }
   /* 会期のある企画展。ピンはオレンジ+⏳、カードには残り日数を出す */
-  .b-limited {
-    display: inline-block;
-    margin-right: 6px;
-    font-size: 11px;
-    font-weight: 800;
-    background: #e17055;
-    color: #fff;
-    border-radius: 999px;
-    padding: 2px 9px;
+  /* 期間限定の帯。カードを開いた瞬間に「今だけ」が伝わるように先頭へ大きく出す */
+  .ltd-band {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 2px 0 7px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #fff6d5, #ffeaa7);
+    border: 1.5px solid #f9ca24;
+    box-shadow: 0 1px 4px rgba(249,202,36,.35);
   }
-  .b-limited.soon { background: #d63031; }
+  .ltd-band.soon {
+    background: linear-gradient(90deg, #ffe3e0, #ffc9c4);
+    border-color: #e17055;
+  }
+  .ltd-icon { font-size: 15px; line-height: 1; }
+  .ltd-main { font-size: 13px; font-weight: 800; color: #4a3600; }
+  .ltd-band.soon .ltd-main { color: #7a2018; }
+  .ltd-sub  { font-size: 11.5px; font-weight: 700; color: #7a6400; }
+  .ltd-band.soon .ltd-sub { color: #a33227; }
+  .ltd-sub b { color: #c0392b; }
+  .ltd-link {
+    margin-left: auto;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #6d4c00;
+    text-decoration: underline;
+  }
   .pin-limited-label {
     position: absolute;
     top: -7px; right: -7px;
@@ -184,9 +203,36 @@
   .t-visited { background: #ffe3e3; color: #b02525; }   /* 赤ピン=訪問済み */
   .t-wish    { background: #e3ecff; color: #2b5cc4; }   /* 青ピン=下調べ済み */
   .t-kids    { background: #eef7ee; color: #2f7a2f; }
+  .t-ltd     { background: #fff6d5; color: #8a6d00; font-weight: 800; }
   .t-video   { background: #fff3e3; color: #b05a00; }
   .pin-new {
     animation: pinpulse 1.6s ease-in-out infinite;
+  }
+  /* 開催中のコラボ・期間限定。元のピンの色(赤=訪問済み/青=下調べ)は変えず、
+     金のリングとバッジだけを重ねる。会期が切れたらリングとバッジだけ消える */
+  .pin-campaign {
+    box-shadow: 0 0 0 3px #f9ca24, 0 1px 5px rgba(0,0,0,.45);
+  }
+  .pin-campaign-label {
+    position: absolute;
+    top: -15px;
+    left: 9px;
+    transform: rotate(45deg);
+    background: #f9ca24;
+    color: #5b4300;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 0 3px;
+    line-height: 14px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  /* 会期が終わったら消えてよい単発イベント(企画展など)はピン本体を持たず、
+     金リング+バッジだけで示す */
+  .pin-eventonly {
+    background: #fffbe6 !important;
+    border-color: #f9ca24;
   }
   @keyframes pinpulse {
     0%, 100% { box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 0 rgba(255,211,42,.9); }
@@ -639,6 +685,7 @@
     <button class="filter-btn active" data-filter="all">すべて</button>
     <button class="filter-btn" data-filter="visited">訪問済み</button>
     <button class="filter-btn" data-filter="kids">子連れOK</button>
+    <button class="filter-btn" data-filter="limited">⏳ 期間限定</button>
     <button class="filter-btn" data-filter="wish">下調べ</button>
     <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
     <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
@@ -795,6 +842,7 @@ function applyFilters(spots) {
     if (state.filter === "visited" && s.wish) return false;
     // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
     if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.filter === "limited" && !isLimited(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
@@ -878,6 +926,30 @@ function norenStyle(spot) {
   return { cls: "ph-food", emoji: "🍴", label: "食事処" };
 }
 
+// 期間限定であることをカードの先頭で目立たせる。開くだけで「今だけ」が伝わるように
+function limitedHtml(spot) {
+  const c = campaignOf(spot);
+  const left = daysLeft(spot);
+  if (!c && !isEventOnly(spot)) return "";
+  if (isEventOnly(spot) && left === null) return "";
+  const soon = (left ?? 99) <= 14 ? " soon" : "";
+  const rest = (left ?? 99) <= 30 ? `<b>あと${Math.max(0, left)}日</b>` : "";
+  if (c) {
+    const until = c.untilLabel || c.until;
+    return `<div class="ltd-band${soon}">
+        <span class="ltd-icon">🤝</span>
+        <span class="ltd-main">${escapeHtml(c.title || "コラボ開催中")}</span>
+        <span class="ltd-sub">${escapeHtml(until)}まで ${rest}</span>
+        ${c.url ? `<a class="ltd-link" href="${escapeHtml(c.url)}" target="_blank" rel="noopener">詳細</a>` : ""}
+      </div>`;
+  }
+  return `<div class="ltd-band${soon}">
+      <span class="ltd-icon">⏳</span>
+      <span class="ltd-main">期間限定の開催</span>
+      <span class="ltd-sub">${escapeHtml(spot.untilLabel || spot.until)}まで ${rest}</span>
+    </div>`;
+}
+
 function cardHtml(spot) {
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
@@ -900,7 +972,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${isLimited(spot) ? `<span class="b-limited${(daysLeft(spot) ?? 99) <= 14 ? " soon" : ""}">⏳ ${escapeHtml(spot.untilLabel || spot.until)}まで${(daysLeft(spot) ?? 99) <= 30 ? `(あと${Math.max(0, daysLeft(spot))}日)` : ""}</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -912,6 +984,7 @@ function areaTabSpots(spots) {
     if (!spotCats(s).includes(state.category)) return false;
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.filter === "limited" && !isLimited(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
@@ -1137,29 +1210,49 @@ function renderList() {
 // ピンが積み重なってタップできなくなるのを防ぐ目的。
 const CLUSTER_PX = 44;   // この画素数より近いピン同士はまとめる
 
-// 会期のある企画展など。until を過ぎたら地図から自動で消える(消し忘れ防止)
-function isLimited(spot) { return !!spot.until; }
+// 期間限定の情報は2種類ある。
+//  campaign … 常設の店で開催中のコラボ(スシロー×キティ等)。終わっても店は残るので
+//             会期が切れたら campaign だけ無効化し、スポット自体は残す
+//  until    … スポットそのものが期間限定(企画展など)。会期が切れたら地図から消す
+function campaignOf(spot) {
+  const c = spot.campaign;
+  if (!c || !c.until) return null;
+  const d = new Date(c.until + "T23:59:59+09:00");
+  if (isNaN(d) || d < new Date()) return null;   // 終わったコラボは無かったことにする
+  return c;
+}
+function isEventOnly(spot) { return !!spot.until; }
+function isLimited(spot) { return isEventOnly(spot) || !!campaignOf(spot); }
 function isExpired(spot) {
-  if (!spot.until) return false;
+  if (!spot.until) return false;                 // campaign は期限切れでもスポットは残す
   const d = new Date(spot.until + "T23:59:59+09:00");
   return !isNaN(d) && d < new Date();
 }
-// 残り日数(過ぎていれば負)
+// 残り日数(campaign を優先。過ぎていれば負)
 function daysLeft(spot) {
-  if (!spot.until) return null;
-  const d = new Date(spot.until + "T23:59:59+09:00");
+  const c = campaignOf(spot);
+  const u = c ? c.until : spot.until;
+  if (!u) return null;
+  const d = new Date(u + "T23:59:59+09:00");
   return Math.ceil((d - new Date()) / 86400000);
+}
+function limitedLabel(spot) {
+  const c = campaignOf(spot);
+  if (c) return c.label || c.title || "コラボ開催中";
+  return (spot.untilLabel || spot.until) + "まで";
 }
 
 function makePinEl(spot) {
   const el = document.createElement("div");
   el.className = "pin";
-  el.style.background = isLimited(spot) ? "#e17055" : (spot.wish ? "#2b5cc4" : "#d63031");
+  // ピンの色は「行った(赤)/調べた(青)」を必ず保つ。期間限定は金リングで足す
+  el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
+  if (isEventOnly(spot)) el.classList.add("pin-eventonly");
   if (isLimited(spot)) {
-    el.classList.add("pin-limited");
+    el.classList.add("pin-campaign");
     const lab = document.createElement("span");
-    lab.className = "pin-limited-label";
-    lab.textContent = "⏳";
+    lab.className = "pin-campaign-label";
+    lab.textContent = campaignOf(spot) ? "🤝" : "⏳";
     el.appendChild(lab);
   }
   if (isNew(spot)) {
@@ -1292,6 +1385,7 @@ function showClusterList(items, facility) {
       const tags = [
         s.wish ? `<span class="cl-tag t-wish">🔵 下調べ済み</span>`
                : `<span class="cl-tag t-visited">🔴 訪問済み</span>`,
+        isLimited(s) ? `<span class="cl-tag t-ltd">${campaignOf(s) ? "🤝 コラボ中" : "⏳ 期間限定"}</span>` : "",
         isKidsOk(s) ? `<span class="cl-tag t-kids">子連れOK</span>` : "",
         (v.youtube || v.tiktok || v.instagram) ? `<span class="cl-tag t-video">🎬 動画あり</span>` : ""
       ].join("");

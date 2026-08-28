@@ -73,6 +73,25 @@
     padding: 2px 9px;
     animation: newpulse 1.6s ease-in-out infinite;
   }
+  /* 会期のある企画展。ピンはオレンジ+⏳、カードには残り日数を出す */
+  .b-limited {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    background: #e17055;
+    color: #fff;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .b-limited.soon { background: #d63031; }
+  .pin-limited-label {
+    position: absolute;
+    top: -7px; right: -7px;
+    font-size: 12px;
+    line-height: 1;
+    pointer-events: none;
+  }
   @keyframes newpulse {
     0%, 100% { opacity: 1; }
     50% { opacity: .55; }
@@ -770,6 +789,7 @@ function applyFilters(spots) {
   // 検索中はカテゴリ・絞り込みを無視して全件から探す(タブを跨いで見つけたいため)
   if (state.q.trim()) return spots.filter(s => matchQuery(s, state.q));
   return spots.filter(s => {
+    if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
     if (!spotCats(s).includes(state.category)) return false;
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
     if (state.filter === "visited" && s.wish) return false;
@@ -880,7 +900,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${isLimited(spot) ? `<span class="b-limited${(daysLeft(spot) ?? 99) <= 14 ? " soon" : ""}">⏳ ${escapeHtml(spot.untilLabel || spot.until)}まで${(daysLeft(spot) ?? 99) <= 30 ? `(あと${Math.max(0, daysLeft(spot))}日)` : ""}</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -888,6 +908,7 @@ function cardHtml(spot) {
 
 function areaTabSpots(spots) {
   return spots.filter(s => {
+    if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
     if (!spotCats(s).includes(state.category)) return false;
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && !isKidsOk(s)) return false;
@@ -1116,10 +1137,31 @@ function renderList() {
 // ピンが積み重なってタップできなくなるのを防ぐ目的。
 const CLUSTER_PX = 44;   // この画素数より近いピン同士はまとめる
 
+// 会期のある企画展など。until を過ぎたら地図から自動で消える(消し忘れ防止)
+function isLimited(spot) { return !!spot.until; }
+function isExpired(spot) {
+  if (!spot.until) return false;
+  const d = new Date(spot.until + "T23:59:59+09:00");
+  return !isNaN(d) && d < new Date();
+}
+// 残り日数(過ぎていれば負)
+function daysLeft(spot) {
+  if (!spot.until) return null;
+  const d = new Date(spot.until + "T23:59:59+09:00");
+  return Math.ceil((d - new Date()) / 86400000);
+}
+
 function makePinEl(spot) {
   const el = document.createElement("div");
   el.className = "pin";
-  el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
+  el.style.background = isLimited(spot) ? "#e17055" : (spot.wish ? "#2b5cc4" : "#d63031");
+  if (isLimited(spot)) {
+    el.classList.add("pin-limited");
+    const lab = document.createElement("span");
+    lab.className = "pin-limited-label";
+    lab.textContent = "⏳";
+    el.appendChild(lab);
+  }
   if (isNew(spot)) {
     el.classList.add("pin-new");
     const lab = document.createElement("span");

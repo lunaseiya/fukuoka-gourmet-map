@@ -45,6 +45,8 @@ CHAIN_KIDS = {
     '焼肉なべしま': dict(kids={}, note='九州の焼肉チェーン。サラダバーあり。子連れ設備は未確認。'),
     'ワンカルビ': dict(kids={}, note='焼肉食べ放題チェーン。子連れ設備は未確認。'),
     'すたみな太郎': dict(kids={}, note='焼肉・寿司のバイキングチェーン。子連れ設備は未確認。'),
+    '玄風館': dict(kids={}, note='福岡の老舗焼肉チェーン(辛口のタレで有名)。子連れ設備は未確認。'),
+    'ヌルボン': dict(kids={}, note='福岡の焼肉チェーン(ヌルボングループ)。子連れ設備は未確認。'),
 }
 KIDS_KEYS = ['stroller', 'diaper', 'tatami', 'kidsChair', 'serveMin', 'noise']
 
@@ -72,6 +74,7 @@ ALIAS = {
     'かっぱ寿司': ['かっぱ寿司'], '魚べい': ['魚べい', '元気寿司'],
     '焼肉きんぐ': ['焼肉きんぐ', '焼肉キング'], '牛角': ['牛角'],
     '焼肉なべしま': ['なべしま'], 'ワンカルビ': ['ワンカルビ'], 'すたみな太郎': ['すたみな太郎'],
+    '玄風館': ['玄風'], 'ヌルボン': ['ヌルボン', 'NURUBON'],
 }
 
 
@@ -105,7 +108,8 @@ def main():
 
     add, skip_dup, skip_closed, skip_pref = [], [], [], []
     for url, d in sorted(cache.items(), key=lambda kv: (kv[1]['chain'], kv[1].get('name') or '')):
-        if d.get('closed'):
+        # 店名に【閉店】が付いているものも弾く(ページ本文の文言だけでは拾えない)
+        if d.get('closed') or '【閉店】' in (d.get('name') or ''):
             skip_closed.append(d); continue
         if not d.get('lat') or not d.get('addr'):
             skip_closed.append(d); continue

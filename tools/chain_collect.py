@@ -13,7 +13,7 @@ geocoding.jp を叩く必要がないのでここで座標まで確定させる�
 ※チェーンのグループIDは tabelog.com/grouplst/<ID>/fukuoka/ の <ID> 部分。
   推測で書かない。「tabelog grouplst <チェーン名> 福岡県」で検索して実物を確認すること。
 """
-import json, io, os, re, sys, time, urllib.request
+import json, io, os, re, sys, time, urllib.request, urllib.parse
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 CACHE = os.path.join(ROOT, 'data', 'chain_cache.json')
@@ -82,12 +82,45 @@ def shop_detail(u):
         'closed': closed,
     }
 
+def search_shops(kw):
+    """食べログにグループ登録が無いローカルチェーン用。県内をキーワード検索して拾う。
+    玄風館のような老舗チェーンはグループ化されていないのでこちらを使う。"""
+    urls, page = [], 1
+    while page <= 6:
+        u = 'https://tabelog.com/%s/rstLst/%s/?sw=%s' % (
+            PREF, page if page > 1 else '', urllib.parse.quote(kw))
+        try:
+            h = get(u)
+        except Exception as e:
+            print('  検索エラー p%d %r' % (page, e)); break
+        found = re.findall(r'href="(https://tabelog\.com/%s/A\d+/A\d+/\d+/)"' % PREF, h)
+        new = [x for x in dict.fromkeys(found) if x not in urls]
+        if not new:
+            break
+        urls += new
+        print('  p%d: +%d件 (計%d)' % (page, len(new), len(urls)))
+        page += 1
+        time.sleep(1.0)
+    return urls
+
+
 def main():
     cache = json.load(io.open(CACHE, encoding='utf-8')) if os.path.exists(CACHE) else {}
-    targets = CHAINS if '--all' in sys.argv else [(sys.argv[1], sys.argv[2])]
+    # --kw <検索語> <チェーン名> [店名フィルタの正規表現]
+    #   食べログのキーワード検索は関連の薄い店も混ぜて返す(「玄風館」で とよ唐亭 等が出る)。
+    #   店名がフィルタに一致したものだけ採る。省略時は検索語そのもの
+    name_re = None
+    if '--kw' in sys.argv:
+        i = sys.argv.index('--kw')
+        targets = [('KW:' + sys.argv[i + 1], sys.argv[i + 2])]
+        name_re = re.compile(sys.argv[i + 3] if len(sys.argv) > i + 3 else re.escape(sys.argv[i + 1]))
+    elif '--all' in sys.argv:
+        targets = CHAINS
+    else:
+        targets = [(sys.argv[1], sys.argv[2])]
     for gid, chain in targets:
         print('■ %s (%s)' % (chain, gid))
-        urls = list_shops(gid)
+        urls = search_shops(gid[3:]) if gid.startswith('KW:') else list_shops(gid)
         print('  一覧 %d件' % len(urls))
         got = 0
         for u in urls:
@@ -97,6 +130,8 @@ def main():
                 d = shop_detail(u)
             except Exception as e:
                 print('    詳細エラー %s %r' % (u, e)); time.sleep(1.0); continue
+            if name_re and not name_re.search(d.get('name') or ''):
+                continue    # 検索が拾った無関係な店
             d['chain'] = chain
             d['tabelog'] = u
             cache[u] = d

@@ -38,6 +38,7 @@ KIDS_LABEL = [
     ('diaper',    'おむつ替え台',   'あり', 'なし'),
     ('tatami',    '座敷・小上がり', 'あり', 'なし'),
     ('kidsChair', 'キッズチェア',   'あり', 'なし'),
+    ('kidsMenu',  'キッズメニュー', 'あり', 'なし'),
 ]
 NOISE = {'ok': '子どもの声はあまり気にならない', 'careful': '静かめ。声のボリュームに配慮を',
          'ng': '静かな店。小さい子連れは要検討'}
@@ -48,6 +49,9 @@ def kids_rows(spot):
     for key, label, yes, no in KIDS_LABEL:
         v = k.get(key)
         if v is True:   rows.append((label, yes))
+        # "facility" = 店には無いが同じ建物(モール等)にある。無しと同じ扱いにすると
+        # 実際は困らない店を切り捨ててしまうので、そう書く
+        elif v == 'facility': rows.append((label, '店内には無いが同じ建物内にあり'))
         elif v is False: rows.append((label, no))
     if k.get('serveMin'):
         rows.append(('提供までの目安', '約%d分' % k['serveMin']))

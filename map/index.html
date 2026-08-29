@@ -457,6 +457,17 @@
     border-radius: 999px;
     padding: 2px 9px;
   }
+  /* 子連れ設備のチップ列。何があるかを一目で見せる */
+  .card-kidsrow { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .kf {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; line-height: 1.35;
+    border-radius: 999px; padding: 3px 9px; white-space: nowrap;
+  }
+  .kf-y { background: #eaf6ea; color: #2f7a2f; }   /* 確認できた */
+  .kf-f { background: #fdf2e2; color: #96650f; }   /* 店には無いが同じ建物にある */
+  .kf-n { background: #f1f1f1; color: #8b8b8b; }   /* 無いと分かっている */
+  .kf-s { font-size: 10px; opacity: .8; }
   .card-links {
     margin-top: 8px;
     display: flex;
@@ -771,6 +782,38 @@ async function loadSpots() {
   }
 }
 
+// 子連れ設備の値は4通り。
+//   true       … その店にある(確認済み)
+//   "facility" … 店には無いが同じ建物(モール等)にある。飛牛下原店のように実質困らないケース
+//   false      … 無いと確認した
+//   null       … 未確認。推測で埋めない
+const kidsHas = v => v === true || v === "facility";
+
+const KIDS_FACILITY = [
+  ["kidsChair", "🪑", "子供椅子"],
+  ["tatami",    "🧎", "座敷・小上がり"],
+  ["diaper",    "🚼", "おむつ替え"],
+  ["stroller",  "👶", "ベビーカーOK"],
+  ["kidsMenu",  "🍽", "キッズメニュー"],
+];
+
+function kidsFacilityHtml(spot) {
+  const k = spot.kids || {};
+  const yes = [], no = [];
+  for (const [key, icon, label] of KIDS_FACILITY) {
+    const v = k[key];
+    if (v === true) yes.push(`<span class="kf kf-y">${icon} ${label}</span>`);
+    else if (v === "facility") yes.push(`<span class="kf kf-f">${icon} ${label}<span class="kf-s">建物内</span></span>`);
+    else if (v === false) no.push(`<span class="kf kf-n">${icon} ${label}<span class="kf-s">なし</span></span>`);
+  }
+  if (k.noise === "ok") yes.push(`<span class="kf kf-y">🔉 騒いでも平気</span>`);
+  // 「なし」は、他に確認できた設備がある店でだけ出す。
+  // 単独で出すと、そもそも座敷を期待しない店(カウンターのラーメン屋等)にまで
+  // 灰色のチップが並んで邪魔になるだけで、判断の足しにならない
+  if (!yes.length) return "";
+  return `<div class="card-kidsrow">${yes.join("")}${no.join("")}</div>`;
+}
+
 function isKidsOk(spot) {
   // 温泉は家族風呂・貸切風呂があれば周りに気を遣わず子連れで入れる(=子連れOK扱い)
   if (/家族風呂|家族湯|貸切風呂|貸切湯/.test((spot.genre || "") + (spot.verdict || ""))) return true;
@@ -778,7 +821,7 @@ function isKidsOk(spot) {
   // (取り込み時に with:"family" を仮置きしているため、withでは判定しない)
   if (spot.wish) {
     const k = spot.kids || {};
-    return ["stroller", "diaper", "tatami", "kidsChair", "kidsMenu"].some(key => k[key] === true);
+    return ["stroller", "diaper", "tatami", "kidsChair", "kidsMenu"].some(key => kidsHas(k[key]));
   }
   return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
 }
@@ -970,6 +1013,7 @@ function cardHtml(spot) {
         <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
       </div>
       <div class="card-area">${cityArea}</div>
+      ${kidsFacilityHtml(spot)}
       ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
       ${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}

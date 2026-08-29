@@ -36259,5 +36259,65 @@
   "thumb": null,
   "wish": true,
   "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40038009/"
+ },
+ {
+  "id": "sp72a8556a9d",
+  "pref": "福岡県",
+  "visited": null,
+  "with": "family",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40069042/",
+  "name": "やきにく飛牛 BRANCH福岡下原店",
+  "area": "下原(BRANCH福岡下原)",
+  "city": "福岡市東区",
+  "genre": "焼肉",
+  "lat": 33.672457,
+  "lng": 130.450652,
+  "address": "福岡県福岡市東区下原4-2-1 BRANCH福岡下原 1F",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐全席半個室の掘りごたつで、子連れでも周囲を気にせず食べられる。公式に「お子様連れ歓迎」、お子様用の椅子・おもちゃ・ブランケットの用意あり。ランチ11:30〜14:30(金土日)/ディナー17:00〜翌1:00、無休。BRANCH福岡下原の駐車場340台。予算3,500〜4,000円(ランチ1,001〜1,500円)。TEL 092-674-0129。"
+ },
+ {
+  "id": "sp63af546948",
+  "pref": "福岡県",
+  "visited": null,
+  "with": "family",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40006867/",
+  "name": "やきにく飛牛 七隈本店",
+  "area": "七隈",
+  "city": "福岡市城南区",
+  "genre": "焼肉・ホルモン",
+  "lat": 33.553851,
+  "lng": 130.354337,
+  "address": "福岡県福岡市城南区七隈5-21-8",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "飛牛の本店。全席掘りごたつで4名・6名の半個室あり。公式に「お子様連れ歓迎」「ご家族でもゆったりお食事可能」と明記。子供椅子の有無は記載なし。平日17:00〜25:00/土日祝16:00〜25:00。駐車場17台。TEL 092-864-1355。"
  }
 ]

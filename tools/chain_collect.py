@@ -60,6 +60,29 @@ def list_shops(gid):
         time.sleep(1.0)
     return urls
 
+def facilities(h):
+    """「席・設備」ブロックだけを切り出して設備を読む。
+    ブロックを限定しないと口コミ本文の「座敷」等を拾ってしまう。"""
+    t = re.sub(r'\s+', ' ', re.sub(r'<[^>]+>', '|', h))
+    t = re.sub(r'(\|\s*)+', '|', t)      # 「| | |」も1本にまとめる。ここを詰めないと項目が拾えない
+    i = t.find('席・設備')
+    if i < 0:
+        return {}
+    blk = t[i:i + 2600].split('関連店舗情報')[0]
+    g = lambda p: (re.search(p, blk).group(1).strip() if re.search(p, blk) else None)
+    # 座敷・掘りごたつは席数の内訳に書かれる(例:「168席（テーブル19卓98席・座敷12卓70席）」)
+    seats = g(r'席数\|((?:[^|]*\|){0,2}[^|]*)') or ''
+    return {
+        'seats': (g(r'席数\|([^|]+)') or None),
+        'seatnote': (re.split(r'個室|貸切|禁煙|駐車場', seats)[0].strip('| ') or None),
+        'tatami': bool(re.search(r'座敷|掘りごたつ|小上が', seats)),
+        'private': g(r'個室\|(有|無)'),
+        'parking': g(r'駐車場\|(有|無)'),
+        'kidsline': g(r'お子様連れ\|([^|]+)'),
+        'scene': (g(r'利用シーン\|(.*?)こんな時によく') or '').strip('| ') or None,
+    }
+
+
 def shop_detail(u):
     h = get(u)
     def one(p, s=h):
@@ -80,6 +103,7 @@ def shop_detail(u):
         'genre': one(r'"servesCuisine"\s*:\s*"([^"]+)'),
         'tel': one(r'"telephone"\s*:\s*"([^"]+)'),
         'closed': closed,
+        **facilities(h),
     }
 
 def search_shops(kw):
@@ -104,8 +128,30 @@ def search_shops(kw):
     return urls
 
 
+def refresh(cache):
+    """キャッシュ済みの全店を取り直して設備欄(座敷・お子様連れ等)を足す"""
+    todo = [u for u, v in cache.items() if 'kidsline' not in v]
+    print('■ 設備欄の追加取得 %d件' % len(todo))
+    for n, u in enumerate(todo, 1):
+        try:
+            d = shop_detail(u)
+        except Exception as e:
+            print('  エラー %s %r' % (u, e)); time.sleep(1.0); continue
+        d['chain'] = cache[u]['chain']; d['tabelog'] = u
+        cache[u] = d
+        mark = ('座敷' if d.get('tatami') else '  ') + ' ' + (d.get('kidsline') or '')
+        print('  %3d/%d %-30s %s' % (n, len(todo), (d['name'] or '?')[:30], mark[:40]))
+        if n % 25 == 0:
+            io.open(CACHE, 'w', encoding='utf-8').write(json.dumps(cache, ensure_ascii=False, indent=1))
+        time.sleep(1.1)
+    io.open(CACHE, 'w', encoding='utf-8').write(json.dumps(cache, ensure_ascii=False, indent=1))
+    print('REFRESH_DONE')
+
+
 def main():
     cache = json.load(io.open(CACHE, encoding='utf-8')) if os.path.exists(CACHE) else {}
+    if '--refresh' in sys.argv:
+        return refresh(cache)
     # --kw <検索語> <チェーン名> [店名フィルタの正規表現]
     #   食べログのキーワード検索は関連の薄い店も混ぜて返す(「玄風館」で とよ唐亭 等が出る)。
     #   店名がフィルタに一致したものだけ採る。省略時は検索語そのもの

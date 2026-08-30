@@ -36896,5 +36896,35 @@
   "thumb": null,
   "wish": true,
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40020315/"
+ },
+ {
+  "id": "sp226480b37f",
+  "name": "博多川端どさんこ 博多デイトス店",
+  "area": "博多駅中央街(博多めん街道)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "味噌ラーメン・ラーメン",
+  "lat": 33.59113,
+  "lng": 130.421399,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 博多デイトス2F",
+  "visited": "2026-08-28",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐創業昭和45年・中洲川端の老舗「博多川端どさんこ」の博多駅店。博多めん街道(デイトス2F)内。豚骨だらけの博多で半世紀みそラーメンを作り続けた店。子供椅子あり(現地確認・木製の椅子が店頭に用意されている)。ラーメンは みそ/九州しょうゆ/塩バター の3系統で各950円、特製1,000円、味噌バター1,050円、味噌チャーシューめん1,150円、スペシャル1,350円(店頭メニュー実写)。替え玉150円・大盛り150円・白ごはん250円。34席(カウンター+テーブル)。駐車場なし。TEL 092-415-8030。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/"
  }
 ]

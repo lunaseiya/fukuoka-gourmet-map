@@ -140,6 +140,17 @@
     cursor: pointer;
   }
   .pc-blue { background: #2b5cc4; }
+  /* まとめピンは外周リングで赤(訪問済み)の割合を出し、中の丸に件数を書く */
+  .pin-cluster { padding: 4px; box-sizing: border-box; }
+  .pc-inner {
+    width: 100%; height: 100%;
+    border-radius: 999px;
+    background: #2b5cc4;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; color: #fff;
+    padding: 0 4px;
+  }
+  .pc-inner.pc-red { background: #d63031; }
   /* 同じ施設のまとまり。押すと必ずリストが出るので、丸ピンと形を変えて区別する */
   .pin-cluster.pc-facility {
     border-radius: 9px;
@@ -1320,10 +1331,21 @@ function makePinEl(spot) {
 function makeClusterEl(items) {
   const el = document.createElement("div");
   el.className = "pin-cluster";
-  // 1件でも未訪問(青)が混ざれば青系、全部訪問済みなら赤系にして一目で分かるように
-  const allVisited = items.every(s => !s.wish);
-  el.classList.add(allVisited ? "pc-red" : "pc-blue");
-  el.textContent = items.length;
+  // 訪問済み(赤)の割合をリングで出す。
+  // 以前は「全員が訪問済みでないと赤にしない」判定だったため、広域で
+  // まとめられると必ず青になり、実績が無いマップに見えてしまっていた。
+  // 赤429/青967 なので多数決でも青に倒れる。割合をそのまま見せるのが正しい
+  const red = items.filter(s => !s.wish).length;
+  const pct = Math.round((red / items.length) * 100);
+  el.style.background =
+    `conic-gradient(#d63031 0 ${pct}%, #2b5cc4 ${pct}% 100%)`;
+  const inner = document.createElement("span");
+  inner.className = "pc-inner";
+  inner.textContent = items.length;
+  // 中の丸は「1件でも行っていれば赤」。行った実績がある場所だと分かるようにする
+  if (red > 0) inner.classList.add("pc-red");
+  el.appendChild(inner);
+  el.title = `${items.length}件のうち ${red}件は訪問済み`;
   return el;
 }
 

@@ -158,7 +158,7 @@ def find_asoview(spot, idx, used):
 
 # ---------------- メイン ----------------
 def spot_kind(s):
-    if s.get('stay') is True or re.search(r'旅館|ホテル|宿|リゾート|ペンション|民宿|別邸',
+    if s.get('stay') is True or re.search(r'旅館|ホテル|リゾート|ペンション|民宿|別邸|お宿|の宿|温泉宿',
                                           (s.get('genre') or '') + s['name']):
         return 'stay'
     if s.get('category') == 'play':

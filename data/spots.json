@@ -1020,7 +1020,8 @@
   "pref": "大分県",
   "category": "onsen",
   "bathAge": "小人料金は3歳〜小学生(オムツ児は不明)",
-  "wish": false
+  "wish": false,
+  "booking": "https://www.jalan.net/yad344350/"
  },
  {
   "id": "riiberuhoteruattousj-27",
@@ -5787,7 +5788,8 @@
   "thumb": null,
   "wish": false,
   "pref": "福岡県",
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/160380/"
  },
  {
   "id": "sagadaiwaonsenhoteruamandi",
@@ -5968,7 +5970,8 @@
   "wish": false,
   "pref": "長崎県",
   "category": "onsen",
-  "stay": true
+  "stay": true,
+  "booking": "https://www.jalan.net/yad319516/"
  },
  {
   "id": "yamadasanchinobokujoumirukun",
@@ -6779,7 +6782,8 @@
   "thumb": null,
   "wish": false,
   "pref": "福岡県",
-  "category": "play"
+  "category": "play",
+  "asoview": "https://www.asoview.com/base/120044/"
  },
  {
   "id": "kyuushuutetsudoukinenkan",
@@ -9367,7 +9371,8 @@
   },
   "thumb": null,
   "wish": false,
-  "category": "onsen"
+  "category": "onsen",
+  "booking": "https://www.jalan.net/yad381445/"
  },
  {
   "id": "fukunoyusawaramise",
@@ -9484,7 +9489,8 @@
   },
   "thumb": null,
   "wish": false,
-  "category": "onsen"
+  "category": "onsen",
+  "booking": "https://www.jalan.net/yad303262/"
  },
  {
   "id": "nijouonsenkiraranoyu",
@@ -14395,7 +14401,8 @@
   "thumb": null,
   "wish": false,
   "category": "play",
-  "in": "markisfukuokamomochi"
+  "in": "markisfukuokamomochi",
+  "asoview": "https://www.asoview.com/base/160936/"
  },
  {
   "id": "vsparklalaportfukuoka",
@@ -25890,7 +25897,8 @@
    "kaori_04_kaorizuke.jpg",
    "kaori_05_kousuibin.jpg",
    "kaori_02_omutsu.jpg"
-  ]
+  ],
+  "asoview": "https://www.asoview.com/base/507/"
  },
  {
   "id": "spb7d077b7ae",

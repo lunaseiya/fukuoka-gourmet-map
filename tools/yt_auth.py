@@ -15,9 +15,12 @@ from googleapiclient.discovery import build
 HERE = os.path.dirname(os.path.abspath(__file__))
 SECRET = os.path.join(HERE, 'yt_client_secret.json')
 TOKEN = os.path.join(HERE, 'yt_token.json')
-# アップロードと自分のチャンネル情報の取得だけ。視聴者データ等は要求しない
+# アップロード / 自分のチャンネル情報 / アナリティクス(視聴者の年齢層まで)。
+# yt-analytics.readonly は yt_report.py が使う。2026-09-10 に追加したので、
+# それ以前に作った yt_token.json では 403 になる → このスクリプトで再認証すること
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload',
-          'https://www.googleapis.com/auth/youtube.readonly']
+          'https://www.googleapis.com/auth/youtube.readonly',
+          'https://www.googleapis.com/auth/yt-analytics.readonly']
 
 
 def main():

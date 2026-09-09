@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>お問い合わせ・情報のご提供 | ふくおか、こそだてグルメ。</title>
+<meta name="description" content="掲載情報の誤り・閉店のご報告、店舗の掲載希望、PR・タイアップのご相談はこちらから。">
+<meta name="robots" content="noindex">
+<link rel="canonical" href="https://lunaseiya.github.io/fukuoka-gourmet-map/contact.html">
+<link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32.png">
+<meta name="theme-color" content="#d63031">
+<style>
+  :root {
+    --accent: #d63031;
+    --accent-soft: #ffe3e3;
+    --text: #222;
+    --muted: #767676;
+    --border: #e5e5e5;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+    line-height: 1.8;
+  }
+  a { color: var(--accent); }
+  header {
+    padding: 18px 20px;
+    background: linear-gradient(160deg, #fff 0%, var(--accent-soft) 100%);
+    border-bottom: 1px solid var(--border);
+  }
+  header a { font-weight: 700; text-decoration: none; font-size: 14px; }
+  main { max-width: 720px; margin: 0 auto; padding: 24px 16px 56px; }
+  h1 { font-size: 22px; margin: 8px 0 6px; }
+  .lead { font-size: 14px; color: #444; margin: 0 0 20px; }
+  .kinds {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 14px 18px; margin: 0 0 18px; font-size: 14px;
+  }
+  .kinds strong { display: block; margin-bottom: 6px; font-size: 13px; color: var(--muted); }
+  .kinds ul { margin: 0; padding-left: 1.2em; }
+  .kinds li { margin: 3px 0; }
+  #spotNote {
+    display: none;
+    background: var(--accent-soft); border: 1px solid #f5c6c6;
+    border-radius: 10px; padding: 12px 16px; margin: 0 0 18px; font-size: 14px;
+  }
+  #spotNote b { color: var(--accent); }
+  .formwrap {
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    overflow: hidden;
+  }
+  iframe { display: block; width: 100%; border: 0; }
+  .fallback { font-size: 13px; color: var(--muted); margin: 14px 2px 0; }
+  .note { font-size: 12.5px; color: var(--muted); margin-top: 22px; }
+  footer {
+    text-align: center; padding: 24px; font-size: 11px; color: var(--muted);
+    border-top: 1px solid var(--border);
+  }
+</style>
+</head>
+<body>
+
+<header><a href="./">← ふくおか、こそだてグルメ。</a></header>
+
+<main>
+  <h1>お問い合わせ・情報のご提供</h1>
+  <p class="lead">お気づきの点や、お仕事のご相談はこちらからお願いします。</p>
+
+  <div class="kinds">
+    <strong>こんなときに</strong>
+    <ul>
+      <li>掲載情報が間違っている／お店が閉店・移転している</li>
+      <li>子連れで行けるお店・施設を載せてほしい</li>
+      <li>PR・タイアップ・お仕事のご相談</li>
+    </ul>
+  </div>
+
+  <div id="spotNote"></div>
+
+  <div class="formwrap">
+    <iframe id="gform" title="お問い合わせフォーム" height="1400"
+            loading="lazy" src="about:blank">読み込んでいます…</iframe>
+  </div>
+
+  <p class="fallback">
+    フォームが表示されない場合は <a id="directLink" href="#" target="_blank" rel="noopener">こちらから直接開いて</a> ください。
+  </p>
+
+  <p class="note">
+    いただいた内容は掲載情報の修正・追加に使わせていただきます。
+    個人情報の取り扱いは<a href="privacy.html">プライバシーポリシー</a>をご覧ください。<br>
+    返信が必要な場合はメールアドレスのご記入をお願いします(必ず返信できるとは限りません)。
+  </p>
+</main>
+
+<footer>
+  <div style="margin-bottom:8px;">
+    <a href="./" style="color:var(--muted);">トップページ</a> ・
+    <a href="map/" style="color:var(--muted);">マップ</a> ・
+    <a href="about.html" style="color:var(--muted);">運営者情報</a> ・
+    <a href="privacy.html" style="color:var(--muted);">プライバシーポリシー</a>
+  </div>
+  © ふくおか、こそだてグルメ。
+</footer>
+
+<script>
+(function () {
+  var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSdYv2Drd_HqAI8YlLpmR_Udzc652aFpR08hl0B1nPjaEaFy4g/viewform";
+  var ENTRY_SPOT = "entry.345421407";   // 「お店・施設名」
+
+  // スポットページの「この店の情報を報告する」から ?spot=店名 で飛んでくる。
+  // 店名をフォームに事前入力しておかないと「どの店の話か分からない報告」が届く
+  var spot = "";
+  try {
+    spot = new URLSearchParams(location.search).get("spot") || "";
+  } catch (e) { spot = ""; }
+  spot = spot.slice(0, 120);
+
+  var qs = "usp=pp_url";
+  if (spot) qs += "&" + ENTRY_SPOT + "=" + encodeURIComponent(spot);
+
+  document.getElementById("gform").src = FORM + "?embedded=true&" + qs;
+  document.getElementById("directLink").href = FORM + "?" + qs;
+
+  if (spot) {
+    var el = document.getElementById("spotNote");
+    el.innerHTML = "「<b></b>」についてのご連絡として送信されます。" +
+                   "別のお店の場合はフォーム内の「お店・施設名」を書き換えてください。";
+    el.querySelector("b").textContent = spot;   // 店名は textContent で入れる(HTML注入を防ぐ)
+    el.style.display = "block";
+  }
+})();
+</script>
+
+</body>
+</html>

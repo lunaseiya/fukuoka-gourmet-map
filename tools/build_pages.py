@@ -109,6 +109,8 @@ th{width:42%;color:#555;font-weight:600}
 .verdict{white-space:pre-wrap}
 footer{margin-top:28px;font-size:12px;color:#767676}
 .rel a{display:inline-block;margin:0 10px 8px 0;font-size:14px;color:#d63031;text-decoration:none}
+.report{margin:22px 0 0;padding:14px 16px;background:#fff;border:1px solid #e5e5e5;border-radius:10px;font-size:13px;color:#555}
+.report .btn{margin-top:8px;border-color:#d63031;color:#d63031}
 """
 
 SPOT_TPL = """<!DOCTYPE html>
@@ -136,9 +138,13 @@ SPOT_TPL = """<!DOCTYPE html>
 {links}
 </div>
 {rel_block}
+<div class="report">
+情報が違っていたり、閉店・移転していたら教えてください。<br>
+<a class="btn" href="../contact.html?spot={name_q}">この店の情報を報告する</a>
+</div>
 <footer>
 情報は掲載時点のものです。最新の営業状況・価格は店舗の公式情報をご確認ください。<br>
-<a href="../index.html">ふくおか、こそだてグルメ。</a> ／ <a href="../about.html">このサイトについて</a>
+<a href="../index.html">ふくおか、こそだてグルメ。</a> ／ <a href="../about.html">このサイトについて</a> ／ <a href="../contact.html">お問い合わせ</a>
 </footer>
 </div></body></html>
 """
@@ -158,7 +164,7 @@ AREA_TPL = """<!DOCTYPE html>
 <div class="sub">ベビーカーで入れるか、おむつ替え台があるか、キッズチェアがあるか。実際に行って確かめた情報です。</div>
 {list_html}
 <div class="btns"><a class="btn map" href="../map/index.html">地図で探す</a></div>
-<footer><a href="../index.html">ふくおか、こそだてグルメ。</a></footer>
+<footer><a href="../index.html">ふくおか、こそだてグルメ。</a> ／ <a href="../contact.html">お問い合わせ・情報のご提供</a></footer>
 </div></body></html>
 """
 
@@ -234,7 +240,9 @@ def build():
             css=CSS, ld=jsonld(s), name=esc(s['name']), genre=esc(s.get('genre') or ''),
             city=esc(s.get('city') or ''), area=('／' + esc(s['area'])) if s.get('area') else '',
             kids_block=kids_block, verdict_block=verdict_block,
-            links=''.join(links), rel_block=rel_block)
+            links=''.join(links), rel_block=rel_block,
+            # 報告フォームに店名を事前入力するため(どの店の話か分からない報告を防ぐ)
+            name_q=urllib.parse.quote(s['name']))
         fn = s['id'] + '.html'
         io.open(os.path.join(sdir, fn), 'w', encoding='utf-8').write(htmlstr)
         written[sdir].add(fn)

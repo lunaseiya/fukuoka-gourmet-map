@@ -1005,10 +1005,28 @@ function limitedHtml(spot) {
         ${c.url ? `<a class="ltd-link" href="${escapeHtml(c.url)}" target="_blank" rel="noopener">詳細</a>` : ""}
       </div>`;
   }
+  // 企画展は**まだ始まっていないもの**も登録する(巡回展など先の予定が分かるため)。
+  // 開始日が未来なら「◯月◯日から」と出し、残り日数ではなく開幕までの日数を見せる。
+  // 開始済みなら従来どおり「◯月◯日まで」
+  const nowMs = Date.now();
+  const startMs = spot.from ? new Date(spot.from + "T00:00:00+09:00").getTime() : null;
+  const notYet = startMs !== null && !isNaN(startMs) && startMs > nowMs;
+  if (notYet) {
+    const d = Math.ceil((startMs - nowMs) / 86400000);
+    return `<div class="ltd-band">
+        <span class="ltd-icon">📅</span>
+        <span class="ltd-main">これから開催</span>
+        <span class="ltd-sub">${escapeHtml(spot.fromLabel || spot.from)}〜${escapeHtml(spot.untilLabel || spot.until)}
+          ${d <= 60 ? `<b>あと${d}日で開幕</b>` : ""}</span>
+      </div>`;
+  }
+  const span = spot.fromLabel
+    ? `${escapeHtml(spot.fromLabel)}〜${escapeHtml(spot.untilLabel || spot.until)}`
+    : `${escapeHtml(spot.untilLabel || spot.until)}まで`;
   return `<div class="ltd-band${soon}">
       <span class="ltd-icon">⏳</span>
       <span class="ltd-main">期間限定の開催</span>
-      <span class="ltd-sub">${escapeHtml(spot.untilLabel || spot.until)}まで ${rest}</span>
+      <span class="ltd-sub">${span} ${rest}</span>
     </div>`;
 }
 

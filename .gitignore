@@ -4,3 +4,15 @@
 
 # 写真の検品用。モザイク済みの原寸JPEGで重く、公開する必要が無い
 thumbs_review/
+
+# YouTube API の認証情報。**絶対にコミットしない**
+# (client_secret はアプリの秘密鍵、token はチャンネルへのアクセス権そのもの)
+tools/yt_client_secret.json
+tools/yt_token.json
+
+# 作業中に出した検品用の一時ファイル。公開不要(Pagesの容量も食う)
+tools/__pycache__/
+data/_spots_backup_*.json
+/*_check*.jpg
+/yt_out.txt
+/yt_sg.txt

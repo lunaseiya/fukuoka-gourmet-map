@@ -43236,5 +43236,39 @@
   "stay": true,
   "in": "rotenyumomiji-yamaga",
   "web": "https://www.yamagarotenyu-momiji.com/"
+ },
+ {
+  "id": "paradisegarden-sasebo",
+  "name": "ザ・パラダイスガーデン・サセボ",
+  "area": "早岐(ハウステンボス周辺)",
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "温泉リゾートホテル",
+  "address": "長崎県佐世保市崎岡町853-12",
+  "lat": 33.119985,
+  "lng": 129.79629,
+  "visited": "2026-05-30",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**ハウステンボスまで車で約10分**、JR早岐駅から車5分。全182室の温泉リゾート。⭐部屋は**畳の客間とベッドが両方ある和洋室**(36㎡・定員4名)で、押入れ付き。子連れで広く使える。館内の**うずしお温泉は源泉かけ流し**で、大浴場「美人の湯」とサウナ、貸切の「家族の湯」8室がある。⭐朝食は蓋物の和定食で品数が多く、**お子様メニューあり**。ご飯と味噌汁はセルフ。**ベビーベッドはお食事処で貸してもらえた**(子供椅子・バウンサーもあり)。部屋にセルフアメニティ・電子レンジ・製氷機。ボウリング場などのレジャー施設も併設。日帰り入浴は大人900円/小学生500円/幼児(3歳〜)250円、家族の湯3,500円(50分)、9:00〜翌0:00・無休。TEL 0956-39-4800。⚠**大浴場そのものは広くはない**(実際に入った印象)。⚠おむつ替え台・ベビーカーでの館内移動は未確認。",
+  "bathAge": "記載なし(日帰りは3歳から幼児料金250円)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": "onsen",
+  "stay": true,
+  "web": "https://www.paradise-g.jp/",
+  "booking": "https://www.jalan.net/yad355868/"
  }
 ]

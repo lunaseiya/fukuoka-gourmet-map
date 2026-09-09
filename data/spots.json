@@ -43149,5 +43149,38 @@
   "stay": true,
   "web": "https://mf-h.jp/",
   "booking": "https://www.jalan.net/yad349500/"
+ },
+ {
+  "id": "kuronoren-yamaga",
+  "name": "露天湯椛 黒暖簾",
+  "area": "山鹿温泉",
+  "city": "山鹿市",
+  "pref": "熊本県",
+  "genre": "貸切の湯宿(日帰り利用可)",
+  "address": "熊本県山鹿市中1326-11",
+  "lat": 33.017304,
+  "lng": 130.710807,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐山鹿温泉「露天湯 椛」の貸切の湯宿。一棟まるごと貸切なので**人数が何人でも追加料金なし**(公式)。内湯・**すべり台付きの露天風呂**・サウナ(90度)・水風呂(17度)・外気浴が付き、子連れでも他の客を気にせず入れる。日帰りは**120分4,800円(税込)・12:00〜14:00の1枠限定**、予約は利用日の1週間前から。宿泊は1泊19,800円(月〜木・日)／29,800円(金・土・祝前日)、別途入湯税150円/人。チェックイン15:00／チェックアウト10:00、宿泊予約は6か月前から。TEL 0968-43-3026。⚠おむつ替え台・ベビーチェア等の設備は公式に記載がなく未確認。入浴可能年齢の記載もないため、乳児連れは事前に問い合わせを。※同じ敷地に姉妹棟「白暖簾」と家族湯の「露天湯 椛」本体(60分1,600円〜)がある。",
+  "bathAge": "明記なし(貸切のため年齢制限の記載なし)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "stay": true,
+  "web": "https://www.yamagarotenyu-momiji.com/"
  }
 ]

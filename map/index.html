@@ -1629,6 +1629,40 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
 
 
 
+// URL の #spot=<id> で来たときに、そのスポットのカードを開く。
+// スポット個別ページの「地図で見る」ボタンと、SNS投稿からの直リンクがここを通る。
+// ⚠この処理が無く、スポットページ1,600枚超の「地図で見る」が効いていなかった(2026-09-10に発覚)。
+// タブ(お食事/宿・温泉/遊び場)や絞り込みで対象外になっていると開けないので、
+// スポットのカテゴリへタブを切り替え、絞り込みとエリアは「すべて」に戻してから開く。
+// (例: 公園は play タブなので、初期表示の gourmet タブのままでは見えない)
+function openFromHash() {
+  const m = /(?:^|[#&])spot=([^&]+)/.exec(location.hash || "");
+  if (!m) return;
+  let id;
+  try { id = decodeURIComponent(m[1]); } catch (e) { id = m[1]; }
+  const sp = state.spots.find(s => s.id === id);
+  if (!sp) return;
+
+  const cats = spotCats(sp);
+  if (!cats.includes(state.category)) {
+    state.category = cats[0];
+    document.querySelectorAll(".cat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.cat === state.category));
+    document.body.classList.toggle("cat-onsen", state.category === "onsen");
+  }
+  state.q = "";
+  state.filter = "all";
+  document.querySelectorAll(".filter-btn").forEach(b =>
+    b.classList.toggle("active", b.dataset.filter === "all"));
+  state.areas.clear();
+  state.areasDraft.clear();
+  populateAreaSelect(state.spots);
+  renderAll();
+  focusSpot(sp);
+}
+
+window.addEventListener("hashchange", openFromHash);
+
 (async function main() {
   const spots = await loadSpots();
   state.spots = spots;
@@ -1637,6 +1671,7 @@ document.querySelectorAll(".filter-btn").forEach(btn => {
   if (!spots.length) {
     renderList();
   }
+  openFromHash();
 })();
 </script>
 

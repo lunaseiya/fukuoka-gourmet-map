@@ -43720,5 +43720,141 @@
   "wish": true,
   "category": "play",
   "web": "https://www.ksai.info/"
+ },
+ {
+  "id": "hakata-senryu-tajima",
+  "name": "麺処 博多 閃龍",
+  "area": "田島",
+  "city": "福岡市城南区",
+  "pref": "福岡県",
+  "genre": "とんこつラーメン",
+  "address": "福岡県福岡市城南区田島5-4-21",
+  "lat": 33.563686,
+  "lng": 130.369408,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2024年8月オープン。住宅街の中にある**とんこつラーメン600円**の店。背脂が浮くこってり系で、具はチャーシューとネギのシンプル構成。⭐SNSで評判なのが**和牛ステーキ丼1,600円**——レアに火入れした牛肉に秘伝のタレを絡めたもので、「ラーメン屋でこのクオリティ」と話題になっている。ミニ牛すじ丼セット900円もある。**11:30〜15:00の昼のみ営業・不定休**。⭐**無料駐車場あり**。⚠昼だけ・不定休なので、行く前にSNSで営業を確認するのが安全。⚠子連れ設備(子供椅子・おむつ替え)は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40068274/"
+ },
+ {
+  "id": "mikawa-muvalley",
+  "name": "地底王国 美川ムーバレー",
+  "area": "美川町",
+  "city": "岩国市",
+  "pref": "山口県",
+  "genre": "冒険テーマパーク・謎解き",
+  "address": "山口県岩国市美川町根笠1564-1",
+  "lat": 34.188637,
+  "lng": 131.994721,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "1993年に閉山したタングステン鉱山「玖珂鉱山」の坑道跡を使った冒険テーマパーク。ムー大陸などの超古代文明がテーマで、⭐**地図を頼りに謎を解きながら巨大な地底空間を歩く**(所要**約60〜120分**・**予約不要**)。⭐**坑道内は年間を通して約14〜17℃**なので、**猛暑日と雨の日のおでかけに強い**。⭐**砂金探し1,650円 / 宝石(天然石)探し990円**の体験もある(入国料とは別料金)。入国料は**中学生以上2,600円 / 小学生1,200円 / 未就学児は無料**。10:00〜17:00(**地底王国の最終受付16:00**)。**休国日は毎週火・水曜と12/31〜1/1**だが、夏季(7〜9月)は無休営業になる年がある。⭐**駐車場は無料**。⚠営業時間と休国日は季節で変わるので、行く前に公式で確認すること。⚠坑道内は涼しいので夏でも羽織るものがあるとよい(気温14〜17℃)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://muvalley.com/",
+  "asoview": "https://www.asoview.com/base/155304/"
+ },
+ {
+  "id": "forest-adventure-soeda",
+  "name": "フォレストアドベンチャー・添田",
+  "area": "添田町",
+  "city": "田川郡添田町",
+  "pref": "福岡県",
+  "genre": "アスレチック・ジップライン",
+  "address": "福岡県田川郡添田町大字野田1288-3",
+  "lat": 33.549054,
+  "lng": 130.859867,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "2023年4月29日オープン。⭐**道の駅 歓遊舎ひこさんの敷地内**にあるので、**道の駅とレストランとセットで遊べて駐車場も無料**(100台以上・大型バス可)。管理棟はJR日田彦山線の**旧駅舎**で、線路の上を歩いて園内へ入る。⭐コースが3つあり年齢で分かれる: **リトルクエスト1,000円**(体重70kgまで・**身長制限なし・時間無制限・ハーネス不要**で小さい子でも遊べる) / **キャノピーコース3,000円**(身長110cm以上・約1〜1.5時間) / **アドベンチャーコース4,000円**(小学4年生以上または身長140cm以上・約1.5〜2時間)。いずれも体重110kgまで、8名以上のグループ料金あり。**見守りは1人300円**。⚠**軍手が必須**(オリジナル軍手1双300円を販売)。⚠**運動靴が必須**。⚠**最終受付15:00**。⚠**毎週火・水曜が休み**。TEL 080-3975-4010。木の遊具なので15:00以降は日陰になって過ごしやすい。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "in": "michinoekikanyuushahikosan",
+  "web": "https://foret-aventure.jp/park/fa-soeda/",
+  "campaign": {
+   "title": "木の日キャンペーン(木曜半額)",
+   "label": "木の日",
+   "note": "9月の毎週木曜はアドベンチャーコースとキャノピーコースが半額",
+   "from": "2026-09-01",
+   "fromLabel": "9月1日",
+   "until": "2026-09-30",
+   "untilLabel": "9月30日",
+   "url": "https://foret-aventure.jp/park/fa-soeda/"
+  }
+ },
+ {
+  "id": "chikugo-park-fitness",
+  "name": "筑後広域公園 フィットネスエリア",
+  "area": "瀬高町本郷",
+  "city": "みやま市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "address": "福岡県みやま市瀬高町本郷",
+  "lat": 33.1712728,
+  "lng": 130.4868769,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**福岡県営でいちばん広い公園**(約192.6ha・筑後市とみやま市にまたがる)の中の1エリア。遊具エリアが4つあり、**全部回るのは徒歩では無理な広さ**なので、行きたいエリアを決めて駐車場を選ぶ。⭐**フィットネスエリアは公園内で一番遊具が多い**(**17種類**)。登る・渡る・ぶら下がる系が中心で、2020年10月に整備されたので遊具が新しくきれい。小学生から小さい子まで遊べる。⭐**屋根付きの大広場が人工芝**で、直射日光を避けられて転んでも痛くない(夏と雨上がりに強い)。県内最大級の**スケートボード場**(夜間照明あり)と**全面人工芝の球技場**もある。**9:00〜21:00 / 料金無料 / 駐車場無料 / トイレあり**。⭐**おむつ交換台あり**。八女ICから車で約15分、JR筑後船小屋駅から徒歩約18分。公園全体の管理事務所は 0942-53-4600。⚠フィットネスエリア内の駐車場は台数に限りがある。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.ajpark.jp/"
  }
 ]

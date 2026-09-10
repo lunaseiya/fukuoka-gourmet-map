@@ -13290,23 +13290,23 @@
  {
   "id": "aeonmallkashiihama",
   "name": "イオンモール香椎浜",
-  "area": null,
+  "area": "香椎浜",
   "city": "福岡市東区",
   "pref": "福岡県",
   "genre": "ショッピングモール",
   "lat": 33.657017,
   "lng": 130.429855,
-  "visited": null,
+  "visited": "2026-09-10",
   "with": "family",
   "kids": {
    "stroller": true,
    "diaper": true,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": "ok"
   },
-  "verdict": "イオンとユニクロを核とする大型モール。1F=グルメ&サービス中心、2F=ファッション・キッズ、隣接の「かしいいーなてらす」にはま寿司・パデル福岡・SKECHERS OUTLET・焼肉なべしま・ピザクックなど。⭐子連れ設備が充実: 子供用カート(キャラカート含む)多数・ベビールーム(授乳室)・こども写真館スタジオアリス・トイザらス/ベビーザらス・モーリーファンタジー(ゲーム)・Happiness kids(放課後等デイ)・セイハ英語学院/ダンスアカデミー。飲食はバーガーキング/ケンタッキー/ミスド/スタバ/サイゼリヤ/ドミノ・ピザ/庄屋/ペッパーランチ/リンガーハット/マクドナルド/築地銀だこ/えびすやうどん/博多三氣W/Mr.Kebab/中国大明火鍋城/シュシュクレープ/タリーズ/コナズ珈琲など多数。小児科系は森眼科・のぞみ歯科・治どうぶつ病院も入居。",
+  "verdict": "イオンとユニクロを核とする大型モール。1F=グルメ&サービス中心、2F=ファッション・キッズ、隣接の「かしいいーなてらす」にはま寿司・パデル福岡・SKECHERS OUTLET・焼肉なべしま・ピザクックなど。⭐子連れ設備が充実: 子供用カート(キャラカート含む)多数・ベビールーム(授乳室)・こども写真館スタジオアリス・トイザらス/ベビーザらス・モーリーファンタジー(ゲーム)・Happiness kids(放課後等デイ)・セイハ英語学院/ダンスアカデミー。飲食はバーガーキング/ケンタッキー/ミスド/スタバ/サイゼリヤ/ドミノ・ピザ/庄屋/ペッパーランチ/リンガーハット/マクドナルド/築地銀だこ/えびすやうどん/博多三氣W/Mr.Kebab/中国大明火鍋城/シュシュクレープ/タリーズ/コナズ珈琲など多数。小児科系は森眼科・のぞみ歯科・治どうぶつ病院も入居。⭐**グルメストリート(本館1F)の子連れ設備を実地で確認**(2026-09-10): ハイチェアは麻辣湯・久住珈琲・てっぱん家じょう・ポムの樹・ミスド・スタバで確認。座敷は魚☆きんぐの小上がり個室。お子様メニューはビスヌ・ポムの樹・庄屋が充実。⭐**屋外に芝生の広場と滑り台**があり、食後に遊ばせられる。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -13320,7 +13320,8 @@
    "aeon_kashiihama_03.jpg",
    "aeon_kashiihama_04.jpg",
    "aeon_kashiihama_05.jpg",
-   "aeon_kashiihama_06.jpg"
+   "aeon_kashiihama_06.jpg",
+   "aeon_kashiihama_07_屋外の芝生広場と滑り台.jpg"
   ],
   "category": "play"
  },
@@ -43271,5 +43272,357 @@
   "web": "https://www.paradise-g.jp/",
   "booking": "https://www.jalan.net/yad355868/",
   "posted": "2026-09-09"
+ },
+ {
+  "id": "mala-kashiihama",
+  "name": "麻辣湯檳榔之夜 イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "麻辣湯",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fの新店舗。⭐**木製の折りたたみハイチェア**あり(実写)。辛さと具材を選べる麻辣湯。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "mala-kashiihama_01_木製ハイチェア.jpg"
+  ]
+ },
+ {
+  "id": "kujuucoffee-kashiihama",
+  "name": "水と緑のカフェレストラン 久住珈琲 イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェレストラン",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1F。⭐**木製ハイチェア**あり(実写)。⭐店内に**おもちゃや雑貨の物販棚**があり、待ち時間に子供が飽きにくい。柚こしょう等の九州の食品も置いている。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kujuucoffee-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "kujuucoffee-kashiihama_01_店内のおもちゃ.jpg",
+   "kujuucoffee-kashiihama_02_木製ハイチェア.jpg"
+  ]
+ },
+ {
+  "id": "teppanjo-kashiihama",
+  "name": "てっぱん家じょう イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "お好み焼き・鉄板焼き",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fの広島風お好み焼き。⭐**白いハイチェアが2脚**用意されている(実写)。ねぎ焼き880円〜、こだわりの生麺は広島直送。⚠**飲食物の持ち込み禁止**の掲示あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "teppanjo-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "teppanjo-kashiihama_01_ハイチェア2脚.jpg"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40042562/"
+ },
+ {
+  "id": "bisanu-kashiihama",
+  "name": "BISANU(ビスヌ) イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "インド料理",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fのインド料理店。⭐**お子様ナンセット690円／お子様ライスセット690円／ジュニアセット**があり、お子様セットは7歳までの限定(店頭メニューより)。カレー・ナン・タンドール。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "bisanu-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "bisanu-kashiihama_01_お子様メニュー.jpg"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40056329/"
+ },
+ {
+  "id": "pomunoki-kashiihama",
+  "name": "ポムの樹 イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "創作オムライス",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fの創作オムライス。⭐**お子様オムライスセット 税込913円**(実写メニュー)。⭐白いハイチェアあり。オムパスタもある。⚠「ポム得 おまち得り」はこの店では実施していない掲示あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "pomunoki-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "pomunoki-kashiihama_01_お子様メニュー.jpg",
+   "pomunoki-kashiihama_02_ハイチェア.jpg"
+  ]
+ },
+ {
+  "id": "saizeriya-kashiihama",
+  "name": "サイゼリヤ イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "イタリアン",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1F。店頭表示の営業は11:00〜22:00。低価格のイタリアン。⚠子連れ設備は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "saizeriya-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama"
+ },
+ {
+  "id": "shoya-kashiihama",
+  "name": "庄屋 イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "和食",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fの和食。⭐**おこさまメニューが充実**していて、おこさまランチ・おこさま和ざらしケーキ・おこさまドリンクバー140円などが1枚のメニューに並ぶ(実写)。パフェ類も多い。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "shoya-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "shoya-kashiihama_01_おこさまメニュー.jpg"
+  ]
+ },
+ {
+  "id": "misdo-kashiihama",
+  "name": "ミスタードーナツ イオンモール香椎浜ショップ",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ドーナツ",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1F。⭐**木製のハイチェア**が客席に置かれている(現地で確認)。※ハイチェアの写真は他のお客さんと重なって切り分けられなかったため掲載していない。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40027985/"
+ },
+ {
+  "id": "kfc-kashiihama",
+  "name": "ケンタッキーフライドチキン イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "フライドチキン",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1F。⭐**店内に手洗い場**があり、食べる前後に手を洗える(実写)。カウンター席中心。⚠子供椅子は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kfc-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "kfc-kashiihama_01_手洗い場.jpg"
+  ]
+ },
+ {
+  "id": "uoking-kashiihama",
+  "name": "魚☆きんぐ(UOKING) イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "海鮮・寿司",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1Fの活魚問屋・まぐろ寿司。⭐**BOX席**と⭐**小上がり個室**(4名様から2室)があり、座敷で子連れでも落ち着ける(実写の札より)。日替わり定食690円ほか、店頭に食品サンプルが並ぶ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "uoking-kashiihama.jpg",
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "uoking-kashiihama_01_小上がり個室の札.jpg"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40041926/"
+ },
+ {
+  "id": "starbucks-kashiihama",
+  "name": "スターバックス コーヒー イオンモール香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.657017,
+  "lng": 130.429855,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "本館1F。⭐**ベルト付きの木製ベビーチェア**が積んで用意されている(実写)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "aeonmallkashiihama",
+  "photos": [
+   "starbucks-kashiihama_01_子供椅子.jpg"
+  ]
  }
 ]

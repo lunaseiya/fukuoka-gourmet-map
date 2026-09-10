@@ -12,7 +12,7 @@
 
 【予約時刻のルール】2026-09-07 ユーザー確定
   直近の 07:00 → 過ぎていれば 10:00 → それも過ぎていれば
-    子連れOKを扱う回   → 20:00
+    子連れOKを扱う回   → 21:00  ← 2026-09-10ユーザー確定(20:00から変更)
     子連れ非推奨の回   → 18:00
   全部過ぎていたら**翌日の07:00**。
   子連れの別は --kids ok / --kids ng で渡す(店の実態で決める)。
@@ -33,7 +33,9 @@ JST = timezone(timedelta(hours=9), 'JST')
 def next_slot(kids_ok, now=None):
     """次に来る投稿枠を返す"""
     now = now or datetime.now(JST)
-    evening = 20 if kids_ok else 18
+    # 子連れOK回の夜枠は21:00。20:00だと子供の寝かしつけ真っ只中で親が見られない
+    # (2026-09-10ユーザー確定。アイランドシティ中央公園回の20:00投稿のあとに指摘)
+    evening = 21 if kids_ok else 18
     for h in (7, 10, evening):
         t = now.replace(hour=h, minute=0, second=0, microsecond=0)
         if t > now:

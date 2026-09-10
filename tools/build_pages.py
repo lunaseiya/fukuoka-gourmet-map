@@ -125,6 +125,7 @@ SPOT_TPL = """<!DOCTYPE html>
 <meta property="og:description" content="{desc}">
 <meta property="og:url" content="{site}/s/{id}.html">
 <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<script src="../analytics.js" defer></script>
 <style>{css}</style>
 <script type="application/ld+json">{ld}</script>
 </head><body><div class="wrap">
@@ -157,6 +158,7 @@ AREA_TPL = """<!DOCTYPE html>
 <meta name="description" content="{desc}">
 <link rel="canonical" href="{site}/area/{slug}.html">
 <link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<script src="../analytics.js" defer></script>
 <style>{css}</style>
 </head><body><div class="wrap">
 <header><a href="../index.html">ふくおか、こそだてグルメ。</a></header>

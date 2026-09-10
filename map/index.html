@@ -692,6 +692,7 @@
 <script type="text/javascript" language="javascript">
     var vc_pid = "892682809";
 </script><script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
+<script src="../analytics.js" defer></script>
 </head>
 <body>
 
@@ -1032,6 +1033,8 @@ function limitedHtml(spot) {
 }
 
 function cardHtml(spot) {
+  // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)
+  try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
   const kidsOk = isKidsOk(spot);

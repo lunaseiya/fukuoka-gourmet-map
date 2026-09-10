@@ -28,6 +28,11 @@ TODAY = datetime.date.today().isoformat()
 def esc(s):
     return html.escape(str(s if s is not None else ''), quote=True)
 
+def esc_rich(s):
+    """verdict は **強調** 記法で書いてある(197件)。エスケープ後に **〜** だけ <strong> へ戻す。
+       エスケープ済みなのでタグ注入は起きない。マップ側 map/index.html の escapeRich と対"""
+    return re.sub(r'\*\*([^*]+)\*\*', lambda m: '<strong>' + m.group(1) + '</strong>', esc(s))
+
 def slug(s):
     """市区名 → URLに使える文字列。日本語は残すとURLエンコードが汚いのでローマ字化はせず連番的に扱う"""
     s = re.sub(r'[^\w一-龠ぁ-んァ-ヶー]', '', str(s or ''))
@@ -66,7 +71,7 @@ def page_title(s):
 
 def meta_desc(s):
     v = re.sub(r'\s+', ' ', str(s.get('verdict') or '')).strip()
-    v = re.sub(r'[⭐⚠]', '', v)
+    v = re.sub(r'[⭐⚠]', '', v).replace('**', '')   # meta には強調記法を出さない
     base = '%s（%s・%s）の子連れ情報。' % (s['name'], s.get('city') or '', s.get('genre') or '')
     rows = kids_rows(s)
     if rows:
@@ -80,7 +85,7 @@ def jsonld(s):
         'name': s['name'],
         'url': '%s/s/%s.html' % (SITE, s['id']),
     }
-    if s.get('genre'):   d['description'] = str(s.get('verdict') or s['genre'])[:300]
+    if s.get('genre'):   d['description'] = str(s.get('verdict') or s['genre']).replace('**', '')[:300]  # 構造化データに強調記法を出さない
     addr = {'@type': 'PostalAddress', 'addressCountry': 'JP'}
     if s.get('pref'): addr['addressRegion'] = s['pref']
     if s.get('city'): addr['addressLocality'] = s['city']
@@ -212,7 +217,7 @@ def build():
                           '<table>%s</table></div>' % trs)
         verdict_block = ''
         if s.get('verdict'):
-            verdict_block = '<div class="card verdict">%s</div>' % esc(s['verdict'])
+            verdict_block = '<div class="card verdict">%s</div>' % esc_rich(s['verdict'])
 
         links = []
         if s.get('booking'):
@@ -258,7 +263,7 @@ def build():
             '<div class="sub">%s%s</div>%s</div>'
             % (esc(x['id']), esc(x['name']), esc(x.get('genre') or ''),
                ('／' + esc(x['area'])) if x.get('area') else '',
-               ('<div>' + esc(re.sub(r'\s+', ' ', str(x.get('verdict'))[:110])) + '…</div>') if x.get('verdict') else '')
+               ('<div>' + esc(re.sub(r'\s+', ' ', str(x.get('verdict')).replace('**', '')[:110])) + '…</div>') if x.get('verdict') else '')
             for x in sorted(items, key=lambda y: y['name']))
         htmlstr = AREA_TPL.format(
             title=esc('%s の子連れで行けるお店・おでかけ %d件' % (city, len(items))),

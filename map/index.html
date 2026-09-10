@@ -968,6 +968,12 @@ function escapeHtml(str) {
     .replace(/>/g, "&gt;");
 }
 
+// verdict は **強調** 記法を使って書いてある(197件)。エスケープした後に
+// **〜** だけを <strong> に戻す。エスケープ済みなので新たなタグ注入は起きない
+function escapeRich(str) {
+  return escapeHtml(str).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+}
+
 // ジャンル文字列から「のれん」の見た目(絵文字・色・札の文字)を決める
 function norenStyle(spot) {
   const g = (spot.genre || "") + (spot.category || "");
@@ -1055,7 +1061,7 @@ function cardHtml(spot) {
       </div>
       <div class="card-area">${cityArea}</div>
       ${kidsFacilityHtml(spot)}
-      ${spot.verdict ? `<div class="card-verdict">${escapeHtml(spot.verdict)}</div>` : ""}
+      ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
       ${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}

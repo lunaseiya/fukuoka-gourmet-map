@@ -20,7 +20,7 @@
 (function () {
   'use strict';
 
-  var GA_ID = '';   // ← ここに G-XXXXXXXXXX を入れる
+  var GA_ID = 'G-S7J35Q0HJ8';   // 2026-09-10 設定。プロパティ「ふくおか、こそだてグルメ。」
 
   // 送信先が未設定なら何もしない。gtag も読み込まない
   if (!GA_ID) {

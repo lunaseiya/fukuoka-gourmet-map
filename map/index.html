@@ -218,7 +218,33 @@
   .t-wish    { background: #e3ecff; color: #2b5cc4; }   /* 青ピン=下調べ済み */
   .t-kids    { background: #eef7ee; color: #2f7a2f; }
   .t-ltd     { background: #fff6d5; color: #8a6d00; font-weight: 800; }
+  .t-fk      { background: #d9f2ee; color: #0b5348; font-weight: 800; }
   .t-video   { background: #fff3e3; color: #b05a00; }
+  /* 九州ふっこう応援割の帯。コラボ(金)と区別できるよう青緑系にする */
+  .fk-band {
+    display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+    margin: 2px 0 7px; padding: 7px 10px; border-radius: 10px;
+    background: linear-gradient(90deg, #e3f7f4, #c9efe9);
+    border: 1.5px solid #14a085;
+    box-shadow: 0 1px 4px rgba(20,160,133,.3);
+  }
+  .fk-icon { font-size: 15px; line-height: 1; }
+  .fk-main { font-size: 13px; font-weight: 800; color: #0b5348; }
+  .fk-rate {
+    font-size: 13px; font-weight: 900; color: #fff; background: #0E9384;
+    border-radius: 999px; padding: 1px 9px;
+  }
+  .fk-sub  { flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #12695c; line-height: 1.45; }
+  .fk-note { flex-basis: 100%; font-size: 11.5px; color: #12695c; line-height: 1.45; }
+  /* 応援割のピン。赤(訪問済み)/青(下調べ)は変えず、青緑のリングと🏨だけ重ねる */
+  .pin-fukko {
+    box-shadow: 0 0 0 3px #0E9384, 0 1px 5px rgba(0,0,0,.45);
+  }
+  .pin-fukko-label {
+    position: absolute; top: -15px; left: 9px; transform: rotate(45deg);
+    background: #0E9384; color: #fff; font-size: 10px; font-weight: 800;
+    border-radius: 6px; padding: 0 3px;
+  }
   .pin-new {
     animation: pinpulse 1.6s ease-in-out infinite;
   }
@@ -715,6 +741,7 @@
     <button class="filter-btn" data-filter="wish">下調べ</button>
     <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
     <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
+    <button class="filter-btn onsen-only" data-filter="fukko">🏨 復興割</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
   </div>
 </header>
@@ -902,6 +929,7 @@ function applyFilters(spots) {
     // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
     if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "limited" && !isLimited(s)) return false;
+    if (state.filter === "fukko" && !isFukko(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
@@ -1063,7 +1091,7 @@ function cardHtml(spot) {
       ${kidsFacilityHtml(spot)}
       ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -1076,6 +1104,7 @@ function areaTabSpots(spots) {
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "limited" && !isLimited(s)) return false;
+    if (state.filter === "fukko" && !isFukko(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
@@ -1314,6 +1343,43 @@ function campaignOf(spot) {
 }
 function isEventOnly(spot) { return !!spot.until; }
 function isLimited(spot) { return isEventOnly(spot) || !!campaignOf(spot); }
+
+/* ───────── 九州ふっこう応援割(2026-10-01 宿泊分〜) ─────────
+   国交省155億円を九州7県に配分する旅行支援。**宿ごとに参加登録する方式**なので、
+   同じ県でも参加していない宿は対象外になる。対象施設の公式リストは出ないため、
+   じゃらん等に「応援割プラン」が並んだかどうかで判定する(tools/fukko_watch.py)。
+   データ形は spots.json の宿に:
+     "fukko": { "checked": "2026-10-01", "url": "<応援割プランのURL>", "note": "任意" }
+   fukko が無い = 未確認。**勝手に対象扱いしない**(誤情報で予約させないため) */
+const FUKKO_RATE = {           // 県 → 割引率(%)
+  熊本県: 60, 鹿児島県: 60,
+  福岡県: 50, 佐賀県: 50, 長崎県: 50, 大分県: 50, 宮崎県: 50,
+};
+const FUKKO_START = "2026-10-01";
+function fukkoRate(spot) { return FUKKO_RATE[spot.pref] || null; }
+// 「対象と確認できた宿」だけ true。県が対象でも確認前は false のまま
+function isFukko(spot) {
+  return !!(spot.fukko && fukkoRate(spot));
+}
+// まだ始まっていない期間なら「10月1日から」と出したいので開始前か判定する
+function fukkoNotStarted() {
+  return new Date() < new Date(FUKKO_START + "T00:00:00+09:00");
+}
+// カード先頭の帯。割引率と上限は県から自動で決まるので手入力しない
+function fukkoHtml(spot) {
+  if (!isFukko(spot)) return "";
+  const r = fukkoRate(spot);
+  const f = spot.fukko;
+  const head = fukkoNotStarted() ? "10月1日の宿泊分から対象" : "九州ふっこう応援割の対象";
+  return `<div class="fk-band">
+      <span class="fk-icon">🏨</span>
+      <span class="fk-main">${head}</span>
+      <span class="fk-rate">${r}%OFF</span>
+      <span class="fk-sub">上限 1人あたり 宿泊のみ2万円 / 交通付き2泊以上3万円 / 2県以上3万5千円</span>
+      ${f.note ? `<span class="fk-note">${escapeHtml(f.note)}</span>` : ""}
+      ${f.url ? `<a class="ltd-link" href="${escapeHtml(f.url)}" rel="nofollow noopener" target="_blank">応援割プランを見る</a><span class="pr-badge">PR</span>` : ""}
+    </div>`;
+}
 function isExpired(spot) {
   if (!spot.until) return false;                 // campaign は期限切れでもスポットは残す
   const d = new Date(spot.until + "T23:59:59+09:00");
@@ -1339,6 +1405,13 @@ function makePinEl(spot) {
   // ピンの色は「行った(赤)/調べた(青)」を必ず保つ。期間限定は金リングで足す
   el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
   if (isEventOnly(spot)) el.classList.add("pin-eventonly");
+  if (!isLimited(spot) && isFukko(spot)) {
+    el.classList.add("pin-fukko");
+    const fl = document.createElement("span");
+    fl.className = "pin-fukko-label";
+    fl.textContent = "🏨";
+    el.appendChild(fl);
+  }
   if (isLimited(spot)) {
     el.classList.add("pin-campaign");
     const lab = document.createElement("span");
@@ -1488,6 +1561,7 @@ function showClusterList(items, facility) {
         s.wish ? `<span class="cl-tag t-wish">🔵 下調べ済み</span>`
                : `<span class="cl-tag t-visited">🔴 訪問済み</span>`,
         isLimited(s) ? `<span class="cl-tag t-ltd">${campaignOf(s) ? "🤝 コラボ中" : "⏳ 期間限定"}</span>` : "",
+        isFukko(s) ? `<span class="cl-tag t-fk">🏨 復興割${fukkoRate(s)}%OFF</span>` : "",
         isKidsOk(s) ? `<span class="cl-tag t-kids">子連れOK</span>` : "",
         (v.youtube || v.tiktok || v.instagram) ? `<span class="cl-tag t-video">🎬 動画あり</span>` : ""
       ].join("");

@@ -44048,5 +44048,35 @@
   "wish": false,
   "category": "gourmet",
   "tabelog": "https://tabelog.com/kagoshima/A4601/A460101/46000030/"
+ },
+ {
+  "id": "tokyointeriorshingu",
+  "name": "東京インテリア家具 福岡新宮店(キッズランド)",
+  "area": "上府北",
+  "city": "糟屋郡新宮町",
+  "pref": "福岡県",
+  "genre": "室内遊び場(家具店内キッズランド)",
+  "lat": 33.712388,
+  "lng": 130.455148,
+  "address": "福岡県糟屋郡新宮町上府北2-6-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐家具店の中にある室内キッズランド。**1人500円・保護者は無料**(抱っこで入る0歳児も無料)で、**0歳〜小学3年生**が対象。子どもが乗れる大きな恐竜のオブジェが目玉。中央レジで申込用紙を書いて支払う方式で、予約は不要。⚠**入替制の時間割**(①10:30〜12:00 ②13:15〜14:45 ③15:00〜16:30)で、途中から入っても終了時刻は時間割どおり。⚠**キッズランドだけ水曜・木曜が定休**(祝日を除く)。店舗自体は平日10:30〜19:00・土日祝10:30〜20:00で営業している。⚠4歳までは保護者の付き添いが必須。館内に MOA Cafe あり。授乳室・おむつ替え台の有無は要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
  }
 ]

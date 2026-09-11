@@ -14966,7 +14966,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "阿蘇五岳を望む展望温泉(露天・サウナ・家族風呂)に加え、流れるプールやジャグジーの温水施設が通年利用可。忍者ファミリールーム・くまモンメゾネット等のファミリー客室、約90種のビュッフェが売り。⚠住所は阿蘇市黒川で、南小国町の黒川温泉とは別エリアなので注意。",
+  "verdict": "阿蘇五岳を望む展望温泉(露天・サウナ・家族風呂)に加え、流れるプールやジャグジーの温水施設が通年利用可。忍者ファミリールーム・くまモンメゾネット等のファミリー客室、約90種のビュッフェが売り。⚠住所は阿蘇市黒川で、南小国町の黒川温泉とは別エリアなので注意。⭐**全天候型キッズパークと屋内プール**があり雨でも遊べる(2026-09-11にSNS投稿で確認)。⚠**体験知育型キッズパーク「ASONIWA」があるのは別館ではなく別ホテルの「亀の井ホテル 阿蘇」**なので混同しないこと。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -43887,5 +43887,104 @@
   "wish": true,
   "category": "gourmet",
   "tabelog": "https://tabelog.com/fukuoka/A4008/A400803/40037115/"
+ },
+ {
+  "id": "kamenoi-aso",
+  "name": "亀の井ホテル 阿蘇",
+  "area": "一の宮町",
+  "city": "阿蘇市",
+  "pref": "熊本県",
+  "genre": "温泉旅館・ホテル",
+  "address": "熊本県阿蘇市一の宮町宮地5936",
+  "lat": 32.926477,
+  "lng": 131.10799,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "2025年10月24日にリニューアルオープンした山岳リゾートホテル(70室)。⭐**体験知育型キッズパーク「ASONIWA」**が館内にある。阿蘇の草原をデザインコンセプトにした**「静ゾーン」(絵本・自然のガイドブックで学ぶ)と「動ゾーン」の2構成**で、動ゾーンにはオリジナルの**「ASO PHONE」**——親機で受け取ったミッションに沿ってパーク内の子機を操作すると阿蘇の自然や生き物の知識が学べる仕掛けがある。露天風呂付き客室もあり。TEL 0967-22-1122。⚠**同名の「亀の井ホテル 阿蘇 パークリゾート」は別のホテル**(こちらは全天候型キッズパークと屋内プール)。混同しないこと。⚠ASONIWAの広さ・対象年齢・宿泊者は無料かは公式リリースに記載が無く未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "bathAge": null,
+  "web": "https://kamenoi-hotels.com/aso/",
+  "booking": "https://www.jalan.net/yad315095/"
+ },
+ {
+  "id": "samson-hirado",
+  "name": "平戸たびら温泉 サムソンホテル",
+  "area": "田平町",
+  "city": "平戸市",
+  "pref": "長崎県",
+  "genre": "温泉ホテル",
+  "address": "長崎県平戸市田平町野田免210-6",
+  "lat": 33.370853,
+  "lng": 129.570327,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "平戸瀬戸を望む温泉ホテル。⭐**九州最大級のキッズガーデン**があり、**ボーネルンドの遊具**、**約3,000冊の漫画コーナー**、アナログゲームが揃う(雨の日でも1日館内で過ごせる)。海鮮バイキングとスパが売り。TEL 0950-57-1110。⚠SNSでは「約300㎡の広々キッズガーデン」と紹介されているが、**公式では面積の記載を確認できなかった**。⚠利用料金・対象年齢・営業時間は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "bathAge": null,
+  "web": "https://samson-hotel.jp/",
+  "booking": "https://www.jalan.net/yad371665/"
+ },
+ {
+  "id": "kirishima-kokusai",
+  "name": "霧島国際ホテル",
+  "area": "牧園町",
+  "city": "霧島市",
+  "pref": "鹿児島県",
+  "genre": "温泉ホテル",
+  "address": "鹿児島県霧島市牧園町高千穂3878",
+  "lat": 31.8928,
+  "lng": 130.827381,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "霧島温泉のホテル。⭐**「霧島キッズパーク」が年齢別に3エリア**(アクティブ/ごっこ遊び/ベビー)に分かれていて、木をモチーフにした霧島らしい遊具で小さい子でも遊べる。⭐**利用料は無料**、**7:00〜22:00**で朝も夜も使える(**保護者の同伴が必要**)。⭐内装がカラフルな**キッズルーム(客室)**もあり。2024年11月のリニューアルに先駆けてキッズルームを新設した。⚠住所・電話は予約サイト経由の情報なので、予約前に公式で確認するのが安全。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "bathAge": null,
+  "web": "https://www.kirishima-kokusai.com/",
+  "booking": "https://www.jalan.net/yad322385/"
  }
 ]

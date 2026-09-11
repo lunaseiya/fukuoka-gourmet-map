@@ -7,6 +7,9 @@
   旅行会社の解説にも「予約サイトの通常プランを応援割の対象と判断することはできない」と明記がある。
   → 判定できる唯一の手がかりが「その宿のページに応援割プランが並んでいるか」なので、それを見に行く。
 
+⚠**じゃらんは Shift_JIS/CP932**。utf-8 で decode(errors='replace') すると全部化けて
+  キーワードが0件になり「対象なし」と誤判定する(2026-09-11に踏んだ)。必ず encoding を総当たりする。
+
 ■ 安全設計(monetize.py と同じ思想)
   ・**確証が取れた宿にだけ書く**。取れなければ何も書かない(未確認のまま)。
     誤って「対象」と出すと、割引が効かない宿に予約させてしまうため
@@ -46,12 +49,12 @@ def fetch(url):
                                                'Accept-Language': 'ja,en;q=0.8'})
     with urllib.request.urlopen(req, timeout=30) as r:
         raw = r.read()
-    for enc in ('utf-8', 'shift_jis', 'euc-jp'):
+    for enc in ('utf-8', 'shift_jis', 'cp932', 'euc-jp'):
         try:
             return raw.decode(enc)
         except UnicodeDecodeError:
             continue
-    return raw.decode('utf-8', 'replace')
+    return raw.decode('cp932', 'replace')
 
 
 def judge(html):
@@ -98,12 +101,17 @@ def main():
     for i, s in enumerate(tg):
         if i:
             time.sleep(WAIT)
+        # プラン名は宿トップに全部は出ないので /plan/ も見る(応援割プランは専用プランとして並ぶ)
+        html = ''
         try:
-            html = fetch(s['booking'])
+            for u in (s['booking'].rstrip('/') + '/plan/', s['booking']):
+                html += fetch(u)
+                time.sleep(1.5)
         except Exception as e:
-            print(' ! %-22s %-26s 取得できず: %s' % (s['id'][:22], s['name'][:26], e))
-            err += 1
-            continue
+            if not html:
+                print(' ! %-22s %-26s 取得できず: %s' % (s['id'][:22], s['name'][:26], e))
+                err += 1
+                continue
         hit, why = judge(html)
         if hit is True:
             ok += 1

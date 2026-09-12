@@ -67,42 +67,61 @@ def parse_span(txt):
 
 
 def collect_tiles():
-    """一覧ページを **タイトルを起点に前後へ遡って** パースする。
-       ⚠タイル全体を1本の正規表現で取ろうとすると0件になる(2026-09-11に踏んだ)。
-         リンクが相対/絶対で混在し、要素の順序も一定でないため。
-       実際の並びは <a href> … <dd>会期</dd> … <h2 class="o-digest--tile__title">名前</h2>
-                    … <p class="…__description">説明</p> … </a>
-       会期はタイルの中に入っているので、個別ページを開かなくてよい(40件が1リクエストで取れる)。"""
+    """一覧ページを **<li class="o-digest--tile__item"> のブロック単位** でパースする。
+
+    ⚠【2026-09-13 重大バグ修正】以前は「タイトルを起点に前後へ遡る」方式で、
+      back=2200字 / fwd=500字 の窓から `/event/(\d+)` を拾って **ids[-1]** を使っていた。
+      ところが実際のHTMLは
+        <li class="o-digest--tile__item">
+          <a class="o-digest--tile__anchor" href=".../event/XXXX">
+            <div class="…__image-box"> …favorite-button… (長い) …
+            <dl class="…__date"><dd>会期</dd></dl>
+            <h2 class="…__title">タイトル</h2></div>
+            <p class="…__description">説明</p></a></li>
+      で、**自分のリンクは画像ブロックのぶん2200字より前**にあるため back には1件も入らず、
+      fwd に入ってくる**次のタイルのid**を毎回拾っていた。つまり全件1つズレていた
+      (「パンダコパンダ展(北九州市漫画ミュージアム)」の詳細を開くと糸島市有田が出た)。
+      ブロックで切れば id・タイトル・会期・説明・画像が同じ <li> 内で揃う。
+      id は href と `:tourism-attraction-id="XXXX"` の2箇所にあり、一致を検算できる"""
     out = {}
+    BLK = re.compile(r'<li class="o-digest--tile__item">([\s\S]*?)</li>')
     for pg in range(1, 10):
         u = BASE + '/event' + ('' if pg == 1 else '?page=%d' % pg)
         try:
             h = fetch(u)
         except Exception as e:
             print('  ! %s %s' % (u, e)); break
-        new = 0
-        for m in re.finditer(r'o-digest--tile__title">([^<]+)</h2>', h):
-            back = h[max(0, m.start() - 2200):m.start()]
-            fwd = h[m.end():m.end() + 500]
-            ids = re.findall(r'/event/(\d+)', back + fwd)
-            dds = re.findall(r'<dd[^>]*>([\s\S]{0,160}?)</dd>', back)
-            de = re.search(r'o-digest--tile__description[^>]*>([^<]*)</p>', fwd)
-            title = m.group(1).strip()
-            key = ids[-1] if ids else title           # id が取れなければ名前をキーにする
-            if key in out:
+        new_n, bad = 0, 0
+        for m in BLK.finditer(h):
+            b = m.group(1)
+            href = re.search(r'__anchor"\s*href="([^"]*?/event/(\d+))"', b)
+            ti = re.search(r'__title">([^<]+)</h2>', b)
+            if not (href and ti):
                 continue
-            span = re.sub(r'<[^>]+>', ' ', dds[-1]) if dds else ''
-            out[key] = {'id': ids[-1] if ids else '', 'title': title,
-                        'url': (BASE + '/event/' + ids[-1]) if ids else BASE + '/event',
-                        'desc': (de.group(1).strip() if de else ''),
+            eid = href.group(2)
+            aid = re.search(r'tourism-attraction-id="(\d+)"', b)
+            if aid and aid.group(1) != eid:        # 2箇所のidが違えば信用しない
+                bad += 1
+                continue
+            if eid in out:
+                continue
+            dd = re.findall(r'<dd[^>]*>([\s\S]{0,200}?)</dd>', b)
+            de = re.search(r'__description[^>]*>([\s\S]{0,300}?)</p>', b)
+            ims = re.findall(r'(?:src|data-src)="([^"]+\.(?:jpg|jpeg|png|webp))"', b)
+            span = re.sub(r'<[^>]+>', ' ', dd[-1]) if dd else ''
+            out[eid] = {'id': eid, 'title': ti.group(1).strip(),
+                        'url': href.group(1) if href.group(1).startswith('http')
+                               else BASE + '/event/' + eid,
+                        'img': ims[-1] if ims else None,
+                        'desc': (re.sub(r'<[^>]+>', '', de.group(1)).strip() if de else ''),
                         'span_raw': re.sub(r'\s+', ' ', span).strip()[:140]}
-            new += 1
-        print('  %d ページ目: +%d (累計 %d)' % (pg, new, len(out)), flush=True)
-        if not new:
+            new_n += 1
+        print('  %d ページ目: +%d (累計 %d)%s'
+              % (pg, new_n, len(out), ' ※id不一致 %d件を除外' % bad if bad else ''), flush=True)
+        if not new_n:
             break
         time.sleep(WAIT)
     return out
-
 
 def main():
     spots = json.load(io.open(P, encoding='utf-8'))

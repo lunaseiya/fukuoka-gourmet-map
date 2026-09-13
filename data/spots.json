@@ -33646,25 +33646,24 @@
   "lat": 33.655837427029326,
   "lng": 130.43086251047004,
   "address": "福岡県福岡市東区香椎浜3-12-1",
-  "visited": null,
+  "visited": "2026-09-13",
   "with": "family",
   "kids": {
    "stroller": null,
-   "diaper": null,
+   "diaper": true,
    "tatami": null,
    "kidsChair": true,
-   "serveMin": null,
-   "noise": null,
+   "serveMin": 1,
+   "noise": "ok",
    "kidsMenu": true
   },
-  "verdict": "公式FAQに「お子様用の補助いすは全店舗にご用意しております」と明記。キッズメニュー「はまっこセット」あり。 食べログの店舗情報では駐車場あり、お子様連れ:子供可、お子様メニューあり。",
+  "verdict": "⭐注文タブレットの音声を声優の声に変更できる(花江夏樹さん・緒方恵美さんから選択)。切り替えると「まもなく到着します」「お取り忘れにご注意ください」がその声になる。⭐提供が速く、タブレット注文から30秒前後で到着。⭐子連れ設備が充実。木製ベビーチェア4台+バンボ、子供用の茶碗とフォーク・スプーン、多目的トイレにおむつ替え台とベビーキープ。出口にガチャガチャあり。⭐醤油は減塩・だし・さしみ(九州風)・甘口(関西風)の4種類。この日は4人で寿司25皿+サイド7点で5,852円。⚠夕方は店頭に待ち客が並ぶので、時間をずらすか先に発券しておくとよい。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40067759/"
  },
  {
@@ -44475,5 +44474,27 @@
   "until": "2026-09-19",
   "untilLabel": "9月19日",
   "official": "https://iko-yo.net/events/591660"
+ },
+ {
+  "id": "menchan-kamikawabata",
+  "name": "めんちゃんラーメン",
+  "area": "上川端",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.592075,
+  "lng": 130.410091,
+  "address": "福岡県福岡市博多区上川端町3-1",
+  "visited": "2024-08-06",
+  "with": "solo",
+  "kids": null,
+  "verdict": "⭐19:00〜28:00(翌朝4時)営業で、締めの一杯に使える。博多川の川沿い、カウンター中心の14席(うち外のテーブル4席)。青ネギが山盛りで紅生姜は好きなだけ。⚠駐車場なし・日曜と祝日は休み。通路が狭く営業も深夜帯なので**子連れには向かない**。創業は30年以上とされる(要確認)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40005614/"
  }
 ]

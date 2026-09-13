@@ -200,6 +200,8 @@ def cover(sub, n, total, hook=None, photo=None, tail=None):
 
 
 MAPCARD = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マップ操作_静止カード.png'
+# 表紙の既定背景。博多駅の縦写真(1170x2070)。上から4:5で切ると人混みが枠外に出る
+COVER_DEFAULT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\表紙用_博多駅_縦.jpg'
 
 
 def closing():
@@ -416,7 +418,10 @@ def main():
     ap.add_argument('--title', default='')
     ap.add_argument('--json', default=SRC)
     ap.add_argument('--hook', default='', help='表紙の大見出し(既定「まだ間に合う」)')
-    ap.add_argument('--cover', default='', help='表紙の背景写真。上から4:5で切るので人混みは下に置く')
+    # ⚠**既定で写真を敷く**。--cover を渡し忘れると表紙が上2/3空白のクリーム一色になり、
+    #   1枚目のインパクトが消える(2026-09-13に渡し忘れてユーザーに指摘された)
+    ap.add_argument('--cover', default=COVER_DEFAULT,
+                    help='表紙の背景写真。上から4:5で切るので人混みは下に置く。空文字で写真なし')
     ap.add_argument('--tail', default='福岡の子連れおでかけ %d選',
                     help='表紙の3行目。%%d が件数に置き換わる。**「子連れ」を必ず入れる**')
     a = ap.parse_args()

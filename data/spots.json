@@ -44116,7 +44116,7 @@
  {
   "id": "ev-2dcc05e8-b7e9-409d-bb7a-1d420d6ca028",
   "name": "キッズモデル体験",
-  "area": "ららぽーと福岡 1階セントラルコート",
+  "area": "イオンモール香椎浜 1階セントラルコート",
   "city": "福岡市東区",
   "pref": "福岡県",
   "genre": "期間限定イベント",
@@ -44182,7 +44182,7 @@
  {
   "id": "ev-3614679-html",
   "name": "オリンピック選手の走り方教室＆トークショー",
-  "area": "キャナルシティ博多",
+  "area": "ららぽーと福岡",
   "city": "福岡市博多区",
   "pref": "福岡県",
   "genre": "期間限定イベント",
@@ -44277,39 +44277,6 @@
   "until": "2026-09-27",
   "untilLabel": "9月27日",
   "official": "https://e-zofukuoka.com/special/mahou_museum/"
- },
- {
-  "id": "ev-fa8659d1-73f0-4db9-af8b-4fcf902fd797",
-  "name": "イオンモールでプリキュアを探せ！",
-  "area": "イオンモール大牟田",
-  "city": "糟屋郡粕屋町",
-  "pref": "福岡県",
-  "genre": "期間限定イベント",
-  "lat": 33.030472,
-  "lng": 130.427765,
-  "address": null,
-  "visited": null,
-  "with": "family",
-  "kids": {
-   "stroller": null,
-   "diaper": null,
-   "tatami": null,
-   "kidsChair": null,
-   "serveMin": null,
-   "noise": "ok"
-  },
-  "verdict": null,
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": null,
-  "wish": true,
-  "category": "play",
-  "until": "2026-10-04",
-  "untilLabel": "10月4日",
-  "official": "https://fukuoka-aeonmall.com/event/fa8659d1-73f0-4db9-af8b-4fcf902fd797"
  },
  {
   "id": "ev-597275",
@@ -44475,5 +44442,38 @@
   "until": "2026-09-23",
   "untilLabel": "9月23日",
   "official": "https://www.onojo-occm.jp/"
+ },
+ {
+  "id": "ev-591660",
+  "name": "市民天体観望会（月のクレーターと夏の星座）",
+  "area": "福岡県青少年科学館",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "期間限定イベント",
+  "lat": 33.318125,
+  "lng": 130.52829,
+  "address": "福岡県久留米市東櫛原町1713",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "月のクレーターと夏の星座をたのしもう",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "until": "2026-09-19",
+  "untilLabel": "9月19日",
+  "official": "https://iko-yo.net/events/591660"
  }
 ]

@@ -19,7 +19,7 @@
   "https://canalcity.co.jp/event/detail/194?publish_begin=26-09-09&publish_end=26-09-20&hold_calendar=26-09-20~26-09-20",
   "https://lunaseiya.github.io/fukuoka-gourmet-map/#spot=chinsuru_restaurant_fukuoka",
   "https://www.crossroadfukuoka.jp/event/15659",
-  "https://fukuoka-aeonmall.com/event/fa8659d1-73f0-4db9-af8b-4fcf902fd797",
+  "https://iko-yo.net/events/591660",
   "https://iko-yo.net/events/597275",
   "https://www.crossroadfukuoka.jp/event/13310",
   "https://chikushino-aeonmall.com/event/a50d43bf-8107-4ba7-9606-434966d96b95",
@@ -310,7 +310,7 @@
    "title": "福岡県青少年科学館 市民天体観望会（9月）",
    "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734268/normal.jpg?1785868386",
    "city": "久留米市",
-   "venue": "",
+   "venue": "福岡県青少年科学館",
    "url": "https://iko-yo.net/events/591660",
    "span": [
     "2026-09-19",
@@ -321,7 +321,7 @@
    "lead": "月のクレーターと夏の星座をたのしもう",
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734268/normal.jpg?1785868386",
    "venues": [
-    "いこーよ"
+    "福岡県青少年科学館"
    ],
    "srcs": [
     "いこーよ"
@@ -329,7 +329,14 @@
    "days": 1,
    "left": 6,
    "since": -6,
-   "score": 20
+   "score": 20,
+   "place": "プラネタリウム・4階天体観測広場",
+   "addr": "福岡県久留米市東櫛原町1713",
+   "time": "19:30-20:30",
+   "parking": "135台・無料",
+   "official": "https://iko-yo.net/events/591660",
+   "note": "雨天・曇天は中止の場合あり",
+   "park": "135台・無料"
   },
   {
    "src": "キャナルシティ博多",

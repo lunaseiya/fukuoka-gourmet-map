@@ -19,10 +19,6 @@
   "name": "チン!するレストラン in FUKUOKA",
   "venue": "アイランドアイ"
  },
- "https://fukuoka-aeonmall.com/event/fa8659d1-73f0-4db9-af8b-4fcf902fd797": {
-  "name": "イオンモールでプリキュアを探せ！",
-  "venue": "イオンモール大牟田"
- },
  "https://iko-yo.net/events/597275": {
   "name": "筥崎宮 放生会",
   "venue": "筥崎宮"
@@ -46,5 +42,9 @@
  "https://www.crossroadfukuoka.jp/event/15659": {
   "name": "魔法の美術館",
   "venue": "BOSS E・ZO FUKUOKA 6Fイベントホール"
+ },
+ "https://iko-yo.net/events/591660": {
+  "name": "市民天体観望会（月のクレーターと夏の星座）",
+  "venue": "福岡県青少年科学館"
  }
 }

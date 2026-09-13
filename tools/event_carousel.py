@@ -107,6 +107,19 @@ def load_extra():
         return {}
 
 
+def load_disp():
+    """表示名と会場の上書き(キー=イベントURL)。`data/_イベント表示名.json`。
+
+    生のイベント名は「9月18日（金）公開『映画…』映画公開記念 …」のように長く、
+    カードに出すと3行に折り返して読めない。**正規表現で機械的に削ると壊れる**ので
+    手で確定させたものをここから読む(キャプション側 event_caption.py と同じファイル)"""
+    try:
+        return json.load(io.open(os.path.join(os.path.dirname(EXTRA),
+                                              '_イベント表示名.json'), encoding='utf-8'))
+    except Exception:
+        return {}
+
+
 def get_poster(url):
     """ポスター画像を落としてくる(キャッシュする)。**リサイズ以外の加工はしない**"""
     if not url:
@@ -241,9 +254,14 @@ def search_word(ev):
     t = re.split(r'[〜～~\-–—:：]', t)[0].strip()
     if len(t) > 13:
         t = t[:13]
+    # ⚠検索ワードの会場は **venue(施設名)** を使う。
+    #   place(「プラネタリウム・4階天体観測広場」等)は**館内の場所**なので、
+    #   これを先頭に置くと検索で当たらない(2026-09-13にカードに出してしまった)
     ven = [v for v in (ev.get('venues') or []) if v and v not in AGG_NAMES]
-    place = ev.get('place') or (ven[0] if ven else '') or ev.get('city') or ''
-    place = re.sub(r'^福岡県', '', place)
+    place = ev.get('venue') or (ven[0] if ven else '') or ev.get('city') or ''
+    place = re.sub(r'^福岡県(?=.)', '', place)
+    # 館内の場所やフロア表記が付いていたら落とす
+    place = re.split(r'\s+(?=[0-9０-９]+\s*[FＦ階]|特設|セントラル|イベントホール|会場)', place)[0].strip()
     return ('%s %s' % (place, t)).strip() if place and place not in t else t
 
 
@@ -252,6 +270,11 @@ def card(ev, idx, extra=None):
     for k, v in ex.items():
         if not k.startswith('_') and v:
             ev[k] = v
+    dp = load_disp().get(ev.get('url')) or {}
+    if dp.get('name'):
+        ev['title'] = dp['name']
+    if dp.get('venue'):
+        ev['venue'] = dp['venue']
     im = Image.new('RGBA', (W_, H_), BG + (255,))
     d = ImageDraw.Draw(im)
     # 市区ピル
@@ -266,7 +289,13 @@ def card(ev, idx, extra=None):
     y += 18
     # ポスター(IP絡みは貼らない)
     ok = W.poster_ok(ev['title'], ev.get('lead'))
-    box_h = 560
+    # ⚠**ポスターの高さは情報行のぶんを引いて決める**。固定560pxだと、
+    #   縦長ポスター + 行数が多いカードで情報行がCTAバーに押し出され、
+    #   **一番大事な「検索」が消える**(2026-09-13に踏んだ)。
+    #   行数は日程/時間/場所/料金/検索(+注意/駐車)で最大7
+    nrow = 4 + sum(1 for k in ('time', 'note') if ev.get(k)) \
+             + (1 if (ev.get('park') or ev.get('parking')) else 0)
+    box_h = max(360, min(560, H_ - 200 - y - nrow * 58))
     img = get_poster(ev.get('poster')) if ok else None
     if img:
         s = min((W_ - 200) / img.width, box_h / img.height)
@@ -326,15 +355,33 @@ def card(ev, idx, extra=None):
     #   会場が取れていなければ市区で代える
     AGG = ('いこーよ', '県公式')
     ven = [v for v in (ev.get('venues') or []) if v and v not in AGG]
-    pl = ev.get('place') or (ven[0] if ven else '') or ev.get('city') or ''
+    # 場所は **venue(施設名)が主**。place(館内の場所)は施設名のあとに足す。
+    # place だけを出すと「プラネタリウム・4階天体観測広場」のように**どこの施設か分からない**
+    fac = ev.get('venue') or (ven[0] if ven else '') or ''
+    pl = ' '.join([x for x in (fac, ev.get('place') or '') if x]).strip()
+    if len(pl) > 22:            # 入り切らないなら館内の場所を捨てて**施設名を残す**
+        pl = fac or pl
+    pl = pl or ev.get('city') or ''
     if pl:
-        rows.append(('場所', pl[:26]))
+        rows.append(('場所', pl[:24]))
     rows.append(('料金', '無料' if ev.get('free') else (ev.get('price') or '公式サイトで確認')))
-    if ev.get('park'):
-        rows.append(('駐車', ev['park'][:22]))
     rows.append(('検索', search_word(ev)[:26]))
+    if ev.get('note'):                      # 雨天中止・予約制など**行く前に効く注意**
+        rows.append(('注意', ev['note'][:24]))
+    if ev.get('park') or ev.get('parking'):
+        rows.append(('駐車', (ev.get('park') or ev.get('parking'))[:22]))
+    # ⚠**情報行は6行しか入らない**。7行にするとCTAピルと出典に重なる(2026-09-13に踏んだ)。
+    #   並びは優先順なので、溢れるときに落ちるのは「駐車」。
+    #   **「検索」は絶対に落とさない**(「どこを見ればいいか分からない」への回答そのもの)
     fl = font(MEIB, 30)
-    for ic, tx in rows[:6]:
+    # ⚠**CTAバー(y=H_-156)までに入る行数だけ出す**。固定の上限だと、
+    #   ポスターの高さで残り幅が変わるため6行目がCTAバーに上書きされて消える(2026-09-13に踏んだ)
+    fit = max(3, (H_ - 166 - y) // 58)
+    if len(rows) > fit:
+        print('    ※%s: 情報行が%d行入らず省いた(%s)'
+              % (ev.get('title', '')[:16], len(rows) - fit,
+                 '/'.join(r[0] for r in rows[fit:])))
+    for ic, tx in rows[:fit]:
         lab = rounded((92, 44), 10, (238, 230, 226, 255))
         ImageDraw.Draw(lab).text((46, 22), ic, font=fl, fill=PREF_RED + (255,), anchor='mm')
         im.alpha_composite(lab, (68, y - 2))

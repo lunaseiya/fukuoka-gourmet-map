@@ -32,6 +32,8 @@ SPOTS = os.path.join(HERE, '..', 'data', 'spots.json')
 CAND = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
 UA = {'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ja'}
 WK = '月火水木金土日'
+# `venues` には**集約サイト名が混ざる**(いこーよ/県公式)。会場として扱うと座標を引けないので除く
+AGG = {'いこーよ', '県公式', '福岡県', '福岡県公式', 'クロスロードふくおか', 'ふくおか観光'}
 
 
 def _geo1(addr):
@@ -101,29 +103,47 @@ def main():
         if key in names:
             skip.append((title, '同名がすでにある')); continue
         addr = e.get('addr') or ''
-        borrow = None
+        borrows = []
         if not addr:
             # ★**会場が既にマップに登録済みなら、その座標と住所を借りる**
             #   (2026-09-13: ららぽーと福岡/キャナルシティ博多/イオンモール各館は登録済みで、
             #    住所が取れないだけで見送っていた。推測ではなく既存データの流用なので安全)
-            vn = [e.get('place')] + list(e.get('venues') or [])
-            for v in [x for x in vn if x]:
+            # ⚠探索順は **venue(代表館) → place → venues** の順。
+            #   venues を先に見ると多館開催で**関係ない館の座標を掴む**。
+            #   2026-09-13: プリキュア(4館共通)が venues[0]=大牟田 にマッチし、
+            #   city=糟屋郡粕屋町 のまま大牟田の座標で登録されて矛盾した
+            vn = [e.get('venue'), e.get('place')] + list(e.get('venues') or [])
+            for v in [x for x in vn if x and x not in AGG]:
                 vk = re.sub(r'[\s　]+', '', v)
+                hits = []
                 for t in sp:
                     tk = re.sub(r'[\s　]+', '', t.get('name', ''))
-                    if tk and (tk == vk or (len(vk) >= 6 and vk in tk) or (len(tk) >= 6 and tk in vk))                             and t.get('lat') and t.get('lng'):
-                        borrow = t
-                        break
-                if borrow:
-                    break
-        if not addr and not borrow:
+                    if tk and (tk == vk or (len(vk) >= 6 and vk in tk) or (len(tk) >= 6 and tk in vk)) \
+                            and t.get('lat') and t.get('lng'):
+                        hits.append(t)
+                if not hits:
+                    continue
+                # **完全一致を優先。次に名前が短いもの**。
+                # 部分一致だけだと館内テナントを掴む(「イオンモール福岡」が
+                # 「LUCLE PARK ルクルパーク イオンモール福岡」に当たった 2026-09-13)
+                hits.sort(key=lambda t: (re.sub(r'[\s　]+', '', t['name']) != vk, len(t['name'])))
+                if hits[0]['id'] not in [b['id'] for b in borrows]:
+                    borrows.append(hits[0])
+        if not addr and not borrows:
             skip.append((title, '住所も会場の既存登録も無い(会場=%s)'
-                         % (e.get('place') or (e.get('venues') or [''])[0])))
+                         % (e.get('venue') or e.get('place') or (e.get('venues') or [''])[0])))
             continue
         end = e['span'][1]
         if not end:
             skip.append((title, '終了日が無い')); continue
-        plan.append({'ev': e, 'title': title, 'addr': addr, 'until': end, 'borrow': borrow})
+        if not borrows:
+            plan.append({'ev': e, 'title': title, 'addr': addr, 'until': end, 'borrow': None})
+        else:
+            # **多館開催は館ごとに1件立てる**。マップは「行ける場所」なので
+            # 4館でやっているキャンペーンを1点に潰すと3館分が地図から漏れる
+            for b in borrows:
+                nm = title if len(borrows) == 1 else '%s（%s）' % (title, b['name'])
+                plan.append({'ev': e, 'title': nm, 'addr': addr, 'until': end, 'borrow': b})
 
     print('=== マップ登録の計画 (%s) ===' % ('実行' if a.apply else 'ドライラン'))
     print('登録する: %d件 / 見送る: %d件' % (len(plan), len(skip)))
@@ -173,11 +193,19 @@ def main():
         e = p['ev']
         d = datetime.strptime(p['until'], '%Y-%m-%d').date()
         sid = slug(e.get('url', '').rsplit('/', 1)[-1]) or slug(str(n))
+        if p.get('borrow'):        # 多館開催は同じURLから複数立つので館のidで区別する
+            sid = (sid[:28] + '-' + re.sub(r'[^0-9A-Za-z]+', '', p['borrow']['id'])[:10])
         while any(s['id'] == sid for s in sp):
             sid += 'x'
+        # ⚠**座標を借りたら city / area もその館のものを使う**。
+        #   イベント側の city は代表館のものなので、借りた館と食い違って
+        #   「イオンモール大牟田(糟屋郡粕屋町)」のような矛盾になる(2026-09-13に実際に出した)
+        b = p.get('borrow')
+        city = (b.get('city') if b else None) or e.get('city') or ''
+        area = (b.get('name') if b else None) or e.get('place') or ''
         sp.append({
             'id': sid, 'name': p['title'][:60],
-            'area': e.get('place') or '', 'city': e.get('city') or '', 'pref': '福岡県',
+            'area': area, 'city': city, 'pref': '福岡県',
             'genre': '期間限定イベント', 'lat': lat, 'lng': lng, 'address': p['addr'],
             'visited': None, 'with': 'family',
             'kids': {'stroller': None, 'diaper': None, 'tatami': None,

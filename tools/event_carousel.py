@@ -150,7 +150,7 @@ def outline(d, xy, text, f, fill, ow=7, oc=(0, 0, 0, 190), anchor='ma'):
     d.text((x, y), text, font=f, fill=fill, anchor=anchor)
 
 
-def cover(sub, n, total, hook=None, photo=None, tail=None):
+def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None):
     """表紙。**実写を背景に敷いて白抜きの大きなフックを乗せる**
     【2026-09-13ユーザーFB「シンプル過ぎてインパクトがない」で作り直し】
     ⚠人物が写る写真は**人混みが枠に入らない位置で切り出す**(モザイクより優先)。
@@ -176,7 +176,10 @@ def cover(sub, n, total, hook=None, photo=None, tail=None):
     d = ImageDraw.Draw(im)
     shadow(im, pill('福岡', PREF_RED, 40), (72, 86))
     hook = hook or 'まだ間に合う'
-    y = H_ - 500
+    # ⚠**下端は再生数の表示位置(グリッドの左下・下端から約110px)を避ける**。
+    #   H_-500 だと「スワイプして見てね」のピルが y1208-1266 に来て**再生数と重なった**
+    #   (2026-09-14 ユーザーのグリッド実機で発覚)。-580 にすると y1128-1186 で収まる
+    y = H_ - 580
     f0 = font(MEIB, 48)
     outline(d, (W_ // 2, y), sub, f0, sub_c, ow) if ow else d.text((W_ // 2, y), sub, font=f0, fill=sub_c, anchor='ma')
     y += 74
@@ -193,7 +196,9 @@ def cover(sub, n, total, hook=None, photo=None, tail=None):
         f2 = font(ROUND, f2.size - 3)
     outline(d, (W_ // 2, y), tail, f2, fg, ow) if ow else d.text((W_ // 2, y), tail, font=f2, fill=INK + (255,), anchor='ma')
     y += f2.size + 40
-    pl = pill('スワイプして見てね →', PREF_RED, 38)
+    # ⚠**リールに出すときは「スワイプ」と書かない**。動画なので操作が成立しない
+    #   (2026-09-14ユーザー確認。YouTube版でも同じ指摘を受けている)
+    pl = pill(cta or 'スワイプして見てね →', PREF_RED, 38)
     shadow(im, pl, ((W_ - pl.width) // 2, y))
     return im.convert('RGB')
 
@@ -424,6 +429,9 @@ def main():
                     help='表紙の背景写真。上から4:5で切るので人混みは下に置く。空文字で写真なし')
     ap.add_argument('--tail', default='福岡の子連れおでかけ %d選',
                     help='表紙の3行目。%%d が件数に置き換わる。**「子連れ」を必ず入れる**')
+    ap.add_argument('--cta', default='',
+                    help='表紙の最下段のピル。**リール用は「最後まで見てね →」**(動画はスワイプしない)')
+    ap.add_argument('--out', default='', help='出力先。既定は data/carousel_<開始日>/')
     a = ap.parse_args()
     D = json.load(io.open(a.json, encoding='utf-8'))
     # week_events が選抜した順(源のラウンドロビン後)を優先する。
@@ -441,10 +449,11 @@ def main():
                                                    t.month, t.day, wk[t.weekday()])))
     if not a.title:
         sub += 'おでかけイベント'
-    out = os.path.join(HERE, '..', 'data', 'carousel_%s' % D['from'])
+    out = a.out or os.path.join(HERE, '..', 'data', 'carousel_%s' % D['from'])
     os.makedirs(out, exist_ok=True)
     extra = load_extra()
-    pages = [('01_表紙', cover(sub, len(evs), len(evs), a.hook or None, a.cover or None, a.tail))]
+    pages = [('01_表紙', cover(sub, len(evs), len(evs), a.hook or None, a.cover or None,
+                              a.tail, a.cta or None))]
     for i, ev in enumerate(evs, 1):
         pages.append(('%02d_%s' % (i + 1, re.sub(r'[^\w一-龥ぁ-んァ-ヶー]', '', ev['title'])[:16]),
                       card(ev, i, extra)))

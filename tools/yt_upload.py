@@ -58,8 +58,18 @@ def parse_script(path):
                 on = bool(re.match(r'■\s*' + pattern, ln))
                 continue
             if on:
-                if set(ln.strip()) and set(ln.strip()) <= set('─-—'):
-                    break
+                # ⚠罫線は「見出しの直後なら飛ばす / 本文の後なら次節の始まりとして打ち切る」。
+                #   `=` を含めていなかったため、台本が
+                #     ====
+                #     ■ YouTube 概要欄
+                #     ====
+                #     本文...
+                #   の形だと**罫線が本文1行目として混ざり、タイトルが「====」になった**
+                #   (2026-09-14 はま寿司回で踏んだ)
+                if set(ln.strip()) and set(ln.strip()) <= set('─-—=＝'):
+                    if not out:
+                        continue        # 見出し直下の罫線は飛ばす
+                    break               # 本文のあとの罫線は次の節
                 out.append(ln)
         return '\n'.join(out).strip('\n')
 
@@ -71,6 +81,9 @@ def parse_script(path):
     title = ''
     for ln in titles.split('\n'):
         ln = ln.strip().lstrip('・').strip()
+        # 台本のタイトル案は「1. 【福岡グルメ】…」の形で番号が付く。
+        # ⚠剥がさないと**タイトルが「1. 【…」のまま投稿される**(2026-09-14に踏んだ)
+        ln = re.sub(r'^\(?\d{1,2}[.)．、]\s*', '', ln).strip()
         if ln:
             title = ln
             break

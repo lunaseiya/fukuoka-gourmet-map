@@ -73,7 +73,19 @@ def poster_ok(title, lead=''):
 #   康熙部首・全角英数・互換漢字はまとめて **unicodedata.normalize('NFKC')** に任せるのが正解
 DASH = str.maketrans({'～': '〜', '~': '〜', '－': '-', '−': '-', '–': '-', '—': '-'})
 JUN = {'上旬': 5, '中旬': 15, '下旬': 25}
-ENDED = re.compile(r'開催はありません|営業終了|終了しました|中止')
+ENDED = re.compile(r'開催はありません|営業終了|終了しました|終了いたしました|中止')
+# ⚠**素の「中止」で終了判定してはいけない**【2026-09-16に発覚・わっしょい百万夏まつりが消えていた】
+#   屋外の祭り・花火の会期表記には「**雨天決行、荒天中止（予定）**」がほぼ必ず付く。
+#   これを ENDED が拾って ('ended') を返していたため、
+#   **kids_score が最大(12点)の大祭・花火が丸ごと収集から消えていた**。
+#   → 天候の注記が入っている節を**先に丸ごと落としてから** ENDED を当てる。
+#     ただし本当の中止(「開催中止」「中止となりました」)は天候の節にあっても拾う
+WEATHER = re.compile(r'[^。\n]*(?:雨天|荒天|悪天候|小雨|強風|降雨|荒天時)[^。\n]*')
+ENDED_HARD = re.compile(r'開催中止|中止となり|中止しま|中止いたし|中止です')
+# 「9月19日（土）**・20日（日）**」のように**日だけが追記される**形。
+# ⚠これを拾えず、2日間の祭りが**初日1日だけ**の会期になっていた(同日発覚)。
+#   土日版のように窓が狭い回だと、2日目しか掛からない祭りが期間外で落ちる
+DAY_MORE = re.compile(r'[・、,]\s*(\d{1,2})\s*日')
 YMD_J = re.compile(r'(?:(\d{4})年)?\s*(\d{1,2})月\s*(\d{1,2})日')
 YM_JUN = re.compile(r'(?:(\d{4})年)?\s*(\d{1,2})月(上旬|中旬|下旬)')
 YM_ONLY = re.compile(r'(?:(\d{4})年)?\s*(\d{1,2})月(?!\s*\d|上旬|中旬|下旬)')
@@ -103,7 +115,8 @@ def jspan(text, base=None):
     読めなければ (False, False, None)、終了済みなら ('ended', ...) を返す"""
     base = base or date.today()
     t = unicodedata.normalize('NFKC', text or '').translate(DASH)
-    if ENDED.search(t):
+    # ⚠天候の注記(「雨天決行、荒天中止」)を落としてから終了判定する。上の WEATHER のコメント参照
+    if ENDED_HARD.search(t) or ENDED.search(WEATHER.sub('', t)):
         return ('ended', 'ended', None)
     # 先頭に出てくる「20XX年」を既定の年にする。
     #   ⚠これが無いと「2026年3月〜11月の第2日曜 ※3月8日…」の ※以降に年が無いため、
@@ -136,6 +149,13 @@ def jspan(text, base=None):
             v = _mk(ds[0].year, ds[0].month, int(m.group(1)), base)
             if v and v >= ds[0]:
                 e = v
+        # 「9月19日（土）・20日（日）」= **開催日2つ**。日だけの追記を開催日として足す。
+        #   ⚠ここを入れる前は初日1日だけの会期になっていた(2026-09-16発覚)
+        if len(ds) == 1 and e == ds[0]:
+            extra = [_mk(ds[0].year, ds[0].month, int(x), base) for x in DAY_MORE.findall(t)]
+            vs = sorted(set([ds[0]] + [v for v in extra if v and v >= ds[0]]))
+            if len(vs) > 1:
+                return (vs[0], vs[-1], vs)
         return (ds[0], e, None)
     # 上旬/中旬/下旬
     for yy, mm, jj in YM_JUN.findall(t):

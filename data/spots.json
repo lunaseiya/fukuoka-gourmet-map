@@ -9282,8 +9282,8 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "家族風呂6室(和室10畳付)。10:30~24:00(受付23:00)、休は原則第2火曜。大浴場もあり。料金は要問合せ。 お子様用ボディソープ・保湿ゲル完備。",
-  "bathAge": "オムツ未使用児は浴槽不可、ベビーバスあり。7歳以上は混浴不可(条例)。幼児4-6歳490円",
+  "verdict": "⭐**家族風呂が全6室**。各室に休憩室(和室)とトイレが付き、地下1,500mから湧く天然温泉100%掛け流し。⭐**乳幼児用のシャンプー・ボディソープ・保湿ゲルが各浴室に常備**されていて、さらにお子様用に「メリットキッズ シャンプー&コンディショナー」も置いてある。**赤ちゃん連れで洗面用具を持ち込まなくていい**のがこの施設の一番強いところ。◆家族風呂の料金(60分): 平日は浴槽(小)『大城』3,000円 / (中)『岩屋』『宝満』『三郡』『大根地』3,400円 / (大)『天拝』3,800円。**土日祝は+1,000円**、大人6名以上は1名あたり+500円。120分・180分コースもあり(倍数計算)。タオルは各部屋2枚。予約は**1ヶ月前から**電話・Webで受付。◆営業 10:30〜24:00(**家族風呂の受付は23:00まで**)。休は原則第2火曜。大浴場・自然食ブッフェもある。⚠**連休の繁忙期は家族風呂が追加料金**になる(シルバーウィークは+1,200円だった)。⚠天拝山の中腹にあるので車が前提。",
+  "bathAge": "オムツ未使用児は大浴場の浴槽に入れない(ベビーバスあり)。7歳以上は混浴不可(条例)。幼児4-6歳490円。**家族風呂なら乳幼児用シャンプー・ボディソープ・保湿ゲルが各室に常備**",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -9291,7 +9291,8 @@
   },
   "thumb": null,
   "wish": false,
-  "category": "onsen"
+  "category": "onsen",
+  "web": "https://tenpainosato.com/familybath-2"
  },
  {
   "id": "munakataoumarutennenonsenyam",
@@ -10292,7 +10293,14 @@
   "thumb": null,
   "wish": true,
   "category": "onsen",
-  "booking": "https://www.jalan.net/yad356096/"
+  "booking": "https://www.jalan.net/yad356096/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad356096/",
+   "official": "山あいの宿　山みず木",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "ikoiryokan",
@@ -10316,7 +10324,14 @@
   "thumb": null,
   "wish": true,
   "category": "onsen",
-  "booking": "https://www.jalan.net/yad354381/"
+  "booking": "https://www.jalan.net/yad354381/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad354381/",
+   "official": "黒川温泉　いこい旅館",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "tochigionsenoyamaryokan",
@@ -10364,7 +10379,14 @@
   "thumb": null,
   "wish": true,
   "category": "onsen",
-  "booking": "https://www.jalan.net/yad331160/"
+  "booking": "https://www.jalan.net/yad331160/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad331160/",
+   "official": "湯の宿入船",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "seiryuusou",
@@ -10388,7 +10410,14 @@
   "thumb": null,
   "wish": true,
   "category": "onsen",
-  "booking": "https://www.jalan.net/yad376375/"
+  "booking": "https://www.jalan.net/yad376375/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad376375/",
+   "official": "菊池温泉　旅館　清流荘",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "shichijouonsendoomu",
@@ -10481,7 +10510,14 @@
   "thumb": null,
   "wish": true,
   "category": "onsen",
-  "booking": "https://www.jalan.net/yad393885/"
+  "booking": "https://www.jalan.net/yad393885/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad393885/",
+   "official": "ホテルアレグリアガーデンズ天草",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "tennenonsengokurakuyumiyazak",
@@ -14928,7 +14964,14 @@
   "stay": true,
   "bathAge": "添い寝は12歳まで無料(6〜12歳2,000円)",
   "web": "https://www.grandvrio-hotelresort.com/aso/faq/",
-  "booking": "https://www.jalan.net/yad341792/"
+  "booking": "https://www.jalan.net/yad341792/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad341792/",
+   "official": "阿蘇リゾートグランヴィリオホテル",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "stay298de35348",
@@ -14960,7 +15003,14 @@
   "category": "onsen",
   "stay": true,
   "web": "https://onsen.aso.ne.jp/inn/kadoman/",
-  "booking": "https://www.jalan.net/yad359456/"
+  "booking": "https://www.jalan.net/yad359456/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad359456/",
+   "official": "ホテル角萬",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "stay1e73c478d1",
@@ -14985,7 +15035,14 @@
   "category": "onsen",
   "stay": true,
   "web": "https://kamenoi-hotels.com/asoparkresort/",
-  "booking": "https://www.jalan.net/yad333314/"
+  "booking": "https://www.jalan.net/yad333314/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad333314/",
+   "official": "亀の井ホテル阿蘇パークリゾート",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "stay95124bf207",
@@ -15010,7 +15067,14 @@
   "category": "onsen",
   "stay": true,
   "web": "https://www.ryugu.net/",
-  "booking": "https://www.jalan.net/yad316602/"
+  "booking": "https://www.jalan.net/yad316602/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad316602/",
+   "official": "ホテル竜宮",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "stay0279fbae65",
@@ -15035,7 +15099,14 @@
   "category": "onsen",
   "stay": true,
   "web": "http://www.sanraizukankou.co.jp/yumehotaru/",
-  "booking": "https://www.jalan.net/yad346716/"
+  "booking": "https://www.jalan.net/yad346716/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad346716/",
+   "official": "湯本の荘 夢ほたる",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "stay5c25b934cd",
@@ -23052,7 +23123,14 @@
   "web": "https://yumeoisou.com/",
   "stay": true,
   "dayUse": true,
-  "booking": "https://www.jalan.net/yad321249/"
+  "booking": "https://www.jalan.net/yad321249/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad321249/",
+   "official": "阿蘇内牧温泉　湯巡追荘",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "spa1c2b258ba",
@@ -42574,7 +42652,14 @@
   "category": "onsen",
   "stay": true,
   "booking": "https://www.jalan.net/yad328423/",
-  "postal": "869-2503"
+  "postal": "869-2503",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad328423/",
+   "official": "つえたて温泉ひぜんや",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "taiyoken-najima",
@@ -43144,7 +43229,14 @@
   "category": "onsen",
   "stay": true,
   "web": "https://mf-h.jp/",
-  "booking": "https://www.jalan.net/yad349500/"
+  "booking": "https://www.jalan.net/yad349500/",
+  "fukko": {
+   "checked": "2026-09-15",
+   "url": "https://www.jalan.net/yad349500/",
+   "official": "南阿蘇フィールドホテル",
+   "source": "https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf",
+   "note": "熊本県公式の宿泊施設一覧に掲載(2026-09-15確認)。クーポン枠は県単位で変動する"
+  }
  },
  {
   "id": "kuronoren-yamaga",
@@ -44506,5 +44598,40 @@
   "thumb": null,
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40005614/",
   "posted": "2026-09-15"
+ },
+ {
+  "id": "chikushinoyu",
+  "name": "筑紫の湯",
+  "area": "筑紫野市(筑紫・城山IC そば)",
+  "city": "筑紫野市",
+  "pref": "福岡県",
+  "genre": "日帰り温泉・家族風呂(貸切湯6室)",
+  "lat": 33.457976,
+  "lng": 130.535622,
+  "address": "福岡県筑紫野市筑紫973",
+  "postal": "818-0025",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**家族風呂(貸切湯)が全6室**あり、90分制で予約して使える。うち**「開運の湯」には小さな子供用の浅瀬スペースがある**ので、まだ湯船に立てない子を連れて行くならこの部屋。料金は開運の湯・サンディエゴブルー 3,900円(土日祝4,400円)、シルキーの湯・ひのきの湯 4,300円(4,800円)、ソロサウナ・キング/マックス 5,300円(5,800円)。延長は30分1,500円(土日祝2,000円)。◆大浴場は大人880円・小学生以下480円(土日祝は980円/580円)、**3歳未満は無料**。露天風呂・炭酸泉あり。男湯「地獄熱波サウナ」/女湯「美容塩サウナ」。**年中無休**で平日10:00〜翌1:00、土9:00〜、日祝7:00〜(最終受付は24:00前後)。駐車場400台。九州道 筑紫野ICから約5分、鳥栖筑紫野道路 城山ICそば。TEL 092-919-8426。⚠**家族風呂は大浴場とは別料金**で、大浴場の入浴料では入れない。⚠おむつが取れていない子の浴槽可否・ベビーベッドの有無は公式に記載が無いので要問合せ。",
+  "bathAge": "記載なし(要問合せ)。3歳未満は大浴場無料。家族風呂なら人目を気にせず入れる",
+  "web": "https://www.chikushinosato.co.jp/onsen.html",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "category": "onsen",
+  "dayUse": true,
+  "wish": true,
+  "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40045952/"
  }
 ]

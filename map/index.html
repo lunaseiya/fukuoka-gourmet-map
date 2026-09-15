@@ -236,6 +236,16 @@
   }
   .fk-sub  { flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #12695c; line-height: 1.45; }
   .fk-note { flex-basis: 100%; font-size: 11.5px; color: #12695c; line-height: 1.45; }
+  /* 「対象施設だが枠が尽きていると割引は出ない」の注意。見落とされると
+     予約できると誤解させるので、帯の中でも一段目立たせる(白地+橙の縁) */
+  .fk-caution {
+    flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #8a4b00;
+    line-height: 1.5; background: #fff8ee; border: 1px solid #f0b871;
+    border-radius: 8px; padding: 5px 8px;
+  }
+  .fk-caution b { color: #7a3f00; }
+  .fk-links { flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #12695c; }
+  .fk-links a { color: #0b5348; text-decoration: underline; }
   /* 応援割のピン。赤(訪問済み)/青(下調べ)は変えず、青緑のリングと🏨だけ重ねる */
   .pin-fukko {
     box-shadow: 0 0 0 3px #0E9384, 0 1px 5px rgba(0,0,0,.45);
@@ -1345,16 +1355,36 @@ function isEventOnly(spot) { return !!spot.until; }
 function isLimited(spot) { return isEventOnly(spot) || !!campaignOf(spot); }
 
 /* ───────── 九州ふっこう応援割(2026-10-01 宿泊分〜) ─────────
-   国交省155億円を九州7県に配分する旅行支援。**宿ごとに参加登録する方式**なので、
-   同じ県でも参加していない宿は対象外になる。対象施設の公式リストは出ないため、
-   じゃらん等に「応援割プラン」が並んだかどうかで判定する(tools/fukko_watch.py)。
+   国交省155億円を九州7県に配分する旅行支援。
+
+   ⚠**2つの別物を混同しないこと**(2026-09-15に実地で確認):
+     ① 対象施設かどうか … **宿ごとに参加登録する方式**。同じ県でも未参加の宿は対象外
+     ② クーポン枠       … **県単位の予算**。上限に達すると、対象施設であっても
+                          予約画面に「当該都道府県の…クーポンは予算上限に達したため停止」と出て
+                          割引が使えなくなる
+   熊本・長崎は 2026-09-15 10:00 に販売開始し、**同日のうちにじゃらん・楽天とも枠が尽きた**。
+   なので「対象」と出すだけでは予約できると誤解させる。帯に②の注意を必ず併記する。
+
+   ⚠**対象施設の一覧は県によって公表されている**(memoryの「公表されない」は誤り):
+     熊本県 https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf … 295施設。tools/fukko_apply_official.py で突合
+     長崎県 … 一覧の公表なし
+   ⚠**じゃらんは特設ページ型**(対象宿を選ぶと支払画面で自動割引)なので、
+     宿ページに「応援割プラン」は並ばない。tools/fukko_watch.py の判定はこれを外す。
+
    データ形は spots.json の宿に:
-     "fukko": { "checked": "2026-10-01", "url": "<応援割プランのURL>", "note": "任意" }
+     "fukko": { "checked":"2026-09-15", "url":"<宿のじゃらんURL>",
+                "official":"<公式一覧での表記>", "source":"<出典URL>", "note":"任意" }
    fukko が無い = 未確認。**勝手に対象扱いしない**(誤情報で予約させないため) */
 const FUKKO_RATE = {           // 県 → 割引率(%)
   熊本県: 60, 鹿児島県: 60,
   福岡県: 50, 佐賀県: 50, 長崎県: 50, 大分県: 50, 宮崎県: 50,
 };
+// クーポンの残りを見に行く先。**枠は県単位でサイトごとに別配分**なので両方出す
+const FUKKO_RAKUTEN = {
+  熊本県: "kumamoto", 鹿児島県: "kagoshima", 福岡県: "fukuoka",
+  佐賀県: "saga", 長崎県: "nagasaki", 大分県: "oita", 宮崎県: "miyazaki",
+};
+const FUKKO_JALAN = "https://www.jalan.net/kyushu-shien/";
 const FUKKO_START = "2026-10-01";
 function fukkoRate(spot) { return FUKKO_RATE[spot.pref] || null; }
 // 「対象と確認できた宿」だけ true。県が対象でも確認前は false のまま
@@ -1370,14 +1400,21 @@ function fukkoHtml(spot) {
   if (!isFukko(spot)) return "";
   const r = fukkoRate(spot);
   const f = spot.fukko;
-  const head = fukkoNotStarted() ? "10月1日の宿泊分から対象" : "九州ふっこう応援割の対象";
+  const head = fukkoNotStarted() ? "10月1日の宿泊分から対象" : "九州ふっこう応援割の対象施設";
+  const rk = FUKKO_RAKUTEN[spot.pref];
+  // ⚠「対象施設」と「いま予約できるか」は別。枠は**県単位**で尽きるので必ず併記する
   return `<div class="fk-band">
       <span class="fk-icon">🏨</span>
       <span class="fk-main">${head}</span>
       <span class="fk-rate">${r}%OFF</span>
       <span class="fk-sub">上限 1人あたり 宿泊のみ2万円 / 交通付き2泊以上3万円 / 2県以上3万5千円</span>
+      <span class="fk-caution">⚠クーポン枠は<b>${escapeHtml(spot.pref || "県")}単位</b>で、上限に達すると対象施設でも割引が出ません。<b>予約サイトごとに別枠</b>なので、片方が終了でも他方に残っていることがあります</span>
       ${f.note ? `<span class="fk-note">${escapeHtml(f.note)}</span>` : ""}
-      ${f.url ? `<a class="ltd-link" href="${escapeHtml(f.url)}" rel="nofollow noopener" target="_blank">応援割プランを見る</a><span class="pr-badge">PR</span>` : ""}
+      <span class="fk-links">クーポンの残りを確認:
+        <a href="${FUKKO_JALAN}" rel="nofollow noopener" target="_blank">じゃらん</a>
+        ${rk ? ` / <a href="https://travel.rakuten.co.jp/special/kyushuouen/${rk}/" rel="nofollow noopener" target="_blank">楽天トラベル</a>` : ""}
+      </span>
+      ${f.url ? `<a class="ltd-link" href="${escapeHtml(f.url)}" rel="nofollow noopener" target="_blank">この宿を見る</a><span class="pr-badge">PR</span>` : ""}
     </div>`;
 }
 function isExpired(spot) {

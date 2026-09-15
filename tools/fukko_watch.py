@@ -23,6 +23,12 @@
     python tools/fukko_watch.py --ids kamenoi-aso --apply
     python tools/fukko_watch.py --limit 20 --apply   # 20件だけ(様子見)
     python tools/fukko_watch.py --recheck --apply    # 既に付いている宿も見直す
+    python tools/fukko_watch.py --pref 長崎県 熊本県  # 予約が始まった県だけ
+
+⚠**県ごとに予約開始日がずれる**(2026-09-15にユーザー確認: 長崎と熊本が先に開始)。
+  まだ始まっていない県を回しても「応援割の記載なし」になるだけで、
+  **後から始まったときに取りこぼす**。開始した県を --pref で指定して回し、
+  県が増えるたびに回し直すこと。
 """
 import json, io, os, re, sys, time, shutil, urllib.request, urllib.error
 from datetime import date
@@ -83,10 +89,20 @@ def main():
     limit = None
     if '--limit' in a:
         limit = int(a[a.index('--limit') + 1])
+    prefs = None
+    if '--pref' in a:
+        i = a.index('--pref') + 1
+        prefs = set()
+        while i < len(a) and not a[i].startswith('--'):
+            prefs.add(a[i]); i += 1
+        bad = prefs - KYUSHU
+        if bad:
+            sys.exit('!! 九州以外の県が指定された: %s' % ' '.join(sorted(bad)))
 
     spots = json.load(io.open(P, encoding='utf-8'))
     tg = [s for s in spots
           if s.get('booking') and s.get('pref') in KYUSHU
+          and (prefs is None or s.get('pref') in prefs)
           and (ids is None or s['id'] in ids)
           and (recheck or not s.get('fukko'))]
     if limit:

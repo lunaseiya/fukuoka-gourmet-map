@@ -593,6 +593,242 @@ def from_pref():
     return rows
 
 
+# ───────────── 百貨店【2026-09-16追加】────────────────────────
+#  ユーザーの持ち込み(9月の連休の実イベント12件)と突合したら、
+#  **百貨店の催事が1件も拾えていなかった**(ちいかわぽけっと POP UP STORE /
+#  星のカービィ デデデ★デパート = どちらも大丸福岡天神店 本館8階催場)。
+#  ユーザーいわく「大丸は**肉フェスや北海道展**みたいなこともやってた記憶」= 催事は継続的にある。
+#
+#  ⚠**大丸は全社サイト www.daimaru.co.jp が bot 遮断(403)で取れない**。
+#    ブラウザで開くと 403 ではなく 404 が返る = URL が違うだけで、実体は
+#    **店舗の独自ドメイン www.daimaru-fukuoka.jp**。こちらは素の urllib で 200 が返る。
+#    (ヘッダを完全にブラウザ風にしても www.daimaru.co.jp は 403 のまま。WAF のTLS判定なので
+#     ヘッダでは越えられない。**手動しかない、ではなく別ドメインを見るのが正解**)
+#  構造:
+#    <section class="event-contents" id="itemNNNN">
+#      <div class="floor-ttl"><p>本館8階催場</p></div>
+#      <ul class="event-list">
+#        <li><a href="URL"><div class="img-area"><img src="..."></div>
+#            <div class="title">タイトル</div><div class="date">9月2日(水)～9月21日(月)</div></a></li>
+#  ⚠date に**年が入っていない**ので jspan の年推定に任せる(基準日から3ヶ月以上前なら翌年)
+DMF = 'https://www.daimaru-fukuoka.jp'
+DMF_SEC = re.compile(r'<section class="event-contents"[\s\S]*?floor-ttl"><p>([\s\S]*?)</p>'
+                     r'([\s\S]*?)</section>')
+DMF_LI = re.compile(r'<li>\s*<a href="([^"]+)"([\s\S]*?)</a>\s*</li>')
+
+
+def from_daimaru():
+    rows = []
+    try:
+        h = M.fetch(DMF + '/eventinformation/')
+    except Exception as ex:
+        print('  ! 大丸福岡天神 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    for floor, body in DMF_SEC.findall(h):
+        for url, b in DMF_LI.findall(body):
+            ti = re.search(r'class="title">([\s\S]*?)</div>', b)
+            dt = re.search(r'class="date">([\s\S]*?)</div>', b)
+            im = re.search(r'<img[^>]+src="([^"]+)"', b)
+            if not ti:
+                continue
+            a, e, days = jspan(n(dt.group(1)) if dt else '')
+            if a == 'ended':
+                continue
+            rows.append({'src': '大丸福岡天神', 'title': n(ti.group(1)),
+                         'city': '福岡市中央区', 'venue': '大丸福岡天神店',
+                         'place': n(floor), 'url': url if url.startswith('http') else DMF + url,
+                         'span': (a, e), 'days_list': days,
+                         'raw': n(dt.group(1)) if dt else '', 'free': False, 'lead': '',
+                         'poster': (im.group(1) if im.group(1).startswith('http')
+                                    else DMF + im.group(1)) if im else None})
+    print('  大丸福岡天神 %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
+#  博多阪急。1週間ごとの見出し + <article> の繰り返し。
+#    <p class="o-event-list__title">9月16日（水）～9月22日（火・休日）</p>
+#    <article><div class="o-event" data-place="sj"><a href="URL"><figure><img src="..."></figure>
+#      <div class="o-event__inner"><p class="o-event__title">タイトル</p></div></a>
+#      <div class="o-event__detail o-event__inner"><p>●9月17日（木）～22日（火・休日）<br>●8階 催場</p>
+#  ⚠会期は**o-event__detail の最初の <p>** から取る。o-event-list__title は
+#    「その週の一覧」の見出しなので、個別イベントの会期ではない
+HKQ = 'https://www.hankyu-dept.co.jp'
+HKQ_ART = re.compile(r'<article>([\s\S]*?)</article>')
+
+
+def from_hankyu():
+    rows = []
+    try:
+        h = M.fetch(HKQ + '/hakata/event/')
+    except Exception as ex:
+        print('  ! 博多阪急 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    seen = set()
+    for b in HKQ_ART.findall(h):
+        ti = re.search(r'o-event__title">([\s\S]*?)</p>', b)
+        de = re.search(r'o-event__detail[^>]*>\s*<p>([\s\S]*?)</p>', b)
+        u = re.search(r'<a href="([^"]+)"', b)
+        im = re.search(r'<img[^>]+src="([^"]+)"', b)
+        if not ti:
+            continue
+        # ⚠一覧の見出し(「9月16日（水）～22日（火・休日）の博多阪急イベント」
+        #   「9〜10月の博多阪急イベント一覧」)も <article> に入っている。**イベントではない**
+        if re.search(r'の博多阪急イベント|イベント一覧', n(ti.group(1))):
+            continue
+        url = (u.group(1) if u else HKQ + '/hakata/event/')
+        if url in seen:
+            continue
+        seen.add(url)
+        raw = n(re.sub(r'<br\s*/?>', ' / ', de.group(1))) if de else ''
+        a, e, days = jspan(raw)
+        if a == 'ended':
+            continue
+        # 「● 8階 催場」の部分を place に回す(会場の階)
+        pl = ''
+        for part in raw.split('/'):
+            if re.search(r'\d+階|催場|ホール', part):
+                pl = part.strip(' ●')
+                break
+        rows.append({'src': '博多阪急', 'title': n(ti.group(1)),
+                     'city': '福岡市博多区', 'venue': '博多阪急', 'place': pl,
+                     'url': url, 'span': (a, e), 'days_list': days,
+                     'raw': raw, 'free': False, 'lead': '',
+                     'poster': (im.group(1) if im and im.group(1).startswith('http') else None)})
+    print('  博多阪急 %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
+# ───────── よかなび(福岡市公式観光)【2026-09-16追加】─────────
+#  **福岡市内の公園・広場で開かれる民間イベント**の源。イオン系・県公式のどちらにも出てこない。
+#  取りこぼしていた「第3回福岡からあげフェス2026(舞鶴公園 三の丸広場)」がここにある。
+#  構造:
+#    <div class="card-list__item" data-rspec="event"><div class="card">
+#      <a class="card-img" href="/events/NNNN"><img src="..."></a>
+#      <a class="card-title" href="/events/NNNN"> タイトル </a>
+#      <div class="card-description">…</div>
+#      <p class="card-period"><span class="icon">…</span><span class="txt">会期</span></p>
+#      <div class="card-area"><div class="card-area-list"><a class="txt">…エリア</a></div></div>
+#  ⚠`<svg>` が大量に埋まっているので**先に svg を落とす**。class の抽出が svg 側に当たる
+#  ⚠card-period は**「●本祭」「●前夜祭」の複数ブロック**が <br> で並ぶ。
+#    そのまま jspan に渡すと日付が3つ以上になり「特定日リスト」と誤判定され、
+#    **連続開催の中日(9/21)が抜ける**。→ 最初の日付を含むブロックだけを取り、
+#    さらに「※」以降(注記)を落としてからレンジとして読む
+YOKA = 'https://yokanavi.com'
+YOKA_CARD = re.compile(r'<div class="card-list__item" data-rspec="event">'
+                       r'([\s\S]*?)(?=<div class="card-list__item"|</section>)')
+
+
+def yoka_span(txt):
+    t = re.sub(r'<br\s*/?>', ' ', txt)
+    t = n(t)
+    for part in [p for p in t.split('●') if re.search(r'\d{1,2}月\s*\d{1,2}日', p)]:
+        return jspan(part.split('※')[0])
+    return jspan(t.split('※')[0])
+
+
+def from_yokanavi(maxpage=3):
+    rows = []
+    for pg in range(1, maxpage + 1):
+        u = YOKA + '/event/' + ('' if pg == 1 else '?page=%d' % pg)
+        try:
+            h = re.sub(r'<svg[\s\S]*?</svg>', '', M.fetch(u))
+        except Exception as ex:
+            print('  ! よかなび %s %s' % (u, type(ex).__name__), file=sys.stderr)
+            break
+        got = 0
+        for b in YOKA_CARD.findall(h):
+            ti = re.search(r'class="card-title" href="([^"]+)">([\s\S]*?)</a>', b)
+            pe = re.search(r'class="card-period">([\s\S]*?)</p>', b)
+            de = re.search(r'class="card-description">([\s\S]*?)</div>', b)
+            ar = re.search(r'card-area-list">\s*<a[^>]*>([\s\S]*?)</a>', b)
+            im = re.search(r'class="card-img"[\s\S]{0,200}?src="([^"]+)"', b)
+            if not ti:
+                continue
+            a, e, days = yoka_span(pe.group(1)) if pe else (False, False, None)
+            if a == 'ended':
+                continue
+            rows.append({'src': 'よかなび', 'title': n(ti.group(2)),
+                         'city': '福岡市', 'venue': n(ar.group(1)) if ar else '',
+                         'url': YOKA + ti.group(1), 'span': (a, e), 'days_list': days,
+                         'raw': n(pe.group(1)) if pe else '', 'free': False,
+                         'lead': n(de.group(1))[:260] if de else '',
+                         'poster': im.group(1) if im else None})
+            got += 1
+        print('  よかなび %dページ目 +%d (累計%d)' % (pg, got, len(rows)), file=sys.stderr)
+        if not got:
+            break
+        time.sleep(M.WAIT)
+    return rows
+
+
+# ───────── 久留米公式観光「ほとめきの街」【2026-09-16追加】─────────
+#  ⚠**県公式(クロスロードふくおか)の久留米は会期が去年のまま**のことがある
+#    (「久留米市城島 ふるさと夢まつり」が 2025年9月20日・21日 と書かれていた。実際は2026年9月19-20日)。
+#    久留米の一次情報はこちらを見る。
+#  ⚠ドメインは **welcome-kurume.com**。`kurume-hotomeki.jp` は別会社のページが出る(タイトルが
+#    「株式会社ナレッジソースワークス」)。踏まないこと。
+#  構造:
+#    <li><a href="/events/detail/UUID"><figure class="pht-contain">…<img src="…"></figure></a>
+#      <div class="txt"><span class="link-event"><a href="…">タイトル</a></span>
+#        <span class="spot-areaNN">エリア</span>
+#        <span class="event-date"> 2026年9月19日(土)･20日(日)<br>… </span>
+#  ⚠会期の中点が**半角カタカナ中点「･」(U+FF65)**。jspan は NFKC を通すので「・」になり
+#    DAY_MORE が拾える(2026-09-16に実測で確認)
+KRM = 'https://welcome-kurume.com'
+KRM_LI = re.compile(r'<li>\s*<a href="(/events/detail/[^"]+)"([\s\S]*?)</li>')
+
+
+def from_kurume(maxpage=3):
+    rows = []
+    seen = set()
+    for pg in range(1, maxpage + 1):
+        u = KRM + '/events' + ('' if pg == 1 else '?page=%d' % pg)
+        try:
+            h = M.fetch(u)
+        except Exception as ex:
+            print('  ! 久留米観光 %s %s' % (u, type(ex).__name__), file=sys.stderr)
+            break
+        got = 0
+        for url, b in KRM_LI.findall(h):
+            if url in seen:
+                continue
+            ti = re.search(r'class="link-event"><a[^>]*>([\s\S]*?)</a>', b)
+            dt = re.search(r'class="event-date">([\s\S]*?)</span>', b)
+            ar = re.search(r'class="spot-area\d+">([\s\S]*?)</span>', b)
+            im = re.search(r'<img src="([^"]+)"', b)
+            if not ti:
+                continue
+            seen.add(url)
+            raw = n(re.sub(r'<br\s*/?>', ' ', dt.group(1))) if dt else ''
+            a, e, days = jspan(raw)
+            if a == 'ended':
+                continue
+            rows.append({'src': '久留米観光', 'title': n(ti.group(1)),
+                         'city': '久留米市', 'venue': n(ar.group(1)) if ar else '久留米市',
+                         'url': KRM + url, 'span': (a, e), 'days_list': days,
+                         'raw': raw, 'free': False, 'lead': '',
+                         'poster': (KRM + im.group(1)) if im else None})
+            got += 1
+        print('  久留米観光 %dページ目 +%d (累計%d)' % (pg, got, len(rows)), file=sys.stderr)
+        if not got:
+            break
+        time.sleep(M.WAIT)
+    return rows
+
+
+# ⚠**キャナルシティの「期間限定ショップ」は源にできない**【2026-09-16に実測して断念】
+#   ユーザー要望で「テレ東本舗。WITH テレQ」(2026/9/18〜2027/2/7)を拾えるようにしようとしたが、
+#   ①`/event` の一覧に入らない(あれは**イベント**枠。テレ東はトップのカルーセルにだけ出て
+#     リンク先は `/shop/detail/10510404` = **ショップ**枠)
+#   ②`/shopnews`(20件)は店舗の販促ブログで**会期を持たない**(「新作入荷」「ダイヤモンドネックレス」等)
+#   ③`/shopsearch`(191店)は店名一覧で会期なし
+#   ④**個別の `/shop/detail/…` を開いても会期が書かれていない**(本文に「期間限定出店」とあるだけで
+#     2027/2/7 の文字列がページ内に存在しない)
+#   → 会期が取れないものは登録できない(推測で埋めない)ので、**期間限定ショップは追わない**。
+#     もっとも、5か月弱の会期は `left > 90` で -6点が付く「実質常設」扱いなので、
+#     週次告知の趣旨からも外れている。
+
+
 # ───────────────────────── 商業施設 ─────────────────────────
 def from_mall():
     rows = []
@@ -609,7 +845,8 @@ def main():
     ap.add_argument('--from', dest='f')
     ap.add_argument('--to', dest='t')
     ap.add_argument('--n', type=int, default=12)
-    ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref')
+    ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
+                                     'daimaru,hankyu,yokanavi,kurume')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -627,7 +864,10 @@ def main():
     for s, fn in (('mall', from_mall), ('lala', from_lalaport), ('canal', from_canal),
                   ('icp', from_iccentral), ('ie', from_islandeye),
                   ('kgk', from_kagakukan), ('map', from_spots),
-                  ('ikoyo', lambda: from_ikoyo(f, t)), ('pref', from_pref)):
+                  ('ikoyo', lambda: from_ikoyo(f, t)), ('pref', from_pref),
+                  # 【2026-09-16追加】百貨店2館 + 福岡市の公園/広場 + 久留米
+                  ('daimaru', from_daimaru), ('hankyu', from_hankyu),
+                  ('yokanavi', from_yokanavi), ('kurume', from_kurume)):
         if s in srcs:
             print('[%s] 収集中...' % s, file=sys.stderr)
             got = fn()
@@ -786,7 +1026,17 @@ def main():
             for _, v in order:
                 while v:
                     r = v.pop(0)
-                    c = r.get('city') or '?'
+                    # ⚠**city が空のものを '?' でまとめてはいけない**【2026-09-16に発覚】
+                    #   県公式(クロスロードふくおか)は一覧に市区が出ないので city='' になる。
+                    #   '?' に寄せると**県公式の全件が1つのバケツ**になり、
+                    #   per_city=2 が「県公式は2件まで」として効いてしまっていた。
+                    #   実害: 「わっしょい百万夏まつり」(北九州の第39回・2日間・2源掲載/score19)が
+                    #   宮地嶽神社と他1件に枠を取られ、score20未満なので上限も超えられず落ちていた。
+                    #   市区上限は**地域を散らすため**のものなので、市区が不明なものは対象外にする
+                    c = r.get('city') or ''
+                    if not c:
+                        out.append(r)
+                        break
                     # ⚠市区の上限が**大型行事を弾いていた**(2026-09-13)。
                     #   「筥崎宮 放生会」(21点/博多三大祭り)が、福岡市東区の枠を
                     #   キッズモデル体験とチン!するレストランに取られて入れなかった。

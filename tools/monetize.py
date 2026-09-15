@@ -53,7 +53,11 @@ def find_tabelog(spot):
     name = spot['name']
     # 「ラーメン/カフェ」等の冠と「◯◯店」の枝番を落とした本体名も試す
     core = re.sub(r'^(ラーメン|らーめん|カフェ|定食|食堂|中華食堂|回転寿司|焼肉)\s*', '', name)
-    core = re.sub(r'\s.*?店$', '', core)
+    # ⚠**枝番を落とすのは「最後の1語」だけ**【2026-09-16に踏んだ】
+    #   旧 `\s.*?店$` は非貪欲でも**最初の空白から 店$ まで**を消すので、
+    #   「恵比寿 京鼎樓 福岡店」→「恵比寿」まで削れてしまい、
+    #   群馬県高崎市のラーメン店「恵比寿」を引き当てていた
+    core = re.sub(r'\s+\S*店$', '', core)
     area = re.sub(r'[（(].*?[)）]', '', str(spot.get('area') or '')).strip()
     city = str(spot.get('city') or '')
     queries = []
@@ -70,7 +74,13 @@ def find_tabelog(spot):
             time.sleep(SLEEP); continue
         for rank, (cand, url) in enumerate(pairs[:3]):
             nc = norm(cand)
-            strong = (n0core and (n0core in nc or nc in n0core))
+            # ⚠**部分一致だけで strong にしてはいけない**【2026-09-16に踏んだ】
+            #   「恵比寿 京鼎樓 福岡店」(n0core='恵比寿京鼎樓福岡')に対して
+            #   候補「恵比寿」(nc='恵比寿')が `nc in n0core` で strong 判定になり、
+            #   **群馬県高崎市のラーメン店「恵比寿」**のURLが付きかけた。
+            #   短い側が長い側の6割未満なら別店とみなす
+            inc = (n0core and (n0core in nc or nc in n0core))
+            strong = bool(inc and min(len(n0core), len(nc)) >= 0.6 * max(len(n0core), len(nc)))
             weak = (rank == 0 and len(set(n0) & set(nc)) >= 3)   # 表記ゆれ(カナ⇔漢字)は1位のみ許容
             if not (strong or weak):
                 continue
@@ -83,7 +93,15 @@ def find_tabelog(spot):
             title = re.sub(r'\s+', ' ', title.group(1)) if title else ''
             if '閉店' in title or '移転' in title:
                 return None, '閉店/移転: ' + title[:40]
-            addr = re.search(r'(?:福岡県|大分県|佐賀県|長崎県|熊本県|宮崎県|鹿児島県|山口県)[^<"]{2,40}', page)
+            # ⚠**住所の正規表現を九州+山口の県名だけにしてはいけない**【2026-09-16に踏んだ】
+            #   旧実装は九州+山口しか見ていなかったため、**群馬県の店では addr が None になり、
+            #   下の市区チェックが `addr and …` で丸ごと飛ばされて素通り**していた。
+            #   → 全都道府県を取れる正規表現にして、**都道府県の一致を必須(positive)にする**。
+            #     取れなかった場合も弾く(確認できないものにリンクは付けない)
+            addr = re.search(r'(北海道|東京都|大阪府|京都府|.{2,3}県)[^<"]{2,40}', page)
+            pref = str(spot.get('pref') or '')
+            if pref and not (addr and addr.group(0).startswith(pref)):
+                continue   # 都道府県が確認できない/違う。次の候補へ
             if citykey and addr and citykey not in addr.group(0):
                 continue   # 同名の他都市店。次の候補へ
             if not strong and not (citykey and addr and citykey in addr.group(0)):

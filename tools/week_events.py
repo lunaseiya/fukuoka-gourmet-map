@@ -935,8 +935,23 @@ def main():
             if k2 in merged_keys:
                 continue
             r1, r2 = grp[k1][0], grp[k2][0]
-            same_city = (r1.get('city') or '') == (r2.get('city') or '') or not (r1.get('city') and r2.get('city'))
-            if r1['span'] == r2['span'] and same_city and common_run(k1, k2):
+            c1, c2 = r1.get('city') or '', r2.get('city') or ''
+            # ⚠**市区は前方一致も同一とみなす**【2026-09-16に発覚】
+            #   源によって粒度が違う。いこーよは「福岡市東区」、よかなびは「福岡市」。
+            #   完全一致だけで見ていたため、**筥崎宮 放生会が会期完全一致・タイトル共通6文字
+            #   なのに束ならず、12枠のうち2枠を同じ祭りで使っていた**
+            #   (#1 いこーよ/マップ score31 と #6 よかなび score25)。
+            same_city = (not (c1 and c2) or c1 == c2
+                         or c1.startswith(c2) or c2.startswith(c1))
+            # ⚠**開始日が不明(nostart)なものは終了日だけで会期一致を見る**(同日に発覚)
+            #   マップ登録の until 持ちスポットは開始が無いので span が
+            #   (None, 終了) になり、同じイベントのいこーよ版と一致しなかった
+            #   (アクティブ・キッズ-LABO- が 朝倉市で2枠を使っていた)
+            if r1.get('nostart') or r2.get('nostart'):
+                same_span = r1['span'][1] == r2['span'][1]
+            else:
+                same_span = r1['span'] == r2['span']
+            if same_span and same_city and common_run(k1, k2):
                 print('  束ね: %s ← %s' % (k1[:26], k2[:26]), file=sys.stderr)
                 grp[k1] += grp[k2]
                 merged_keys[k2] = k1
@@ -1006,14 +1021,33 @@ def main():
     #   モールにもいこーよにも出てこない**その地域だけの行事**で、記事としては一番強い。
     #   ゆめはぴの12選も会場が宗像/福岡/香椎浜/粕屋/福津/久留米/柳川に散っていた。
     #   なので **源をラウンドロビンで回し、同じ市区も2件までに抑える**
-    def pick(cands, want, per_city=2, minscore=5):
+    def pick(cands, want, per_city=2, minscore=5, top_slots=3):
         # ⚠源のラウンドロビンは**その源に良いものが無くても1枠使ってしまう**。
         #   スコア1の販促(「オープニング記念キャンペーン」)が入っていたので下限を設ける
         cands = [r for r in cands if r['score'] >= minscore] or cands
-        buckets = {}
-        for r in cands:
-            buckets.setdefault(r['srcs'][0] if r['src'].startswith('イオン') is False else 'mall',
-                               []).append(r)
+        # ★**先頭 top_slots 枠は「源を問わずスコア上位」で埋める**【2026-09-16ユーザー確定】
+        #   源が13に増えた結果、**12枠に対して13バケツ=1源1枠でラウンドロビンが飽和し、
+        #   スコアが選抜にほぼ効かなくなった**。実害:
+        #     採用8枠目 = ちいかわPOP UP(score 9) / 4枠目 = 走り方教室(score 15)
+        #     採用外    = わっしょい百万夏まつり(score 19・第39回・2日間・2源掲載)
+        #   「各源の1位が無条件で入る」ので、**規模の大きい行事が小さい販促に負ける**。
+        #   → 上位3枠だけスコアで確定させ、残りは従来どおりラウンドロビンにする。
+        #     源の散らしは9枠で十分に効く(ゆめはぴの12選も会場は7〜8市区に散っていた)。
+        #   ⚠**市区上限はこの3枠にも数える**。同じ市区の大型行事3連発を防ぐため
+        out, city = [], {}
+        head = set()
+        for r in cands[:]:                       # cands はスコア降順で渡ってくる
+            if len(out) >= min(top_slots, want):
+                break
+            c = r.get('city') or ''
+            if c and city.get(c, 0) >= per_city:
+                continue
+            if c:
+                city[c] = city.get(c, 0) + 1
+            out.append(r)
+            head.add(r['url'])
+        cands = [r for r in cands if r['url'] not in head]
+
         # 商業施設は館ごとに分かれるので1束にまとめる
         mall = [r for r in cands if r['src'].startswith('イオン')]
         others = {}
@@ -1021,11 +1055,12 @@ def main():
             if not r['src'].startswith('イオン'):
                 others.setdefault(r['src'], []).append(r)
         order = [('商業施設', mall)] + sorted(others.items())
-        out, city = [], {}
         while len(out) < want and any(v for _, v in order):
             for _, v in order:
                 while v:
                     r = v.pop(0)
+                    if r['url'] in head:        # 上位3枠で既に採ったもの
+                        continue
                     # ⚠**city が空のものを '?' でまとめてはいけない**【2026-09-16に発覚】
                     #   県公式(クロスロードふくおか)は一覧に市区が出ないので city='' になる。
                     #   '?' に寄せると**県公式の全件が1つのバケツ**になり、

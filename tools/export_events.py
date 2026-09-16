@@ -418,6 +418,59 @@ def main():
         skip = {r.get('venueSpot'), r.get('venueMatch'), r.get('spot')} - {None}
         r['near'] = [n for n in r['near'] if n['id'] not in skip]
 
+    # ── ③.5 同一イベントの重複を統合する ─────────────────────────
+    # ⚠**同じイベントが同じ日に2回出ていた**【2026-09-17ユーザー指摘】
+    #   例: 「筥崎宮 放生会」(裏取り済み) と「筥崎宮『放生会』2026年筥崎宮仲秋大祭」(よかなび)。
+    #   旧: `core(title)[:10]` の完全一致でしか弾いていなかったので、
+    #       前方10文字が違う(「筥崎宮放生会」vs「筥崎宮放生会2026年」)と別物扱いだった。
+    # ⚠**タイトルの前方一致だけで潰してはいけない**。実測すると
+    #   「シルバーウィーク よかとこマルシェ」(イオンモール福岡)と
+    #   「シルバーウィークナイトシネマ in ららぽーと福岡」が前方8文字一致で引っかかる。
+    #   → **会場も一致条件に入れる**。館が違う同名キャンペーン
+    #     (MYボトルデザインコンテストの福津/筑紫野など)も別物として残る
+    def vkey(r):
+        # ⚠**spot id と会場名を混ぜてキーにしてはいけない**【2026-09-17に踏んだ】
+        #   放生会は片方が venueSpot='hakozakigu'、もう片方が venue='筥崎宮' で
+        #   キーが食い違い、**同じ会場なのに統合できなかった**。
+        #   → **名前(core)で揃える**。源をまたいでも会場名は一致する
+        return (core(r.get('venueName') or '') or core(r.get('venue') or '')
+                or core(r.get('city') or ''))
+
+    def better(a, b):
+        """残す方を選ぶ。①裏取り済み ②ポスターあり ③情報が多い ④タイトルが短い"""
+        for f in (lambda x: 1 if x['verified'] else 0,
+                  lambda x: 1 if x.get('poster') else 0,
+                  lambda x: sum(1 for k in ('price', 'time') if x.get(k)),
+                  lambda x: -len(x['title'] or '')):
+            if f(a) != f(b):
+                return a if f(a) > f(b) else b
+        return a
+
+    groups, merged = {}, 0
+    for r in out:
+        ct = core(r['title'])
+        k = (vkey(r), ct[:6]) if len(ct) >= 6 else ('%s#%s' % (vkey(r), r['id']), ct)
+        if k not in groups:
+            groups[k] = r
+            continue
+        keep = better(groups[k], r)
+        drop = r if keep is groups[k] else groups[k]
+        # 開催日はマージする(片方が拾えていない日があるため)
+        keep['days'] = sorted(set(keep['days']) | set(drop['days']))
+        keep['n'] = len(keep['days'])
+        # 欠けている情報だけ相手から補う(上書きはしない)
+        for f in ('poster', 'img', 'price', 'time', 'url', 'venueSpot', 'venueName',
+                  'venueLinks', 'lat', 'lng'):
+            if not keep.get(f) and drop.get(f):
+                keep[f] = drop[f]
+        if not keep['near'] and drop.get('near'):
+            keep['near'] = drop['near']
+        keep['ks'] = max(keep['ks'], drop['ks'])
+        groups[k] = keep
+        merged += 1
+    out = list(groups.values())
+    print('  重複を統合 %d件 → %d件' % (merged, len(out)))
+
     # ── ④ ポスターを自前で持つ(縮小のみ) + 会期切れの掃除 ────────────
     os.makedirs(PDIR, exist_ok=True)
     if a.no_posters:
@@ -459,10 +512,38 @@ def main():
     #       ③裏取り済みはポスターを持たないものが多いので**絵が出ない**(上位6件中4件だけ)
     #   新: 裏取り済みは ks(子連れ度)を代理スコアにして +6、さらに信頼できるぶん +3 だけ優遇。
     #       これで未裏取りの高スコア(ナイトシネマ28点など)と混ざって並ぶ
+    #
+    # ⚠**さらに直した**【2026-09-17ユーザー指摘「花火大会ほんとに載ってる？」】
+    #   旧は未裏取りを `score`(週次投稿の選抜スコア)で並べていた。あれは
+    #   「今週で終わる」「複数源で見つかった」などの**ニュース性ボーナス込み**で、
+    #   一覧の読者が知りたい「子連れで行けるか」とは別物。その結果
+    #   **大型の花火大会が子連れ向けで25〜32位・「すべて」で68〜98位**に沈み、
+    #   1日6件しか出していないので**事実上見えなかった**。
+    #   → **ks(子連れ度)を主軸にする**。score は使わない。
+    #     そのうえで「逃すと終わる」ものと「絵があるもの」を少し前に出す。
     def rank(x):
-        base = x['score'] if x['score'] is not None else (x['ks'] + 6)
-        return base + (3 if x['verified'] else 0)
-    out.sort(key=lambda x: (x['days'][0], -rank(x), -x['ks']))
+        r = x['ks']
+        if x['verified']:
+            r += 3                     # こちらで現地確認したものは信頼できる
+        if x['n'] <= 2:
+            r += 4                     # 「この日だけ」は逃すと終わり
+        if x.get('img'):
+            r += 2                     # ポスターがあると一覧で目に留まる
+        if x.get('price') or x.get('time'):
+            r += 1                     # 料金や時間が分かっているものは行動しやすい
+        return r
+
+    # ★**各イベントに rank を持たせる**【2026-09-17】
+    #   ⚠これが無いと画面側が並べ替えられない。旧実装は `out.sort` の
+    #     第1キーが `days[0]`(会期の開始日)だったため、**日ごとの並びは
+    #     「会期が早く始まった順」**になっていた。
+    #     その結果、ずっと続いている長期イベント(魔法の美術館など)が常に上に来て、
+    #     **今日から始まる単発の花火大会が後ろに回されていた**
+    #     (わっしょい百万夏まつりは rank 22 なのに33位)。
+    #     これが「ポスターの13選がリストで見えない」の正体。
+    for r in out:
+        r['rank'] = rank(r)
+    out.sort(key=lambda x: (x['days'][0], -x['rank'], -x['ks'], x['title']))
     doc = {'generated': date.today().isoformat(),
            'from': t0.isoformat(), 'to': t1.isoformat(),
            'kids_threshold': KIDS_TH, 'events': out}

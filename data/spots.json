@@ -44353,7 +44353,8 @@
   "category": "play",
   "until": "2026-09-20",
   "untilLabel": "9月20日",
-  "official": "https://canalcity.co.jp/event/detail/194?publish_begin=26-09-09&publish_end=26-09-20&hold_calendar=26-09-20~26-09-20"
+  "official": "https://canalcity.co.jp/event/detail/194?publish_begin=26-09-09&publish_end=26-09-20&hold_calendar=26-09-20~26-09-20",
+  "in": "canalcityhakata"
  },
  {
   "id": "ev-15659",
@@ -44420,7 +44421,8 @@
   "category": "play",
   "until": "2026-09-18",
   "untilLabel": "9月18日",
-  "official": "https://iko-yo.net/events/597275"
+  "official": "https://iko-yo.net/events/597275",
+  "in": "hakozakigu"
  },
  {
   "id": "ev-13310",

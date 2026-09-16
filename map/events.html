@@ -297,10 +297,20 @@ function render(){
   const today = DOC.generated;
   let html = '', total = 0;
   days.forEach(iso => {
-    const all = DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e));
+    // ★**その日ごとに rank で並べ替える**【2026-09-17】
+    //   ⚠これが無いと events.json の配列順(=会期の**開始日**順)がそのまま出るので、
+    //     ずっと続いている長期イベントが常に上に来て、
+    //     **その日に始まる単発のイベント(花火大会など)が後ろに回された**。
+    //     わっしょい百万夏まつりは rank 22 なのに33位に沈んでいた。
+    //     これが「ポスターの13選がリストで見えない」の正体だった
+    const all = DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e))
+      .slice().sort((a, b) => (b.rank||0) - (a.rank||0)
+        || (b.ks||0) - (a.ks||0)
+        || (a.title||'').localeCompare(b.title||'', 'ja'));
     if (!all.length) return;
     total += all.length;
-    const lim = shown[iso] || 6;
+    // ⚠6件だと下位が事実上見えない(2026-09-17ユーザー指摘)。10件に増やす
+    const lim = shown[iso] || 10;
     const list = all.slice(0, lim);
     const d = new Date(iso + 'T00:00:00');
     const wd = WD[d.getDay()];

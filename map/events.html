@@ -55,6 +55,31 @@
   .fb[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
   .fb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
+  /* ★日付タブ【2026-09-17ユーザー要望「日付をタブ化してもらえますか。スライドするのが大変です」】
+     14日ぶんを縦に全部並べていたのでスクロールが長かった。**1日ずつ切り替える**。
+     ⚠モバイルファースト: 横スクロールで親指が届く位置に置き、1タップで切り替わる
+     (表示の切り替えは実行アクションではないので「選択→決定」の2ステップにはしない。
+      既存の「子連れ向け/すべて」セグメントと同じ扱い) */
+  .dtabs{display:flex;gap:5px;overflow-x:auto;margin:8px -14px 0;padding:0 14px 3px;
+    scrollbar-width:none;-webkit-overflow-scrolling:touch}
+  .dtabs::-webkit-scrollbar{display:none}
+  .dt{flex:0 0 auto;font:inherit;background:#fff;border:1px solid var(--border);
+    border-radius:11px;padding:5px 9px 6px;cursor:pointer;min-width:52px;
+    display:flex;flex-direction:column;align-items:center;gap:1px;line-height:1.15}
+  .dt .n{font-size:1.06rem;font-weight:800;font-variant-numeric:tabular-nums}
+  .dt .w{font-size:.62rem;font-weight:700;color:var(--muted)}
+  .dt .c{font-size:.6rem;color:var(--muted);font-variant-numeric:tabular-nums}
+  .dt .w.sat{color:#24608f}.dt .w.sun{color:#a93a3a}
+  .dt[aria-pressed="true"]{background:var(--accent);border-color:var(--accent)}
+  .dt[aria-pressed="true"] .n,.dt[aria-pressed="true"] .w,
+  .dt[aria-pressed="true"] .c{color:#fff}
+  .dt.hol .n{color:#a93a3a}
+  .dt[aria-pressed="true"].hol .n{color:#fff}
+  .dt.tdy{box-shadow:0 0 0 2px var(--hot) inset}
+  .dt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .dt.all{min-width:auto}
+  .dt.all .n{font-size:.8rem}
+
   .daygrp{padding:0 14px}
   .dhead{display:flex;align-items:baseline;gap:9px;margin:26px 0 10px;
     padding-bottom:7px;border-bottom:2px solid var(--text)}
@@ -110,6 +135,26 @@
     border-radius:4px;padding:1px 5px;letter-spacing:.04em}
   .disc{font-size:.68rem;color:var(--muted);margin:5px 0 0}
 
+  /* ★ポスターのタップ拡大【2026-09-17ユーザー要望
+       「イベントにポスターがミニサイズではってあると思いますが、タップすると拡大するように
+         ポップアップできますか？ポップアップを再度タップすると元に戻るように」】
+     ⚠保持している画像は**幅480px**(縮小のみ・トリミングなし)。拡大してもそれ以上は精細に
+       ならないが、ミニサイズ(84px)では読めない会期や料金が読めるようになる */
+  .thumbw{flex:0 0 84px;width:84px;height:84px;padding:0;border:0;background:none;
+    cursor:zoom-in;position:relative;border-radius:9px;overflow:hidden;display:block}
+  .thumbw::after{content:'⤢';position:absolute;right:2px;bottom:2px;
+    font-size:.62rem;background:rgba(0,0,0,.55);color:#fff;border-radius:4px;
+    padding:0 3px;line-height:1.5}
+  .thumbw:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  #lb{position:fixed;inset:0;z-index:100;background:rgba(0,0,0,.9);
+    display:none;place-items:center;padding:16px;cursor:zoom-out}
+  #lb.on{display:grid}
+  #lb img{max-width:100%;max-height:78vh;border-radius:8px;display:block;margin:0 auto;
+    background:#fff}
+  #lb .cap{color:#fff;font-size:.74rem;text-align:center;margin:12px 0 0;line-height:1.8}
+  #lb .cap a{color:#9ecbff}
+  #lb .hint{opacity:.7;font-size:.7rem}
+
   .empty{padding:18px;text-align:center;color:var(--muted);font-size:.86rem;
     border:1px dashed var(--border);border-radius:12px}
   .more{display:block;width:100%;margin:10px 0 0;font:inherit;font-size:.82rem;font-weight:700;
@@ -138,6 +183,7 @@
     <button id="segKids" aria-pressed="true">子連れ向け</button>
     <button id="segAll" aria-pressed="false">すべて</button>
   </div>
+  <div class="dtabs" id="dtabs" role="group" aria-label="日付の切り替え"></div>
   <div class="filters" id="filters"></div>
 </header>
 
@@ -152,6 +198,15 @@
 </footer>
 </div>
 
+<!-- ポスターの拡大表示。⚠出典を必ず添える(各主催の告知物を縮小のみで載せているため) -->
+<div id="lb" role="dialog" aria-modal="true" aria-label="ポスターの拡大">
+  <div>
+    <img alt="イベントのポスター">
+    <p class="cap"><span class="hint">もう一度タップで閉じます</span><br>
+      <a class="srcl" href="#" target="_blank" rel="noopener">出典：主催の告知を見る →</a></p>
+  </div>
+</div>
+
 <script>
 const WD = ['日','月','火','水','木','金','土'];
 const HOL = {'2026-09-21':'敬老の日','2026-09-22':'国民の休日','2026-09-23':'秋分の日',
@@ -160,7 +215,7 @@ const esc = s => String(s==null?'':s).replace(/[&<>"']/g,
   c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 
 let DOC = null, kidsOnly = true, city = '', freeOnly = false;
-const shown = {};          // 日付ごとに「何件まで出したか」
+let shown = {};            // 日付ごとに「何件まで出したか」(日を変えたらリセットする)
 
 fetch('./events.json').then(r => r.json()).then(d => { DOC = d; boot(); })
   .catch(() => { document.getElementById('list').innerHTML =
@@ -188,13 +243,67 @@ function boot(){
     }
     render();
   });
+  // ★日付タブのクリック【2026-09-17】
+  document.getElementById('dtabs').addEventListener('click', ev => {
+    const b = ev.target.closest('.dt');
+    if (!b || b.disabled) return;
+    day = b.dataset.iso;
+    // ⚠日付は毎日変わるので localStorage に覚えない(既定は今日のままが正しい)
+    shown = {};                       // 日を変えたら「残り◯件」の展開はリセット
+    render();
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
   const sk = document.getElementById('segKids'), sa = document.getElementById('segAll');
   sk.addEventListener('click', () => { kidsOnly = true; sync(); });
   sa.addEventListener('click', () => { kidsOnly = false; sync(); });
   function sync(){ sk.setAttribute('aria-pressed', kidsOnly); sa.setAttribute('aria-pressed', !kidsOnly);
     try{ localStorage.setItem('ev.kids', kidsOnly ? '1':'0'); }catch(e){} render(); }
   try{ if (localStorage.getItem('ev.kids') === '0') kidsOnly = false; }catch(e){}
+  initDay();                 // 既定は今日
+  initLightbox();
   sync();
+}
+
+// ★いま選んでいる日付("" なら全日)。既定は**今日**
+//   ⚠DOC.generated が範囲外(古いJSONを見たとき)なら先頭の日にする
+let day = '';
+function initDay(){
+  const ds = allDays();
+  day = ds.includes(DOC.generated) ? DOC.generated : (ds[0] || '');
+}
+
+// ★ポスターの拡大(ライトボックス)【2026-09-17ユーザー要望】
+//   ⚠カードは render() で innerHTML を書き換えるので、**#list への委譲**で拾う
+//     (各サムネに直接リスナーを付けると再描画で消える)
+function initLightbox(){
+  const lb = document.getElementById('lb');
+  const im = lb.querySelector('img');
+  const a = lb.querySelector('.srcl');
+  function open(file, src, ttl){
+    im.src = './eventposters/' + file;
+    im.alt = (ttl || 'イベント') + ' のポスター';
+    if (src){ a.href = src; a.style.display = ''; } else { a.style.display = 'none'; }
+    lb.classList.add('on');
+    document.body.style.overflow = 'hidden';   // 背面のスクロールを止める
+  }
+  function close(){
+    lb.classList.remove('on');
+    document.body.style.overflow = '';
+    im.removeAttribute('src');                 // メモリを持ち続けない
+  }
+  document.getElementById('list').addEventListener('click', ev => {
+    const b = ev.target.closest('.thumbw');
+    if (!b) return;
+    ev.preventDefault();
+    open(b.dataset.img, b.dataset.src, b.dataset.ttl);
+  });
+  // 「ポップアップを再度タップすると元に戻る」= どこをタップしても閉じる
+  lb.addEventListener('click', close);
+  // ⚠出典リンクは閉じずに開きたいので伝播を止める
+  a.addEventListener('click', ev => ev.stopPropagation());
+  document.addEventListener('keydown', ev => {
+    if (ev.key === 'Escape' && lb.classList.contains('on')) close();
+  });
 }
 
 function pass(e){
@@ -257,8 +366,11 @@ function nearHtml(e){
 }
 
 function card(e, iso){
+  // ★タップで拡大できるようにボタンで包む【2026-09-17】
   const img = e.img
-    ? `<img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async">`
+    ? `<button class="thumbw" data-img="${esc(e.img)}" data-src="${esc(e.url || '')}"
+         data-ttl="${esc((e.title || '').slice(0, 60))}" aria-label="ポスターを拡大する"
+       ><img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async"></button>`
     : `<div class="noimg">画像は<br>権利上<br>非掲載</div>`;
   const tags = [];
   tags.push(e.verified
@@ -285,15 +397,61 @@ function card(e, iso){
   </div></li>`;
 }
 
-function render(){
-  const days = [];
+// ★日付の一覧。DOC.from 〜 DOC.to を1日ずつ
+// ⚠`toISOString()` はUTCに寄るので、**ローカル日付で組む**
+//   (日本時間の午前9時前に開くと1日ずれる)
+function allDays(){
+  const out = [];
   const f = new Date(DOC.from + 'T00:00:00');
   for (let i = 0; i < 40; i++){
-    const d = new Date(f.getTime() + i*86400000);
-    const iso = d.toISOString().slice(0,10);
+    const d = new Date(f.getFullYear(), f.getMonth(), f.getDate() + i);
+    const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`
+              + `-${String(d.getDate()).padStart(2,'0')}`;
     if (iso > DOC.to) break;
-    days.push(iso);
+    out.push(iso);
   }
+  return out;
+}
+
+// その日に出るイベントを rank 順で返す(タブの件数表示と本文で同じものを使う)
+function ofDay(iso){
+  return DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e))
+    .slice().sort((a, b) => (b.rank||0) - (a.rank||0)
+      || (b.ks||0) - (a.ks||0)
+      || (a.title||'').localeCompare(b.title||'', 'ja'));
+}
+
+// ★日付タブを描く【2026-09-17ユーザー要望】
+//   件数は**いま選んでいるモードと絞り込みを反映した実数**にする
+//   (「17件」と出ているのに開いたら0件、を起こさない)
+function renderTabs(){
+  const box = document.getElementById('dtabs');
+  const today = DOC.generated;
+  const tabs = allDays().map(iso => {
+    const d = new Date(iso + 'T00:00:00');
+    const wd = WD[d.getDay()];
+    const cls = wd === '土' ? 'sat' : (wd === '日' ? 'sun' : '');
+    const n = ofDay(iso).length;
+    return `<button class="dt${HOL[iso] ? ' hol' : ''}${iso === today ? ' tdy' : ''}"
+      data-iso="${iso}" aria-pressed="${day === iso}"
+      ${n ? '' : 'disabled style="opacity:.42"'}
+      title="${esc(HOL[iso] || '')}">
+      <span class="n">${d.getDate()}</span>
+      <span class="w ${cls}">${iso === today ? '今日' : wd}</span>
+      <span class="c">${n}</span></button>`;
+  }).join('');
+  // 「全部」= 従来の全日まとめ表示。長いスクロールに戻せる逃げ道として残す
+  box.innerHTML = `<button class="dt all" data-iso="" aria-pressed="${day === ''}">
+      <span class="n">全部</span><span class="w">14日</span>
+      <span class="c">${DOC.events.filter(pass).length}</span></button>` + tabs;
+  const on = box.querySelector('[aria-pressed="true"]');
+  if (on) on.scrollIntoView({block:'nearest', inline:'center'});
+}
+
+function render(){
+  renderTabs();
+  // 日付タブで選んでいればその日だけ。空("")なら全日
+  const days = day ? [day] : allDays();
   const today = DOC.generated;
   let html = '', total = 0;
   days.forEach(iso => {
@@ -303,14 +461,12 @@ function render(){
     //     **その日に始まる単発のイベント(花火大会など)が後ろに回された**。
     //     わっしょい百万夏まつりは rank 22 なのに33位に沈んでいた。
     //     これが「ポスターの13選がリストで見えない」の正体だった
-    const all = DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e))
-      .slice().sort((a, b) => (b.rank||0) - (a.rank||0)
-        || (b.ks||0) - (a.ks||0)
-        || (a.title||'').localeCompare(b.title||'', 'ja'));
+    const all = ofDay(iso);
     if (!all.length) return;
     total += all.length;
-    // ⚠6件だと下位が事実上見えない(2026-09-17ユーザー指摘)。10件に増やす
-    const lim = shown[iso] || 10;
+    // 1日だけ表示しているときはスクロールが短いので**多めに出す**。
+    // 「全部」表示のときは従来どおり10件で抑える
+    const lim = shown[iso] || (day ? 20 : 10);
     const list = all.slice(0, lim);
     const d = new Date(iso + 'T00:00:00');
     const wd = WD[d.getDay()];

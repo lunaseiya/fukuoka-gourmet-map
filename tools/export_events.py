@@ -69,10 +69,20 @@ def km(a, b, c, e):
     return math.hypot((a - c) * 111.0, (b - e) * 111.0 * math.cos(math.radians(a)))
 
 
+# ⚠**行政区画名だけの「会場」で突合してはいけない**【2026-09-16に発覚】
+#   会場が分からないイベントは venue() が市区名を代わりに入れる。それで名前突合すると
+#   「久留米市」→**久留米市美術館**、「太宰府市」→**太宰府市立プール**を会場と見なし、
+#   座標も「この近くのお店」も**別の場所のもの**になっていた。
+#   ⚠「町」「村」は施設名の語尾にも出る(能古島キャンプ**村**)ので入れない
+ADMIN = re.compile(r'^[一-龥ぁ-んァ-ヶー]{2,6}[都道府県市区]$')
+
+
 def venue_coords(spots, vname, city):
     """会場名を spots.json と突合して座標を借りる。
     ⚠**取れなければ None を返す**。推測で座標を作らない(map-spot スキルの鉄則)"""
     if not vname:
+        return None
+    if ADMIN.match(vname.strip()) or (city and core(vname) == core(city)):
         return None
     cv = core(vname)
     if len(cv) < 4:
@@ -139,23 +149,57 @@ def core(s):
     return re.sub(r'[^0-9A-Za-z一-龥ぁ-んァ-ヶー]', '', s or '')
 
 
+BRACKET = re.compile(r'【([^】]{2,22})】')
+# ⚠**「◯◯エリア」は源サイトの地域カテゴリで、会場ではない**【2026-09-16に公開ページで発覚】
+#   よかなびの `venues` は ['EAST COAST(志賀島)エリア', 'いこーよ', '筥崎宮 放生会'] のような順で、
+#   3番目の本物がタイトルとかぶるため捨てられ、**1番目の地域カテゴリが会場として出ていた**。
+#   放生会は東区箱崎なので「志賀島エリア」は**嘘**。18件が同じ形だった
+AREA = re.compile(r'エリア')
+# 【】の中身を会場として採れるかの判定。施設らしい語尾を持つものだけ通す。
+# (【FaN Week 2026】【福岡検定合格者限定】のようなイベント名・ラベルを会場にしないため)
+VENUEISH = re.compile(r'館|宮|寺|神社|公園|ホール|センター|ドーム|モール|ぽーと|広場|'
+                      r'スタジアム|アリーナ|城|駅|市場|キャンプ|タワー|プラザ|ビル|会館|'
+                      r'劇場|美術|博物|科学|動物|水族|植物|温泉|海浜|埠頭|ふ頭|港|'
+                      r'小学校|中学校|高校|大学|公民館|図書館|体育館|球場|遊園')
+
+
 def clean(t):
-    m = re.match(r'^【([^】]{1,18})】(.*)$', t or '')
-    head, rest = (m.group(1), m.group(2)) if m else ('', t or '')
+    """タイトルを整えつつ、**文中どこにあっても【】を会場候補として抜き出す**。
+    ⚠以前は**先頭の【】しか見ていなかった**ので
+      「筥崎宮『放生会』**【筥崎宮】**2026年…」「特別展「…」**【福岡市科学館】**」の
+      会場を取りこぼし、代わりに地域カテゴリが会場として出ていた(2026-09-16)"""
+    t = t or ''
+    heads = [h.strip() for h in BRACKET.findall(t)]
+    rest = BRACKET.sub(' ', t)
     rest = re.sub(r'\s*[～~][^～~]{18,}$', '', rest)
-    return re.sub(r'\s+', ' ', rest).strip(), head
+    return re.sub(r'\s+', ' ', rest).strip(), heads
 
 
-def venue(r, tt, head):
+def venue(r, tt, heads):
+    """会場を決める。優先順は ①タイトルの【施設名】 ②venues の非かぶり候補
+       ③venues のかぶり候補 ④市区。
+    ⚠**かぶる候補を捨てて次に進んではいけない**。捨てた結果、誤った候補(地域カテゴリ)に
+      流れるほうが害が大きい。かぶりは「最後の手段」として残す"""
     ct = core(tt)
-    for v in (r.get('venues') or []):
-        if not v or any(a in v for a in AGG):
-            continue
+
+    def dup(v):
         cv = core(v)
-        if len(cv) > 26 or any(cv[i:i + 6] in ct for i in range(max(0, len(cv) - 5))):
+        return any(cv[i:i + 6] in ct for i in range(max(0, len(cv) - 5)))
+
+    for h in heads:
+        if h and not any(a in h for a in AGG) and len(core(h)) <= 26 and VENUEISH.search(h):
+            return h
+    later = []
+    for v in (r.get('venues') or []):
+        if not v or any(a in v for a in AGG) or AREA.search(v):
+            continue
+        if len(core(v)) > 26:
+            continue
+        if dup(v):
+            later.append(v)
             continue
         return v
-    return head or (r.get('city') or '')
+    return (later[0] if later else '') or (r.get('city') or '')
 
 
 def main():
@@ -270,10 +314,24 @@ def main():
             g = vc[key]
             if g:
                 r['lat'], r['lng'] = g[0], g[1]
-                # ⚠これは**名前の文字列突合による推測**。`venueSpot`(=`in` で人が確定させたもの)
-                #   とは別のキーに入れる。座標を借りて近隣スポットを引くためだけに使い、
+                # ⚠部分一致は**名前の文字列突合による推測**。`venueSpot`(=`in` で人が確定させた
+                #   もの)とは別のキーに入れる。座標を借りて近隣スポットを引くためだけに使い、
                 #   画面に「会場」として出したり会場の収益リンクを出したりはしない
                 r['venueMatch'] = g[3]
+                # ★ただし**名前が完全一致するなら同じ施設**なので会場として扱ってよい
+                #   【2026-09-16】「筥崎宮」「はかた伝統工芸館」のように会場名がそのまま
+                #   spots にあるものは、`in` を1件ずつ手で付けるのと同じ結果になる。
+                #   ⚠部分一致は昇格させない(「久留米市」→久留米市美術館のような事故が起きる)
+                if core(g[2]) == core(r['venue']):
+                    sp = by_id.get(g[3]) or {}
+                    r['venueSpot'] = g[3]
+                    r['venueName'] = g[2] or ''
+                    if sp.get('tabelog') or sp.get('asoview') or sp.get('booking'):
+                        r['venueLinks'] = {'id': g[3], 'name': g[2] or '',
+                                           'genre': sp.get('genre') or '',
+                                           'tabelog': sp.get('tabelog'),
+                                           'asoview': sp.get('asoview'),
+                                           'booking': sp.get('booking')}
         r['near'] = near_spots(spots, r['lat'], r['lng']) if r['lat'] is not None else []
         # 会場そのものは「近くのお店」に重複して出さない(会場枠で先に出しているため)
         skip = {r.get('venueSpot'), r.get('venueMatch'), r.get('spot')} - {None}

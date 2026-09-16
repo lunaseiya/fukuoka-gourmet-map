@@ -200,7 +200,7 @@ function boot(){
 function pass(e){
   if (kidsOnly && !e.kids) return false;
   if (city && e.city !== city) return false;
-  if (freeOnly && !/無料/.test((e.price||'') + ' ' + e.title)) return false;
+  if (freeOnly && !isFree(e)) return false;
   return true;
 }
 
@@ -222,6 +222,20 @@ function venueHtml(e){
     <a class="vlink" href="../s/${esc(e.venueSpot)}.html">会場のページ →</a></li></ul></div>`;
 }
 
+// ★「無料」の判定【2026-09-16に公開ページで誤りを見つけて追加】
+//   旧: /無料/.test(price + title) だけ。これだと「ポケカ教室は無料」で
+//   **イベント全体が無料**であるかのように「無料」タグが付いていた(有料の物販店)。
+//   **「◯◯は無料」「一部無料」のような部分限定は無料と言わない**
+const PART_FREE = /(?:は|のみ|だけ|等|など|以下|未満|まで|歳|才)\s*無料|一部.{0,4}無料/;
+// ⚠**金額が書いてあるものは無料ではない**。これを先に見る。
+//   「入場料 大人300円／子供600円(0歳無料)」が「0歳無料」で無料タグになっていた(2026-09-16)
+const PAID = /[0-9０-９][0-9０-９,，]*\s*円/;
+function isFree(e){
+  const p = e.price || '';
+  if (PAID.test(p) || PART_FREE.test(p)) return false;
+  return /無料/.test(p) || /無料/.test(e.title || '');
+}
+
 function nearHtml(e){
   if (!e.near || !e.near.length) return '';
   const li = e.near.map(s => {
@@ -230,7 +244,9 @@ function nearHtml(e){
     if (s.tabelog) b.push(`<a class="btn b-tab" href="${esc(s.tabelog)}" target="_blank" rel="noopener">食べログ</a><span class="pr">PR</span>`);
     if (s.asoview) b.push(`<a class="btn b-aso" href="${esc(s.asoview)}" target="_blank" rel="noopener">チケット</a><span class="pr">PR</span>`);
     if (s.booking) b.push(`<a class="btn b-jal" href="${esc(s.booking)}" target="_blank" rel="nofollow noopener">じゃらん</a><span class="pr">PR</span>`);
-    return `<li><span class="nm">${esc(s.name)}</span><span class="km">${s.km}km</span>${b.join('')}</li>`;
+    // 同じ館の中のテナントは 0km になる。「0km」は壊れて見えるので言葉にする
+    const km = s.km < 0.1 ? '同じ建物' : (s.km < 1 ? `徒歩${Math.max(1, Math.round(s.km * 1000 / 80))}分` : `${s.km}km`);
+    return `<li><span class="nm">${esc(s.name)}</span><span class="km">${km}</span>${b.join('')}</li>`;
   }).join('');
   return `<div class="near"><p class="near-h">この近くのお店・遊び場</p><ul>${li}</ul>
     <p class="disc">※イベント主催とは関係のない、こちらで取材した近隣スポットです</p></div>`;
@@ -245,7 +261,7 @@ function card(e, iso){
     ? '<span class="tag t-ver">現地確認済み</span>'
     : '<span class="tag t-unv">要確認</span>');
   if (e.n === 1) tags.push('<span class="tag t-only">この日だけ</span>');
-  if (/無料/.test((e.price||'') + ' ' + e.title)) tags.push('<span class="tag t-free">無料</span>');
+  if (isFree(e)) tags.push('<span class="tag t-free">無料</span>');
   const bits = [];
   if (e.venue) bits.push(`<b>${esc(e.venue)}</b>`);
   if (e.time) bits.push(esc(e.time));

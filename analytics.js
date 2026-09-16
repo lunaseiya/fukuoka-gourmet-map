@@ -81,9 +81,14 @@
 
     var p = partnerOf(href);
     if (p) {
+      // ★`via` = どのイベントのカードから押されたか【2026-09-16追加】
+      //   イベント一覧(map/events.html)は「イベント → 近隣の店」で収益に繋ぐページなので、
+      //   店の名前だけ取れても**どのイベントが効いたのか**が分からない
+      var evc = a.closest ? a.closest('[data-ev]') : null;
       window.icTrack('affiliate_click', {
         partner: p,
         spot: spotNameNear(a),
+        via: evc ? (evc.getAttribute('data-ev') || '') : '',
         page: location.pathname
       });
       return;

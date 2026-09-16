@@ -218,7 +218,7 @@ function venueHtml(e){
   if (v.booking) b.push(`<a class="btn b-jal" href="${esc(v.booking)}" target="_blank" rel="nofollow noopener">じゃらん</a><span class="pr">PR</span>`);
   const nm = e.venueName || e.venue || '';
   return `<div class="venue"><p class="near-h">${b.length ? '会場のチケット' : '会場'}</p>
-    <ul><li><span class="nm">${esc(nm)}</span>${b.join('')}
+    <ul><li data-spot-id="${esc(e.venueSpot)}" data-spot-name="${esc(nm)}"><span class="nm">${esc(nm)}</span>${b.join('')}
     <a class="vlink" href="../s/${esc(e.venueSpot)}.html">会場のページ →</a></li></ul></div>`;
 }
 
@@ -246,7 +246,11 @@ function nearHtml(e){
     if (s.booking) b.push(`<a class="btn b-jal" href="${esc(s.booking)}" target="_blank" rel="nofollow noopener">じゃらん</a><span class="pr">PR</span>`);
     // 同じ館の中のテナントは 0km になる。「0km」は壊れて見えるので言葉にする
     const km = s.km < 0.1 ? '同じ建物' : (s.km < 1 ? `徒歩${Math.max(1, Math.round(s.km * 1000 / 80))}分` : `${s.km}km`);
-    return `<li><span class="nm">${esc(s.name)}</span><span class="km">${km}</span>${b.join('')}</li>`;
+    // ⚠**data-spot-id/name を出す**【2026-09-16】。analytics.js の spotNameNear() は
+    //   これを最優先で読む。無いと `<h1>`(=「子連れイベント」)が spot として記録され、
+    //   **どの店のリンクが押されたのか分からない**(このページは収益導線の柱なので致命的)
+    return `<li data-spot-id="${esc(s.id)}" data-spot-name="${esc(s.name)}">`
+      + `<span class="nm">${esc(s.name)}</span><span class="km">${km}</span>${b.join('')}</li>`;
   }).join('');
   return `<div class="near"><p class="near-h">この近くのお店・遊び場</p><ul>${li}</ul>
     <p class="disc">※イベント主催とは関係のない、こちらで取材した近隣スポットです</p></div>`;
@@ -273,7 +277,7 @@ function card(e, iso){
   const link = e.spot
     ? `<p class="srcline"><a href="../s/${esc(e.spot)}.html">マップのページで見る →</a></p>`
     : (e.url ? `<p class="srcline"><a href="${esc(e.url)}" target="_blank" rel="noopener">主催の告知を見る →</a></p>` : '');
-  return `<li class="ev ${e.kids ? 'kid' : 'oth'}">${img}<div class="body">
+  return `<li class="ev ${e.kids ? 'kid' : 'oth'}" data-ev="${esc((e.title || '').slice(0, 50))}">${img}<div class="body">
     <p class="ttl">${esc(e.title)}</p>
     <div class="tags">${tags.join('')}</div>
     ${bits.length ? `<p class="meta">${bits.join(' ／ ')}</p>` : ''}

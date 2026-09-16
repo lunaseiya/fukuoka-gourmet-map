@@ -139,6 +139,8 @@ def main():
     ap.add_argument('--at', help='予約時刻を直接指定 "2026-09-08 19:00"(ルールを上書き)')
     ap.add_argument('--no-schedule', action='store_true',
                     help='予約せず**非公開のまま**上げる(テスト用/既に別途投稿済みの回)')
+    ap.add_argument('--thumb', default='',
+                    help='サムネ画像。省略時は mp4 と同じフォルダの「インスタサムネ_*.jpg」を使う')
     ap.add_argument('--go', action='store_true', help='実際にアップロードする(既定はドライラン)')
     a = ap.parse_args()
 
@@ -209,6 +211,28 @@ def main():
             print('  アップロード %d%%' % int(status.progress() * 100), flush=True)
     vid = res['id']
     print('完了 videoId:', vid)
+
+    # ★**サムネもAPIで設定する**【2026-09-16に判明】
+    #   それまで「サムネはAPIが403なので手動」と運用していたが、**403だったのは
+    #   videos().update()(公開時刻の変更)の方**で、`thumbnails().set()` は
+    #   トークンが持っている `youtube.upload` スコープだけで通る(実測で4本設定済み)。
+    #   ⚠渡すのは**インスタ版(1080x1920)**。YouTubeは16:9にレターボックスするが、
+    #     Shorts の一覧では縦のまま出るのでインスタ版のほうが合う。
+    #   既定は素材フォルダの「インスタサムネ_*.jpg」を自動で探す。--thumb で明示指定も可
+    th = a.thumb
+    if not th:
+        d = os.path.dirname(os.path.abspath(a.video))
+        cand = sorted(f for f in os.listdir(d) if f.startswith('インスタサムネ_') and f.endswith('.jpg'))
+        th = os.path.join(d, cand[0]) if cand else None
+    if th and os.path.exists(th):
+        try:
+            yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(th)).execute()
+            print('サムネ設定:', os.path.basename(th))
+        except Exception as ex:
+            print('⚠サムネ設定に失敗(手動で設定してください):', type(ex).__name__, str(ex)[:160])
+    else:
+        print('⚠サムネが見つからないので設定していない(素材フォルダに インスタサムネ_*.jpg を置く)')
+
     print('URL :', 'https://youtu.be/' + vid)
     print('管理:', 'https://studio.youtube.com/video/%s/edit' % vid)
 

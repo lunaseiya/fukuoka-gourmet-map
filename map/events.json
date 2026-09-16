@@ -60,7 +60,8 @@
      "booking": null
     }
    ],
-   "rank": 24
+   "img": "ev-597275.jpg",
+   "rank": 26
   },
   {
    "id": "ev-15659",
@@ -580,6 +581,69 @@
    "rank": 16
   },
   {
+   "id": "c80ampscd000601",
+   "title": "星のカービィ デデデ★デパート",
+   "venue": "大丸福岡天神店",
+   "city": "福岡市中央区",
+   "pref": "",
+   "start": "2026-09-02",
+   "end": "2026-09-21",
+   "untilLabel": "",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21"
+   ],
+   "n": 5,
+   "url": "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021580&amp;scd=000601",
+   "poster": null,
+   "price": "入場無料(クレーンゲームは1回100円)",
+   "time": "10:00〜19:00 ※最終日は17:00まで",
+   "verified": false,
+   "spot": null,
+   "lat": 33.588815,
+   "lng": 130.402358,
+   "kids": true,
+   "ks": 14,
+   "score": 13,
+   "src": "大丸福岡天神",
+   "venueMatch": "daimaru-fukuoka-tenjin",
+   "venueSpot": "daimaru-fukuoka-tenjin",
+   "venueName": "大丸福岡天神店",
+   "near": [
+    {
+     "id": "gansomotsunaberakutenchitenj",
+     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+     "genre": "もつ鍋",
+     "km": 0.24,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp0e54dca7b3",
+     "name": "ワンカルビPREMIUM 天神今泉",
+     "genre": "焼肉、ホルモン",
+     "km": 0.29,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40055307/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "teppanyakisakabaikuraten-49",
+     "name": "鉄板焼酒場 いくら 天神今泉店",
+     "genre": "オムバーグ鉄板焼",
+     "km": 0.32,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40056457/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "rank": 15
+  },
+  {
    "id": "cetevents596352",
    "title": "9月ワークショップ「お月見のうさぎを作ろう！」（参加無料）",
    "venue": "大野城市",
@@ -710,6 +774,49 @@
     }
    ],
    "img": "cetevents556488.jpg",
+   "rank": 15
+  },
+  {
+   "id": "ckajpevent11994",
+   "title": "山王寺 風鈴祭り",
+   "venue": "",
+   "city": "",
+   "pref": "",
+   "start": "2026-04-29",
+   "end": "2026-10-04",
+   "untilLabel": "",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "n": 14,
+   "url": "https://www.crossroadfukuoka.jp/event/11994",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11994/responsive_images/oMlfLGUFxkxBSz3w7CV8cQjWKE9x8WJbgJtSWEMP__1605_1070.jpg",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.619615,
+   "lng": 130.552334,
+   "kids": true,
+   "ks": 13,
+   "score": 4,
+   "src": "県公式",
+   "venueVia": "address",
+   "near": [],
+   "img": "ckajpevent11994.jpg",
    "rank": 15
   },
   {
@@ -851,6 +958,58 @@
    "rank": 14
   },
   {
+   "id": "ev-a50d43bf-8107-4ba7-9606-434966d96b95",
+   "title": "ワークショップ 手作りカフェ",
+   "venue": "イオンモール筑紫野",
+   "city": "筑紫野市",
+   "pref": "福岡県",
+   "start": null,
+   "end": "2026-09-20",
+   "untilLabel": "9月20日",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20"
+   ],
+   "n": 4,
+   "url": "https://chikushino-aeonmall.com/event/a50d43bf-8107-4ba7-9606-434966d96b95",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/1336e3a7-a709-471b-a823-4f718f0b5506.jpg?quality=50&format=webp",
+   "price": null,
+   "time": null,
+   "verified": true,
+   "spot": "ev-a50d43bf-8107-4ba7-9606-434966d96b95",
+   "lat": 33.480873,
+   "lng": 130.524292,
+   "kids": true,
+   "ks": 9,
+   "score": null,
+   "venueSpot": "aeonmallchikushino",
+   "venueName": "イオンモール筑紫野",
+   "near": [
+    {
+     "id": "nekocafemocha_chikushino",
+     "name": "猫カフェモカ イオンモール筑紫野店",
+     "genre": "ふれあい動物カフェ",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/158012/",
+     "booking": null
+    },
+    {
+     "id": "stay4ba5b4e0c6",
+     "name": "二日市温泉 大観荘",
+     "genre": "温泉旅館",
+     "km": 1.56,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad343758/"
+    }
+   ],
+   "img": "ev-a50d43bf-8107-4ba7-9606-434966d96b95.jpg",
+   "rank": 14
+  },
+  {
    "id": "cetevents575628",
    "title": "BOSS E・ZO FUKUOKAで「魔法の美術館」開催！",
    "venue": "BOSS E・ZO FUKUOKA",
@@ -918,79 +1077,6 @@
     }
    ],
    "img": "cetevents575628.jpg",
-   "rank": 13
-  },
-  {
-   "id": "ckajpevent17203",
-   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
-   "venue": "北九州市漫画ミュージアム",
-   "city": "",
-   "pref": "",
-   "start": "2026-07-18",
-   "end": "2026-10-18",
-   "untilLabel": "",
-   "days": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21",
-    "2026-09-22",
-    "2026-09-23",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-09-30"
-   ],
-   "n": 14,
-   "url": "https://www.crossroadfukuoka.jp/event/17203",
-   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17203/responsive_images/hPXVTv8Q3r8ZUuyplWeyjKW2k0ulTN9H5dVGJd43__1583_1187.png",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.887542,
-   "lng": 130.88473,
-   "kids": true,
-   "ks": 11,
-   "score": 11,
-   "src": "県公式",
-   "venueMatch": "kitakyushu-manga-museum",
-   "venueSpot": "kitakyushu-manga-museum",
-   "venueName": "北九州市漫画ミュージアム",
-   "near": [
-    {
-     "id": "tenjushikyoumachimise",
-     "name": "天寿し京町店",
-     "genre": "寿司",
-     "km": 0.26,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp45b21d83d1",
-     "name": "スシロー 小倉駅前店",
-     "genre": "回転寿司",
-     "km": 0.33,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40073124/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp5e9d22113b",
-     "name": "ワンカルビ チャチャタウン小倉店",
-     "genre": "焼肉",
-     "km": 0.57,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "ckajpevent17203.jpg",
    "rank": 13
   },
   {
@@ -1115,55 +1201,76 @@
    "rank": 12
   },
   {
-   "id": "ev-a50d43bf-8107-4ba7-9606-434966d96b95",
-   "title": "ワークショップ 手作りカフェ",
-   "venue": "イオンモール筑紫野",
-   "city": "筑紫野市",
-   "pref": "福岡県",
-   "start": null,
-   "end": "2026-09-20",
-   "untilLabel": "9月20日",
+   "id": "ckajpevent17203",
+   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
+   "venue": "北九州市漫画ミュージアム",
+   "city": "",
+   "pref": "",
+   "start": "2026-07-18",
+   "end": "2026-10-18",
+   "untilLabel": "",
    "days": [
     "2026-09-17",
     "2026-09-18",
     "2026-09-19",
-    "2026-09-20"
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30"
    ],
-   "n": 4,
-   "url": "https://chikushino-aeonmall.com/event/a50d43bf-8107-4ba7-9606-434966d96b95",
-   "poster": "https://image-cdn.aeonmall.jp/uploads/1336e3a7-a709-471b-a823-4f718f0b5506.jpg?quality=50&format=webp",
+   "n": 14,
+   "url": "https://www.crossroadfukuoka.jp/event/17203",
+   "poster": null,
    "price": null,
    "time": null,
-   "verified": true,
-   "spot": "ev-a50d43bf-8107-4ba7-9606-434966d96b95",
-   "lat": 33.480873,
-   "lng": 130.524292,
+   "verified": false,
+   "spot": null,
+   "lat": 33.887542,
+   "lng": 130.88473,
    "kids": true,
-   "ks": 9,
-   "score": null,
-   "venueSpot": "aeonmallchikushino",
-   "venueName": "イオンモール筑紫野",
+   "ks": 11,
+   "score": 11,
+   "src": "県公式",
+   "venueMatch": "kitakyushu-manga-museum",
+   "venueSpot": "kitakyushu-manga-museum",
+   "venueName": "北九州市漫画ミュージアム",
    "near": [
     {
-     "id": "nekocafemocha_chikushino",
-     "name": "猫カフェモカ イオンモール筑紫野店",
-     "genre": "ふれあい動物カフェ",
-     "km": 0.0,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/158012/",
+     "id": "tenjushikyoumachimise",
+     "name": "天寿し京町店",
+     "genre": "寿司",
+     "km": 0.26,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
+     "asoview": null,
      "booking": null
     },
     {
-     "id": "stay4ba5b4e0c6",
-     "name": "二日市温泉 大観荘",
-     "genre": "温泉旅館",
-     "km": 1.56,
-     "tabelog": null,
+     "id": "sp45b21d83d1",
+     "name": "スシロー 小倉駅前店",
+     "genre": "回転寿司",
+     "km": 0.33,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40073124/",
      "asoview": null,
-     "booking": "https://www.jalan.net/yad343758/"
+     "booking": null
+    },
+    {
+     "id": "sp5e9d22113b",
+     "name": "ワンカルビ チャチャタウン小倉店",
+     "genre": "焼肉",
+     "km": 0.57,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
+     "asoview": null,
+     "booking": null
     }
    ],
-   "rank": 12
+   "rank": 11
   },
   {
    "id": "cetevents584656",
@@ -1567,35 +1674,63 @@
    "rank": 11
   },
   {
-   "id": "cetevents595381",
-   "title": "杉本さなえ個展「こどもとまほう Child and Magic」",
-   "venue": "福岡市東区",
-   "city": "福岡市東区",
-   "pref": "",
-   "start": "2026-08-26",
-   "end": "2026-09-20",
-   "untilLabel": "",
+   "id": "ev-3614679-html",
+   "title": "オリンピック選手の走り方教室＆トークショー",
+   "venue": "ららぽーと福岡",
+   "city": "福岡市博多区",
+   "pref": "福岡県",
+   "start": null,
+   "end": "2026-09-19",
+   "untilLabel": "9月19日",
    "days": [
     "2026-09-17",
     "2026-09-18",
-    "2026-09-19",
-    "2026-09-20"
+    "2026-09-19"
    ],
-   "n": 4,
-   "url": "https://iko-yo.net/events/595381",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1743046/normal.jpg?1787596465",
+   "n": 3,
+   "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html",
+   "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3614679/image1.jpg",
    "price": null,
    "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": null,
-   "lng": null,
-   "kids": true,
-   "ks": 8,
-   "score": 5,
-   "src": "いこーよ",
-   "near": [],
-   "img": "cetevents595381.jpg",
+   "verified": true,
+   "spot": "ev-3614679-html",
+   "lat": 33.564976,
+   "lng": 130.43869,
+   "kids": false,
+   "ks": 5,
+   "score": null,
+   "venueSpot": "lalaportfukuoka",
+   "venueName": "ららぽーと福岡",
+   "near": [
+    {
+     "id": "vsparklalaportfukuoka",
+     "name": "VS PARK WITH G ららぽーと福岡店",
+     "genre": "室内遊び場",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/159466/",
+     "booking": null
+    },
+    {
+     "id": "jindinrou",
+     "name": "恵比寿 京鼎樓 ららぽーと福岡店",
+     "genre": "台湾料理(小籠包)",
+     "km": 0.0,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40060477/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "kizzaniafukuoka",
+     "name": "キッザニア福岡",
+     "genre": "室内遊び場(職業体験)",
+     "km": 0.07,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160197/",
+     "booking": null
+    }
+   ],
+   "img": "ev-3614679-html.jpg",
    "rank": 10
   },
   {
@@ -1854,65 +1989,6 @@
     }
    ],
    "img": "cetevents597328.jpg",
-   "rank": 8
-  },
-  {
-   "id": "ev-3614679-html",
-   "title": "オリンピック選手の走り方教室＆トークショー",
-   "venue": "ららぽーと福岡",
-   "city": "福岡市博多区",
-   "pref": "福岡県",
-   "start": null,
-   "end": "2026-09-19",
-   "untilLabel": "9月19日",
-   "days": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19"
-   ],
-   "n": 3,
-   "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html",
-   "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3614679/image1.jpg",
-   "price": null,
-   "time": null,
-   "verified": true,
-   "spot": "ev-3614679-html",
-   "lat": 33.564976,
-   "lng": 130.43869,
-   "kids": false,
-   "ks": 5,
-   "score": null,
-   "venueSpot": "lalaportfukuoka",
-   "venueName": "ららぽーと福岡",
-   "near": [
-    {
-     "id": "vsparklalaportfukuoka",
-     "name": "VS PARK WITH G ららぽーと福岡店",
-     "genre": "室内遊び場",
-     "km": 0.0,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/159466/",
-     "booking": null
-    },
-    {
-     "id": "jindinrou",
-     "name": "恵比寿 京鼎樓 ららぽーと福岡店",
-     "genre": "台湾料理(小籠包)",
-     "km": 0.0,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40060477/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "kizzaniafukuoka",
-     "name": "キッザニア福岡",
-     "genre": "室内遊び場(職業体験)",
-     "km": 0.07,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/160197/",
-     "booking": null
-    }
-   ],
    "rank": 8
   },
   {
@@ -2283,49 +2359,6 @@
    "src": "県公式",
    "near": [],
    "img": "ckajpevent13699.jpg",
-   "rank": 6
-  },
-  {
-   "id": "ckajpevent11994",
-   "title": "山王寺 風鈴祭り",
-   "venue": "",
-   "city": "",
-   "pref": "",
-   "start": "2026-04-29",
-   "end": "2026-10-04",
-   "untilLabel": "",
-   "days": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21",
-    "2026-09-22",
-    "2026-09-23",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-09-30"
-   ],
-   "n": 14,
-   "url": "https://www.crossroadfukuoka.jp/event/11994",
-   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11994/responsive_images/oMlfLGUFxkxBSz3w7CV8cQjWKE9x8WJbgJtSWEMP__1605_1070.jpg",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.619615,
-   "lng": 130.552334,
-   "kids": false,
-   "ks": 4,
-   "score": 4,
-   "src": "県公式",
-   "venueVia": "address",
-   "near": [],
-   "img": "ckajpevent11994.jpg",
    "rank": 6
   },
   {
@@ -4383,70 +4416,6 @@
    "rank": 2
   },
   {
-   "id": "c80ampscd000601",
-   "title": "星のカービィ デデデ★デパート",
-   "venue": "大丸福岡天神店",
-   "city": "福岡市中央区",
-   "pref": "",
-   "start": "2026-09-02",
-   "end": "2026-09-21",
-   "untilLabel": "",
-   "days": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21"
-   ],
-   "n": 5,
-   "url": "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021580&amp;scd=000601",
-   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/2ad6b89f.jpg",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.588815,
-   "lng": 130.402358,
-   "kids": false,
-   "ks": 0,
-   "score": 4,
-   "src": "大丸福岡天神",
-   "venueMatch": "daimaru-fukuoka-tenjin",
-   "venueSpot": "daimaru-fukuoka-tenjin",
-   "venueName": "大丸福岡天神店",
-   "near": [
-    {
-     "id": "gansomotsunaberakutenchitenj",
-     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
-     "genre": "もつ鍋",
-     "km": 0.24,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp0e54dca7b3",
-     "name": "ワンカルビPREMIUM 天神今泉",
-     "genre": "焼肉、ホルモン",
-     "km": 0.29,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40055307/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "teppanyakisakabaikuraten-49",
-     "name": "鉄板焼酒場 いくら 天神今泉店",
-     "genre": "オムバーグ鉄板焼",
-     "km": 0.32,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40056457/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "c80ampscd000601.jpg",
-   "rank": 2
-  },
-  {
    "id": "cetevents593014",
    "title": "星はここにある music by ACIDMAN",
    "venue": "福岡市科学館",
@@ -4581,6 +4550,38 @@
     }
    ],
    "img": "cetevents598205.jpg",
+   "rank": 2
+  },
+  {
+   "id": "cetevents595381",
+   "title": "杉本さなえ個展「こどもとまほう Child and Magic」",
+   "venue": "福岡市東区",
+   "city": "福岡市東区",
+   "pref": "",
+   "start": "2026-08-26",
+   "end": "2026-09-20",
+   "untilLabel": "",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20"
+   ],
+   "n": 4,
+   "url": "https://iko-yo.net/events/595381",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1743046/normal.jpg?1787596465",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 0,
+   "score": 5,
+   "src": "いこーよ",
+   "near": [],
+   "img": "cetevents595381.jpg",
    "rank": 2
   },
   {
@@ -5588,76 +5589,6 @@
    "rank": 22
   },
   {
-   "id": "comevents274526",
-   "title": "特別展「石川賢治月光写真展 月光浴 月夜の晩に」",
-   "venue": "福岡市科学館",
-   "city": "福岡市",
-   "pref": "",
-   "start": "2026-09-19",
-   "end": "2026-10-25",
-   "untilLabel": "",
-   "days": [
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21",
-    "2026-09-22",
-    "2026-09-23",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-09-30"
-   ],
-   "n": 12,
-   "url": "https://yokanavi.com/events/274526",
-   "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ4ODg0LCJwdXIiOiJibG9iX2lkIn19--b21d038f7a0c927dadc23bef7d64182aca28ce4e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E7%9F%B3%E5%B7%9D%E8%B3%A2%E6%B2%BB%E5%B1%95HP%E3%83%90%E3%83%8A%E3%83%BC.jpg",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.57741,
-   "lng": 130.378231,
-   "kids": true,
-   "ks": 15,
-   "score": 5,
-   "src": "よかなび",
-   "venueMatch": "fukuokashikagakukan",
-   "venueSpot": "fukuokashikagakukan",
-   "venueName": "福岡市科学館",
-   "venueLinks": {
-    "id": "fukuokashikagakukan",
-    "name": "福岡市科学館",
-    "genre": "科学館",
-    "tabelog": null,
-    "asoview": "https://www.asoview.com/base/160672/",
-    "booking": null
-   },
-   "near": [
-    {
-     "id": "aso_daipinchi_fukuoka",
-     "name": "鈴木のりたけ「大ピンチ展！」福岡市科学館",
-     "genre": "企画展",
-     "km": 0.16,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/164474/",
-     "booking": null
-    },
-    {
-     "id": "sp086e3707cb",
-     "name": "パティスリー オー フィル ドゥ ジュール",
-     "genre": "ケーキ・洋菓子",
-     "km": 0.87,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40001686/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "comevents274526.jpg",
-   "rank": 17
-  },
-  {
    "id": "ccb987a8829ed43",
    "title": "あそびぱ～く",
    "venue": "イオンモール福津",
@@ -5841,6 +5772,48 @@
    "rank": 15
   },
   {
+   "id": "cb352eccbfab17f",
+   "title": "ソフトバンクpresents キタキュウマン グリーティング&写真撮影会",
+   "venue": "イオンモール直方",
+   "city": "直方市",
+   "pref": "",
+   "start": "2026-09-19",
+   "end": "2026-09-19",
+   "untilLabel": "",
+   "days": [
+    "2026-09-19"
+   ],
+   "n": 1,
+   "url": "https://nogata-aeonmall.com/event/003587b7-3875-4570-bfb3-52eccbfab17f",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/73a50d2c-9e6c-4030-a438-483a81c15cef.jpeg?quality=50&format=webp",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.76894,
+   "lng": 130.749512,
+   "kids": true,
+   "ks": 9,
+   "score": 15,
+   "src": "イオンモール直方",
+   "venueMatch": "aeonmallnogata",
+   "venueSpot": "aeonmallnogata",
+   "venueName": "イオンモール直方",
+   "near": [
+    {
+     "id": "spd35f368f23",
+     "name": "はま寿司 直方感田店",
+     "genre": "回転寿司",
+     "km": 1.95,
+     "tabelog": "https://tabelog.com/fukuoka/A4007/A400701/40041613/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "img": "cb352eccbfab17f.jpg",
+   "rank": 15
+  },
+  {
    "id": "cetevents591160",
    "title": "両面コースターを作ろう！",
    "venue": "デジタルクラフトスタジオひびきの",
@@ -5897,6 +5870,65 @@
    ],
    "img": "cetevents591160.jpg",
    "rank": 15
+  },
+  {
+   "id": "cd4b6b747bb575c",
+   "title": "ピカチュウ&イーブイと写真撮影会！",
+   "venue": "イオンモール大牟田",
+   "city": "大牟田市",
+   "pref": "",
+   "start": "2026-09-19",
+   "end": "2026-09-19",
+   "untilLabel": "",
+   "days": [
+    "2026-09-19"
+   ],
+   "n": 1,
+   "url": "https://omuta-aeonmall.com/event/cb3b08a2-4267-425d-81d4-b6b747bb575c",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.030472,
+   "lng": 130.427765,
+   "kids": true,
+   "ks": 9,
+   "score": 15,
+   "src": "イオンモール大牟田",
+   "venueMatch": "aeonmallomuta",
+   "venueSpot": "aeonmallomuta",
+   "venueName": "イオンモール大牟田",
+   "near": [
+    {
+     "id": "kidsland-980",
+     "name": "キッズランドUS 福岡大牟田店",
+     "genre": "室内遊び場",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160626/",
+     "booking": null
+    },
+    {
+     "id": "spcc1d437252",
+     "name": "焼肉なべしま イオンモール大牟田店",
+     "genre": "焼肉",
+     "km": 0.15,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40026533/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp795bfc4898",
+     "name": "焼肉ダイニング ワンカルビ トライアル大牟田店",
+     "genre": "焼肉",
+     "km": 0.76,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40069122/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "rank": 13
   },
   {
    "id": "car260919260923",
@@ -6031,48 +6063,6 @@
    "rank": 11
   },
   {
-   "id": "cb352eccbfab17f",
-   "title": "ソフトバンクpresents キタキュウマン グリーティング&写真撮影会",
-   "venue": "イオンモール直方",
-   "city": "直方市",
-   "pref": "",
-   "start": "2026-09-19",
-   "end": "2026-09-19",
-   "untilLabel": "",
-   "days": [
-    "2026-09-19"
-   ],
-   "n": 1,
-   "url": "https://nogata-aeonmall.com/event/003587b7-3875-4570-bfb3-52eccbfab17f",
-   "poster": "https://image-cdn.aeonmall.jp/uploads/73a50d2c-9e6c-4030-a438-483a81c15cef.jpeg?quality=50&format=webp",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.76894,
-   "lng": 130.749512,
-   "kids": false,
-   "ks": 5,
-   "score": 15,
-   "src": "イオンモール直方",
-   "venueMatch": "aeonmallnogata",
-   "venueSpot": "aeonmallnogata",
-   "venueName": "イオンモール直方",
-   "near": [
-    {
-     "id": "spd35f368f23",
-     "name": "はま寿司 直方感田店",
-     "genre": "回転寿司",
-     "km": 1.95,
-     "tabelog": "https://tabelog.com/fukuoka/A4007/A400701/40041613/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "cb352eccbfab17f.jpg",
-   "rank": 11
-  },
-  {
    "id": "ce929b706af97e3",
    "title": "クロミ・ザ・ステージ",
    "venue": "イオンモール筑紫野",
@@ -6160,6 +6150,76 @@
    "rank": 9
   },
   {
+   "id": "comevents274526",
+   "title": "特別展「石川賢治月光写真展 月光浴 月夜の晩に」",
+   "venue": "福岡市科学館",
+   "city": "福岡市",
+   "pref": "",
+   "start": "2026-09-19",
+   "end": "2026-10-25",
+   "untilLabel": "",
+   "days": [
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30"
+   ],
+   "n": 12,
+   "url": "https://yokanavi.com/events/274526",
+   "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ4ODg0LCJwdXIiOiJibG9iX2lkIn19--b21d038f7a0c927dadc23bef7d64182aca28ce4e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E7%9F%B3%E5%B7%9D%E8%B3%A2%E6%B2%BB%E5%B1%95HP%E3%83%90%E3%83%8A%E3%83%BC.jpg",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.57741,
+   "lng": 130.378231,
+   "kids": true,
+   "ks": 7,
+   "score": 5,
+   "src": "よかなび",
+   "venueMatch": "fukuokashikagakukan",
+   "venueSpot": "fukuokashikagakukan",
+   "venueName": "福岡市科学館",
+   "venueLinks": {
+    "id": "fukuokashikagakukan",
+    "name": "福岡市科学館",
+    "genre": "科学館",
+    "tabelog": null,
+    "asoview": "https://www.asoview.com/base/160672/",
+    "booking": null
+   },
+   "near": [
+    {
+     "id": "aso_daipinchi_fukuoka",
+     "name": "鈴木のりたけ「大ピンチ展！」福岡市科学館",
+     "genre": "企画展",
+     "km": 0.16,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/164474/",
+     "booking": null
+    },
+    {
+     "id": "sp086e3707cb",
+     "name": "パティスリー オー フィル ドゥ ジュール",
+     "genre": "ケーキ・洋菓子",
+     "km": 0.87,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40001686/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "img": "comevents274526.jpg",
+   "rank": 9
+  },
+  {
    "id": "cfad7268f94ca65",
    "title": "めくって みっけ！ ポケモンずかんパネル1025 inイオンモール",
    "venue": "イオンモール筑紫野",
@@ -6206,65 +6266,6 @@
      "tabelog": null,
      "asoview": null,
      "booking": "https://www.jalan.net/yad343758/"
-    }
-   ],
-   "rank": 9
-  },
-  {
-   "id": "cd4b6b747bb575c",
-   "title": "ピカチュウ&イーブイと写真撮影会！",
-   "venue": "イオンモール大牟田",
-   "city": "大牟田市",
-   "pref": "",
-   "start": "2026-09-19",
-   "end": "2026-09-19",
-   "untilLabel": "",
-   "days": [
-    "2026-09-19"
-   ],
-   "n": 1,
-   "url": "https://omuta-aeonmall.com/event/cb3b08a2-4267-425d-81d4-b6b747bb575c",
-   "poster": null,
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.030472,
-   "lng": 130.427765,
-   "kids": false,
-   "ks": 5,
-   "score": 15,
-   "src": "イオンモール大牟田",
-   "venueMatch": "aeonmallomuta",
-   "venueSpot": "aeonmallomuta",
-   "venueName": "イオンモール大牟田",
-   "near": [
-    {
-     "id": "kidsland-980",
-     "name": "キッズランドUS 福岡大牟田店",
-     "genre": "室内遊び場",
-     "km": 0.0,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/160626/",
-     "booking": null
-    },
-    {
-     "id": "spcc1d437252",
-     "name": "焼肉なべしま イオンモール大牟田店",
-     "genre": "焼肉",
-     "km": 0.15,
-     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40026533/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp795bfc4898",
-     "name": "焼肉ダイニング ワンカルビ トライアル大牟田店",
-     "genre": "焼肉",
-     "km": 0.76,
-     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40069122/",
-     "asoview": null,
-     "booking": null
     }
    ],
    "rank": 9
@@ -7987,8 +7988,8 @@
    "spot": null,
    "lat": 33.480873,
    "lng": 130.524292,
-   "kids": false,
-   "ks": 5,
+   "kids": true,
+   "ks": 9,
    "score": 15,
    "src": "イオンモール筑紫野",
    "venueMatch": "aeonmallchikushino",
@@ -8015,7 +8016,7 @@
     }
    ],
    "img": "ca176fd2fe0a755.jpg",
-   "rank": 11
+   "rank": 15
   },
   {
    "id": "c4b4a33102b28d3",
@@ -8925,6 +8926,56 @@
    "rank": 34
   },
   {
+   "id": "ceff8962de4e39a",
+   "title": "ドラえもんがやってくる 撮影会",
+   "venue": "イオンモール筑紫野",
+   "city": "筑紫野市",
+   "pref": "",
+   "start": "2026-09-23",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-23"
+   ],
+   "n": 1,
+   "url": "https://chikushino-aeonmall.com/event/79ecbd71-ea0a-447a-8def-f8962de4e39a",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.480873,
+   "lng": 130.524292,
+   "kids": true,
+   "ks": 14,
+   "score": 15,
+   "src": "イオンモール筑紫野",
+   "venueMatch": "aeonmallchikushino",
+   "venueSpot": "aeonmallchikushino",
+   "venueName": "イオンモール筑紫野",
+   "near": [
+    {
+     "id": "nekocafemocha_chikushino",
+     "name": "猫カフェモカ イオンモール筑紫野店",
+     "genre": "ふれあい動物カフェ",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/158012/",
+     "booking": null
+    },
+    {
+     "id": "stay4ba5b4e0c6",
+     "name": "二日市温泉 大観荘",
+     "genre": "温泉旅館",
+     "km": 1.56,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad343758/"
+    }
+   ],
+   "rank": 18
+  },
+  {
    "id": "cetevents591156",
    "title": "お月見リースを作ろう！",
    "venue": "デジタルクラフトスタジオひびきの",
@@ -9105,56 +9156,6 @@
     }
    ],
    "img": "c46ampscd000601.jpg",
-   "rank": 9
-  },
-  {
-   "id": "ceff8962de4e39a",
-   "title": "ドラえもんがやってくる 撮影会",
-   "venue": "イオンモール筑紫野",
-   "city": "筑紫野市",
-   "pref": "",
-   "start": "2026-09-23",
-   "end": "2026-09-23",
-   "untilLabel": "",
-   "days": [
-    "2026-09-23"
-   ],
-   "n": 1,
-   "url": "https://chikushino-aeonmall.com/event/79ecbd71-ea0a-447a-8def-f8962de4e39a",
-   "poster": null,
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.480873,
-   "lng": 130.524292,
-   "kids": false,
-   "ks": 5,
-   "score": 15,
-   "src": "イオンモール筑紫野",
-   "venueMatch": "aeonmallchikushino",
-   "venueSpot": "aeonmallchikushino",
-   "venueName": "イオンモール筑紫野",
-   "near": [
-    {
-     "id": "nekocafemocha_chikushino",
-     "name": "猫カフェモカ イオンモール筑紫野店",
-     "genre": "ふれあい動物カフェ",
-     "km": 0.0,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/158012/",
-     "booking": null
-    },
-    {
-     "id": "stay4ba5b4e0c6",
-     "name": "二日市温泉 大観荘",
-     "genre": "温泉旅館",
-     "km": 1.56,
-     "tabelog": null,
-     "asoview": null,
-     "booking": "https://www.jalan.net/yad343758/"
-    }
-   ],
    "rank": 9
   },
   {

@@ -16,3 +16,16 @@ data/_spots_backup_*.json
 /*_check*.jpg
 /yt_out.txt
 /yt_sg.txt
+
+# ポスターの取得キャッシュ。**49MBある**のに公開する必要がない(2026-09-16)。
+# ⚠static.yml は `path: '.'` でリポジトリ全体を Pages に出すので、
+#   ここに置いたものは全部デプロイ容量(上限1GB)を食う
+data/_poster_cache/
+
+# カルーセル/スライドショーの書き出し。**SNSへの投稿物**でサイトには不要。
+# mp4が14MBあるためリポジトリにもPagesにも入れない(実体はDropboxに残る)
+data/carousel_*/
+
+# 収集途中のスナップショット(候補JSONの退避)
+data/_週末イベント候補*.keep*
+data/_週末イベント候補_*.json

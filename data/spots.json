@@ -44245,7 +44245,8 @@
   "category": "play",
   "until": "2026-09-20",
   "untilLabel": "9月20日",
-  "official": "https://kashiihama.aeon-kyushu.info/event/2dcc05e8-b7e9-409d-bb7a-1d420d6ca028"
+  "official": "https://kashiihama.aeon-kyushu.info/event/2dcc05e8-b7e9-409d-bb7a-1d420d6ca028",
+  "in": "aeonmallkashiihama"
  },
  {
   "id": "ev-596239",
@@ -44311,7 +44312,8 @@
   "category": "play",
   "until": "2026-09-19",
   "untilLabel": "9月19日",
-  "official": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html"
+  "official": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html",
+  "in": "lalaportfukuoka"
  },
  {
   "id": "ev-194-publish-begin-26-09-09-publish-en",
@@ -44377,7 +44379,8 @@
   "category": "play",
   "until": "2026-09-27",
   "untilLabel": "9月27日",
-  "official": "https://e-zofukuoka.com/special/mahou_museum/"
+  "official": "https://e-zofukuoka.com/special/mahou_museum/",
+  "in": "bossezofukuoka"
  },
  {
   "id": "ev-597275",
@@ -44476,7 +44479,8 @@
   "category": "play",
   "until": "2026-09-20",
   "untilLabel": "9月20日",
-  "official": "https://chikushino-aeonmall.com/event/a50d43bf-8107-4ba7-9606-434966d96b95"
+  "official": "https://chikushino-aeonmall.com/event/a50d43bf-8107-4ba7-9606-434966d96b95",
+  "in": "aeonmallchikushino"
  },
  {
   "id": "ev-596517",
@@ -44542,7 +44546,8 @@
   "category": "play",
   "until": "2026-09-23",
   "untilLabel": "9月23日",
-  "official": "https://www.onojo-occm.jp/"
+  "official": "https://www.onojo-occm.jp/",
+  "in": "onojokokoronofurusatokan"
  },
  {
   "id": "ev-591660",
@@ -44575,7 +44580,8 @@
   "category": "play",
   "until": "2026-09-19",
   "untilLabel": "9月19日",
-  "official": "https://iko-yo.net/events/591660"
+  "official": "https://iko-yo.net/events/591660",
+  "in": "fukuokakenseishounenkagakuka"
  },
  {
   "id": "menchan-kamikawabata",
@@ -44677,5 +44683,78 @@
   "web": "https://jin-din-rou.net/fukuoka/",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40060477/",
   "posted": "2026-09-16"
+ },
+ {
+  "id": "meijipark-hakata",
+  "name": "明治公園",
+  "area": "博多駅前",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "都市公園(立体園路・広場5つ)",
+  "lat": 33.588551,
+  "lng": 130.417486,
+  "address": "福岡県福岡市博多区博多駅前三丁目24番3号",
+  "visited": "2026-09-15",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**2026年8月7日に博多駅前に開園した「公園を立体化した」都市公園**。Park-PFIで東京建物を代表企業とするコンソーシアムが整備し、**デザイン監修は藤本壮介氏**(2025年大阪・関西万博の会場デザインプロデューサー)。⭐**空中の立体園路が総距離226mで、インクルーシブデザイン対応**。公式に「足の不自由な方の利用を考慮した設計」と明記されていて、**段差を作らずスロープで上まで回れる=ベビーカーでも一周できる**のがこの公園の一番の価値。敷地約3,572㎡に**広場が5つ**、樹木や草花が**約160本**。◆店舗棟は7区画。1F **POSS COFFEE**(カフェ/バー)・**GABBI HAKATA**(イタリアンダイニング)・**Land Bageri**(ベーカリー/ビストロ)、2F **400℃ PIZZA Piu Hakata**(ピッツェリア)・**Continue?**(ビアバー)・1区画は Coming Soon、3〜4F **TOTOPA博多駅前店**(都市型スパ)、屋上は**「空のにわ」**という広場。◆**公園は24時間開放**(立体園路と店舗棟は0:00〜5:30閉鎖。各店舗の営業時間は異なる)。⚠フロア案内の設備アイコンは女性/男性トイレ・多目的トイレ・喫煙所・コインロッカーで、**おむつ替えのアイコンは出ていない**(多目的トイレ内にある可能性はあるが未確認)。⚠**博多駅から徒歩圏だが駐車場は公園には無い**ので、周辺のコインパーキングになる(要確認)。",
+  "web": "https://prtimes.jp/main/html/rd/p/000000578.000052843.html",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "meijipark-hakata.jpg",
+  "photos": [
+   "meijipark-hakata_01_MEIJI_PARKのサイン.jpg",
+   "meijipark-hakata_02_立体園路(226m_段差のない設計).jpg",
+   "meijipark-hakata_03_芝生広場と立体園路.jpg"
+  ],
+  "wish": false,
+  "category": "play"
+ },
+ {
+  "id": "shakeshack-hakata",
+  "name": "シェイクシャック 博多店",
+  "area": "西日本シティビル 1F",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ハンバーガー",
+  "lat": 33.589442,
+  "lng": 130.418255,
+  "address": "福岡県福岡市博多区博多駅前3-1-1 西日本シティビル 1F",
+  "visited": "2026-09-15",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**2026年7月21日オープン・シェイクシャックの九州初出店**。明治公園の隣、同じ日に開業した**西日本シティビルの1F**(同フロアに STAND T と I'm donut ?、上層に wework と NCB創業応援サロンHAKATA)。⭐メニューに**「FUKUOKA EXCLUSIVE」という福岡限定セクション**がある。**明太マヨフライ**(Small 税込715円 / Regular 税抜790円)と、**あまおうシェイク with チロリアン**(Mini 税込770円 / Regular 税込1,089円・ホイップ+176円)。あまおう苺とピューレをフローズンカスタードにブレンドし、**チロリアン(千鳥饅頭総本舗の福岡銘菓)をストローに見立てる**という一杯。◆実食は SHACK(チーズパティ1枚) 税抜960円 / Pear Vanilla Lemonade 税抜600円 / **(S)明太マヨフライ 税抜650円** の3点で**税込2,431円**。◆⭐子連れで効いたのは **①5点ベルト付きのベビーチェア** **②店内に Hand Washing Station(手洗い場)がある**こと。**公園で遊んだ手をそのまま洗って席に着ける**。**③注文はセルフオーダー端末**なので行列に並ばずに済む。◆営業 11:00〜22:00(L.O.21:30)。TEL 092-409-1221。⚠**メニューの価格は税抜表示で、括弧内に税込**が書かれている形。レシートも税抜集計。",
+  "web": "https://www.shakeshack.jp/",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "shakeshack-hakata.jpg",
+  "photos": [
+   "shakeshack-hakata_01_店頭.jpg",
+   "shakeshack-hakata_02_シャックバーガーと明太マヨフライ.jpg",
+   "shakeshack-hakata_03_客席とガラス天井.jpg",
+   "shakeshack-hakata_04_店内のハンドウォッシングステーション.jpg"
+  ],
+  "wish": false,
+  "category": "gourmet"
  }
 ]

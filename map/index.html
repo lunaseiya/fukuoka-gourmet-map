@@ -62,6 +62,14 @@
     background: #2d3436;
     color: #fff;
   }
+  /* ★イベント一覧への入口【2026-09-16追加】。カテゴリのタブではなく**リンク**なので
+     緑にして「別の画面へ移る」ことが分かるようにする(events.html の主色と合わせる) */
+  .cat-btn.cat-link {
+    background: #0f6e5c;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
   .b-new {
     display: inline-block;
     margin-right: 6px;
@@ -738,6 +746,10 @@
     <button class="cat-btn active" data-cat="gourmet">🍜 お食事</button>
     <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
     <button class="cat-btn" data-cat="play">🎡 遊び場</button>
+    <!-- ★イベント一覧への入口【2026-09-16追加】
+         ⚠**これは data-cat ではなくリンク**。地図を使わない別ページ(events.html)へ飛ばす。
+           入口はプロフィール→マップのままにして、そこから1タップで行けるようにする -->
+    <a class="cat-btn cat-link" href="./events.html">⏳ イベント</a>
   </div>
   <div class="searchbar">
     <input id="q" type="search" placeholder="店名・エリア・ジャンルで検索" autocomplete="off" enterkeyhint="search">

@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>福岡と近県の子連れイベント｜今日から2週間</title>
+<meta name="description" content="福岡と近県の子連れで行けるイベントを、今日から2週間ぶん日付順にまとめています。子連れ向けとそれ以外を切り替えられます。">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="apple-mobile-web-app-title" content="福岡子育てグルメ">
+<meta name="theme-color" content="#0f6e5c">
+<!--
+  ⚠**このページは地図(maplibre)を読み込まない**【2026-09-16ユーザー指示
+    「マップ画面を使わずリストを全画面表示で良くて」】。
+    index.html は77KB+地図ライブラリで重いので、リストだけの別ページにしている。
+  ⚠**別サイトにはしない**。同じドメイン配下にすることで下の LinkSwitch がそのまま効く
+    (ユーザーの懸念「別画面とすると収益につながるキッカケが減りませんかね？」への答え)。
+-->
+<style>
+  :root{
+    --accent:#0f6e5c;          /* イベント画面の主色。マップの赤とは変えて別画面だと分かるように */
+    --map-accent:#d63031;      /* マップへ戻る導線はマップの色 */
+    --hot:#c2410c;             /* 「この日だけ」「無料」など今日的な強調 */
+    --text:#222; --muted:#767676; --border:#e5e5e5;
+    --bg:#faf9f7; --card:#fff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    line-height:1.7;-webkit-text-size-adjust:100%}
+  a{color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:0 0 40px}
+
+  header{position:sticky;top:0;z-index:30;background:rgba(250,249,247,.94);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:10px 14px 8px}
+  .top{display:flex;align-items:center;gap:10px}
+  h1{margin:0;font-size:1.02rem;font-weight:800;letter-spacing:.01em}
+  .tomap{margin-left:auto;flex:0 0 auto;font-size:.8rem;font-weight:700;text-decoration:none;
+    background:var(--map-accent);color:#fff;border-radius:999px;padding:7px 14px}
+  .range{margin:4px 0 0;font-size:.76rem;color:var(--muted)}
+
+  /* 子連れ / すべて の切り替え【2026-09-16ユーザー要望】 */
+  .seg{display:flex;gap:4px;margin:9px 0 0;background:#eceae6;border-radius:999px;padding:3px}
+  .seg button{flex:1;font:inherit;font-size:.84rem;font-weight:700;color:var(--muted);
+    background:transparent;border:0;border-radius:999px;padding:7px 4px;cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .seg button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .filters{display:flex;gap:6px;overflow-x:auto;margin:8px -14px 0;padding:0 14px 2px;
+    scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .fb{flex:0 0 auto;font:inherit;font-size:.78rem;font-weight:700;color:var(--muted);
+    background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 13px;cursor:pointer}
+  .fb[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .fb:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+  .daygrp{padding:0 14px}
+  .dhead{display:flex;align-items:baseline;gap:9px;margin:26px 0 10px;
+    padding-bottom:7px;border-bottom:2px solid var(--text)}
+  .dnum{font-size:2.05rem;font-weight:800;line-height:1;font-variant-numeric:tabular-nums}
+  .dwd{font-size:1rem;font-weight:800}
+  .dwd.sat{color:#24608f}.dwd.sun{color:#a93a3a}
+  .dhol{font-size:.76rem;font-weight:700;color:var(--muted)}
+  .dcnt{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--muted)}
+  .today{background:var(--hot);color:#fff;border-radius:6px;padding:1px 7px;
+    font-size:.7rem;font-weight:800;letter-spacing:.04em}
+
+  .cards{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .ev{background:var(--card);border:1px solid var(--border);border-radius:13px;
+    overflow:hidden;display:flex;gap:11px;padding:11px}
+  .ev.kid{border-left:4px solid var(--accent)}
+  .ev.oth{border-left:4px solid #b9b5ae}
+  .thumb{flex:0 0 84px;width:84px;height:84px;border-radius:9px;object-fit:cover;
+    background:#eee;display:block}
+  .noimg{flex:0 0 84px;width:84px;height:84px;border-radius:9px;background:#f0efec;
+    display:grid;place-items:center;font-size:.64rem;color:var(--muted);text-align:center;
+    line-height:1.35;padding:4px}
+  .body{min-width:0;flex:1}
+  .ttl{font-size:.94rem;font-weight:700;line-height:1.45;margin:0 0 3px;text-wrap:pretty}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 4px}
+  .tag{font-size:.66rem;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
+  .t-ver{background:#e3f1ec;color:#0b5546}
+  .t-unv{background:#f3f1ec;color:#7a7468}
+  .t-free{background:#fbe8df;color:var(--hot)}
+  .t-only{background:#fbe8df;color:var(--hot)}
+  .meta{font-size:.78rem;color:var(--muted);margin:0}
+  .meta b{color:var(--text);font-weight:700}
+  .also{font-size:.74rem;font-weight:700;color:var(--accent);margin:2px 0 0}
+  .srcline{font-size:.72rem;margin:5px 0 0}
+  .srcline a{color:#2563a8}
+
+  /* ★収益導線。イベント自体は収益にならないので、近隣の収益スポットへ橋渡しする */
+  .near{margin:8px 0 0;padding:8px 9px;background:#f7f6f3;border-radius:9px}
+  .near-h{font-size:.72rem;font-weight:800;color:var(--muted);margin:0 0 5px}
+  .near ul{list-style:none;margin:0;padding:0;display:grid;gap:5px}
+  .near li{display:flex;flex-wrap:wrap;align-items:center;gap:5px;font-size:.76rem}
+  .near .nm{font-weight:700}
+  .near .km{color:var(--muted);font-size:.72rem}
+  /* 会場は「確定した情報」なので近隣リストと色で区別する */
+  .venue{margin:8px 0 0;padding:8px 9px;background:#eaf5f1;border:1px solid #cfe6de;border-radius:9px}
+  .venue ul{list-style:none;margin:0;padding:0}
+  .venue li{display:flex;flex-wrap:wrap;align-items:center;gap:5px;font-size:.78rem}
+  .venue .nm{font-weight:800}
+  .venue .vlink{font-size:.72rem;color:#0f6e5c;font-weight:700;text-decoration:none}
+  .btn{font-size:.72rem;font-weight:700;color:#fff;border-radius:999px;
+    padding:3px 10px;text-decoration:none;white-space:nowrap}
+  .b-tab{background:#4a90e2}.b-aso{background:var(--accent)}.b-jal{background:#e87828}
+  .pr{font-size:.62rem;font-weight:700;color:#fff;background:#b0aca4;
+    border-radius:4px;padding:1px 5px;letter-spacing:.04em}
+  .disc{font-size:.68rem;color:var(--muted);margin:5px 0 0}
+
+  .empty{padding:18px;text-align:center;color:var(--muted);font-size:.86rem;
+    border:1px dashed var(--border);border-radius:12px}
+  .more{display:block;width:100%;margin:10px 0 0;font:inherit;font-size:.82rem;font-weight:700;
+    color:var(--accent);background:#fff;border:1px solid var(--border);border-radius:10px;
+    padding:10px;cursor:pointer}
+  footer{padding:26px 16px 10px;font-size:.72rem;color:var(--muted);line-height:1.85}
+  footer a{color:#2563a8}
+  @media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+<!-- バリューコマース LinkSwitch: ページ内の提携先生URL(食べログ等)を自動でアフィリエイトリンクに変換
+     ⚠**index.html と同じ vc_pid**。同一サイト内なのでこのページでも成果になる -->
+<script type="text/javascript">
+    var vc_pid = "892682809";
+</script><script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
+<script src="../analytics.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <h1>子連れイベント</h1>
+    <a class="tomap" href="./index.html">🗺 マップで見る</a>
+  </div>
+  <p class="range" id="range"></p>
+  <div class="seg" role="group" aria-label="表示の切り替え">
+    <button id="segKids" aria-pressed="true">子連れ向け</button>
+    <button id="segAll" aria-pressed="false">すべて</button>
+  </div>
+  <div class="filters" id="filters"></div>
+</header>
+
+<main id="list"></main>
+
+<footer>
+  <p>会場・日程・料金は各主催の告知から転記しています。<b>お出かけ前に必ず公式でご確認ください</b>。
+     「要確認」の印があるものは、こちらで現地確認をしていないものです。</p>
+  <p>ポスター画像は各主催の告知物です（縮小のみ・出典はカード内のリンク先）。
+     権利上の都合で掲載できないものは文字のみで出しています。</p>
+  <p><a href="./index.html">福岡こそだてグルメマップに戻る</a></p>
+</footer>
+</div>
+
+<script>
+const WD = ['日','月','火','水','木','金','土'];
+const HOL = {'2026-09-21':'敬老の日','2026-09-22':'国民の休日','2026-09-23':'秋分の日',
+             '2026-10-13':'スポーツの日','2026-11-03':'文化の日','2026-11-23':'勤労感謝の日'};
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,
+  c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+
+let DOC = null, kidsOnly = true, city = '', freeOnly = false;
+const shown = {};          // 日付ごとに「何件まで出したか」
+
+fetch('./events.json').then(r => r.json()).then(d => { DOC = d; boot(); })
+  .catch(() => { document.getElementById('list').innerHTML =
+    '<p class="empty">イベント情報を読み込めませんでした。時間をおいて開いてください。</p>'; });
+
+function boot(){
+  const f = new Date(DOC.from + 'T00:00:00'), t = new Date(DOC.to + 'T00:00:00');
+  document.getElementById('range').textContent =
+    `${f.getMonth()+1}/${f.getDate()} 〜 ${t.getMonth()+1}/${t.getDate()} の2週間 ／ ${DOC.generated} 更新`;
+  // 市区の絞り込みは**実際に件数があるものだけ**出す(空振りするボタンを置かない)
+  const cs = {};
+  DOC.events.forEach(e => { if (e.city) cs[e.city] = (cs[e.city]||0)+1; });
+  const top = Object.entries(cs).sort((a,b)=>b[1]-a[1]).slice(0,10);
+  const fl = document.getElementById('filters');
+  fl.innerHTML = '<button class="fb" id="fFree" aria-pressed="false">無料だけ</button>'
+    + top.map(([c,n]) => `<button class="fb" data-city="${esc(c)}" aria-pressed="false">${esc(c)} ${n}</button>`).join('');
+  fl.addEventListener('click', ev => {
+    const b = ev.target.closest('.fb'); if (!b) return;
+    if (b.id === 'fFree') { freeOnly = !freeOnly; b.setAttribute('aria-pressed', freeOnly); }
+    else {
+      const c = b.dataset.city;
+      city = (city === c) ? '' : c;
+      fl.querySelectorAll('[data-city]').forEach(x =>
+        x.setAttribute('aria-pressed', x.dataset.city === city));
+    }
+    render();
+  });
+  const sk = document.getElementById('segKids'), sa = document.getElementById('segAll');
+  sk.addEventListener('click', () => { kidsOnly = true; sync(); });
+  sa.addEventListener('click', () => { kidsOnly = false; sync(); });
+  function sync(){ sk.setAttribute('aria-pressed', kidsOnly); sa.setAttribute('aria-pressed', !kidsOnly);
+    try{ localStorage.setItem('ev.kids', kidsOnly ? '1':'0'); }catch(e){} render(); }
+  try{ if (localStorage.getItem('ev.kids') === '0') kidsOnly = false; }catch(e){}
+  sync();
+}
+
+function pass(e){
+  if (kidsOnly && !e.kids) return false;
+  if (city && e.city !== city) return false;
+  if (freeOnly && !/無料/.test((e.price||'') + ' ' + e.title)) return false;
+  return true;
+}
+
+// ★会場そのものの導線【2026-09-16追加】
+//   spots.json の `in` で**人が1件ずつ確定させた会場**だけを出す。
+//   「この近くのお店」より前に置く: 会場のチケットはイベントに来る人が一番押すリンクで、
+//   近隣スポットより確実に関係がある(例 魔法の美術館 → BOSS E・ZO FUKUOKA)。
+//   ⚠名前の文字列突合で当てた `venueMatch` は**出さない**。推測を「会場」と言い切らないため
+function venueHtml(e){
+  if (!e.venueSpot) return '';
+  const v = e.venueLinks || {};
+  const b = [];
+  if (v.tabelog) b.push(`<a class="btn b-tab" href="${esc(v.tabelog)}" target="_blank" rel="noopener">食べログ</a><span class="pr">PR</span>`);
+  if (v.asoview) b.push(`<a class="btn b-aso" href="${esc(v.asoview)}" target="_blank" rel="noopener">チケット</a><span class="pr">PR</span>`);
+  if (v.booking) b.push(`<a class="btn b-jal" href="${esc(v.booking)}" target="_blank" rel="nofollow noopener">じゃらん</a><span class="pr">PR</span>`);
+  const nm = e.venueName || e.venue || '';
+  return `<div class="venue"><p class="near-h">${b.length ? '会場のチケット' : '会場'}</p>
+    <ul><li><span class="nm">${esc(nm)}</span>${b.join('')}
+    <a class="vlink" href="../s/${esc(e.venueSpot)}.html">会場のページ →</a></li></ul></div>`;
+}
+
+function nearHtml(e){
+  if (!e.near || !e.near.length) return '';
+  const li = e.near.map(s => {
+    const b = [];
+    // ⚠PR表記は必須(ステマ規制)。リンクの直後に必ず出す
+    if (s.tabelog) b.push(`<a class="btn b-tab" href="${esc(s.tabelog)}" target="_blank" rel="noopener">食べログ</a><span class="pr">PR</span>`);
+    if (s.asoview) b.push(`<a class="btn b-aso" href="${esc(s.asoview)}" target="_blank" rel="noopener">チケット</a><span class="pr">PR</span>`);
+    if (s.booking) b.push(`<a class="btn b-jal" href="${esc(s.booking)}" target="_blank" rel="nofollow noopener">じゃらん</a><span class="pr">PR</span>`);
+    return `<li><span class="nm">${esc(s.name)}</span><span class="km">${s.km}km</span>${b.join('')}</li>`;
+  }).join('');
+  return `<div class="near"><p class="near-h">この近くのお店・遊び場</p><ul>${li}</ul>
+    <p class="disc">※イベント主催とは関係のない、こちらで取材した近隣スポットです</p></div>`;
+}
+
+function card(e, iso){
+  const img = e.img
+    ? `<img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async">`
+    : `<div class="noimg">画像は<br>権利上<br>非掲載</div>`;
+  const tags = [];
+  tags.push(e.verified
+    ? '<span class="tag t-ver">現地確認済み</span>'
+    : '<span class="tag t-unv">要確認</span>');
+  if (e.n === 1) tags.push('<span class="tag t-only">この日だけ</span>');
+  if (/無料/.test((e.price||'') + ' ' + e.title)) tags.push('<span class="tag t-free">無料</span>');
+  const bits = [];
+  if (e.venue) bits.push(`<b>${esc(e.venue)}</b>`);
+  if (e.time) bits.push(esc(e.time));
+  if (e.price) bits.push(esc(e.price));
+  const others = (e.days||[]).filter(d => d !== iso)
+    .map(d => Number(d.slice(8,10))).slice(0,4);
+  const also = others.length
+    ? `<p class="also">${others.join('・')}日${e.n > 5 ? ' ほか' : ''}も開催</p>` : '';
+  const link = e.spot
+    ? `<p class="srcline"><a href="../s/${esc(e.spot)}.html">マップのページで見る →</a></p>`
+    : (e.url ? `<p class="srcline"><a href="${esc(e.url)}" target="_blank" rel="noopener">主催の告知を見る →</a></p>` : '');
+  return `<li class="ev ${e.kids ? 'kid' : 'oth'}">${img}<div class="body">
+    <p class="ttl">${esc(e.title)}</p>
+    <div class="tags">${tags.join('')}</div>
+    ${bits.length ? `<p class="meta">${bits.join(' ／ ')}</p>` : ''}
+    ${also}${link}${venueHtml(e)}${nearHtml(e)}
+  </div></li>`;
+}
+
+function render(){
+  const days = [];
+  const f = new Date(DOC.from + 'T00:00:00');
+  for (let i = 0; i < 40; i++){
+    const d = new Date(f.getTime() + i*86400000);
+    const iso = d.toISOString().slice(0,10);
+    if (iso > DOC.to) break;
+    days.push(iso);
+  }
+  const today = DOC.generated;
+  let html = '', total = 0;
+  days.forEach(iso => {
+    const all = DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e));
+    if (!all.length) return;
+    total += all.length;
+    const lim = shown[iso] || 6;
+    const list = all.slice(0, lim);
+    const d = new Date(iso + 'T00:00:00');
+    const wd = WD[d.getDay()];
+    const cls = wd === '土' ? 'sat' : (wd === '日' ? 'sun' : '');
+    html += `<section class="daygrp"><div class="dhead">
+      <span class="dnum">${d.getDate()}</span>
+      <span class="dwd ${cls}">${wd}</span>
+      ${HOL[iso] ? `<span class="dhol">${HOL[iso]}</span>` : ''}
+      ${iso === today ? '<span class="today">今日</span>' : ''}
+      <span class="dcnt">${all.length}件</span></div>
+      <ul class="cards">${list.map(e => card(e, iso)).join('')}</ul>
+      ${all.length > lim
+        ? `<button class="more" data-iso="${iso}">残り${all.length - lim}件を見る</button>` : ''}
+    </section>`;
+  });
+  document.getElementById('list').innerHTML = total ? html
+    : '<div class="daygrp"><p class="empty">条件に合うイベントがありませんでした。絞り込みを外してみてください。</p></div>';
+  document.querySelectorAll('.more').forEach(b => b.addEventListener('click', () => {
+    shown[b.dataset.iso] = (shown[b.dataset.iso] || 6) + 12; render();
+  }));
+}
+</script>
+</body>
+</html>

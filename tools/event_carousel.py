@@ -150,7 +150,7 @@ def outline(d, xy, text, f, fill, ow=7, oc=(0, 0, 0, 190), anchor='ma'):
     d.text((x, y), text, font=f, fill=fill, anchor=anchor)
 
 
-def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None):
+def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None, badge_img=None):
     """表紙。**実写を背景に敷いて白抜きの大きなフックを乗せる**
     【2026-09-13ユーザーFB「シンプル過ぎてインパクトがない」で作り直し】
     ⚠人物が写る写真は**人混みが枠に入らない位置で切り出す**(モザイクより優先)。
@@ -174,7 +174,14 @@ def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None):
         im = Image.new('RGBA', (W_, H_), BG + (255,))
         fg, sub_c, ow = INK + (255,), SUB + (255,), 0
     d = ImageDraw.Draw(im)
-    shadow(im, pill('福岡', PREF_RED, 40), (72, 86))
+    # ★**県バッジは差し替えられる**【2026-09-16ユーザー指摘
+    #   「福岡アイコンちっさすぎるので、サムネと同サイズにしましょう」】
+    #   既定は小さいピルだが、`badge_img` を渡せば動画サムネと同じ3層バッジを
+    #   同じ位置(1080x1350なら x45 y45 271x166 = thumbs_build の tiktok 実測値)に置く
+    if badge_img is not None:
+        shadow(im, badge_img, (45, 45), blur=18, alpha=70, dy=6)
+    else:
+        shadow(im, pill('福岡', PREF_RED, 40), (72, 86))
     hook = hook or 'まだ間に合う'
     # ⚠**下端は再生数の表示位置(グリッドの左下・下端から約110px)を避ける**。
     #   H_-500 だと「スワイプして見てね」のピルが y1208-1266 に来て**再生数と重なった**

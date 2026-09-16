@@ -35,6 +35,13 @@ import event_watch as X            # クロスロードふくおかのタイル�
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
+# ポスターを読んで手で足した情報(キー=イベントURL)。`kids_add` がスコアに効く。
+# ⚠**無ければ空**で動く。カルーセル側も同じファイルを price/place/time/detail に使う
+SUPP_PATH = os.path.join(HERE, '..', 'data', '_イベント補足.json')
+try:
+    SUPP = json.load(io.open(SUPP_PATH, encoding='utf-8'))
+except Exception:
+    SUPP = {}
 UA = M.UA
 IKO = 'https://iko-yo.net'
 
@@ -978,7 +985,19 @@ def main():
         # **始まってからの日数**。負なら「これから始まる」
         since = (date.today() - st).days if hasattr(st, 'year') else 9999
         r['left'], r['since'] = left, since
+        # ★**ポスターを読んで付けた加点**を足す【2026-09-16ユーザー確定の新工程】
+        #   ⚠**スコアはタイトルの文字列だけで計算していて、商業施設の源は lead が空**なので、
+        #     価値がポスターにしか書かれていないものは0点になる。
+        #     実測(9/19-23の候補172件)では score<=8 が64件あり、うち**63件はポスター画像を持っていた**。
+        #     61枚読んだら**3件が大当たり**だった:
+        #       「シルバーウィークナイトシネマ」8→28(4夜すべて子供向けアニメの野外上映・入場無料)
+        #       「電車と遊ぼう!!ワイワイ鉄道まつり」7→23(ミニ新幹線に乗れる・プラレールで遊べる)
+        #       「ポケモンカードストア」8→18(無料のポケカ教室を毎日開催)
+        #   → 読んだ結果は `data/_イベント補足.json` の **`kids_add`** に保存し、ここで足す。
+        #     0 を入れてあるものは「読んだが加点しないと判断した」記録(再読の無駄を省く)
+        r['kids_add'] = int((SUPP.get(r['url']) or {}).get('kids_add') or 0)
         r['score'] = (M.kids_score(r['title'] + ' ' + (r.get('lead') or ''))
+                      + r['kids_add']
                       + (4 if d <= 3 else 2 if d <= 9 else 0)
                       + (2 if len(r['venues']) >= 3 else 0)
                       # ★**複数の情報源に載っている=規模が大きい**という代理指標。

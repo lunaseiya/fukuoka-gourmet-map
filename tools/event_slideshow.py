@@ -97,14 +97,21 @@ def main():
 
     name = a.out or ('YouTube_スライドショー_%.0f秒.mp4' % tot)
     out = os.path.join(d, name)
-    fc = ('[1:a]atrim=0:%.3f,asetpts=N/SR/TB,volume=0.55,'
+    # ⚠**完成品を volumedetect して mean -14〜-16dB に入れる**。
+    #   0.55 / SE 1.0 では **mean -17.4dB** と小さかった(2026-09-16 実測)ので +2dB した。
+    #   ナレが無い回なので BGM が音量の主役。max は alimiter=0.85 が抑える
+    fc = ('[1:a]atrim=0:%.3f,asetpts=N/SR/TB,volume=0.70,'
           'afade=t=in:d=0.4,afade=t=out:st=%.2f:d=1.5[b];'
-          '[2:a]volume=1.0[s];[b][s]amix=inputs=2:duration=first:normalize=0,'
+          '[2:a]volume=1.26[s];[b][s]amix=inputs=2:duration=first:normalize=0,'
           'alimiter=limit=0.85:level=false[a]' % (tot, tot - 1.5))
     run([os.path.join(FF, 'ffmpeg'), '-y', '-hide_banner', '-loglevel', 'error',
          '-i', vid, '-ss', '0.4', '-i', BGM, '-i', ses,
          '-filter_complex', fc, '-map', '0:v', '-map', '[a]',
          '-c:v', 'copy', '-c:a', 'aac', '-b:a', '192k',
+         # ⚠**最終mux でも色のタグを明示する**。中間concatを copy すると
+         #   タグが落ちて ffprobe が color_transfer=unknown になる(2026-09-16に確認)。
+         #   素材はSDRのJPEGなので bt709 を書くのが正しい(トーンマップはしない)
+         '-color_primaries', 'bt709', '-color_trc', 'bt709', '-colorspace', 'bt709',
          '-movflags', '+faststart', '-t', '%.3f' % tot, out])
     print()
     print('書き出し:', out)

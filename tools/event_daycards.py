@@ -121,6 +121,9 @@ def load(f, t):
             dd = [x for x in span if s1 <= date.fromisoformat(x) <= e1]
         if sc < 13 or not dd:
             continue
+        # ⚠中止・延期が明記されているものはカードにも載せない(2026-09-16)
+        if W.canceled(r['title'], r.get('lead')):
+            continue
         tt, head = clean(r['title'])
         # ⚠**IPコラボのポスターは貼らない**(ポケモン/プリキュア/サンリオ/ちいかわ/
         #   パウ・パトロール等。版元の権利が重なり施設側にも再配布権が無い)。

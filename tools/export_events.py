@@ -57,6 +57,8 @@ ROOT = os.path.join(HERE, '..')
 SPOTS = os.path.join(ROOT, 'data', 'spots.json')
 CAND = os.path.join(ROOT, 'data', '_週末イベント候補.json')
 EXTRA = os.path.join(ROOT, 'data', '_イベント補足.json')
+# ★詳細ページから拾った会場と座標のキャッシュ(`event_venue_fill.py` が作る)
+VFILL = os.path.join(ROOT, 'data', '_イベント会場.json')
 OUT = os.path.join(ROOT, 'map', 'events.json')
 PDIR = os.path.join(ROOT, 'map', 'eventposters')
 KIDS_TH = 6
@@ -248,6 +250,7 @@ def main():
 
     supp = json.load(io.open(EXTRA, encoding='utf-8')) if os.path.exists(EXTRA) else {}
     spots = json.load(io.open(SPOTS, encoding='utf-8'))
+    vfill = json.load(io.open(VFILL, encoding='utf-8')) if os.path.exists(VFILL) else {}
     by_id = {x['id']: x for x in spots}
     out, seen = [], {}
 
@@ -296,6 +299,11 @@ def main():
                     continue
                 days = [x for x in span if st <= x <= (en or st)]
             if not days:
+                continue
+            # ⚠**中止・延期が明記されているものは出さない**【2026-09-16】
+            #   jspan() は会期表記にしか当たらないので、タイトル側の「＜中止になりました＞」が
+            #   素通りしていた。天候の注記(「荒天中止」)は落とさない
+            if W.canceled(r['title'], r.get('lead')):
                 continue
             tt, head = clean(r['title'])
             k = core(tt)[:10]
@@ -378,6 +386,33 @@ def main():
             g = tc[r['title']]
             if g:
                 fix(r, g, True)
+        if r['lat'] is None or not r.get('venueSpot'):
+            # ★**詳細ページから拾った会場**(`event_venue_fill.py` のキャッシュ)を最後に当てる。
+            #   一覧ページの `venues` には会場が入っていないことが多く、
+            #   詳細ページの JSON-LD / 「開催場所」だけが手がかりのものがある。
+            #   ⚠ここで入る座標は**源が書いている住所を geocoding にかけた結果**で、
+            #     市区の代表座標のような推測ではない
+            vr = vfill.get(r.get('url') or '')
+            if vr:
+                if vr.get('venue') and (not r['venue'] or ADMIN.match(r['venue'].strip())):
+                    r['venue'] = vr['venue']
+                if r['lat'] is None and vr.get('lat') is not None:
+                    r['lat'], r['lng'] = vr['lat'], vr['lng']
+                    r['venueVia'] = 'spot' if vr.get('spot') else 'address'
+                sid = vr.get('spot')
+                sp = by_id.get(sid) if sid else None
+                # 会場として出すのは**名前が完全一致したものだけ**(部分一致は座標のみ)
+                if sp and vr.get('exact') and not r.get('venueSpot'):
+                    r['venueSpot'] = sid
+                    r['venueName'] = sp.get('name') or ''
+                    if sp.get('tabelog') or sp.get('asoview') or sp.get('booking'):
+                        r['venueLinks'] = {'id': sid, 'name': sp.get('name') or '',
+                                           'genre': sp.get('genre') or '',
+                                           'tabelog': sp.get('tabelog'),
+                                           'asoview': sp.get('asoview'),
+                                           'booking': sp.get('booking')}
+                elif sp:
+                    r['venueMatch'] = sid
         r['near'] = near_spots(spots, r['lat'], r['lng']) if r['lat'] is not None else []
         # 会場そのものは「近くのお店」に重複して出さない(会場枠で先に出しているため)
         skip = {r.get('venueSpot'), r.get('venueMatch'), r.get('spot')} - {None}
@@ -442,7 +477,10 @@ def main():
     print('  座標が取れた %d件 / 近隣の収益スポットが付いた %d件'
           % (sum(1 for x in out if x['lat'] is not None),
              sum(1 for x in out if x['near'])))
-    print('  会場が確定(in) %d件 / うち会場自身に収益リンク %d件 / 名前突合で座標だけ借りた %d件'
+    print('  詳細ページから会場を補えた %d件(うち住所から座標 %d件)'
+          % (sum(1 for x in out if x.get('venueVia')),
+             sum(1 for x in out if x.get('venueVia') == 'address')))
+    print('  会場が確定 %d件 / うち会場自身に収益リンク %d件 / 名前突合で座標だけ借りた %d件'
           % (sum(1 for x in out if x.get('venueSpot')),
              sum(1 for x in out if x.get('venueLinks')),
              sum(1 for x in out if x.get('venueMatch'))))

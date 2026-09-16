@@ -617,13 +617,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.53471,
+   "lng": 130.480392,
    "kids": true,
    "ks": 13,
    "score": 19,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spe84194d1b4",
+     "name": "かっぱ寿司 大野城店",
+     "genre": "回転寿司、海鮮、寿司",
+     "km": 0.58,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40025697/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp4086710196",
+     "name": "スシロー 大野城 大城店",
+     "genre": "回転寿司",
+     "km": 0.82,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40051507/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp552046ed5b",
+     "name": "ワンカルビ 大野城店",
+     "genre": "焼肉",
+     "km": 1.92,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40046817/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents596352.jpg"
   },
   {
@@ -986,13 +1015,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.661203,
+   "lng": 130.35411,
    "kids": true,
    "ks": 6,
    "score": 15,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "seadragoon",
+     "name": "シー・ドラグーン",
+     "genre": "アスレチックタワー",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/158494/",
+     "booking": null
+    },
+    {
+     "id": "aso153715",
+     "name": "マリンワールド海の中道",
+     "genre": "レジャー",
+     "km": 0.86,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/153715/",
+     "booking": null
+    },
+    {
+     "id": "sunshinepool",
+     "name": "サンシャインプール(海の中道海浜公園)",
+     "genre": "屋外プール",
+     "km": 0.9,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/channel/tickets/AVkg0pQnfV/",
+     "booking": null
+    }
+   ],
    "img": "ckajpevent12392.jpg"
   },
   {
@@ -1057,7 +1115,7 @@
   {
    "id": "cetevents556488",
    "title": "チームラボフォレストに「つかまえて集める恐竜の森」が登場",
-   "venue": "福岡市中央区",
+   "venue": "BOSS E・ZO FUKUOKA（ボスイーゾフクオカ）",
    "city": "福岡市中央区",
    "pref": "",
    "start": "2026-03-20",
@@ -1086,19 +1144,49 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.594944,
+   "lng": 130.363646,
    "kids": true,
    "ks": 13,
    "score": 13,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueMatch": "bossezofukuoka",
+   "near": [
+    {
+     "id": "asobiparkplusmomochi",
+     "name": "あそびパークPLUS マークイズ福岡ももち店",
+     "genre": "室内遊び場",
+     "km": 0.13,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160936/",
+     "booking": null
+    },
+    {
+     "id": "aso157200",
+     "name": "V-World AREA（ブイ ワールド エリア）",
+     "genre": "レジャー",
+     "km": 0.17,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157200/",
+     "booking": null
+    },
+    {
+     "id": "sp7484a51b48",
+     "name": "玄風館 福岡PayPayドーム店",
+     "genre": "弁当、焼肉、おにぎり",
+     "km": 0.24,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40049791/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents556488.jpg"
   },
   {
    "id": "cetevents595251",
    "title": "ランドセルの端材で作るオリジナルキーホルダー作り",
-   "venue": "福岡市博多区",
+   "venue": "フィットちゃんランドセル 福岡博多ショールーム",
    "city": "福岡市博多区",
    "pref": "",
    "start": "2026-07-24",
@@ -1127,13 +1215,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.591875,
+   "lng": 130.41657,
    "kids": true,
    "ks": 13,
    "score": 13,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "hoterukyabinasufukuoka",
+     "name": "ホテルキャビナス福岡",
+     "genre": "ホテル",
+     "km": 0.14,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad318577/"
+    },
+    {
+     "id": "spfc270b5004",
+     "name": "ラーメン海鳴 博多デイトス店",
+     "genre": "ラーメン",
+     "km": 0.42,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp226480b37f",
+     "name": "博多川端どさんこ 博多デイトス店",
+     "genre": "味噌ラーメン・ラーメン",
+     "km": 0.45,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents595251.jpg"
   },
   {
@@ -1158,12 +1275,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.786525,
+   "lng": 130.469773,
    "kids": true,
    "ks": 9,
    "score": 13,
    "src": "いこーよ",
+   "venueVia": "address",
    "near": [],
    "img": "cetevents595047.jpg"
   },
@@ -1242,7 +1360,7 @@
   {
    "id": "cetevents593011",
    "title": "Starry Night Fantasy -や座の物語-",
-   "venue": "福岡市中央区",
+   "venue": "福岡市科学館",
    "city": "福岡市中央区",
    "pref": "",
    "start": "2026-09-09",
@@ -1271,13 +1389,43 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.57741,
+   "lng": 130.378231,
    "kids": false,
    "ks": 4,
    "score": 11,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueSpot": "fukuokashikagakukan",
+   "venueName": "福岡市科学館",
+   "venueLinks": {
+    "id": "fukuokashikagakukan",
+    "name": "福岡市科学館",
+    "genre": "科学館",
+    "tabelog": null,
+    "asoview": "https://www.asoview.com/base/160672/",
+    "booking": null
+   },
+   "near": [
+    {
+     "id": "aso_daipinchi_fukuoka",
+     "name": "鈴木のりたけ「大ピンチ展！」福岡市科学館",
+     "genre": "企画展",
+     "km": 0.16,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/164474/",
+     "booking": null
+    },
+    {
+     "id": "sp086e3707cb",
+     "name": "パティスリー オー フィル ドゥ ジュール",
+     "genre": "ケーキ・洋菓子",
+     "km": 0.87,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40001686/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents593011.jpg"
   },
   {
@@ -1351,19 +1499,48 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.708858,
+   "lng": 130.453346,
    "kids": true,
    "ks": 9,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp1a75f17cf1",
+     "name": "スシロー 新宮上府店",
+     "genre": "回転寿司",
+     "km": 0.23,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40034740/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spa5fc2ed3f5",
+     "name": "焼肉きんぐ 福岡新宮店",
+     "genre": "焼肉、ホルモン、韓国料理",
+     "km": 0.24,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40032634/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp2970699596",
+     "name": "くら寿司 福岡新宮店",
+     "genre": "回転寿司",
+     "km": 0.61,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40036832/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents596887.jpg"
   },
   {
    "id": "cetevents599260",
    "title": "ようこそベビーコペル 遊びながら伸ばそう！～かずのチカラ×うんどう～",
-   "venue": "福岡市南区",
+   "venue": "幼児教室コペル 高宮教室",
    "city": "福岡市南区",
    "pref": "",
    "start": "2026-09-16",
@@ -1388,13 +1565,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.568269,
+   "lng": 130.412765,
    "kids": false,
    "ks": 5,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spddd47ed1c6",
+     "name": "焼鳥 高宮 本店",
+     "genre": "焼き鳥",
+     "km": 0.3,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40005892/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp6f9a0de2b8",
+     "name": "五島丸",
+     "genre": "居酒屋・海鮮・ステーキ",
+     "km": 0.54,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40033077/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp2510e84614",
+     "name": "くら寿司 福岡日赤前店",
+     "genre": "回転寿司",
+     "km": 0.56,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40037403/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents599260.jpg"
   },
   {
@@ -1423,13 +1629,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.59014,
+   "lng": 130.401711,
    "kids": false,
    "ks": 4,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "gansomotsunaberakutenchitenj",
+     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+     "genre": "もつ鍋",
+     "km": 0.14,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp0e54dca7b3",
+     "name": "ワンカルビPREMIUM 天神今泉",
+     "genre": "焼肉、ホルモン",
+     "km": 0.38,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40055307/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "teppanyakisakabaikuraten-49",
+     "name": "鉄板焼酒場 いくら 天神今泉店",
+     "genre": "オムバーグ鉄板焼",
+     "km": 0.42,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40056457/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents598967.jpg"
   },
   {
@@ -1501,13 +1736,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.524483,
+   "lng": 130.483136,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spae78b55221",
+     "name": "焼肉ヌルボンガーデン 春日店",
+     "genre": "焼肉、韓国料理",
+     "km": 1.39,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40023809/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp4086710196",
+     "name": "スシロー 大野城 大城店",
+     "genre": "回転寿司",
+     "km": 1.5,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40051507/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spe84194d1b4",
+     "name": "かっぱ寿司 大野城店",
+     "genre": "回転寿司、海鮮、寿司",
+     "km": 1.7,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40025697/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents598411.jpg"
   },
   {
@@ -1592,13 +1856,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.59386,
+   "lng": 130.398398,
    "kids": true,
    "ks": 9,
    "score": 9,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp654a702970",
+     "name": "焼肉きんぐ 福岡天神店",
+     "genre": "焼肉",
+     "km": 0.32,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp98bb5db93a",
+     "name": "スシロー 福岡親富孝通り店",
+     "genre": "回転寿司",
+     "km": 0.4,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "gansomotsunaberakutenchitenj",
+     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+     "genre": "もつ鍋",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents584656.jpg"
   },
   {
@@ -1633,12 +1926,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.796091,
+   "lng": 130.870679,
    "kids": true,
    "ks": 9,
    "score": 9,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent17274.jpg"
   },
@@ -1674,13 +1968,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.589625,
+   "lng": 130.397298,
    "kids": true,
    "ks": 9,
    "score": 9,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp112473cf95",
+     "name": "牛角 天神西通り店",
+     "genre": "焼肉、ホルモン、居酒屋",
+     "km": 0.15,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40044811/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp654a702970",
+     "name": "焼肉きんぐ 福岡天神店",
+     "genre": "焼肉",
+     "km": 0.27,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp98bb5db93a",
+     "name": "スシロー 福岡親富孝通り店",
+     "genre": "回転寿司",
+     "km": 0.3,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents567449.jpg"
   },
   {
@@ -1774,13 +2097,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.595226,
+   "lng": 130.361805,
    "kids": true,
    "ks": 6,
    "score": 9,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "aso157200",
+     "name": "V-World AREA（ブイ ワールド エリア）",
+     "genre": "レジャー",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157200/",
+     "booking": null
+    },
+    {
+     "id": "sp7484a51b48",
+     "name": "玄風館 福岡PayPayドーム店",
+     "genre": "弁当、焼肉、おにぎり",
+     "km": 0.09,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40049791/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "asobiparkplusmomochi",
+     "name": "あそびパークPLUS マークイズ福岡ももち店",
+     "genre": "室内遊び場",
+     "km": 0.11,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160936/",
+     "booking": null
+    }
+   ],
    "img": "cetevents597328.jpg"
   },
   {
@@ -1849,7 +2201,7 @@
   {
    "id": "cetevents582356",
    "title": "ここふる夏休み2026「みっけ！小さな小さな大きな世界」参加無料",
-   "venue": "大野城市",
+   "venue": "大野城心のふるさと館",
    "city": "大野城市",
    "pref": "",
    "start": "2026-07-14",
@@ -1872,13 +2224,43 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.534703,
+   "lng": 130.480395,
    "kids": false,
    "ks": 4,
    "score": 9,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueMatch": "onojokokoronofurusatokan",
+   "near": [
+    {
+     "id": "spe84194d1b4",
+     "name": "かっぱ寿司 大野城店",
+     "genre": "回転寿司、海鮮、寿司",
+     "km": 0.58,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40025697/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp4086710196",
+     "name": "スシロー 大野城 大城店",
+     "genre": "回転寿司",
+     "km": 0.82,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40051507/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp552046ed5b",
+     "name": "ワンカルビ 大野城店",
+     "genre": "焼肉",
+     "km": 1.92,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40046817/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents582356.jpg"
   },
   {
@@ -1956,13 +2338,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.590969,
+   "lng": 130.402912,
    "kids": false,
    "ks": 4,
    "score": 8,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "gansomotsunaberakutenchitenj",
+     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+     "genre": "もつ鍋",
+     "km": 0.0,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp92bed6f3c1",
+     "name": "ワンカルビPREMIUM 中洲",
+     "genre": "焼肉、ホルモン",
+     "km": 0.29,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40039231/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp8adbd093b4",
+     "name": "元祖中洲そうめん 臣屋(じんや)",
+     "genre": "そうめん",
+     "km": 0.39,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40028745/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents584916.jpg"
   },
   {
@@ -1997,12 +2408,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.326358,
+   "lng": 130.68447,
    "kids": false,
    "ks": 3,
    "score": 8,
    "src": "いこーよ",
+   "venueVia": "address",
    "near": [],
    "img": "cetevents593186.jpg"
   },
@@ -2464,7 +2876,7 @@
   {
    "id": "cetevents598205",
    "title": "期間限定「ゼリーショップ」が再登場！",
-   "venue": "福岡市博多区",
+   "venue": "キッザニア福岡",
    "city": "福岡市博多区",
    "pref": "",
    "start": "2026-09-16",
@@ -2487,13 +2899,43 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.565448,
+   "lng": 130.439258,
    "kids": false,
    "ks": 0,
    "score": 8,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueSpot": "kizzaniafukuoka",
+   "venueName": "キッザニア福岡",
+   "venueLinks": {
+    "id": "kizzaniafukuoka",
+    "name": "キッザニア福岡",
+    "genre": "室内遊び場(職業体験)",
+    "tabelog": null,
+    "asoview": "https://www.asoview.com/base/160197/",
+    "booking": null
+   },
+   "near": [
+    {
+     "id": "vsparklalaportfukuoka",
+     "name": "VS PARK WITH G ららぽーと福岡店",
+     "genre": "室内遊び場",
+     "km": 0.07,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/159466/",
+     "booking": null
+    },
+    {
+     "id": "jindinrou",
+     "name": "恵比寿 京鼎樓 ららぽーと福岡店",
+     "genre": "台湾料理(小籠包)",
+     "km": 0.07,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40060477/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents598205.jpg"
   },
   {
@@ -2911,12 +3353,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.722857,
+   "lng": 131.022549,
    "kids": false,
    "ks": 0,
    "score": 5,
    "src": "いこーよ",
+   "venueVia": "address",
    "near": [],
    "img": "cetevents584154.jpg"
   },
@@ -3160,47 +3603,15 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.619615,
+   "lng": 130.552334,
    "kids": false,
    "ks": 4,
    "score": 4,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent11994.jpg"
-  },
-  {
-   "id": "cetevents585499",
-   "title": "令和8年度 小石原焼窯元展＜中止になりました＞",
-   "venue": "福岡市中央区",
-   "city": "福岡市中央区",
-   "pref": "",
-   "start": "2026-09-15",
-   "end": "2026-09-21",
-   "untilLabel": "",
-   "days": [
-    "2026-09-16",
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21"
-   ],
-   "n": 6,
-   "url": "https://iko-yo.net/events/585499",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1747440/normal.jpg?1788287544",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": null,
-   "lng": null,
-   "kids": false,
-   "ks": 2,
-   "score": 4,
-   "src": "いこーよ",
-   "near": [],
-   "img": "cetevents585499.jpg"
   },
   {
    "id": "caa1712d251ddf3",
@@ -3510,13 +3921,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.312098,
+   "lng": 130.517395,
    "kids": false,
    "ks": 0,
    "score": 3,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.91,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.21,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.22,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    }
+   ],
    "img": "cetevents589249.jpg"
   },
   {
@@ -3869,7 +4309,7 @@
   {
    "id": "cetevents593014",
    "title": "星はここにある music by ACIDMAN",
-   "venue": "福岡市中央区",
+   "venue": "福岡市科学館",
    "city": "福岡市中央区",
    "pref": "",
    "start": "2026-09-09",
@@ -3898,13 +4338,43 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.57741,
+   "lng": 130.378231,
    "kids": false,
    "ks": 0,
    "score": 3,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueSpot": "fukuokashikagakukan",
+   "venueName": "福岡市科学館",
+   "venueLinks": {
+    "id": "fukuokashikagakukan",
+    "name": "福岡市科学館",
+    "genre": "科学館",
+    "tabelog": null,
+    "asoview": "https://www.asoview.com/base/160672/",
+    "booking": null
+   },
+   "near": [
+    {
+     "id": "aso_daipinchi_fukuoka",
+     "name": "鈴木のりたけ「大ピンチ展！」福岡市科学館",
+     "genre": "企画展",
+     "km": 0.16,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/164474/",
+     "booking": null
+    },
+    {
+     "id": "sp086e3707cb",
+     "name": "パティスリー オー フィル ドゥ ジュール",
+     "genre": "ケーキ・洋菓子",
+     "km": 0.87,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40001686/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents593014.jpg"
   },
   {
@@ -4130,13 +4600,24 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.439088,
+   "lng": 130.557689,
    "kids": false,
    "ks": 2,
    "score": 2,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "mobisuku",
+     "name": "モビスク",
+     "genre": "レジャー",
+     "km": 1.7,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/164463/",
+     "booking": null
+    }
+   ],
    "img": "cetevents585556.jpg"
   },
   {
@@ -4274,13 +4755,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.517994,
+   "lng": 130.501437,
    "kids": false,
    "ks": 5,
    "score": 15,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp30d3101e30",
+     "name": "くら寿司 太宰府店",
+     "genre": "回転寿司",
+     "km": 1.24,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40020072/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp85ef799273",
+     "name": "牛角 太宰府西店",
+     "genre": "焼肉、ホルモン、居酒屋",
+     "km": 1.34,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40005904/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spa81e890076",
+     "name": "魚べい 太宰府大佐野店",
+     "genre": "寿司、回転寿司、海鮮",
+     "km": 1.69,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40041057/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents598860.jpg"
   },
   {
@@ -4377,13 +4887,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.589925,
+   "lng": 130.394804,
    "kids": false,
    "ks": 0,
    "score": 3,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp112473cf95",
+     "name": "牛角 天神西通り店",
+     "genre": "焼肉、ホルモン、居酒屋",
+     "km": 0.19,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40044811/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp98bb5db93a",
+     "name": "スシロー 福岡親富孝通り店",
+     "genre": "回転寿司",
+     "km": 0.19,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp654a702970",
+     "name": "焼肉きんぐ 福岡天神店",
+     "genre": "焼肉",
+     "km": 0.23,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent16415.jpg"
   },
   {
@@ -4453,7 +4992,7 @@
   {
    "id": "cetevents600306",
    "title": "GARDEN",
-   "venue": "福岡市東区",
+   "venue": "筥崎宮",
    "city": "福岡市東区",
    "pref": "",
    "start": "2026-09-18",
@@ -4469,13 +5008,44 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.614433,
+   "lng": 130.42295,
    "kids": true,
    "ks": 12,
    "score": 24,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "spot",
+   "venueSpot": "hakozakigu",
+   "venueName": "筥崎宮",
+   "near": [
+    {
+     "id": "sp5dd459ce3f",
+     "name": "花山",
+     "genre": "焼き鳥・居酒屋",
+     "km": 0.1,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40006439/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "hakozakihatotaroushouten",
+     "name": "筥崎 鳩太郎商店",
+     "genre": "居酒屋",
+     "km": 0.1,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40044013/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp323f1cdbb1",
+     "name": "駒や 箱崎店",
+     "genre": "ラーメン",
+     "km": 0.21,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40058650/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents600306.jpg"
   },
   {
@@ -4654,7 +5224,7 @@
   {
    "id": "cetevents593870",
    "title": "9/18「ハイハイレース」㏌モーヴィわかまつ",
-   "venue": "北九州市若松区",
+   "venue": "BOAT KIDS PARK Mooovi わかまつ（ボートキッズパーク モーヴィわかまつ）",
    "city": "北九州市若松区",
    "pref": "",
    "start": "2026-09-18",
@@ -4670,12 +5240,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.886944,
+   "lng": 130.76427,
    "kids": false,
    "ks": 3,
    "score": 12,
    "src": "いこーよ",
+   "venueVia": "address",
    "near": [],
    "img": "cetevents593870.jpg"
   },
@@ -5018,13 +5589,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.590953,
+   "lng": 130.402595,
    "kids": false,
    "ks": 0,
    "score": 9,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "gansomotsunaberakutenchitenj",
+     "name": "元祖もつ鍋 楽天地 天神本店(ACROS福岡)",
+     "genre": "もつ鍋",
+     "km": 0.03,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001085/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp92bed6f3c1",
+     "name": "ワンカルビPREMIUM 中洲",
+     "genre": "焼肉、ホルモン",
+     "km": 0.31,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40039231/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp8adbd093b4",
+     "name": "元祖中洲そうめん 臣屋(じんや)",
+     "genre": "そうめん",
+     "km": 0.42,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40028745/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent15703.jpg"
   },
   {
@@ -5057,12 +5657,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.577357,
+   "lng": 130.107589,
    "kids": false,
    "ks": 1,
    "score": 4,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent15797.jpg"
   },
@@ -5431,7 +6032,7 @@
   {
    "id": "cetevents591160",
    "title": "両面コースターを作ろう！",
-   "venue": "北九州市若松区",
+   "venue": "デジタルクラフトスタジオひびきの",
    "city": "北九州市若松区",
    "pref": "",
    "start": "2026-09-19",
@@ -5447,13 +6048,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.8908,
+   "lng": 130.704386,
    "kids": true,
    "ks": 9,
    "score": 19,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spc8ac60d158",
+     "name": "はま寿司 若松ひびきの店",
+     "genre": "回転寿司",
+     "km": 0.02,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40051021/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp9ed98637a5",
+     "name": "スシロー 若松大鳥居店",
+     "genre": "回転寿司",
+     "km": 0.79,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40025519/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spf8544102bc",
+     "name": "焼肉きんぐ 若松大鳥居店",
+     "genre": "焼肉",
+     "km": 0.82,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40041016/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents591160.jpg"
   },
   {
@@ -5958,13 +6588,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.313569,
+   "lng": 130.51184,
    "kids": false,
    "ks": 4,
    "score": 14,
    "src": "久留米観光",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.62,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.75,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    }
+   ],
    "img": "c3ac716890ed969.jpg"
   },
   {
@@ -6059,13 +6718,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.596507,
+   "lng": 130.39852,
    "kids": false,
    "ks": 0,
    "score": 12,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp654a702970",
+     "name": "焼肉きんぐ 福岡天神店",
+     "genre": "焼肉",
+     "km": 0.57,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp98bb5db93a",
+     "name": "スシロー 福岡親富孝通り店",
+     "genre": "回転寿司",
+     "km": 0.63,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokaanpanmankodomomyuujia",
+     "name": "福岡アンパンマンこどもミュージアムinモール",
+     "genre": "ミュージアム",
+     "km": 0.69,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157187/",
+     "booking": null
+    }
+   ],
    "img": "cetevents591500.jpg"
   },
   {
@@ -6230,7 +6918,7 @@
   {
    "id": "cetevents600787",
    "title": "予防のチカラ！アビスパ健康応援マッチ",
-   "venue": "福岡市博多区",
+   "venue": "ベスト電器スタジアム",
    "city": "福岡市博多区",
    "pref": "",
    "start": "2026-09-19",
@@ -6246,13 +6934,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.58604,
+   "lng": 130.460029,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp20331307fa",
+     "name": "はま寿司 福岡志免店",
+     "genre": "回転寿司",
+     "km": 1.81,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40028205/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp05bc21644f",
+     "name": "くら寿司 志免店",
+     "genre": "回転寿司",
+     "km": 1.82,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40028212/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp462c75278c",
+     "name": "焼肉きんぐ 福岡志免店",
+     "genre": "焼肉、ホルモン、韓国料理",
+     "km": 1.83,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40039366/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents600787.jpg"
   },
   {
@@ -6274,13 +6991,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.313569,
+   "lng": 130.51184,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "久留米観光",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.62,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.75,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    }
+   ],
    "img": "c7778c103ec9b93.jpg"
   },
   {
@@ -6355,12 +7101,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.218504,
+   "lng": 130.439128,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent15695.jpg"
   },
@@ -6390,12 +7137,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.258204,
+   "lng": 130.547654,
    "kids": true,
    "ks": 7,
    "score": 9,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent11326.jpg"
   },
@@ -6600,13 +7348,24 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.209089,
+   "lng": 130.560033,
    "kids": true,
    "ks": 12,
    "score": 22,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp75f2d5e771",
+     "name": "はま寿司 八女蒲原店",
+     "genre": "回転寿司",
+     "km": 1.99,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400804/40037372/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent13342.jpg"
   },
   {
@@ -6671,7 +7430,7 @@
   {
    "id": "cetevents591589",
    "title": "BABY SHARK LIVE!",
-   "venue": "久留米市",
+   "venue": "久留米シティプラザ",
    "city": "久留米市",
    "pref": "",
    "start": "2026-09-20",
@@ -6687,13 +7446,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.313973,
+   "lng": 130.51343,
    "kids": true,
    "ks": 6,
    "score": 16,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.46,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.62,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    }
+   ],
    "img": "cetevents591589.jpg"
   },
   {
@@ -6833,13 +7621,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.883634,
+   "lng": 130.888679,
    "kids": false,
    "ks": 3,
    "score": 15,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp5e9d22113b",
+     "name": "ワンカルビ チャチャタウン小倉店",
+     "genre": "焼肉",
+     "km": 0.0,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spd8e99e52e6",
+     "name": "はま寿司 チャチャタウン小倉店",
+     "genre": "回転寿司",
+     "km": 0.03,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40028278/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "tenjushikyoumachimise",
+     "name": "天寿し京町店",
+     "genre": "寿司",
+     "km": 0.43,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents600810.jpg"
   },
   {
@@ -6989,13 +7806,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.689371,
+   "lng": 130.430019,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp2cdc461f39",
+     "name": "溶岩焼肉居酒屋Beans",
+     "genre": "焼肉居酒屋",
+     "km": 0.22,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40066911/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "speacb13267f",
+     "name": "博多もつ鍋 権 和白",
+     "genre": "もつ鍋・居酒屋",
+     "km": 0.23,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40041515/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp4ceaad55dd",
+     "name": "かまどか 福岡和白店",
+     "genre": "居酒屋",
+     "km": 0.26,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40045788/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents598393.jpg"
   },
   {
@@ -7017,13 +7863,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.601287,
+   "lng": 130.399407,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "fukuokaanpanmankodomomyuujia",
+     "name": "福岡アンパンマンこどもミュージアムinモール",
+     "genre": "ミュージアム",
+     "km": 0.91,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157187/",
+     "booking": null
+    },
+    {
+     "id": "hitsumabushiwashokubinch-20",
+     "name": "ひつまぶし和食備長 中洲川端店",
+     "genre": "ひつまぶし",
+     "km": 0.96,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40026105/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spda0b68b7f6",
+     "name": "くら寿司 博多中洲店",
+     "genre": "回転寿司",
+     "km": 1.04,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40047231/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents599293.jpg"
   },
   {
@@ -7045,13 +7920,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.6043,
+   "lng": 130.397776,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp4fc6af45c0",
+     "name": "玄風館 千代店",
+     "genre": "焼肉、ホルモン",
+     "km": 1.13,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40000120/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp944baa8707",
+     "name": "はま寿司 博多千代店",
+     "genre": "回転寿司",
+     "km": 1.14,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40042166/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokaanpanmankodomomyuujia",
+     "name": "福岡アンパンマンこどもミュージアムinモール",
+     "genre": "ミュージアム",
+     "km": 1.26,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157187/",
+     "booking": null
+    }
+   ],
    "img": "cetevents599295.jpg"
   },
   {
@@ -7073,12 +7977,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.618195,
+   "lng": 131.123503,
    "kids": false,
    "ks": 0,
    "score": 10,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent17342.jpg"
   },
@@ -7250,13 +8155,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.586132,
+   "lng": 130.397338,
    "kids": true,
    "ks": 13,
    "score": 23,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp843739d0cd",
+     "name": "スシロー 天神西通り店",
+     "genre": "回転寿司",
+     "km": 0.09,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40071392/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp12abbca17d",
+     "name": "ワンカルビPREMIUM 天神",
+     "genre": "焼肉、ホルモン",
+     "km": 0.09,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40042273/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "shinowaimaizumi",
+     "name": "しのわ 今泉",
+     "genre": "居酒屋",
+     "km": 0.17,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40062078/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents596707.jpg"
   },
   {
@@ -7646,13 +8580,24 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.210094,
+   "lng": 130.555941,
    "kids": false,
    "ks": 4,
    "score": 14,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp75f2d5e771",
+     "name": "はま寿司 八女蒲原店",
+     "genre": "回転寿司",
+     "km": 1.6,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400804/40037372/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent14611.jpg"
   },
   {
@@ -7786,12 +8731,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.779664,
+   "lng": 130.487908,
    "kids": true,
    "ks": 12,
    "score": 22,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent14157.jpg"
   },
@@ -8289,13 +9235,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.313973,
+   "lng": 130.51343,
    "kids": true,
    "ks": 10,
    "score": 20,
    "src": "久留米観光",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.46,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.62,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    }
+   ],
    "img": "cf6cfb1addfd6b4.jpg"
   },
   {
@@ -8360,7 +9335,7 @@
   {
    "id": "cetevents591156",
    "title": "お月見リースを作ろう！",
-   "venue": "北九州市若松区",
+   "venue": "デジタルクラフトスタジオひびきの",
    "city": "北九州市若松区",
    "pref": "",
    "start": "2026-09-23",
@@ -8376,13 +9351,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.8908,
+   "lng": 130.704386,
    "kids": true,
    "ks": 9,
    "score": 19,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spc8ac60d158",
+     "name": "はま寿司 若松ひびきの店",
+     "genre": "回転寿司",
+     "km": 0.02,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40051021/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp9ed98637a5",
+     "name": "スシロー 若松大鳥居店",
+     "genre": "回転寿司",
+     "km": 0.79,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40025519/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spf8544102bc",
+     "name": "焼肉きんぐ 若松大鳥居店",
+     "genre": "焼肉",
+     "km": 0.82,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400503/40041016/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents591156.jpg"
   },
   {
@@ -9084,12 +10088,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.731511,
+   "lng": 130.678643,
    "kids": false,
    "ks": 4,
    "score": 4,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent14648.jpg"
   },
@@ -9112,13 +10117,33 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.75341,
+   "lng": 130.49411,
    "kids": false,
    "ks": 0,
    "score": 4,
    "src": "イオンモール福津",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp33f9d85669",
+     "name": "はま寿司 イオンモール福津店",
+     "genre": "回転寿司",
+     "km": 0.04,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400302/40030624/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "nekocafemocha_fukutsu",
+     "name": "猫カフェMOCHA イオンモール福津店",
+     "genre": "ふれあい動物カフェ",
+     "km": 0.13,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/164615/",
+     "booking": null
+    }
+   ],
    "img": "cdd8880bdfd366b.jpg"
   },
   {
@@ -9283,13 +10308,24 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.351685,
+   "lng": 130.782832,
    "kids": true,
    "ks": 9,
    "score": 13,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "haratsuruonsentaisenkaku",
+     "name": "原鶴温泉 泰泉閣",
+     "genre": "温泉旅館(日帰り入浴)",
+     "km": 0.48,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad323391/"
+    }
+   ],
    "img": "ckajpevent14153.jpg"
   },
   {
@@ -9613,13 +10649,33 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.945484,
+   "lng": 130.963645,
    "kids": false,
    "ks": 4,
    "score": 8,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "aso160903",
+     "name": "門司港レトロ展望室",
+     "genre": "レジャー",
+     "km": 0.34,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160903/",
+     "booking": null
+    },
+    {
+     "id": "kanmonkaikyoumyuujiamu",
+     "name": "関門海峡ミュージアム",
+     "genre": "ミュージアム",
+     "km": 0.65,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160861/",
+     "booking": null
+    }
+   ],
    "img": "ckajpevent17263.jpg"
   },
   {
@@ -9642,13 +10698,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.536243,
+   "lng": 130.482555,
    "kids": false,
    "ks": 4,
    "score": 8,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp4086710196",
+     "name": "スシロー 大野城 大城店",
+     "genre": "回転寿司",
+     "km": 0.58,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40051507/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "spe84194d1b4",
+     "name": "かっぱ寿司 大野城店",
+     "genre": "回転寿司、海鮮、寿司",
+     "km": 0.62,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40025697/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp552046ed5b",
+     "name": "ワンカルビ 大野城店",
+     "genre": "焼肉",
+     "km": 1.66,
+     "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40046817/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent13356.jpg"
   },
   {
@@ -9671,12 +10756,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.271317,
+   "lng": 130.721949,
    "kids": false,
    "ks": 4,
    "score": 8,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent11776.jpg"
   },
@@ -10043,13 +11129,42 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.603334,
+   "lng": 130.401639,
    "kids": false,
    "ks": 0,
    "score": 4,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp4fc6af45c0",
+     "name": "玄風館 千代店",
+     "genre": "焼肉、ホルモン",
+     "km": 0.78,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40000120/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp944baa8707",
+     "name": "はま寿司 博多千代店",
+     "genre": "回転寿司",
+     "km": 0.81,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40042166/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokaanpanmankodomomyuujia",
+     "name": "福岡アンパンマンこどもミュージアムinモール",
+     "genre": "ミュージアム",
+     "km": 0.99,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/157187/",
+     "booking": null
+    }
+   ],
    "img": "ckajpevent11760.jpg"
   },
   {
@@ -10072,12 +11187,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.584505,
+   "lng": 130.625374,
    "kids": false,
    "ks": 0,
    "score": 4,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent11925.jpg"
   },
@@ -10220,12 +11336,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.776173,
+   "lng": 130.979965,
    "kids": true,
    "ks": 12,
    "score": 14,
    "src": "県公式",
+   "venueVia": "address",
    "near": [],
    "img": "ckajpevent13546.jpg"
   },
@@ -10248,12 +11365,13 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.252487,
+   "lng": 130.423616,
    "kids": false,
    "ks": 4,
    "score": 8,
    "src": "久留米観光",
+   "venueVia": "address",
    "near": [],
    "img": "cbc02c2ed9ba5f5.jpg"
   },
@@ -10278,13 +11396,33 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.582092,
+   "lng": 130.27291,
    "kids": false,
    "ks": 5,
    "score": 5,
    "src": "いこーよ",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8aa57a6cb7",
+     "name": "ワンカルビ 九大学研都市駅前店",
+     "genre": "焼肉",
+     "km": 1.13,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40034665/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp8c655b2881",
+     "name": "スシロー 伊都店",
+     "genre": "回転寿司",
+     "km": 1.3,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400203/40025807/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "cetevents597375.jpg"
   },
   {
@@ -10617,13 +11755,24 @@
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": null,
-   "lng": null,
+   "lat": 33.728771,
+   "lng": 130.470243,
    "kids": true,
    "ks": 16,
    "score": 20,
    "src": "県公式",
-   "near": [],
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "spa1c2b258ba",
+     "name": "博多豚骨ラーメン 三八(さんぱち)",
+     "genre": "ラーメン",
+     "km": 1.0,
+     "tabelog": "https://tabelog.com/fukuoka/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
    "img": "ckajpevent15954.jpg"
   },
   {

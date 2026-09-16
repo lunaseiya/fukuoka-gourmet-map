@@ -44756,5 +44756,244 @@
   ],
   "wish": false,
   "category": "gourmet"
+ },
+ {
+  "id": "daimaru-fukuoka-tenjin",
+  "name": "大丸福岡天神店",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "百貨店",
+  "lat": 33.588815,
+  "lng": 130.402358,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**授乳室は本館7階と東館エルガーラ5階**。**子供用トイレ(男児・女児用)が本館7階**にあり、親子トイレは本館3階・5階・7階と東館エルガーラ1階・4階。おむつ交換台は本館B2・B1・2〜4階・6〜8階と東館1〜6階(紳士用もあり)。ベビーカー貸出は本館1階総合案内所と東館エルガーラB2サービスカウンター(生後3か月頃〜2歳・体重15kg以下)。営業10:00〜19:00(本館2〜8階・東館エルガーラ3〜5階)。⚠肉フェス・北海道展などの**催事が多く、イベント一覧に一番よく出てくる会場**。催事の会期は館の公式で確認する",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.daimaru-fukuoka.jp/",
+  "category": "play"
+ },
+ {
+  "id": "hakata-hankyu",
+  "name": "博多阪急",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "百貨店",
+  "lat": 33.58928,
+  "lng": 130.419038,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**7階のベビールームが県内屈指**。授乳室は個室3部屋+相部屋1部屋(計4組)で**ベビーカーのまま入室できる**。おむつ替えベッド7台+自動式の紙おむつ専用ゴミ箱2台、**離乳食スペース(トリップトラップ3台・計6組)とベビーフード販売**、**調乳専用の浄水給湯器と電子レンジ**まである。ベビーカー貸出は7階こども服中央カウンター10台・1階インフォメーション20台(新生児〜3歳)。全館10:00〜20:00。TEL 092-461-1381。JR博多シティ内なので雨でも駅から濡れずに行ける",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.hankyu-dept.co.jp/hakata/",
+  "category": "play"
+ },
+ {
+  "id": "iwataya-honten",
+  "name": "岩田屋本店",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "百貨店",
+  "lat": 33.588276,
+  "lng": 130.397505,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "ベビー休憩室・授乳室は**本館地下2階(要確認)**。営業10:00〜20:00。TEL 092-721-1111。⚠子連れ設備の詳細はまだ現地で確認していない。大丸・博多阪急と並ぶ天神の催事会場",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.iwataya-mitsukoshi.mistore.jp/iwataya.html",
+  "category": "play"
+ },
+ {
+  "id": "hakozakigu",
+  "name": "筥崎宮",
+  "area": "箱崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "神社",
+  "lat": 33.614433,
+  "lng": 130.42295,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "日本三大八幡宮のひとつ。⭐**9月12〜18日の放生会は博多三大祭り**(どんたく・山笠と並ぶ)で、露店とお化け屋敷が並ぶ。隔年の9月12〜14日には神幸行事。境内6:00〜19:00 / 社務所8:30〜17:00。TEL 092-641-7431。駐車場あり。⚠放生会の期間は周辺が非常に混み、駐車場も埋まる。おむつ替え・授乳の設備は未確認",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://hakozakigu.or.jp/",
+  "category": "play"
+ },
+ {
+  "id": "dazaifu-tenmangu",
+  "name": "太宰府天満宮",
+  "area": "宰府",
+  "city": "太宰府市",
+  "pref": "福岡県",
+  "genre": "神社",
+  "lat": 33.520801,
+  "lng": 130.534875,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "学問の神様・菅原道真を祀る全国天満宮の総本宮。参道に梅ヶ枝餅の店が並ぶ。開門は春分〜秋分の前日6:00・それ以外6:30。閉門は4・5・9〜11月19:00 / 6〜8月19:30 / 12〜3月18:30。駐車場は約1,400台で**太宰府駐車センターの普通車は1回500円**(当日24時まで・再入場不可)。⭐**九州国立博物館と隣接**していて一緒に回れる。おむつ替え・授乳の設備は未確認",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.dazaifutenmangu.or.jp/",
+  "category": "play"
+ },
+ {
+  "id": "miyajidake-jinja",
+  "name": "宮地嶽神社",
+  "area": "宮司元町",
+  "city": "福津市",
+  "pref": "福岡県",
+  "genre": "神社",
+  "lat": 33.779976,
+  "lng": 130.485976,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "日本一の大注連縄で知られる。⭐**参道の先が海までまっすぐ抜ける「光の道」**が年2回(2月下旬・10月下旬)夕日と重なる。**駐車場は第一・第二で約700台が無料**なので子連れでも停めやすい。TEL 0940-52-0016。9月には秋季大祭。おむつ替え・授乳の設備は未確認",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://www.miyajidake.or.jp/",
+  "category": "play"
+ },
+ {
+  "id": "hakata-dentou-kougeikan",
+  "name": "はかた伝統工芸館",
+  "area": "博多駅前",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "博物館",
+  "lat": 33.593757,
+  "lng": 130.418201,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**入館無料**(体験教室等は有料)。博多織・博多人形などの展示と企画展をやっていて、**屋内なので雨の日の逃げ場になる**。10:00〜18:00(入館は17:30まで)。⚠**休館は毎週水曜**(祝日の場合は開館し翌平日が振替休日)と年末年始12/29〜1/3。TEL 092-409-5450。博多駅前1-23-2 Park Front博多駅前一丁目1階",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://hakata-dentou-kougeikan.jp/",
+  "category": "play"
+ },
+ {
+  "id": "michinoeki-harazuru",
+  "name": "道の駅原鶴 ファームステーションバサロ",
+  "area": "杷木",
+  "city": "朝倉市",
+  "pref": "福岡県",
+  "genre": "道の駅",
+  "lat": 33.354342,
+  "lng": 130.785503,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "朝倉の農産物直売所。8:30〜17:30(第4水曜は17:00まで)、休みは年末年始。⚠子連れ設備は未確認。原鶴温泉のすぐ近くなので温泉とあわせて寄れる",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "web": "https://fs-basaro.jp/"
  }
 ]

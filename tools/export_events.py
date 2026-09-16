@@ -85,7 +85,7 @@ def venue_coords(spots, vname, city):
     if ADMIN.match(vname.strip()) or (city and core(vname) == core(city)):
         return None
     cv = core(vname)
-    if len(cv) < 4:
+    if len(cv) < 2:
         return None
     best = None
     for s in spots:
@@ -94,12 +94,45 @@ def venue_coords(spots, vname, city):
         cs = core(s.get('name'))
         if not cs:
             continue
-        # 完全一致を優先、次に名前が短いもの(館内テナントを掴まないため)
+        # ⚠**完全一致に長さ制限をかけてはいけない**【2026-09-16に踏んだ】
+        #   `len(cv) < 4` で弾いていたため、**「筥崎宮」(3文字)を登録したのに突合できず**、
+        #   放生会の座標が空のままだった。完全一致なら3文字でも別施設ではない
         if cs == cv:
             return (s['lat'], s['lng'], s.get('name'), s['id'])
-        if (cv in cs or cs in cv) and len(cs) >= 4:
+        # 部分一致は誤爆しやすいので4文字以上を要求し、**短い名前(=館そのもの)**を優先する
+        if len(cv) >= 4 and (cv in cs or cs in cv) and len(cs) >= 4:
             if best is None or len(cs) < len(best[2] or ''):
                 best = (s['lat'], s['lng'], s.get('name'), s['id'])
+    return best
+
+
+# ★**タイトルに施設名が書いてあるものを拾う**【2026-09-16】
+#   会場欄が市区名しか無いのに、タイトルに会場が書いてあるものが多かった:
+#     「**BOSS E・ZO FUKUOKA**で「魔法の美術館」開催！」
+#     「パンダコパンダ展 **北九州市漫画ミュージアム**の巻」
+#     「初めてのDIY体験！ ＠**カインズ福岡新宮店**」「**宗像ユリックス**プラネタリウム」
+#   spots の名前がタイトルに含まれていれば会場と断言できる。
+#   ⚠**6文字以上(記号を除いた文字数)だけ**を対象にする。短い名前は別物に当たる
+TITLE_MIN = 6
+
+
+def title_venue(spots, title):
+    """タイトルに含まれる施設名で会場を決める。**最長一致**を採る
+    (館名とテナント名が両方入っている場合に館を選ぶため)"""
+    ct = core(title)
+    if len(ct) < TITLE_MIN:
+        return None
+    best = None
+    for s in spots:
+        if s.get('lat') is None or s.get('lng') is None:
+            continue
+        if s.get('until'):          # 期間限定イベントのスポットは会場ではない
+            continue
+        cs = core(s.get('name'))
+        if len(cs) < TITLE_MIN or cs not in ct:
+            continue
+        if best is None or len(cs) > len(core(best[2])):
+            best = (s['lat'], s['lng'], s.get('name'), s['id'])
     return best
 
 
@@ -305,7 +338,24 @@ def main():
                                'genre': v.get('genre') or '',
                                'tabelog': v.get('tabelog'), 'asoview': v.get('asoview'),
                                'booking': v.get('booking')}
-    vc = {}
+    def fix(r, g, sure):
+        """突合で見つかった施設を反映する。`sure=True` のものだけ「会場」として出す"""
+        r['lat'], r['lng'] = g[0], g[1]
+        r['venueMatch'] = g[3]
+        if not sure:
+            return
+        sp = by_id.get(g[3]) or {}
+        r['venueSpot'] = g[3]
+        r['venueName'] = g[2] or ''
+        if not r['venue'] or ADMIN.match((r['venue'] or '').strip()):
+            r['venue'] = g[2] or r['venue']     # 市区名しか無かった会場欄を施設名で埋める
+        if sp.get('tabelog') or sp.get('asoview') or sp.get('booking'):
+            r['venueLinks'] = {'id': g[3], 'name': g[2] or '',
+                               'genre': sp.get('genre') or '',
+                               'tabelog': sp.get('tabelog'), 'asoview': sp.get('asoview'),
+                               'booking': sp.get('booking')}
+
+    vc, tc = {}, {}
     for r in out:
         if r['lat'] is None:
             key = (r['venue'], r['city'])
@@ -313,25 +363,21 @@ def main():
                 vc[key] = venue_coords(spots, r['venue'], r['city'])
             g = vc[key]
             if g:
-                r['lat'], r['lng'] = g[0], g[1]
-                # ⚠部分一致は**名前の文字列突合による推測**。`venueSpot`(=`in` で人が確定させた
-                #   もの)とは別のキーに入れる。座標を借りて近隣スポットを引くためだけに使い、
-                #   画面に「会場」として出したり会場の収益リンクを出したりはしない
-                r['venueMatch'] = g[3]
-                # ★ただし**名前が完全一致するなら同じ施設**なので会場として扱ってよい
-                #   【2026-09-16】「筥崎宮」「はかた伝統工芸館」のように会場名がそのまま
-                #   spots にあるものは、`in` を1件ずつ手で付けるのと同じ結果になる。
+                # ⚠部分一致は**名前の文字列突合による推測**なので `venueMatch` に留める。
+                #   座標を借りて近隣スポットを引くためだけに使い、「会場」としては出さない。
+                # ★**名前が完全一致するなら同じ施設**なので会場として扱ってよい。
+                #   「筥崎宮」「はかた伝統工芸館」のように会場名がそのまま spots にあるものは、
+                #   `in` を1件ずつ手で付けるのと同じ結果になる。
                 #   ⚠部分一致は昇格させない(「久留米市」→久留米市美術館のような事故が起きる)
-                if core(g[2]) == core(r['venue']):
-                    sp = by_id.get(g[3]) or {}
-                    r['venueSpot'] = g[3]
-                    r['venueName'] = g[2] or ''
-                    if sp.get('tabelog') or sp.get('asoview') or sp.get('booking'):
-                        r['venueLinks'] = {'id': g[3], 'name': g[2] or '',
-                                           'genre': sp.get('genre') or '',
-                                           'tabelog': sp.get('tabelog'),
-                                           'asoview': sp.get('asoview'),
-                                           'booking': sp.get('booking')}
+                fix(r, g, core(g[2]) == core(r['venue']))
+        if r['lat'] is None:
+            # ★最後に**タイトルに書かれている施設名**で拾う。ここまで来たものは
+            #   会場欄が市区名しか無いか空なので、タイトルが唯一の手がかり
+            if r['title'] not in tc:
+                tc[r['title']] = title_venue(spots, r['title'])
+            g = tc[r['title']]
+            if g:
+                fix(r, g, True)
         r['near'] = near_spots(spots, r['lat'], r['lng']) if r['lat'] is not None else []
         # 会場そのものは「近くのお店」に重複して出さない(会場枠で先に出しているため)
         skip = {r.get('venueSpot'), r.get('venueMatch'), r.get('spot')} - {None}

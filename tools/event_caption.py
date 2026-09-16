@@ -31,6 +31,16 @@ CAND = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
 OVER = os.path.join(HERE, '..', 'data', '_イベント表示名.json')
 WK = '月火水木金土日'
 LIMIT = {'instagram': 2200, 'tiktok': 2200, 'youtube': 5000}
+MARGIN = 80          # 上限ぴったりを狙うと弾かれるので手前で止める
+
+
+def clen(s):
+    """⚠**SNSの文字数は UTF-16 のコードユニットで数える**【2026-09-16に投稿が弾かれた】
+      Python の len() はコードポイント数で、**絵文字(🔎📍📅🅿📌🗺)が1として数えられる**。
+      Instagram 側はサロゲートペアで2として数えるため、
+      len()=2190 で「OK」と出していたキャプションの実体は **2219** で上限超過だった。
+      絵文字は1件ごとに複数入るので、件数が増えるほどズレる"""
+    return len(s.encode('utf-16-le')) // 2
 
 
 def d(s):
@@ -145,18 +155,19 @@ def main():
         # **上限を超えたら件数を減らす**。末尾を切ると読者に不親切
         while True:
             s = build(use, plat, ov, today, frm, to, a.title)
-            if len(s) <= LIMIT[plat] or len(use) <= 6:
+            if clen(s) <= LIMIT[plat] - MARGIN or len(use) <= 6:
                 break
             use = use[:-1]
         p = os.path.join(a.dir, '_キャプション_%s.txt' % plat)
         io.open(p, 'w', encoding='utf-8').write(s)
-        print('%-10s %4d字 / 上限%d  %s  掲載%d件%s'
-              % (plat, len(s), LIMIT[plat], 'OK' if len(s) <= LIMIT[plat] else '超過!',
+        print('%-10s %4d字(UTF-16) / 上限%d  %s  掲載%d件%s'
+              % (plat, clen(s), LIMIT[plat], 'OK' if clen(s) <= LIMIT[plat] else '超過!',
                  len(use), '' if len(use) == len(evs) else ' (%d件は入らず省いた)' % (len(evs) - len(use))))
     # TikTokはInstagramと同文でよい
     ig = io.open(os.path.join(a.dir, '_キャプション_instagram.txt'), encoding='utf-8').read()
     io.open(os.path.join(a.dir, '_キャプション_tiktok.txt'), 'w', encoding='utf-8').write(ig)
-    print('%-10s %4d字 / 上限%d  OK  (Instagramと同文)' % ('tiktok', len(ig), LIMIT['tiktok']))
+    print('%-10s %4d字(UTF-16) / 上限%d  OK  (Instagramと同文)'
+          % ('tiktok', clen(ig), LIMIT['tiktok']))
 
 
 if __name__ == '__main__':

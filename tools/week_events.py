@@ -18,6 +18,10 @@
             子連れイベントを回している**(マリオ工作・こども専門学校は毎月/収穫体験/天体観測)。
             日付が `2026/10/13〜2026/10/13` で機械可読。館全体の /newsevent/ は
             セールと営業案内が大半なので**使わない**
+  aeonkyushu… イオン九州の店舗お知らせ                   【2026-09-17追加】
+            tenpo.aeon-kyushu.info の**総合スーパー10店舗**(マリナタウン/笹丘/野芥/原/
+            福岡伊都/大野城/乙金/小郡/福津/直方)。AEONモール6館とは**別系列**で、
+            ここが抜けていて「キッズボート」を取りこぼしていた
   manual… data/_手動イベント.json                      【2026-09-17追加】
             **公式サイトにイベント一覧が無い主催**(万代など)を現地チラシから手で書く。
             ファイルが無ければ0件で通る
@@ -556,7 +560,8 @@ def from_torius():
         rows.append({'src': 'トリアス久山', 'title': title, 'city': '糟屋郡久山町',
                      'venue': venue, 'url': url, 'span': (a, e), 'days_list': None,
                      'raw': '%s〜%s' % (a, e), 'free': '入場無料' in body,
-                     'lead': body[:300], 'poster': None})
+                     'lead': body[:300], 'memo': to_memo(body, (title, venue)),
+                     'poster': None})
     print('  トリアス久山 %d件' % len(rows), file=sys.stderr)
     return rows
 
@@ -573,6 +578,180 @@ def from_torius():
 #  **店頭のチラシと公式LINEでしか出ていない**。自動では拾えないので、
 #  この手のものは下の **data/_手動イベント.json** に書く。
 #  → 万代側にイベント一覧ページができたらここに from_mandai() を作る。
+
+
+# ─────────── イオン九州の店舗お知らせ(総合スーパー) ───────────
+#  【2026-09-17ユーザー確定】参考にしていたアカウントに載っていた
+#  「キッズボート」(イオンマリナタウン 9/20〜23)がうちに無く、原因を調べたら
+#  **イオン系の源がAEONモール6館だけで、イオン九州の総合スーパーが丸ごと抜けていた**。
+#  マリナタウンは西区でうちの主戦場なので足す。
+#
+#  ⚠**店舗一覧はどのページもJS描画**で、静的HTMLに /detail/<slug>/ が1つも出ない
+#    (県ページ・市ページとも実測して0件)。福岡県は155店舗・福岡市だけで70店舗あり、
+#    総当たりは週次収集には重すぎる。
+#    → イオン公式(aeon.com)の**総合スーパー一覧で店舗名を取り**、slug候補を
+#      **実際に開いて通ったものだけ**を下の表にした(2026-09-17に実測)。
+#      マックスバリュ等の小型店はイベントをやらないので対象外。
+#    ⚠香椎浜・ショッパーズ福岡・二日市・筑紫野はslugが当たらなかった。
+#      **香椎浜は kashiihama.aeon-kyushu.info をモール源で既に持っている**ので取りこぼしではない。
+#  ⚠一覧の `datePublished` は**掲載日で会期ではない**(キッズボートは掲載9/6・会期9/20〜23)。
+#    会期は**詳細ページの本文1行目**に「9/20（日）～23（水・祝）」の形で入っている。
+#  ⚠お知らせの大半はセール・チラシ・営業時間なので、**詳細を開く前にタイトルで除外**する
+#    (既存の DROP/DROP_HARD/SAVE をそのまま使う)。開くリクエストを無駄にしないため。
+AEK = 'https://tenpo.aeon-kyushu.info'
+AEK_SHOPS = [
+    ('marina-town', 'イオンマリナタウン店', '福岡市西区'),
+    ('sasaoka', 'イオンスタイル笹丘', '福岡市中央区'),
+    ('noke', 'イオン野芥店', '福岡市早良区'),
+    ('hara', 'イオン原店', '福岡市早良区'),
+    ('fukuokaito', 'イオン福岡伊都店', '福岡市西区'),
+    ('onojo', 'イオン大野城ショッピングセンター', '大野城市'),
+    ('otogana', 'イオン乙金ショッピングセンター', '大野城市'),
+    ('ogori', 'イオン小郡ショッピングセンター', '小郡市'),
+    ('fukutsu', 'イオン福津店', '福津市'),
+    ('nogata', 'イオン直方店', '直方市'),
+]
+# 一覧の JSON-LD: {"name":"【キッズボート】","datePublished":"2026-09-06","url":"..."}
+AEK_ITEM = re.compile(r'\{"name":"((?:[^"\\]|\\.)*)","datePublished":"(\d{4}-\d{2}-\d{2})",'
+                      r'"url":"([^"]+)"')
+AEK_FIELD = re.compile(r'(場所|会場|対象|料金|参加費|定員)[\s:：]*([^\n]{1,60})')
+# ★**スラッシュ書きの会期**を読む【2026-09-17に実測して判明】
+#   `jspan()` の日付パターンは `(\d{4}年)?M月D日` で、**「9/20（日）～23（水・祝）」の
+#   スラッシュ形式を範囲として解釈できない**。開始日だけ拾われ、
+#   **4日間のキッズボートが「9/20の1日だけ」になっていた**。
+#   終了側は月が省略されることが多い(「9/20〜23」)ので、省略時は開始月を使う。
+SLASH_SPAN = re.compile(r'(\d{1,2})/(\d{1,2})\s*(?:\([^)]{0,10}\))?\s*[〜~～\-–—]\s*'
+                        r'(?:(\d{1,2})/)?(\d{1,2})\s*(?:\([^)]{0,10}\))?')
+
+
+# ★memo 用に「説明文だけ」を取り出す【2026-09-17】
+#   ⚠lead をそのまま memo に使うと**タイトル・会場・日時・対象が丸ごと重複**する
+#     (カードでは別枠に出しているので二重になる)。lead は kids_score のための
+#     詰め込みテキストなので、**memo は別に作る**。
+MEMO_HEAD = re.compile(
+    r'^\s*(?:'
+    r'\d{1,2}\s*[/月]\s*\d{1,2}[^\n]{0,34}'          # 9/20（日）～23（水・祝）
+    r'|\d{1,2}\s*[：:]\s*\d{2}[^\n]{0,34}'           # 11：00～17：00
+    r'|[0-9０-９]+[FＦ階][^\n]{0,24}'                 # 2Fサンデッキ
+    r'|(?:場所|会場|対象|料金|参加費|定員|日時|時間|開催日|開催時間|申込|予約)[^\n]{0,60}'
+    # ★**【日時】【対象】【受付】…の行も落とす**【2026-09-17】
+    #   JR博多シティは本文が「【日時】10月3日(土) ①10:30 ②13:00」の形式で、
+    #   行頭が【なので上の素の語では当たらず、**memoに日時が重複していた**
+    r'|【\s*(?:日時|時間|日程|開催日|開催時間|場所|会場|対象|料金|参加費|費用|定員|'
+    r'受付|申込|申し込み|予約|持ち物|備考|注意|目安|'
+    # 協力団体・主催・問い合わせは memo に入れても「何の企画か」は分からない
+    r'協力|主催|共催|後援|協賛|問合わせ|問い合わせ|お問合わせ|お問い合わせ)\s*】[^\n]{0,80}'
+    r')\s*$', re.M)
+# 記号や繰り返し記号だけになった行(「～ ～」等)を捨てるための判定
+MEMO_MEAT = re.compile(r'[ぁ-んァ-ヶ一-龥]{3,}')
+# ★どのページにも出る定型句。memo に入れても何も分からないので落とす
+MEMO_BOILER = re.compile(r'あらかじめご了承|ご了承ください|予告なく|変更になる場合|'
+                         r'中止になる場合|こどもシティ|お知らせ一覧|詳しくは店頭|'
+                         r'プライバシーポリシー|画像はイメージ|一部店舗')
+
+
+def to_memo(body, drop=()):
+    """本文から**会期・時間・場所・対象の行を落とした説明文**を2〜3文にする。
+    `drop` にタイトルや施設名を渡すと、その重複も消す。中身が無ければ None"""
+    t = body or ''
+    for x in drop:
+        if x and len(x) >= 3:
+            t = t.replace(x, ' ')
+    t = MEMO_HEAD.sub(' ', t)
+    t = re.sub(r'※[^\n。]*', ' ', t)
+    t = re.sub(r'店舗からのお知らせ一覧はこちら[\s\S]*$', ' ', t)
+    out = []
+    for x in re.split(r'[。\n]', t):
+        s = n(x).strip('　 ・/|～~-—')
+        # ⚠**意味のある日本語が残っている行だけ**採る。タイトルを抜いた跡の
+        #   「～ ～」のような記号だけの行が残るため(2026-09-17に実測)
+        if (len(s) >= 8 and MEMO_MEAT.search(s) and not MEMO_BOILER.search(s)
+                and s not in out):
+            out.append(s)
+        if len(out) >= 3:
+            break
+    return out or None
+
+
+def slash_span(text, base):
+    """「9/20（日）～23（水・祝）」「10/9（金）～10/12（月・祝）」を (開始, 終了) にする。
+    読めなければ (None, None)。⚠年は書かれないので base から推定する(_mk と同じ考え方)"""
+    t = unicodedata.normalize('NFKC', text or '')
+    m = SLASH_SPAN.search(t)
+    if not m:
+        return (None, None)
+    m1, d1, m2, d2 = m.group(1), m.group(2), m.group(3) or m.group(1), m.group(4)
+    a = _mk(None, int(m1), int(d1), base)
+    e = _mk(None, int(m2), int(d2), base)
+    if not a or not e:
+        return (None, None)
+    if e < a:                       # 年をまたぐ(12/28〜1/3)
+        try:
+            e = e.replace(year=e.year + 1)
+        except ValueError:
+            return (a, a)
+    if (e - a).days > 120:          # ⚠拾い間違いの保険。4ヶ月超の会期は疑う
+        return (a, a)
+    return (a, e)
+
+
+def from_aeonkyushu():
+    rows = []
+    for slug, shop, city in AEK_SHOPS:
+        try:
+            h = M.fetch('%s/detail/%s/event-news/' % (AEK, slug))
+            time.sleep(M.WAIT)
+        except Exception as ex:
+            print('  ! イオン九州 %s %s' % (shop, type(ex).__name__), file=sys.stderr)
+            continue
+        items = []
+        for name, pub, url in AEK_ITEM.findall(h):
+            t = n(name).strip('【】 　')
+            if not t:
+                continue
+            s = re.sub(r'[\s　]+', '', t)
+            # ★**詳細を開く前に**タイトルで落とす(セール・チラシ・募集など)
+            if M.DROP_HARD.search(s) or (M.DROP.search(s) and not M.SAVE.search(s)):
+                continue
+            items.append((t, pub, url))
+        for title, pub, url in items:
+            try:
+                d = M.fetch(url)
+                time.sleep(M.WAIT)
+            except Exception as ex:
+                print('  ! イオン九州 個別 %s %s' % (url, type(ex).__name__), file=sys.stderr)
+                continue
+            p = _plain(d)
+            # 本文は「掲載日(2026.09.06)」の直後から始まる
+            k = p.find(pub.replace('-', '.'))
+            body = p[k + 10:k + 900].strip() if k >= 0 else p[-900:]
+            # ⚠会期は**本文の先頭**にある。掲載日を基準に年を推定する
+            base = _iso(pub) or date.today()
+            a, e, days = jspan(body[:120], base)
+            # ★スラッシュ書きの範囲を**先に**見る。jspan は「M/D〜D」を範囲にできず、
+            #   4日間のキッズボートが1日になっていた(2026-09-17に実測)
+            sa, se = slash_span(body[:120], base)
+            if sa and se and se > sa and (a in (False, 'ended') or e == a):
+                a, e, days = sa, se, None
+            if a in (False, 'ended'):
+                continue
+            f = dict((kk, n(vv)) for kk, vv in AEK_FIELD.findall(body))
+            place = f.get('場所') or f.get('会場') or ''
+            lead = ' '.join(x for x in [title, shop, place,
+                                        ('対象 ' + f['対象']) if f.get('対象') else '',
+                                        n(body[:180])] if x)
+            # ポスターは本文中の画像(og:image は会社共通の既定画像なので使わない)
+            mi = re.search(r'<img[^>]+src="(https://meocloud-image[^"]+\.(?:jpg|jpeg|png))"', d)
+            rows.append({'src': 'イオン九州 ' + shop, 'title': title,
+                         'city': city, 'venue': shop,
+                         'url': url, 'span': (a, e), 'days_list': days,
+                         'raw': n(body[:60]), 'free': bool(re.search(r'無料', body)),
+                         'lead': n(lead)[:300],
+                         # ★カードの memo 用。lead とは別に**説明文だけ**を持つ
+                         'memo': to_memo(body, (title, shop, place)),
+                         'poster': mi.group(1) if mi else None})
+    print('  イオン九州 %d件(%d店舗)' % (len(rows), len(AEK_SHOPS)), file=sys.stderr)
+    return rows
 
 
 # ─────────────────── 現地チラシなど手で足すイベント ───────────────────
@@ -608,7 +787,9 @@ def from_manual():
                      'city': m.get('city') or '', 'venue': m.get('venue') or '',
                      'url': m.get('url') or '', 'span': (a, e or a), 'days_list': None,
                      'raw': '%s〜%s' % (a, e or a), 'free': bool(m.get('free')),
-                     'lead': n(lead)[:300], 'poster': None})
+                     'lead': n(lead)[:300],
+                     'memo': [n(x) for x in (m.get('detail') or [])][:4] or None,
+                     'poster': None})
     print('  手動(チラシ) %d件' % len(rows), file=sys.stderr)
     return rows
 
@@ -712,7 +893,17 @@ def from_hakatacity():
             return ('', '', '')
         p = _plain(d)
         f = dict((k, n(v)) for k, v in HKC_FIELD.findall(p))
-        return (f.get('場所', ''), f.get('時間', ''), p)
+        # ⚠**記事本体だけに切り出す**【2026-09-17に踏んだ】
+        #   全文を本文として返していたので、memo にページ先頭のナビ
+        #   (「アクセス・駐車場」「LANGUAGE」等)が入っていた。
+        #   並びは 時間 → 場所 → **本文** なので、場所の値の次の行から始める。
+        #   末尾は関連カード(VIEW ALL / TOP …)なので、そこで打ち切る。
+        m = re.search(r'\n\s*場所\s*\n\s*[^\n]*\n', p)
+        body = p[m.end():] if m else p
+        # ⚠本文の後ろには**関連記事のカード**が並ぶ。その見出し(こどもCITY HAKATA)で
+        #   打ち切らないと、他のイベント名(「イチゴの苗植え体験」)が memo に混ざる
+        body = re.split(r'\n\s*(?:こどもCITY|VIEW ALL|TOP\s*\n)', body)[0]
+        return (f.get('場所', ''), f.get('時間', ''), body.strip()[:1600])
 
     for url, title, a, e, img in cards:
         if HKC_ROUNDUP.match(title):
@@ -727,7 +918,8 @@ def from_hakatacity():
                      'venue': _hkc_venue(place),
                      'url': url, 'span': (a, e), 'days_list': None,
                      'raw': '%s〜%s' % (a, e), 'free': '無料' in body,
-                     'lead': n(lead)[:300], 'poster': img})
+                     'lead': n(lead)[:300], 'memo': to_memo(body, (title, place)),
+                     'poster': img})
     # ── まとめ記事を割る。**個別カードに既にあるものは飛ばす** ──────────
     # ⚠main() の core() はローカル関数なのでここでは使えない。同じ正規化を持たせる
     def _core(x):
@@ -765,7 +957,10 @@ def from_hakatacity():
                          'venue': _hkc_venue(place),
                          'url': url, 'span': (sa, se or sa), 'days_list': None,
                          'raw': n(when)[:60], 'free': '無料' in (tgt or ''),
-                         'lead': n(lead)[:300], 'poster': None})
+                         'lead': n(lead)[:300],
+                         'memo': [x for x in [('対象 ' + n(tgt)) if tgt else '',
+                                              n(when)] if x] or None,
+                         'poster': None})
     print('  JR博多シティ %d件(個別%d + まとめ割り%d)'
           % (len(rows), len(cards) - len(roundups), len(rows) - (len(cards) - len(roundups))),
           file=sys.stderr)
@@ -1186,7 +1381,8 @@ def main():
     ap.add_argument('--to', dest='t')
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
-                                     'daimaru,hankyu,yokanavi,kurume,torius,hkc,manual')
+                                     'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
+                                     'manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1213,6 +1409,8 @@ def main():
                   # 【2026-09-17追加】JR博多シティ こどもCITY(屋上つばめの杜ひろば)。
                   # 月次で子連れイベントを回している、この源で一番濃いところ
                   ('hkc', from_hakatacity),
+                  # 【2026-09-17追加】イオン九州の総合スーパー10店舗(AEONモールとは別系列)
+                  ('aeonkyushu', from_aeonkyushu),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

@@ -22,6 +22,9 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6NTM5MjMsInB1ciI6ImJsb2JfaWQifX0=--812bc3a19bcf37498610dc7c06fde961f2ae6a34/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/KAZ_0182-1.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "博多三大祭りの一つ"
+   ],
    "verified": true,
    "spot": "ev-597275",
    "lat": 33.614433,
@@ -98,6 +101,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "日本テレビ「金曜ロードショー」とスタジオジブリの歩みをたどる全国巡回展。",
+    "事前予約制の日時指定で、会場でのチケット販売は行わない(公式オンライン/ローチケ/日テレゼロチケ)。",
+    "9:00〜17:00(入館16:00まで)、土曜と8月は18:00まで延長。"
+   ],
    "verified": true,
    "spot": "aso_kinro_ghibli_yamaguchi",
    "lat": 34.179534,
@@ -135,6 +143,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15659/responsive_images/5B4dwyTCXWZsmjMJWu3KapCInFvKUUbU0qf6NUPl__1705_903.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "見て触れて遊ぶ！大人気の超体験型イベントが2年ぶりに再登場"
+   ],
    "verified": true,
    "spot": "ev-15659",
    "lat": 33.594944,
@@ -199,6 +210,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17268/responsive_images/airVyRPh9uyqnpyY7jiFxIUV3iV6JU7RdYtj050W__1643_1073.png",
    "price": null,
    "time": null,
+   "memo": [
+    "不思議生物“こども”について知って学ぼう！"
+   ],
    "verified": true,
    "spot": "ev-17268",
    "lat": 33.534672,
@@ -260,6 +274,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1745878/normal.jpg?1787942010",
    "price": null,
    "time": null,
+   "memo": [
+    "側転中心の運動能力向上ワークショップ"
+   ],
    "verified": true,
    "spot": "ev-596239",
    "lat": 33.405074,
@@ -301,6 +318,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/028e5c69-a757-4146-bbd2-64f26cc925bd.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": true,
    "spot": "ev-2dcc05e8-b7e9-409d-bb7a-1d420d6ca028",
    "lat": 33.657017,
@@ -377,6 +395,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1752618/normal.jpg?1789011834",
    "price": null,
    "time": null,
+   "memo": [
+    "デジタル砂場の“おいも掘り大会”やボールプール限定ステージが登場！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -424,6 +445,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1752628/normal.jpg?1789012923",
    "price": null,
    "time": null,
+   "memo": [
+    "デジタル砂場の“おいも掘り大会”やボールプール限定ステージが登場！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -459,6 +483,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "日本アクセス主催の冷凍食品食べ放題イベントで九州初上陸。",
+    "冷凍食品約150種+アイス約50種の計約200種を、自分で電子レンジで温めて食べる。",
+    "料金は90分2,500円(税込)で、小学生は半額・小学生未満は無料(飲料は別料金)。"
+   ],
    "verified": true,
    "spot": "chinsuru_restaurant_fukuoka",
    "lat": 33.665799,
@@ -532,6 +561,10 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
    "price": null,
    "time": null,
+   "memo": [
+    "小学生から参加OK",
+    "リアル体験型の謎解きゲーム開催"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.589625,
@@ -607,6 +640,10 @@
    "poster": null,
    "price": "ポケカ教室は無料",
    "time": "10:00〜18:00 ※9/24・9/25と土日祝は19:00まで",
+   "memo": [
+    "ポケモンカードストアのオープン",
+    "無料のポケカ教室を毎日開催"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -684,6 +721,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1747476/normal.jpg?1788287608",
    "price": null,
    "time": null,
+   "memo": [
+    "親子で楽しめるこども向けのプラネタリウム"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -731,6 +771,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742696/normal.jpg?1787548324",
    "price": "参加費無料",
    "time": null,
+   "memo": [
+    "ランドセルの端材で自分だけのキーホルダーを作ろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.591875,
@@ -792,6 +835,9 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "世界に1つだけのお皿を作ろう♪"
+   ],
    "verified": true,
    "spot": "ev-596517",
    "lat": 33.829946,
@@ -851,6 +897,11 @@
    "poster": null,
    "price": "入場無料(クレーンゲームは1回100円)",
    "time": "10:00〜19:00 ※最終日は17:00まで",
+   "memo": [
+    "デデデ大王がお迎えする大型フォトスポット",
+    "クレーンゲーム(1回100円)・カプセルトイ",
+    "カービィの物語に触れられる企画"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -913,6 +964,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1745261/normal.JPG?1787885929",
    "price": null,
    "time": null,
+   "memo": [
+    "毎月メニューが変わる工作体験を開催！（参加無料）"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.53471,
@@ -984,6 +1038,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1644595/normal.jpg?1772602923",
    "price": null,
    "time": null,
+   "memo": [
+    "【 ～】さまざまな恐竜を捕まえて、自分だけのコレクション図鑑をつくろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.594944,
@@ -1060,6 +1117,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11994/responsive_images/oMlfLGUFxkxBSz3w7CV8cQjWKE9x8WJbgJtSWEMP__1605_1070.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "「たぬき寺」で涼を味わおう！篠栗で人気のフォトスポット"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.619615,
@@ -1096,6 +1156,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751124/normal.jpg?1789437017",
    "price": null,
    "time": null,
+   "memo": [
+    "色とりどりの毛糸とワークショップ"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -1142,6 +1205,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -1207,6 +1271,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ5NDYyLCJwdXIiOiJibG9iX2lkIn19--a59fe02a6dddd028846ae655a346404cb8ea63d7/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E8%81%B7%E3%81%AE%E4%BC%9A%E5%B1%95_%E3%82%A4%E3%83%B3%E3%82%B9%E3%82%BF%E7%94%A8.JPG",
    "price": null,
    "time": null,
+   "memo": [
+    "～福岡県知事指定特産民工芸品が大集合！～ 福岡県知事指定特産民工芸品である博多曲物・博多張子・マルティグラス・今宿人形・博多おきあげの職人たちが活躍する「博多伝統職の会」による作品を展示・販売します",
+    "今ではなかなか見る機会の少ない工芸品となり、当館ではより多くの方々に知っていただけるよう年2回、この「博多伝統職の会」による展示会を開催しています"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.593757,
@@ -1270,6 +1338,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/1336e3a7-a709-471b-a823-4f718f0b5506.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": true,
    "spot": "ev-a50d43bf-8107-4ba7-9606-434966d96b95",
    "lat": 33.480873,
@@ -1329,6 +1398,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1694135/normal.jpeg?1780372823",
    "price": null,
    "time": null,
+   "memo": [
+    "見て、ふれて、遊ぶ！体感型アート展「魔法の美術館」が再びE・ZOに登場！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.594944,
@@ -1399,6 +1471,9 @@
    "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/db1092cc.png",
    "price": null,
    "time": null,
+   "memo": [
+    "約50種類の昆虫たちと出会える！見て・触れて・学べる昆虫ワールド🪲🪲"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.590667,
@@ -1462,6 +1537,9 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "ライブ・ステージ"
+   ],
    "verified": true,
    "spot": "ev-194-publish-begin-26-09-09-publish-en",
    "lat": 33.589628,
@@ -1525,6 +1603,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "敬老の日 にがおえ展 トリアス周辺の保育園の園児さんがおじいちゃん おばあちゃんや家族との思い出を描いてくれました",
+    "トリアスモール西松屋前に展示しておりますので、ぜひ足をお運びください",
+    "[展示日程] 9月5日(土)～9月23日(水) [展示場所] 参加園：篠栗保育園・篠栗どろんこ保育園・まどか保育園 ・あかつき保育園・長者原げんき保育園 福岡県糟屋郡久山町大字山田1111 TOP ショップガイド 館内MAP・サービス トリアスってどんなとこ？ アウトレット 遊びマップ グルメマップ TORIUS to BIZ TORIUS INFORMATION イベント募集 スタッフ募集 アクセス 個人情報保護方針について お問い合わせ インフォメーション --> Copyright © TORIUS Manegement All Rights Reserved."
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.653015,
@@ -1593,6 +1676,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1716687/normal.jpg?1784119289",
    "price": null,
    "time": null,
+   "memo": [
+    "ゲーム制作を体験するワークショップ"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.59386,
@@ -1653,6 +1739,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742116/normal.jpg?1787337203",
    "price": null,
    "time": null,
+   "memo": [
+    "iPadを使って好きな絵を描こう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.786525,
@@ -1693,6 +1782,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1746768/normal.jpg?1788173521",
    "price": null,
    "time": null,
+   "memo": [
+    "【初めてのDIYにおすすめ】カインズのDIYワークショップ開催中！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.708858,
@@ -1769,6 +1861,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17274/responsive_images/W0UYCk6wWjhmH0xgXcPqORLgU0goTaLQpakfJqbT__1658_1173.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "あま～いりんごとぶどうの収穫体験♪"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.796091,
@@ -1801,6 +1896,9 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "月のクレーターと夏の星座をたのしもう"
+   ],
    "verified": true,
    "spot": "ev-591660",
    "lat": 33.318125,
@@ -1857,6 +1955,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751005/normal.jpg?1789107221",
    "price": null,
    "time": null,
+   "memo": [
+    "マルシェや人形供養、メモリアルフォト開催"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.517994,
@@ -1917,6 +2018,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3614679/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": true,
    "spot": "ev-3614679-html",
    "lat": 33.564976,
@@ -1985,6 +2087,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -2046,6 +2149,10 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/12392/responsive_images/Aofwojb6MP5uXueOsKiKFL6MDU1pJnpBVkdBgcgG__1606_1071.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "海の中道サンシャインプール",
+    "⚠2026年の営業は9月19日まで"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.661203,
@@ -2113,6 +2220,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17351/responsive_images/IqRTF0DlkdoES4PprU0E0plhkOM0HenkzJlPuuPZ__1761_1256.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "すごいぞ！立花宗茂・誾千代！戦国のドラマが九州にある"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.518258,
@@ -2175,6 +2285,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1749011/normal.jpg?1788460467",
    "price": null,
    "time": null,
+   "memo": [
+    "パパ＆ママのための子育て応援！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.595226,
@@ -2251,6 +2364,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1737343/normal.jpg?1786427275",
    "price": null,
    "time": null,
+   "memo": [
+    "語り継がれる愛とこころの物語"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.57741,
@@ -2316,6 +2432,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1711115/normal.jpg?1782538685",
    "price": null,
    "time": null,
+   "memo": [
+    "各スポットの「世界」をのぞいて、きみだけのポストカードを完成させよう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.534703,
@@ -2378,6 +2497,7 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1717010/normal.jpg?1783362902",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.590969,
@@ -2442,6 +2562,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751116/normal.jpg?1789435799",
    "price": null,
    "time": null,
+   "memo": [
+    "台湾の食と伝統文化を天神で体感"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.59014,
@@ -2513,6 +2636,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13699/responsive_images/4qhb99eJD51eFYoqDse8lu3gJtQyn96i2XxizVWQ__1720_898.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "職人の技が光る至福の料理"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -2560,6 +2686,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTMwMTc4LCJwdXIiOiJibG9iX2lkIn19--ffe4ca08ef239174446200b882066a047c5e783d/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BDp%EF%BF%BD%5B%EF%BF%BDX%EF%BF%BD@%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%EF%BF%BD%C8%82%EF%BF%BDmini2.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "福岡検定合格者を に鴻臚北館東門一般公開前特別見学ツアーを開催します！ なんと一般公開前に特別に内覧できます！ 福岡検定では、「小学生向け検定」の新設や「学生受験料無料」、福岡検定限定「博多はじき」の特典など、より多くの方々に受験していただけるよう取り組んでいます",
+    "今回、令和７年度福岡検定合格者限定の特別な合格特典をご用意しました！ 鴻臚北館東門一般公開前特別見学ツアー（概要） ・開催時..."
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -2607,6 +2737,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17300/responsive_images/hQJn2HtQDzIgoO7TCdYQSPd7MFqkoqb6szwuRhay__1561_1006.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "デザイナーとしての原点から、「iichiko design」の歩みを紹介"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.312065,
@@ -2668,6 +2801,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3613485/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -2739,6 +2873,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -2784,6 +2919,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -2861,6 +2997,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1737723/normal.jpg?1786588296",
    "price": null,
    "time": null,
+   "memo": [
+    "田主丸の果物めぐりでスタンプを集めよう"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.326358,
@@ -2904,6 +3043,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15678/responsive_images/TKNVPCYA6m2qmkHV48GnMveRy25t8lJhtY49X2wb__1208_730.png",
    "price": null,
    "time": null,
+   "memo": [
+    "地元の特産品で作った各店自慢のジェラートを食べ比べ！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -2946,6 +3088,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/332675af-0b0c-44b3-b8e7-359cc6df0a41.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -3019,6 +3162,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/79539ac2-af41-4827-8be8-83e5f8c93be0.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -3075,6 +3219,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/5038a45c.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3140,6 +3285,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/4964c6dc.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3205,6 +3351,7 @@
    "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/07/15/th-2.webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -3275,6 +3422,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1718350/normal.jpg?1783535714",
    "price": null,
    "time": null,
+   "memo": [
+    "北部九州に独特の経塚文化を紹介"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.439088,
@@ -3333,6 +3483,9 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "「パンダコパンダ」の世界を紹介する体験型展覧会！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.887542,
@@ -3376,6 +3529,57 @@
    "rank": 3
   },
   {
+   "id": "centnews1930334",
+   "title": "9/8(火)～ACEバッグフェア",
+   "venue": "イオンスタイル笹丘",
+   "city": "福岡市中央区",
+   "pref": "",
+   "start": "2026-09-08",
+   "end": "2026-10-04",
+   "untilLabel": "",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04"
+   ],
+   "n": 18,
+   "url": "https://tenpo.aeon-kyushu.info/detail/sasaoka/event-news/1930334/",
+   "poster": "https://meocloud-image.can-ly.com/images/4WI8WowQTiDsaW3eWlhkZRcNKXgpfNhGbcOrB0Pf.png",
+   "price": null,
+   "time": null,
+   "memo": [
+    "■期間：9月8日(火)~10月4日(日)",
+    "イオン直営売場 1階催事場",
+    "好評により今期も開催！"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 1,
+   "score": 2,
+   "src": "イオン九州 イオンスタイル笹丘",
+   "near": [],
+   "img": "centnews1930334.jpg",
+   "rank": 3
+  },
+  {
    "id": "cetevents596479",
    "title": "KYUSHU LOCAL EXPO(九州ローカルエキスポ)",
    "venue": "福岡市博多区",
@@ -3398,6 +3602,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1745422/normal.png?1789099045",
    "price": null,
    "time": null,
+   "memo": [
+    "九州の食と文化を集めた地域マルシェ"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -3437,6 +3644,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/1c26c715-20e0-4afc-a485-8e78297262e8.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -3502,6 +3710,7 @@
    "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/08/24/hdhfdhf_1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -3568,6 +3777,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1752202/normal.jpg?1788978786",
    "price": null,
    "time": null,
+   "memo": [
+    "九州の風土と食をつむぐ7日間"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -3602,6 +3814,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/a0427c4b.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3672,6 +3885,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16415/responsive_images/lNRgy9vvXxQJd03nFMrglGe7vlJYxlVhbLyKlJ1N__1727_944.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "福岡の名店が誇る肉料理と、選りすぐりのお酒で乾杯！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.589925,
@@ -3735,6 +3951,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/c14765aa.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3807,6 +4024,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/30500e17.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3872,6 +4090,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/4531d38b.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -3944,6 +4163,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/1e577b35.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -4009,6 +4229,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/70bec261.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -4074,6 +4295,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/d325e249.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -4152,6 +4374,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/067e92e3-e156-4930-be63-db28a3e7b941.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -4228,6 +4451,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/5654f7bb-3309-4fdf-a00e-b2fbe4adb6bb.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -4301,6 +4525,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/2355b399-d17e-418c-86b5-d043e2bd7b25.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -4374,6 +4599,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/e65d9846-b038-4c61-8ca4-560c8f81983d.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -4428,6 +4654,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/9c772175.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -4500,6 +4727,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/a1ceab2a.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -4578,6 +4806,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000188-20260824_111946-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -4656,6 +4885,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3638125/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -4726,6 +4956,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/3a408fbe-3b43-4431-9f20-1a935e0c342e.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -4804,6 +5035,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1737348/normal.jpg?1786428006",
    "price": null,
    "time": null,
+   "memo": [
+    "居 など探さなくていい すでにいるべき にいる 君という宇宙に"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.57741,
@@ -4869,6 +5103,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1749562/normal.jpg?1788512804",
    "price": null,
    "time": null,
+   "memo": [
+    "牛乳と混ぜてプルンと固まるゼリーが作れる"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.565448,
@@ -4933,6 +5170,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/0e9e19b7.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -5003,6 +5241,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1715377/normal.jpg?1783103640",
    "price": null,
    "time": null,
+   "memo": [
+    "水上から空へ突き抜ける「爽快感」"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.722857,
@@ -5050,6 +5291,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "ロゴスショップ 厳選５アイテムを特別価格でご案内 3peace 大好評の330円コーナーを に向けて大量追加！ 秋物アイテムも卸価格で大量入荷中！ サンレジャン オーダーカーテン10%OFF シューラルー 秋物 最大５０％OFF クロコダイルアウトレットストア 店内商品 2点お買上でレジにて更に10％OFF 4点以上お買上でレジにて更に20％OFF ＊一部対象外商品あります",
+    "ENEOS 9/11～9/13 エネオスカーリース商談会！ご成約でJCB商品券５万円分プレゼントと1年間ガソリン・軽油20円/L引き！",
+    "9/19～9/23 感謝祭 10ℓ以上給油でBOXティッシュ1箱プレゼント！燃料7円/L引き！ シュープラザ ブランドスニーカーがお買得価格に！ 在庫限りのセール開催中！ （一部対象外商品もございます"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.652409,
@@ -5100,6 +5346,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1754619/normal.JPG?1789366327",
    "price": null,
    "time": null,
+   "memo": [
+    "放生会最終日！-特別な で音と飲食を楽しむイベント-"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.614433,
@@ -5169,6 +5418,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -5219,6 +5469,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1725668/normal.jpg?1784338840",
    "price": null,
    "time": null,
+   "memo": [
+    "🌈【一貫した親子の関わりと声かけ】でふれあうベビーマッサージとフォト"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -5248,6 +5501,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000190-20260831_112128-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -5308,6 +5562,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMjc5LCJwdXIiOiJibG9iX2lkIn19--ca5234bfd66c07f0397d0adb678436ca28cdb90d/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E9%80%86%E6%97%A5_%E5%86%99%E7%9C%9F%E2%91%A0.jpeg",
    "price": null,
    "time": null,
+   "memo": [
+    "中洲のライブバー「RED HOUSE」で、音楽とダンス、朗読が融合した唯一無二の舞台が一夜限り開催されます",
+    "ジミ・ヘンドリックスの名曲からインスピレーションを得た本作は、「夜から始まり朝で終わる」という逆転した 軸で、愛と喪失というテーマを表現"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -5337,6 +5595,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1739462/normal.jpeg?1786869995",
    "price": null,
    "time": null,
+   "memo": [
+    "モーヴィわかまつでハイハイレースを楽しもう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.886944,
@@ -5376,6 +5637,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/8bfd217d-833a-4b31-aac8-e690c45605b9.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -5427,6 +5689,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/0186f1fd-fbf0-4e26-94d2-e471475fe0f7.PNG?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -5487,6 +5750,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/78c1291d-4c3d-4f53-ac0a-0fa46a933cee.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -5564,6 +5828,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15797/responsive_images/3uedQSRFRGztxy2pXgAvxdioZUOuvHZlUhG3mg62__800_587.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "趣向を凝らした多彩なイカグルメを味わい尽くそう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.577357,
@@ -5575,6 +5842,45 @@
    "venueVia": "address",
    "near": [],
    "img": "ckajpevent15797.jpg",
+   "rank": 3
+  },
+  {
+   "id": "centnews1930341",
+   "title": "スワニーbyフォンテーヌ「秋のウィッグご試着フェア」",
+   "venue": "イオン直方店",
+   "city": "直方市",
+   "pref": "",
+   "start": "2026-09-18",
+   "end": "2026-09-25",
+   "untilLabel": "",
+   "days": [
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25"
+   ],
+   "n": 8,
+   "url": "https://tenpo.aeon-kyushu.info/detail/nogata/event-news/1930341/",
+   "poster": "https://meocloud-image.can-ly.com/images/UhAY6J4TXXN44lYZKs9iI0W5pwpQjv66NyRRZRfj.png",
+   "price": null,
+   "time": null,
+   "memo": [
+    "期間：9月18日(金)～25日(金)"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 1,
+   "score": 6,
+   "src": "イオン九州 イオン直方店",
+   "near": [],
+   "img": "centnews1930341.jpg",
    "rank": 3
   },
   {
@@ -5599,6 +5905,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15703/responsive_images/JjHOJOz1TWkn3x2LpmiQlnBn4AaMOzTR6Phbj7Zf__1610_982.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "全国のクラフトビールを飲み比べ！人気グルメの総選挙も"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.590953,
@@ -5641,6 +5950,43 @@
    "rank": 2
   },
   {
+   "id": "centnews1935725",
+   "title": "CHANGE for GOOD Togther.",
+   "venue": "イオンスタイル笹丘",
+   "city": "福岡市中央区",
+   "pref": "",
+   "start": "2026-09-18",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "n": 6,
+   "url": "https://tenpo.aeon-kyushu.info/detail/sasaoka/event-news/1935725/",
+   "poster": "https://meocloud-image.can-ly.com/images/1Qg9wu3HYRutQ9lxqIjIvl897Ia8I8WYg0adpfRR.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "感謝を込めて、よりすぐりのお買い得品をご用意しました！"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 0,
+   "score": 8,
+   "src": "イオン九州 イオンスタイル笹丘",
+   "near": [],
+   "img": "centnews1935725.jpg",
+   "rank": 2
+  },
+  {
    "id": "c23d9a933d99cb4",
    "title": "「ご当地めんべい」プレゼント！",
    "venue": "イオンモール大牟田",
@@ -5659,6 +6005,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/df28accf-aec5-46cc-9b0e-202b9218c301.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -5728,6 +6075,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3623008/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -5797,6 +6145,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/a7abedbd-19a6-4200-915e-dcca227fb5f1.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -5841,6 +6190,45 @@
    "rank": 2
   },
   {
+   "id": "centnews1930367",
+   "title": "＜予告＞ 9/18(金)",
+   "venue": "イオンスタイル笹丘",
+   "city": "大野城市",
+   "pref": "",
+   "start": "2026-09-18",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "n": 6,
+   "url": "https://tenpo.aeon-kyushu.info/detail/otogana/event-news/1930367/",
+   "poster": "https://meocloud-image.can-ly.com/images/DPKVIeCte1kRFmtticC3FncXRAgpXvrm9wkJxw21.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "＼今月はスペシャル♪ 専門店ガッチ ャクーポン♪／",
+    "【iAEONアプリ限定企画！！】",
+    "期間中、iAEONアプリで毎日ガッチャを回して専門店でご利用できる"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 0,
+   "score": 15,
+   "src": "イオン九州 イオン乙金ショッピングセンター",
+   "near": [],
+   "img": "centnews1930367.jpg",
+   "rank": 2
+  },
+  {
    "id": "cent3607741html",
    "title": "シルバーウィークナイトシネマ in ららぽーと福岡",
    "venue": "ららぽーと福岡",
@@ -5860,6 +6248,10 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3607741/image1.jpg",
    "price": "入場無料(1,000名)",
    "time": "上映開始 18:30",
+   "memo": [
+    "夜空の下で楽しむ野外シアター",
+    "映画のお供にモール棟4階 TOHOシネマズのポップコーンやドリンクも"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -5929,6 +6321,12 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/e66e733a-e377-4ca7-b34a-f72de0220e77.jpg?quality=50&format=webp",
    "price": "入場料 大人300円／子供600円(0歳無料)",
    "time": "10:00〜18:00",
+   "memo": [
+    "10日間開催のプレミアムイベント(9/19〜28)",
+    "最終日9/28は15:00まで",
+    "乗り物は別途 大人100円／子供200円",
+    "ミニ新幹線に乗ろう!!(乗って遊べる)"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -5993,6 +6391,10 @@
    "poster": null,
    "price": "300円で1回(対象クレーンゲームに300円投入でもらえる参加券の提示 or 300円の支払い)",
    "time": "11:00〜 ※当日準備分の景品が無くなり次第終了",
+   "memo": [
+    "シルバーウィークは5日連続でお祭り(9/19土〜9/23水祝)",
+    "縁日イベントの種類は店舗ごとに異なる"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.651806,
@@ -6044,6 +6446,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13145/responsive_images/0wzhsIAMp8IQfL59B5fsnx4eDmt0t9YQKgSUJEpy__1735_888.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "Walk Together‼ Kitakyushu Pride‼ ～みんながキタキューアンバサダー～"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -6073,6 +6478,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734268/normal.jpg?1785868386",
    "price": null,
    "time": null,
+   "memo": [
+    "月のクレーターと夏の星座をたのしもう"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.318125,
@@ -6117,6 +6525,40 @@
    "rank": 22
   },
   {
+   "id": "centnews1904244",
+   "title": "9月19日㈯】九州サーカス団 出演：ヤヤ＆ハルニケ ✨観覧無料✨",
+   "venue": "イオン小郡ショッピングセンター",
+   "city": "小郡市",
+   "pref": "",
+   "start": "2026-09-19",
+   "end": "2026-09-19",
+   "untilLabel": "",
+   "days": [
+    "2026-09-19"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1904244/",
+   "poster": "https://meocloud-image.can-ly.com/images/acERuJ8hzg02HPy3tcwsV89pziEMcHvfaDQ0ZGql.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "日程：9/19（土）",
+    "内容：九州サーカス団「出演：ヤヤ＆ハルニケ」",
+    "ジャグリングや身体芸術を主に、ファミリー層に楽しんでいただける演目を披露します"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 15,
+   "score": 27,
+   "src": "イオン九州 イオン小郡ショッピングセンター",
+   "near": [],
+   "img": "centnews1904244.jpg",
+   "rank": 21
+  },
+  {
    "id": "ccb987a8829ed43",
    "title": "あそびぱ～く",
    "venue": "イオンモール福津",
@@ -6137,6 +6579,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/b4f10297-32d3-4e86-bef6-88134df73251.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -6188,6 +6631,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ3ODI1LCJwdXIiOiJibG9iX2lkIn19--03452bbe947828ca8093cb550ab69aefebd53e23/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/ISLA%20Flyer%20A4%20Frente.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "今年も能古島に世界の鼓動が鳴り響く！観るだけじゃない、混ざり合うほど楽しいワールドビート祭り！ 福岡の夏といえば「イスラ・デ・サルサ（サルサの島）」！「サルサ」と言っても、あのダンスや音楽の「サルサ」じゃない！“いろんな材料が混ざり合ってできるソース＝サルサ”が名前の由来",
+    "このフェスは、まさにその“混ざり合い”から生まれる出会いや刺激を楽しむ、異文化交流フェスティバルなんです"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -6218,6 +6665,7 @@
    "poster": "https://welcome-kurume.com/files/Events/440006eb-fbee-42e7-85b5-d723aadf234b/image/356049544f28b84de352e2f001272ae2.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.313569,
@@ -6292,6 +6740,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ5NDgyLCJwdXIiOiJibG9iX2lkIn19--bbc61e0042728c4100dd37230d77fb222247eaba/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/b352a6501ef20671845d5ad6ea74fc42.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "かつて、福岡・天神のシンボルである百貨店の屋上には遊園地がありました",
+    "屋上で遊び、大食堂で昼食をとる――"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -6321,6 +6773,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/73a50d2c-9e6c-4030-a438-483a81c15cef.jpeg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -6363,6 +6816,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1732537/normal.jpg?1785555171",
    "price": null,
    "time": null,
+   "memo": [
+    "両面コースターを作ろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.8908,
@@ -6421,6 +6877,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -6484,6 +6941,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000200-20260904_153228-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -6552,6 +7010,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000193-20260914_091625-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -6612,6 +7071,11 @@
    "poster": null,
    "price": "参加無料",
    "time": "11:00 / 13:30 / 16:00",
+   "memo": [
+    "11:00〜 ステージ",
+    "13:30〜 ハイタッチ会",
+    "16:00〜 ステージ"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -6669,6 +7133,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11326/responsive_images/kMUqKRqd6iYUNR66xCOfEEHP9EBQvcDiNsXekwLu__1652_1239.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "久留米絣づくしの2日間！お気に入りの絣を見つけよう"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.258204,
@@ -6715,6 +7182,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ4ODg0LCJwdXIiOiJibG9iX2lkIn19--b21d038f7a0c927dadc23bef7d64182aca28ce4e/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E7%9F%B3%E5%B7%9D%E8%B3%A2%E6%B2%BB%E5%B1%95HP%E3%83%90%E3%83%8A%E3%83%BC.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "1年に12回しかない満月の下で撮り続ける月光写真家・石川賢治",
+    "30年間の世界４大陸に渡る満月の旅を経て、2016年福岡・糸島半島に移り住みました"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.57741,
@@ -6775,6 +7246,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -6825,6 +7297,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1744398/normal.png?1787769307",
    "price": null,
    "time": null,
+   "memo": [
+    "人と人をつなぐ楽しいマーケット"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -6858,6 +7333,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/a79b7e82-dc89-4fd3-9b92-f40a4dd25107.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -6900,6 +7376,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/88d7e9fb-3a13-45f1-8262-625d1496d1b8.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -6960,6 +7437,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/5a8a8fbd-11ca-4753-b35f-f7f334dfdd8d.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -7011,6 +7489,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1733748/normal.jpg?1785782092",
    "price": null,
    "time": null,
+   "memo": [
+    "客席もみんなで育てる“コココ”の舞台"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.596507,
@@ -7069,6 +7550,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/b872461a-1c35-455c-9834-3a63d45ec6b7.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -7121,6 +7603,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/5fbf25a3-1f54-4c1f-9331-22601978d586.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -7172,6 +7655,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755457/normal.jpg?1789532089",
    "price": null,
    "time": null,
+   "memo": [
+    "柿谷曜一朗のミニトーク＆場内一周"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.58604,
@@ -7230,6 +7716,7 @@
    "poster": "https://welcome-kurume.com/files/Events/98e9eff3-5935-4f07-bf77-78c103ec9b93/image/0176496d890574e59b550e9052e54719.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.313569,
@@ -7288,6 +7775,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/6723c0a5-3dfb-4d8b-a969-6df91a72d681.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -7352,6 +7840,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/d19a5591-c999-4572-a60b-7734335e7dc4.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -7405,6 +7894,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15695/responsive_images/mYFQn7YgGPXPHq2kR722tMx5NGWkSzBg8dK7M9Cz__1631_963.png",
    "price": null,
    "time": null,
+   "memo": [
+    "世界のカブトムシ、クワガタが大集合"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.218504,
@@ -7435,6 +7927,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1745677/normal.jpg?1787905424",
    "price": null,
    "time": null,
+   "memo": [
+    "世界に1つだけのお皿を作ろう♪"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.829946,
@@ -7496,6 +7991,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13342/responsive_images/NDuYVpO6xmA0qJLt70gb1Rx4gLaUXUixswQtZj3g__1597_1065.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "江戸時代半ばから280年続く、からくり人形芝居"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.209089,
@@ -7520,6 +8018,77 @@
    "rank": 18
   },
   {
+   "id": "centnews1924631",
+   "title": "キッズボート",
+   "venue": "イオンマリナタウン店",
+   "city": "福岡市西区",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "n": 4,
+   "url": "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1924631/",
+   "poster": "https://meocloud-image.can-ly.com/images/KvVPzdcPSPcTajtMjzvScKzjoZeavyusyRv2XKXz.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "3～9歳まで(体重40㎏)",
+    "自分で漕ぐから面白い！",
+    "子どもたちが自分で漕いで進みます"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 15,
+   "score": 23,
+   "src": "イオン九州 イオンマリナタウン店",
+   "near": [],
+   "img": "centnews1924631.jpg",
+   "rank": 17
+  },
+  {
+   "id": "centnews1758621",
+   "title": "9月20日㈰】おうち起業応援講座PRESENTS【ステップアップマルシェ",
+   "venue": "イオン小郡ショッピングセンター",
+   "city": "小郡市",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1758621/",
+   "poster": "https://meocloud-image.can-ly.com/images/2UsZ2KeOp7Lp87FYwNStkm7HU5FJ5Nvi7538S2YI.jpeg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "【日時】9月20日㈰ 10:00～17:00",
+    "【イベント内容】おうち起業応援講座の卒業生が出店するマルシェ！",
+    "ハンドメイド雑貨やワークショップを楽しんでくださいね♪"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 10,
+   "score": 20,
+   "src": "イオン九州 イオン小郡ショッピングセンター",
+   "near": [],
+   "img": "centnews1758621.jpg",
+   "rank": 16
+  },
+  {
    "id": "car260920260920",
    "title": "FM FUKUOKAステージ zoo zoo sea ＜トーク&ミニライブ＞",
    "venue": "キャナルシティ博多",
@@ -7536,6 +8105,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000194-20260904_144812-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -7580,6 +8150,101 @@
    "rank": 15
   },
   {
+   "id": "centnews1904243",
+   "title": "9月20日㈰】琉球國祭り太鼓",
+   "venue": "イオン小郡ショッピングセンター",
+   "city": "小郡市",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1904243/",
+   "poster": "https://meocloud-image.can-ly.com/images/iSGRlvXIUBPuwnwWAMwpddZ39lwa23SJDkN633US.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "日程：9/20（日）",
+    "内容：琉球國祭り太鼓",
+    "沖縄が世界に誇る伝統芸能『エイサー』に、ポップスや現代の音楽を融合させた独自の『創作エイサー』を披露します"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 8,
+   "score": 20,
+   "src": "イオン九州 イオン小郡ショッピングセンター",
+   "near": [],
+   "img": "centnews1904243.jpg",
+   "rank": 14
+  },
+  {
+   "id": "cetevents591589",
+   "title": "BABY SHARK LIVE!",
+   "venue": "久留米シティプラザ",
+   "city": "久留米市",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20"
+   ],
+   "n": 1,
+   "url": "https://iko-yo.net/events/591589",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734936/normal.png?1785978154",
+   "price": null,
+   "time": null,
+   "memo": [
+    "子どもが大好きなベイビーシャークの世界観を最大限再現した舞台が日本上陸！"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": 33.313973,
+   "lng": 130.51343,
+   "kids": true,
+   "ks": 6,
+   "score": 16,
+   "src": "いこーよ",
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp8522040c51",
+     "name": "スシロー 久留米通町店",
+     "genre": "回転寿司",
+     "km": 0.53,
+     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "fukuokakenseishounenkagakuka",
+     "name": "福岡県青少年科学館",
+     "genre": "科学館",
+     "km": 1.46,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/120044/",
+     "booking": null
+    },
+    {
+     "id": "yunosakakurumeonsen",
+     "name": "湯の坂久留米温泉",
+     "genre": "日帰り温泉/宿泊施設",
+     "km": 1.62,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad350734/"
+    }
+   ],
+   "img": "cetevents591589.jpg",
+   "rank": 12
+  },
+  {
    "id": "ckajpevent16352",
    "title": "原鶴湯ったりよかぜ祭り",
    "venue": "",
@@ -7611,6 +8276,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16352/responsive_images/FmJbBuCJiZKEinZrRvkcbEJ4fXwmIlgvWzySHJaA__502_373.png",
    "price": null,
    "time": null,
+   "memo": [
+    "夜が灯り、朝が香る原鶴の夏"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -7642,6 +8310,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ5ODIzLCJwdXIiOiJibG9iX2lkIn19--69b3ca50b74f1f36d989fc45e3bec6e1f2e0bbb4/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/1.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "舞鶴公園を「からあげ」がジャック！からあげだらけの３日間！ 九州の有名からあげ処約20店舗が集結する、グルメとエンタメの屋外イベント！ 2026年 の3日間、舞鶴公園・三の丸広場にて「第3回からあげハシゴ横丁」が開催されます",
+    "からあげハシゴ横丁は、九州の有名からあげ処が集結するグルメとエンタメの屋外イベント"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.586234,
@@ -7700,6 +8372,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/2a0df221-7c42-4d72-8315-c2a775c92c54.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -7752,6 +8425,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3607745/image1_1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -7812,6 +8486,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16550/responsive_images/kdXTnCoiOmTxGNORTxIlFc2OcKfGKaZMltr7xWqc__1761_1171.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "棚田を染める彼岸花の彩り"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -7822,6 +8499,40 @@
    "src": "県公式",
    "near": [],
    "img": "ckajpevent16550.jpg",
+   "rank": 6
+  },
+  {
+   "id": "centnews1904199",
+   "title": "パーソナルカラー診断",
+   "venue": "イオン乙金ショッピングセンター",
+   "city": "大野城市",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-20",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/otogana/event-news/1904199/",
+   "poster": "https://meocloud-image.can-ly.com/images/64RPvrt5WP4MWhGsNftsUl1R7DcJWOnm3tQN9Z6t.png",
+   "price": null,
+   "time": null,
+   "memo": [
+    "■日時：9月20日（日）",
+    "①11：00～11：50 ②12：00～13：00 ③14：00～14：50",
+    "④15：00～15：40 ⑤16：00～16：40 ⑥17：00～18：00"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 0,
+   "score": 12,
+   "src": "イオン九州 イオン乙金ショッピングセンター",
+   "near": [],
+   "img": "centnews1904199.jpg",
    "rank": 6
   },
   {
@@ -7841,6 +8552,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17342/responsive_images/OIF4ie98BliTYcwrm6yHOexMmJQJPIzkGS2tNs0F__660_440.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.618195,
@@ -7871,6 +8583,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/2c05b6de-ae81-452b-ab38-4cc51c407bf4.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -7897,6 +8610,43 @@
    "rank": 6
   },
   {
+   "id": "centnews1931323",
+   "title": "ミラーメイズ（鏡の迷路）鏡の国のアリス",
+   "venue": "イオンマリナタウン店",
+   "city": "福岡市西区",
+   "pref": "",
+   "start": "2026-09-20",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "n": 4,
+   "url": "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1931323/",
+   "poster": "https://meocloud-image.can-ly.com/images/zudHLgCdepWsSCFacAr5qLkJTIskVMMViOptI5Gl.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "鏡の反射でどこまでも続く道と映し出される何人もの自分",
+    "不思議な鏡の迷路の先には宝の部屋が…",
+    "入場前に実際に持ち上げて覚えた宝と同じ重さの宝を見事探し当てたら景品ゲット！"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 0,
+   "score": 8,
+   "src": "イオン九州 イオンマリナタウン店",
+   "near": [],
+   "img": "centnews1931323.jpg",
+   "rank": 2
+  },
+  {
    "id": "ckajpevent13346",
    "title": "棚田 inうきは 彼岸花めぐり",
    "venue": "",
@@ -7915,6 +8665,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13346/responsive_images/4UkYs9S2kRrSg6P5Mg7dpgztxVPqS8QIBo5UASE3__1378_922.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -7944,6 +8695,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13359/responsive_images/TBaK9SU1z0W9KZcC1OVFr00HlIGSteVLzIINc3vx__1721_1147.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "平安時代にタイムスリップしたかのような華やかな一大行列は必見"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.779976,
@@ -7958,6 +8712,40 @@
    "near": [],
    "img": "ckajpevent13359.jpg",
    "rank": 22
+  },
+  {
+   "id": "centnews1923990",
+   "title": "9/21㊊PerformerJACK バルーングリーティング",
+   "venue": "イオンスタイル笹丘",
+   "city": "福岡市中央区",
+   "pref": "",
+   "start": "2026-09-21",
+   "end": "2026-09-21",
+   "untilLabel": "",
+   "days": [
+    "2026-09-21"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/sasaoka/event-news/1923990/",
+   "poster": "https://meocloud-image.can-ly.com/images/J2ULoIyNYCoWyX8h993N9CTrNx0C21DgFALovKln.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "愉快な音楽と不思議な効果音に乗せてバルーンアートをプレゼント！",
+    "JACKがどこに現れるかはお楽しみ！",
+    "グリーティングの時間に店内を探してみてね♪"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 13,
+   "score": 23,
+   "src": "イオン九州 イオンスタイル笹丘",
+   "near": [],
+   "img": "centnews1923990.jpg",
+   "rank": 19
   },
   {
    "id": "ckajpevent13548",
@@ -7979,6 +8767,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13548/responsive_images/Wm6YYWtVLVuJcthG1iIHUd5GzWjZUyUvJtncX1iP__1539_1030.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.520801,
@@ -8030,6 +8819,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/23b5258c-f4a9-4acc-881d-e367706da846.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -8090,6 +8880,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/8ee793f3-a825-41f2-95b0-8248f36f4366.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -8125,6 +8916,40 @@
    "rank": 15
   },
   {
+   "id": "centnews1909751",
+   "title": "アクティブ・キッズ・ラボ",
+   "venue": "イオン乙金ショッピングセンター",
+   "city": "大野城市",
+   "pref": "",
+   "start": "2026-09-21",
+   "end": "2026-09-21",
+   "untilLabel": "",
+   "days": [
+    "2026-09-21"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/otogana/event-news/1909751/",
+   "poster": "https://meocloud-image.can-ly.com/images/l0N6Ou7VooEnY9p9N58Mu4Piy92rzrkwO14wcfLH.png",
+   "price": null,
+   "time": null,
+   "memo": [
+    "2026年9月21日（月・祝）",
+    "南街区 イベント広場",
+    "①11:00～12:00"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 6,
+   "score": 16,
+   "src": "イオン九州 イオン乙金ショッピングセンター",
+   "near": [],
+   "img": "centnews1909751.jpg",
+   "rank": 12
+  },
+  {
    "id": "c4b4a33102b28d3",
    "title": "わくわくトレインツアー",
    "venue": "イオンモール香椎浜",
@@ -8142,6 +8967,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/3ea1b6fa-9e4c-48ae-9a1d-186d5acaa310.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -8203,6 +9029,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14611/responsive_images/WHl75zSbJvK5CYcoLIt2gK9tXXl7q00AAZVczXgX__1633_1089.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "灯る、つながる、八女"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.210094,
@@ -8243,6 +9072,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13838/responsive_images/KEHqHSZTSuAPFVZHvUB7Yeax3k7nZ0M8YWIpw6M5__1547_1031.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "五穀豊穣・除災招福・家内安全を祈る神事"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.614433,
@@ -8303,6 +9135,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -8346,6 +9179,67 @@
    "rank": 9
   },
   {
+   "id": "cent3616308html",
+   "title": "祝！パ・リーグ3連覇！「福岡ソフトバンクホークス優勝おめでとうセール」開催♪",
+   "venue": "ららぽーと福岡",
+   "city": "福岡市博多区",
+   "pref": "",
+   "start": "2026-09-21",
+   "end": "2026-09-21",
+   "untilLabel": "",
+   "days": [
+    "2026-09-21"
+   ],
+   "n": 1,
+   "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3616308.html",
+   "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3616308/image1.jpg",
+   "price": null,
+   "time": null,
+   "memo": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.564976,
+   "lng": 130.43869,
+   "kids": false,
+   "ks": 0,
+   "score": 10,
+   "src": "ららぽーと福岡",
+   "venueMatch": "lalaportfukuoka",
+   "venueSpot": "lalaportfukuoka",
+   "venueName": "ららぽーと福岡",
+   "near": [
+    {
+     "id": "vsparklalaportfukuoka",
+     "name": "VS PARK WITH G ららぽーと福岡店",
+     "genre": "室内遊び場",
+     "km": 0.0,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/159466/",
+     "booking": null
+    },
+    {
+     "id": "jindinrou",
+     "name": "恵比寿 京鼎樓 ららぽーと福岡店",
+     "genre": "台湾料理(小籠包)",
+     "km": 0.0,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400202/40060477/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "kizzaniafukuoka",
+     "name": "キッザニア福岡",
+     "genre": "室内遊び場(職業体験)",
+     "km": 0.07,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/160197/",
+     "booking": null
+    }
+   ],
+   "img": "cent3616308html.jpg",
+   "rank": 6
+  },
+  {
    "id": "c45f7655db7f977",
    "title": "アウトレットセール",
    "venue": "イオンモール福岡",
@@ -8365,6 +9259,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/47e0074d-3ea5-4b5f-bb3e-fc673007c5fc.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -8425,6 +9320,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/2ce53e3c-4273-457b-94cd-bd996bdbbf90.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -8476,6 +9372,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14157/responsive_images/K07X2J0c7rmTEB1khG83YF5mq8uR7VnXdSNMECHC__1729_1389.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "人々の願いを託した大輪の花火が夜空を彩ります"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.779664,
@@ -8506,6 +9405,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/bc65b77a-a35e-4398-b86f-6f1c662ac113.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -8557,6 +9457,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000204-20260910_103501-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -8617,6 +9518,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/ac682649-c437-4a66-9f39-658228991438.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -8677,6 +9579,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/9dfe951e-f172-4e15-9985-73026499bca4.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -8737,6 +9640,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3638324/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -8798,6 +9702,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3597845/image1.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -8859,6 +9764,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/6c9d279d-a564-4b07-bd26-b6b4e83a9efe.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -8910,6 +9816,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/a43c8fc3-7788-4b4d-80c6-171bc1b3396e.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -8961,6 +9868,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/53d9a989-6000-436c-8dc5-be683ff0ecaf.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -9021,6 +9929,7 @@
    "poster": "https://welcome-kurume.com/files/Events/2a10696d-a63e-41c8-88f6-cfb1addfd6b4/image/0e5f59ae1de5ae7a2b1990723f186885.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.313973,
@@ -9079,6 +9988,7 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -9129,6 +10039,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1732525/normal.JPG?1785553677",
    "price": null,
    "time": null,
+   "memo": [
+    "お月見リースを作ろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.8908,
@@ -9187,6 +10100,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/7c91ff04-5769-4cf6-946d-93463b79cbe4.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -9231,6 +10145,39 @@
    "rank": 15
   },
   {
+   "id": "centnews1904241",
+   "title": "9月23日（水・祝）】おんぷらんと こびとのサーカス",
+   "venue": "イオン小郡ショッピングセンター",
+   "city": "小郡市",
+   "pref": "",
+   "start": "2026-09-23",
+   "end": "2026-09-23",
+   "untilLabel": "",
+   "days": [
+    "2026-09-23"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1904241/",
+   "poster": "https://meocloud-image.can-ly.com/images/AmbRW5GJWYxTLt86vhSFXo0iKbDlm5RWLvwcEbvA.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "こびとたちの夢とワクワクが詰まった、ファンタジーサーカスがやってくる！！",
+    "■日時：2026年9月23日（水祝）①11:00開演②15:00開演"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": false,
+   "ks": 4,
+   "score": 16,
+   "src": "イオン九州 イオン小郡ショッピングセンター",
+   "near": [],
+   "img": "centnews1904241.jpg",
+   "rank": 10
+  },
+  {
    "id": "c46ampscd000601",
    "title": "551HORAI＆赤福水ようかんがやってくる！全国の人気グルメが勢ぞろい！注目の九州初登場ブランドも！",
    "venue": "大丸福岡天神店",
@@ -9252,6 +10199,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/1ce7d04f.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9312,6 +10260,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/acaa90ff-9385-4162-bde6-442cf7dc0666.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -9372,6 +10321,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/84c1eae4-eb77-403a-8115-f8de42e83e10.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -9432,6 +10382,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/c83da9d2-bd43-4f77-b08f-deedc50bba24.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -9498,6 +10449,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/70ff51b1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9570,6 +10522,7 @@
    "poster": "https://website.hankyu-dept.co.jp/hakata/h/2025/shopnews_img/tsushin/202608/art.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -9636,6 +10589,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/e751a92d.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9702,6 +10656,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/00b51b1c.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9768,6 +10723,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/614192e2.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9834,6 +10790,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/36ef4ef6.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -9895,6 +10852,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14648/responsive_images/lOy2uoffwfdMBpWIwSD7cpJvc8Ey8TTqNmdOjZvJ__600_400.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.731511,
@@ -9925,6 +10883,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/1263bc95-627e-4080-b833-fc391519651f.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -9976,6 +10935,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/32125106-1657-432c-a8f6-9a73e6434878.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.75341,
@@ -10028,6 +10988,7 @@
    "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/08/26/th-2_4.webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -10088,6 +11049,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14153/responsive_images/eJkxEYTLbtsdN7yIgYijH6jqLu227B8TzcJuOHv2__1756_1171.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.351685,
@@ -10131,6 +11093,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13308/responsive_images/CcqWT7TnlX6xn3JKCwibwbRglmrPvICQJ8ZzzeVh__1600_900.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "6,000発が大輪の花を咲かせる飯塚の夏の風物詩！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -10160,6 +11125,7 @@
    "poster": "https://welcome-kurume.com/files/Events/2189e25b-05d3-4cde-bf7d-f2a5b6f70a88/image/bc0929417a762af8213e9adcbca0fc2c.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -10189,6 +11155,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751797/normal.PNG?1788923370",
    "price": null,
    "time": null,
+   "memo": [
+    "0歳～2歳さん イベントのお知らせです🐻‍❄️🩵"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.568269,
@@ -10247,6 +11216,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/c0832ccd-3cea-465e-baaf-a120f2235229.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -10298,6 +11268,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15738/responsive_images/KPce40qptfqHwLrJvPaaylMFotpFFkU6WTvfMBDI__1748_946.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "幻想的な明かりと神楽の競演！打ち上げ花火も初開催"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -10327,6 +11300,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13311/responsive_images/vkQpx2IbbuUcd3OSnVs5yaPCk9Aw4b6H6y8hruth__1752_1171.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "2,500発の打ち上げ花火で盛り上がる！京築地域を代表する夏祭り"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -10357,6 +11333,9 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMTg5LCJwdXIiOiJibG9iX2lkIn19--64c0e13c9ba2038317cb9213762a941e1abb6dea/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/s-1800x850_v-frms_webp_3e01d45c-68c4-40ea-90cd-97d3044ad92a.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "27日の2日間、天神一帯がまるごとフェス に！ 九州最大級の音楽ライブイベント「ミュージックシティ天神」開催！ 目次 ・MUSIC CITY TENJIN 概要・ステージ／出演者・ DAY 1・ DAY 2・SpotifyにてMUSIC CITY TENJIN 2026のプレイリストが公開中！・基本情報 多くの若者の注目を集め、今もっとも熱く..."
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -10386,6 +11365,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/bda3d86a-09d3-4b2c-9593-01d2b0830494.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -10430,6 +11410,40 @@
    "rank": 15
   },
   {
+   "id": "centnews1910202",
+   "title": "💜9月26日(土)💜💙パーソナルカラー診断体験💙",
+   "venue": "イオン大野城ショッピングセンター",
+   "city": "大野城市",
+   "pref": "",
+   "start": "2026-09-26",
+   "end": "2026-09-26",
+   "untilLabel": "",
+   "days": [
+    "2026-09-26"
+   ],
+   "n": 1,
+   "url": "https://tenpo.aeon-kyushu.info/detail/onojo/event-news/1910202/",
+   "poster": "https://meocloud-image.can-ly.com/images/WyONWBRmhtgHddcscWX0qZahBtyiJrwHklI19KMi.jpg",
+   "price": null,
+   "time": null,
+   "memo": [
+    "💙パーソナルカラー診断体験💙",
+    "プロの診断で、あなたの魅力を引き出す",
+    "“似合う色”を見つけてみませんか？"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 9,
+   "score": 15,
+   "src": "イオン九州 イオン大野城ショッピングセンター",
+   "near": [],
+   "img": "centnews1910202.jpg",
+   "rank": 15
+  },
+  {
    "id": "c41e1eac3ed6435",
    "title": "サンセットバブル／ナイトバブル",
    "venue": "イオンモール福津",
@@ -10447,6 +11461,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/e5ce2f69-127c-4752-a0bc-72d9234b847b.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -10499,6 +11514,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13356/responsive_images/zVsiGxhYwhexIdrhktiYIhW6lR5HvPz8sOeaGQM6__1542_1029.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "未来へつなぐにぎわいの市民まつり"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.536243,
@@ -10557,6 +11575,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17263/responsive_images/wHvZHE1kwxI2Dc4Fmx5TUsxmY9NYPUSo1xwa4Web__1538_1064.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "ロケーション日本一のよさこい祭り"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.945484,
@@ -10607,6 +11628,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11776/responsive_images/mFVMsGUq6kG2YinDdcM2AtDhKKP1c66TGlyJumIC__800_532.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.271317,
@@ -10638,6 +11660,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11760/responsive_images/TslpIDMzvJjkqojBIj1MjOgfOUG9zKXqp1qZWDWg__960_640.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "さまざまな出会いを演出する、九州最大級の酒と食のイベント"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.603334,
@@ -10696,6 +11721,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/c1af30a1-6896-4877-a04a-f60a9a5f73b8.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,
@@ -10748,6 +11774,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/4ee8d9f6-abf1-4c8a-b750-a152e0c873a8.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -10808,6 +11835,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/b4445067-e01f-458b-ae4a-f681b181889d.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -10868,6 +11896,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/728f39b4-82fb-4ee4-b9bd-f9af429610fb.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -10928,6 +11957,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/155b0d13-5339-4673-8c42-6a36afb676b4.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -10989,6 +12019,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11925/responsive_images/gvERoy33YxI0tOJB0BYtSzGYtWyi2dhuy1ojHHCX__1707_1280.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.584505,
@@ -11019,6 +12050,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15783/responsive_images/lHirQkN8zxkqpBMkhVSuLqsPEfpT6iCFMCwCKSpU__1713_1142.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -11049,6 +12081,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ4MDgwLCJwdXIiOiJibG9iX2lkIn19--435e019f45f8331cd8de62f4d54f3af775e010c8/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/07_%EF%BC%86SAKE%E5%86%99%E7%9C%9F%E2%91%A0.jpeg",
    "price": null,
    "time": null,
+   "memo": [
+    "福岡国際センターが丸ごと一つの「酒場」に変わる、九州最大級の酒と食の祭典が今年も開催されます",
+    "過去5回で延べ66,000人が来場した人気イベントで、福岡県内の酒蔵と地元の名飲食店が集結します"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -11078,6 +12114,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16551/responsive_images/baQL3rXnAQ3uidninMBHdueOw3tkp22UvtuPoakn__1080_721.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -11107,6 +12144,7 @@
    "poster": "https://ic-centralpark.jp/wp-content/uploads/2023/01/b3d1746a3439941321b1223aab70a7b3.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.667915,
@@ -11167,6 +12205,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/8fd9e94b-7051-4a66-8be4-3ab26f42f83a.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.657017,
@@ -11234,6 +12273,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13546/responsive_images/WzGIej0Q6zjZx1rEDi4CCsweXX12jI1BNobVvgjk__1515_1003.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "期間中3度姿を変える勇壮華麗な「喧嘩山笠」"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.776173,
@@ -11264,6 +12306,7 @@
    "poster": "https://welcome-kurume.com/files/Events/62d9e973-ff19-431f-8ebc-02c2ed9ba5f5/image/e19e37c92991d015e874493d89bfab92.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.252487,
@@ -11302,6 +12345,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1747596/normal.jpg?1788313498",
    "price": null,
    "time": null,
+   "memo": [
+    "海辺の公民館で、みんなと遊べるのを待っています！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.582092,
@@ -11351,6 +12397,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13545/responsive_images/E2l74azbu5bGojYvOceFRPqAp5qH0Pe3r6uYHnm3__1575_1050.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "今年も一面のひまわりがみなさまをお迎えします！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.354342,
@@ -11400,6 +12449,9 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMDE1LCJwdXIiOiJibG9iX2lkIn19--0783f01c772e8ae05d1128f887537b4d0d230a49/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/1.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "＼ お待ちかねの新米に、今季初の梨が登場 @鳥飼八幡宮／ 9月は「第4日曜日（"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -11429,6 +12481,7 @@
    "poster": "https://www.fukuokacity-kagakukan.jp/news/assets_c/2026/09/68b164b23e815aeedd29264fbe529c3756dd8747-thumb-320x180-17684.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.57741,
@@ -11488,6 +12541,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3631974/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -11548,6 +12602,7 @@
    "poster": "https://mitsui-shopping-park.com/resize/376_376/lalaport/fukuoka/event/3616015/image1.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.564976,
@@ -11608,6 +12663,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/7d9e621b-99d4-41e2-a60c-588fc6676dfe.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -11668,6 +12724,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15954/responsive_images/pi443ZLHDnuLllRAEdZnq1lsBpx83N20oXG7DEDg__1629_1086.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.728771,
@@ -11708,6 +12765,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/30358df0-93e5-4078-a9e5-5e06b5fe2056.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -11773,6 +12831,7 @@
    "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/09/15/Facecream.png",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -11833,6 +12892,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/c58f1c90-86f5-47cc-8264-a0dca836ff89.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -11889,6 +12949,7 @@
    "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/08/21/heral.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.58928,
@@ -11954,6 +13015,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/4f86d2e9.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -12019,6 +13081,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/82be9b3b.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -12084,6 +13147,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/15cfaa65.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -12149,6 +13213,7 @@
    "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/c4efaa0a.jpeg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.588815,
@@ -12209,6 +13274,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13349/responsive_images/FBQIYNyj0HxAEEkfAyaqyMKMXesrZrdAypw6iPmD__1325_829.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "宗像の秋の風物詩！大漁旗を掲げて疾走する漁船の海上パレード"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12238,6 +13306,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/0650247c-f52e-405d-adf8-764891822fe3.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -12298,6 +13367,7 @@
    "poster": "https://welcome-kurume.com/files/Events/29c2b503-9ba9-4cfe-81ba-c86ec63e39aa/image/2581dbe3eb6668e305caef45f7da5580.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12327,6 +13397,7 @@
    "poster": "https://welcome-kurume.com/files/Events/29c2b503-9ba9-4cfe-81ba-c86ec63e39aa/image/ee96a90d0f4ae4ba3ad859149384615d.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12360,6 +13431,10 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "対象 来場者全員",
+    "10月1日（木）～10月31日（土） 17:00～22:00"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.590667,
@@ -12420,6 +13495,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "第2回 Fukuoka 福祉車両ふれあいの日 in トリアス’26 「そもそも福祉車両ってなぁに？」そんな素朴な疑問から始まる、移動の安心と発見の2日間",
+    "福祉車両は「特別な人のための車」ではなく、これからの暮らしを支える身近な選択肢です",
+    "どこで買えるの？普通の車と比べて高いの？故障しやすいって本当？——そんな疑問に、福祉車両のプロフェッショナルたちが直接お答えします"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.652409,
@@ -12472,6 +13552,10 @@
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTQ4NzYyLCJwdXIiOiJibG9iX2lkIn19--436b16508eae6cf079deb6a8a0cb3b715b2abd36/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/S__216383495.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "十日恵比須神社の秋の大祭「だいこく祭」、今年も開催！ 昨年盛況を博した「だいこく祭」が3日間に拡大！盛りだくさんのイベントをお楽しみください",
+    "十日恵比須神社では、 に、第2回めとなる秋の大祭「だいこく祭」が開催されます"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12501,6 +13585,9 @@
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734128/normal.jpeg?1785838803",
    "price": null,
    "time": null,
+   "memo": [
+    "「親子の関わり」を学び、わが子の専門家になる1day講座（修了証付き）"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12532,6 +13619,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17336/responsive_images/FCkMmN8WDgH9Ezse5aHncNZSOyNZTfdnNBtlOIVE__1800_2250.png",
    "price": null,
    "time": null,
+   "memo": [
+    "伝説の野外音楽フェスのスピリットを継承！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12563,6 +13653,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17335/responsive_images/3KRj8RfUFCHRep6P1GmAO67NpDvcPqZZnktJdBbZ__1800_2250.png",
    "price": null,
    "time": null,
+   "memo": [
+    "音楽をきっかけに新しい出会いと共創が生まれる！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12592,6 +13685,11 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "【10/3(土)開催】くらしを運ぶ!はたらくトラックフェスタ2026 見て!乗って!体験して!「はたらくトラック」の祭典がやってくる! 福岡県トラック協会Presents「くらしを運ぶ!はたらくトラックフェスタ2026」を開催します",
+    "普段なかなか間近で見ることのできない大型トラックやダンプトレーラーが大集合",
+    "見て、触れて、乗って楽しめる「トラック車両展示」をはじめ、迫力満点の「トラックステージ」では大人気キャラクターショーや恐竜グリーティング、キッズダンスなど盛りだくさんの企画をお届けします"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.653015,
@@ -12642,6 +13740,10 @@
    "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/def60320.png",
    "price": null,
    "time": null,
+   "memo": [
+    "ファーマイベント～さつまいも収穫体験",
+    "秋のお野菜 ほくほくのサツマイモたくさん収穫できるかな🍠"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.590667,
@@ -12703,6 +13805,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13418/responsive_images/gl824jD9i09Rn8bFUmKw7mOBN1gOjRr7Nt9cwatB__1585_1467.png",
    "price": null,
    "time": null,
+   "memo": [
+    "多彩なステージイベントと地元の魅力満載のマルシェ、花火も！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12733,6 +13838,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/51626062-0622-4edc-8f99-378275af67c0.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.596455,
@@ -12793,6 +13899,7 @@
    "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000183-20260818_164518-img.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.589481,
@@ -12854,6 +13961,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14930/responsive_images/SCeNcHHw3uzZMsJqaETbnfuOltVmkvCmONDUOulw__1588_1004.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "秋だ♪ 福津だ♪ お祭りだ♪"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.030472,
@@ -12914,6 +14024,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/28e3d86a-173d-46e1-8324-747db8298dec.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -12965,6 +14076,7 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11277/responsive_images/pgXb2ps7Bd2MePbN0Uj6KcZoSV0nRK2gPtEU3Md5__800_533.jpg",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": null,
@@ -12994,6 +14106,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/12095/responsive_images/5InuBv4nBD7cSmRuyeUQIcyy2XgKPMi90xZD5ArD__1754_1241.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "30万本の彼岸花が川沿い一面を赤く染める"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -13024,6 +14139,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17338/responsive_images/lwYpwxGZ9OgiavS713Y9KdMp1uIR7EQ0MzReXPKk__1515_1003.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "南極の最前線を感じられる「しらせ」に乗ろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -13054,6 +14172,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/7eb24b27-c0c9-4d15-bc54-152fb4d82003.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.753025,
@@ -13106,6 +14225,10 @@
    "poster": null,
    "price": null,
    "time": null,
+   "memo": [
+    "10月 スーパーマリオトレイン ペーパークラフト教室",
+    "マリオと仲間たちを乗せた九州新幹線つばめ（800系）のペーパークラフトを親子で一緒に作ろう！"
+   ],
    "verified": false,
    "spot": null,
    "lat": 33.590667,
@@ -13165,6 +14288,9 @@
    "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11749/responsive_images/gquTNxROIL8iF0m5L2kihCdblitKwE3xwdFbLWsa__1631_971.jpg",
    "price": null,
    "time": null,
+   "memo": [
+    "パンのお供やご当地グルメも多数出店！おいしい をかわさきで"
+   ],
    "verified": false,
    "spot": null,
    "lat": null,
@@ -13194,6 +14320,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/c991cdcf-7c87-4a54-b54a-55bbc1cef398.png?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.76894,
@@ -13236,6 +14363,7 @@
    "poster": "https://image-cdn.aeonmall.jp/uploads/80de04d3-58ec-494d-969e-b9e2bf657a73.jpg?quality=50&format=webp",
    "price": null,
    "time": null,
+   "memo": null,
    "verified": false,
    "spot": null,
    "lat": 33.480873,

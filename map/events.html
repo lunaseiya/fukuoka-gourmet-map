@@ -107,9 +107,20 @@
   .tag{font-size:.66rem;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
   .t-ver{background:#e3f1ec;color:#0b5546}
   .t-unv{background:#f3f1ec;color:#7a7468}
-  .t-free{background:#fbe8df;color:var(--hot)}
+  /* ★有料/無料は**ひと目で分かる濃さ**にする【2026-09-17ユーザー要望】
+     「有料・無料ラベル」が効いていたので、他のタグより彩度を上げて先頭に置く。
+     ⚠料金が分からないものには**どちらも出さない**(推測でラベルを貼らない) */
+  .t-free{background:#1f7a5a;color:#fff}
+  .t-paid{background:#e8a33d;color:#3a2a08}
   .t-only{background:#fbe8df;color:var(--hot)}
   .meta{font-size:.78rem;color:var(--muted);margin:0}
+  /* ★memo。何の企画か2〜4行で分かるようにする【2026-09-17ユーザー要望】 */
+  .memo{margin:6px 0 0;padding:7px 9px;background:#fdf3e7;border-radius:9px;
+    border:1px solid #f2e2cb}
+  .memo-h{font-size:.66rem;font-weight:800;color:#9a6a1f;margin:0 0 3px;letter-spacing:.06em}
+  .memo ul{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+  .memo li{font-size:.76rem;line-height:1.5;color:#4a4238;text-wrap:pretty}
+  .memo li::before{content:'・';color:#c9a468}
   .meta b{color:var(--text);font-weight:700}
   .also{font-size:.74rem;font-weight:700;color:var(--accent);margin:2px 0 0}
   .srcline{font-size:.72rem;margin:5px 0 0}
@@ -365,6 +376,16 @@ function nearHtml(e){
     <p class="disc">※イベント主催とは関係のない、こちらで取材した近隣スポットです</p></div>`;
 }
 
+// ★memo。「何の企画か」が概ね分かる2〜4行を出す【2026-09-17ユーザー要望】
+//   ⚠**無ければ枠ごと出さない**。空の箱が並ぶほうが見づらい
+function memoHtml(e){
+  const m = (e.memo || []).filter(x => x && String(x).trim());
+  if (!m.length) return '';
+  return `<div class="memo"><p class="memo-h">MEMO</p><ul>`
+    + m.slice(0, 4).map(x => `<li>${esc(String(x))}</li>`).join('')
+    + `</ul></div>`;
+}
+
 function card(e, iso){
   // ★タップで拡大できるようにボタンで包む【2026-09-17】
   const img = e.img
@@ -373,11 +394,16 @@ function card(e, iso){
        ><img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async"></button>`
     : `<div class="noimg">画像は<br>権利上<br>非掲載</div>`;
   const tags = [];
+  // ★**有料/無料を先頭に**置く【2026-09-17ユーザー要望】
+  //   「有料・無料ラベル」が見やすさの要だったので、一番左に出す。
+  //   ⚠料金の記載が無いものは**どちらも出さない**。無料かどうか分からないのに
+  //     「有料」と貼るのは嘘になるし、「無料」と貼るのはもっと悪い
+  if (isFree(e)) tags.push('<span class="tag t-free">無料</span>');
+  else if (PAID.test(e.price || '')) tags.push('<span class="tag t-paid">有料</span>');
   tags.push(e.verified
     ? '<span class="tag t-ver">現地確認済み</span>'
     : '<span class="tag t-unv">要確認</span>');
   if (e.n === 1) tags.push('<span class="tag t-only">この日だけ</span>');
-  if (isFree(e)) tags.push('<span class="tag t-free">無料</span>');
   const bits = [];
   if (e.venue) bits.push(`<b>${esc(e.venue)}</b>`);
   if (e.time) bits.push(esc(e.time));
@@ -393,6 +419,7 @@ function card(e, iso){
     <p class="ttl">${esc(e.title)}</p>
     <div class="tags">${tags.join('')}</div>
     ${bits.length ? `<p class="meta">${bits.join(' ／ ')}</p>` : ''}
+    ${memoHtml(e)}
     ${also}${link}${venueHtml(e)}${nearHtml(e)}
   </div></li>`;
 }

@@ -20,7 +20,7 @@
     python tools/event_carousel.py --n 12 --title "9月14日(日) おでかけイベント"
 """
 import argparse, io, json, os, re, sys, urllib.request
-from datetime import date, datetime
+from datetime import date, datetime, timedelta
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
@@ -279,7 +279,84 @@ def search_word(ev):
     return ('%s %s' % (place, t)).strip() if place and place not in t else t
 
 
-def card(ev, idx, extra=None):
+# ─────────── 参考アカウントの見え方を取り入れた3要素【2026-09-17ユーザー要望】 ───────────
+#   「有料・無料ラベル / ポスター / 左下に場所などの補足情報 / 右下のmemoで概ね何の企画か分かる /
+#     タブで表示されていて、何日が対象かわかる」が見やすいという指摘。
+#   ポスターと補足情報は既にあったので、**日付タブ・有料無料バッジ・memo枠**を足す。
+TAB_H = 96                       # 日付タブの帯の高さ
+TAB_ON = (255, 255, 255)         # 選択中のタブ(白く抜く)
+TAB_OFF = [(246, 214, 220), (203, 227, 238), (206, 231, 199),
+           (250, 231, 178), (225, 217, 212)]   # 曜日ごとに色を変える(参考と同じ考え方)
+
+
+def daytabs(im, d, days, cur):
+    """上端に日付タブを描く。`days` は ISO 文字列の並び、`cur` は選択中の ISO。
+    ⚠**5枠を超えたら選択中を中心に5枠へ切り出す**(タブが細くなって読めなくなるため)"""
+    if not days:
+        return
+    ds = list(days)
+    if len(ds) > 5:
+        i = ds.index(cur) if cur in ds else 0
+        s = max(0, min(i - 2, len(ds) - 5))
+        ds = ds[s:s + 5]
+    wk = '月火水木金土日'
+    n = len(ds)
+    gap = 6
+    bw = (W_ - gap * (n - 1)) // n
+    for k, iso in enumerate(ds):
+        dt = datetime.strptime(iso, '%Y-%m-%d').date()
+        on = (iso == cur)
+        col = TAB_ON if on else TAB_OFF[k % len(TAB_OFF)]
+        h = TAB_H if on else TAB_H - 14
+        x = k * (bw + gap)
+        tab = rounded((bw, h + 26), 18, col + (255,))       # 下は帯に隠れるので角丸を伸ばす
+        im.alpha_composite(tab, (x, TAB_H - h))
+        w = wk[dt.weekday()]
+        # 土は青・日祝は赤。参考アカウントと同じ扱い
+        fg = ((36, 92, 178) if w == '土' else (198, 48, 48) if w == '日' else (74, 66, 58))
+        t = '%d/%d(%s)' % (dt.month, dt.day, w)
+        ImageDraw.Draw(im).text((x + bw // 2, TAB_H - h // 2 - 4), t,
+                                font=font(MEIB, 34 if on else 30),
+                                fill=fg if on else tuple(int(c * .55) for c in fg), anchor='mm')
+
+
+def paidbadge(ev):
+    """有料/無料のバッジ。⚠**料金が分からないものは出さない**(推測でラベルを貼らない)"""
+    if ev.get('free'):
+        return pill('入場無料', (31, 122, 90), 34, (24, 12))
+    p = str(ev.get('price') or '')
+    if re.search(r'[0-9０-９][0-9０-９,，]*\s*円', p):
+        return pill('有料', (232, 163, 61), 34, (26, 12))
+    return None
+
+
+def memobox(ev, size):
+    """右下の memo。`detail`(ポスターを読んで手で転記した箇条書き)→ lead の順で使う。
+    ⚠**中身が無ければ None**。空の箱は出さない"""
+    w, h = size
+    src = [x for x in (ev.get('detail') or []) if x]
+    if not src and ev.get('lead'):
+        src = [ev['lead']]
+    if not src:
+        return None
+    c = rounded((w, h), 20, (253, 243, 231, 255))
+    cd = ImageDraw.Draw(c)
+    cd.rounded_rectangle([0, 0, w - 1, h - 1], 20, outline=(238, 220, 192, 255), width=2)
+    cd.text((w // 2, 20), 'memo', font=font(ROUND, 34), fill=(154, 106, 31, 255), anchor='ma')
+    fm = font(MEI, 27)
+    yy = 70
+    for ln in src[:4]:
+        for w2 in wrap(cd, str(ln), fm, w - 44, 2):
+            if yy > h - 40:
+                break
+            cd.text((22, yy), w2, font=fm, fill=(74, 66, 56, 255))
+            yy += 38
+        if yy > h - 40:
+            break
+    return c
+
+
+def card(ev, idx, extra=None, days=None, cur=None):
     ex = (extra or {}).get(ev.get('url'), {})
     for k, v in ex.items():
         if not k.startswith('_') and v:
@@ -291,13 +368,23 @@ def card(ev, idx, extra=None):
         ev['venue'] = dp['venue']
     im = Image.new('RGBA', (W_, H_), BG + (255,))
     d = ImageDraw.Draw(im)
-    # 市区ピル
+    # ★日付タブ(上端)。渡されなかった回は従来どおりタブ無しで描く
+    top = 0
+    if days:
+        daytabs(im, d, days, cur)
+        top = TAB_H
+    # 市区ピル + ★有料/無料バッジ
     city = ev.get('city') or (ev.get('venues') or [''])[0] or '福岡県'
-    shadow(im, pill(city[:12], PREF_RED, 32), (64, 60))
-    d.text((W_ - 64, 74), '%d' % idx, font=font(ROUND, 52), fill=(216, 210, 202), anchor='ra')
+    cp = pill(city[:12], PREF_RED, 32)
+    shadow(im, cp, (64, top + 34))
+    pb = paidbadge(ev)
+    if pb:
+        shadow(im, pb, (64 + cp.width + 14, top + 34))
+    d.text((W_ - 64, top + 48), '%d' % idx, font=font(ROUND, 52),
+           fill=(216, 210, 202), anchor='ra')
     # イベント名
     f = font(MEIB, 52)
-    y = 152
+    y = top + 126
     for ln in wrap(d, ev['title'], f, W_ - 128, 3):
         d.text((64, y), ln, font=f, fill=INK); y += 66
     y += 18
@@ -309,7 +396,11 @@ def card(ev, idx, extra=None):
     #   行数は日程/時間/場所/料金/検索(+注意/駐車)で最大7
     nrow = 4 + sum(1 for k in ('time', 'note') if ev.get(k)) \
              + (1 if (ev.get('park') or ev.get('parking')) else 0)
-    box_h = max(360, min(560, H_ - 200 - y - nrow * 58))
+    # ★memo枠を右下に置くので、**情報行は左列に寄せて幅を狭める**
+    MEMO_W = 380
+    memo_x = W_ - 64 - MEMO_W
+    has_memo = bool([x for x in (ev.get('detail') or []) if x] or ev.get('lead'))
+    box_h = max(330, min(560, H_ - 200 - y - nrow * 54 - (TAB_H if days else 0)))
     img = get_poster(ev.get('poster')) if ok else None
     if img:
         s = min((W_ - 200) / img.width, box_h / img.height)
@@ -387,27 +478,44 @@ def card(ev, idx, extra=None):
     # ⚠**情報行は6行しか入らない**。7行にするとCTAピルと出典に重なる(2026-09-13に踏んだ)。
     #   並びは優先順なので、溢れるときに落ちるのは「駐車」。
     #   **「検索」は絶対に落とさない**(「どこを見ればいいか分からない」への回答そのもの)
-    fl = font(MEIB, 30)
+    fl = font(MEIB, 27)
+    # ★**右下に memo、左下に情報行**の2列にする【2026-09-17ユーザー要望】
+    #   memo がある回は情報行の幅が狭くなるので、フォントも小さくする
+    y0 = y
+    if has_memo:
+        fb = font(MEIB, 31)
+        lab_w, lab_x, txt_x = 80, 68, 158
+        txt_w = memo_x - 24 - txt_x
+    else:
+        lab_w, lab_x, txt_x = 92, 68, 176
+        txt_w = W_ - 64 - txt_x
     # ⚠**CTAバー(y=H_-156)までに入る行数だけ出す**。固定の上限だと、
     #   ポスターの高さで残り幅が変わるため6行目がCTAバーに上書きされて消える(2026-09-13に踏んだ)
-    fit = max(3, (H_ - 166 - y) // 58)
+    rh = 54
+    fit = max(3, (H_ - 166 - y) // rh)
     if len(rows) > fit:
         print('    ※%s: 情報行が%d行入らず省いた(%s)'
               % (ev.get('title', '')[:16], len(rows) - fit,
                  '/'.join(r[0] for r in rows[fit:])))
     for ic, tx in rows[:fit]:
-        lab = rounded((92, 44), 10, (238, 230, 226, 255))
-        ImageDraw.Draw(lab).text((46, 22), ic, font=fl, fill=PREF_RED + (255,), anchor='mm')
-        im.alpha_composite(lab, (68, y - 2))
-        d.text((176, y), tx, font=fb, fill=INK); y += 58
-    # 一言 + 出典
-    # ⚠リードがCTAバー(y=H_-156)に潜り込んで文字が切れていた(2026-09-13に踏んだ)。
-    #   入る行数だけ出す
-    if ev.get('lead'):
-        y += 10
-        room = max(0, (H_ - 176 - y) // 46)
-        for ln in wrap(d, ev['lead'], font(MEI, 34), W_ - 140, min(2, room)):
-            d.text((70, y), ln, font=font(MEI, 34), fill=SUB); y += 46
+        lab = rounded((lab_w, 42), 10, (238, 230, 226, 255))
+        ImageDraw.Draw(lab).text((lab_w // 2, 21), ic, font=fl,
+                                 fill=PREF_RED + (255,), anchor='mm')
+        im.alpha_composite(lab, (lab_x, y - 1))
+        # ⚠狭い列に入り切らない値は**1行に収まる長さで切る**(はみ出して memo に重なるため)
+        s = tx
+        while s and d.textlength(s, font=fb) > txt_w:
+            s = s[:-1]
+        if s != tx and len(s) > 2:
+            s = s[:-1] + '…'
+        d.text((txt_x, y), s, font=fb, fill=INK)
+        y += rh
+    # ★memo(右下)。高さは情報行の開始からCTAバーまで
+    if has_memo:
+        mh = max(120, H_ - 172 - y0)
+        mb = memobox(ev, (MEMO_W, mh))
+        if mb:
+            shadow(im, mb, (memo_x, y0 - 2), blur=12, alpha=40, dy=4)
     # 出典は**会場/主催者**を優先する。いこーよは集約サイトなので「◯◯(いこーよ掲載)」と書く
     if ven:
         srcname = ven[0]
@@ -439,6 +547,8 @@ def main():
     ap.add_argument('--cta', default='',
                     help='表紙の最下段のピル。**リール用は「最後まで見てね →」**(動画はスワイプしない)')
     ap.add_argument('--out', default='', help='出力先。既定は data/carousel_<開始日>/')
+    ap.add_argument('--no-tabs', action='store_true',
+                    help='日付タブを出さない(1イベント1日の単発回など)')
     a = ap.parse_args()
     D = json.load(io.open(a.json, encoding='utf-8'))
     # week_events が選抜した順(源のラウンドロビン後)を優先する。
@@ -461,9 +571,19 @@ def main():
     extra = load_extra()
     pages = [('01_表紙', cover(sub, len(evs), len(evs), a.hook or None, a.cover or None,
                               a.tail, a.cta or None))]
+    # ★日付タブに出す日の並び【2026-09-17ユーザー要望】
+    #   対象期間の全日を並べる。⚠**8日を超える回はタブを出さない**
+    #   (細くなって読めず、かえって見づらくなる。参考アカウントも5日だった)
+    alld = [(f + timedelta(days=i)).isoformat() for i in range((t - f).days + 1)]
+    use_tabs = not a.no_tabs and 2 <= len(alld) <= 8
+    if not use_tabs and not a.no_tabs:
+        print('※対象期間が%d日なので日付タブは出さない(2〜8日のときだけ出す)' % len(alld))
     for i, ev in enumerate(evs, 1):
+        # そのイベントの「この回で見せる日」= 対象期間に入る最初の日
+        sp = ev.get('span') or [None, None]
+        cur = next((x for x in alld if sp[0] and sp[0] <= x <= (sp[1] or sp[0])), None)
         pages.append(('%02d_%s' % (i + 1, re.sub(r'[^\w一-龥ぁ-んァ-ヶー]', '', ev['title'])[:16]),
-                      card(ev, i, extra)))
+                      card(ev, i, extra, alld if use_tabs else None, cur)))
     pages.append(('%02d_締め' % (len(evs) + 2), closing()))
     for name, im in pages:
         p = os.path.join(out, name + '.jpg')

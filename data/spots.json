@@ -45974,5 +45974,38 @@
   "wish": true,
   "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ屋上",
   "web": "https://www.jrhakatacity.com/kids/"
+ },
+ {
+  "id": "forest-adventure-yoshinogari",
+  "name": "フォレストアドベンチャー・吉野ヶ里",
+  "area": "アドベンチャーバレーSAGA内",
+  "city": "神埼郡吉野ヶ里町",
+  "pref": "佐賀県",
+  "genre": "アスレチック・ジップライン",
+  "address": "佐賀県神埼郡吉野ヶ里町三津2753 アドベンチャーバレーSAGA内",
+  "postal": "842-0104",
+  "lat": 33.366494,
+  "lng": 130.390076,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**身長90cmから遊べる**ので小さい子でも入れる(フォレストアドベンチャーの中でも**キッズコースは九州で唯一**)。コースは6つで年齢・身長で分かれる: **キッズ1,900円**(身長90cm以上〜小学3年生) / **ネットコース2,200円**(身長90cm以上・60分間のネットの空中遊び場) / **ジップトリップ2,700円**(小4以上か140cm以上・3本のジップスライドで最長約270m) / **キャノピー3,200円**(身長110cm以上) / **アドベンチャー4,200円**(小4以上か140cm以上)・エキサイト6,000円。⭐**無料駐車場**・更衣室・コインロッカー・休憩所あり。ペットOK。⚠**最終受付15:00**(営業9:00〜17:00・季節と天候で変動)。⚠**公式サイトから前日までの予約が推奨**。命綱をつけて渡る・登る・飛ぶ樹上アスレチックで、最後はジップラインで森を滑り降りる。(2026-09-17時点の公式情報)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://foret-aventure.jp/park/fa-yoshinogari/",
+  "asoview": "https://www.asoview.com/base/159592/"
  }
 ]

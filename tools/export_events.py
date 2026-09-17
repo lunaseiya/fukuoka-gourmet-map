@@ -210,6 +210,71 @@ def clean(t):
     return re.sub(r'\s+', ' ', rest).strip(), heads
 
 
+# ★memo に使わない定型句。会期・時間・場所はカードの別枠で既に出しているので落とす
+MEMO_DROP = re.compile(r'^\s*(?:日時|時間|場所|会場|開催日|開催時間|料金|参加費|対象|'
+                       r'定員|申込|予約|問い合わせ|主催|協力|後援|備考)\s*[:：]?')
+MEMO_NOISE = re.compile(r'※.*$|＜.*?＞|\(税込\)|\(税抜\)')
+# ★リード文の中に**行ではなく語として**混ざる日時・場所・対象を落とす
+#   (lead は空白で1本に繋がっているので、行頭アンカーの MEMO_DROP では取れない)
+MEMO_INLINE = re.compile(
+    r'\d{1,2}\s*[/月]\s*\d{1,2}\s*[日]?\s*(?:[（(][^）)]{0,6}[）)])?'
+    r'(?:\s*[〜~～\-–]\s*(?:\d{1,2}\s*[/月]\s*)?\d{1,2}\s*[日]?\s*(?:[（(][^）)]{0,6}[）)])?)?'
+    r'|[0-9０-９]{1,2}\s*[：:]\s*[0-9０-９]{2}\s*(?:[〜~～\-–]\s*[0-9０-９]{1,2}\s*[：:]\s*[0-9０-９]{2})?'
+    r'|[0-9０-９]+[FＦ]\s*[^\s]{0,12}'
+    r'|(?:対象|場所|会場|日時|時間|料金|参加費|定員)\s*[:：]?\s*')
+
+
+def memo(r, sp):
+    """カードの右下に出す**何の企画か分かる2〜4行**を作る【2026-09-17ユーザー要望】
+    「右下のmemoで概ね何の企画か分かる」のを真似る。
+
+    優先順は ①補足ファイルの `detail`(ポスターを読んで手で書いた箇条書き。一番濃い)
+             ②源のリード文
+    ⚠**どちらも無ければ None**。埋めるために推測で書かない。
+    ⚠会期・時間・場所・料金は**カードの別枠で出している**ので、ここでは重複させない。
+    """
+    # ②源が用意した memo(説明文だけを抜いたもの)。lead より先に見る。
+    #   ⚠lead は kids_score のための詰め込みテキストで、**タイトル・会場・日時が
+    #     丸ごと重複する**。カードでは別枠に出しているので memo に混ぜてはいけない
+    rm = [str(x).strip() for x in (r.get('memo') or []) if str(x).strip()]
+    ds = sp.get('detail')
+    if not ds and rm:
+        return rm[:4]
+    if ds:
+        out = []
+        for d in ds:
+            s = MEMO_NOISE.sub('', MEMO_DROP.sub('', str(d))).strip('　 ・/')
+            if len(s) >= 4 and not any(s.startswith(p) for p in ('9/', '10/', '11/')):
+                out.append(s)
+            if len(out) >= 4:
+                break
+        if out:
+            return out
+    # ③源のリード文。⚠**タイトル・会場・日時の重複を落としてから**使う。
+    #   そのまま出すと「キッズボート イオンマリナタウン店 9/20（日）～23（水・祝）
+    #   11：00～17：00 2Fサンデッキ…」とカードの他の枠と丸かぶりになる(2026-09-17に実測)
+    lead = (r.get('lead') or '').strip()
+    if not lead:
+        return None
+    t = MEMO_NOISE.sub('', lead)
+    for x in (r.get('title'), r.get('venue')) + tuple(r.get('venues') or []):
+        if x and len(str(x)) >= 3:
+            t = t.replace(str(x), ' ')
+    t = MEMO_INLINE.sub(' ', t)
+    parts = [x.strip() for x in re.split(r'[。\n]', t) if x.strip()]
+    parts = [MEMO_DROP.sub('', x).strip('　 ・/|') for x in parts]
+    # ⚠日時を抜いた跡に「① ②」「日程：」のような**残骸**が残る。掃除してから採る
+    out = []
+    for x in parts:
+        x = re.sub(r'[①-⑳]\s*', '', x)
+        x = re.sub(r'(?:日程|時間|場所|会場|対象|料金)\s*[:：]\s*', '', x)
+        x = re.sub(r'\s{2,}', ' ', x).strip('　 ・/|:：')
+        # 記号や数字だけになったものは捨てる(意味が残っていない)
+        if len(x) >= 8 and re.search(r'[ぁ-んァ-ヶ一-龥]{4,}', x):
+            out.append(x)
+    return out[:2] or None
+
+
 def venue(r, tt, heads):
     """会場を決める。優先順は ①タイトルの【施設名】 ②venues の非かぶり候補
        ③venues のかぶり候補 ④市区。
@@ -277,6 +342,11 @@ def main():
                'start': st, 'end': u, 'untilLabel': s.get('untilLabel') or '',
                'days': days, 'n': len(days), 'url': s.get('web') or '',
                'poster': None, 'price': None, 'time': None,
+               # 裏取り済みの側は verdict が「何の企画か」そのものなので memo に使う。
+               # ⭐/⚠ の記号と太字マークは画面で邪魔になるので落とす
+               'memo': [x.strip('　 ') for x in
+                        re.split(r'(?<=。)', re.sub(r'\*\*|[⭐⚠]', '', s.get('verdict') or ''))
+                        if len(x.strip('　 ')) >= 6][:3] or None,
                'verified': True, 'spot': s['id'],
                'lat': s.get('lat'), 'lng': s.get('lng'),
                'kids': ks >= KIDS_TH, 'ks': ks, 'score': None}
@@ -322,6 +392,11 @@ def main():
                 # ⚠IPコラボのポスターは参照しない(貼れない回)
                 'poster': r.get('poster') if W.poster_ok(r['title'], r.get('lead')) else None,
                 'price': sp.get('price') or None, 'time': sp.get('time') or None,
+                # ★**memo**(何の企画か2〜4行で分かる要約)【2026-09-17ユーザー要望】
+                #   「右下のmemoで概ね何の企画か分かる」のを真似る。
+                #   優先は ①補足ファイルの detail(ポスターを読んで手で書いた箇条書き)
+                #          ②源のリード文。どちらも無ければ null(推測で書かない)
+                'memo': memo(r, sp),
                 'verified': False, 'spot': None, 'lat': None, 'lng': None,
                 'kids': ks >= KIDS_TH, 'ks': ks, 'score': r['score'] + ka,
                 'src': r['src']})

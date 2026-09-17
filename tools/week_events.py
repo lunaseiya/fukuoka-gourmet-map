@@ -10,6 +10,12 @@
             1ページ15件・`page=N`。市区・完全無料ラベル・リード文まで取れて情報が一番濃い
   pref  … クロスロードふくおか(福岡県公式観光)          → tools/event_watch.py
             自治体・神社・公園など**商業施設に出てこない行事**が入る
+  torius… トリアス久山 https://torius.com/event_cal/  【2026-09-17追加】
+            糟屋郡久山町。**日程がISO(2026-10-03 / 2026-09-05～2026-09-23)で入っており
+            全源の中で一番確実**。ユーザーが現地チラシを持ってきて漏れが判明した源
+  manual… data/_手動イベント.json                      【2026-09-17追加】
+            **公式サイトにイベント一覧が無い主催**(万代など)を現地チラシから手で書く。
+            ファイルが無ければ0件で通る
 
 ■ 選別の考え方(3源合わせると300件超。12選に対して25倍あるので絞るほうが本質)
   ①会期が対象期間にかかるものだけ残す
@@ -462,6 +468,146 @@ def from_islandeye():
     return rows
 
 
+# ─────────────────── トリアス久山(TORIUS) ───────────────────
+#  【2026-09-17ユーザー確定「源にトリアス久山と万代を追加」】
+#  ユーザーが現地でチラシを拾ってきて「源に入ってますか？」と聞かれ、**入っていなかった**。
+#  実測すると「くらしを運ぶ!はたらくトラックフェスタ2026(10/3)」は公式に載っていたので、
+#  源が無かったことによる取りこぼしだった。
+#
+#  ⚠**/event/ ではなく /event_cal/ を使う**。一覧(/event/)はページ送り式で会期が
+#    本文にしかないが、カレンダーは開催中のイベントを週ごとに並べた静的HTMLで、
+#    翌月ぶんまで入っている。**同じイベントが週の数だけ重複して出るのでURLで潰す**。
+#  ⚠会期は**個別ページが最も確実**。
+#      <div class="schedule"><span class="ttl">日程</span>
+#        <span class="txt">2026-10-03</span>          ← 単日
+#        <span class="txt">2026-09-05～2026-09-23</span> ← 期間
+#    **全源の中でここだけ日付がISOで機械可読**なので、タイトルからの推測(jspan)は
+#    個別ページが開けなかったときの保険にしか使わない。
+#  ⚠ポスター画像は無い(og:image も本文画像も出ていない)。poster は常に None。
+#  ⚠**万代(大縁日)はここには載らない**。万代は店舗側のイベントで、
+#    調べた限り静的HTMLでイベントと会期を出しているページが無かった(下のコメント参照)。
+TRS = 'https://torius.com'
+TRS_LINK = re.compile(r'<a class="event_link cat\d+" href="(https://torius\.com/event/\d+/)">'
+                      r'([^<]*)</a>')
+TRS_DATE = re.compile(r'class="schedule">\s*<span class="ttl">日程</span>\s*'
+                      r'<span class="txt">(\d{4}-\d{2}-\d{2})(?:\s*[～~]\s*(\d{4}-\d{2}-\d{2}))?')
+#  ⚠会場は `[開催場所]` の直後だが、**タグを除去すると改行が消えて後続の
+#    タイムテーブルまで繋がる**ので、区切り語と長さで必ず打ち切る
+TRS_PLACE = re.compile(r'\[\s*(?:開催|展示)場所\s*\]\s*([^\[]{2,60})')
+TRS_CUT = re.compile(r'\s*(?:タイムテーブル|タイム\s*テーブル|プログラム|※|【|\[|｜)')
+TRS_NOTE = re.compile(r'[（(][^（）()]*(?:場合|変更|予定|中止|雨天)[^（）()]*[）)]\s*$')
+
+
+def _iso(s):
+    try:
+        return datetime.strptime(s, '%Y-%m-%d').date()
+    except (ValueError, TypeError):
+        return None
+
+
+def from_torius():
+    rows = []
+    try:
+        h = M.fetch(TRS + '/event_cal/')
+    except Exception as ex:
+        print('  ! トリアス久山 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    uniq = {}
+    for url, ti in TRS_LINK.findall(h):
+        uniq.setdefault(url, n(ti))       # ★週ごとの重複をURLで潰す
+    for url, title in uniq.items():
+        if not title:
+            continue
+        a = e = None
+        body = ''
+        try:
+            d = M.fetch(url)
+            time.sleep(M.WAIT)
+            md = TRS_DATE.search(d)
+            if md:
+                a = _iso(md.group(1))
+                e = _iso(md.group(2)) or a
+            plain = n(re.sub(r'<[^>]+>', ' ',
+                             re.sub(r'<(script|style)[\s\S]*?</\1>', '', d)))
+            # ⚠先頭はヘッダのナビ(館内MAP/アクセス/ショップガイド…)なので
+            #   **日程の後ろ**を本文にする。先頭200字だとナビしか入らない。
+            #   開始日で探すと期間表記の途中で切れるので**終了日**の直後から取る
+            k = plain.find(str(e)) if e else -1
+            body = (plain[k + 10:k + 800] if k >= 0 else plain[-800:]).strip()
+        except Exception as ex:
+            print('  ! トリアス久山 個別 %s %s' % (url, type(ex).__name__), file=sys.stderr)
+        if not a:                          # 個別が開けなかったときだけタイトルから読む
+            a, e, _ = jspan(title)
+            if a in (False, 'ended'):
+                continue
+        if canceled(title, body):
+            continue
+        venue = 'トリアス久山'
+        pl = TRS_PLACE.search(body)
+        if pl:
+            v = TRS_NOTE.sub('', TRS_CUT.split(n(pl.group(1)))[0]).strip(' 　')
+            if len(v) >= 2:
+                venue = v[:30]
+        rows.append({'src': 'トリアス久山', 'title': title, 'city': '糟屋郡久山町',
+                     'venue': venue, 'url': url, 'span': (a, e), 'days_list': None,
+                     'raw': '%s〜%s' % (a, e), 'free': '入場無料' in body,
+                     'lead': body[:300], 'poster': None})
+    print('  トリアス久山 %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
+# ───────────────────── 万代(アミューズメントパーク万代) ─────────────────────
+#  【2026-09-17】ユーザー指示で源に足そうとしたが、**足せるページが無かった**。
+#  調べた3ドメインの実測:
+#    shop.mandai-s.jp/detail/25/ … トリアス久山店の店舗ページ。イベント欄なし(「縁日」0件)
+#    mandai-s.jp/news/           … **買取・入荷情報のフィード**(古着/CD/お酒/おもちゃ)で、
+#                                  アダルト商材の記事も混ざる。イベントは載らず「大縁日」も0件。
+#                                  **子連れマップの源にしてはいけない**
+#    mandai.ne.jp/information/   … 遊べるスーパー万代の公式。サイトリニューアル直後で記事2本のみ
+#  「秋まつり 大縁日 2026(9/19〜9/23・トリアス久山店ほか・300円で1回)」は
+#  **店頭のチラシと公式LINEでしか出ていない**。自動では拾えないので、
+#  この手のものは下の **data/_手動イベント.json** に書く。
+#  → 万代側にイベント一覧ページができたらここに from_mandai() を作る。
+
+
+# ─────────────────── 現地チラシなど手で足すイベント ───────────────────
+#  【2026-09-17】ユーザーが出先でチラシを拾ってくる運用が定着したので受け皿を作った。
+#  ⚠**_イベント補足.json では新規イベントを作れない**。あれはイベントURLをキーに、
+#    **既存の行へ** price/place/time/detail/kids_add を足すだけのファイル。
+#    公式サイトにイベント一覧が無い主催(万代など)はこちらに書く。
+#  data/_手動イベント.json は配列。1件のキーは:
+#      title city venue from to url  [src free lead detail kids_add _memo]
+#    from / to は **ISO(YYYY-MM-DD)**。to を省くと単日扱い。
+#  ⚠price/place/time/detail をカードに出したいときは、**同じ url をキーにして
+#    _イベント補足.json にも書く**(既存の源と同じ経路で export_events.py が読む)。
+#  ⚠ファイルが無くても**静かに0件**で通す。他の源を止めないため。
+MAN_PATH = os.path.join(HERE, '..', 'data', '_手動イベント.json')
+
+
+def from_manual():
+    rows = []
+    try:
+        man = json.load(io.open(MAN_PATH, encoding='utf-8'))
+    except FileNotFoundError:
+        return rows
+    except Exception as ex:
+        print('  ! 手動イベントが読めない %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    for m in man:
+        a, e = _iso(m.get('from')), _iso(m.get('to') or m.get('from'))
+        if not a:
+            print('  ! 手動 日付が読めないので飛ばす: %s' % m.get('title'), file=sys.stderr)
+            continue
+        lead = m.get('lead') or '　'.join(m.get('detail') or [])
+        rows.append({'src': m.get('src') or 'チラシ(手動)', 'title': n(m.get('title') or ''),
+                     'city': m.get('city') or '', 'venue': m.get('venue') or '',
+                     'url': m.get('url') or '', 'span': (a, e or a), 'days_list': None,
+                     'raw': '%s〜%s' % (a, e or a), 'free': bool(m.get('free')),
+                     'lead': n(lead)[:300], 'poster': None})
+    print('  手動(チラシ) %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
 # ───────────────────── 福岡市科学館(六本松) ─────────────────────
 #  【2026-09-13ユーザー確定「科学館も追加しておきましょう」】
 #  ⚠/event と /events は404。**/news/ が使える**(/activity/ は1.6MBで2021年の
@@ -876,7 +1022,7 @@ def main():
     ap.add_argument('--to', dest='t')
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
-                                     'daimaru,hankyu,yokanavi,kurume')
+                                     'daimaru,hankyu,yokanavi,kurume,torius,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -897,7 +1043,11 @@ def main():
                   ('ikoyo', lambda: from_ikoyo(f, t)), ('pref', from_pref),
                   # 【2026-09-16追加】百貨店2館 + 福岡市の公園/広場 + 久留米
                   ('daimaru', from_daimaru), ('hankyu', from_hankyu),
-                  ('yokanavi', from_yokanavi), ('kurume', from_kurume)):
+                  ('yokanavi', from_yokanavi), ('kurume', from_kurume),
+                  # 【2026-09-17追加】トリアス久山(糟屋郡久山町)。日付がISOで最も確実
+                  ('torius', from_torius),
+                  # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
+                  ('manual', from_manual)):
         if s in srcs:
             print('[%s] 収集中...' % s, file=sys.stderr)
             got = fn()

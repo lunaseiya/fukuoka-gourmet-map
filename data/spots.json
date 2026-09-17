@@ -45943,5 +45943,36 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "tsubamenomori-hirobajrhakatacity",
+  "name": "JR博多シティ 屋上つばめの杜ひろば",
+  "area": "博多駅(JR博多シティ屋上)",
+  "genre": "屋上ひろば",
+  "lat": 33.590667,
+  "lng": 130.420392,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": false,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐JR博多駅ビルの屋上にある無料のひろば。10:00〜22:00で、鉄道神社・芝生・展望テラスがあり、こどもCITY HAKATAとして月1回ペースで子連れイベント(収穫体験・天体観測・工作教室・ミニ動物園)を開催。ベビーカーは1F・3Fインフォメーションで無料貸出。⚠おむつ交換台はアミュプラザ各階にあるが**屋上には無い**(公式表記が「屋上を除く」)。授乳室は6F・7F・9F・10F、子ども用トイレは6F・8F。⚠**屋上つばめ電車は運行終了**、天空の広場の三輪車もやけど防止で当面使用中止。荒天時は閉鎖の場合あり(2026-09-17時点の公式情報)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "category": "play",
+  "wish": true,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ屋上",
+  "web": "https://www.jrhakatacity.com/kids/"
  }
 ]

@@ -1,6 +1,6 @@
 {
  "from": "2026-09-17",
- "to": "2026-10-05",
+ "to": "2026-11-03",
  "sources": {
   "mall": 181,
   "lala": 43,
@@ -9,13 +9,14 @@
   "ie": 17,
   "kgk": 15,
   "map": 14,
-  "ikoyo": 75,
+  "ikoyo": 74,
   "pref": 352,
   "daimaru": 47,
   "hankyu": 13,
   "yokanavi": 51,
   "kurume": 36,
   "torius": 6,
+  "hkc": 10,
   "manual": 1
  },
  "selected": [
@@ -23,22 +24,22 @@
   "https://welcome-kurume.com/events/detail/2a10696d-a63e-41c8-88f6-cfb1addfd6b4",
   "https://iko-yo.net/events/591660",
   "https://kashiihama.aeon-kyushu.info/event/2dcc05e8-b7e9-409d-bb7a-1d420d6ca028",
+  "https://www.jrhakatacity.com/kids/detail/?cd=000175",
   "https://iko-yo.net/events/596239",
   "https://yokanavi.com/events/237763",
   "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3607741.html",
   "https://ic-centralpark.jp/events/",
-  "https://canalcity.co.jp/event/detail/194?publish_begin=26-09-09&publish_end=26-09-20&hold_calendar=26-09-20~26-09-20",
   "https://shop.mandai-s.jp/detail/25/#daiennichi2026",
   "https://torius.com/event/204081/",
-  "https://welcome-kurume.com/events/detail/ecb0d9df-d166-473d-a33a-c716890ed969",
+  "https://welcome-kurume.com/events/detail/cc0b4488-0a6c-4fa6-a99c-ff5ca100c8da",
   "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021580&amp;scd=000601",
   "https://www.crossroadfukuoka.jp/event/17268",
+  "https://www.fukuokacity-kagakukan.jp/news/2026/08/planetarium-q.html",
   "https://fukutsu-aeonmall.com/event/290f24ca-a72c-4688-ac17-050615310a62",
+  "https://www.jrhakatacity.com/kids/detail/?cd=000174",
   "https://iko-yo.net/events/596517",
   "https://yokanavi.com/events/274361",
-  "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html",
-  "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021446&amp;scd=000601",
-  "https://www.crossroadfukuoka.jp/event/13359"
+  "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3614679.html"
  ],
  "events": [
   {
@@ -615,6 +616,60 @@
    "score": 24
   },
   {
+   "src": "JR博多シティ",
+   "title": "イチゴの苗植え体験",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000175",
+   "span": [
+    "2026-10-13",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "2026-10-13〜2026-10-13",
+   "free": false,
+   "lead": "イチゴの苗植え体験 屋上つばめの杜ひろば 14:30～ 対象 未就学児",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/ec6a90f5.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 1,
+   "left": 26,
+   "since": -26,
+   "kids_add": 0,
+   "score": 23
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "サツマイモ収穫体験",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000174",
+   "span": [
+    "2026-10-03",
+    "2026-10-03"
+   ],
+   "days_list": null,
+   "raw": "2026-10-03〜2026-10-03",
+   "free": false,
+   "lead": "サツマイモ収穫体験 屋上つばめの杜ひろば ①10:30 ②13:00 対象 未就学児～小学生",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/def60320.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 1,
+   "left": 16,
+   "since": -16,
+   "kids_add": 0,
+   "score": 23
+  },
+  {
    "src": "トリアス久山",
    "title": "第2回 Fukuoka 福祉車両ふれあいの日 in トリアス'26 開催 10/2(金)3(土)",
    "city": "糟屋郡久山町",
@@ -751,6 +806,60 @@
   },
   {
    "src": "県公式",
+   "title": "ちくじょう祭り",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11299",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月25日（日） ※雨天決行。ただし、台風など荒天時は中止する場合があります。",
+   "free": false,
+   "lead": "ステージイベントや体験コーナーが盛りだくさん！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11299/responsive_images/IsS3nIg7MVqnQm0qAi1lXUE0gCPcI5uyIYuYqI1L__747_424.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 22
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "福岡こども専門学校10月のイベント",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000170",
+   "span": [
+    "2026-10-12",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026-10-12〜2026-10-12",
+   "free": true,
+   "lead": "福岡こども専門学校10月のイベント 屋上つばめの杜ひろば ①11:00～ ②13:30～ ③15:00～ 対象 未就学児～小学生とその保護者",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/03548e9f.jpg",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 1,
+   "left": 25,
+   "since": -25,
+   "kids_add": 0,
+   "score": 22
+  },
+  {
+   "src": "県公式",
    "title": "八女福島の燈籠人形公演",
    "city": "",
    "venue": "",
@@ -773,6 +882,33 @@
    "days": 2,
    "left": 4,
    "since": -3,
+   "kids_add": 0,
+   "score": 22
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "天体観測inつばめの杜～手づくり望遠鏡・天体観測望遠鏡で夜空を見よう～",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000167",
+   "span": [
+    "2026-10-17",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026-10-17〜2026-10-18",
+   "free": false,
+   "lead": "天体観測inつばめの杜～手づくり望遠鏡・天体観測望遠鏡で夜空を見よう～ 屋上つばめの杜ひろば 18:30～19:30（予定）",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/a2146ef6.jpg",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 2,
+   "left": 31,
+   "since": -30,
    "kids_add": 0,
    "score": 22
   },
@@ -869,6 +1005,60 @@
    "score": 21
   },
   {
+   "src": "JR博多シティ",
+   "title": "10月スーパーマリオトレイン ペーパークラフト教室",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000168",
+   "span": [
+    "2026-10-04",
+    "2026-10-11"
+   ],
+   "days_list": null,
+   "raw": "2026-10-04〜2026-10-11",
+   "free": false,
+   "lead": "10月スーパーマリオトレイン ペーパークラフト教室 屋上つばめの杜ひろば ①11:00～ ②13:30～ ③15:00～ 対象 未就学児～小学生",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/664742d4.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 8,
+   "left": 24,
+   "since": -17,
+   "kids_add": 0,
+   "score": 21
+  },
+  {
+   "src": "県公式",
+   "title": "【太宰府天満宮】特別受験合格祈願大祭",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/12116",
+   "span": [
+    "2026-10-18",
+    "2026-10-01"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日（日） ※大祭期間：10月1日（木）～31日（土）",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/12116/responsive_images/ShiImSYwthGOBMf5YpnITZ9YQ3XPqG2bOXzIbVXf__1435_947.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": -16,
+   "left": 14,
+   "since": -31,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
    "src": "ららぽーと福岡",
    "title": "オリンピック選手による『走り方教室＆トークショー』開催♪",
    "city": "福岡市博多区",
@@ -899,6 +1089,33 @@
   },
   {
    "src": "県公式",
+   "title": "【宇美八幡宮】放生会",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13550",
+   "span": [
+    "2026-10-15",
+    "2026-10-15"
+   ],
+   "days_list": null,
+   "raw": "2026年10月15日（木）・16日（金） ※毎年10月15日・16日",
+   "free": false,
+   "lead": "すべての生命を慈しみ五穀豊穣を祈願する仲秋祭",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13550/responsive_images/I8c3TUQeHbIkzeObHUoFMOc7VFsvDTA9VWWRgc2T__800_533.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 28,
+   "since": -28,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
+   "src": "県公式",
    "title": "【宗像大社】秋季大祭「みあれ祭」",
    "city": "",
    "venue": "",
@@ -921,6 +1138,33 @@
    "days": 1,
    "left": 14,
    "since": -14,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
+   "src": "県公式",
+   "title": "くきのうみ花火の祭典",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13605",
+   "span": [
+    "2026-10-24",
+    "2026-10-24"
+   ],
+   "days_list": null,
+   "raw": "2026年10月24日（土） ※荒天中止（延期なし） ※中止の場合は、当日13:00までに発表",
+   "free": false,
+   "lead": "4,500発の花火が彩る音と光のファンタジー",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13605/responsive_images/SwBDpjZjU134ix3v563JNDXjN8FkPMbJeFdoRaRT__1755_1170.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 37,
+   "since": -37,
    "kids_add": 0,
    "score": 20
   },
@@ -1007,6 +1251,60 @@
   },
   {
    "src": "久留米観光",
+   "title": "北野天満宮秋季大祭（北野くんち）",
+   "city": "久留米市",
+   "venue": "北野エリア(北部エリア)",
+   "url": "https://welcome-kurume.com/events/detail/cc0b4488-0a6c-4fa6-a99c-ff5ca100c8da",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日(日) 9:30～16:00",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/cc0b4488-0a6c-4fa6-a99c-ff5ca100c8da/image/be921f4f839c3533ba53c831ffec30d1.jpg",
+   "venues": [
+    "北野エリア(北部エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
+   "src": "県公式",
+   "title": "ど～んとかがし祭（筑前町）",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13659",
+   "span": [
+    "2026-10-31",
+    "2026-11-01"
+   ],
+   "days_list": null,
+   "raw": "2026年10月31日（土）：前夜祭 2026年11月1日（日）：本祭",
+   "free": false,
+   "lead": "過去最大級の巨大わらかがしが登場！町内各所で打ち上げ花火も",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13659/responsive_images/CHLzTQ5FcGZg0SvaFniHaIbuZwRYLYX8j27IuWjf__1299_866.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 2,
+   "left": 45,
+   "since": -44,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
+   "src": "久留米観光",
    "title": "第54回 久留米市城島ふるさと夢まつり",
    "city": "久留米市",
    "venue": "城島・みづまエリア(南西部エリア)",
@@ -1032,6 +1330,33 @@
    "days": 2,
    "left": 3,
    "since": -2,
+   "kids_add": 0,
+   "score": 20
+  },
+  {
+   "src": "久留米観光",
+   "title": "高良大社おくんち(秋祭)",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/ad088c6e-cd9f-4613-9699-a4e291b93143",
+   "span": [
+    "2026-10-09",
+    "2026-10-11"
+   ],
+   "days_list": null,
+   "raw": "2026年10月9日(金)～11日(日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/ad088c6e-cd9f-4613-9699-a4e291b93143/image/987f498e89ae625fc7e92057f8d23688.jpg",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 3,
+   "left": 24,
+   "since": -22,
    "kids_add": 0,
    "score": 20
   },
@@ -1414,6 +1739,87 @@
    "score": 18
   },
   {
+   "src": "イオンモール福津",
+   "title": "(株)悪の秘密結社 悪徳事業部と遊ぼう＆ふれあい撮影会",
+   "city": "福津市",
+   "venue": "イオンモール福津",
+   "url": "https://fukutsu-aeonmall.com/event/e9ee5407-4f5c-4667-b225-11200f11949f",
+   "span": [
+    "2026-10-11",
+    "2026-10-11"
+   ],
+   "raw": "2026/10/11 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/7ee7e3c7-77cd-46f3-8284-45363b6cd974.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福津"
+   ],
+   "srcs": [
+    "イオンモール福津"
+   ],
+   "days": 1,
+   "left": 24,
+   "since": -24,
+   "kids_add": 0,
+   "score": 18
+  },
+  {
+   "src": "イオンモール福津",
+   "title": "「福岡黒田忍者隊」忍者ショー＆手裏剣打ち体験",
+   "city": "福津市",
+   "venue": "イオンモール福津",
+   "url": "https://fukutsu-aeonmall.com/event/b604bfdc-23b4-4942-9b51-1d6d302ff21a",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "raw": "2026/10/25 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/1ad7699e-ab04-4be3-8bf6-06e89695f7ba.png?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福津"
+   ],
+   "srcs": [
+    "イオンモール福津"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 18
+  },
+  {
+   "src": "イオンモール大牟田",
+   "title": "ドゲンジャーズショー＆写真撮影会",
+   "city": "大牟田市",
+   "venue": "イオンモール大牟田",
+   "url": "https://omuta-aeonmall.com/event/63b3f470-3e67-432a-9a33-58ff7111ca9e",
+   "span": [
+    "2026-10-12",
+    "2026-10-12"
+   ],
+   "raw": "2026/10/12 (月)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/c823d6d9-c651-4ca4-9eed-c75137ac34e2.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田"
+   ],
+   "srcs": [
+    "イオンモール大牟田"
+   ],
+   "days": 1,
+   "left": 25,
+   "since": -25,
+   "kids_add": 0,
+   "score": 18
+  },
+  {
    "src": "イオンモール福岡",
    "title": "まちのおしごと体験",
    "city": "糟屋郡粕屋町",
@@ -1499,6 +1905,36 @@
    "score": 18
   },
   {
+   "src": "マップ登録",
+   "title": "チン!するレストラン in FUKUOKA",
+   "city": "福岡市東区",
+   "venue": "チン!するレストラン in FUKUOKA",
+   "url": "https://lunaseiya.github.io/fukuoka-gourmet-map/#spot=chinsuru_restaurant_fukuoka",
+   "span": [
+    "2000-01-01",
+    "2026-09-23"
+   ],
+   "days_list": null,
+   "nostart": true,
+   "raw": "9月23日",
+   "free": false,
+   "lead": "日本アクセス主催の冷凍食品食べ放題イベントで**九州初上陸**。冷凍食品約150種+アイス約50種の計約200種を、自分で電子レンジで温めて食べる。⭐**料金は90分2,500円(税込)で、小学生は半額・小学生未満は無料**(飲料は別料金)",
+   "place": "チン!するレストラン in FUKUOKA",
+   "poster": null,
+   "from_map": true,
+   "venues": [
+    "チン!するレストラン in FUKUOKA"
+   ],
+   "srcs": [
+    "マップ登録"
+   ],
+   "days": 9763,
+   "left": 6,
+   "since": 9756,
+   "kids_add": 0,
+   "score": 18
+  },
+  {
    "src": "イオンモール福岡",
    "title": "100万人のクラシックライブ",
    "city": "糟屋郡粕屋町",
@@ -1528,6 +1964,60 @@
    "days": 1,
    "left": 2,
    "since": -2,
+   "kids_add": 0,
+   "score": 17
+  },
+  {
+   "src": "県公式",
+   "title": "かわさきフェスタ2026",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11775",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日（日） ※小雨決行、雨天時は一部内容変更あり",
+   "free": false,
+   "lead": "歌って踊って楽しもう！音楽とグルメが大集結",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11775/responsive_images/ORdspSaCZCC7kEXcN8qiE2Ji4p5Bhfhiw3lcMamQ__1728_1152.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 17
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "ハロウィンネイルアート",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000171",
+   "span": [
+    "2026-10-31",
+    "2026-10-31"
+   ],
+   "days_list": null,
+   "raw": "2026-10-31〜2026-10-31",
+   "free": false,
+   "lead": "ハロウィンネイルアート 屋上つばめの杜ひろば 13:00～16:00 20分ごとに7名程度 対象 未就学児～高校生",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/0d40958a.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 1,
+   "left": 44,
+   "since": -44,
    "kids_add": 0,
    "score": 17
   },
@@ -1671,56 +2161,29 @@
    "score": 16
   },
   {
-   "src": "いこーよ",
-   "title": "【久留米・9/20㊐】BABY SHARK LIVE!",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734936/normal.png?1785978154",
-   "city": "久留米市",
+   "src": "県公式",
+   "title": "若松北海岸 脇田おさかなフェスタ",
+   "city": "",
    "venue": "",
-   "url": "https://iko-yo.net/events/591589",
+   "url": "https://www.crossroadfukuoka.jp/event/17271",
    "span": [
-    "2026-09-20",
-    "2026-09-20"
+    "2026-10-10",
+    "2026-10-10"
    ],
-   "raw": "2026年9月20日(日)",
+   "days_list": null,
+   "raw": "2026年10月10日（土） ※荒天中止",
    "free": false,
-   "lead": "子どもが大好きなベイビーシャークの世界観を最大限再現した舞台が日本上陸！",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734936/normal.png?1785978154",
+   "lead": "あそんで！学んで！味わって！海を楽しもう",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17271/responsive_images/Sfg1Vdaq9ys8bDgC4aDXj62CalIUvFUlrXvMtNtm__760_456.jpg",
    "venues": [
-    "いこーよ"
+    "県公式"
    ],
    "srcs": [
-    "いこーよ"
+    "県公式"
    ],
    "days": 1,
-   "left": 3,
-   "since": -3,
-   "kids_add": 0,
-   "score": 16
-  },
-  {
-   "src": "いこーよ",
-   "title": "★入場無料★9/21（月祝）きらめき夜市",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1756241/normal.jpg?1789549174",
-   "city": "北九州市小倉南区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/601116",
-   "span": [
-    "2026-09-21",
-    "2026-09-21"
-   ],
-   "raw": "2026年9月21日(月)",
-   "free": false,
-   "lead": "当展示場初の夜イベント！きらめき夜市開催✨",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1756241/normal.jpg?1789549174",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 1,
-   "left": 4,
-   "since": -4,
+   "left": 23,
+   "since": -23,
    "kids_add": 0,
    "score": 16
   },
@@ -1843,33 +2306,6 @@
   },
   {
    "src": "イオンモール大牟田",
-   "title": "ぱーてぃーちゃんお笑いステージ",
-   "city": "大牟田市",
-   "venue": "イオンモール大牟田",
-   "url": "https://omuta-aeonmall.com/event/ec03c909-ea86-4ff6-b32a-7883b2e93ef0",
-   "span": [
-    "2026-09-20",
-    "2026-09-20"
-   ],
-   "raw": "2026/09/20 (日)",
-   "free": false,
-   "lead": "",
-   "poster": "https://image-cdn.aeonmall.jp/uploads/1764872c-0e9d-4272-af38-470e156b10c2.jpg?quality=50&format=webp",
-   "kyushu": false,
-   "venues": [
-    "イオンモール大牟田"
-   ],
-   "srcs": [
-    "イオンモール大牟田"
-   ],
-   "days": 1,
-   "left": 3,
-   "since": -3,
-   "kids_add": 0,
-   "score": 15
-  },
-  {
-   "src": "イオンモール大牟田",
    "title": "ウルトラヒーローがやってくる！",
    "city": "大牟田市",
    "venue": "イオンモール大牟田",
@@ -1973,33 +2409,6 @@
    "days": 1,
    "left": 1,
    "since": -1,
-   "kids_add": 0,
-   "score": 15
-  },
-  {
-   "src": "いこーよ",
-   "title": "バスの日イベントinチャチャタウン小倉",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755480/normal.jpg?1789539072",
-   "city": "北九州市小倉北区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/600810",
-   "span": [
-    "2026-09-20",
-    "2026-09-20"
-   ],
-   "raw": "2026年9月20日(日)",
-   "free": true,
-   "lead": "オープントップバス展示とグッズ販売",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755480/normal.jpg?1789539072",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 1,
-   "left": 3,
-   "since": -3,
    "kids_add": 0,
    "score": 15
   },
@@ -2148,6 +2557,62 @@
    "score": 15
   },
   {
+   "src": "いこーよ",
+   "title": "【福岡天神店】パラノマサイトAltFILE23「怪異潜む夜の教室」",
+   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
+   "city": "福岡市中央区",
+   "venue": "",
+   "url": "https://iko-yo.net/events/567449",
+   "span": [
+    "2026-05-02",
+    "2026-11-17"
+   ],
+   "raw": "2026年5月2日(土)～11月17日(火)",
+   "free": false,
+   "lead": "小学生から参加OK。リアル体験型の謎解きゲーム開催。",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
+   "venues": [
+    "いこーよ"
+   ],
+   "srcs": [
+    "いこーよ"
+   ],
+   "days": 200,
+   "left": 61,
+   "since": 138,
+   "kids_add": 0,
+   "score": 15
+  },
+  {
+   "src": "イオンモール直方",
+   "title": "ぱーてぃーちゃん お笑いステージ",
+   "city": "直方市",
+   "venue": "イオンモール直方",
+   "url": "https://nogata-aeonmall.com/event/39baf689-20cd-4a41-a3da-43b5a3716a93",
+   "span": [
+    "2026-10-24",
+    "2026-10-24"
+   ],
+   "raw": "2026/10/24 (土)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/2dae1450-6091-4400-a953-5faf6e6d34e6.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田",
+    "イオンモール直方"
+   ],
+   "srcs": [
+    "イオンモール大牟田",
+    "イオンモール直方"
+   ],
+   "days": 1,
+   "left": 37,
+   "since": -37,
+   "kids_add": 0,
+   "score": 14
+  },
+  {
    "src": "県公式",
    "title": "【筥崎宮】秋季社日祭・お潮井取り",
    "city": "",
@@ -2262,6 +2727,33 @@
    "score": 14
   },
   {
+   "src": "JR博多シティ",
+   "title": "ミニ動物園『ビジョナリーアーZooの杜 』",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000169",
+   "span": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026-10-24〜2026-10-25",
+   "free": true,
+   "lead": "ミニ動物園『ビジョナリーアーZooの杜 』 屋上つばめの杜ひろば 11:00～16:15 対象 屋上来場者全員",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/c4100b50.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 2,
+   "left": 38,
+   "since": -37,
+   "kids_add": 0,
+   "score": 14
+  },
+  {
    "src": "県公式",
    "title": "飯塚花火大会",
    "city": "",
@@ -2343,6 +2835,33 @@
    "score": 14
   },
   {
+   "src": "イオンモール福津",
+   "title": "【観覧無料】それいけ！アンパンマン ショー",
+   "city": "福津市",
+   "venue": "イオンモール福津",
+   "url": "https://fukutsu-aeonmall.com/event/e1935fb7-b66d-4a1b-8f40-f9ae1c88eaec",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "raw": "2026/10/18 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/43097c75-3e0e-42f2-bcf2-021b006d762e.png?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福津"
+   ],
+   "srcs": [
+    "イオンモール福津"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
    "src": "イオンモール大牟田",
    "title": "アーとしたい！！ワークショップ「色光の空に舞う」",
    "city": "大牟田市",
@@ -2398,6 +2917,62 @@
   },
   {
    "src": "県公式",
+   "title": "筑紫野市祭　二日市温泉と天拝山観月会withいきいき商工農フェスタ",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11059",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月25日（日） ※少雨決行、延期なし",
+   "free": false,
+   "lead": "菅原道真公の故事を偲び、名月を愛でる",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11059/responsive_images/z49C3cgKOyzHUVOQgGZSrmaH4yFECoOKhdZ8x5Rk__1726_1152.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "県公式",
+   "title": "耳納 de FES 2026（久留米市）",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/15776",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日（日） ※小雨決行、荒天中止 ※当日の天候等の条件により、花火が中止になる場合もあります。",
+   "free": false,
+   "lead": "田主丸の魅力を体感！地域密着型の野外音楽フェス",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15776/responsive_images/V0DExHFbdaIrwPVWVz7wqxbyik2bjcYP6lr3UaPJ__835_557.jpg",
+   "venues": [
+    "田主丸エリア(東部エリア)",
+    "県公式"
+   ],
+   "srcs": [
+    "久留米観光",
+    "県公式"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "県公式",
    "title": "筑後川SUP体験",
    "city": "",
    "venue": "",
@@ -2420,6 +2995,120 @@
    "days": 1,
    "left": 8,
    "since": -8,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "県公式",
+   "title": "水巻町コスモスまつり",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11441",
+   "span": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "days_list": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "raw": "2026年10月24日（土）・25日（日）",
+   "free": false,
+   "lead": "お笑いライブや麺フェス、ヒーローショーなどイベント満載",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11441/responsive_images/4EdukrlHBfh1C4FKtSQJONTsQBGrAtlbPTOIdpA3__1721_1147.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 2,
+   "left": 38,
+   "since": -37,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "久留米観光",
+   "title": "筑後SAKEフェスタ2026",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/a39abe0c-5ffa-4db0-b404-564cd04b9c58",
+   "span": [
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "days_list": [
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "raw": "2026年10月10日(土)･11日(日) 10日(土) 11:00～17:00 11日(日) 10:00～16:00",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/a39abe0c-5ffa-4db0-b404-564cd04b9c58/image/5b1d9cd2870ee59bad2a5c2e30208b7f.png",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 2,
+   "left": 24,
+   "since": -23,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "県公式",
+   "title": "糸島ハンドメイドカーニバル ’2026 in Autumn",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11365",
+   "span": [
+    "2026-10-23",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月23日（金）～25日（日） ※雨天決行（荒天時は時間や一部内容の変更・中止の場合あり）",
+   "free": false,
+   "lead": "全国のさまざまな手作り作家が糸島へ大集合",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11365/responsive_images/5HQCBckmg1UAqmn2SvVBgcdSUrliaKFjtnPVP1gC__1629_1086.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 3,
+   "left": 38,
+   "since": -36,
+   "kids_add": 0,
+   "score": 13
+  },
+  {
+   "src": "いこーよ",
+   "title": "デジタルアート体験",
+   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742116/normal.jpg?1787337203",
+   "city": "福津市",
+   "venue": "",
+   "url": "https://iko-yo.net/events/595047",
+   "span": [
+    "2026-09-05",
+    "2026-09-19"
+   ],
+   "raw": "2026年9月5日(土)～9月19日(土)",
+   "free": false,
+   "lead": "iPadを使って好きな絵を描こう！",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742116/normal.jpg?1787337203",
+   "venues": [
+    "いこーよ"
+   ],
+   "srcs": [
+    "いこーよ"
+   ],
+   "days": 15,
+   "left": 2,
+   "since": 12,
    "kids_add": 0,
    "score": 13
   },
@@ -2615,36 +3304,6 @@
    "score": 12
   },
   {
-   "src": "マップ登録",
-   "title": "チン!するレストラン in FUKUOKA",
-   "city": "福岡市東区",
-   "venue": "チン!するレストラン in FUKUOKA",
-   "url": "https://lunaseiya.github.io/fukuoka-gourmet-map/#spot=chinsuru_restaurant_fukuoka",
-   "span": [
-    "2000-01-01",
-    "2026-09-23"
-   ],
-   "days_list": null,
-   "nostart": true,
-   "raw": "9月23日",
-   "free": false,
-   "lead": "日本アクセス主催の冷凍食品食べ放題イベントで**九州初上陸**。冷凍食品約150種+アイス約50種の計約200種を、自分で電子レンジで温めて食べる。⭐**料金は90分2,500円(税込)で、小学生は半額・小学生未満は無料**(飲料は別料金)",
-   "place": "チン!するレストラン in FUKUOKA",
-   "poster": null,
-   "from_map": true,
-   "venues": [
-    "チン!するレストラン in FUKUOKA"
-   ],
-   "srcs": [
-    "マップ登録"
-   ],
-   "days": 9763,
-   "left": 6,
-   "since": 9756,
-   "kids_add": 0,
-   "score": 12
-  },
-  {
    "src": "イオンモール香椎浜",
    "title": "bread marche パンマルシェ in イオンモール香椎浜",
    "city": "福岡市東区",
@@ -2734,29 +3393,57 @@
    "score": 11
   },
   {
-   "src": "県公式",
-   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
-   "city": "",
-   "venue": "",
-   "url": "https://www.crossroadfukuoka.jp/event/17203",
+   "src": "大丸福岡天神",
+   "title": "熊本発！【Kirara】こだわり素材のアクセサリー",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館2階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002328",
    "span": [
-    "2026-07-18",
-    "2026-10-18"
+    "2026-10-07",
+    "2026-10-13"
    ],
    "days_list": null,
-   "raw": "2026年7月18日（土）～10月18日（日）",
+   "raw": "10月7日(水)～10月13日(火)",
    "free": false,
-   "lead": "「パンダコパンダ」の世界を紹介する体験型展覧会！",
-   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17203/responsive_images/hPXVTv8Q3r8ZUuyplWeyjKW2k0ulTN9H5dVGJd43__1583_1187.png",
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/d34f850a.png",
    "venues": [
-    "県公式"
+    "大丸福岡天神店"
    ],
    "srcs": [
-    "県公式"
+    "大丸福岡天神"
    ],
-   "days": 93,
-   "left": 31,
-   "since": 61,
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 11
+  },
+  {
+   "src": "いこーよ",
+   "title": "【生成AI×ものづくり教室】自分だけのゲーム・絵本・漫画を作ろう！",
+   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1754538/normal.png?1789356440",
+   "city": "福岡市中央区",
+   "venue": "",
+   "url": "https://iko-yo.net/events/600290",
+   "span": [
+    "2026-10-10",
+    "2026-10-17"
+   ],
+   "raw": "2026年10月10日(土)、10月11日(日)、10月17日(土)",
+   "free": false,
+   "lead": "東京でご好評いただいている「生成AI×ものづくり教室」が、福岡でも開催決定！",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1754538/normal.png?1789356440",
+   "venues": [
+    "いこーよ"
+   ],
+   "srcs": [
+    "いこーよ"
+   ],
+   "days": 8,
+   "left": 30,
+   "since": -23,
    "kids_add": 0,
    "score": 11
   },
@@ -3171,6 +3858,60 @@
   },
   {
    "src": "いこーよ",
+   "title": "姪浜ベビーマッサージ教室",
+   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1687513/normal.jpg?1779346766",
+   "city": "福岡市西区",
+   "venue": "",
+   "url": "https://iko-yo.net/events/572924",
+   "span": [
+    "2026-10-29",
+    "2026-10-29"
+   ],
+   "raw": "2026年10月29日(木)",
+   "free": false,
+   "lead": "子どもとのふたり時間がもっと楽しくなる♡生後2ヶ月からの姪浜ベビーマッサージ教室",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1687513/normal.jpg?1779346766",
+   "venues": [
+    "いこーよ"
+   ],
+   "srcs": [
+    "いこーよ"
+   ],
+   "days": 1,
+   "left": 42,
+   "since": -42,
+   "kids_add": 0,
+   "score": 10
+  },
+  {
+   "src": "いこーよ",
+   "title": "福岡1dayベビーマッサージ初級講座🌈ファーストサイン専門にこいろ",
+   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734128/normal.jpeg?1785838803",
+   "city": "福岡市早良区",
+   "venue": "",
+   "url": "https://iko-yo.net/events/591621",
+   "span": [
+    "2026-10-02",
+    "2026-10-02"
+   ],
+   "raw": "2026年10月2日(金)",
+   "free": false,
+   "lead": "「親子の関わり」を学び、わが子の専門家になる1day講座（修了証付き）",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734128/normal.jpeg?1785838803",
+   "venues": [
+    "いこーよ"
+   ],
+   "srcs": [
+    "いこーよ"
+   ],
+   "days": 1,
+   "left": 15,
+   "since": -15,
+   "kids_add": 0,
+   "score": 10
+  },
+  {
+   "src": "いこーよ",
    "title": "予防のチカラ！アビスパ健康応援マッチ",
    "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755457/normal.jpg?1789532089",
    "city": "福岡市博多区",
@@ -3193,87 +3934,6 @@
    "days": 1,
    "left": 2,
    "since": -2,
-   "kids_add": 0,
-   "score": 10
-  },
-  {
-   "src": "いこーよ",
-   "title": "保護犬カフェDAY",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1750012/normal.jpg?1788633163",
-   "city": "福岡市東区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/598393",
-   "span": [
-    "2026-09-20",
-    "2026-09-20"
-   ],
-   "raw": "2026年9月20日(日)",
-   "free": false,
-   "lead": "コーヒー片手にわんこタイム",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1750012/normal.jpg?1788633163",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 1,
-   "left": 3,
-   "since": -3,
-   "kids_add": 0,
-   "score": 10
-  },
-  {
-   "src": "いこーよ",
-   "title": "LYRA LIVE Vol.90",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751944/normal.jpeg?1788938543",
-   "city": "福岡市博多区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/599293",
-   "span": [
-    "2026-09-20",
-    "2026-09-20"
-   ],
-   "raw": "2026年9月20日(日)",
-   "free": false,
-   "lead": "KIRARI☆HAPPY BIRTHDAY",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751944/normal.jpeg?1788938543",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 1,
-   "left": 3,
-   "since": -3,
-   "kids_add": 0,
-   "score": 10
-  },
-  {
-   "src": "いこーよ",
-   "title": "SPiCA LIVE VOL.10",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751947/normal.jpg?1788938641",
-   "city": "福岡市博多区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/599295",
-   "span": [
-    "2026-09-20",
-    "2026-09-20"
-   ],
-   "raw": "2026年9月20日(日)",
-   "free": false,
-   "lead": "SPiCA LIVE VOL.10",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751947/normal.jpg?1788938641",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 1,
-   "left": 3,
-   "since": -3,
    "kids_add": 0,
    "score": 10
   },
@@ -3386,6 +4046,33 @@
    "score": 10
   },
   {
+   "src": "久留米観光",
+   "title": "【石橋文化センター開園70周年記念】 ケロポンズ ファミリーコンサート",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/8c527fcf-84bc-4fb3-81a9-a626cd26374d",
+   "span": [
+    "2026-10-12",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026年10月12日(月祝) 13:15開場／14:00開演",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/8c527fcf-84bc-4fb3-81a9-a626cd26374d/image/8154946f919ff67f9fec39f96ce52269.png",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 1,
+   "left": 25,
+   "since": -25,
+   "kids_add": 0,
+   "score": 10
+  },
+  {
    "src": "イオンモール福津",
    "title": "【NTTドコモPresents】マーブルベア作り",
    "city": "福津市",
@@ -3468,7 +4155,7 @@
   },
   {
    "src": "ららぽーと福岡",
-   "title": "※9/10追加情報※『VIVANT』キャラバン：ドラムに会いに行こう！in ららぽーと福岡",
+   "title": "※9/17追加情報※『VIVANT』キャラバン：ドラムに会いに行こう！in ららぽーと福岡",
    "city": "福岡市博多区",
    "venue": "ららぽーと福岡",
    "url": "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3597845.html",
@@ -3726,6 +4413,87 @@
    "score": 10
   },
   {
+   "src": "イオンモール福岡",
+   "title": "第６回全国高等学校 書道パフォーマンスグランプリ 九州沖縄大会",
+   "city": "糟屋郡粕屋町",
+   "venue": "イオンモール福岡",
+   "url": "https://fukuoka-aeonmall.com/event/11bd23cb-7645-42e8-b3bd-ecd85204178f",
+   "span": [
+    "2026-10-31",
+    "2026-10-31"
+   ],
+   "raw": "2026/10/31 (土) -",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/ada90d1a-b553-4c74-8d6d-5e255580cc7c.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福岡"
+   ],
+   "srcs": [
+    "イオンモール福岡"
+   ],
+   "days": 1,
+   "left": 44,
+   "since": -44,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
+   "src": "イオンモール大牟田",
+   "title": "ウルトラマンテオ ショー",
+   "city": "大牟田市",
+   "venue": "イオンモール大牟田",
+   "url": "https://omuta-aeonmall.com/event/dc4affb4-dbef-4771-bba5-c129881094a6",
+   "span": [
+    "2026-10-17",
+    "2026-10-17"
+   ],
+   "raw": "2026/10/17 (土)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/9cf314cf-81a3-4891-8503-f41eb71ec320.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田"
+   ],
+   "srcs": [
+    "イオンモール大牟田"
+   ],
+   "days": 1,
+   "left": 30,
+   "since": -30,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
+   "src": "イオンモール大牟田",
+   "title": "それいけ！アンパンマン ショー",
+   "city": "大牟田市",
+   "venue": "イオンモール大牟田",
+   "url": "https://omuta-aeonmall.com/event/292de9c9-b21c-47f1-bfd7-d53c76e8444d",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "raw": "2026/10/18 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/a03a2bd6-44d5-4bd5-a591-2434ddde1b70.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田"
+   ],
+   "srcs": [
+    "イオンモール大牟田"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
    "src": "キャナルシティ博多",
    "title": "『メンズアイドルコレクション』イベント&特典会＠キャナルシティ博多サンプラザステージ",
    "city": "福岡市博多区",
@@ -3749,6 +4517,61 @@
    "days": 1,
    "left": 16,
    "since": -16,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
+   "src": "キャナルシティ博多",
+   "title": "THEATRE OKAYAMA & FUKUOKA Fes 「THEATRE・O/F・COLLECTION!!」",
+   "city": "福岡市博多区",
+   "venue": "キャナルシティ博多",
+   "url": "https://canalcity.co.jp/event/detail/191?publish_begin=26-09-10&publish_end=26-10-12&hold_calendar=26-10-12~26-10-12",
+   "span": [
+    "2026-10-12",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026.10.12(月・祝)",
+   "free": false,
+   "lead": "ライブ・ステージ",
+   "poster": "https://canalcity.co.jp/theme/canalcity/files/event/ID00000191-20260903_100021-img.jpg",
+   "venues": [
+    "キャナルシティ博多"
+   ],
+   "srcs": [
+    "キャナルシティ博多"
+   ],
+   "days": 1,
+   "left": 25,
+   "since": -25,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
+   "src": "福岡市科学館",
+   "title": "［来館者限定企画］宙くんと行く！ うきうき星空ツアー あなたが見たい星空アンケート［締切：2026年10月12日(月)18時］",
+   "city": "福岡市中央区",
+   "venue": "福岡市科学館",
+   "url": "https://www.fukuokacity-kagakukan.jp/news/2026/08/planetarium-q.html",
+   "span": [
+    "2026-10-12",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "",
+   "free": false,
+   "lead": "",
+   "place": "福岡市科学館(六本松)",
+   "poster": "https://www.fukuokacity-kagakukan.jp/news/assets_c/2026/08/b148683d1f5e6c772aed136e23a01156149b7b93-thumb-480xauto-17670.jpg",
+   "venues": [
+    "福岡市科学館"
+   ],
+   "srcs": [
+    "福岡市科学館"
+   ],
+   "days": 1,
+   "left": 25,
+   "since": -25,
    "kids_add": 0,
    "score": 9
   },
@@ -4080,6 +4903,40 @@
    "score": 9
   },
   {
+   "src": "県公式",
+   "title": "沖ノ島洋上参拝ツアー",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/17276",
+   "span": [
+    "2026-06-28",
+    "2026-11-21"
+   ],
+   "days_list": [
+    "2026-06-28",
+    "2026-07-18",
+    "2026-08-23",
+    "2026-09-12",
+    "2026-10-10",
+    "2026-11-21"
+   ],
+   "raw": "2026年6月28日（日） 7月18日（土）※満員、26日（日） 8月23日（日） 9月12日（土）、20日（日） 10月10日（土）、18日（日） 11月21日（土）",
+   "free": false,
+   "lead": "禁足の島 沖ノ島を歴史ガイドと巡る、祈りの船旅 ～洋上参拝と宗像の神域体験ツアー～",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17276/responsive_images/uV1e8c1L0eJ98dpOt0zHVju9POCjFxyYpfdZ9wpT__1532_903.png",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 147,
+   "left": 65,
+   "since": 81,
+   "kids_add": 0,
+   "score": 9
+  },
+  {
    "src": "いこーよ",
    "title": "【福岡博多】ランドセルの端材で作るオリジナルキーホルダー作り",
    "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742696/normal.jpg?1787548324",
@@ -4104,33 +4961,6 @@
    "left": 136,
    "since": 55,
    "kids_add": 4,
-   "score": 9
-  },
-  {
-   "src": "いこーよ",
-   "title": "【福岡天神店】パラノマサイトAltFILE23「怪異潜む夜の教室」",
-   "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
-   "city": "福岡市中央区",
-   "venue": "",
-   "url": "https://iko-yo.net/events/567449",
-   "span": [
-    "2026-05-02",
-    "2026-11-17"
-   ],
-   "raw": "2026年5月2日(土)～11月17日(火)",
-   "free": false,
-   "lead": "小学生から参加OK。リアル体験型の謎解きゲーム開催。",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
-   "venues": [
-    "いこーよ"
-   ],
-   "srcs": [
-    "いこーよ"
-   ],
-   "days": 200,
-   "left": 61,
-   "since": 138,
-   "kids_add": 0,
    "score": 9
   },
   {
@@ -4189,6 +5019,60 @@
   },
   {
    "src": "県公式",
+   "title": "ちっご祭2026",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/12237",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日（日）",
+   "free": false,
+   "lead": "フィナーレには花火も！一日中楽しめる筑後市最大の祭り",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/12237/responsive_images/733ij9RwVraRzs4nUWerqguFSd3j6zGwBmEJgLZ0__1792_1344.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "白秋祭水上パレード",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/12873",
+   "span": [
+    "2026-11-01",
+    "2026-11-01"
+   ],
+   "days_list": null,
+   "raw": "2026年11月1日（日）～3日（火・祝） ※毎年11月1日～3日",
+   "free": false,
+   "lead": "明かりを灯した130隻のどんこ舟が夜の柳川をパレード",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/12873/responsive_images/XouJlJvjOnTVXrJ8E8h04nZ73iVMp9HB2tRUr9Dz__1629_1086.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 45,
+   "since": -45,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
    "title": "糸島市民まつり",
    "city": "",
    "venue": "",
@@ -4242,6 +5126,114 @@
    "score": 8
   },
   {
+   "src": "県公式",
+   "title": "宮若ふるさと祭2026",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/16592",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月25日（日）",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16592/responsive_images/udzlB5JRhBYZwQMRuhaATvE3hP0t2jdeE9gNRYnc__1721_1147.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "若松みなと祭り",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13288",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日（日） ※雨天決行、荒天中止",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13288/responsive_images/C4fgT6F76WTfsJN9isdv2MnLHUp5vhEqEiTeHsaU__800_533.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "うみてらす豊前　さかな祭り",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/14640",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月25日（日）",
+   "free": false,
+   "lead": "豊前の新鮮でおいしい魚を食べて掴んで楽しめる祭り",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14640/responsive_images/jcL93AyrVzO83kxW60vhEhLk9HLcF8Cl2n4d5Cxy__1639_1229.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "筑前の國 いいづか街道まつり",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11565",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月25日（日）",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11565/responsive_images/W6r9VtZBBNgCvOZEQulNzHnT9YsDYG8IxZwRsLEL__1778_1185.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
    "src": "久留米観光",
    "title": "J-FES 2026（第13回城島音楽祭）",
    "city": "久留米市",
@@ -4265,6 +5257,60 @@
    "days": 1,
    "left": 10,
    "since": -10,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "トリアス久山",
+   "title": "全九州オープンアームレスリング大会開催 10/11(日)",
+   "city": "糟屋郡久山町",
+   "venue": "トリアス久山",
+   "url": "https://torius.com/event/204233/",
+   "span": [
+    "2026-10-11",
+    "2026-10-11"
+   ],
+   "days_list": null,
+   "raw": "2026-10-11〜2026-10-11",
+   "free": false,
+   "lead": "第10回 全九州オープンアームレスリング大会 世界最速の格闘技、アームレスリングの祭典がトリアスで開催！ 「第10回 全九州オープンアームレスリング大会」 上級部門・初級部門（体重別・男女別）に加え、女子部門・素人部門を設置。競技経験者はもちろん、「一度やってみたい」という初心者や一般の方も参加できる素人大会を同時開催します！（賞品あり）。JAWA公式ルールに基づくWエリミネーション方式（敗者復活戦、2回負けで失格）で、初級・上級部門は優勝から3位までトロフィーを授与。 受付・検量は前日10月10日（土）15:00〜18:00、または当日9:30〜10:30。 JAWA会員・非会員問わずエント",
+   "poster": null,
+   "venues": [
+    "トリアス久山"
+   ],
+   "srcs": [
+    "トリアス久山"
+   ],
+   "days": 1,
+   "left": 24,
+   "since": -24,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "イオンモール大牟田",
+   "title": "秋の肉まつり",
+   "city": "大牟田市",
+   "venue": "イオンモール大牟田",
+   "url": "https://omuta-aeonmall.com/event/bac6d091-8808-4f10-8705-677d26f3243d",
+   "span": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "raw": "2026/10/24 (土) - 2026/10/25 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/a750bdf1-5622-43ed-834f-f83280230d51.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田"
+   ],
+   "srcs": [
+    "イオンモール大牟田"
+   ],
+   "days": 2,
+   "left": 38,
+   "since": -37,
    "kids_add": 0,
    "score": 8
   },
@@ -4325,6 +5371,114 @@
    "days": 2,
    "left": 10,
    "since": -9,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "TAGAWAコールマイン・フェスティバル～炭坑節まつり～",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11555",
+   "span": [
+    "2026-10-31",
+    "2026-11-01"
+   ],
+   "days_list": null,
+   "raw": "2026年10月31日（土）・11月1日（日）",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11555/responsive_images/O7G8c0KxpnCvvrP4oFlxfdW8nySnmL7CuFi9QEMu__1630_1087.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 2,
+   "left": 45,
+   "since": -44,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "【小石原焼 陶器市】小石原 秋の民陶むら祭",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13730",
+   "span": [
+    "2026-10-10",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026年10月10日（土）～12日（月・祝）",
+   "free": false,
+   "lead": "新作陶器がお買い得に！お気に入りを見つけに行こう",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13730/responsive_images/DsXLLbQ1veYGyEDH8wx1PFcpiYsSlDopcKY1qD2K__800_533.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 3,
+   "left": 25,
+   "since": -23,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "大川木工まつり",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11939",
+   "span": [
+    "2026-10-10",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026年10月10日（土）～12日（月・祝）",
+   "free": false,
+   "lead": "日本一の家具のおまつり",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11939/responsive_images/QXE7usevF45tC55osNRmiTTtmQd7ryVvg6pjZ7q1__1738_1304.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 3,
+   "left": 25,
+   "since": -23,
+   "kids_add": 0,
+   "score": 8
+  },
+  {
+   "src": "県公式",
+   "title": "糸島クラフトフェス",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11929",
+   "span": [
+    "2026-10-16",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月16日（金）～18日（日）",
+   "free": false,
+   "lead": "職人が生み出す一点ものに出会えるチャンス",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11929/responsive_images/2Jv5H0nB3DGWjmNUIk1GYBgOuqq6ce2Ah5A3RxSY__1756_1171.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 3,
+   "left": 31,
+   "since": -29,
    "kids_add": 0,
    "score": 8
   },
@@ -4906,6 +6060,61 @@
    "score": 7
   },
   {
+   "src": "福岡市科学館",
+   "title": "10/8(水)～ 5F基本展示室 クリエイティブスペースに新展示が登場！",
+   "city": "福岡市中央区",
+   "venue": "福岡市科学館",
+   "url": "https://www.fukuokacity-kagakukan.jp/news/2025/10/ai-2.html",
+   "span": [
+    "2026-10-08",
+    "2026-10-08"
+   ],
+   "days_list": null,
+   "raw": "",
+   "free": false,
+   "lead": "",
+   "place": "福岡市科学館(六本松)",
+   "poster": "https://www.fukuokacity-kagakukan.jp/news/assets_c/2022/09/logo_1920_1080-thumb-480xauto-9126.jpg",
+   "venues": [
+    "福岡市科学館"
+   ],
+   "srcs": [
+    "福岡市科学館"
+   ],
+   "days": 1,
+   "left": 21,
+   "since": -21,
+   "kids_add": 0,
+   "score": 6
+  },
+  {
+   "src": "県公式",
+   "title": "大島遊歩道・風車展望所",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/10211",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "コスモス見ごろ：10月下旬",
+   "free": false,
+   "lead": "花と海と風車が織りなすメルヘンな風景",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/10211/responsive_images/bBQlj2aOprlNRtfyFTq1G3yXWxNs5Am4DX2yR0mQ__1434_1076.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 6
+  },
+  {
    "src": "いこーよ",
    "title": "ワクワクどうぶつのイラスト展",
    "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1717010/normal.jpg?1783362902",
@@ -4962,6 +6171,33 @@
    "score": 6
   },
   {
+   "src": "イオンモール筑紫野",
+   "title": "もりまちマルシェ",
+   "city": "筑紫野市",
+   "venue": "イオンモール筑紫野",
+   "url": "https://chikushino-aeonmall.com/event/116ecd6a-f6eb-447b-87e7-f33120779bdd",
+   "span": [
+    "2026-10-11",
+    "2026-10-11"
+   ],
+   "raw": "2026/10/11 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/b3f21ddf-ec9c-4004-87c9-f8936d3df688.png?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール筑紫野"
+   ],
+   "srcs": [
+    "イオンモール筑紫野"
+   ],
+   "days": 1,
+   "left": 24,
+   "since": -24,
+   "kids_add": 0,
+   "score": 5
+  },
+  {
    "src": "県公式",
    "title": "【道の駅原鶴】ひまわりフェア",
    "city": "",
@@ -5012,6 +6248,33 @@
    "days": 1,
    "left": 17,
    "since": -17,
+   "kids_add": 0,
+   "score": 5
+  },
+  {
+   "src": "県公式",
+   "title": "道の駅しんよしとみ遺跡前",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13148",
+   "span": [
+    "2026-10-15",
+    "2026-10-15"
+   ],
+   "days_list": null,
+   "raw": "コスモス見ごろ：10月中旬",
+   "free": false,
+   "lead": "史跡一体型のオリジナリティあふれる道の駅で絶品グルメを味わおう",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13148/responsive_images/gJcUfevpWv22HdT0WZLN9XsE68WHuSYOn6wm4NoY__1673_1115.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 28,
+   "since": -28,
    "kids_add": 0,
    "score": 5
   },
@@ -5351,6 +6614,60 @@
    "score": 4
   },
   {
+   "src": "イオンモール福岡",
+   "title": "おとなり6周年記念 新鮮野菜の詰め放題！",
+   "city": "糟屋郡粕屋町",
+   "venue": "イオンモール福岡",
+   "url": "https://fukuoka-aeonmall.com/event/dab63840-3fcb-4152-ba14-a5c128fcc752",
+   "span": [
+    "2026-10-10",
+    "2026-10-10"
+   ],
+   "raw": "2026/10/10 (土) -",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/cf068d83-9561-4591-9f3f-f02e48fd3ecb.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福岡"
+   ],
+   "srcs": [
+    "イオンモール福岡"
+   ],
+   "days": 1,
+   "left": 23,
+   "since": -23,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "イオンモール福岡",
+   "title": "【LIVE】 真・世が世なら!!!5大都市ツアー開催記念フリーライブ ＠イオンモール福岡",
+   "city": "糟屋郡粕屋町",
+   "venue": "イオンモール福岡",
+   "url": "https://fukuoka-aeonmall.com/event/423fbe50-07e4-4c81-a26b-555ea3df9673",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "raw": "2026/10/18 (日) -",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/6b0339d4-0e9d-4bd5-a3a2-510ec92a4509.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福岡"
+   ],
+   "srcs": [
+    "イオンモール福岡"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
    "src": "イオンモール香椎浜",
    "title": "サントリー天然水 ×マイナビ ツール・ド・ 九州2026応援デー",
    "city": "福岡市東区",
@@ -5486,6 +6803,33 @@
    "score": 4
   },
   {
+   "src": "イオンモール筑紫野",
+   "title": "筑紫野日和",
+   "city": "筑紫野市",
+   "venue": "イオンモール筑紫野",
+   "url": "https://chikushino-aeonmall.com/event/f2259f62-a52b-4fe0-8491-0f8bfe9c52a0",
+   "span": [
+    "2026-10-14",
+    "2026-10-14"
+   ],
+   "raw": "2026/10/14 (水)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/fe405f6b-30e7-4a9c-bc14-905083feee9b.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール筑紫野"
+   ],
+   "srcs": [
+    "イオンモール筑紫野"
+   ],
+   "days": 1,
+   "left": 27,
+   "since": -27,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
    "src": "イオンモール直方",
    "title": "人力車に乗ってみよう",
    "city": "直方市",
@@ -5509,6 +6853,33 @@
    "days": 1,
    "left": 17,
    "since": -17,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "イオンモール直方",
+   "title": "【子育てに情報を 孤育てにサポートを】10月14日(水) ママハピEXPO＠イオンモール直方",
+   "city": "直方市",
+   "venue": "イオンモール直方",
+   "url": "https://nogata-aeonmall.com/event/d6512d34-6202-4aa9-bb21-d8a19946d2d8",
+   "span": [
+    "2026-10-14",
+    "2026-10-14"
+   ],
+   "raw": "2026/10/14 (水)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/56641cf6-7c36-4de7-877d-3018fe1db16b.png?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール直方"
+   ],
+   "srcs": [
+    "イオンモール直方"
+   ],
+   "days": 1,
+   "left": 27,
+   "since": -27,
    "kids_add": 0,
    "score": 4
   },
@@ -5590,6 +6961,33 @@
    "days": 1,
    "left": 11,
    "since": -11,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "イオンモール大牟田",
+   "title": "令和8年度 認知症市民公開講座",
+   "city": "大牟田市",
+   "venue": "イオンモール大牟田",
+   "url": "https://omuta-aeonmall.com/event/18ccc4fa-9ad0-4d52-b548-be6fccbf1449",
+   "span": [
+    "2026-10-10",
+    "2026-10-10"
+   ],
+   "raw": "2026/10/10 (土)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/905a6acb-88b9-407d-bf66-0b83f372b569.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール大牟田"
+   ],
+   "srcs": [
+    "イオンモール大牟田"
+   ],
+   "days": 1,
+   "left": 23,
+   "since": -23,
    "kids_add": 0,
    "score": 4
   },
@@ -5731,6 +7129,33 @@
   },
   {
    "src": "県公式",
+   "title": "SBI証券 presents TGC 北九州 2026",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11926",
+   "span": [
+    "2026-10-10",
+    "2026-10-10"
+   ],
+   "days_list": null,
+   "raw": "2026年10月10日（土）",
+   "free": false,
+   "lead": "人気モデルやアーティストが北九州に大集結！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11926/responsive_images/hgRH1b3klMvTYZzbwLGybS1LAqgX4r2J81dI2yTQ__1575_858.png",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 23,
+   "since": -23,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "県公式",
    "title": "鹿里棚田の彼岸花（ヒガンバナ）",
    "city": "",
    "venue": "",
@@ -5753,6 +7178,114 @@
    "days": 1,
    "left": 9,
    "since": -9,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "県公式",
+   "title": "三井寺　風車トンネル",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/14729",
+   "span": [
+    "2026-10-10",
+    "2026-10-10"
+   ],
+   "days_list": null,
+   "raw": "2026年10月10日（土）〜",
+   "free": false,
+   "lead": "「向かい風も向きを変えれば追い風に」と力強いメッセージ",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14729/responsive_images/H2YI2ekctxz8dmt85GkWYBWNfrXLVZY8fGQEVNEK__1673_1226.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 23,
+   "since": -23,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "県公式",
+   "title": "矢部川のコスモス",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/13840",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "見ごろ：10月下旬",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13840/responsive_images/7ODua32mFjXlTf1QvXOIsIWTYUgrUhGUWKyWChke__1713_1285.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "県公式",
+   "title": "【新原・奴山古墳群】コスモス",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/16607",
+   "span": [
+    "2026-10-25",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "見ごろ：10月下旬ごろ",
+   "free": false,
+   "lead": "コスモスに囲まれる世界遺産",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16607/responsive_images/MzGVlq1VCyL8IrRUPrnZEf2QcgroLl0MPWKK0D9C__1531_1021.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 1,
+   "left": 38,
+   "since": -38,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "久留米観光",
+   "title": "第13回 KurumeこくさいDay",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/c402390d-128e-49f1-9ea5-f4de23239b57",
+   "span": [
+    "2026-10-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年10月18日(日) 12:00～16:00",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/c402390d-128e-49f1-9ea5-f4de23239b57/image/4b5931386d8696f13ddcc769babc0ef4.png",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 1,
+   "left": 31,
+   "since": -31,
    "kids_add": 0,
    "score": 4
   },
@@ -5780,6 +7313,60 @@
    "days": 1,
    "left": 14,
    "since": -14,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "久留米観光",
+   "title": "【三潴町】歴史講座「水沼(みぬま)の君の時代」",
+   "city": "久留米市",
+   "venue": "城島・みづまエリア(南西部エリア)",
+   "url": "https://welcome-kurume.com/events/detail/e8d71bc1-b848-466d-bfab-98262f872f8b",
+   "span": [
+    "2026-10-09",
+    "2026-10-09"
+   ],
+   "days_list": null,
+   "raw": "2026年10月9日(金) 14:00～15:30(受付開始13:30)",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/e8d71bc1-b848-466d-bfab-98262f872f8b/image/88275cc5d3b225603092b10a73e49838.png",
+   "venues": [
+    "城島・みづまエリア(南西部エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 1,
+   "left": 22,
+   "since": -22,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "久留米観光",
+   "title": "筑後川マラソン2026",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/df2f7674-c628-4daf-9a32-b1c59a34a2cc",
+   "span": [
+    "2026-11-01",
+    "2026-11-01"
+   ],
+   "days_list": null,
+   "raw": "2026年11月1日(日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/df2f7674-c628-4daf-9a32-b1c59a34a2cc/image/454d625b0d05b38c14099c8007d8b923.jpg",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 1,
+   "left": 45,
+   "since": -45,
    "kids_add": 0,
    "score": 4
   },
@@ -5861,6 +7448,33 @@
    "days": 2,
    "left": 17,
    "since": -16,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "イオンモール筑紫野",
+   "title": "保護犬譲渡会",
+   "city": "筑紫野市",
+   "venue": "イオンモール筑紫野",
+   "url": "https://chikushino-aeonmall.com/event/a0c91261-55f0-4ae8-ac2f-3b3e6e2bbb24",
+   "span": [
+    "2026-10-10",
+    "2026-10-11"
+   ],
+   "raw": "2026/10/10 (土) - 2026/10/11 (日)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/e4fc85d4-561d-45c4-af3a-8e8e8ef8d0c4.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール筑紫野"
+   ],
+   "srcs": [
+    "イオンモール筑紫野"
+   ],
+   "days": 2,
+   "left": 24,
+   "since": -23,
    "kids_add": 0,
    "score": 4
   },
@@ -5955,6 +7569,36 @@
    "score": 4
   },
   {
+   "src": "県公式",
+   "title": "嘉穂劇場 再開場記念イベント",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/17260",
+   "span": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "days_list": [
+    "2026-10-24",
+    "2026-10-25"
+   ],
+   "raw": "2026年10月24日（土）・25日（日） ※24日の一般入場は12:30～",
+   "free": false,
+   "lead": "2026年10月24日に再開場します！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17260/responsive_images/MPCQ20uV4ViLGTP3J4BSWIArATP92c5YaKnCCpH7__1780_1180.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 2,
+   "left": 38,
+   "since": -37,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
    "src": "よかなび",
    "title": "福岡の酒蔵と食が一堂に。夜まで盛り上がる祭典「&SAKE FUKUOKA 2026」",
    "city": "福岡市",
@@ -5982,6 +7626,60 @@
    "score": 4
   },
   {
+   "src": "イオンモール福津",
+   "title": "おもいでケータイ再起動×イオンモール福津",
+   "city": "福津市",
+   "venue": "イオンモール福津",
+   "url": "https://fukutsu-aeonmall.com/event/ae74d659-8163-44a5-8ba1-ff17ab5d5e0b",
+   "span": [
+    "2026-10-10",
+    "2026-10-12"
+   ],
+   "raw": "2026/10/10 (土) - 2026/10/12 (月)",
+   "free": false,
+   "lead": "",
+   "poster": "https://image-cdn.aeonmall.jp/uploads/a8b63975-3caf-4b47-9206-85c355b92bad.jpg?quality=50&format=webp",
+   "kyushu": false,
+   "venues": [
+    "イオンモール福津"
+   ],
+   "srcs": [
+    "イオンモール福津"
+   ],
+   "days": 3,
+   "left": 25,
+   "since": -23,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "県公式",
+   "title": "上野焼　秋の窯開き",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/10401",
+   "span": [
+    "2026-10-23",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "2026年10月23日（金）～25日（日）",
+   "free": false,
+   "lead": "格式の高さを誇る「上野焼」の新作を気軽に手に取れる貴重な機会",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/10401/responsive_images/rxjHwofuCAfZ4Xq37Fvgv32UDufFqfQutzCfhKlo__1544_1158.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 3,
+   "left": 38,
+   "since": -36,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
    "src": "県公式",
    "title": "SYNAPSE FESTIVAL",
    "city": "",
@@ -6005,6 +7703,33 @@
    "days": 3,
    "left": 17,
    "since": -15,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "久留米観光",
+   "title": "KURUME WINE FESTA 2026",
+   "city": "久留米市",
+   "venue": "JR・西鉄久留米エリア(中央エリア)",
+   "url": "https://welcome-kurume.com/events/detail/eda33f84-c742-4e83-9605-ecd6c4072864",
+   "span": [
+    "2026-10-30",
+    "2026-11-01"
+   ],
+   "days_list": null,
+   "raw": "2026年10月30日(金)～11月1日(日) 30日 16:00～22:00 31日･11月1日 11:00～22:00",
+   "free": false,
+   "lead": "",
+   "poster": "https://welcome-kurume.com/files/Events/eda33f84-c742-4e83-9605-ecd6c4072864/image/23cbaf13634ed39f9c12797d5c278918.png",
+   "venues": [
+    "JR・西鉄久留米エリア(中央エリア)"
+   ],
+   "srcs": [
+    "久留米観光"
+   ],
+   "days": 3,
+   "left": 45,
+   "since": -43,
    "kids_add": 0,
    "score": 4
   },
@@ -6065,6 +7790,37 @@
    "score": 4
   },
   {
+   "src": "県公式",
+   "title": "嘉麻市　一夜城まつり",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/11447",
+   "span": [
+    "2026-10-25",
+    "2026-11-08"
+   ],
+   "days_list": [
+    "2026-10-25",
+    "2026-11-07",
+    "2026-11-08"
+   ],
+   "raw": "2026年10月25日（日）～11月8日（日） ※ライトアップは毎日18:00～翌6:00 ※花火打ち上げは11月7日（土）19:30ごろ",
+   "free": false,
+   "lead": "ライトアップされた荘厳な一夜城がよみがえる",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11447/responsive_images/6MHEgYQ4QIOlxpPFZXqDnVtLu2hVJTYANLhInE7a__800_533.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 15,
+   "left": 52,
+   "since": -38,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
    "src": "イオンモール福岡",
    "title": "シルバーウィーク よかとこマルシェ",
    "city": "糟屋郡粕屋町",
@@ -6090,6 +7846,61 @@
    "since": 5,
    "kids_add": 0,
    "score": 4
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "テレサの提灯が登場",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000173",
+   "span": [
+    "2026-10-01",
+    "2026-10-31"
+   ],
+   "days_list": null,
+   "raw": "10月1日（木）～10月31日（土） 17:00～22:00",
+   "free": false,
+   "lead": "テレサの提灯が登場 屋上つばめの杜ひろば 10月1日（木）～10月31日（土） 17:00～22:00 対象 来場者全員",
+   "poster": null,
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 31,
+   "left": 44,
+   "since": -14,
+   "kids_add": 0,
+   "score": 4
+  },
+  {
+   "src": "JR博多シティ",
+   "title": "天空の昆虫展",
+   "city": "福岡市博多区",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000166",
+   "span": [
+    "2026-08-07",
+    "2026-09-27"
+   ],
+   "days_list": null,
+   "raw": "2026-08-07〜2026-09-27",
+   "free": true,
+   "lead": "天空の昆虫展 屋上 つばめの杜ひろば 11：00～16：30 対象 屋上来場者全員",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/db1092cc.png",
+   "venues": [
+    "JR博多シティ 屋上つばめの杜ひろば"
+   ],
+   "srcs": [
+    "JR博多シティ"
+   ],
+   "days": 52,
+   "left": 10,
+   "since": 41,
+   "kids_add": 0,
+   "score": 4,
+   "note_mitake": true
   },
   {
    "src": "県公式",
@@ -6476,6 +8287,60 @@
    "score": 3
   },
   {
+   "src": "県公式",
+   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/17203",
+   "span": [
+    "2026-07-18",
+    "2026-10-18"
+   ],
+   "days_list": null,
+   "raw": "2026年7月18日（土）～10月18日（日）",
+   "free": false,
+   "lead": "「パンダコパンダ」の世界を紹介する体験型展覧会！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/17203/responsive_images/hPXVTv8Q3r8ZUuyplWeyjKW2k0ulTN9H5dVGJd43__1583_1187.png",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 93,
+   "left": 31,
+   "since": 61,
+   "kids_add": 0,
+   "score": 3
+  },
+  {
+   "src": "県公式",
+   "title": "五ケ山ダムカヤック体験",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/16156",
+   "span": [
+    "2026-11-01",
+    "2027-04-30"
+   ],
+   "days_list": null,
+   "raw": "4月～11月まで定期的に開催。詳細は下記予約サイトを確認してください。",
+   "free": false,
+   "lead": "九州最大級のダム湖で、のんびり楽しくカヤック体験！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/16156/responsive_images/pPnR4Ld1zSTOsKoJyy8bNVgDsB0KaDLN4WNSzkoK__1568_1046.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 181,
+   "left": 225,
+   "since": -45,
+   "kids_add": 0,
+   "score": 3
+  },
+  {
    "src": "イオンモール福岡",
    "title": "無料屋外遊び場『LUCLE PARK（ルクルパーク）』",
    "city": "糟屋郡粕屋町",
@@ -6503,6 +8368,89 @@
    "score": 3
   },
   {
+   "src": "県公式",
+   "title": "がんばろう熊本 マイナビ ツール・ド・九州２０２６",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/15735",
+   "span": [
+    "2026-10-09",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026年10月9日（金）～12日（月・祝）",
+   "free": false,
+   "lead": "UCI（国際自転車競技連合）公認のサイクルロードレース",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/15735/responsive_images/5uSUE7pD0fDnsvYkP6JJKASJrLM5cW5JOO4rmxG1__1800_1201.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 4,
+   "left": 25,
+   "since": -22,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "県公式",
+   "title": "第8回 九州オクトーバーフェストin門司港",
+   "city": "",
+   "venue": "",
+   "url": "https://www.crossroadfukuoka.jp/event/14558",
+   "span": [
+    "2026-10-09",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "2026年10月9日（金）～12日（月・祝）",
+   "free": false,
+   "lead": "限定ビール飲み比べ＆絶品グルメを楽しもう！",
+   "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/14558/responsive_images/3r8JXppzeyahcxY34XRQMZ9I5LP0drx2h1XClbM1__1701_932.jpg",
+   "venues": [
+    "県公式"
+   ],
+   "srcs": [
+    "県公式"
+   ],
+   "days": 4,
+   "left": 25,
+   "since": -22,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "博多阪急",
+   "title": "第58回 戸塚刺しゅう展 ～美しい手仕事 刺しゅうの美～",
+   "city": "福岡市博多区",
+   "venue": "博多阪急",
+   "place": "7階 イベントホール『ミューズ』",
+   "url": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/12711239_1813.html",
+   "span": [
+    "2026-10-21",
+    "2026-10-25"
+   ],
+   "days_list": null,
+   "raw": "●10月21日（水）～25日（日）午前10時～午後6時 / ●7階 イベントホール『ミューズ』",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/09/02/th-2.webp",
+   "venues": [
+    "博多阪急"
+   ],
+   "srcs": [
+    "博多阪急"
+   ],
+   "days": 5,
+   "left": 38,
+   "since": -34,
+   "kids_add": 0,
+   "score": 2,
+   "note_mitake": true
+  },
+  {
    "src": "大丸福岡天神",
    "title": "クツ．靴．くつバザール／秋のトリンプセール／ナイガイスペシャルセール",
    "city": "福岡市中央区",
@@ -6527,6 +8475,34 @@
    "days": 6,
    "left": 18,
    "since": -13,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "婦人服・雑貨・ワコールセール",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館8階催場",
+   "url": "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021740&amp;scd=000601",
+   "span": [
+    "2026-10-14",
+    "2026-10-19"
+   ],
+   "days_list": null,
+   "raw": "10月14日(水)～19日(月)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/8f12c16c.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 6,
+   "left": 32,
+   "since": -27,
    "kids_add": 0,
    "score": 2
   },
@@ -6589,6 +8565,90 @@
   },
   {
    "src": "大丸福岡天神",
+   "title": "ー熊本のこと、もっとー『Kumamotto Store』",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館B1",
+   "url": "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021758&amp;scd=000590",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/9e5f03c6.png",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "handmade baby & kids Ri4（リヨン）POPUP SHOP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館B1",
+   "url": "https://www.daimaru-fukuoka.jp/shopblog/detail/?cd=021760&amp;scd=000826",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/dae82214.png",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "marble SUD〈マーブルシュッド〉POP UP SHOP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館B1",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002360",
+   "span": [
+    "2026-10-21",
+    "2026-10-27"
+   ],
+   "days_list": null,
+   "raw": "10月21日（水）～10月27日（火）",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/9da1024f.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 40,
+   "since": -34,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
    "title": "【エリッツ】POPUP",
    "city": "福岡市中央区",
    "venue": "大丸福岡天神店",
@@ -6612,6 +8672,90 @@
    "days": 7,
    "left": 19,
    "since": -13,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "熊本発！【SEVEN VALLEY】天然石ジュエリー",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館2階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002327",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/fd7a9913.png",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "熊本発！【モリママビーズ】POPUP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館2階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002322",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/31d23b20.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "熊本発！ハンドメイドレザーブランド【GOTO manufacture】POPUP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館4階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002321",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/0d737717.png",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
    "kids_add": 0,
    "score": 2
   },
@@ -6698,6 +8842,118 @@
    "days": 7,
    "left": 19,
    "since": -13,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "〈ムー・ジュ ムナカタ〉POPUP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館6階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002339",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/bf0f6884.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "〈studio POGO〉POPUP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館6階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002338",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/f53a5a39.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "大丸福岡天神",
+   "title": "熊本発！〈Chica Jewelry works〉POPUP",
+   "city": "福岡市中央区",
+   "venue": "大丸福岡天神店",
+   "place": "本館6階",
+   "url": "https://www.daimaru-fukuoka.jp/eventinformation/detail/?cd=002335",
+   "span": [
+    "2026-10-07",
+    "2026-10-13"
+   ],
+   "days_list": null,
+   "raw": "10月7日(水)～10月13日(火)",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.daimaru-fukuoka.jp/uploads/images/resized/550x550/dmfukuoka/000002/000002/5cd05a0f.jpg",
+   "venues": [
+    "大丸福岡天神店"
+   ],
+   "srcs": [
+    "大丸福岡天神"
+   ],
+   "days": 7,
+   "left": 26,
+   "since": -20,
+   "kids_add": 0,
+   "score": 2
+  },
+  {
+   "src": "博多阪急",
+   "title": "HAKATA文具の博覧会",
+   "city": "福岡市博多区",
+   "venue": "博多阪急",
+   "place": "8階 催場",
+   "url": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/12711756_1813.html",
+   "span": [
+    "2026-10-06",
+    "2026-10-12"
+   ],
+   "days_list": null,
+   "raw": "●10月6日（火）～12日（月・祝） / ●8階 催場",
+   "free": false,
+   "lead": "",
+   "poster": "https://www.hankyu-dept.co.jp/hakata/shopnews/detail/__icsFiles/afieldfile/2026/09/07/thumb.jpg",
+   "venues": [
+    "博多阪急"
+   ],
+   "srcs": [
+    "博多阪急"
+   ],
+   "days": 7,
+   "left": 25,
+   "since": -19,
    "kids_add": 0,
    "score": 2
   },

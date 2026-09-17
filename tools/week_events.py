@@ -13,6 +13,11 @@
   torius… トリアス久山 https://torius.com/event_cal/  【2026-09-17追加】
             糟屋郡久山町。**日程がISO(2026-10-03 / 2026-09-05～2026-09-23)で入っており
             全源の中で一番確実**。ユーザーが現地チラシを持ってきて漏れが判明した源
+  hkc   … JR博多シティ こどもCITY HAKATA              【2026-09-17追加】
+            /kids/category/?category=kidsevent。**屋上つばめの杜ひろばで月次に
+            子連れイベントを回している**(マリオ工作・こども専門学校は毎月/収穫体験/天体観測)。
+            日付が `2026/10/13〜2026/10/13` で機械可読。館全体の /newsevent/ は
+            セールと営業案内が大半なので**使わない**
   manual… data/_手動イベント.json                      【2026-09-17追加】
             **公式サイトにイベント一覧が無い主催**(万代など)を現地チラシから手で書く。
             ファイルが無ければ0件で通る
@@ -608,6 +613,165 @@ def from_manual():
     return rows
 
 
+# ───────── JR博多シティ こどもCITY HAKATA(屋上つばめの杜ひろば) ─────────
+#  【2026-09-17ユーザー確定】ユーザーが「10月屋上つばめの杜ひろばイベント」の告知を
+#  見つけて「定期的にやってる？源に入れるべきか」と聞いてきた。実測したら**完全に定例**で、
+#  子連れ向けとしては屈指の濃さだった:
+#    ・「◯月屋上つばめの杜ひろばイベント」が9月号・10月号とも掲載 → **月次のまとめ記事**
+#    ・スーパーマリオトレイン ペーパークラフト教室 … レポートに6月・7月 → **月1回の定例**
+#    ・福岡こども専門学校のイベント              … レポートに6月・7月 → **月1回の定例**
+#    ・収穫体験(サツマイモ/イチゴ/ゴマ)・天体観測・ミニ動物園・昆虫展
+#    ・季節行事(節分鬼祓い祭り/イースター/春の運動会/ホタル放流会/秋の大収穫祭)
+#
+#  ⚠**/newsevent/ ではなく /kids/category/?category=kidsevent を使う**。
+#    館全体のニュース欄はセール・営業時間・カード入会が大半で子連れ向けが埋もれる。
+#    kids 側は `kidsevent`(予告) / `kidsnews`(屋上の営業情報) / `kidsreport`(開催済み)に
+#    分かれていて、**イベントだけを確実に取れる**。
+#  ⚠**カードの構造が /newsevent/ と違う**。kids 側は `<div class="detail">` の中に
+#    `txt01`(カテゴリ)が無く、`date` → `txt02`(タイトル) の順。
+#    newsevent 用の正規表現を流用すると**0件になる**(最初に踏んだ)。
+#  ⚠**レポートの終了日は `9999/12/31`** というセンチネル。混ぜると永久に残るので開始日に潰す。
+#  ⚠**まとめ記事の日付は「掲載期間」で会期ではない**。
+#    「10月屋上つばめの杜ひろばイベント」の date は `2026/09/01〜2026/11/03` だった。
+#    個別の日時は本文の `〇タイトル/【日時】/【対象】` にしか無いので、
+#    **まとめ記事は本文を割って、個別カードに無いものだけ拾う**
+#    (マリオ工作・天体観測・こども専門学校は個別カードもあるので二重に出さない)。
+HKC = 'https://www.jrhakatacity.com'
+# ⚠**カード全体**を掴む(画像は <div class="detail"> の外にあるので、
+#   detail だけ切り出すとポスターが取れない)
+HKC_CARD = re.compile(r'<li class="cmn-card01">\s*<a href="(/kids/detail/\?cd=(\d+))"'
+                      r'([\s\S]*?)</a>')
+HKC_DATE = re.compile(r'class="date">\s*(\d{4})/(\d{1,2})/(\d{1,2})'
+                      r'(?:\s*[〜~～]\s*(\d{4})/(\d{1,2})/(\d{1,2}))?')
+HKC_TXT = re.compile(r'class="txt02">([\s\S]*?)</div>')
+HKC_IMG = re.compile(r'<img[^>]+src="(/uploads/[^"]+)"')
+HKC_ROUNDUP = re.compile(r'^\s*\d{1,2}月\s*屋上つばめの杜ひろばイベント')
+# 本文の 〇見出し + 【日時】 + 【対象】
+HKC_BLOCK = re.compile(r'[〇○]\s*([^\n【]{2,50}?)\s*\n?\s*【日時】\s*([^\n【]{2,90})'
+                       r'(?:\s*\n?\s*【対象】\s*([^\n※]{1,40}))?')
+HKC_FIELD = re.compile(r'\n\s*(時間|場所)\s*\n\s*([^\n]{1,60})')
+
+
+def _plain(h):
+    """<br> を改行に変えてタグを落とす(【日時】ブロックを行で拾うため)"""
+    b = re.sub(r'<(script|style)[\s\S]*?</\1>', '', h)
+    b = re.sub(r'<br[^>]*>', '\n', b)
+    b = re.sub(r'<[^>]+>', '', b).replace('&nbsp;', ' ')
+    b = html.unescape(b)
+    return re.sub(r'\n{3,}', '\n\n', re.sub(r'[ \t]+', ' ', b))
+
+
+def _hkc_venue(place):
+    """⚠会場名を **spots.json のスポット名と完全一致させる**【2026-09-17】
+    詳細ページの「場所」は「屋上つばめの杜ひろば」で、スポット名
+    `JR博多シティ 屋上つばめの杜ひろば` と一致しないため、export_events.py 側の
+    完全一致チェックを通らず**会場スポットへのリンクが付かなかった**(座標だけ借りる状態)。
+    この源は月ごとにイベントURLが変わるので `_イベント会場.json` に手で足す運用は続かない。
+    → 施設名を前置して**毎月自動で紐付く**ようにする。"""
+    p = n(place or '').strip('　 ')
+    p = re.sub(r'^屋上\s+', '屋上', p)          # 「屋上 つばめの杜ひろば」の表記ゆれ
+    if not p:
+        return 'JR博多シティ 屋上つばめの杜ひろば'
+    if '博多シティ' in p:
+        return p
+    return 'JR博多シティ ' + p
+
+
+def from_hakatacity():
+    rows, roundups = [], []
+    try:
+        h = M.fetch(HKC + '/kids/category/?category=kidsevent')
+    except Exception as ex:
+        print('  ! JR博多シティ %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    cards = []
+    for path, cd, blk in HKC_CARD.findall(h):
+        md, mt = HKC_DATE.search(blk), HKC_TXT.search(blk)
+        if not (md and mt):
+            continue
+        title = n(re.sub(r'<[^>]+>', '', mt.group(1)))
+        # カードの画像をポスターにする(IP絡みは poster_ok が後で弾く)
+        mi = HKC_IMG.search(blk)
+        a = _mk(md.group(1), md.group(2), md.group(3), date.today())
+        e = (_mk(md.group(4), md.group(5), md.group(6), date.today())
+             if md.group(4) else a)
+        if e and e.year >= 9999:        # レポートのセンチネル
+            e = a
+        if not a:
+            continue
+        cards.append((HKC + path, title, a, e or a,
+                      (HKC + mi.group(1)) if mi else None))
+
+    def detail(url):
+        """(場所, 時間, 本文プレーンテキスト)"""
+        try:
+            d = M.fetch(url)
+            time.sleep(M.WAIT)
+        except Exception as ex:
+            print('  ! JR博多シティ 個別 %s %s' % (url, type(ex).__name__), file=sys.stderr)
+            return ('', '', '')
+        p = _plain(d)
+        f = dict((k, n(v)) for k, v in HKC_FIELD.findall(p))
+        return (f.get('場所', ''), f.get('時間', ''), p)
+
+    for url, title, a, e, img in cards:
+        if HKC_ROUNDUP.match(title):
+            roundups.append((url, title, a, e))
+            continue
+        place, tm, body = detail(url)
+        # 対象欄をリードに入れる。**kids_score は「対象: 未就学児〜小学生」で加点される**
+        tg = re.search(r'【対象】\s*([^\n※]{1,40})', body)
+        lead = ' '.join(x for x in [title, place, tm,
+                                    ('対象 ' + n(tg.group(1))) if tg else ''] if x)
+        rows.append({'src': 'JR博多シティ', 'title': title, 'city': '福岡市博多区',
+                     'venue': _hkc_venue(place),
+                     'url': url, 'span': (a, e), 'days_list': None,
+                     'raw': '%s〜%s' % (a, e), 'free': '無料' in body,
+                     'lead': n(lead)[:300], 'poster': img})
+    # ── まとめ記事を割る。**個別カードに既にあるものは飛ばす** ──────────
+    # ⚠main() の core() はローカル関数なのでここでは使えない。同じ正規化を持たせる
+    def _core(x):
+        # 「10月◯◯」の月の見出しを落としてから比べる(個別カードは月が付く)
+        x = re.sub(r'^\s*\d{1,2}月\s*', '', x or '')
+        return re.sub(r'[^0-9A-Za-z一-龥ぁ-んァ-ヶー]', '', x)
+
+    def _same(x, y):
+        """⚠**前方8文字の一致か、短い方が前方一致**で同一とみなす【実測で決めた】
+        まとめ記事側は表記がぶれる(「イチゴの苗植え🍓」/「イチゴの苗植え体験」、
+        サイト側の誤字「ペーパーグラフト」/「ペーパークラフト」)ので、
+        完全一致や固定長の前方一致だけでは**同じ催しが二重に出る**"""
+        if not x or not y:
+            return False
+        if x.startswith(y) or y.startswith(x):
+            return True
+        return len(x) >= 8 and len(y) >= 8 and x[:8] == y[:8]
+
+    have = [_core(r['title']) for r in rows]
+    for url, title, a, e in roundups:
+        place, tm, body = detail(url)
+        for name, when, tgt in HKC_BLOCK.findall(body):
+            nm = n(re.sub(r'[^\w\sぁ-んァ-ヶ一-龥ー・「」『』（）()＆&+\-/]', '', name)).strip('　 ')
+            if not nm or any(_same(_core(nm), hv) for hv in have):
+                continue
+            # ⚠年が書いていないので**掲載日を基準に**推定する
+            #   (12月に出る「1月号」を当年と誤らせないため)
+            sa, se, _ = jspan(when, a)
+            if sa in (False, 'ended'):
+                continue
+            have.append(_core(nm))
+            lead = ' '.join(x for x in [nm, place, when,
+                                        ('対象 ' + n(tgt)) if tgt else ''] if x)
+            rows.append({'src': 'JR博多シティ', 'title': nm, 'city': '福岡市博多区',
+                         'venue': _hkc_venue(place),
+                         'url': url, 'span': (sa, se or sa), 'days_list': None,
+                         'raw': n(when)[:60], 'free': '無料' in (tgt or ''),
+                         'lead': n(lead)[:300], 'poster': None})
+    print('  JR博多シティ %d件(個別%d + まとめ割り%d)'
+          % (len(rows), len(cards) - len(roundups), len(rows) - (len(cards) - len(roundups))),
+          file=sys.stderr)
+    return rows
+
+
 # ───────────────────── 福岡市科学館(六本松) ─────────────────────
 #  【2026-09-13ユーザー確定「科学館も追加しておきましょう」】
 #  ⚠/event と /events は404。**/news/ が使える**(/activity/ は1.6MBで2021年の
@@ -1022,7 +1186,7 @@ def main():
     ap.add_argument('--to', dest='t')
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
-                                     'daimaru,hankyu,yokanavi,kurume,torius,manual')
+                                     'daimaru,hankyu,yokanavi,kurume,torius,hkc,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1046,6 +1210,9 @@ def main():
                   ('yokanavi', from_yokanavi), ('kurume', from_kurume),
                   # 【2026-09-17追加】トリアス久山(糟屋郡久山町)。日付がISOで最も確実
                   ('torius', from_torius),
+                  # 【2026-09-17追加】JR博多シティ こどもCITY(屋上つばめの杜ひろば)。
+                  # 月次で子連れイベントを回している、この源で一番濃いところ
+                  ('hkc', from_hakatacity),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

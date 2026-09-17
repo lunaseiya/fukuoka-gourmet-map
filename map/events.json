@@ -64,6 +64,51 @@
    "rank": 26
   },
   {
+   "id": "aso_kinro_ghibli_yamaguchi",
+   "title": "金曜ロードショーとジブリ展 山口県立美術館",
+   "venue": "亀山町",
+   "city": "山口市",
+   "pref": "山口県",
+   "start": "2026-07-18",
+   "end": "2026-10-12",
+   "untilLabel": "10月12日",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05"
+   ],
+   "n": 19,
+   "url": "https://kinro-ghibli.com/yamaguchi/",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": true,
+   "spot": "aso_kinro_ghibli_yamaguchi",
+   "lat": 34.179534,
+   "lng": 131.474478,
+   "kids": true,
+   "ks": 22,
+   "score": null,
+   "near": [],
+   "rank": 25
+  },
+  {
    "id": "ev-15659",
    "title": "魔法の美術館",
    "venue": "BOSS E・ZO FUKUOKA 6Fイベントホール",
@@ -392,14 +437,75 @@
    "rank": 19
   },
   {
-   "id": "aso_kinro_ghibli_yamaguchi",
-   "title": "金曜ロードショーとジブリ展 山口県立美術館",
-   "venue": "亀山町",
-   "city": "山口市",
-   "pref": "山口県",
-   "start": "2026-07-18",
-   "end": "2026-10-12",
-   "untilLabel": "10月12日",
+   "id": "chinsuru_restaurant_fukuoka",
+   "title": "チン!するレストラン in FUKUOKA",
+   "venue": "アイランドシティ(香椎照葉)",
+   "city": "福岡市東区",
+   "pref": "福岡県",
+   "start": "2026-09-04",
+   "end": "2026-09-23",
+   "untilLabel": "9月23日",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23"
+   ],
+   "n": 7,
+   "url": "",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": true,
+   "spot": "chinsuru_restaurant_fukuoka",
+   "lat": 33.665799,
+   "lng": 130.415134,
+   "kids": true,
+   "ks": 16,
+   "score": null,
+   "near": [
+    {
+     "id": "shouyousuparizootohonten",
+     "name": "照葉スパリゾート本店",
+     "genre": "スーパー銭湯・岩盤浴リゾート",
+     "km": 0.12,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad381445/"
+    },
+    {
+     "id": "kidsland-977",
+     "name": "キッズランドUS 福岡アイランドアイ店",
+     "genre": "室内遊び場",
+     "km": 0.15,
+     "tabelog": null,
+     "asoview": "https://www.asoview.com/base/156986/",
+     "booking": null
+    },
+    {
+     "id": "halfpennyteriha",
+     "name": "HALF PENNY 照葉店",
+     "genre": "アイリッシュパブ",
+     "km": 0.63,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40057912/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "rank": 19
+  },
+  {
+   "id": "cetevents567449",
+   "title": "パラノマサイトAltFILE23「怪異潜む夜の教室」",
+   "venue": "福岡市中央区",
+   "city": "福岡市中央区",
+   "pref": "",
+   "start": "2026-05-02",
+   "end": "2026-11-17",
+   "untilLabel": "",
    "days": [
     "2026-09-17",
     "2026-09-18",
@@ -422,19 +528,50 @@
     "2026-10-05"
    ],
    "n": 19,
-   "url": "https://kinro-ghibli.com/yamaguchi/",
-   "poster": null,
+   "url": "https://iko-yo.net/events/567449",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
    "price": null,
    "time": null,
-   "verified": true,
-   "spot": "aso_kinro_ghibli_yamaguchi",
-   "lat": 34.179534,
-   "lng": 131.474478,
+   "verified": false,
+   "spot": null,
+   "lat": 33.589625,
+   "lng": 130.397298,
    "kids": true,
-   "ks": 16,
-   "score": null,
-   "near": [],
-   "rank": 19
+   "ks": 15,
+   "score": 15,
+   "src": "いこーよ",
+   "venueVia": "address",
+   "near": [
+    {
+     "id": "sp112473cf95",
+     "name": "牛角 天神西通り店",
+     "genre": "焼肉、ホルモン、居酒屋",
+     "km": 0.15,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40044811/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp654a702970",
+     "name": "焼肉きんぐ 福岡天神店",
+     "genre": "焼肉",
+     "km": 0.27,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp98bb5db93a",
+     "name": "スシロー 福岡親富孝通り店",
+     "genre": "回転寿司",
+     "km": 0.3,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "img": "cetevents567449.jpg",
+   "rank": 17
   },
   {
    "id": "cd3784e1b93fee6",
@@ -1236,14 +1373,14 @@
    "rank": 13
   },
   {
-   "id": "chinsuru_restaurant_fukuoka",
-   "title": "チン!するレストラン in FUKUOKA",
-   "venue": "アイランドシティ(香椎照葉)",
-   "city": "福岡市東区",
-   "pref": "福岡県",
-   "start": "2026-09-04",
-   "end": "2026-09-23",
-   "untilLabel": "9月23日",
+   "id": "cdetailcd000166",
+   "title": "天空の昆虫展",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "city": "福岡市博多区",
+   "pref": "",
+   "start": "2026-08-07",
+   "end": "2026-09-27",
+   "untilLabel": "",
    "days": [
     "2026-09-17",
     "2026-09-18",
@@ -1251,50 +1388,59 @@
     "2026-09-20",
     "2026-09-21",
     "2026-09-22",
-    "2026-09-23"
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27"
    ],
-   "n": 7,
-   "url": "",
-   "poster": null,
+   "n": 11,
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000166",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/db1092cc.png",
    "price": null,
    "time": null,
-   "verified": true,
-   "spot": "chinsuru_restaurant_fukuoka",
-   "lat": 33.665799,
-   "lng": 130.415134,
+   "verified": false,
+   "spot": null,
+   "lat": 33.590667,
+   "lng": 130.420392,
    "kids": true,
    "ks": 10,
-   "score": null,
+   "score": 4,
+   "src": "JR博多シティ",
+   "venueMatch": "tsubamenomori-hirobajrhakatacity",
+   "venueSpot": "tsubamenomori-hirobajrhakatacity",
+   "venueName": "JR博多シティ 屋上つばめの杜ひろば",
    "near": [
     {
-     "id": "shouyousuparizootohonten",
-     "name": "照葉スパリゾート本店",
-     "genre": "スーパー銭湯・岩盤浴リゾート",
-     "km": 0.12,
-     "tabelog": null,
+     "id": "spfc270b5004",
+     "name": "ラーメン海鳴 博多デイトス店",
+     "genre": "ラーメン",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/",
      "asoview": null,
-     "booking": "https://www.jalan.net/yad381445/"
-    },
-    {
-     "id": "kidsland-977",
-     "name": "キッズランドUS 福岡アイランドアイ店",
-     "genre": "室内遊び場",
-     "km": 0.15,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/156986/",
      "booking": null
     },
     {
-     "id": "halfpennyteriha",
-     "name": "HALF PENNY 照葉店",
-     "genre": "アイリッシュパブ",
-     "km": 0.63,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40057912/",
+     "id": "sp226480b37f",
+     "name": "博多川端どさんこ 博多デイトス店",
+     "genre": "味噌ラーメン・ラーメン",
+     "km": 0.11,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/",
      "asoview": null,
      "booking": null
+    },
+    {
+     "id": "hoterukyabinasufukuoka",
+     "name": "ホテルキャビナス福岡",
+     "genre": "ホテル",
+     "km": 0.24,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad318577/"
     }
    ],
-   "rank": 13
+   "img": "cdetailcd000166.jpg",
+   "rank": 12
   },
   {
    "id": "ev-194-publish-begin-26-09-09-publish-en",
@@ -1355,83 +1501,6 @@
     }
    ],
    "rank": 12
-  },
-  {
-   "id": "ckajpevent17203",
-   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
-   "venue": "北九州市漫画ミュージアム",
-   "city": "",
-   "pref": "",
-   "start": "2026-07-18",
-   "end": "2026-10-18",
-   "untilLabel": "",
-   "days": [
-    "2026-09-17",
-    "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21",
-    "2026-09-22",
-    "2026-09-23",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-09-30",
-    "2026-10-01",
-    "2026-10-02",
-    "2026-10-03",
-    "2026-10-04",
-    "2026-10-05"
-   ],
-   "n": 19,
-   "url": "https://www.crossroadfukuoka.jp/event/17203",
-   "poster": null,
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.887542,
-   "lng": 130.88473,
-   "kids": true,
-   "ks": 11,
-   "score": 11,
-   "src": "県公式",
-   "venueMatch": "kitakyushu-manga-museum",
-   "venueSpot": "kitakyushu-manga-museum",
-   "venueName": "北九州市漫画ミュージアム",
-   "near": [
-    {
-     "id": "tenjushikyoumachimise",
-     "name": "天寿し京町店",
-     "genre": "寿司",
-     "km": 0.26,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp45b21d83d1",
-     "name": "スシロー 小倉駅前店",
-     "genre": "回転寿司",
-     "km": 0.33,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40073124/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp5e9d22113b",
-     "name": "ワンカルビ チャチャタウン小倉店",
-     "genre": "焼肉",
-     "km": 0.57,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "rank": 11
   },
   {
    "id": "ccomevent204128",
@@ -1566,79 +1635,35 @@
    "rank": 11
   },
   {
-   "id": "cetevents567449",
-   "title": "パラノマサイトAltFILE23「怪異潜む夜の教室」",
-   "venue": "福岡市中央区",
-   "city": "福岡市中央区",
+   "id": "cetevents595047",
+   "title": "デジタルアート体験",
+   "venue": "福津市",
+   "city": "福津市",
    "pref": "",
-   "start": "2026-05-02",
-   "end": "2026-11-17",
+   "start": "2026-09-05",
+   "end": "2026-09-19",
    "untilLabel": "",
    "days": [
     "2026-09-17",
     "2026-09-18",
-    "2026-09-19",
-    "2026-09-20",
-    "2026-09-21",
-    "2026-09-22",
-    "2026-09-23",
-    "2026-09-24",
-    "2026-09-25",
-    "2026-09-26",
-    "2026-09-27",
-    "2026-09-28",
-    "2026-09-29",
-    "2026-09-30",
-    "2026-10-01",
-    "2026-10-02",
-    "2026-10-03",
-    "2026-10-04",
-    "2026-10-05"
+    "2026-09-19"
    ],
-   "n": 19,
-   "url": "https://iko-yo.net/events/567449",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1673935/normal.jpg?1776879620",
+   "n": 3,
+   "url": "https://iko-yo.net/events/595047",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1742116/normal.jpg?1787337203",
    "price": null,
    "time": null,
    "verified": false,
    "spot": null,
-   "lat": 33.589625,
-   "lng": 130.397298,
+   "lat": 33.786525,
+   "lng": 130.469773,
    "kids": true,
    "ks": 9,
-   "score": 9,
+   "score": 13,
    "src": "いこーよ",
    "venueVia": "address",
-   "near": [
-    {
-     "id": "sp112473cf95",
-     "name": "牛角 天神西通り店",
-     "genre": "焼肉、ホルモン、居酒屋",
-     "km": 0.15,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40044811/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp654a702970",
-     "name": "焼肉きんぐ 福岡天神店",
-     "genre": "焼肉",
-     "km": 0.27,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069663/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp98bb5db93a",
-     "name": "スシロー 福岡親富孝通り店",
-     "genre": "回転寿司",
-     "km": 0.3,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40031594/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "cetevents567449.jpg",
+   "near": [],
+   "img": "cetevents595047.jpg",
    "rank": 11
   },
   {
@@ -3272,6 +3297,83 @@
    ],
    "img": "cetevents585556.jpg",
    "rank": 4
+  },
+  {
+   "id": "ckajpevent17203",
+   "title": "いっしょにワクワクしよう！ パンダコパンダ展 福岡・北九州市漫画ミュージアムの巻",
+   "venue": "北九州市漫画ミュージアム",
+   "city": "",
+   "pref": "",
+   "start": "2026-07-18",
+   "end": "2026-10-18",
+   "untilLabel": "",
+   "days": [
+    "2026-09-17",
+    "2026-09-18",
+    "2026-09-19",
+    "2026-09-20",
+    "2026-09-21",
+    "2026-09-22",
+    "2026-09-23",
+    "2026-09-24",
+    "2026-09-25",
+    "2026-09-26",
+    "2026-09-27",
+    "2026-09-28",
+    "2026-09-29",
+    "2026-09-30",
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05"
+   ],
+   "n": 19,
+   "url": "https://www.crossroadfukuoka.jp/event/17203",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.887542,
+   "lng": 130.88473,
+   "kids": false,
+   "ks": 3,
+   "score": 3,
+   "src": "県公式",
+   "venueMatch": "kitakyushu-manga-museum",
+   "venueSpot": "kitakyushu-manga-museum",
+   "venueName": "北九州市漫画ミュージアム",
+   "near": [
+    {
+     "id": "tenjushikyoumachimise",
+     "name": "天寿し京町店",
+     "genre": "寿司",
+     "km": 0.26,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp45b21d83d1",
+     "name": "スシロー 小倉駅前店",
+     "genre": "回転寿司",
+     "km": 0.33,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40073124/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp5e9d22113b",
+     "name": "ワンカルビ チャチャタウン小倉店",
+     "genre": "焼肉",
+     "km": 0.57,
+     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "rank": 3
   },
   {
    "id": "cetevents596479",
@@ -7478,182 +7580,6 @@
    "rank": 15
   },
   {
-   "id": "cetevents591589",
-   "title": "BABY SHARK LIVE!",
-   "venue": "久留米シティプラザ",
-   "city": "久留米市",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/591589",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734936/normal.png?1785978154",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.313973,
-   "lng": 130.51343,
-   "kids": true,
-   "ks": 6,
-   "score": 16,
-   "src": "いこーよ",
-   "venueVia": "address",
-   "near": [
-    {
-     "id": "sp8522040c51",
-     "name": "スシロー 久留米通町店",
-     "genre": "回転寿司",
-     "km": 0.53,
-     "tabelog": "https://tabelog.com/fukuoka/A4008/A400801/40032224/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "fukuokakenseishounenkagakuka",
-     "name": "福岡県青少年科学館",
-     "genre": "科学館",
-     "km": 1.46,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/120044/",
-     "booking": null
-    },
-    {
-     "id": "yunosakakurumeonsen",
-     "name": "湯の坂久留米温泉",
-     "genre": "日帰り温泉/宿泊施設",
-     "km": 1.62,
-     "tabelog": null,
-     "asoview": null,
-     "booking": "https://www.jalan.net/yad350734/"
-    }
-   ],
-   "img": "cetevents591589.jpg",
-   "rank": 12
-  },
-  {
-   "id": "c2a7883b2e93ef0",
-   "title": "ぱーてぃーちゃんお笑いステージ",
-   "venue": "イオンモール大牟田",
-   "city": "大牟田市",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://omuta-aeonmall.com/event/ec03c909-ea86-4ff6-b32a-7883b2e93ef0",
-   "poster": "https://image-cdn.aeonmall.jp/uploads/1764872c-0e9d-4272-af38-470e156b10c2.jpg?quality=50&format=webp",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.030472,
-   "lng": 130.427765,
-   "kids": false,
-   "ks": 5,
-   "score": 15,
-   "src": "イオンモール大牟田",
-   "venueMatch": "aeonmallomuta",
-   "venueSpot": "aeonmallomuta",
-   "venueName": "イオンモール大牟田",
-   "near": [
-    {
-     "id": "kidsland-980",
-     "name": "キッズランドUS 福岡大牟田店",
-     "genre": "室内遊び場",
-     "km": 0.0,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/160626/",
-     "booking": null
-    },
-    {
-     "id": "spcc1d437252",
-     "name": "焼肉なべしま イオンモール大牟田店",
-     "genre": "焼肉",
-     "km": 0.15,
-     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40026533/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp795bfc4898",
-     "name": "焼肉ダイニング ワンカルビ トライアル大牟田店",
-     "genre": "焼肉",
-     "km": 0.76,
-     "tabelog": "https://tabelog.com/fukuoka/A4008/A400807/40069122/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "c2a7883b2e93ef0.jpg",
-   "rank": 11
-  },
-  {
-   "id": "cetevents600810",
-   "title": "バスの日イベントinチャチャタウン小倉",
-   "venue": "北九州市小倉北区",
-   "city": "北九州市小倉北区",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/600810",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755480/normal.jpg?1789539072",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.883634,
-   "lng": 130.888679,
-   "kids": false,
-   "ks": 3,
-   "score": 15,
-   "src": "いこーよ",
-   "venueVia": "address",
-   "near": [
-    {
-     "id": "sp5e9d22113b",
-     "name": "ワンカルビ チャチャタウン小倉店",
-     "genre": "焼肉",
-     "km": 0.0,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40074337/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "spd8e99e52e6",
-     "name": "はま寿司 チャチャタウン小倉店",
-     "genre": "回転寿司",
-     "km": 0.03,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40028278/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "tenjushikyoumachimise",
-     "name": "天寿し京町店",
-     "genre": "寿司",
-     "km": 0.43,
-     "tabelog": "https://tabelog.com/fukuoka/A4004/A400401/40000721/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "cetevents600810.jpg",
-   "rank": 9
-  },
-  {
    "id": "ckajpevent16352",
    "title": "原鶴湯ったりよかぜ祭り",
    "venue": "",
@@ -7756,122 +7682,6 @@
    ],
    "img": "comevents274311.jpg",
    "rank": 7
-  },
-  {
-   "id": "cetevents599293",
-   "title": "LYRA LIVE Vol.90",
-   "venue": "福岡市博多区",
-   "city": "福岡市博多区",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/599293",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751944/normal.jpeg?1788938543",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.601287,
-   "lng": 130.399407,
-   "kids": false,
-   "ks": 0,
-   "score": 10,
-   "src": "いこーよ",
-   "venueVia": "address",
-   "near": [
-    {
-     "id": "fukuokaanpanmankodomomyuujia",
-     "name": "福岡アンパンマンこどもミュージアムinモール",
-     "genre": "ミュージアム",
-     "km": 0.91,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/157187/",
-     "booking": null
-    },
-    {
-     "id": "hitsumabushiwashokubinch-20",
-     "name": "ひつまぶし和食備長 中洲川端店",
-     "genre": "ひつまぶし",
-     "km": 0.96,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40026105/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "spda0b68b7f6",
-     "name": "くら寿司 博多中洲店",
-     "genre": "回転寿司",
-     "km": 1.04,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400102/40047231/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "cetevents599293.jpg",
-   "rank": 6
-  },
-  {
-   "id": "cetevents599295",
-   "title": "SPiCA LIVE VOL.10",
-   "venue": "福岡市博多区",
-   "city": "福岡市博多区",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/599295",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1751947/normal.jpg?1788938641",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.6043,
-   "lng": 130.397776,
-   "kids": false,
-   "ks": 0,
-   "score": 10,
-   "src": "いこーよ",
-   "venueVia": "address",
-   "near": [
-    {
-     "id": "sp4fc6af45c0",
-     "name": "玄風館 千代店",
-     "genre": "焼肉、ホルモン",
-     "km": 1.13,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40000120/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp944baa8707",
-     "name": "はま寿司 博多千代店",
-     "genre": "回転寿司",
-     "km": 1.14,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40042166/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "fukuokaanpanmankodomomyuujia",
-     "name": "福岡アンパンマンこどもミュージアムinモール",
-     "genre": "ミュージアム",
-     "km": 1.26,
-     "tabelog": null,
-     "asoview": "https://www.asoview.com/base/157187/",
-     "booking": null
-    }
-   ],
-   "img": "cetevents599295.jpg",
-   "rank": 6
   },
   {
    "id": "cf1344af9dd6b25",
@@ -8012,64 +7822,6 @@
    "src": "県公式",
    "near": [],
    "img": "ckajpevent16550.jpg",
-   "rank": 6
-  },
-  {
-   "id": "cetevents598393",
-   "title": "保護犬カフェDAY",
-   "venue": "福岡市東区",
-   "city": "福岡市東区",
-   "pref": "",
-   "start": "2026-09-20",
-   "end": "2026-09-20",
-   "untilLabel": "",
-   "days": [
-    "2026-09-20"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/598393",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1750012/normal.jpg?1788633163",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": 33.689371,
-   "lng": 130.430019,
-   "kids": false,
-   "ks": 0,
-   "score": 10,
-   "src": "いこーよ",
-   "venueVia": "address",
-   "near": [
-    {
-     "id": "sp2cdc461f39",
-     "name": "溶岩焼肉居酒屋Beans",
-     "genre": "焼肉居酒屋",
-     "km": 0.22,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40066911/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "speacb13267f",
-     "name": "博多もつ鍋 権 和白",
-     "genre": "もつ鍋・居酒屋",
-     "km": 0.23,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40041515/",
-     "asoview": null,
-     "booking": null
-    },
-    {
-     "id": "sp4ceaad55dd",
-     "name": "かまどか 福岡和白店",
-     "genre": "居酒屋",
-     "km": 0.26,
-     "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40045788/",
-     "asoview": null,
-     "booking": null
-    }
-   ],
-   "img": "cetevents598393.jpg",
    "rank": 6
   },
   {
@@ -8371,35 +8123,6 @@
    ],
    "img": "ca176fd2fe0a755.jpg",
    "rank": 15
-  },
-  {
-   "id": "cetevents601116",
-   "title": "★入場無料★9/21（月祝）きらめき夜市",
-   "venue": "北九州市小倉南区",
-   "city": "北九州市小倉南区",
-   "pref": "",
-   "start": "2026-09-21",
-   "end": "2026-09-21",
-   "untilLabel": "",
-   "days": [
-    "2026-09-21"
-   ],
-   "n": 1,
-   "url": "https://iko-yo.net/events/601116",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1756241/normal.jpg?1789549174",
-   "price": null,
-   "time": null,
-   "verified": false,
-   "spot": null,
-   "lat": null,
-   "lng": null,
-   "kids": true,
-   "ks": 6,
-   "score": 16,
-   "src": "いこーよ",
-   "near": [],
-   "img": "cetevents601116.jpg",
-   "rank": 12
   },
   {
    "id": "c4b4a33102b28d3",
@@ -9059,7 +8782,7 @@
   },
   {
    "id": "cent3597845html",
-   "title": "※9/10追加情報※『VIVANT』キャラバン：ドラムに会いに行こう！in ららぽーと福岡",
+   "title": "※9/17追加情報※『VIVANT』キャラバン：ドラムに会いに行こう！in ららぽーと福岡",
    "venue": "ららぽーと福岡",
    "city": "福岡市博多区",
    "pref": "",
@@ -12617,6 +12340,69 @@
    "rank": 6
   },
   {
+   "id": "cdetailcd000173",
+   "title": "テレサの提灯が登場",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "city": "福岡市博多区",
+   "pref": "",
+   "start": "2026-10-01",
+   "end": "2026-10-31",
+   "untilLabel": "",
+   "days": [
+    "2026-10-01",
+    "2026-10-02",
+    "2026-10-03",
+    "2026-10-04",
+    "2026-10-05"
+   ],
+   "n": 5,
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000173",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.590667,
+   "lng": 130.420392,
+   "kids": false,
+   "ks": 4,
+   "score": 4,
+   "src": "JR博多シティ",
+   "venueMatch": "tsubamenomori-hirobajrhakatacity",
+   "venueSpot": "tsubamenomori-hirobajrhakatacity",
+   "venueName": "JR博多シティ 屋上つばめの杜ひろば",
+   "near": [
+    {
+     "id": "spfc270b5004",
+     "name": "ラーメン海鳴 博多デイトス店",
+     "genre": "ラーメン",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp226480b37f",
+     "name": "博多川端どさんこ 博多デイトス店",
+     "genre": "味噌ラーメン・ラーメン",
+     "km": 0.11,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "hoterukyabinasufukuoka",
+     "name": "ホテルキャビナス福岡",
+     "genre": "ホテル",
+     "km": 0.24,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad318577/"
+    }
+   ],
+   "rank": 4
+  },
+  {
    "id": "ccomevent204081",
    "title": "第2回 Fukuoka 福祉車両ふれあいの日 in トリアス'26 開催 10/2(金)3(土)",
    "venue": "トリアス久山",
@@ -12697,6 +12483,35 @@
    "near": [],
    "img": "comevents274376.jpg",
    "rank": 18
+  },
+  {
+   "id": "cetevents591621",
+   "title": "福岡1dayベビーマッサージ初級講座🌈ファーストサイン専門にこいろ",
+   "venue": "福岡市早良区",
+   "city": "福岡市早良区",
+   "pref": "",
+   "start": "2026-10-02",
+   "end": "2026-10-02",
+   "untilLabel": "",
+   "days": [
+    "2026-10-02"
+   ],
+   "n": 1,
+   "url": "https://iko-yo.net/events/591621",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1734128/normal.jpeg?1785838803",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 6,
+   "score": 10,
+   "src": "いこーよ",
+   "near": [],
+   "img": "cetevents591621.jpg",
+   "rank": 12
   },
   {
    "id": "ckajpevent17336",
@@ -12809,6 +12624,66 @@
     }
    ],
    "rank": 40
+  },
+  {
+   "id": "cdetailcd000174",
+   "title": "サツマイモ収穫体験",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "city": "福岡市博多区",
+   "pref": "",
+   "start": "2026-10-03",
+   "end": "2026-10-03",
+   "untilLabel": "",
+   "days": [
+    "2026-10-03"
+   ],
+   "n": 1,
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000174",
+   "poster": "https://www.jrhakatacity.com/uploads/images/resized/390x0/jrhakatacity/000002/000002/def60320.png",
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.590667,
+   "lng": 130.420392,
+   "kids": true,
+   "ks": 19,
+   "score": 23,
+   "src": "JR博多シティ",
+   "venueMatch": "tsubamenomori-hirobajrhakatacity",
+   "venueSpot": "tsubamenomori-hirobajrhakatacity",
+   "venueName": "JR博多シティ 屋上つばめの杜ひろば",
+   "near": [
+    {
+     "id": "spfc270b5004",
+     "name": "ラーメン海鳴 博多デイトス店",
+     "genre": "ラーメン",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp226480b37f",
+     "name": "博多川端どさんこ 博多デイトス店",
+     "genre": "味噌ラーメン・ラーメン",
+     "km": 0.11,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "hoterukyabinasufukuoka",
+     "name": "ホテルキャビナス福岡",
+     "genre": "ホテル",
+     "km": 0.24,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad318577/"
+    }
+   ],
+   "img": "cdetailcd000174.jpg",
+   "rank": 25
   },
   {
    "id": "ckajpevent13418",
@@ -13212,6 +13087,66 @@
    ],
    "img": "cfc657b813d8bd0.jpg",
    "rank": 6
+  },
+  {
+   "id": "cdetailcd000168",
+   "title": "10月スーパーマリオトレイン ペーパークラフト教室",
+   "venue": "JR博多シティ 屋上つばめの杜ひろば",
+   "city": "福岡市博多区",
+   "pref": "",
+   "start": "2026-10-04",
+   "end": "2026-10-11",
+   "untilLabel": "",
+   "days": [
+    "2026-10-04",
+    "2026-10-05"
+   ],
+   "n": 2,
+   "url": "https://www.jrhakatacity.com/kids/detail/?cd=000168",
+   "poster": null,
+   "price": null,
+   "time": null,
+   "verified": false,
+   "spot": null,
+   "lat": 33.590667,
+   "lng": 130.420392,
+   "kids": true,
+   "ks": 19,
+   "score": 21,
+   "src": "JR博多シティ",
+   "venueMatch": "tsubamenomori-hirobajrhakatacity",
+   "venueSpot": "tsubamenomori-hirobajrhakatacity",
+   "venueName": "JR博多シティ 屋上つばめの杜ひろば",
+   "near": [
+    {
+     "id": "spfc270b5004",
+     "name": "ラーメン海鳴 博多デイトス店",
+     "genre": "ラーメン",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40028926/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "sp226480b37f",
+     "name": "博多川端どさんこ 博多デイトス店",
+     "genre": "味噌ラーメン・ラーメン",
+     "km": 0.11,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40045519/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "hoterukyabinasufukuoka",
+     "name": "ホテルキャビナス福岡",
+     "genre": "ホテル",
+     "km": 0.24,
+     "tabelog": null,
+     "asoview": null,
+     "booking": "https://www.jalan.net/yad318577/"
+    }
+   ],
+   "rank": 23
   },
   {
    "id": "ckajpevent11749",

@@ -408,7 +408,16 @@ def from_canal():
 #    <span class="eventsCard__itemDate">2026.9.27 開催</span>
 #    <h3 class="eventsCard__itemTtl">タイトル</h3>
 ICP = 'https://ic-centralpark.jp'
-ICP_BLK = re.compile(r'eventsCard__itemThumb"([\s\S]{0,900}?)eventsCard__itemTtl">([\s\S]*?)</h3>')
+# ⚠**カードを「サムネ→タイトル」の正規表現で拾ってはいけない**【2026-09-18に実測して作り直し】
+#   旧実装は `eventsCard__itemThumb"([\s\S]{0,900}?)eventsCard__itemTtl">` で挟んでいたが、
+#   **サムネを持たないカードがあると次のカードまで走る**。実際に
+#   「美化活動ご協力のお願い -2026- SEE MORE 2026.9.12 開催 足裏相談 -2026-」という
+#   3枚分を繋げた偽イベントが1件できていた。
+#   さらに旧実装は url を一覧ページ固定にしていたので、
+#   **全イベントが同じURLになり、補足ファイル(_イベント補足.json)でキーを分けられなかった**。
+#   → `class="eventsCard__item"` で**カード単位に割ってから**、各カードの
+#     <a href> / itemDate / itemTtl / img を取る
+ICP_ITEM = re.compile(r'class="eventsCard__item"')
 
 
 def from_iccentral():
@@ -418,17 +427,45 @@ def from_iccentral():
     except Exception as ex:
         print('  ! IC中央公園 %s' % type(ex).__name__, file=sys.stderr)
         return rows
-    for m in ICP_BLK.finditer(h):
-        mid, title = m.group(1), n(m.group(2))
-        dt = re.search(r'eventsCard__itemDate">([\s\S]*?)</span>', mid)
-        im = re.search(r'<img src="([^"]+)"', mid)
-        a, e, days = jspan(n(dt.group(1)) if dt else title)
-        if a in (False, 'ended') or not title:
+    seen = set()
+    cards = ICP_ITEM.split(h)[1:]      # 先頭はヘッダなので捨てる
+    for c in cards:
+        tm = re.search(r'eventsCard__itemTtl">([\s\S]*?)</h3>', c)
+        if not tm:
             continue
+        # ⚠最後のカードは `</h3>` が閉じ切らずフッターまで飲むことがある(実測)。
+        #   「SEE MORE」「アクセス」などのページ部品で切る保険を入れる
+        title = re.split(r'SEE\s*MORE|\d{4}\s*\.\s*\d{1,2}\s*\.\s*\d{1,2}\s*開催',
+                         n(tm.group(1)))[0].strip(' 　・')
+        if len(title) < 3:
+            continue
+        am = re.search(r'<a href="(%s/events/[^"#?]+)"' % re.escape(ICP), c)
+        url = am.group(1) if am else (ICP + '/events/')
+        dt = re.search(r'eventsCard__itemDate">([\s\S]*?)</span>', c)
+        im = re.search(r'eventsCard__itemThumb"[\s\S]{0,400}?<img src="([^"]+)"', c)
+        raw = n(dt.group(1)) if dt else ''
+        # ⚠**一覧の日付は「初日」だけ**【2026-09-18に実測】。
+        #   「秋の七草クイズラリー」は一覧が "2026.9.1 開催" で1日扱いになっていたが、
+        #   個別ページには「開催日時 ９月１日(火)～３０日(水)」と会期が書いてある。
+        #   → 4件しかないので**個別ページを開いて会期を取り直す**
+        if am:
+            try:
+                dh = M.fetch(url)
+                dm = re.search(r'開催日時[\s　]*([^<\n]{4,60})', re.sub(r'<[^>]+>', '', dh))
+                if dm:
+                    raw = n(dm.group(1)) or raw
+            except Exception:
+                pass
+        a, e, days = jspan(raw or title)
+        if a in (False, 'ended'):
+            continue
+        if url in seen:                # オススメ枠と一覧枠に同じカードが出る
+            continue
+        seen.add(url)
         rows.append({'src': 'アイランドシティ中央公園', 'title': title,
                      'city': '福岡市東区', 'venue': 'アイランドシティ中央公園',
-                     'url': ICP + '/events/', 'span': (a, e), 'days_list': days,
-                     'raw': n(dt.group(1)) if dt else '', 'free': False, 'lead': '',
+                     'url': url, 'span': (a, e), 'days_list': days,
+                     'raw': raw, 'free': False, 'lead': '',
                      'poster': im.group(1) if im else None})
     print('  アイランドシティ中央公園 %d件' % len(rows), file=sys.stderr)
     return rows
@@ -633,7 +670,9 @@ MEMO_HEAD = re.compile(
     r'\d{1,2}\s*[/月]\s*\d{1,2}[^\n]{0,34}'          # 9/20（日）～23（水・祝）
     r'|\d{1,2}\s*[：:]\s*\d{2}[^\n]{0,34}'           # 11：00～17：00
     r'|[0-9０-９]+[FＦ階][^\n]{0,24}'                 # 2Fサンデッキ
-    r'|(?:場所|会場|対象|料金|参加費|定員|日時|時間|開催日|開催時間|申込|予約)[^\n]{0,60}'
+    # ⚠**日程** も入れる【2026-09-18】。イオン九州の本文は「日程：9/19（土）」の形で、
+    #   これが memo に残って**カードの情報行と二重**になっていた
+    r'|(?:場所|会場|対象|料金|参加費|定員|日時|日程|時間|開催日|開催時間|申込|予約)[^\n]{0,60}'
     # ★**【日時】【対象】【受付】…の行も落とす**【2026-09-17】
     #   JR博多シティは本文が「【日時】10月3日(土) ①10:30 ②13:00」の形式で、
     #   行頭が【なので上の素の語では当たらず、**memoに日時が重複していた**
@@ -1367,11 +1406,62 @@ def from_kurume(maxpage=3):
 # ───────────────────────── 商業施設 ─────────────────────────
 def from_mall():
     rows = []
+    n_det = 0
     for r in M.collect():
-        rows.append({'src': r['mall'], 'title': r['title'], 'city': r['city'],
-                     'venue': r['mall'], 'url': r['url'], 'span': r['span'],
-                     'raw': r['info'], 'free': False, 'lead': '',
-                     'poster': r.get('poster'), 'kyushu': r.get('kyushu')})
+        row = {'src': r['mall'], 'title': r['title'], 'city': r['city'],
+               'venue': r['mall'], 'url': r['url'], 'span': r['span'],
+               'raw': r['info'], 'free': False, 'lead': '',
+               'poster': r.get('poster'), 'kyushu': r.get('kyushu')}
+        # ★**イオン九州の館は詳細ページから 時間/場所/料金/先着人数 を取る**
+        #   【2026-09-18ユーザー指摘「キッズモデル体験のところにmemoがないのはなんでだろう？」】
+        #   原因: from_mall は `lead: ''` を固定で入れていて**説明文を1文字も集めていなかった**。
+        #   ⚠しかもイオンモールの詳細ページには**本文が存在しない**(実測)。
+        #     あるのは 日程/時間/場所/先着人数 のテーブルだけ。
+        #     つまり「どんな企画か」の文章は**そもそも取れない**。
+        #   → 代わりに「**先着100名・10時から整理券**」のような
+        #     **行く前に効く情報**を memo に載せる。これが実質いちばん価値が高い。
+        #   ⚠開くのは `kyushu` の館だけ。イオンモール社の館は完全にJS描画で
+        #     静的HTMLに1文字も無いので、開いても無駄打ちになる(M.detail のコメント参照)。
+        #     実測で kyushu は香椎浜だけなので追加のリクエストは10件程度で済む
+        if r.get('kyushu'):
+            try:
+                d = M.detail(r)
+                time.sleep(M.WAIT)
+                n_det += 1
+            except Exception as ex:
+                print('  ! %s 個別 %s' % (r['mall'], type(ex).__name__), file=sys.stderr)
+                d = {}
+            notes = []
+            for k in ('time', 'place', 'price'):
+                if not d.get(k):
+                    continue
+                v = n(d[k])
+                # ⚠**「時間」のセルに場所や受付の注記まで入っていることがある**(実測)。
+                #   「①11：00～ ②12：00～ … ■場所/1階 マレットメット前
+                #     ※10：30より会場にて①②③の受付開始…」のように1セルに全部入る。
+                #   そのままだとカードの情報行が崩れるので、**時刻だけを time に残し、
+                #   ※や■以降は memo に回す**(整理券の配布時刻は行く前に効く情報)
+                if k == 'time':
+                    head = re.split(r'[※■]', v)[0].strip('　 /')
+                    rest = [x.strip('　 /') for x in re.split(r'[※■]', v)[1:]]
+                    notes += [x for x in rest if len(x) >= 6]
+                    v = head or v
+                row[k] = v[:60]
+            if d.get('note'):
+                # 「先着人数:各日先着100名様※10：00より整理券を配布します」を読める形に割る
+                s = n(d['note'])
+                parts = [x.strip('　 ') for x in re.split(r'\s*/\s*|※', s) if x.strip('　 ')]
+                notes = [re.sub(r'^(?:先着人数|定員|対象)\s*[:：]\s*', '', x)
+                         for x in parts] + notes
+            # 重複を潰して memo にする。⚠**中身が無ければ None**(空の箱は出さない)
+            seen, mm = set(), []
+            for x in notes:
+                x = x.strip('　 ')
+                if len(x) >= 4 and x not in seen:
+                    seen.add(x); mm.append(x)
+            row['memo'] = mm[:3] or None
+        rows.append(row)
+    print('  商業施設 %d件(うち個別を開いた %d件)' % (len(rows), n_det), file=sys.stderr)
     return rows
 
 

@@ -241,15 +241,14 @@ def memo(r, sp):
     if not ds and rm:
         return rm[:4]
     if ds:
-        out = []
-        for d in ds:
-            s = MEMO_NOISE.sub('', MEMO_DROP.sub('', str(d))).strip('　 ・/')
-            if len(s) >= 4 and not any(s.startswith(p) for p in ('9/', '10/', '11/')):
-                out.append(s)
-            if len(out) >= 4:
-                break
+        # ⚠**detail は手で書いた文なので掃除しない**【2026-09-18に踏んだ】
+        #   MEMO_DROP/MEMO_NOISE を掛けていたせいで
+        #   「対象は小学生以上の子どもと保護者」→「は小学生以上の…」、
+        #   「料金と対象年齢はポスターに記載なし」→「と対象年齢は…」と頭が削れていた。
+        #   掃除が必要なのは源から機械的に取った lead のほうだけ。
+        out = [str(d).strip() for d in ds if str(d).strip()]
         if out:
-            return out
+            return out[:4]
     # ③源のリード文。⚠**タイトル・会場・日時の重複を落としてから**使う。
     #   そのまま出すと「キッズボート イオンマリナタウン店 9/20（日）～23（水・祝）
     #   11：00～17：00 2Fサンデッキ…」とカードの他の枠と丸かぶりになる(2026-09-17に実測)
@@ -347,6 +346,12 @@ def main():
                'memo': [x.strip('　 ') for x in
                         re.split(r'(?<=。)', re.sub(r'\*\*|[⭐⚠]', '', s.get('verdict') or ''))
                         if len(x.strip('　 ')) >= 6][:3] or None,
+               # 裏取り済み(spots.json)の側は verdict から「無料」を拾う。
+               # ⚠**金額が書いてあるものは無料にしない**(「大人300円/0歳無料」を
+               #   無料と出す事故を events.html の PAID/PART_FREE で防いでいるのと同じ考え方)
+               'free': bool(re.search(r'無料', s.get('verdict') or '')
+                            and not re.search(r'[0-9０-９][0-9０-９,，]*\s*円',
+                                              s.get('verdict') or '')),
                'verified': True, 'spot': s['id'],
                'lat': s.get('lat'), 'lng': s.get('lng'),
                'kids': ks >= KIDS_TH, 'ks': ks, 'score': None}
@@ -382,6 +387,14 @@ def main():
                     r.get('poster') if W.poster_ok(r['title'], r.get('lead')) else None)
                 seen[k]['price'] = seen[k]['price'] or sp.get('price')
                 seen[k]['time'] = seen[k]['time'] or sp.get('time')
+                # ★**memo も引き継ぐ**【2026-09-18に発覚】
+                #   ユーザー指摘「キッズモデル体験のところにmemoがないのはなんでだろう？」の
+                #   真因はここだった。キッズモデル体験は spots.json に until 持ちで
+                #   **裏取り済みスポットとしても登録済み**で、候補側の行はこの統合経路で
+                #   スキップされる。ところが poster/price/time しか引き継いでおらず、
+                #   **補足ファイルに書いた detail が捨てられていた**。
+                #   裏取り済み側の verdict が空なら memo も空になり、何も出なくなる
+                seen[k]['memo'] = seen[k].get('memo') or memo(r, sp)
                 continue
             ks = M.kids_score(r['title'] + ' ' + (r.get('lead') or '')) + ka
             out.append({
@@ -391,7 +404,17 @@ def main():
                 'days': days, 'n': len(days), 'url': r['url'],
                 # ⚠IPコラボのポスターは参照しない(貼れない回)
                 'poster': r.get('poster') if W.poster_ok(r['title'], r.get('lead')) else None,
-                'price': sp.get('price') or None, 'time': sp.get('time') or None,
+                # ⚠**源が取った time/price も使う**【2026-09-18に発覚】。
+                #   補足ファイル(手入力)しか見ていなかったので、
+                #   イオン九州の館の詳細ページから取れた時間・料金が**捨てられていた**。
+                #   優先は ①補足(手で裏取りした値) ②源が取った値
+                'price': sp.get('price') or r.get('price') or None,
+                'time': sp.get('time') or r.get('time') or None,
+                # ★**源が判定した「無料」を渡す**【2026-09-18に実機で発覚】
+                #   これを渡していなかったので、画面の無料/有料バッジは price に
+                #   金額や「無料」が書かれた7件しか出ず、**ほぼ機能していなかった**。
+                #   源は本文から「入場無料」「観覧無料」等を拾っているので27件付く
+                'free': bool(r.get('free')),
                 # ★**memo**(何の企画か2〜4行で分かる要約)【2026-09-17ユーザー要望】
                 #   「右下のmemoで概ね何の企画か分かる」のを真似る。
                 #   優先は ①補足ファイルの detail(ポスターを読んで手で書いた箇条書き)
@@ -534,13 +557,21 @@ def main():
         keep['days'] = sorted(set(keep['days']) | set(drop['days']))
         keep['n'] = len(keep['days'])
         # 欠けている情報だけ相手から補う(上書きはしない)
+        # ★**memo と free も引き継ぐ**【2026-09-18に発覚・2回目】
+        #   「ワークショップ 手作りカフェ」はイベント自体が spots.json に
+        #   `ev-<uuid>` で登録済み(=裏取り済み側が勝つ)なのに verdict が空で、
+        #   memo を持っていた候補側の行が**丸ごと捨てられて memo が消えていた**。
+        #   キッズモデル体験(上の seen[k] 経路)と同じ種類の取りこぼし。
+        #   free も同様で、源が本文から拾った「観覧無料」が捨てられていた
         for f in ('poster', 'img', 'price', 'time', 'url', 'venueSpot', 'venueName',
-                  'venueLinks', 'lat', 'lng'):
+                  'venueLinks', 'lat', 'lng', 'memo', 'free'):
             if not keep.get(f) and drop.get(f):
                 keep[f] = drop[f]
         if not keep['near'] and drop.get('near'):
             keep['near'] = drop['near']
         keep['ks'] = max(keep['ks'], drop['ks'])
+        # ⚠ks を上げたら **kids も引き直す**。でないと「子連れ向け」の絞り込みから漏れる
+        keep['kids'] = keep['ks'] >= KIDS_TH
         groups[k] = keep
         merged += 1
     out = list(groups.values())

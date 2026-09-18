@@ -26,6 +26,7 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 sys.stdout.reconfigure(encoding='utf-8')
 from PIL import Image, ImageDraw, ImageFont, ImageFilter, ImageOps
 import week_events as W
+import noimg_icon as NOIMG
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SRC = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
@@ -38,6 +39,7 @@ BG = (250, 247, 242)          # クリーム。白より写真が締まる
 INK = (34, 32, 30)
 SUB = (120, 114, 108)
 PREF_RED = (206, 57, 52)      # 福岡。thumbs_build.py の PREF_COLOR と同じ
+ICON_VARIANT = 'frame'        # IPで貼れない回のアイコン(--icon で切替)
 
 
 def font(p, s):
@@ -78,6 +80,25 @@ def wrap(d, text, f, width, maxline=3):
     if len(out) == maxline and d.textlength(''.join(out), font=f) < d.textlength(text, font=f):
         out[-1] = out[-1][:-1] + '…'
     return out
+
+
+# ★⚠**絵文字は Meiryo に字形が無いので□の豆腐になる**【2026-09-18に実機で発覚】
+#   「✨観覧無料✨」が「□観覧無料□」と描かれていた。源のタイトルには
+#   絵文字がそのまま入っていることがある(イオン九州の店舗お知らせは特に多い)ので、
+#   **描く前に落とす**。⚠「〜」「㊏」「①」などは字形があるので消さないこと。
+EMOJI = re.compile(
+    '['
+    '\U0001F000-\U0001FAFF'      # 絵文字・記号の主要ブロック
+    '\U00002600-\U000027BF'      # ☀☂✂✨ など
+    '\U00002B00-\U00002BFF'      # ⬆⭐ など
+    '\U0000FE00-\U0000FE0F'      # 異体字セレクタ
+    '\U0001F1E6-\U0001F1FF'      # 国旗
+    ']+')
+
+
+def deemoji(s):
+    """絵文字を落として空白を詰める。豆腐(□)を出さないため"""
+    return re.sub(r'\s{2,}', ' ', EMOJI.sub('', s or '')).strip(' 　')
 
 
 def pill(text, fill, fs=34, pad=(22, 10)):
@@ -320,23 +341,64 @@ def daytabs(im, d, days, cur):
                                 fill=fg if on else tuple(int(c * .55) for c in fg), anchor='mm')
 
 
+FREE_ENTRY = re.compile(r'(?:入場|観覧|入館|参加|見学)\s*(?:は)?\s*無料')
+YEN = re.compile(r'[0-9０-９][0-9０-９,，]*\s*円')
+
+
 def paidbadge(ev):
-    """有料/無料のバッジ。⚠**料金が分からないものは出さない**(推測でラベルを貼らない)"""
+    """有料/無料のバッジ。⚠**料金が分からないものは出さない**(推測でラベルを貼らない)
+
+    ⚠「入場無料(クレーンゲームは1回100円)」を**金額の記載だけで有料と出していた**
+      (2026-09-18に実機で発覚)。入場・観覧・参加が無料なら利用者にとっては入場無料なので、
+      **「入場無料」を先に見る**。「入場料 大人300円」は当たらない(「入場無料」ではない)。
+    """
+    p = str(ev.get('price') or '')
+    if FREE_ENTRY.search(p):
+        return pill('入場無料', (31, 122, 90), 34, (24, 12))
+    if YEN.search(p):
+        return pill('有料', (232, 163, 61), 34, (26, 12))
     if ev.get('free'):
         return pill('入場無料', (31, 122, 90), 34, (24, 12))
-    p = str(ev.get('price') or '')
-    if re.search(r'[0-9０-９][0-9０-９,，]*\s*円', p):
-        return pill('有料', (232, 163, 61), 34, (26, 12))
     return None
 
 
+# ★memo から落とす行 / 先頭のラベルだけ外す行【2026-09-18に実機で発覚】
+#   「日程：9/19（土）」が memo に残り、**情報行の「日程」と二重**になっていた。
+#   ⚠「内容：…」は**中身が説明そのもの**なので行を捨てず、ラベルだけ外す。
+MEMO_KILL = re.compile(r'^\s*(?:日程|日時|時間|開催日|開催時間|場所|会場|料金|参加費|費用|'
+                       r'対象|定員|申込|申し込み|予約|受付|協力|主催|共催|後援|協賛)\s*[:：]')
+MEMO_LABEL = re.compile(r'^\s*(?:内容|詳細|概要|イベント内容|備考)\s*[:：]\s*')
+
+
+def memo_src(ev):
+    """memo に出す文の並び。⚠**優先順を間違えると意味のない箱になる**【2026-09-18】
+    1回目は `detail` → `lead` の順にしていて、detail が無い回は
+    **lead の先頭(=タイトルそのもの)が memo に出てタイトルの繰り返し**になっていた。
+    `memo` は源が「説明文だけ」を抜いて入れたものなので**これを最優先**にする。"""
+    for k in ('memo', 'detail'):
+        v = []
+        for x in (ev.get(k) or []):
+            s = str(x).strip()
+            if not s or MEMO_KILL.match(s):      # 情報行と重複する行は捨てる
+                continue
+            s = MEMO_LABEL.sub('', s).strip('　 「」')
+            if len(s) >= 6:
+                v.append(s)
+        if v:
+            return v
+    lead = (ev.get('lead') or '').strip()
+    t = (ev.get('title') or '').strip()
+    # lead はタイトルを含むことが多いので、**タイトルを削ってから**使う
+    if t and len(t) >= 4:
+        lead = lead.replace(t, ' ').strip()
+    lead = re.sub(r'\s{2,}', ' ', lead)
+    return [lead] if len(lead) >= 10 else []
+
+
 def memobox(ev, size):
-    """右下の memo。`detail`(ポスターを読んで手で転記した箇条書き)→ lead の順で使う。
-    ⚠**中身が無ければ None**。空の箱は出さない"""
+    """右下の memo。⚠**中身が無ければ None**。空の箱は出さない"""
     w, h = size
-    src = [x for x in (ev.get('detail') or []) if x]
-    if not src and ev.get('lead'):
-        src = [ev['lead']]
+    src = memo_src(ev)
     if not src:
         return None
     c = rounded((w, h), 20, (253, 243, 231, 255))
@@ -346,7 +408,7 @@ def memobox(ev, size):
     fm = font(MEI, 27)
     yy = 70
     for ln in src[:4]:
-        for w2 in wrap(cd, str(ln), fm, w - 44, 2):
+        for w2 in wrap(cd, deemoji(str(ln)), fm, w - 44, 2):
             if yy > h - 40:
                 break
             cd.text((22, yy), w2, font=fm, fill=(74, 66, 56, 255))
@@ -385,7 +447,7 @@ def card(ev, idx, extra=None, days=None, cur=None):
     # イベント名
     f = font(MEIB, 52)
     y = top + 126
-    for ln in wrap(d, ev['title'], f, W_ - 128, 3):
+    for ln in wrap(d, deemoji(ev['title']), f, W_ - 128, 3):
         d.text((64, y), ln, font=f, fill=INK); y += 66
     y += 18
     # ポスター(IP絡みは貼らない)
@@ -397,9 +459,13 @@ def card(ev, idx, extra=None, days=None, cur=None):
     nrow = 4 + sum(1 for k in ('time', 'note') if ev.get(k)) \
              + (1 if (ev.get('park') or ev.get('parking')) else 0)
     # ★memo枠を右下に置くので、**情報行は左列に寄せて幅を狭める**
-    MEMO_W = 380
+    MEMO_W = 330
     memo_x = W_ - 64 - MEMO_W
-    has_memo = bool([x for x in (ev.get('detail') or []) if x] or ev.get('lead'))
+    # ⚠ポスターが無い回は下の「どんなイベント？」カードが同じ内容を大きく出すので
+    #   **memo枠は出さない**(1枚に同じ4行が二重に出ていた・2026-09-18に実機で発覚)。
+    #   ポスターを貼れるかは poster_ok と画像の有無で決まるので、ここでは仮に持ち、
+    #   ポスターを実際に描いたあとで確定させる
+    has_memo = bool(memo_src(ev))
     box_h = max(330, min(560, H_ - 200 - y - nrow * 54 - (TAB_H if days else 0)))
     img = get_poster(ev.get('poster')) if ok else None
     if img:
@@ -415,24 +481,58 @@ def card(ev, idx, extra=None, days=None, cur=None):
         #   (2026-09-13ユーザー指摘「グレーだけどポスター載せてる人がいてライバルに負ける」)。
         #   ポスター画像を自分で読んで data/_イベント補足.json の detail に転記しておく。
         #   画像の再配布はしないが、そこに書かれている**情報は普通に載せてよい**
-        det = [x for x in (ev.get('detail') or []) if x]
-        h2 = 104 + (len(det) * 56 if det else 56)
-        c = rounded((W_ - 128, h2), 22, (243, 237, 229, 255))
+        # ★ここは「どんなイベント？」カード = **実質これが memo**。
+        #   だから右下の memo 枠は出さない(同じ内容が1枚に二重に出ていた)
+        has_memo = False
+        det = [deemoji(str(x)) for x in
+               ([x for x in (ev.get('detail') or []) if x] or memo_src(ev))]
+        det = [x for x in det if x][:4]
+        # ★★**文字カードを画像に近い引きにする**【2026-09-18ユーザー確定】
+        #   「よそのSNSでは画像を使っているところもある。その場合に文章だと負けます。
+        #     かといって文章だけだと読めば伝わるが、読む段階にいたらない」
+        #   ⚠**代替の会場写真は今は使えない**(2026-09-18実測):
+        #     IPで貼れない会場(イオンモール/大丸/美術館)は自前写真を1枚も持っておらず、
+        #     施設公式の og:image はイオンモール全館で同一のロゴ画像だった。
+        #   → **可愛いアイコン + 大きな文字**で戦う。⚠文字にIP名を書くのは権利上問題ない。
+        ICO = 210 if not ok else 150
+        rows_ = det or ['詳細は公式サイトでご確認ください']
+        fbig = font(MEIB, 38)
+        cw = W_ - 128
+        tw = cw - ICO - 84
+        lines = []
+        for x in rows_:
+            lines += wrap(ImageDraw.Draw(Image.new('RGB', (1, 1))), x, fbig, tw, 2)
+        # ⚠アイコンの下に注記を置くぶんの高さを足す。足さないと
+        #   注記が本文の行に重なって読めなくなる(2026-09-18に実機で発覚)
+        h2 = max(ICO + (180 if not ok else 84), 92 + len(lines) * 52 + 40)
+        c = rounded((cw, h2), 22, (246, 240, 232, 255))
         cd = ImageDraw.Draw(c)
-        cd.text((36, 28), 'どんなイベント？', font=font(MEIB, 36), fill=PREF_RED + (255,))
+        cd.rounded_rectangle([0, 0, cw - 1, h2 - 1], 22, outline=(232, 214, 198, 255), width=3)
+        cd.text((34, 26), 'どんなイベント？', font=font(MEIB, 34), fill=PREF_RED + (255,))
+        # 権利で貼れない回は**照れ顔アイコン**を置き、理由を小さく添える
         if not ok:
-            cd.text((W_ - 128 - 32, 34), 'キャラクター画像は権利の都合で非掲載',
-                    font=font(MEI, 23), fill=(170, 162, 154, 255), anchor='ra')
-        yy = 88
-        if det:
-            for ln in det[:5]:
-                cd.text((36, yy), ln if ln.startswith('※') else ('・' + ln),
-                        font=font(MEI, 31), fill=INK + (255,)); yy += 56
-        else:
-            cd.text((36, yy), '詳細は公式サイトでご確認ください',
-                    font=font(MEI, 31), fill=SUB + (255,))
+            ic = NOIMG.make(ICO, ICON_VARIANT)
+            iy = 62
+            c.alpha_composite(ic, (cw - ICO - 30, iy))
+            # ⚠注記は**アイコンの真下に2行で**置く。1行だとカードの右端で切れた
+            #   (2026-09-18に実機で発覚)。中央寄せの基準はアイコンの中心
+            # ⚠⚠**「なぜ写真が無いのか」が分かる文にする**【2026-09-18ユーザー確定】
+            #   「ニコちゃんマークが基本的にはいいとは思っているものの、
+            #     なんで写真がないのかっていうところがそれではわからないので
+            #     文章補足をしていただければいい」
+            #   旧文「ポスターは/権利の都合で非掲載」では理由が伝わらなかったので、
+            #   **キャラクターの権利であること**を明示し、色も薄すぎない灰にする
+            icx = cw - ICO // 2 - 30
+            for k, ln in enumerate(('キャラクターの権利が', 'あるため、ポスターは',
+                                    'お見せできません')):
+                cd.text((icx, iy + ICO + 10 + k * 28), ln,
+                        font=font(MEI, 22), fill=(138, 118, 108, 255), anchor='ma')
+        yy = 92
+        for ln in lines[:6]:
+            cd.text((34, yy), ln, font=fbig, fill=INK + (255,))
+            yy += 52
         shadow(im, c, (64, y))
-        y += h2 + 34
+        y += h2 + 30
     # 情報行
     fi = font(MEI, 38)
     fb = font(MEIB, 38)
@@ -503,10 +603,10 @@ def card(ev, idx, extra=None, days=None, cur=None):
                                  fill=PREF_RED + (255,), anchor='mm')
         im.alpha_composite(lab, (lab_x, y - 1))
         # ⚠狭い列に入り切らない値は**1行に収まる長さで切る**(はみ出して memo に重なるため)
-        s = tx
+        s = deemoji(tx)
         while s and d.textlength(s, font=fb) > txt_w:
             s = s[:-1]
-        if s != tx and len(s) > 2:
+        if s != deemoji(tx) and len(s) > 2:
             s = s[:-1] + '…'
         d.text((txt_x, y), s, font=fb, fill=INK)
         y += rh
@@ -549,25 +649,52 @@ def main():
     ap.add_argument('--out', default='', help='出力先。既定は data/carousel_<開始日>/')
     ap.add_argument('--no-tabs', action='store_true',
                     help='日付タブを出さない(1イベント1日の単発回など)')
+    # ★収集の窓が広いときに、投稿1本ぶんの期間だけ切り出す
+    ap.add_argument('--from', dest='f', default='', help='この日から(既定は候補JSONのfrom)')
+    ap.add_argument('--to', dest='t', default='', help='この日まで(既定は候補JSONのto)')
+    # ★IPで貼れない回のアイコン。frame=照れ顔+©バッジ / camera=カメラに斜線
+    ap.add_argument('--icon', default='frame', choices=['frame', 'camera'],
+                    help='権利で貼れない回のアイコン(既定 frame)')
     a = ap.parse_args()
     D = json.load(io.open(a.json, encoding='utf-8'))
+    # ★**収集の窓とカルーセルの窓は別物**【2026-09-18】
+    #   イベント一覧(マップ)のために収集は広く取る(48日など)ので、そのままだと
+    #   日付タブが出ない(2〜8日のときだけ出す仕様)。投稿1本ぶんの期間を切り出せるようにする。
+    f = datetime.strptime(a.f or D['from'], '%Y-%m-%d').date()
+    t = datetime.strptime(a.t or D['to'], '%Y-%m-%d').date()
+    fs, tsv = f.isoformat(), t.isoformat()
+
+    def inwin(e):
+        sp = e.get('span') or [None, None]
+        return bool(sp[0]) and sp[0] <= tsv and (sp[1] or sp[0]) >= fs
+
     # week_events が選抜した順(源のラウンドロビン後)を優先する。
     # 無ければスコア順の先頭から取る
     if D.get('selected'):
         by = {e['url']: e for e in D['events']}
-        evs = [by[u] for u in D['selected'] if u in by][:a.n]
+        evs = [by[u] for u in D['selected'] if u in by]
     else:
-        evs = D['events'][:a.n]
-    f = datetime.strptime(D['from'], '%Y-%m-%d').date()
-    t = datetime.strptime(D['to'], '%Y-%m-%d').date()
+        evs = list(D['events'])
+    if a.f or a.t:
+        # ⚠絞った窓に入るものだけにする。選抜が足りなくなったら
+        #   **スコア順の全件から補充する**(枠が空くほうが害が大きい)
+        evs = [e for e in evs if inwin(e)]
+        if len(evs) < a.n:
+            have = {e['url'] for e in evs}
+            evs += [e for e in D['events']
+                    if e['url'] not in have and inwin(e)][:a.n - len(evs)]
+        print('期間で絞り込み: %s〜%s → %d件' % (fs, tsv, len(evs)), file=sys.stderr)
+    evs = evs[:a.n]
     wk = '月火水木金土日'
     sub = a.title or (('%d月%d日(%s) の' % (f.month, f.day, wk[f.weekday()])) if f == t else
                       ('%d/%d(%s)〜%d/%d(%s) の' % (f.month, f.day, wk[f.weekday()],
                                                    t.month, t.day, wk[t.weekday()])))
     if not a.title:
         sub += 'おでかけイベント'
-    out = a.out or os.path.join(HERE, '..', 'data', 'carousel_%s' % D['from'])
+    out = a.out or os.path.join(HERE, '..', 'data', 'carousel_%s' % f.isoformat())
     os.makedirs(out, exist_ok=True)
+    global ICON_VARIANT
+    ICON_VARIANT = a.icon
     extra = load_extra()
     pages = [('01_表紙', cover(sub, len(evs), len(evs), a.hook or None, a.cover or None,
                               a.tail, a.cta or None))]

@@ -98,9 +98,16 @@
   .ev.oth{border-left:4px solid #b9b5ae}
   .thumb{flex:0 0 84px;width:84px;height:84px;border-radius:9px;object-fit:cover;
     background:#eee;display:block}
-  .noimg{flex:0 0 84px;width:84px;height:84px;border-radius:9px;background:#f0efec;
-    display:grid;place-items:center;font-size:.64rem;color:var(--muted);text-align:center;
-    line-height:1.35;padding:4px}
+  /* ★ポスターを貼れない回のアイコン【2026-09-18ユーザー確定】
+     「ニコちゃんマークが基本的にはいいとは思っているものの、なんで写真がないのか
+       っていうところがそれではわからないので文章補足をしていただければいい」
+     → 照れ顔アイコン(カルーセルと同じ絵)＋**理由の文章**を必ず併記する。
+       旧「画像は/権利上/非掲載」では理由が伝わらなかった。 */
+  .noimg{flex:0 0 96px;width:96px;display:flex;flex-direction:column;align-items:center;
+    gap:4px}
+  .noimg svg{width:74px;height:74px;display:block}
+  .noimg b{font-size:.58rem;font-weight:600;color:var(--muted);text-align:center;
+    line-height:1.3;letter-spacing:-.01em}
   .body{min-width:0;flex:1}
   .ttl{font-size:.94rem;font-weight:700;line-height:1.45;margin:0 0 3px;text-wrap:pretty}
   .tags{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 4px}
@@ -204,7 +211,9 @@
   <p>会場・日程・料金は各主催の告知から転記しています。<b>お出かけ前に必ず公式でご確認ください</b>。
      「要確認」の印があるものは、こちらで現地確認をしていないものです。</p>
   <p>ポスター画像は各主催の告知物です（縮小のみ・出典はカード内のリンク先）。
-     権利上の都合で掲載できないものは文字のみで出しています。</p>
+     アニメやキャラクターとのコラボ企画は、主催者だけでなくキャラクターの権利者の許可も
+     必要になるため、ポスターを掲載していません（<b>照れ顔のアイコン</b>が付いているもの）。
+     そのぶん、ポスターに書かれている日時・料金・内容は文字で書き写しています。</p>
   <p><a href="./index.html">福岡こそだてグルメマップに戻る</a></p>
 </footer>
 </div>
@@ -350,10 +359,28 @@ const PART_FREE = /(?:は|のみ|だけ|等|など|以下|未満|まで|歳|才)
 // ⚠**金額が書いてあるものは無料ではない**。これを先に見る。
 //   「入場料 大人300円／子供600円(0歳無料)」が「0歳無料」で無料タグになっていた(2026-09-16)
 const PAID = /[0-9０-９][0-9０-９,，]*\s*円/;
+// ★「入場は無料」だが中の一部が有料、というものが多い【2026-09-18に実機で発覚】
+//   「入場無料(クレーンゲームは1回100円)」が金額の記載だけで**有料**と出ていた。
+//   入場・観覧・参加が無料なら、それは利用者にとって「入場無料」。
+//   ⚠「入場料 大人300円」は**入場無料ではない**ので、ここに当たらないよう
+//     「無料」まで含めて一語として見る
+const FREE_ENTRY = /(?:入場|観覧|入館|参加|見学)\s*(?:は)?\s*無料/;
 function isFree(e){
   const p = e.price || '';
+  if (FREE_ENTRY.test(p)) return true;
   if (PAID.test(p) || PART_FREE.test(p)) return false;
-  return /無料/.test(p) || /無料/.test(e.title || '');
+  // ★**源が判定した free も見る**【2026-09-18】。price にしか頼っていなかったので
+  //   金額や「無料」が price に書かれた7件しかバッジが出ず、ほぼ機能していなかった。
+  //   源は本文から「入場無料」「観覧無料」等を拾っている
+  return /無料/.test(p) || /無料/.test(e.title || '') || e.free === true;
+}
+// バッジの文言。⚠**料金が分からないものは null**(推測でラベルを貼らない)
+function feeTag(e){
+  const p = e.price || '';
+  if (FREE_ENTRY.test(p) && PAID.test(p)) return ['t-free', '入場無料'];
+  if (isFree(e)) return ['t-free', '無料'];
+  if (PAID.test(p)) return ['t-paid', '有料'];
+  return null;
 }
 
 function nearHtml(e){
@@ -386,20 +413,43 @@ function memoHtml(e){
     + `</ul></div>`;
 }
 
+// ★ポスターが無い回に出す照れ顔アイコン + 理由の文章【2026-09-18ユーザー確定】
+//   カルーセル(tools/noimg_icon.py の frame)と同じ絵を SVG で描いている。
+//   ⚠**絵だけでは「なんで写真がないのか」が伝わらない**ので、文章を必ず添える
+const NOIMG = `<div class="noimg">
+  <svg viewBox="0 0 100 100" aria-hidden="true">
+    <rect x="1.5" y="1.5" width="97" height="97" rx="20" fill="#f7f0e9" stroke="#e2beb2"
+      stroke-width="3.2"/>
+    <path d="M27 40 q7 -8 14 0" fill="none" stroke="#5c4a42" stroke-width="4"
+      stroke-linecap="round"/>
+    <path d="M59 40 q7 -8 14 0" fill="none" stroke="#5c4a42" stroke-width="4"
+      stroke-linecap="round"/>
+    <ellipse cx="24" cy="54" rx="5.5" ry="4" fill="#f4bab2"/>
+    <ellipse cx="76" cy="54" rx="5.5" ry="4" fill="#f4bab2"/>
+    <path d="M42 55 q8 9 16 0" fill="none" stroke="#5c4a42" stroke-width="4"
+      stroke-linecap="round"/>
+    <circle cx="78" cy="78" r="12" fill="#ce3934"/>
+    <circle cx="78" cy="78" r="6.2" fill="none" stroke="#fff" stroke-width="1.6"/>
+    <line x1="75.4" y1="74.9" x2="75.4" y2="81.1" stroke="#fff" stroke-width="2"
+      stroke-linecap="round"/>
+  </svg>
+  <b>キャラクターの権利があるため、ポスターはお見せできません</b>
+</div>`;
+
 function card(e, iso){
   // ★タップで拡大できるようにボタンで包む【2026-09-17】
   const img = e.img
     ? `<button class="thumbw" data-img="${esc(e.img)}" data-src="${esc(e.url || '')}"
          data-ttl="${esc((e.title || '').slice(0, 60))}" aria-label="ポスターを拡大する"
        ><img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async"></button>`
-    : `<div class="noimg">画像は<br>権利上<br>非掲載</div>`;
+    : NOIMG;
   const tags = [];
   // ★**有料/無料を先頭に**置く【2026-09-17ユーザー要望】
   //   「有料・無料ラベル」が見やすさの要だったので、一番左に出す。
   //   ⚠料金の記載が無いものは**どちらも出さない**。無料かどうか分からないのに
   //     「有料」と貼るのは嘘になるし、「無料」と貼るのはもっと悪い
-  if (isFree(e)) tags.push('<span class="tag t-free">無料</span>');
-  else if (PAID.test(e.price || '')) tags.push('<span class="tag t-paid">有料</span>');
+  const ft = feeTag(e);
+  if (ft) tags.push(`<span class="tag ${ft[0]}">${ft[1]}</span>`);
   tags.push(e.verified
     ? '<span class="tag t-ver">現地確認済み</span>'
     : '<span class="tag t-unv">要確認</span>');

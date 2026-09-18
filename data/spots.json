@@ -6305,7 +6305,7 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "駐車場は2025年9月から有料化。管理棟に授乳室・おむつ替えあり。遊具18種の屋外公園。",
+  "verdict": "駐車場は2025年9月から有料化。管理棟に授乳室・おむつ替えあり。遊具18種の屋外公園。 ⚠駐車場の料金は情報が分かれている(要確認)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -14406,7 +14406,7 @@
   "visited": null,
   "with": "family",
   "kids": null,
-  "verdict": "大恐竜型複合遊具「ヤスゴン」やローラー滑り台がある無料公園。9~18時(季節変動)。 とても広い遊具有り公園、無料っていうのが驚き",
+  "verdict": "大恐竜型複合遊具「ヤスゴン」やローラー滑り台がある無料公園。9~18時(季節変動)。 とても広い遊具有り公園、無料っていうのが驚き 駐車場は無料。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -46036,5 +46036,556 @@
   "thumb": "costcohisayama.jpg",
   "wish": false,
   "web": "https://www.costco.co.jp/store-finder/Hisayama"
+ },
+ {
+  "id": "takatoriyama-park",
+  "name": "高取山公園",
+  "area": "神埼市",
+  "city": "神埼市",
+  "pref": "佐賀県",
+  "genre": "公園",
+  "lat": 33.371423,
+  "lng": 130.335024,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。9:00〜(3月は17時まで/4月は18時まで)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kurate-kodomohiroba",
+  "name": "こども広場",
+  "area": "鞍手郡鞍手町",
+  "city": "鞍手郡鞍手町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.791756,
+  "lng": 130.69326,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "fukuchi-waiwaiwa",
+  "name": "ワイ・ワイ・ワ広場",
+  "area": "田川郡福智町",
+  "city": "田川郡福智町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.696285,
+  "lng": 130.764353,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。 2026年3月にリニューアルオープン。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "michinoeki-ooto",
+  "name": "道の駅おおとう桜街道",
+  "area": "田川郡大任町",
+  "city": "田川郡大任町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.625546,
+  "lng": 130.845882,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "taishojin-park",
+  "name": "大将陣公園",
+  "area": "飯塚市",
+  "city": "飯塚市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.60418,
+  "lng": 130.680637,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。 桜の名所。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "nogata-chuo-park",
+  "name": "直方中央公園",
+  "area": "直方市",
+  "city": "直方市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.759403,
+  "lng": 130.765451,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "suwa-park-omuta",
+  "name": "諏訪公園",
+  "area": "大牟田市",
+  "city": "大牟田市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.025401,
+  "lng": 130.429532,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。管理棟の受付は9:00〜17:00。 ローラーすべり台。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "onga-fureai-kyoryu",
+  "name": "ふれあい広場(恐竜公園)",
+  "area": "遠賀郡遠賀町",
+  "city": "遠賀郡遠賀町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.833281,
+  "lng": 130.666514,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。 恐竜をかたどった大型遊具。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "ashiya-wanpaku",
+  "name": "芦屋海浜公園わんぱーく",
+  "area": "遠賀郡芦屋町",
+  "city": "遠賀郡芦屋町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.893335,
+  "lng": 130.657217,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "hibikinada-greenpark",
+  "name": "響灘緑地グリーンパーク",
+  "area": "北九州市若松区",
+  "city": "北九州市若松区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.917457,
+  "lng": 130.727099,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐有料(9月21日は無料開園日)。駐車場は有料300円。9:00〜17:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "soraland-hiraodai",
+  "name": "ソラランド平尾台",
+  "area": "北九州市小倉南区",
+  "city": "北九州市小倉南区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.759493,
+  "lng": 130.890519,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は有料300円。3〜11月 9:00〜17:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "takada-noseyama-park",
+  "name": "高田濃施山公園",
+  "area": "みやま市",
+  "city": "みやま市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.100485,
+  "lng": 130.464267,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。9:00〜17:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "shime-seamate",
+  "name": "シーメイト",
+  "area": "糟屋郡志免町",
+  "city": "糟屋郡志免町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.58901,
+  "lng": 130.487559,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "ohori-park",
+  "name": "大濠公園",
+  "area": "福岡市中央区",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.589461,
+  "lng": 130.373689,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は有料(入庫後2時間まで220円)。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "odo-park",
+  "name": "小戸公園",
+  "area": "福岡市西区",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.595109,
+  "lng": 130.312691,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は有料1時間100円。常時開園。 海沿い。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "seibu-undo-park",
+  "name": "西部運動公園",
+  "area": "福岡市西区",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.54487,
+  "lng": 130.318471,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は有料1時間100円。常時開園。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "kabutonomori-park",
+  "name": "カブトの森公園",
+  "area": "糟屋郡篠栗町",
+  "city": "糟屋郡篠栗町",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.611955,
+  "lng": 130.51858,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。常時開園。 ローラーすべり台。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "munakata-fureainomori",
+  "name": "ふれあいの森総合公園",
+  "area": "宗像市",
+  "city": "宗像市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.831645,
+  "lng": 130.553102,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。8:00〜19:00(9/1〜10/31)・8:00〜18:00(11/1〜)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
+ },
+ {
+  "id": "koga-greenpark",
+  "name": "古賀グリーンパーク",
+  "area": "古賀市",
+  "city": "古賀市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.709366,
+  "lng": 130.484999,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐入園無料。駐車場は無料。せせらぎ水路は9月の土日祝 9:00〜15:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play"
  }
 ]

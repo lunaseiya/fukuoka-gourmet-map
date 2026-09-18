@@ -50,6 +50,24 @@
   .filters{display:flex;gap:6px;overflow-x:auto;margin:8px -14px 0;padding:0 14px 2px;
     scrollbar-width:none}
   .filters::-webkit-scrollbar{display:none}
+  /* ★エリアの絞り込み【2026-09-18ユーザー要望
+       「大牟田や山口なんて遠いところさすがに行かん！みたいなことをやりたい」】
+     ⚠**市区を1つずつ選ぶ方式では東区在住だと10個以上タップすることになる**ので、
+       5つのエリアグループのトグルにした。
+     ⚠**「無料だけ」とは軸が違うので行を分ける**。同じ行に並べると
+       どちらの意味で絞っているのか分からなくなる */
+  .areas{display:flex;gap:6px;overflow-x:auto;margin:9px -14px 0;padding:0 14px 2px;
+    scrollbar-width:none}
+  .areas::-webkit-scrollbar{display:none}
+  .ab{flex:0 0 auto;font:inherit;font-size:.78rem;font-weight:700;color:#fff;
+    background:var(--accent);border:1px solid var(--accent);border-radius:999px;
+    padding:6px 12px;cursor:pointer}
+  /* 既定は全部ON。**切ったものだけ白抜きになる**(=消えていることが目で分かる) */
+  .ab[aria-pressed="false"]{background:#fff;border-color:var(--border);color:#b3aca4;
+    text-decoration:line-through}
+  .ab:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+  .ab .n{font-weight:600;opacity:.75;margin-left:3px}
+  .anote{font-size:.68rem;color:var(--muted);margin:5px 0 0}
   .fb{flex:0 0 auto;font:inherit;font-size:.78rem;font-weight:700;color:var(--muted);
     background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 13px;cursor:pointer}
   .fb[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
@@ -202,7 +220,9 @@
     <button id="segAll" aria-pressed="false">すべて</button>
   </div>
   <div class="dtabs" id="dtabs" role="group" aria-label="日付の切り替え"></div>
+  <div class="areas" id="areas" role="group" aria-label="エリアの絞り込み"></div>
   <div class="filters" id="filters"></div>
+  <p class="anote" id="anote"></p>
 </header>
 
 <main id="list"></main>
@@ -237,6 +257,57 @@ const esc = s => String(s==null?'':s).replace(/[&<>"']/g,
 let DOC = null, kidsOnly = true, city = '', freeOnly = false;
 let shown = {};            // 日付ごとに「何件まで出したか」(日を変えたらリセットする)
 
+/* ★エリアの絞り込み【2026-09-18ユーザー要望】
+   「無料だけ、市区町村を指定できる欄があると思いますが、これは複数選択できるように
+     できますか。ようは大牟田や山口なんて遠いところさすがに行かん！みたいなことを
+     やりたいんです」
+   → 市区を1つずつ選ぶ方式は**福岡市東区在住だと10個以上タップする**ことになるので、
+     5つのグループのトグルにした(ユーザー選択)。
+
+   ⚠**未知の市区を落としてはいけない**。福岡県の市町村を全部書いておき、
+     リストに無いものは「県外」、city が空のものは「市区不明」に入れる。
+     どちらもチップに出るので、取りこぼしが画面で分かる。
+   ⚠件数は**全期間**のもの(日付を変えるたびに数字が動くと落ち着かない)。 */
+const FUKUOKA_AROUND = ['春日市','大野城市','太宰府市','筑紫野市','那珂川市','古賀市',
+  '福津市','宗像市','糸島市','宇美町','篠栗町','志免町','須惠町','新宮町','久山町','粕屋町'];
+const KITA_CHIKUHO = ['中間市','宮若市','直方市','飯塚市','田川市','嘉麻市','行橋市','豊前市',
+  '芦屋町','水巻町','岡垣町','遠賀町','小竹町','鞍手町','桂川町','香春町','添田町','糸田町',
+  '川崎町','大任町','赤村','福智町','苅田町','みやこ町','吉富町','上毛町','築上町'];
+const CHIKUGO = ['久留米市','大牟田市','柳川市','八女市','筑後市','大川市','小郡市','うきは市',
+  '朝倉市','みやま市','大刀洗町','大木町','広川町','筑前町','東峰村'];
+const AREAS = [
+  {k: 'fukuoka',  label: '福岡市',      test: c => /^福岡市/.test(c)},
+  {k: 'around',   label: '市の周辺',    test: c => FUKUOKA_AROUND.some(x => c.indexOf(x) >= 0)},
+  {k: 'kita',     label: '北九州・筑豊', test: c => /^北九州市/.test(c)
+                                              || KITA_CHIKUHO.some(x => c.indexOf(x) >= 0)},
+  {k: 'chikugo',  label: '筑後',        test: c => CHIKUGO.some(x => c.indexOf(x) >= 0)},
+  {k: 'outside',  label: '県外',        test: c => !!c},   // 上のどれにも当たらなかった残り
+  {k: 'unknown',  label: '市区不明',    test: c => !c},
+];
+let areaOn = {};           // {fukuoka:true, ...} 既定は全部ON
+
+function areaOf(e){
+  const c = e.city || '';
+  // 県外は pref でも判定できる(裏取り済みのスポットは pref を持っている)
+  if (e.pref && e.pref !== '福岡県') return 'outside';
+  for (const a of AREAS) { if (a.k !== 'outside' && a.k !== 'unknown' && a.test(c)) return a.k; }
+  return c ? 'outside' : 'unknown';
+}
+
+function loadAreaOn(){
+  let saved = null;
+  try { saved = JSON.parse(localStorage.getItem('aqEventAreas') || 'null'); } catch (e) {}
+  AREAS.forEach(a => {
+    // ⚠**既定は全部ON**(=今までと同じ見え方。何も絞られていない状態から始める)。
+    //   切ったものだけ覚える
+    areaOn[a.k] = (saved && typeof saved[a.k] === 'boolean') ? saved[a.k] : true;
+  });
+}
+
+function saveAreaOn(){
+  try { localStorage.setItem('aqEventAreas', JSON.stringify(areaOn)); } catch (e) {}
+}
+
 fetch('./events.json').then(r => r.json()).then(d => { DOC = d; boot(); })
   .catch(() => { document.getElementById('list').innerHTML =
     '<p class="empty">イベント情報を読み込めませんでした。時間をおいて開いてください。</p>'; });
@@ -245,6 +316,25 @@ function boot(){
   const f = new Date(DOC.from + 'T00:00:00'), t = new Date(DOC.to + 'T00:00:00');
   document.getElementById('range').textContent =
     `${f.getMonth()+1}/${f.getDate()} 〜 ${t.getMonth()+1}/${t.getDate()} の2週間 ／ ${DOC.generated} 更新`;
+  // ★エリアの絞り込みを先に組む
+  loadAreaOn();
+  const ac = {};
+  DOC.events.forEach(e => { const k = areaOf(e); ac[k] = (ac[k]||0)+1; });
+  const ar = document.getElementById('areas');
+  // 件数0のグループはボタンを置かない(空振りするボタンを出さない)
+  ar.innerHTML = AREAS.filter(a => ac[a.k]).map(a =>
+    `<button class="ab" data-area="${a.k}" aria-pressed="${areaOn[a.k]}"
+      >${esc(a.label)}<span class="n">${ac[a.k]}</span></button>`).join('');
+  ar.addEventListener('click', ev => {
+    const b = ev.target.closest('.ab'); if (!b) return;
+    const k = b.dataset.area;
+    areaOn[k] = !areaOn[k];
+    b.setAttribute('aria-pressed', areaOn[k]);
+    saveAreaOn();
+    shown = {};                      // 絞りを変えたら「残り◯件」の展開はリセット
+    render();
+  });
+
   // 市区の絞り込みは**実際に件数があるものだけ**出す(空振りするボタンを置かない)
   const cs = {};
   DOC.events.forEach(e => { if (e.city) cs[e.city] = (cs[e.city]||0)+1; });
@@ -328,7 +418,12 @@ function initLightbox(){
 
 function pass(e){
   if (kidsOnly && !e.kids) return false;
-  if (city && e.city !== city) return false;
+  // ⚠**市区を個別に選んでいる間はエリアの絞りを無視する**【2026-09-18】。
+  //   そうしないと「エリア=福岡市だけON」+「市区=大牟田」で0件になって詰まる。
+  //   市区のほうが具体的な指定なので市区を勝たせる
+  if (city) { if (e.city !== city) return false; }
+  else if (!areaOn[areaOf(e)]) return false;
+  // 「無料だけ」はエリアとは**別軸のAND**(範囲を絞った上で、その中の無料だけ)
   if (freeOnly && !isFree(e)) return false;
   return true;
 }
@@ -525,7 +620,26 @@ function renderTabs(){
   if (on) on.scrollIntoView({block:'nearest', inline:'center'});
 }
 
+/* エリアの状態を1行で知らせる。⚠**絞った結果0件になったときに理由が分からない**のが
+   一番困るので、切っているものを名前で出す */
+function renderAnote(){
+  const el = document.getElementById('anote');
+  if (!el) return;
+  if (city) {
+    el.textContent = '「' + city + '」で絞っています（エリアの指定は無視しています）';
+    return;
+  }
+  const off = AREAS.filter(a => !areaOn[a.k]).map(a => a.label);
+  if (!off.length) { el.textContent = ''; return; }
+  if (off.length === AREAS.length) {
+    el.textContent = 'エリアが全部オフです。どれかをタップして戻してください';
+    return;
+  }
+  el.textContent = off.join('・') + ' を非表示にしています（次に開いたときも同じ）';
+}
+
 function render(){
+  renderAnote();
   renderTabs();
   // 日付タブで選んでいればその日だけ。空("")なら全日
   const days = day ? [day] : allDays();

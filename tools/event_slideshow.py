@@ -42,7 +42,11 @@ def main():
     ap.add_argument('--out', default='')
     a = ap.parse_args()
     d = os.path.abspath(a.dir)
-    imgs = sorted(glob.glob(os.path.join(d, '*.jpg')))
+    # ⚠**`_` 始まりのファイルは取り込まない**。出力先には表紙の中間ファイル(`_cover.jpg`)や
+    #   投稿サンプル(`_サンプル_*.jpg`)も置かれるので、全部の *.jpg を拾うと枚数が狂う
+    #   (2026-09-19: 13枚のはずが14枚→16枚になった)
+    imgs = [q for q in sorted(glob.glob(os.path.join(d, '*.jpg')))
+            if not os.path.basename(q).startswith(('_', 'YouTube'))]
     if not imgs:
         raise SystemExit('画像が無い: ' + d)
     tmp = os.path.join(d, '_slides')

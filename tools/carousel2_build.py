@@ -189,60 +189,68 @@ def profile_icon(size):
 PAGE_SHOT = os.path.join(ROOT, 'assets', 'profile_page_shot.png')
 
 
+def _shot(im, y, width, framed=True):
+    """一覧ページのスクショを角丸+影+枠で貼り、次のyを返す"""
+    if not os.path.exists(PAGE_SHOT):
+        print('!! 一覧ページのスクショが無い:', PAGE_SHOT)
+        return y
+    sh = Image.open(PAGE_SHOT).convert('RGBA')
+    h = int(round(sh.height / sh.width * width))
+    sh = sh.resize((width, h), Image.LANCZOS)
+    msk = rounded((width, h), 22, (255, 255, 255, 255))
+    card = msk.copy()
+    card.paste(sh, (0, 0), msk)
+    if framed:            # 実際の画面だと分かるように枠線を足す
+        ImageDraw.Draw(card).rounded_rectangle([1, 1, width - 2, h - 2], 22,
+                                               outline=(198, 194, 188, 255), width=3)
+    shadow(im, card, ((W_ - width) // 2, y), blur=20, alpha=56, dy=7)
+    return y + h
+
+
 def closing():
-    """13枚目: 締め。文言はユーザー指定"""
+    """13枚目: 締め。
+
+    ユーザー指示【2026-09-19】「日付選択して、その結果が下に出てると思うんですけども、
+      それが出た状態のサンプルが良いです」
+    → スクショは**日付タブ+その日の件数+実際のイベントカード**が入る範囲を使う。
+      タブだけを見せても「絞り込める」ことは伝わるが、**絞った結果が出る**ことが伝わらない。
+    ⚠この範囲(1170×1500)を入れるため**幅820pxまで落としている**。
+      これ以上小さくするとカード内の文字が読めなくなるので、
+      文言はアカウント行1本+見出し1行+下の1行だけに削ってある。
+    ⚠**右には置けない**。右カラムでは幅440px程度しか取れず、元が幅1170pxで
+      描かれた画面なのでタブの文字が11px相当になって読めない。"""
     im = Image.new('RGBA', (W_, H_), BG + (255,))
     d = ImageDraw.Draw(im)
-    y = 52
-    for ln in ('その他も', 'イベント多数あり'):
-        d.text((W_ // 2, y), ln, font=font(ROUND, 66), fill=INK + (255,), anchor='ma')
-        y += 82
-    y += 22
 
-    # 一覧ページのスクショ(角丸+影)
-    if os.path.exists(PAGE_SHOT):
-        sh = Image.open(PAGE_SHOT).convert('RGBA')
-        SW = W_ - 70 * 2
-        sh = sh.resize((SW, int(round(sh.height / sh.width * SW))), Image.LANCZOS)
-        card = rounded((SW, sh.height), 22, (255, 255, 255, 255))
-        card.paste(sh, (0, 0), rounded((SW, sh.height), 22, (255, 255, 255, 255)))
-        shadow(im, card, (70, y), blur=20, alpha=56, dy=7)
-        y += sh.height + 34
-    else:
-        print('!! 一覧ページのスクショが無い:', PAGE_SHOT)
-
-    d.text((W_ // 2, y), '日付とエリアで絞れる一覧です', font=font(MEIB, 38),
-           fill=SUB + (255,), anchor='ma')
-    y += 60
-    d.text((W_ // 2, y), '詳しくはプロフィール欄をご覧ください', font=font(MEI, 32),
-           fill=SUB + (255,), anchor='ma')
-    y += 66
-
-    # プロフィール写真とアカウント名を横並びで(誰を見ればいいか分かるように)
-    S = 118
+    # アカウント行(写真+名前を横並び。誰を見ればいいか分かるように)
+    S = 74
     ic = profile_icon(S)
-    tw = d.textlength(HANDLE, font=font(MEIB, 40))
-    x0 = int((W_ - (S + 22 + tw)) // 2)
+    fh = font(MEIB, 34)
+    tw = d.textlength(HANDLE, font=fh)
+    x0 = int((W_ - (S + 18 + tw)) // 2)
+    y = 26
     if ic is not None:
         im.alpha_composite(ic, (x0, y))
     else:
-        print('!! プロフィール写真が無い:', AVATAR)
-        x0 -= S + 22
-    d.text((x0 + S + 22, y + S // 2), HANDLE, font=font(MEIB, 40),
-           fill=INK + (255,), anchor='lm')
-    y += S + 30
+        x0 -= S + 18
+    d.text((x0 + S + 18, y + S // 2), HANDLE, font=fh, fill=INK + (255,), anchor='lm')
+    y += S + 32
 
-    # マップ本体の案内(イベント一覧の隣にある、もう半分の中身)
-    box = rounded((W_ - 160, 164), 26, (255, 255, 255, 255))
-    shadow(im, box, (80, y), blur=18, alpha=48, dy=6)
-    bd = ImageDraw.Draw(im)
-    bd.text((W_ // 2, y + 44), '福岡こそだてグルメマップ', font=font(ROUND, 46),
-            fill=(206, 57, 52, 255), anchor='ma')
-    bd.text((W_ // 2, y + 106), '子供椅子・おむつ替え・座敷で絞り込めます',
-            font=font(MEI, 26), fill=SUB + (255,), anchor='ma')
-    y += 164
-    if y > H_ - 20:
-        print('!! 締めがはみ出す: %dpx / 上限%dpx' % (y, H_ - 20))
+    d.text((W_ // 2, y), 'その他もイベント多数あり', font=font(ROUND, 56),
+           fill=INK + (255,), anchor='ma')
+    y += 74
+
+    y = _shot(im, y, 790)      # 820だと21pxはみ出した。790で1321px
+
+    y += 18
+    d.text((W_ // 2, y), '日付を選ぶとその日に行けるイベントが出ます',
+           font=font(MEIB, 32), fill=SUB + (255,), anchor='ma')
+    y += 44
+    d.text((W_ // 2, y), '詳しくはプロフィール欄をご覧ください',
+           font=font(MEI, 28), fill=SUB + (255,), anchor='ma')
+    y += 40
+    if y > H_ - 12:
+        print('!! 締めがはみ出す: %dpx / 上限%dpx' % (y, H_ - 12))
     return im
 
 

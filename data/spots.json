@@ -47085,5 +47085,37 @@
   "thumb": null,
   "wish": true,
   "category": "play"
+ },
+ {
+  "id": "hamburg-kirin-route68",
+  "name": "ハンバーグ きりん ROUTE68",
+  "area": "糟屋郡志免町",
+  "city": "糟屋郡志免町",
+  "pref": "福岡県",
+  "genre": "洋食・ハンバーグ",
+  "lat": 33.602628,
+  "lng": 130.455571,
+  "address": "福岡県糟屋郡志免町別府3丁目11-21",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐子供椅子あり(現地確認・食べログの「子供用イス有り」とも一致)。乳児から入れる。ハンバーグセット200g 1,250円〜・煮込みハンバーグセット1,350円・日替わりハンバーグカレーセット1,250円で、いずれもライス・サラダ・スープ付き。ソースはきりんオリジナルしょうゆ/デミグラスチーズ/明太クリームチーズの3種から選べる。⚠月曜定休。昼は11:00〜15:00(L.O.14:45)。夜(17:00〜21:00)は情報源が分かれるため営業日を要確認。駐車場あり(台数は要確認)。中洲の豚骨ラーメン「きりん」が手掛ける洋食店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "category": null,
+  "official": "https://www.instagram.com/hamburg_kirin/",
+  "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40072282/"
  }
 ]

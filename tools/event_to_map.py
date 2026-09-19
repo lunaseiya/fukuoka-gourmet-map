@@ -23,7 +23,7 @@
     python tools/event_to_map.py                    # ドライラン
     python tools/event_to_map.py --apply            # 実際に登録
 """
-import argparse, io, json, math, os, re, shutil, sys, time, urllib.parse, urllib.request
+import argparse, difflib, io, json, math, os, re, shutil, sys, time, urllib.parse, urllib.request
 from datetime import date, datetime
 
 sys.stdout.reconfigure(encoding='utf-8')
@@ -37,10 +37,22 @@ AGG = {'いこーよ', '県公式', '福岡県', '福岡県公式', 'クロス�
 
 
 def _geo1(addr):
+    """⚠**1回で諦めない**。geocoding.jp は一時的に空を返すことがある(2026-09-19に
+      「福岡県久留米市六ツ門町8-1」が落ちたが、手で叩き直すと正常に引けた)。
+      諦めるとそのイベントだけマップから漏れるので、間隔をあけて2回試す。"""
     u = 'https://www.geocoding.jp/api/?q=' + urllib.parse.quote(addr)
-    try:
-        r = urllib.request.urlopen(urllib.request.Request(u, headers=UA), timeout=30).read().decode('utf-8')
-    except Exception:
+    r = ''
+    for t in range(2):
+        if t:
+            time.sleep(12)
+        try:
+            r = urllib.request.urlopen(urllib.request.Request(u, headers=UA),
+                                       timeout=30).read().decode('utf-8')
+        except Exception:
+            continue
+        if re.search(r'<lat>([\d.]+)</lat>', r):
+            break
+    if not r:
         return None, None
     la = re.search(r'<lat>([\d.]+)</lat>', r)
     ln = re.search(r'<lng>([\d.]+)</lng>', r)
@@ -179,16 +191,31 @@ def main():
             lat, lng = geocode(p['addr'])
         if lat is None:
             print('  ! ジオコーディング失敗、登録しない:', p['title'][:40]); continue
-        # 座標の近傍300m に同じものが無いか(表記ゆれ対策)
+        # 座標の近傍300m に**同じイベント**が無いか(表記ゆれ対策)
+        # ⚠**距離だけで弾いてはいけない**【2026-09-19に3件を取りこぼした】。
+        #   商業施設・住宅展示場は同じ座標で**別のイベントを何本も**やるので、
+        #   距離だけのガードだと「ららぽーと福岡のナイトシネマ」が同じ館の
+        #   「走り方教室」に、「筑紫野のドラえもん撮影会」が同じ館の「手作りカフェ」に、
+        #   「きてミテ小倉のピザ作り」が同じ会場の「陶芸教室」に当たって全部落ちた。
+        #   → 近傍かつ**名前が同じイベントを指している**ときだけ重複とみなす。
         dup = None
         for s in sp:
-            if s.get('lat') and s.get('lng'):
-                dd = math.hypot((s['lat'] - lat) * 111000,
-                                (s['lng'] - lng) * 111000 * math.cos(math.radians(lat)))
-                if dd < 300 and s.get('until'):
-                    dup = s['name']; break
+            if not (s.get('lat') and s.get('lng') and s.get('until')):
+                continue
+            dd = math.hypot((s['lat'] - lat) * 111000,
+                            (s['lng'] - lng) * 111000 * math.cos(math.radians(lat)))
+            if dd >= 300:
+                continue
+            a = re.sub(r'[\s　]+', '', s['name'])
+            b = re.sub(r'[\s　]+', '', p['title'])
+            same = (a in b or b in a
+                    or difflib.SequenceMatcher(None, a, b).ratio() >= 0.62)
+            if same:
+                dup = s['name']; break
+            print('  · 同じ会場に別のイベントあり(登録は続ける): %s ≠ %s'
+                  % (p['title'][:26], s['name'][:26]))
         if dup:
-            print('  ! 近傍300mに期間限定スポットあり、登録しない:', p['title'][:34], '≒', dup)
+            print('  ! 近傍300mに同じイベントあり、登録しない:', p['title'][:34], '≒', dup)
             continue
         e = p['ev']
         d = datetime.strptime(p['until'], '%Y-%m-%d').date()

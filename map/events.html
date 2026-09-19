@@ -93,7 +93,6 @@
   .dt[aria-pressed="true"] .c{color:#fff}
   .dt.hol .n{color:#a93a3a}
   .dt[aria-pressed="true"].hol .n{color:#fff}
-  .dt.tdy{box-shadow:0 0 0 2px var(--hot) inset}
   .dt:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
   .dt.all{min-width:auto}
   .dt.all .n{font-size:.8rem}
@@ -106,8 +105,6 @@
   .dwd.sat{color:#24608f}.dwd.sun{color:#a93a3a}
   .dhol{font-size:.76rem;font-weight:700;color:var(--muted)}
   .dcnt{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--muted)}
-  .today{background:var(--hot);color:#fff;border-radius:6px;padding:1px 7px;
-    font-size:.7rem;font-weight:800;letter-spacing:.04em}
 
   .cards{list-style:none;margin:0;padding:0;display:grid;gap:10px}
   .ev{background:var(--card);border:1px solid var(--border);border-radius:13px;
@@ -598,18 +595,20 @@ function ofDay(iso){
 //   (「17件」と出ているのに開いたら0件、を起こさない)
 function renderTabs(){
   const box = document.getElementById('dtabs');
-  const today = DOC.generated;
+  // ⚠**「今日」を出さない**【2026-09-19ユーザー確定】。基準は `DOC.generated`(JSONを作った日)で
+  //   実際の今日ではないので、**更新が漏れると「今日」が昨日以前を指して見た目の整合が壊れる**。
+  //   同じ理由で generated 日を囲っていたオレンジ枠(.tdy)も外した。日付と曜日だけを出す。
   const tabs = allDays().map(iso => {
     const d = new Date(iso + 'T00:00:00');
     const wd = WD[d.getDay()];
     const cls = wd === '土' ? 'sat' : (wd === '日' ? 'sun' : '');
     const n = ofDay(iso).length;
-    return `<button class="dt${HOL[iso] ? ' hol' : ''}${iso === today ? ' tdy' : ''}"
+    return `<button class="dt${HOL[iso] ? ' hol' : ''}"
       data-iso="${iso}" aria-pressed="${day === iso}"
       ${n ? '' : 'disabled style="opacity:.42"'}
       title="${esc(HOL[iso] || '')}">
       <span class="n">${d.getDate()}</span>
-      <span class="w ${cls}">${iso === today ? '今日' : wd}</span>
+      <span class="w ${cls}">${wd}</span>
       <span class="c">${n}</span></button>`;
   }).join('');
   // 「全部」= 従来の全日まとめ表示。長いスクロールに戻せる逃げ道として残す
@@ -643,7 +642,6 @@ function render(){
   renderTabs();
   // 日付タブで選んでいればその日だけ。空("")なら全日
   const days = day ? [day] : allDays();
-  const today = DOC.generated;
   let html = '', total = 0;
   days.forEach(iso => {
     // ★**その日ごとに rank で並べ替える**【2026-09-17】
@@ -666,7 +664,6 @@ function render(){
       <span class="dnum">${d.getDate()}</span>
       <span class="dwd ${cls}">${wd}</span>
       ${HOL[iso] ? `<span class="dhol">${HOL[iso]}</span>` : ''}
-      ${iso === today ? '<span class="today">今日</span>' : ''}
       <span class="dcnt">${all.length}件</span></div>
       <ul class="cards">${list.map(e => card(e, iso)).join('')}</ul>
       ${all.length > lim

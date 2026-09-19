@@ -181,6 +181,12 @@ def spot_kind(s):
         return 'stay'
     if s.get('category') == 'play':
         return 'play'
+    # ⚠**温浴・入浴施設を食べログに回さない**【2026-09-19】。
+    #   `category: 'onsen'` が gourmet に落ちて「ヒナタの杜 小戸の湯どころ」を
+    #   食べログで4クエリ空振りしていた。日帰り温浴はアソビューの領分。
+    if s.get('category') == 'onsen' or re.search(r'温浴|岩盤浴|日帰り温泉|スーパー銭湯|サウナ',
+                                                 (s.get('genre') or '')):
+        return 'play'
     return 'gourmet'
 
 def main():

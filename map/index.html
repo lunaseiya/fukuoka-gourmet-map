@@ -212,6 +212,14 @@
     cursor: pointer;
   }
   .cl-item:active { background: var(--accent-soft); }
+  /* 施設そのもの(親)の行。子の店と見分けが付くように色と枠を変える
+     ⚠タブに関係なく先頭に固定で出す(2026-09-21。お食事タブで親が消えていた) */
+  .cl-item.cl-facility {
+    background: #f4f8f7;
+    border-bottom: 2px solid var(--accent);
+    border-left: 4px solid var(--accent);
+  }
+  .cl-item.cl-facility .cl-name { font-weight: 700; }
   .cl-top { display: flex; gap: 10px; align-items: baseline; }
   .cl-name { flex: 1; font-weight: 600; line-height: 1.35; }
   .cl-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
@@ -228,6 +236,8 @@
   .t-ltd     { background: #fff6d5; color: #8a6d00; font-weight: 800; }
   .t-fk      { background: #d9f2ee; color: #0b5348; font-weight: 800; }
   .t-video   { background: #fff3e3; color: #b05a00; }
+  .t-photo   { background: #eef3fb; color: #3a5c8c; }
+  .t-open    { background: var(--accent); color: #fff; font-weight: 700; }
   /* 九州ふっこう応援割の帯。コラボ(金)と区別できるよう青緑系にする */
   .fk-band {
     display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
@@ -1595,7 +1605,25 @@ function showClusterList(items, facility) {
   document.getElementById("clusterTitle").textContent =
     sameParent ? `${parent.name} 内のスポット` : "この場所のスポット";
   document.getElementById("clusterCount").textContent = `${items.length}件`;
-  document.getElementById("clusterList").innerHTML = items
+  // ⚠**施設そのもの(親)の行を必ず先頭に出す**【2026-09-21ユーザー指摘】。
+  //   親のカテゴリは1つしか持てないので、例えばイオンモール香椎浜(play)を
+  //   「お食事」タブで見ると**子の飲食店だけが並んで親が出てこない**。
+  //   ベビールームや駐車場といった**施設側の情報にたどり着けない**ので、
+  //   タブに関係なく先頭に固定する。件数は子の数のままにする(親は別枠なので数えない)。
+  const facilityRow = (sameParent && !items.some(s => s.id === parent.id))
+    ? `<button class="cl-item cl-facility" data-cid="${escapeHtml(parent.id)}">
+         <span class="cl-top">
+           <span class="cl-name">🏬 ${escapeHtml(parent.name)}</span>
+           <span class="cl-genre">施設の情報</span>
+         </span>
+         <span class="cl-tags">
+           ${isKidsOk(parent) ? `<span class="cl-tag t-kids">子連れOK</span>` : ""}
+           ${(parent.photos || []).length ? `<span class="cl-tag t-photo">📷 写真${parent.photos.length}枚</span>` : ""}
+           <span class="cl-tag t-open">授乳室・トイレなど ›</span>
+         </span>
+       </button>`
+    : "";
+  document.getElementById("clusterList").innerHTML = facilityRow + items
     // 動画あり > 訪問済み > 子連れOK を上に。同条件ならジャンル順
     .slice().sort((a, b) => {
       const sc = s => {
@@ -1626,7 +1654,13 @@ function showClusterList(items, facility) {
     b.addEventListener("click", () => {
       const sp = state.spots.find(x => x.id === b.dataset.cid);
       box.classList.remove("open");
-      if (sp) focusSpot(sp);
+      if (!sp) return;
+      // ⚠**今のタブに載っていないスポットは `jumpToSpot` で開く**(2026-09-21)。
+      //   施設の行は別カテゴリのことがあり(お食事タブ→イオンモールは遊び場)、
+      //   `focusSpot` だけだと次の renderAll で詳細カードが閉じてしまう。
+      //   `jumpToSpot` はタブと絞り込みを対象に合わせてから開く。
+      if (applyFilters(state.spots).some(x => x.id === sp.id)) focusSpot(sp);
+      else jumpToSpot(sp);
     });
   });
   box.classList.add("open");

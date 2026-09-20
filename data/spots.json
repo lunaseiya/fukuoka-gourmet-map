@@ -47183,5 +47183,37 @@
   },
   "thumb": null,
   "wish": true
+ },
+ {
+  "id": "ic-kokusai-teien",
+  "name": "国際交流庭園(アイランドシティ中央公園)",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "庭園",
+  "category": "play",
+  "lat": 33.667915,
+  "lng": 130.417565,
+  "address": "福岡県福岡市東区香椎照葉6丁目1",
+  "in": "ic-centralpark",
+  "visited": "2026-09-10",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**公園南部の歩道橋を渡った先**にある、あまり知られていないゾーン。福岡市の姉妹都市6都市(オークランド・アトランタ/アメリカ、広州/中国、ボルドー/フランス、オークランド/ニュージーランド、釜山/韓国)から出展された庭園で、中国風の門と回廊、瓦屋根の門、丸い月洞門、石の欄干、西洋風の噴水や女神が支える街灯、銀のオブジェが並ぶ。⭐背景にタワーマンションが入る独特な景色。入園無料。遊具エリアで遊んだあとの散歩にちょうどいい距離。⚠**どの構造物がどの都市の庭園かは公開されていない**(公式にも現地の銘板にも記載なし)。⚠地図の位置は親(公園の代表点)と同じにしてある。実際は歩道橋を渡った南側。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "web": "https://ic-centralpark.jp/"
  }
 ]

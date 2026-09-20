@@ -2879,24 +2879,39 @@
  },
  {
   "id": "tokinomahouresutoranmajikkuk",
-  "name": "時の魔法レストラン マジッククロノス",
-  "area": "西公園",
+  "name": "時の魔法レストラン Magic Chronus（マジッククロノス）",
+  "area": "福岡市中央区",
   "city": "福岡市中央区",
-  "genre": "レストラン",
+  "genre": "マジックレストラン",
   "lat": 33.599104,
   "lng": 130.371741,
-  "visited": null,
+  "visited": "2026-09-19",
   "with": "family",
-  "kids": null,
-  "verdict": "駐車場なし、唐人町駅から約1km。席構成・子供設備は確認できず。",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**子供向けのクロノスプレートにマジックの道具が1つ付いてくる**。マジシャンがテーブルまで来てやり方と種明かしまで教えてくれる。⭐**音が大きいのでイヤーマフを貸してもらえる**(色違いあり)。多目的トイレに幼児用便座あり。ショーは中国の変面・浮くテーブル・大きなトランプ・イリュージョンで約1時間。終演後は出演者と写真が撮れて、フクロウに触れる。出演者は毎回変わる。⚠**ショー中は動画撮影不可・写真撮影は可**。⚠土日祝は4部制(12:00/15:00/18:00/21:00ショータイム)、平日は2部制(18:00/21:00)。木曜定休。大人3,500円・子供2,500円(税込)＋1ドリンク1フードオーダー制。⚠駐車場なし。西鉄バス「中央市民プール前」すぐ。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
-  "pref": "福岡県"
+  "thumb": "tokinomahouresutoranmajikkuk.jpg",
+  "wish": false,
+  "pref": "福岡県",
+  "address": "福岡県福岡市中央区西公園14-24 1F",
+  "official": "https://magic-chronus.com/",
+  "photos": [
+   "tokinomahouresutoranmajikkuk_01_外観と看板.jpg",
+   "tokinomahouresutoranmajikkuk_02_イヤーマフの貸出.jpg",
+   "tokinomahouresutoranmajikkuk_03_多目的トイレ.jpg",
+   "tokinomahouresutoranmajikkuk_04_幼児用便座.jpg"
+  ]
  },
  {
   "id": "phoenixsaojibhojnalay",

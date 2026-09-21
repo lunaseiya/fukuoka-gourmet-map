@@ -1465,6 +1465,86 @@ def from_mall():
     return rows
 
 
+# ═══ アクロスモール春日 https://kasuga.acrossmall.jp/event/ ═══════════════
+#  ⚠**この源はイオンモール系より情報が濃い**。静的HTMLに
+#    開催日時 / 開催場所 / 備考(定員) / 本文 が**全部入っている**。
+#    (イオンモール社の館はJS描画で本文が1文字も取れず memo を作れなかった)
+#    → lead も memo もここから作れる。子連れイベントの主催として質が高い。
+#  構造(2026-09-21に実測):
+#    <article class="event_article"> <a id="eventNNNN" class="anker">
+#      <h3 class="title pc">題名</h3>
+#      <div class="text"><dl class="event_dl">
+#         <dt>開催日時：</dt><dd>2026年9月21日(月)～2026年9月21日(月)<br>18：00～20：30<br>受付開始：17：30</dd>
+#         <dt>開催場所：</dt><dd>2F 特設会場（ミスタードーナツ横）</dd>
+#         <dt>備　　考：</dt><dd>定員：30組限定</dd>
+#      </dl> 本文… </div>
+#  ⚠**dt のラベルに全角空白が入る**(「備　　考：」)。項目名は空白を落としてから引く
+ACROSS = 'https://kasuga.acrossmall.jp'
+ACROSS_ART = re.compile(r'<article class="event_article">([\s\S]*?)</article>')
+ACROSS_DL = re.compile(r'<dt>([^<]*?)[：:]?\s*</dt>\s*<dd>([\s\S]*?)</dd>')
+# 「9月イベントカレンダー」はPDFの案内でイベント本体ではない(会期が月まるごとになる)
+ACROSS_SKIP = re.compile(r'イベントカレンダー|カレンダーのご案内')
+ACROSS_MEMO = re.compile(r'(定員[^\n/]{0,24}|参加費[^\n/]{0,24}|受付開始[^\n/]{0,18}|'
+                         r'先着[^\n/]{0,18}|事前予約[^\n/]{0,18})')
+ACROSS_TIME = re.compile(r'([0-9０-９]{1,2}[：:][0-9０-９]{2}\s*[～~-]\s*[0-9０-９]{1,2}[：:][0-9０-９]{2})')
+
+
+def from_across():
+    rows = []
+    try:
+        h = M.fetch(ACROSS + '/event/')
+    except Exception as ex:
+        print('  ! アクロスモール春日 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    for c in ACROSS_ART.findall(h):
+        tm = re.search(r'<h3 class="title pc">([\s\S]*?)</h3>', c)
+        if not tm:
+            continue
+        title = n(tm.group(1))
+        if len(title) < 3 or ACROSS_SKIP.search(title):
+            continue
+        # dt/dd を項目名(空白を落としたもの)で引く
+        d = {}
+        for k, v in ACROSS_DL.findall(c):
+            key = re.sub(r'[\s　]+', '', n(k))
+            d[key] = n(re.sub(r'<br\s*/?>', ' / ', v))
+        when = d.get('開催日時', '')
+        a, e, days = jspan(when or title)
+        if a in (False, 'ended'):
+            continue
+        am = re.search(r'<a id="(event\d+)"', c)
+        url = ACROSS + '/event/' + ('#' + am.group(1) if am else '')
+        im = re.search(r'<div class="img">[\s\S]{0,400}?<img src="([^"]+)"', c)
+        # 本文は </dl> の後ろ、.text の中
+        bm = re.search(r'</dl>([\s\S]*?)</div>', c)
+        # ⚠**本文の <br> は改行のまま残す**。空白に潰すと memo の抽出が次の項目まで飲む
+        #   (「参加費：1組様100円（税込） ・暗闇ウォーク 完成し」になった)
+        # ⚠本文に `**` の強調記法が混ざることがあるので落とす
+        body = re.sub(r'<br\s*/?>', chr(10), bm.group(1)) if bm else ''
+        body = re.sub(r'<[^>]+>', '', body).replace('*', '')
+        body = re.sub(r'[ \t　]+', ' ', body).strip()
+        lead = re.split(r'[。' + chr(10) + r']', body)[0][:80] if body else ''
+        # memo は**行く前に効く情報**だけ(定員・参加費・受付開始・先着・事前予約)
+        memo = []
+        for src in (d.get('備考', ''), when, body):
+            for mm in ACROSS_MEMO.finditer(src):
+                x = n(mm.group(1))
+                if len(x) >= 4 and x not in memo:
+                    memo.append(x)
+        t2 = ACROSS_TIME.search(when)
+        rows.append({'src': 'アクロスモール春日', 'title': title,
+                     'city': '春日市', 'venue': 'アクロスモール春日',
+                     'url': url, 'span': (a, e), 'days_list': days,
+                     'raw': when,
+                     'free': ('無料' in body or '無料' in d.get('備考', '')),
+                     'lead': lead, 'poster': im.group(1) if im else None,
+                     'place': d.get('開催場所', '')[:60],
+                     'time': n(t2.group(1)) if t2 else '',
+                     'memo': memo[:3] or None})
+    print('  アクロスモール春日 %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1472,7 +1552,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'manual')
+                                     'across,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1501,6 +1581,9 @@ def main():
                   ('hkc', from_hakatacity),
                   # 【2026-09-17追加】イオン九州の総合スーパー10店舗(AEONモールとは別系列)
                   ('aeonkyushu', from_aeonkyushu),
+                  # 【2026-09-21追加】アクロスモール春日(春日市)。
+                  # **本文まで静的HTMLに入っている**ので memo が作れる数少ない館
+                  ('across', from_across),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

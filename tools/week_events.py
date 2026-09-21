@@ -1634,6 +1634,68 @@ def from_branch():
     return rows
 
 
+# ═══ 木の葉モール橋本 https://konohamall.com/news/event/ ═══════════════════
+#  ⚠**ドメインに www を付けない**。`www.konohamall.com` は証明書が一致せず SSL で落ちる
+#    (`konohamall.com` は正常)。`/event/` 単独も 404 で、正しいパスは **/news/event/**
+#  日付は **YYYY.MM.DD** 形式で入っているので日本語の会期解析が要らない。
+#  構造(2026-09-21に実測):
+#    <h3 id="news-7343">ABC-MART 期間限定特別催事</h3>
+#    <img src="/files/eventnews/7343/thumb270x203_photo1.jpg">
+#    <div class="eventnewsBody"><p>本文</p></div>
+#    <dl><dt>日程</dt><dd>2026.09.25 (金)  - 2026.10.05 (月)</dd></dl>
+#    <dl><dt>時間</dt><dd>10:00～19:00（最終日は18:00まで）</dd></dl>
+#    <dl><dt>場所</dt><dd>館内1F</dd></dl>
+#  ⚠サムネは 270x203 と小さい。**thumb270x203_ を外すと 500x375 の原寸**が取れる(実測)
+KONOHA = 'https://konohamall.com'
+KONOHA_H3 = re.compile(r'<h3 id="news-(\d+)">([\s\S]*?)</h3>')
+KONOHA_YMD = re.compile(r'(20\d{2})\.(\d{1,2})\.(\d{1,2})')
+
+
+def from_konoha():
+    rows = []
+    try:
+        h = M.fetch(KONOHA + '/news/event/')
+    except Exception as ex:
+        print('  ! 木の葉モール橋本 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    hits = list(KONOHA_H3.finditer(h))
+    for i, m in enumerate(hits):
+        nid, title = m.group(1), n(m.group(2))
+        if len(title) < 3:
+            continue
+        # 次の見出しまでを1件ぶんとして切る(見出しをまたいで本文を拾わないため)
+        c = h[m.end():(hits[i + 1].start() if i + 1 < len(hits) else len(h))]
+
+        def dd(label):
+            mm = re.search(r'<dt>%s</dt>\s*<dd>([\s\S]*?)</dd>' % label, c)
+            return n(re.sub(r'<[^>]+>', ' ', mm.group(1))) if mm else ''
+        when, tme, place = dd('日程'), dd('時間'), dd('場所')
+        ds = KONOHA_YMD.findall(when)
+        if not ds:
+            continue
+        try:
+            a = date(int(ds[0][0]), int(ds[0][1]), int(ds[0][2]))
+            e = date(int(ds[-1][0]), int(ds[-1][1]), int(ds[-1][2])) if len(ds) > 1 else a
+        except ValueError:
+            continue
+        bm = re.search(r'<div class="eventnewsBody">([\s\S]*?)</div>', c)
+        body = re.sub(r'<br\s*/?>', chr(10), bm.group(1)) if bm else ''
+        body = n(re.sub(r'<[^>]+>', ' ', body))
+        # 〈お問合せ〉以降は電話番号なのでリードに入れない
+        lead = re.split(r'[。' + chr(10) + r']|〈お問合せ〉', body)[0][:80]
+        im = re.search(r'src="(/files/eventnews/%s/[^"]+)"' % nid, c)
+        poster = (KONOHA + im.group(1).replace('thumb270x203_', '')) if im else None
+        rows.append({'src': '木の葉モール橋本', 'title': title,
+                     'city': '福岡市西区', 'venue': '木の葉モール橋本',
+                     'url': '%s/news/event/%s' % (KONOHA, nid),
+                     'span': (a, e), 'days_list': None,
+                     'raw': when, 'free': '無料' in body + title,
+                     'lead': lead, 'poster': poster,
+                     'place': place[:60], 'time': tme[:60]})
+    print('  木の葉モール橋本 %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1641,7 +1703,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,branch,manual')
+                                     'across,branch,konoha,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1676,6 +1738,8 @@ def main():
                   # 【2026-09-21追加】ブランチ2館(大和リース系)。
                   # **data-startdate/enddate/arr を持っていて日付が一番確実**
                   ('branch', from_branch),
+                  # 【2026-09-21追加】木の葉モール橋本(福岡市西区)。日付が YYYY.MM.DD で確実
+                  ('konoha', from_konoha),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

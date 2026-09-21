@@ -1696,6 +1696,86 @@ def from_konoha():
     return rows
 
 
+# ═══ BOSS E・ZO FUKUOKA https://e-zofukuoka.com ═══════════════════════════
+#  ★**Gatsby なので JSON API がある**【2026-09-21に発見】。HTMLは1.3MBあるのに
+#    イベントのリンクが1つも入っておらず、静的HTMLからは拾えない。
+#      一覧: /page-data/news/event/page-data.json  → allWordpressPost 269件
+#      個別: /page-data<path>page-data.json        → wordpressPost.content に本文HTML全文
+#  ⚠**一覧の date は投稿日で会期ではない**(アイランドアイと同じ)。
+#    会期はタイトル/抜粋から取れることもあるが、多くは本文にしか無い。
+#    → jspan を先に試し、読めないものだけ個別を開く。**開く上限を決める**(下の EZO_MAX)
+#  ⚠それまでは**いこーよ経由で「魔法の美術館」だけ**拾えていて、他の期間展示は漏れていた。
+EZO = 'https://e-zofukuoka.com'
+EZO_MAX = 25          # 個別ページを開く上限(1件2秒なので50秒。増やすと比例して伸びる)
+
+
+def _ezo_json(path):
+    return json.loads(M.fetch(EZO + '/page-data' + path + 'page-data.json'))
+
+
+def from_ezo():
+    rows = []
+    try:
+        d = _ezo_json('/news/event/')
+    except Exception as ex:
+        print('  ! BOSS E・ZO %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    edges = d['result']['data']['allWordpressPost']['edges']
+    opened = 0
+    for ed in edges:
+        nd = ed.get('node') or {}
+        title = n(html.unescape(nd.get('title') or ''))
+        path = nd.get('path') or ''
+        if len(title) < 3 or not path:
+            continue
+        ex_txt = n(re.sub(r'<[^>]+>', ' ', html.unescape(nd.get('excerpt') or '')))
+        # ⚠**投稿日を基準にして年を解釈する**【2026-09-21に踏んだ】。
+        #   この源は269件の全履歴を返すので、2021年や2024年の記事も入っている。
+        #   base を today にすると「【9/23】ドームフィールド開放」(2024年の投稿)が
+        #   **今年の9/23として復活**して候補に混ざった。
+        #   あわせて**投稿日が200日より古い記事は落とす**(会期が今年に読めても実際は過去)。
+        pm = re.match(r'(20\d{2})\.(\d{1,2})\.(\d{1,2})', nd.get('date') or '')
+        try:
+            pdate = date(int(pm.group(1)), int(pm.group(2)), int(pm.group(3))) if pm else None
+        except ValueError:
+            pdate = None
+        if pdate and (date.today() - pdate).days > 200:
+            continue
+        a, e, days = jspan(title + ' ' + ex_txt, base=pdate)
+        body = ''
+        if a in (False, 'ended') and opened < EZO_MAX:
+            # 本文にしか会期が無い回。個別の page-data を開いて取り直す
+            try:
+                dd = _ezo_json(path)
+                body = n(re.sub(r'<[^>]+>', ' ',
+                                html.unescape(dd['result']['data']['wordpressPost'].get('content') or '')))
+                time.sleep(M.WAIT)
+                opened += 1
+            except Exception:
+                body = ''
+            if body:
+                a, e, days = jspan(body[:600], base=pdate)
+        if a in (False, 'ended'):
+            continue
+        # 会場はカテゴリ名を使う(イベントホール / teamLabForest / V-World AREA 等)。
+        # ⚠**カテゴリが全施設ぶん付いている記事がある**(全館キャンペーン)ので、
+        #   2つ以上あるときは施設名にせず「BOSS E・ZO FUKUOKA」でまとめる
+        cats = [n(c.get('name') or '') for c in (nd.get('categories') or [])]
+        # ⚠カテゴリ「イベント情報」「お知らせ」は**施設名ではない**ので会場名に足さない
+        cats = [c for c in cats if c not in ('イベント情報', 'お知らせ', 'ニュース')]
+        venue = ('BOSS E・ZO FUKUOKA %s' % cats[0]) if len(cats) == 1 else 'BOSS E・ZO FUKUOKA'
+        fm = nd.get('featured_media') or {}
+        rows.append({'src': 'BOSS E・ZO FUKUOKA', 'title': title,
+                     'city': '福岡市中央区', 'venue': venue,
+                     'url': EZO + path, 'span': (a, e), 'days_list': days,
+                     'raw': ex_txt or (body[:60] if body else ''),
+                     'free': '無料' in (ex_txt + body + title),
+                     'lead': (ex_txt or body)[:80],
+                     'poster': fm.get('source_url')})
+    print('  BOSS E・ZO FUKUOKA %d件(個別を開いた %d件)' % (len(rows), opened), file=sys.stderr)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1703,7 +1783,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,branch,konoha,manual')
+                                     'across,branch,konoha,ezo,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1740,6 +1820,8 @@ def main():
                   ('branch', from_branch),
                   # 【2026-09-21追加】木の葉モール橋本(福岡市西区)。日付が YYYY.MM.DD で確実
                   ('konoha', from_konoha),
+                  # 【2026-09-21追加】BOSS E・ZO FUKUOKA。GatsbyのJSON APIから取る
+                  ('ezo', from_ezo),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

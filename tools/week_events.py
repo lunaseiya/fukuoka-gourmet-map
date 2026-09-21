@@ -1545,6 +1545,95 @@ def from_across():
     return rows
 
 
+# ═══ ブランチ(大和リース系) https://www.branch-sc.com/<slug>/shop/eventnews.jsp ═══
+#  ★**この源は日付が一番確実**【2026-09-21に実測】。article タグが
+#    data-startdate="20260922" data-enddate="20260923" を持っていて日本語の解析が要らない。
+#    さらに **data-arr="20260913,20260927" で不連続な開催日まで持っている**ので、
+#    「9月は第2第4日曜」のような回も days_list を正確に作れる(jspan では取れない)。
+#  構造:
+#    <article class="future events cat_23 wrapclick" id="id7265"
+#             data-startdate="20260922" data-enddate="20260923" data-arr="">
+#      <p class="e_category catid23">まちづくりスポット　イベント</p>
+#      <h4 class="name"><a href="...pop-eventnews.jsp?id=7265">まちスポ健康フェスタ</a></h4>
+#      <p>開催日時：9月22日(火)23日(水)　10:30～16:00</p>
+#      <p>場所：中央イベント広場</p>
+#  ⚠class に **past** が入っているものは終了済み(ページは過去1ヶ月も出す)。落とす。
+#  ⚠ポスターは `caimage/photoeventnews?...&m=280` が既定で小さい。**m=800 にすると 452×640**
+#    まで上がる(それ以上は元画像の上限で変わらない。実測)
+BRANCH = 'https://www.branch-sc.com'
+BRANCH_MALLS = [
+    ('ブランチ福岡下原',           '福岡市東区',   'f-shimobaru'),
+    ('ブランチ博多パピヨンガーデン', '福岡市博多区', 'h-papillon'),
+]
+BR_TIME = re.compile(r'([0-9０-９]{1,2}[:：][0-9０-９]{2}\s*[～~-]\s*[0-9０-９]{1,2}[:：][0-9０-９]{2})')
+
+
+def _br_iso(s):
+    """"20260922" → date(2026,9,22)。
+    ⚠**ISO文字列ではなく date を返す**。span は M.overlaps で date として比較される
+      (文字列を入れると TypeError になる。2026-09-21に踏んだ)"""
+    if not s or len(s) != 8:
+        return None
+    try:
+        return date(int(s[0:4]), int(s[4:6]), int(s[6:8]))
+    except ValueError:
+        return None
+
+
+def from_branch():
+    rows = []
+    for name, city, slug in BRANCH_MALLS:
+        url = '%s/%s/shop/eventnews.jsp' % (BRANCH, slug)
+        try:
+            h = M.fetch(url)
+        except Exception as ex:
+            print('  ! %s %s' % (name, type(ex).__name__), file=sys.stderr)
+            continue
+        got = 0
+        for c in h.split('<article ')[1:]:
+            c = c.split('</article>')[0]
+            cm = re.search(r'^class="([^"]*)"', c)
+            cls = cm.group(1) if cm else ''
+            if 'past' in cls:          # 終了したイベント(過去1ヶ月ぶんも出ている)
+                continue
+            tm = re.search(r'<h4 class="name">\s*<a[^>]*>([\s\S]*?)</a>', c)
+            if not tm:
+                continue
+            title = n(tm.group(1))
+            if len(title) < 3:
+                continue
+            sd = re.search(r'data-startdate="(\d{8})"', c)
+            ed = re.search(r'data-enddate="(\d{8})"', c)
+            a, e = _br_iso(sd.group(1) if sd else None), _br_iso(ed.group(1) if ed else None)
+            if not a:
+                continue
+            e = e or a
+            # data-arr があれば**不連続な開催日**。無ければ会期の全日
+            arr = re.search(r'data-arr="([^"]*)"', c)
+            days = [_br_iso(x) for x in re.split(r'[,\s]+', arr.group(1)) if len(x) == 8] \
+                if (arr and arr.group(1).strip()) else None
+            im = re.search(r'data-lazy="([^"]+photoeventnews[^"]+)"', c)
+            poster = im.group(1).replace('&amp;', '&').replace('m=280', 'm=800') if im else None
+            ps = [n(x) for x in re.findall(r'<p>([\s\S]*?)</p>', c)]
+            when = next((x for x in ps if x.startswith('開催日時')), '')
+            place = next((x for x in ps if x.startswith('場所')), '')
+            cat = re.search(r'e_category[^>]*>([\s\S]*?)</p>', c)
+            t2 = BR_TIME.search(when)
+            rows.append({'src': name, 'title': title, 'city': city, 'venue': name,
+                         'url': '%s/%s/shop/pop-eventnews.jsp?id=%s'
+                                % (BRANCH, slug, re.search(r'id="id(\d+)"', c).group(1))
+                                if re.search(r'id="id(\d+)"', c) else url,
+                         'span': (a, e), 'days_list': days,
+                         'raw': when, 'free': '無料' in when + place + title,
+                         'lead': n(cat.group(1)) if cat else '',
+                         'poster': poster,
+                         'place': re.sub(r'^場所[：:]\s*', '', place)[:60],
+                         'time': n(t2.group(1)) if t2 else ''})
+            got += 1
+        print('  %s %d件' % (name, got), file=sys.stderr)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1552,7 +1641,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,manual')
+                                     'across,branch,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1584,6 +1673,9 @@ def main():
                   # 【2026-09-21追加】アクロスモール春日(春日市)。
                   # **本文まで静的HTMLに入っている**ので memo が作れる数少ない館
                   ('across', from_across),
+                  # 【2026-09-21追加】ブランチ2館(大和リース系)。
+                  # **data-startdate/enddate/arr を持っていて日付が一番確実**
+                  ('branch', from_branch),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

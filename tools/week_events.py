@@ -1776,6 +1776,94 @@ def from_ezo():
     return rows
 
 
+# ═══ ゆめタウン(イズミ) https://www.izumi.jp/tenpo/<slug>/event ═══════════
+#  ⚠**ドメインが2つある**。`izumi.co.jp` は企業サイト(IR・採用)で店舗情報は無い。
+#    店舗は **`izumi.jp`**。さらに `izumi.jp/event` は**グループ全体の販促だけ**
+#    (カード入会・ポイント・プレゼント)で、館内のおでかけイベントは
+#    **店舗ごとの `/tenpo/<slug>/event`** にある。
+#  ⚠**SSLが通らない**。`izumi.jp` は中間証明書を送ってこないので Python 既定の
+#    コンテキストでは CERTIFICATE_VERIFY_FAILED になる。**certifi のCAで通る**ので
+#    この源だけ専用の fetch を使う(M.fetch は他の源が使っているので触らない)。
+#  構造(2026-09-22に実測):
+#    <li class="s_eventListItem">
+#      <a class="f_thumb" href="/tenpo/hakata/event/20260914\n-607922"> ← **href にリテラル改行**
+#        <img src="/system/files/..." alt="…">
+#      <time>2026.09.19〜09.23</time>   ← 会期(終了側は月日だけ)
+#      <p class="f_title"><a href="…">アダストリア「…キャンペーン」</a></p>
+YUME = 'https://www.izumi.jp'
+# (slug, 表示名, 市区)。福岡県の大型店から。ゆめマート等の小型店はイベントが無いので入れない
+YUME_SHOPS = [
+    ('hakata',     'ゆめタウン博多',   '福岡市東区'),
+    ('kurume',     'ゆめタウン久留米', '久留米市'),
+    ('omuta',      'ゆめタウン大牟田', '大牟田市'),
+    ('yukuhashi',  'ゆめタウン行橋',   '行橋市'),
+    ('onga',       'ゆめタウン遠賀',   '遠賀郡遠賀町'),
+    ('chikushino', 'ゆめタウン筑紫野', '筑紫野市'),
+    ('munakata',   'ゆめタウン宗像',   '宗像市'),
+]
+YUME_ITEM = re.compile(r'<li class="s_eventListItem">([\s\S]*?)</li>')
+YUME_TIME = re.compile(r'<time>\s*(20\d{2})\.(\d{1,2})\.(\d{1,2})'
+                       r'(?:\s*[〜~ー-]\s*(?:(20\d{2})\.)?(\d{1,2})\.(\d{1,2}))?\s*</time>')
+_YUME_CTX = None
+
+
+def _yume_fetch(u):
+    """⚠certifi のCAを使う。既定のコンテキストでは izumi.jp のSSLが通らない"""
+    global _YUME_CTX
+    if _YUME_CTX is None:
+        import certifi, ssl
+        _YUME_CTX = ssl.create_default_context(cafile=certifi.where())
+    r = urllib.request.urlopen(urllib.request.Request(u, headers=M.UA),
+                               timeout=30, context=_YUME_CTX)
+    return r.read().decode('utf-8', 'replace')
+
+
+def from_yume():
+    rows = []
+    for slug, name, city in YUME_SHOPS:
+        try:
+            h = _yume_fetch('%s/tenpo/%s/event' % (YUME, slug))
+        except Exception as ex:
+            print('  ! %s %s' % (name, type(ex).__name__), file=sys.stderr)
+            continue
+        got = 0
+        for c in YUME_ITEM.findall(h):
+            tm = re.search(r'<p class="f_title">\s*<a[^>]*>([\s\S]*?)</a>', c)
+            if not tm:
+                continue
+            title = n(tm.group(1))
+            if len(title) < 3:
+                continue
+            dm = YUME_TIME.search(c)
+            if not dm:
+                continue
+            y1, m1, d1, y2, m2, d2 = dm.groups()
+            try:
+                a = date(int(y1), int(m1), int(d1))
+                if m2:
+                    # 終了側は月日だけのことが多い。**月が戻っていたら翌年**(年跨ぎ)
+                    yy = int(y2) if y2 else (int(y1) + (1 if int(m2) < int(m1) else 0))
+                    e = date(yy, int(m2), int(d2))
+                else:
+                    e = a
+            except ValueError:
+                continue
+            # ⚠href に**リテラル改行**が入っている(実測)。取り除かないとURLが壊れる
+            am = re.search(r'href="(/tenpo/[^"]+)"', c)
+            path = re.sub(r'\s+', '', am.group(1)) if am else ('/tenpo/%s/event' % slug)
+            im = re.search(r'<img src="([^"]+)"', c)
+            alt = re.search(r'alt="([^"]*)"', c)
+            rows.append({'src': name, 'title': title, 'city': city, 'venue': name,
+                         'url': YUME + path, 'span': (a, e), 'days_list': None,
+                         'raw': n(dm.group(0)), 'free': '無料' in title,
+                         'lead': n(alt.group(1)) if alt else '',
+                         'poster': (YUME + im.group(1)) if im else None})
+            got += 1
+        print('  %s %d件' % (name, got), file=sys.stderr)
+        time.sleep(M.WAIT)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1783,7 +1871,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,branch,konoha,ezo,manual')
+                                     'across,branch,konoha,ezo,yume,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1822,6 +1910,9 @@ def main():
                   ('konoha', from_konoha),
                   # 【2026-09-21追加】BOSS E・ZO FUKUOKA。GatsbyのJSON APIから取る
                   ('ezo', from_ezo),
+                  # 【2026-09-22追加】ゆめタウン(イズミ)の福岡県内7店。
+                  # 店舗ごとの /tenpo/<slug>/event から取る(グループ全体のeventは販促だけ)
+                  ('yume', from_yume),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

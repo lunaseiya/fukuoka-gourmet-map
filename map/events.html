@@ -717,8 +717,12 @@ function render(){
   });
   document.getElementById('list').innerHTML = total ? html
     : '<div class="daygrp"><p class="empty">条件に合うイベントがありませんでした。絞り込みを外してみてください。</p></div>';
+  // ⚠**起点は render() の lim と同じ既定値にする**【2026-09-23ユーザー指摘「1回目の押下が毎回失敗する」】。
+  //   旧: (shown[iso] || 6) + 12 → 1日表示(既定20件)だと1回目が 6+12=18件になり、
+  //   20件より**減る**ので何も起きないように見えた(2回目の30件でやっと増える)
   document.querySelectorAll('.more').forEach(b => b.addEventListener('click', () => {
-    shown[b.dataset.iso] = (shown[b.dataset.iso] || 6) + 12; render();
+    const iso = b.dataset.iso;
+    shown[iso] = (shown[iso] || (day ? 20 : 10)) + 12; render();
   }));
 }
 </script>

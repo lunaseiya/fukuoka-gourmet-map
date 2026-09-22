@@ -13508,7 +13508,18 @@
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
+  "thumb": "aeonmallfukutsu.jpg",
+  "photos": [
+   "aeonmallfukutsu_01_キッズヒカリパーク(無料).jpg",
+   "aeonmallfukutsu_02_子供乗せカート.jpg",
+   "aeonmallfukutsu_03_木製ベビーチェア(ベルト付).jpg",
+   "aeonmallfukutsu_04_ハイチェア.jpg",
+   "aeonmallfukutsu_05_おむつ替え台と手洗い.jpg",
+   "aeonmallfukutsu_06_調乳用の給湯器.jpg",
+   "aeonmallfukutsu_07_個室の授乳室.jpg",
+   "aeonmallfukutsu_08_小上がり席(フードコート).jpg",
+   "aeonmallfukutsu_09_ベビーカーのまま座れるソファBOX席.jpg"
+  ],
   "wish": false,
   "category": "play"
  },
@@ -19556,6 +19567,44 @@
   },
   "thumb": null,
   "wish": false
+ },
+ {
+  "id": "hoshinocoffee-fukuokashingu",
+  "name": "星乃珈琲店 福岡新宮店",
+  "area": "夜臼",
+  "city": "糟屋郡新宮町",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.702092,
+  "lng": 130.450154,
+  "address": "福岡県糟屋郡新宮町夜臼6-7-11",
+  "visited": "2026-08-30",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": false,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**お子様ランチあり**(現地確認): ミッフィーのマグ・子供用のトレイと皿で出てきて、次回使える**お子様ランチ100円引き券**が付いてくる。⭐**女性トイレにおむつ替え台**(扉にベビーシートの表示・現地確認)。席はボックス席が中心で、テーブルはゆったりめ。珈琲豆の量り売り・ケーキのテイクアウトあり。営業は平日8:00〜20:00(LO19:30)、土日祝8:00〜21:30(LO21:00)。モーニングは開店〜11:00、平日ランチ11:00〜14:00。TEL 092-692-1204。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "hoshinocoffee-fukuokashingu.jpg",
+  "photos": [
+   "hoshinocoffee-fukuokashingu_01_お子様ランチ(ミッフィーのマグ付).jpg",
+   "hoshinocoffee-fukuokashingu_02_女性トイレのおむつ替え台.jpg",
+   "hoshinocoffee-fukuokashingu_03_店内.jpg",
+   "hoshinocoffee-fukuokashingu_04_珈琲豆の量り売り.jpg"
+  ],
+  "wish": false,
+  "category": "gourmet",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40039433/"
  },
  {
   "id": "sp831df6f9ac",
@@ -31659,7 +31708,7 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "ハンバーグの全国チェーン。チェーン標準でキッズメニュー・子供椅子あり。9:00〜翌1:00と朝から深夜まで開いている。",
+  "verdict": "ハンバーグの全国チェーン。⭐**子供椅子(背もたれ付きの補助椅子)を現地で確認**。キッズメニューあり。テーブルにタブレットの注文端末があり、メニューの冊子も置いてある。9:00〜翌1:00と朝から深夜まで開いている。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -31668,7 +31717,8 @@
   "thumb": "bikkuridonkey-hakozaki.jpg",
   "wish": false,
   "photos": [
-   "rakuichi_bikkuridonkey.jpg"
+   "rakuichi_bikkuridonkey.jpg",
+   "bikkuridonkey-hakozaki_02_子供椅子.jpg"
   ],
   "in": "rakuichikaido-hakozaki",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40027761/"

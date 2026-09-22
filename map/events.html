@@ -305,18 +305,33 @@ function saveAreaOn(){
   try { localStorage.setItem('aqEventAreas', JSON.stringify(areaOn)); } catch (e) {}
 }
 
-fetch('./events.json').then(r => r.json()).then(d => { DOC = d; boot(); })
+// ⚠**日付でキャッシュを割る**【2026-09-22】。`./events.json` をそのまま fetch すると
+//   ブラウザが前に開いたときのJSONを出し続け、こちらが作り直しても**古い一覧が見える**
+//   (実際にキャッシュが残って9/18版が出た)。`?d=YYYY-MM-DD` なら
+//   その日のうちはキャッシュが効き、日付が変われば必ず取り直す
+fetch('./events.json?d=' + todayISO()).then(r => r.json()).then(d => { DOC = d; boot(); })
   .catch(() => { document.getElementById('list').innerHTML =
     '<p class="empty">イベント情報を読み込めませんでした。時間をおいて開いてください。</p>'; });
 
 function boot(){
-  const f = new Date(DOC.from + 'T00:00:00'), t = new Date(DOC.to + 'T00:00:00');
+  // ★見出しの期間は**実際に表示している範囲**を書く【2026-09-22】。
+  //   `DOC.from 〜 DOC.to の2週間` 固定だと、今日で切った結果(例 4/14日)とズレる
+  const ds0 = allDays();
+  const f = new Date((ds0[0] || DOC.from) + 'T00:00:00');
+  const t = new Date((ds0[ds0.length-1] || DOC.to) + 'T00:00:00');
+  const stale = DOC.to < todayISO() ? '（⚠情報が古いです）' : '';
   document.getElementById('range').textContent =
-    `${f.getMonth()+1}/${f.getDate()} 〜 ${t.getMonth()+1}/${t.getDate()} の2週間 ／ ${DOC.generated} 更新`;
+    `${f.getMonth()+1}/${f.getDate()} 〜 ${t.getMonth()+1}/${t.getDate()} の${ds0.length}日間`
+    + ` ／ ${DOC.generated} 更新${stale}`;
+  // ★エリア・市区の件数も**今日以降のイベントだけ**で数える【2026-09-22】。
+  //   会期切れを含めて数えると、ボタンに「12」と出ているのに開くと数件、
+  //   あるいは**過去のイベントしか無いエリアのボタンが残る**
+  const liveSet = new Set(ds0);
+  const LIVE = DOC.events.filter(e => (e.days||[]).some(x => liveSet.has(x)));
   // ★エリアの絞り込みを先に組む
   loadAreaOn();
   const ac = {};
-  DOC.events.forEach(e => { const k = areaOf(e); ac[k] = (ac[k]||0)+1; });
+  LIVE.forEach(e => { const k = areaOf(e); ac[k] = (ac[k]||0)+1; });
   const ar = document.getElementById('areas');
   // 件数0のグループはボタンを置かない(空振りするボタンを出さない)
   ar.innerHTML = AREAS.filter(a => ac[a.k]).map(a =>
@@ -334,7 +349,7 @@ function boot(){
 
   // 市区の絞り込みは**実際に件数があるものだけ**出す(空振りするボタンを置かない)
   const cs = {};
-  DOC.events.forEach(e => { if (e.city) cs[e.city] = (cs[e.city]||0)+1; });
+  LIVE.forEach(e => { if (e.city) cs[e.city] = (cs[e.city]||0)+1; });
   const top = Object.entries(cs).sort((a,b)=>b[1]-a[1]).slice(0,10);
   const fl = document.getElementById('filters');
   fl.innerHTML = '<button class="fb" id="fFree" aria-pressed="false">無料だけ</button>'
@@ -371,12 +386,13 @@ function boot(){
   sync();
 }
 
-// ★いま選んでいる日付("" なら全日)。既定は**今日**
-//   ⚠DOC.generated が範囲外(古いJSONを見たとき)なら先頭の日にする
+// ★いま選んでいる日付("" なら全日)。既定は**実際の今日**
+//   ⚠基準を `DOC.generated`(JSONを作った日)にしてはいけない。更新が漏れると
+//     既定の表示が数日前の日になる。今日が範囲外なら先頭の日にフォールバック
 let day = '';
 function initDay(){
-  const ds = allDays();
-  day = ds.includes(DOC.generated) ? DOC.generated : (ds[0] || '');
+  const ds = allDays(), td = todayISO();
+  day = ds.includes(td) ? td : (ds[0] || '');
 }
 
 // ★ポスターの拡大(ライトボックス)【2026-09-17ユーザー要望】
@@ -535,6 +551,9 @@ function card(e, iso){
          data-ttl="${esc((e.title || '').slice(0, 60))}" aria-label="ポスターを拡大する"
        ><img class="thumb" src="./eventposters/${esc(e.img)}" alt="" loading="lazy" decoding="async"></button>`
     : NOIMG;
+  // ★**残っている開催日**(今日以降・この日を除く)。タグと「ほかも開催」の両方で使う
+  const td = todayISO();
+  const rest = (e.days||[]).filter(d => d !== iso && d >= td);
   const tags = [];
   // ★**有料/無料を先頭に**置く【2026-09-17ユーザー要望】
   //   「有料・無料ラベル」が見やすさの要だったので、一番左に出す。
@@ -545,15 +564,19 @@ function card(e, iso){
   tags.push(e.verified
     ? '<span class="tag t-ver">現地確認済み</span>'
     : '<span class="tag t-unv">要確認</span>');
-  if (e.n === 1) tags.push('<span class="tag t-only">この日だけ</span>');
+  // ⚠「この日だけ」は `e.n`(会期の総日数)ではなく**残りの開催日**で判定する。
+  //   9/20と9/22の2日開催でも、9/22時点で行けるのはその日だけ
+  if (!rest.length) tags.push('<span class="tag t-only">この日だけ</span>');
   const bits = [];
   if (e.venue) bits.push(`<b>${esc(e.venue)}</b>`);
   if (e.time) bits.push(esc(e.time));
   if (e.price) bits.push(esc(e.price));
-  const others = (e.days||[]).filter(d => d !== iso)
-    .map(d => Number(d.slice(8,10))).slice(0,4);
+  // ⚠「ほかも開催」に**終わった日を並べない**【2026-09-22ユーザー確定】。
+  //   events.json は生成日からの2週間で作るので、更新せずに数日経つと
+  //   「18・19・20・21日も開催」のように**もう行けない日**が出ていた
+  const others = rest.map(d => Number(d.slice(8,10))).slice(0,4);
   const also = others.length
-    ? `<p class="also">${others.join('・')}日${e.n > 5 ? ' ほか' : ''}も開催</p>` : '';
+    ? `<p class="also">${others.join('・')}日${rest.length > 4 ? ' ほか' : ''}も開催</p>` : '';
   const link = e.spot
     ? `<p class="srcline"><a href="../s/${esc(e.spot)}.html">マップのページで見る →</a></p>`
     : (e.url ? `<p class="srcline"><a href="${esc(e.url)}" target="_blank" rel="noopener">主催の告知を見る →</a></p>` : '');
@@ -566,12 +589,29 @@ function card(e, iso){
   </div></li>`;
 }
 
-// ★日付の一覧。DOC.from 〜 DOC.to を1日ずつ
-// ⚠`toISOString()` はUTCに寄るので、**ローカル日付で組む**
-//   (日本時間の午前9時前に開くと1日ずれる)
+// ★**実際の今日**(閲覧している端末の日付)。ISO文字列で返す
+//   ⚠`toISOString()` はUTCに寄るので使わない。**ローカル日付で組む**
+//     (日本時間の午前9時前に開くと1日ずれる)
+function todayISO(){
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`
+       + `-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+// ★日付の一覧。**今日 〜 DOC.to** を1日ずつ
+//   ⚠**終わった日は出さない**【2026-09-22ユーザー確定】。
+//     events.json は生成した日(`DOC.generated`)からの2週間で作るので、
+//     更新せずに数日経つと**先頭に過去の日付が並んだまま**になる。
+//     実測(generated=9/18 / 閲覧日=9/22)で **63件が会期切れ**のまま出ていた。
+//     起点は `DOC.from` ではなく **max(DOC.from, 今日)** にする。
+//   ⚠今日が `DOC.to` を過ぎている(=JSONがまるごと古い)ときは**空にしない**。
+//     空にすると「イベントが無い」と読めてしまうので、
+//     従来どおり全期間を出して #stale の注記で古いことを伝える(下の staleNote)
 function allDays(){
   const out = [];
-  const f = new Date(DOC.from + 'T00:00:00');
+  const start = (DOC.from > todayISO()) ? DOC.from : todayISO();
+  const from = (start > DOC.to) ? DOC.from : start;   // JSONが古すぎる場合のフォールバック
+  const f = new Date(from + 'T00:00:00');
   for (let i = 0; i < 40; i++){
     const d = new Date(f.getFullYear(), f.getMonth(), f.getDate() + i);
     const iso = `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}`
@@ -611,10 +651,15 @@ function renderTabs(){
       <span class="w ${cls}">${wd}</span>
       <span class="c">${n}</span></button>`;
   }).join('');
-  // 「全部」= 従来の全日まとめ表示。長いスクロールに戻せる逃げ道として残す
+  // 「全部」= 表示している全日まとめ。長いスクロールに戻せる逃げ道として残す
+  //   ⚠件数・日数は**今日以降に絞った実数**にする。`DOC.events.filter(pass).length` を
+  //     そのまま出すと会期切れのイベントまで数えてしまい、開いた合計と合わない
+  const ds = allDays();
+  const live = new Set(ds);
+  const nAll = DOC.events.filter(e => pass(e) && (e.days||[]).some(x => live.has(x))).length;
   box.innerHTML = `<button class="dt all" data-iso="" aria-pressed="${day === ''}">
-      <span class="n">全部</span><span class="w">14日</span>
-      <span class="c">${DOC.events.filter(pass).length}</span></button>` + tabs;
+      <span class="n">全部</span><span class="w">${ds.length}日</span>
+      <span class="c">${nAll}</span></button>` + tabs;
   const on = box.querySelector('[aria-pressed="true"]');
   if (on) on.scrollIntoView({block:'nearest', inline:'center'});
 }

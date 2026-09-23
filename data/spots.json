@@ -12536,6 +12536,46 @@
   "wish": false
  },
  {
+  "id": "marugenramen-fukuokanakagawa",
+  "name": "丸源ラーメン 福岡那珂川店",
+  "area": "片縄",
+  "city": "那珂川市",
+  "pref": "福岡県",
+  "genre": "ラーメン",
+  "lat": 33.520832,
+  "lng": 130.422729,
+  "address": "福岡県那珂川市片縄8-24",
+  "visited": "2026-09-21",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐**座敷あり**。⭐**子供椅子は2種類**で、**テーブル用の木製ハイチェア**と**座敷用のバンボ型ベビーチェア**の両方を現地で確認。⭐**お子さま用のカトラリー・食器セット**と**麺切りバサミ**あり。⭐**離乳食もある**(メニューに「離乳食はこちら」の案内)。⭐**お子さまラーメンセット350円(税込385円)**はお子さまラーメン+フライドポテトで、ラーメンは しょうゆ/しお/とんこつ から選べ、**選べるおもちゃ付き**(小学生まで)。温玉ごはん250円(税込275円)〜、フライドポテト190円(税込209円)、ミニパフェ350円(税込385円)など子供が食べやすいサイドも多い。⚠**おむつ替えシートは女性用トイレのみ**(現地確認)。席数101席(22卓)、駐車場あり。営業10:30〜翌1:00(L.O.翌0:30)。TEL 092-408-5983。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "marugenramen-fukuokanakagawa.jpg",
+  "photos": [
+   "marugenramen-fukuokanakagawa_01_外観.jpg",
+   "marugenramen-fukuokanakagawa_02_座敷席.jpg",
+   "marugenramen-fukuokanakagawa_03_ベビーチェア(バンボ型).jpg",
+   "marugenramen-fukuokanakagawa_04_木製の子供椅子.jpg",
+   "marugenramen-fukuokanakagawa_05_お子さまラーメンセット(おもちゃ付).jpg",
+   "marugenramen-fukuokanakagawa_06_お子さまサイドメニューと食器セット.jpg"
+  ],
+  "wish": false,
+  "category": "gourmet",
+  "tabelog": "https://tabelog.com/fukuoka/A4003/A400301/40052876/"
+ },
+ {
   "id": "guruguruyachikushino",
   "name": "きっずゆうえんち ぐるぐる屋 筑紫野店",
   "area": "塔原東",

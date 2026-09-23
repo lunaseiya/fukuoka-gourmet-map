@@ -501,22 +501,23 @@
  },
  {
   "id": "dejirootenjinnishitourim-06",
-  "name": "スシロー デジロー 福岡箱崎店",
+  "name": "スシロー 福岡箱崎店",
   "area": "箱崎",
   "genre": "回転寿司",
   "lat": 33.622471,
   "lng": 130.419326,
-  "visited": null,
+  "visited": "2026-08-06",
   "with": "family",
   "kids": {
-   "stroller": null,
+   "stroller": true,
    "diaper": true,
    "tatami": null,
    "kidsChair": true,
+   "kidsMenu": true,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "スシローの未来型店舗「デジロー」。大画面デジタル演出が楽しい。子供椅子、おむつ替え台あり",
+  "verdict": "⭐**スシローの「デジロー」導入店**(公式表記・一皿120円税込〜)。タブレットの大画面演出が子供に受ける。⭐**おむつ替えシートあり**(公式の設備欄)。⭐子供椅子・キッズメニューあり。⭐**1F店舗でスロープあり**、**自動土産ロッカー**も設置。駐車場あり(身障者用駐車場完備)。席数182席。営業は月〜金11:00〜23:00 / 土日祝10:30〜23:00(ラストオーダーは閉店30分前)。TEL 092-645-0001。地下鉄箱崎線「箱崎九大前」から徒歩4分。⭐子供が自分で手巻きできる「つくローセット」あり(実食)。",
   "video": {
    "youtube": "https://youtube.com/shorts/QTP56_-J-rw",
    "tiktok": "https://www.tiktok.com/@tencone/video/7661833341510880519",
@@ -527,13 +528,11 @@
   "pref": "福岡県",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40033455/",
   "wish": false,
-  "campaign": {
-   "title": "ハローキティ コラボ",
-   "label": "キティコラボ",
-   "until": "2026-09-06",
-   "untilLabel": "9月6日",
-   "url": "https://www.akindo-sushiro.co.jp/"
-  }
+  "address": "福岡県福岡市東区箱崎4-15-41",
+  "photos": [
+   "dejirootenjinnishitourim-06_01_店内とデジローの端末.jpg",
+   "dejirootenjinnishitourim-06_02_つくローセット(自分で手巻き).jpg"
+  ]
  },
  {
   "id": "raamenkoubounihei-07",
@@ -19248,42 +19247,6 @@
   },
   "thumb": null,
   "wish": false
- },
- {
-  "id": "sp0a7dfbc8fc",
-  "name": "スシロー 福岡箱崎店",
-  "area": "箱崎",
-  "city": "福岡市東区",
-  "pref": "福岡県",
-  "genre": "回転寿司",
-  "lat": 33.622292,
-  "lng": 130.419449,
-  "visited": null,
-  "with": "family",
-  "kids": {
-   "stroller": true,
-   "diaper": true,
-   "tatami": null,
-   "kidsChair": true,
-   "serveMin": null,
-   "noise": null
-  },
-  "verdict": "23時頃まで営業。チェーン標準で子供椅子・キッズメニュー・おむつ替え台あり。駐車場あり。 食べログの店舗情報では駐車場あり、お子様連れ:子供可、席数182席。",
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": null,
-  "wish": false,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40033455/",
-  "campaign": {
-   "title": "ハローキティ コラボ",
-   "label": "キティコラボ",
-   "until": "2026-09-06",
-   "untilLabel": "9月6日",
-   "url": "https://www.akindo-sushiro.co.jp/"
-  }
  },
  {
   "id": "spbf70b4d966",

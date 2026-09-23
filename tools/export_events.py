@@ -141,11 +141,23 @@ def title_venue(spots, title):
 def near_spots(spots, lat, lng):
     """収益リンクを持つスポットだけを近い順に。★これがイベント一覧の収益導線"""
     out = []
+    today = date.today()
     for s in spots:
         if s.get('lat') is None or s.get('lng') is None:
             continue
         if not (s.get('tabelog') or s.get('asoview') or s.get('booking')):
             continue
+        # ⚠**会期が終わった企画展を「近くのお店・遊び場」に出さない**
+        #   【2026-09-23ユーザー指摘「のりたけ展もう終了してピングー展になってるんじゃない？」】
+        #   福岡市科学館のピングー展のカードに、9/6で終わった「大ピンチ展」が
+        #   徒歩2分・チケット付きで並んでいた。until 持ちは地図・一覧からは自動で消えるが、
+        #   この近隣リストだけ until を見ていなかった
+        if s.get('until'):
+            try:
+                if date.fromisoformat(s['until']) < today:
+                    continue
+            except ValueError:
+                pass
         dd = km(lat, lng, s['lat'], s['lng'])
         if dd > NEAR_KM:
             continue

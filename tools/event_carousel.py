@@ -235,6 +235,8 @@ def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None, badge_img=N
 # ⚠**イベント一覧の実物**に差し替え【2026-09-24ユーザー指示】。
 #   マップの地図画面より、この投稿から実際に飛ぶ先(子連れイベントの一覧)を見せる
 MAPCARD = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マップ操作_静止カード_イベント一覧.png'
+# 左に置く「マップ画面(イベントタブを赤丸で囲んだもの)」【2026-09-24ユーザー提供】
+MAPSHOT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マップ操作_静止カード_マップ画面.jpg'
 # 表紙の既定背景。博多駅の縦写真(1170x2070)。上から4:5で切ると人混みが枠外に出る
 # ⚠**毎回同じ絵にしない**【2026-09-24ユーザー指摘「同じイベントリストに見える」】。
 #   共通素材から回ごとに違う背景を選ぶ(--cover で明示指定できる)
@@ -242,40 +244,60 @@ COVER_DEFAULT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\�
 
 
 def closing():
-    """締め。**動画で使っている枠付きカードの実物を貼ってマップを見せる**
-    【2026-09-13ユーザー確定「動画で使ってるカードでサンプル表示しよう」】
-    素材は 5.共通素材/マップ操作_枠のみ_4.4秒.mp4 の3.3秒を、
-    ぼけていない領域(x231-848 / y241-1325 = 617x1084)で切り出して静止画にしたもの。
-    5.共通素材/マップ操作_静止カード.png として保存済み"""
+    """締め。**マップ画面 → イベント一覧 の2枚を横並びにして矢印で結ぶ**
+    【2026-09-24ユーザー指示】。1枚だけだと「どこを押せばこの一覧に行くのか」が
+    伝わらない。左=マップでイベントタブを押すところ(赤丸付き) / 右=出てくる一覧。
+    素材は 5.共通素材/マップ操作_静止カード_マップ画面.jpg と _イベント一覧.png"""
     im = Image.new('RGBA', (W_, H_), BG + (255,))
     d = ImageDraw.Draw(im)
-    d.text((W_ // 2, 54), '気になったイベントは「検索」の言葉で調べられます',
-           font=font(MEI, 32), fill=SUB + (255,), anchor='ma')
-    d.text((W_ // 2, 110), '行った店は全部', font=font(MEIB, 50), fill=INK + (255,), anchor='ma')
-    d.text((W_ // 2, 172), 'マップにまとめてます', font=font(ROUND, 76),
+    d.text((W_ // 2, 46), '気になったイベントは「検索」の言葉で調べられます',
+           font=font(MEI, 30), fill=SUB + (255,), anchor='ma')
+    d.text((W_ // 2, 96), '行った店も 今やってるイベントも', font=font(MEIB, 44),
+           fill=INK + (255,), anchor='ma')
+    d.text((W_ // 2, 152), 'マップにまとめてます', font=font(ROUND, 72),
            fill=PREF_RED + (255,), anchor='ma')
-    y = 282
-    if os.path.exists(MAPCARD):
-        c = Image.open(MAPCARD).convert('RGB')
-        ch = 810
-        cw = round(c.width * ch / c.height)
-        card = rounded((cw + 20, ch + 20), 20, (255, 255, 255, 255))
-        card.paste(c.resize((cw, ch), Image.LANCZOS), (10, 10))
-        left = (W_ - cw - 20) // 2
-        shadow(im, card, (left, y), blur=22, alpha=70, dy=8)
-        # 両脇が寂しいので「何ができるか」をピルで出す
-        for lb, dy in (('子供椅子で絞れる', 120), ('おむつ替えで絞れる', 330),
-                       ('期間限定も出る', 540)):
-            t = pill(lb, (96, 90, 86), 28)
-            im.alpha_composite(t, (max(8, left - t.width - 16), y + dy))
-        y += ch + 46
+    y = 268
+    shots = [(MAPSHOT, 'マップのイベントタブを押すと'), (MAPCARD, '今週のイベントが一覧で出ます')]
+    have = [(a, b) for a, b in shots if os.path.exists(a)]
+    if have:
+        ch = 620
+        gap = 96
+        cws = []
+        for a, _b in have:
+            c = Image.open(a).convert('RGB')
+            cws.append(round(c.width * ch / c.height))
+        n = len(have)
+        total = sum(cws) + gap * (n - 1) + 16 * n
+        x = (W_ - total) // 2
+        for k, ((a, cap), cw) in enumerate(zip(have, cws)):
+            c = Image.open(a).convert('RGB')
+            card = rounded((cw + 16, ch + 16), 18, (255, 255, 255, 255))
+            card.paste(c.resize((cw, ch), Image.LANCZOS), (8, 8))
+            shadow(im, card, (x, y), blur=20, alpha=66, dy=7)
+            d.text((x + (cw + 16) // 2, y + ch + 34), cap, font=font(MEIB, 27),
+                   fill=SUB + (255,), anchor='ma')
+            if k < n - 1:
+                ax = x + cw + 16 + 16
+                ay = y + ch // 2
+                aw = gap - 32
+                d.rounded_rectangle((ax, ay - 11, ax + aw - 22, ay + 11), 10,
+                                    fill=PREF_RED + (255,))
+                d.polygon([(ax + aw - 28, ay - 28), (ax + aw, ay), (ax + aw - 28, ay + 28)],
+                          fill=PREF_RED + (255,))
+            x += cw + 16 + gap
+        y += ch + 92
+    for lb, dy in (('子供椅子で絞れる', 0), ('おむつ替えで絞れる', 56), ('期間限定も出る', 112)):
+        t = pill(lb, (96, 90, 86), 28)
+        im.alpha_composite(t, ((W_ - t.width) // 2, y + dy))
+    y += 186
     pl = pill('プロフィールのリンクから見れます', PREF_RED, 38)
     shadow(im, pl, ((W_ - pl.width) // 2, y))
-    d.text((W_ // 2, H_ - 52), '保存しておくと行くときに使えます', font=font(MEI, 34),
-           fill=SUB + (255,), anchor='ma')
+    d.text((W_ // 2, H_ - 50), '保存しておくと行くときに使えます',
+           font=font(MEI, 28), fill=SUB + (255,), anchor='ma')
     return im.convert('RGB')
 
 
+# 集約サイト名。会場として出さない
 AGG_NAMES = ('いこーよ', '県公式')
 
 

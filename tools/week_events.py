@@ -1056,6 +1056,110 @@ def from_kagakukan():
 SPOTS = os.path.join(HERE, '..', 'data', 'spots.json')
 
 
+# ─────────── 福岡市「今週末のおでかけ情報」【2026-09-24追加】 ───────────
+#  ユーザー指摘「市政だよりのイベントが拾えていない」で追加した源。
+#  市政だよりの紙面に載る**市主催の大物**(地下鉄フェスタ・環境フェスティバル・
+#  ライトアップウォーク等)は商業施設の源にもいこーよにも出てこない。
+#  このページは**毎週更新**で、各イベントが「日時 / 場所 / 問い合わせ先」の
+#  見出し付きで書かれているので確実に拾える。
+#  ⚠ページ全体は多言語メニュー等のノイズが多いので、**本文(maincontents以降)**だけ見る。
+FCITY = 'https://www.city.fukuoka.lg.jp'
+FCITY_WEEKEND = FCITY + '/shicho/koho/event/weekend_event.html'
+
+
+def from_fukuokacity():
+    """市の「今週末のおでかけ情報」。イベント名・日時・場所を本文から取る"""
+    rows = []
+    try:
+        h = M.fetch(FCITY_WEEKEND)
+    except Exception as ex:
+        print('  ! 福岡市 今週末のおでかけ %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    body = h[h.find('maincontents'):]
+    # 「日時」見出しの直前にイベント名(h2/h3/strong)が来る作りなので、見出しで分割する
+    blocks = re.split(r'<h[23][^>]*>', body)
+    for b in blocks[1:]:
+        title = n(b[:b.find('</h')]) if '</h' in b[:400] else ''
+        if not title or len(title) < 4 or len(title) > 60:
+            continue
+        if re.search(r'言語|Language|メニュー|ページ|サイト|問い合わせ先一覧|お問い合わせ$', title):
+            continue
+        txt = n(b)
+        m = re.search(r'日時\s*(.{4,120}?)\s*(?:場所|会場|問い合わせ|お問い合わせ)', txt)
+        if not m:
+            continue
+        when = m.group(1)
+        pm = re.search(r'(?:場所|会場)\s*(.{4,80}?)\s*(?:お?問い合わせ|料金|対象|$)', txt)
+        place = pm.group(1) if pm else ''
+        a, e, days = jspan(when)
+        if a in (False, 'ended'):
+            continue
+        city = '福岡市'
+        cm = re.search(r'福岡市(東|博多|中央|南|城南|早良|西)区', place + ' ' + txt[:300])
+        if cm:
+            city = '福岡市%s区' % cm.group(1)
+        rows.append({'src': '福岡市(今週末のおでかけ)', 'title': title, 'city': city,
+                     'venue': place[:40] or '福岡市', 'url': FCITY_WEEKEND,
+                     'span': (a, e), 'days_list': days, 'raw': txt[:400], 'free': False,
+                     'lead': txt[:200], 'place': place[:60], 'poster': None})
+    # ★週末ページは市の「今週のおすすめ」数件だけなので、**新着イベント一覧**も見る。
+    #   ここに市政だよりの大物(地下鉄フェスタ・環境フェスティバル・ライトアップウォーク等)が載る。
+    #   一覧に出るのは**掲載日**なので、会期は各記事ページから取る(新しい順に MAXDET 件だけ開く)。
+    MAXDET = 30
+    try:
+        idx = M.fetch(FCITY + '/promotion/event/eventlist.html')
+    except Exception as ex:
+        print('  ! 福岡市 新着イベント一覧 %s' % type(ex).__name__, file=sys.stderr)
+        idx = ''
+    seen = set(r['title'] for r in rows)
+    cand = []
+    for li in re.findall(r'<li[^>]*>([\s\S]{0,600}?)</li>', idx):
+        # ⚠**日付を含む行だけ拾う**【2026-09-24に踏んだ】。サイト共通のナビゲーション(<li>)が
+        #   先に300件近く並んでいて、そちらで枠を食い潰して本文の記事を1件も取れなかった
+        if not re.search(r'20\d\d年\d+月\d+日', n(li)):
+            continue
+        # ⚠リンクの中身は <span> で包まれている。`>([^<]+)</a>` では取れない
+        a = re.search(r'href="(/[^"]+\.html)"[^>]*>([\s\S]{6,200}?)</a>', li)
+        if not a:
+            continue
+        title = re.sub(r'\s*20\d\d年\d+月\d+日.*$', '', n(a.group(2))).strip()
+        if len(title) < 5:
+            continue
+        # 報告・実施済み・募集終了・常設ページは落とす
+        if re.search(r'報告|開催しました|実施報告|受付終了|締切|結果発表|コラム|について報告', title):
+            continue
+        if title in seen:
+            continue
+        cand.append((a.group(1), title))
+        if len(cand) >= MAXDET:
+            break
+    for path, title in cand:
+        try:
+            d = M.fetch(FCITY + path)
+        except Exception:
+            continue
+        txt = n(d[d.find('maincontents'):])[:4000]
+        m = re.search(r'(?:日\s?時|開催日時|開催期間|期\s?間|開催日)[:：]?\s*(.{4,120}?)'
+                      r'\s*(?:場\s?所|会\s?場|会\s?期|対\s?象|料\s?金|定\s?員|申|問|$)', txt)
+        if not m:
+            continue
+        a2, e2, days = jspan(m.group(1))
+        if a2 in (False, 'ended'):
+            continue
+        pm = re.search(r'(?:場\s?所|会\s?場)[:：]?\s*(.{4,60}?)\s*(?:対\s?象|料\s?金|定\s?員|申|問|$)', txt)
+        place = pm.group(1) if pm else ''
+        city = '福岡市'
+        cm = re.search(r'福岡市(東|博多|中央|南|城南|早良|西)区', place + ' ' + txt[:600])
+        if cm:
+            city = '福岡市%s区' % cm.group(1)
+        rows.append({'src': '福岡市(新着イベント)', 'title': title, 'city': city,
+                     'venue': place[:40] or '福岡市', 'url': FCITY + path,
+                     'span': (a2, e2), 'days_list': days, 'raw': txt[:400], 'free': False,
+                     'lead': txt[:200], 'place': place[:60], 'poster': None})
+    print('  福岡市(今週末+新着) %d件' % len(rows), file=sys.stderr)
+    return rows
+
+
 def from_spots():
     rows = []
     try:
@@ -1871,7 +1975,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,branch,konoha,ezo,yume,manual')
+                                     'across,branch,konoha,ezo,yume,fcity,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1913,6 +2017,8 @@ def main():
                   # 【2026-09-22追加】ゆめタウン(イズミ)の福岡県内7店。
                   # 店舗ごとの /tenpo/<slug>/event から取る(グループ全体のeventは販促だけ)
                   ('yume', from_yume),
+                  # 【2026-09-24追加】福岡市「今週末のおでかけ情報」(市政だよりの市主催イベント)
+                  ('fcity', from_fukuokacity),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:

@@ -54,5 +54,29 @@
  "https://tenpo.aeon-kyushu.info/detail/ogori/event-news/1904244/": {
   "name": "九州サーカス団 ヤヤ＆ハルニケ（観覧無料）",
   "venue": "イオン小郡ショッピングセンター"
+ },
+ "https://lunaseiya.github.io/fukuoka-gourmet-map/#spot=ev-aso-164963-pingu": {
+  "name": "特別展「可愛いだけじゃない！？ピングー展」",
+  "venue": "福岡市科学館(六本松)"
+ },
+ "https://iko-yo.net/events/556488": {
+  "name": "チームラボフォレスト「つかまえて集める恐竜の森」",
+  "venue": "チームラボフォレスト 福岡(BOSS E・ZO FUKUOKA 5F)"
+ },
+ "https://yokanavi.com/events/274327": {
+  "name": "福マルシェ＠鳥飼八幡宮",
+  "venue": "鳥飼八幡宮(中央区今川)"
+ },
+ "https://iko-yo.net/events/597611": {
+  "name": "マナビバ・マークイズ「とびだすおさかなをつくろう」",
+  "venue": "マークイズ福岡ももち"
+ },
+ "https://www.crossroadfukuoka.jp/event/13356": {
+  "name": "おおの山城大文字まつり",
+  "venue": "大野城心のふるさと館ほか(大野城市)"
+ },
+ "https://iko-yo.net/events/598341": {
+  "name": "演劇創作ワークショップ「BeeACT 2026」",
+  "venue": "ぽんプラザホール(博多区下川端町)"
  }
 }

@@ -232,9 +232,13 @@ def cover(sub, n, total, hook=None, photo=None, tail=None, cta=None, badge_img=N
 
 
 
-MAPCARD = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マップ操作_静止カード.png'
+# ⚠**イベント一覧の実物**に差し替え【2026-09-24ユーザー指示】。
+#   マップの地図画面より、この投稿から実際に飛ぶ先(子連れイベントの一覧)を見せる
+MAPCARD = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マップ操作_静止カード_イベント一覧.png'
 # 表紙の既定背景。博多駅の縦写真(1170x2070)。上から4:5で切ると人混みが枠外に出る
-COVER_DEFAULT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\表紙用_博多駅_縦.jpg'
+# ⚠**毎回同じ絵にしない**【2026-09-24ユーザー指摘「同じイベントリストに見える」】。
+#   共通素材から回ごとに違う背景を選ぶ(--cover で明示指定できる)
+COVER_DEFAULT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\表紙用_キャナル噴水_縦.jpg'
 
 
 def closing():
@@ -310,35 +314,44 @@ TAB_OFF = [(246, 214, 220), (203, 227, 238), (206, 231, 199),
            (250, 231, 178), (225, 217, 212)]   # 曜日ごとに色を変える(参考と同じ考え方)
 
 
-def daytabs(im, d, days, cur):
-    """上端に日付タブを描く。`days` は ISO 文字列の並び、`cur` は選択中の ISO。
-    ⚠**5枠を超えたら選択中を中心に5枠へ切り出す**(タブが細くなって読めなくなるため)"""
+def daytabs(im, d, days, cur, hit=None):
+    """上端に日付タブを描く。
+    ⚠**「何の日付なのか分からない」【2026-09-24ユーザー指摘】**を受けて作り直した。
+      ・左端に「開催日」のラベルを出す(タブだけでは何の日か伝わらない)
+      ・**そのイベントが開催される日を全部**濃く塗る(`hit` = ISO の集合)。
+        以前は1日だけ白抜きで、2日間開催なのに片方しか目立たず
+        「26日なのか27日なのか両方なのか分からない」と言われた
+      ・開催しない日は薄いグレーにして、文字も薄くする
+    """
     if not days:
         return
     ds = list(days)
     if len(ds) > 5:
-        i = ds.index(cur) if cur in ds else 0
-        s = max(0, min(i - 2, len(ds) - 5))
-        ds = ds[s:s + 5]
+        i0 = ds.index(cur) if cur in ds else 0
+        st = max(0, min(i0 - 2, len(ds) - 5))
+        ds = ds[st:st + 5]
+    hit = set(hit or ([cur] if cur else []))
     wk = '月火水木金土日'
-    n = len(ds)
+    lab_w = 118                      # 左の「開催日」ラベルの幅
     gap = 6
-    bw = (W_ - gap * (n - 1)) // n
+    n = len(ds)
+    bw = (W_ - lab_w - gap * n) // n
+    d.rectangle((0, 0, W_, TAB_H), fill=(238, 235, 230, 255))
+    d.text((lab_w // 2, TAB_H // 2 - 2), '開催日', font=font(MEIB, 30),
+           fill=(120, 112, 104, 255), anchor='mm')
     for k, iso in enumerate(ds):
         dt = datetime.strptime(iso, '%Y-%m-%d').date()
-        on = (iso == cur)
-        col = TAB_ON if on else TAB_OFF[k % len(TAB_OFF)]
-        h = TAB_H if on else TAB_H - 14
-        x = k * (bw + gap)
-        tab = rounded((bw, h + 26), 18, col + (255,))       # 下は帯に隠れるので角丸を伸ばす
+        on = iso in hit
+        x = lab_w + gap + k * (bw + gap)
+        h = TAB_H - 12 if on else TAB_H - 30
+        col = (PREF_RED + (255,)) if on else (222, 218, 212, 255)
+        tab = rounded((bw, h + 26), 18, col)
         im.alpha_composite(tab, (x, TAB_H - h))
         w = wk[dt.weekday()]
-        # 土は青・日祝は赤。参考アカウントと同じ扱い
-        fg = ((36, 92, 178) if w == '土' else (198, 48, 48) if w == '日' else (74, 66, 58))
         t = '%d/%d(%s)' % (dt.month, dt.day, w)
+        fg = (255, 255, 255, 255) if on else (146, 140, 134, 255)
         ImageDraw.Draw(im).text((x + bw // 2, TAB_H - h // 2 - 4), t,
-                                font=font(MEIB, 34 if on else 30),
-                                fill=fg if on else tuple(int(c * .55) for c in fg), anchor='mm')
+                                font=font(MEIB, 34 if on else 28), fill=fg, anchor='mm')
 
 
 FREE_ENTRY = re.compile(r'(?:入場|観覧|入館|参加|見学)\s*(?:は)?\s*無料')
@@ -433,7 +446,11 @@ def card(ev, idx, extra=None, days=None, cur=None):
     # ★日付タブ(上端)。渡されなかった回は従来どおりタブ無しで描く
     top = 0
     if days:
-        daytabs(im, d, days, cur)
+        # ⚠**そのイベントが開催される日を全部**渡す(1日しか塗らないと2日間開催が伝わらない)
+        # そのイベントの会期に入る日を全部濃くする(2日間開催なら2つとも濃くなる)
+        sp = ev.get('span') or [None, None]
+        hit = [x for x in days if sp[0] and sp[0] <= x <= (sp[1] or sp[0])] or [cur]
+        daytabs(im, d, days, cur, hit)
         top = TAB_H
     # 市区ピル + ★有料/無料バッジ
     city = ev.get('city') or (ev.get('venues') or [''])[0] or '福岡県'
@@ -696,8 +713,19 @@ def main():
     global ICON_VARIANT
     ICON_VARIANT = a.icon
     extra = load_extra()
+    # ★**県バッジは動画サムネと同じ大きさにする**【2026-09-24ユーザー指示・2回目】。
+    #   小さいピルだと1枚目で「福岡の情報」と伝わらない。thumbs_build のバッジを借りる
+    badge = None
+    try:
+        sys.path.insert(0, os.path.join(os.path.expanduser('~'),
+                                        '.claude', 'skills', 'short-video', 'assets'))
+        import thumbs_build as TB
+        bw, bh = TB.LAYOUT['tiktok'][1][2], TB.LAYOUT['tiktok'][1][3]
+        badge = TB.make_badge(bw, bh, '福岡', TB.badge_color('福岡'))
+    except Exception as ex:
+        print('※県バッジを借りられなかったので小さいピルで出す: %s' % type(ex).__name__)
     pages = [('01_表紙', cover(sub, len(evs), len(evs), a.hook or None, a.cover or None,
-                              a.tail, a.cta or None))]
+                              a.tail, a.cta or None, badge_img=badge))]
     # ★日付タブに出す日の並び【2026-09-17ユーザー要望】
     #   対象期間の全日を並べる。⚠**8日を超える回はタブを出さない**
     #   (細くなって読めず、かえって見づらくなる。参考アカウントも5日だった)

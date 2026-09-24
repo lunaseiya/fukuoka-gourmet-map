@@ -430,26 +430,44 @@ def memo_src(ev):
     return [lead] if len(lead) >= 10 else []
 
 
-def memobox(ev, size):
-    """右下の memo。⚠**中身が無ければ None**。空の箱は出さない"""
-    w, h = size
+MEMO_F, MEMO_PITCH = 29, 38      # memo の本文フォントと行送り
+
+
+def memo_lines(ev, w):
+    """memo の本文を**折り返し済みの行**で返す。⚠中身が無ければ空"""
     src = memo_src(ev)
     if not src:
+        return []
+    d = ImageDraw.Draw(Image.new('RGB', (1, 1)))
+    fm = font(MEI, MEMO_F)
+    out = []
+    for ln in src:
+        out += wrap(d, deemoji(str(ln)), fm, w - 150, 2)
+    return out
+
+
+def memo_h(lines):
+    return 18 + max(1, len(lines)) * MEMO_PITCH + 16
+
+
+def memobox(ev, w, lines):
+    """memo。⚠**ポスターの下に全幅で敷く**【2026-09-25ユーザー指摘】。
+       以前は右下に幅330〜430pxの縦長の箱を置いていたが、1行が2〜3行に
+       折り返して読めなかった。全幅なら1行=全角30字まで入るので折り返さない。
+       見出しは左端に小さく置く(上に1行取ると高さのぶんポスターが縮むため)"""
+    if not lines:
         return None
+    h = memo_h(lines)
     c = rounded((w, h), 20, (253, 243, 231, 255))
     cd = ImageDraw.Draw(c)
     cd.rounded_rectangle([0, 0, w - 1, h - 1], 20, outline=(238, 220, 192, 255), width=2)
-    cd.text((w // 2, 20), 'memo', font=font(ROUND, 34), fill=(154, 106, 31, 255), anchor='ma')
-    fm = font(MEI, 27)
-    yy = 70
-    for ln in src[:4]:
-        for w2 in wrap(cd, deemoji(str(ln)), fm, w - 44, 2):
-            if yy > h - 40:
-                break
-            cd.text((22, yy), w2, font=fm, fill=(74, 66, 56, 255))
-            yy += 38
-        if yy > h - 40:
-            break
+    cd.text((26, 16), 'memo', font=font(ROUND, 30), fill=(154, 106, 31, 255))
+    fm = font(MEI, MEMO_F)
+    yy = 18
+    for ln in lines:
+        cd.text((132, yy), '・' + ln if not ln.startswith('・') else ln,
+                font=fm, fill=(74, 66, 56, 255))
+        yy += MEMO_PITCH
     return c
 
 
@@ -498,14 +516,19 @@ def card(ev, idx, extra=None, days=None, cur=None):
     nrow = 4 + sum(1 for k in ('time', 'note') if ev.get(k)) \
              + (1 if (ev.get('park') or ev.get('parking')) else 0)
     # ★memo枠を右下に置くので、**情報行は左列に寄せて幅を狭める**
-    MEMO_W = 330
-    memo_x = W_ - 64 - MEMO_W
+    # ⚠**memo欄が狭いと1行が3行に折り返して読めない**【2026-09-25ユーザー指摘】。
+    #   330pxだと全角12字で折り返していた。430pxにして1行=全角16字前後が入るようにする
+    MEMO_W = W_ - 128
     # ⚠ポスターが無い回は下の「どんなイベント？」カードが同じ内容を大きく出すので
     #   **memo枠は出さない**(1枚に同じ4行が二重に出ていた・2026-09-18に実機で発覚)。
     #   ポスターを貼れるかは poster_ok と画像の有無で決まるので、ここでは仮に持ち、
     #   ポスターを実際に描いたあとで確定させる
     has_memo = bool(memo_src(ev))
-    box_h = max(330, min(560, H_ - 200 - y - nrow * 54 - (TAB_H if days else 0)))
+    mlines = memo_lines(ev, MEMO_W) if has_memo else []
+    # ★memo のぶんの高さを**先に取ってから**ポスターの大きさを決める。
+    #   あとから足すと情報行がCTAバーに押し出される
+    box_h = max(210, min(560, H_ - 200 - y - nrow * 54
+                         - (memo_h(mlines) + 22 if has_memo else 0)))
     img = get_poster(ev.get('poster')) if ok else None
     if img:
         s = min((W_ - 200) / img.width, box_h / img.height)
@@ -514,7 +537,11 @@ def card(ev, idx, extra=None, days=None, cur=None):
         frame = rounded((pw + 24, ph + 24), 18, (255, 255, 255, 255))
         frame.paste(ph_im, (12, 12))
         shadow(im, frame, ((W_ - pw - 24) // 2, y))
-        y += ph + 44
+        y += ph + 30
+        mb = memobox(ev, MEMO_W, mlines)
+        if mb:
+            shadow(im, mb, (64, y), blur=12, alpha=40, dy=4)
+            y += mb.height + 22
     else:
         # ⚠**ポスターを貼れないぶんは情報量で補う**
         #   (2026-09-13ユーザー指摘「グレーだけどポスター載せてる人がいてライバルに負ける」)。
@@ -620,14 +647,8 @@ def card(ev, idx, extra=None, days=None, cur=None):
     fl = font(MEIB, 27)
     # ★**右下に memo、左下に情報行**の2列にする【2026-09-17ユーザー要望】
     #   memo がある回は情報行の幅が狭くなるので、フォントも小さくする
-    y0 = y
-    if has_memo:
-        fb = font(MEIB, 31)
-        lab_w, lab_x, txt_x = 80, 68, 158
-        txt_w = memo_x - 24 - txt_x
-    else:
-        lab_w, lab_x, txt_x = 92, 68, 176
-        txt_w = W_ - 64 - txt_x
+    lab_w, lab_x, txt_x = 92, 68, 176
+    txt_w = W_ - 64 - txt_x
     # ⚠**CTAバー(y=H_-156)までに入る行数だけ出す**。固定の上限だと、
     #   ポスターの高さで残り幅が変わるため6行目がCTAバーに上書きされて消える(2026-09-13に踏んだ)
     rh = 54
@@ -649,12 +670,6 @@ def card(ev, idx, extra=None, days=None, cur=None):
             s = s[:-1] + '…'
         d.text((txt_x, y), s, font=fb, fill=INK)
         y += rh
-    # ★memo(右下)。高さは情報行の開始からCTAバーまで
-    if has_memo:
-        mh = max(120, H_ - 172 - y0)
-        mb = memobox(ev, (MEMO_W, mh))
-        if mb:
-            shadow(im, mb, (memo_x, y0 - 2), blur=12, alpha=40, dy=4)
     # 出典は**会場/主催者**を優先する。いこーよは集約サイトなので「◯◯(いこーよ掲載)」と書く
     if ven:
         srcname = ven[0]
@@ -724,6 +739,19 @@ def main():
                     if e['url'] not in have and inwin(e)][:a.n - len(evs)]
         print('期間で絞り込み: %s〜%s → %d件' % (fs, tsv, len(evs)), file=sys.stderr)
     evs = evs[:a.n]
+    # ⚠**選ばれた回にメモが入っているかを毎回ここで点検する**【2026-09-25】。
+    #   同じイベントが会場違い・日程違いで複数URLあるため、書いたつもりのメモが
+    #   別URLに入っていて、カードには元の告知文がそのまま出ていた(久留米/飯塚の
+    #   リトルプラネット、キャナルお目覚めフェスで実際に踏んだ)。
+    #   memo は data/_イベント補足.json の detail に**手で**書く。無ければ名前を出す。
+    _ext = load_extra()
+    _nomemo = [e['title'] for e in evs[:a.n]
+               if not (_ext.get(e.get('url')) or {}).get('detail')]
+    if _nomemo:
+        print('※memo(detail)を書いていないイベント %d件 ← _イベント補足.json に足すこと:'
+              % len(_nomemo))
+        for x in _nomemo:
+            print('   -', x)
     wk = '月火水木金土日'
     sub = a.title or (('%d月%d日(%s) の' % (f.month, f.day, wk[f.weekday()])) if f == t else
                       ('%d/%d(%s)〜%d/%d(%s) の' % (f.month, f.day, wk[f.weekday()],

@@ -47551,5 +47551,36 @@
   "until": "2026-09-27",
   "untilLabel": "9月27日",
   "official": "https://www.crossroadfukuoka.jp/event/13356"
+ },
+ {
+  "id": "shinkansennomierueoka-kasuga",
+  "name": "新幹線の見える丘（春日西多目的広場公園）",
+  "area": "白水ヶ丘",
+  "city": "春日市",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.513681,
+  "lng": 130.440738,
+  "address": "福岡県春日市白水ヶ丘6-122",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "通称「ドクターイエロー公園」。⭐展望施設「新幹線の見える丘」から、国内最大級のJR西日本「博多総合車両所」を見下ろせて、ずらりと並ぶ新幹線が一望できる。⭐敷地全体がドクターイエローをイメージした黄色いデザインで、改札風の入口・線路模様の歩道・黄色い花壇・駅舎風施設がある。新幹線好きの子はかなり刺さるはず。2023年10月に北側エリア、⭐2026年3月27日に西側エリアと展望施設が供用開始(完成目標は2027年春)。駐車場は北側68台・西側20台で、⭐利用時間は7:00〜21:30。入園無料。北側エリアにはすべり台などの遊具・トイレ・足洗い場・自販機がある(現地レポより。市の公式ページには遊具とトイレの明記がないため要確認)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "web": "https://www.city.kasuga.fukuoka.jp/shisetsu/park/1017261.html"
  }
 ]

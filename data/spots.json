@@ -12966,8 +12966,15 @@
   "lng": 130.476614,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": "2026年6月オープン。0歳から遊べる全天候型室内遊び場。平日10~18時/休日10~19時。巨大ジャングルジム・ボールプール等。",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "2026年6月オープンの全天候型室内遊び場。0歳から遊べる巨大ジャングルジムやボールプールがあり、平日10:00〜18:00(最終受付17:30)/休日10:00〜19:00(最終受付18:30)。⭐休日は子供1日パック1,500円・3時間パック1,200円、平日は子供1日パック1,000円で保護者は終日500円。お試し30分500円、ナイトパック(平日15〜18時/休日16〜19時)は1名500円。無料駐車場あり。⚠トイレが遊び場内になくミスターマックス店内まで少し歩くので、入場前に済ませておくとよい。おむつ替え台はあり。(料金・時間は2026-09-27時点の二次情報。要確認)",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -12975,7 +12982,9 @@
   },
   "thumb": null,
   "wish": true,
-  "category": "play"
+  "category": "play",
+  "address": "佐賀県三養基郡みやき町大字白壁2228",
+  "asoview": "https://www.asoview.com/base/164766/"
  },
  {
   "id": "mirairoparkarao",
@@ -32492,30 +32501,6 @@
   "wish": true,
   "category": "play",
   "asoview": "https://www.asoview.com/base/164717/"
- },
- {
-  "id": "aso164766",
-  "name": "ザキッズ 佐賀ミスターマックス北茂安店",
-  "area": "大字白壁",
-  "city": "三養基郡みやき町",
-  "pref": "佐賀県",
-  "genre": "レジャー",
-  "lat": 33.328477,
-  "lng": 130.476614,
-  "address": "佐賀県三養基郡みやき町大字白壁2228",
-  "visited": null,
-  "with": "family",
-  "kids": null,
-  "verdict": null,
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": null,
-  "wish": true,
-  "category": "play",
-  "asoview": "https://www.asoview.com/base/164766/"
  },
  {
   "id": "aso164844",

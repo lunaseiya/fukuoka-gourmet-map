@@ -47582,5 +47582,43 @@
   "wish": true,
   "category": "play",
   "web": "https://www.city.kasuga.fukuoka.jp/shisetsu/park/1017261.html"
+ },
+ {
+  "id": "kushikatsutanaka-shime",
+  "name": "串カツ田中 福岡志免店",
+  "area": "南里",
+  "city": "糟屋郡志免町",
+  "pref": "福岡県",
+  "genre": "串カツ",
+  "lat": 33.596737,
+  "lng": 130.47486,
+  "address": "福岡県糟屋郡志免町南里37-1",
+  "visited": "2026-09-19",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐**九州初の「ファミリーレストラン型ロードサイド店」**(2020/12/25オープン)。公式が「ソファ席を多くそろえ、小さなお子様連れでも安心して来店いただける」と明言していて、同じ串カツ田中でも箱が違う。72席・カウンター/テーブル/座敷/ボックス席、子供用イスとキッズ食器あり。⭐⭐**おむつ替えが「みんなのトイレ」にあるので、男性でもおむつ替えができる**(実地で確認)。女性用トイレにしかおむつ替え台が無い店が多い中でこれは大きい。⭐子供が遊べるサービスは串カツ田中の全店共通: 手作りたこ焼きセット390円は小学生以下無料で自分で焼ける、ソフトクリームチャレンジも小学生以下無料で自分で巻く、子供じゃんけんドリンクは勝てば無料・あいこで半額、おこさまぷれーと390円。大人はチンチロリンでお酒が無料/半額に。⭐無限串シリーズは1本50円。甘めのタレで少食の子でも手が止まらない。入口にガチャガチャあり。営業は月〜金16:00〜0:00・土日12:00〜0:00。TEL 092-405-0994。全席禁煙化・フロア分煙化。※座敷・喫煙ブース・駐車場は公式とホットペッパーで記載が食い違うため要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kushikatsutanaka-shime.jpg",
+  "photos": [
+   "kushikatsutanaka-shime_01_外観.jpg",
+   "kushikatsutanaka-shime_02_ソファのボックス席.jpg",
+   "kushikatsutanaka-shime_03_子供椅子.jpg",
+   "kushikatsutanaka-shime_04_キッズ食器.jpg",
+   "kushikatsutanaka-shime_05_無限串1本50円.jpg",
+   "kushikatsutanaka-shime_06_みんなのトイレのおむつ替え台.jpg"
+  ],
+  "wish": false,
+  "web": "https://restaurant.kushi-tanaka.com/detail/0145/"
  }
 ]

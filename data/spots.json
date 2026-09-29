@@ -5483,13 +5483,13 @@
  },
  {
   "id": "dotonkotsuraamenkairyuuhakat",
-  "name": "どトンコツラーメン 魁龍 博多本店",
+  "name": "魁龍 博多本店",
   "area": "東那珂",
   "city": "福岡市博多区",
   "genre": "ラーメン",
   "lat": 33.578152,
   "lng": 130.445524,
-  "visited": null,
+  "visited": "2026-09-29",
   "with": "family",
   "kids": {
    "stroller": null,
@@ -5499,15 +5499,24 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "カウンター・テーブル・座敷あり44席。駐車場12台。竹下駅から約1.7km。 大将が特徴的、ずんだれ（超やわ麺）激推し",
+  "verdict": "⚠子連れ向けの作りではない。小上がりの座敷はあるので入れないことはない、くらい(2026-09-29実体験)。 やわ麺「ずんだれ」しか出さない店(バリカタ・ハリガネ・粉落としは無し)。豚頭と背脂だけを24時間炊いて30年以上継ぎ足す「呼び戻し」のど豚骨。人気No.1は全部のせラーメン1,280円、替玉180円。11:00〜23:00(日祝21:00まで)年中無休・スープ切れ終了あり。駐車場12台。店内は有名人のサインとホークスのユニフォームだらけ。『オモウマい店』(2024年4月)出演店。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
-  "pref": "福岡県"
+  "thumb": "dotonkotsuraamenkairyuuhakat.jpg",
+  "wish": false,
+  "pref": "福岡県",
+  "address": "福岡県福岡市博多区東那珂2-4-31",
+  "web": "https://kairyuramen.com/",
+  "photos": [
+   "dotonkotsuraamenkairyuuhakat_01_外観.jpg",
+   "dotonkotsuraamenkairyuuhakat_02_小上がり座敷.jpg",
+   "dotonkotsuraamenkairyuuhakat_03_サインの壁とテーブル席.jpg",
+   "dotonkotsuraamenkairyuuhakat_04_ずんだれの掲示.jpg"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400108/40001034/"
  },
  {
   "id": "rokumiteishimemise",

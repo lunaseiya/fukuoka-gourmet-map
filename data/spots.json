@@ -36164,24 +36164,24 @@
   "lat": 33.61027003705199,
   "lng": 130.41115244002359,
   "address": "福岡県福岡市東区東浜1-1-1 ゆめタウン博多",
-  "visited": null,
+  "visited": "2026-09-29",
   "with": "family",
   "kids": {
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "九州の焼肉チェーン。サラダバーあり。 食べログの店舗情報では座敷あり、駐車場あり、席数168席 (テーブル19卓98席・座敷12卓70席)。",
+  "verdict": "九州の焼肉チェーン。サラダバーあり。 食べログの店舗情報では座敷あり、駐車場あり、席数168席 (テーブル19卓98席・座敷12卓70席)。 ⭐**実際に行って確認(2026-09-29)**: 子供椅子は2種類あって、**テーブル席用の木製の子供椅子**と、**テーブルに取り付けるタイプ(ベルト付き)**が選べる。月齢に合わせて選べるので、まだ座位が安定しない子でも大丈夫。**掘りごたつ**の席もあるので、歩き出す前の子を寝かせておける。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
+  "wish": false,
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40018335/"
  },
  {

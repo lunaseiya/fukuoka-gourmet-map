@@ -390,6 +390,14 @@
     white-space: nowrap;
     cursor: pointer;
   }
+  /* 対象年齢(2026-10-01) */
+  .agefilters { margin-top: 6px; }
+  .age-label { font-size: 12px; color: var(--muted); margin-right: 2px; }
+  .age-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 6px 12px;
+             border-radius: 999px; font-size: 12.5px; white-space: nowrap; cursor: pointer; }
+  .age-btn.active { background: #2f7d5b; border-color: #2f7d5b; color: #fff; }
+  .b-age { display: inline-block; font-size: 11px; background: #e8f4ee; color: #2f6b50; border-radius: 999px;
+           padding: 2px 8px; margin: 0 4px 4px 0; }
   .filter-btn.active {
     background: var(--accent);
     border-color: var(--accent);
@@ -776,6 +784,12 @@
     <button class="filter-btn onsen-only" data-filter="fukko">🏨 復興割</button>
     <button class="filter-btn" id="areaBtn">市区で絞る</button>
   </div>
+  <div class="filters agefilters">
+    <span class="age-label">年齢</span>
+    <button class="age-btn" data-age="baby">👶 乳幼児</button>
+    <button class="age-btn" data-age="toddler">🧒 幼児</button>
+    <button class="age-btn" data-age="kids">🎒 小人</button>
+  </div>
 </header>
 
 <div id="map"></div>
@@ -834,6 +848,7 @@ const state = {
   q: "",
   areas: new Set(),
   areasDraft: new Set(),
+  ages: new Set(),   // 対象年齢の絞り込み(選んだ区分を**全部**満たす所だけ)
   markers: [],
   selectedId: null
 };
@@ -966,6 +981,7 @@ function applyFilters(spots) {
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
     if (state.areas.size && !state.areas.has(s.city)) return false;
+    if (state.ages.size && ![...state.ages].every(a => (s.ages || []).includes(a))) return false;
     return true;
   });
 }
@@ -1098,6 +1114,13 @@ function limitedHtml(spot) {
     </div>`;
 }
 
+const AGE_LABEL = { baby: "👶 乳幼児(0〜2歳)", toddler: "🧒 幼児(3〜6歳)", kids: "🎒 小人(小学生)" };
+function ageBadgesHtml(spot) {
+  if (!Array.isArray(spot.ages) || !spot.ages.length) return "";
+  return `<div>${["baby", "toddler", "kids"].filter(a => spot.ages.includes(a))
+    .map(a => `<span class="b-age">${AGE_LABEL[a]}</span>`).join("")}</div>`;
+}
+
 function cardHtml(spot) {
   // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)
   try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
@@ -1123,7 +1146,7 @@ function cardHtml(spot) {
       ${kidsFacilityHtml(spot)}
       ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -1292,6 +1315,8 @@ function jumpToSpot(spot) {
   if (!applyFilters(state.spots).some(s => s.id === spot.id)) {
     state.filter = "all";
     state.areas = new Set();
+    state.ages = new Set();
+    document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
     updateAreaBtn();
     document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
   }
@@ -1776,6 +1801,16 @@ document.querySelectorAll(".cat-btn").forEach(btn => {
       document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
     }
     populateAreaSelect(state.spots);
+    renderAll();
+  });
+});
+
+// 対象年齢: トグル式・複数選択可
+document.querySelectorAll(".age-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const a = btn.dataset.age;
+    if (state.ages.has(a)) state.ages.delete(a); else state.ages.add(a);
+    btn.classList.toggle("active", state.ages.has(a));
     renderAll();
   });
 });

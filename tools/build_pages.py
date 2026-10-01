@@ -48,9 +48,15 @@ KIDS_LABEL = [
 NOISE = {'ok': '子どもの声はあまり気にならない', 'careful': '静かめ。声のボリュームに配慮を',
          'ng': '静かな店。小さい子連れは要検討'}
 
+AGE_LABEL = {'baby': '乳幼児(0〜2歳)', 'toddler': '幼児(3〜6歳)', 'kids': '小人(小学生)'}   # 2026-10-01
+
+
 def kids_rows(spot):
     k = spot.get('kids') or {}
     rows = []
+    ages = [AGE_LABEL[a] for a in ('baby', 'toddler', 'kids') if a in (spot.get('ages') or [])]
+    if ages:
+        rows.append(('向いている年齢', '・'.join(ages)))
     for key, label, yes, no in KIDS_LABEL:
         v = k.get(key)
         if v is True:   rows.append((label, yes))

@@ -410,7 +410,9 @@ def memo_src(ev):
     1回目は `detail` → `lead` の順にしていて、detail が無い回は
     **lead の先頭(=タイトルそのもの)が memo に出てタイトルの繰り返し**になっていた。
     `memo` は源が「説明文だけ」を抜いて入れたものなので**これを最優先**にする。"""
-    for k in ('memo', 'detail'):
+    # ⚠手書きの `detail` が源の `memo` に負けていた(2026-10-03: サツマイモ/ろくろ/モンスターズで告知文が出た)。
+    #   detail は _イベント補足.json に人が書いたものなので**最優先**
+    for k in ('detail', 'memo'):
         v = []
         for x in (ev.get(k) or []):
             s = str(x).strip()

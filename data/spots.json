@@ -50370,5 +50370,41 @@
    "kids"
   ],
   "ages_src": "manual"
+ },
+ {
+  "id": "doremi-foleo-hakata",
+  "name": "こどもひろば どれみ フォレオ博多店",
+  "area": "フォレオ博多",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "室内遊び場",
+  "address": "福岡県福岡市博多区東那珂1-14-46 フォレオ博多",
+  "lat": 33.57415,
+  "lng": 130.439949,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "フォレオ博多内の屋内遊び場(0〜12歳)。⭐0〜3歳専用エリアあり。高さ3.2m・長さ10mの大型すべり台、ボールプール。こども1時間600円・おとな200円・会員登録無料(要確認)。平日10:00〜19:00/土日祝9:00〜19:00。TEL 092-414-3305。※春日店(アクロスモール)の姉妹店。アソビューはチケット販売なし",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "ages": [
+   "baby",
+   "toddler",
+   "kids"
+  ],
+  "ages_src": "auto"
  }
 ]

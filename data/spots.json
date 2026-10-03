@@ -51205,5 +51205,44 @@
   "until": "2026-10-04",
   "untilLabel": "10月4日",
   "official": "https://yokanavi.com/events/274548"
+ },
+ {
+  "id": "offyu-beppu",
+  "name": "個室温泉 おふゆ",
+  "area": "堀田",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "家族風呂・日帰り温泉",
+  "lat": 33.286835,
+  "lng": 131.458627,
+  "address": "大分県別府市堀田4-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐全16室すべて貸切の個室風呂(家族風呂)。⭐すべり台付きのお風呂がある部屋は子連れに人気。部屋は おふろ / おふろと露天 / おふろとサウナ / おふろとすべりだい の4種類。料金はすべりだい3,200円〜・露天2,600円〜・内湯のみ2,000円〜(曜日・時間で変動)。タオルの無料貸し出しあり。11〜22時。HPからWEB予約可(予約なしだと待つことが多い)。2025年11月オープン、別府第一ホテルの姉妹館。TEL 0977-76-6007",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "onsen",
+  "stay": false,
+  "dayUse": true,
+  "official": "https://www.off-yu.com/",
+  "ages": [
+   "baby",
+   "toddler",
+   "kids"
+  ],
+  "ages_src": "manual"
  }
 ]

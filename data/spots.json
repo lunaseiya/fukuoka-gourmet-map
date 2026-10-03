@@ -12860,23 +12860,29 @@
   "genre": "うどん",
   "lat": 33.691011,
   "lng": 130.43222,
-  "visited": "2026-08-06",
+  "visited": "2026-10-03",
   "with": "family",
   "kids": {
    "stroller": null,
-   "diaper": null,
+   "diaper": true,
    "tatami": null,
-   "kidsChair": null,
+   "kidsChair": true,
    "serveMin": null,
-   "noise": null
+   "noise": "ok"
   },
-  "verdict": "カウンター・テーブル席あり。子供(小学生)可。共用駐車場440台。JR和白駅徒歩5分。 ※動画はリニューアル前(すかいらーく傘下入り前)の撮影。子供OK",
+  "verdict": "⭐ソファのボックス席あり(テーブルのタブレットで注文)。⭐ベビーチェア(リッチェルの置くタイプ)が5台ほど。⭐トイレは男性用・女性用とは別に男女共用の多目的トイレがあり、おむつ替え台とおむつ用ゴミ箱つき。共用駐車場440台。JR和白駅徒歩5分。(2026-10-03実訪問) ※動画はリニューアル前(すかいらーく傘下入り前)の撮影",
   "video": {
    "youtube": "https://youtube.com/shorts/RBqNmNWp2uo",
    "tiktok": "https://www.tiktok.com/@tencone/video/7218793229016108289"
   },
-  "thumb": null,
-  "wish": false
+  "thumb": "shisanudonwajiromise.jpg",
+  "wish": false,
+  "photos": [
+   "shisanudonwajiromise_01_ソファのボックス席.jpg",
+   "shisanudonwajiromise_02_ベビーチェア.jpg",
+   "shisanudonwajiromise_03_男女共用・多目的トイレ.jpg",
+   "shisanudonwajiromise_04_おむつ替え台とおむつ用ゴミ箱.jpg"
+  ]
  },
  {
   "id": "ougyouzanakasumise",

@@ -32378,34 +32378,44 @@
   "city": "糟屋郡新宮町",
   "pref": "福岡県",
   "genre": "公園",
-  "lat": 33.710227,
-  "lng": 130.452076,
-  "address": "福岡県糟屋郡新宮町中央駅前2-7-1",
-  "visited": null,
+  "lat": 33.709917,
+  "lng": 130.453919,
+  "address": "福岡県糟屋郡新宮町中央駅前2-4-1",
+  "visited": "2026-10-03",
   "with": "family",
   "kids": {
    "stroller": true,
-   "diaper": false,
+   "diaper": true,
    "tatami": null,
    "kidsChair": null,
    "serveMin": null,
    "noise": "ok"
   },
-  "verdict": "JR新宮中央駅東口から国道3号に向かう細長い公園。桜が植えられ春は桜並木になる。水遊びができる。トイレあり。⚠おむつ替えは園内に無いので、ハローデイ新宮中央店やIKEA福岡新宮を利用する。",
+  "verdict": "IKEA福岡新宮・スポーツデポの隣の公園。⭐らせん滑り台・長いローラー滑り台・ボルダリングの壁がある大型遊具と、小さい子向けの滑り台がある。3〜6歳は大人の付き添いが必要。⭐トイレ(多目的)におむつ替えシートあり。⭐すぐそばの自販機で紙おむつ(M・L)とおしりふきが買える。屋根付きのベンチあり。桜並木の細長い公園で、JR新宮中央駅から近い。ボール遊び・自転車の乗り入れは不可。(2026-10-03実訪問)",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
+  "thumb": "okitachuopark.jpg",
+  "wish": false,
   "category": "play",
   "ages": [
-   "baby",
    "toddler",
    "kids"
   ],
-  "ages_src": "auto"
+  "ages_src": "manual",
+  "photos": [
+   "okitachuopark_01_公園の入口と案内板.jpg",
+   "okitachuopark_02_らせん滑り台.jpg",
+   "okitachuopark_03_ローラー滑り台.jpg",
+   "okitachuopark_04_小さい子向けの滑り台.jpg",
+   "okitachuopark_05_3〜6歳は付き添いの案内.jpg",
+   "okitachuopark_06_トイレのおむつ替えシート.jpg",
+   "okitachuopark_07_おむつ替え・多目的トイレの表示.jpg",
+   "okitachuopark_08_紙おむつとおしりふきの自販機.jpg",
+   "okitachuopark_09_屋根付きベンチ.jpg"
+  ]
  },
  {
   "id": "amexshingu",

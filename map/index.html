@@ -1345,8 +1345,13 @@ function focusSpot(spot) {
 function renderList() {
   const list = document.getElementById("list");
   const countEl = document.getElementById("count");
-  // NEW(投稿1週間以内)をリスト最上部に
-  const filtered = applyFilters(state.spots).slice().sort((a, b) => (isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0));
+  // 並び順: NEW(投稿1週間以内) → 赤ピン(訪問済み・登録順のまま) → 青ピン(新しく登録した順)
+  // spots.json は追記で増えるので、配列の後ろほど新しい登録(2026-10-07ユーザー要望)
+  const order = new Map(state.spots.map((s, i) => [s, i]));
+  const filtered = applyFilters(state.spots).slice().sort((a, b) =>
+    ((isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0)) ||
+    ((a.wish ? 1 : 0) - (b.wish ? 1 : 0)) ||
+    (a.wish ? order.get(b) - order.get(a) : order.get(a) - order.get(b)));
 
   countEl.textContent = !state.spots.length ? ""
     : state.q.trim() ? `「${state.q.trim()}」の検索結果 ${filtered.length}件(全カテゴリから)`

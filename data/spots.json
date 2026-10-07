@@ -14837,7 +14837,7 @@
   },
   "verdict": "専門店約197店。トイザらス・ベビーザらス出店。⭐通路が広く、キャラクターカートのままレストラン街やフードコートの店に入れる店が多い(子供椅子より「カートのまま」が主流)。フードコートはテーブル埋め込み型のベビーチェアあり(子供椅子は少なめ・要再確認)。⭐赤ちゃんルーム: 個別授乳室(女性専用・さく乳可)、調乳用のお湯。キッズメニューの案内あり。屋内に0〜2歳/3〜6歳のエリアに分かれた「KIDS PARK」(無料)、屋内遊び場「ちきゅうのにわ」、屋外に「ルクルパーク」(無料)。1Fノースモールに3〜5歳の「もくもくパーク」、2Fに0〜24ヶ月の「すくすくパーク」(いずれも無料)、ノースモール外に2〜6歳の屋根付き遊具「わくわくパーク」(無料)。10:00〜21:00。TEL 092-938-4700。(2026-10-02実訪問)",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/FyTNFsqOnJM",
    "tiktok": null,
    "instagram": null
   },
@@ -14857,7 +14857,8 @@
    "aeonmallfukuoka_04_授乳室ブース.jpg",
    "aeonmallfukuoka_05_調乳用のお湯.jpg",
    "aeonmallfukuoka_06_キッズメニュー案内.jpg"
-  ]
+  ],
+  "posted": "2026-10-06"
  },
  {
   "id": "aeonmallkashiihama",
@@ -51332,7 +51333,7 @@
   },
   "verdict": "⭐外の独立トイレ棟はスロープと手すり付き、多目的トイレにTOTOのベビーシート(おむつ交換台)あり。茅乃舎だしの久原本家(明治26年創業)の旗艦店で、だしの試飲・試食コーナーあり。テイクアウトは醤油ソフトクリーム350円・椒房庵の博多限定もつ入り肉饅頭650円(数量限定)、田んぼを望むパラソル付きテラス席で食べられる。広い駐車場あり。10:00〜18:00・元日休み。TEL 092-976-3408。(2026-10-05実訪問)",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/cFO-auUZcik",
    "tiktok": null,
    "instagram": null
   },
@@ -51344,7 +51345,8 @@
    "kubara-honke-souhonten_04_醤油ソフト.jpg",
    "kubara-honke-souhonten_05_もつ入り肉饅頭.jpg",
    "kubara-honke-souhonten_06_テラス席.jpg"
-  ]
+  ],
+  "posted": "2026-10-07"
  },
  {
   "id": "mokumokupark-aeonmallfukuoka",
@@ -51462,34 +51464,35 @@
   "ages_src": "manual"
  },
  {
-  "id": "shoden-hakata",
-  "name": "博多魚菜と串焼き百珍 笑伝",
-  "area": "呉服町",
-  "city": "福岡市博多区",
+  "id": "shoden-haruyoshi",
+  "name": "笑伝 春吉店",
+  "area": "春吉",
+  "city": "福岡市中央区",
   "pref": "福岡県",
   "genre": "居酒屋・串焼き",
-  "lat": 33.596225,
-  "lng": 130.409822,
-  "address": "福岡県福岡市博多区店屋町2-20",
+  "lat": 33.588848,
+  "lng": 130.405112,
+  "address": "福岡県福岡市中央区春吉3-22-7-1 プロスペリタ天神1",
   "visited": "2023-09-16",
   "with": "friends",
   "category": "gourmet",
   "wish": false,
   "kids": null,
-  "verdict": "長崎の食材にこだわる串焼き居酒屋(笑伝=えでん)。名物は雲仙スーパーポークの豚バラ、自家製手ごねつくね、「ハム界の反逆児」雲仙ハム。⚠夜の居酒屋なので子連れ向きではない。夜営業(17時〜、閉店時刻は情報源で異なる・要確認)。呉服町駅から徒歩約3分。TEL 092-263-3226。",
+  "verdict": "雲仙・島原の食材にこだわる串焼き居酒屋(笑伝=えでん)。名物は雲仙スーパーポークの豚バラ、自家製手ごねつくね、島原の「ごちそい」豆腐、「ハム界の反逆児」雲仙ハム。サントリー神泡達人店。⚠夜の居酒屋なので子連れ向きではない。18:00〜翌3:00(L.O.2:00)・不定休・36席(テーブル・カウンター)。渡辺通駅から徒歩約3分(天神南駅からも約320m)。TEL 092-712-8777。",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/9sVHWiJZVHo",
    "tiktok": null,
    "instagram": null
   },
-  "thumb": "shoden-hakata.jpg",
+  "thumb": "shoden-haruyoshi.jpg",
   "photos": [
-   "shoden-hakata_01_黄色の暖簾.jpg",
-   "shoden-hakata_02_豚バラ串.jpg",
-   "shoden-hakata_03_雲仙ハム.jpg",
-   "shoden-hakata_04_つくね.jpg"
+   "shoden-haruyoshi_01_黄色の暖簾.jpg",
+   "shoden-haruyoshi_02_豚バラ串.jpg",
+   "shoden-haruyoshi_03_雲仙ハム.jpg",
+   "shoden-haruyoshi_04_つくね.jpg"
   ],
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400106/40046616/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40058862/",
+  "posted": "2026-10-07"
  },
  {
   "id": "cafe-coccolo-dazaifu",
@@ -53811,35 +53814,6 @@
   "wish": true,
   "category": "gourmet",
   "in": "aeonmallchikushino"
- },
- {
-  "id": "sushisakaba-saji",
-  "name": "すし酒場 さじ",
-  "area": "大名",
-  "city": "福岡市中央区",
-  "pref": "福岡県",
-  "genre": "居酒屋・寿司",
-  "lat": 33.586077,
-  "lng": 130.393197,
-  "address": "福岡県福岡市中央区大名1-3-23 葵ビル1F右",
-  "visited": "2023-03-28",
-  "with": "friends",
-  "category": "gourmet",
-  "wish": false,
-  "kids": null,
-  "verdict": "⭐名物はスプーンにのせて一口で食べる創作すし(大トロ・ウニ・穴子など)。蟹プリンなど一品料理も。⚠夜は居酒屋なので子連れ向きではない。掘りごたつ・お座敷・完全個室あり(公式)。ランチ11:30〜15:00(要相談)/ディナー18:00〜25:00、月曜定休(公式)。赤坂駅から徒歩約7分。⚠食べログは「運営状況が確認できない」として掲載保留中(2026年10月時点)。営業しているか行く前に要確認。",
-  "video": {
-   "youtube": null,
-   "tiktok": null,
-   "instagram": null
-  },
-  "thumb": "sushisakaba-saji.jpg",
-  "photos": [
-   "sushisakaba-saji_01_スプーン寿司の大トロ.jpg",
-   "sushisakaba-saji_02_ホタテとウニのスプーン寿司.jpg",
-   "sushisakaba-saji_03_あさりの土鍋.jpg",
-   "sushisakaba-saji_04_牡蠣ポン酢.jpg"
-  ]
  },
  {
   "id": "chikushino-fuenmalatang",

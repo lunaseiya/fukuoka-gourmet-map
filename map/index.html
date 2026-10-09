@@ -1347,11 +1347,15 @@ function renderList() {
   const countEl = document.getElementById("count");
   // 並び順: NEW(投稿1週間以内) → 赤ピン(訪問済み・登録順のまま) → 青ピン(新しく登録した順)
   // spots.json は追記で増えるので、配列の後ろほど新しい登録(2026-10-07ユーザー要望)
+  // 並び: NEW(投稿7日以内) → 最近登録した青ピン(14日以内・新しい順) → 赤ピン(登録順) → 残りの青ピン(新しい順)
   const order = new Map(state.spots.map((s, i) => [s, i]));
+  const recentBlue = (s) => !!(s.wish && s.added &&
+    (Date.now() - new Date(s.added + "T00:00:00+09:00").getTime()) <= 14 * 24 * 60 * 60 * 1000);
+  const rank = (s) => isNew(s) ? 0 : recentBlue(s) ? 1 : !s.wish ? 2 : 3;
   const filtered = applyFilters(state.spots).slice().sort((a, b) =>
-    ((isNew(b) ? 1 : 0) - (isNew(a) ? 1 : 0)) ||
-    ((a.wish ? 1 : 0) - (b.wish ? 1 : 0)) ||
-    (a.wish ? order.get(b) - order.get(a) : order.get(a) - order.get(b)));
+    (rank(a) - rank(b)) ||
+    (rank(a) === 1 ? (b.added.localeCompare(a.added) || order.get(b) - order.get(a)) :
+     a.wish ? order.get(b) - order.get(a) : order.get(a) - order.get(b)));
 
   countEl.textContent = !state.spots.length ? ""
     : state.q.trim() ? `「${state.q.trim()}」の検索結果 ${filtered.length}件(全カテゴリから)`

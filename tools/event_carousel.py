@@ -473,6 +473,35 @@ def memobox(ev, w, lines):
     return c
 
 
+def memobox_side(ev, w, h, maxl=5):
+    """縦長ポスターの右に置く memo(2026-10-09ユーザー指定「縦長のリーフレットはメモ欄は横欄に」)。
+       縦長ポスターは左右が空くので、下に全幅で敷くよりポスターを大きくでき、memo も読める幅が取れる"""
+    src = memo_src(ev)
+    if not src:
+        return None
+    d = ImageDraw.Draw(Image.new('RGB', (1, 1)))
+    fm = font(MEI, MEMO_F)
+    lines = []
+    for ln in src:
+        lines += wrap(d, '・' + deemoji(str(ln)).lstrip('・'), fm, w - 44, 6)
+    if h is None:      # 右列に情報行と並べるときは中身に合わせた高さ(最大5行)
+        if maxl < 1:
+            return None
+        lines = lines[:maxl]
+        h = 64 + len(lines) * MEMO_PITCH + 16
+    else:
+        lines = lines[:max(1, (h - 80) // MEMO_PITCH)]
+    c = rounded((w, h), 20, (253, 243, 231, 255))
+    cd = ImageDraw.Draw(c)
+    cd.rounded_rectangle([0, 0, w - 1, h - 1], 20, outline=(238, 220, 192, 255), width=2)
+    cd.text((22, 16), 'memo', font=font(ROUND, 30), fill=(154, 106, 31, 255))
+    yy = 64
+    for ln in lines:
+        cd.text((22, yy), ln, font=fm, fill=(74, 66, 56, 255))
+        yy += MEMO_PITCH
+    return c
+
+
 def card(ev, idx, extra=None, days=None, cur=None):
     ex = (extra or {}).get(ev.get('url'), {})
     for k, v in ex.items():
@@ -532,7 +561,19 @@ def card(ev, idx, extra=None, days=None, cur=None):
     box_h = max(210, min(560, H_ - 200 - y - nrow * 54
                          - (memo_h(mlines) + 22 if has_memo else 0)))
     img = get_poster(ev.get('poster')) if ok else None
-    if img:
+    side = None     # 縦長ポスターのとき (右列のx, 右列の上端y, 右列の幅, ポスター下端y)
+    if img and img.height >= img.width * 1.15:
+        # ★縦長ポスターは**最大限大きく**: 左にポスターをCTAバーの手前まで、
+        #   右列に memo と情報行(日程・時間・場所・料金・検索)をまとめて並べる(2026-10-09ユーザー指定)
+        avail = H_ - 176 - y - 24
+        s = min((W_ - 128) * 0.60 / img.width, avail / img.height)
+        pw, ph = max(1, int(img.width * s)), max(1, int(img.height * s))
+        frame = rounded((pw + 24, ph + 24), 18, (255, 255, 255, 255))
+        frame.paste(img.resize((pw, ph), Image.LANCZOS), (12, 12))
+        shadow(im, frame, (64, y))
+        sx = 64 + pw + 24 + 20
+        side = (sx, y, W_ - 64 - sx, y + ph + 24)
+    elif img:
         s = min((W_ - 200) / img.width, box_h / img.height)
         pw, ph = max(1, int(img.width * s)), max(1, int(img.height * s))
         ph_im = img.resize((pw, ph), Image.LANCZOS)          # 縮小のみ。トリミングしない
@@ -654,6 +695,34 @@ def card(ev, idx, extra=None, days=None, cur=None):
     # ⚠**CTAバー(y=H_-156)までに入る行数だけ出す**。固定の上限だと、
     #   ポスターの高さで残り幅が変わるため6行目がCTAバーに上書きされて消える(2026-09-13に踏んだ)
     rh = 54
+    if side:
+        # ★縦長ポスターの右列: memo → 情報行(ラベルの下に値、2行まで折り返す)
+        sx, cy, cw_, pbot = side
+        fv = font(MEIB, 31)
+        lim = H_ - 176
+        # ⚠**情報行(特に「検索」)を先に確保し、memo は残りに収まる行数だけ出す**。
+        #   memo を先に置くと長い memo で「検索」が押し出された(2026-10-09 KGGハロウィンで踏んだ)
+        need_rows = sum(40 + len(wrap(d, deemoji(tx), fv, cw_ - 8, 2)) * 40 + 10 for _, tx in rows)
+        room = lim - cy - need_rows - 18 - 80
+        mb = memobox_side(ev, cw_, None, maxl=min(5, room // MEMO_PITCH)) if has_memo else None
+        if mb:
+            shadow(im, mb, (sx, cy), blur=12, alpha=40, dy=4)
+            cy += mb.height + 18
+        for ic, tx in rows:
+            vl = wrap(d, deemoji(tx), fv, cw_ - 8, 2)
+            need = 40 + len(vl) * 40 + 10
+            if cy + need > lim:
+                print('    ※%s: 右列に「%s」以降が入らず省いた' % (ev.get('title', '')[:16], ic))
+                break
+            lab = rounded((84, 36), 10, (238, 230, 226, 255))
+            ImageDraw.Draw(lab).text((42, 18), ic, font=fl, fill=PREF_RED + (255,), anchor='mm')
+            im.alpha_composite(lab, (sx, cy))
+            cy += 42
+            for ln in vl:
+                d.text((sx + 4, cy), ln, font=fv, fill=INK); cy += 40
+            cy += 10
+        y = max(pbot + 16, cy)
+        rows = []
     fit = max(3, (H_ - 166 - y) // rh)
     if len(rows) > fit:
         print('    ※%s: 情報行が%d行入らず省いた(%s)'

@@ -183,6 +183,20 @@ AREA_TPL = """<!DOCTYPE html>
 
 def build():
     spots = json.load(io.open(SPOTS, encoding='utf-8'))
+    # ★登録日 added を持たないスポットに今日の日付を付ける(2026-10-09)。
+    #   マップのリストは「最近登録した青ピン(14日以内)」を NEW の次に出すので、新規登録には必ず要る。
+    #   どの登録スクリプトも最後に build_pages を回すので、ここで付ければ漏れない
+    #   (2026-09-20 より前からある分は data/_added_legacy.json に列挙して付けない=古い扱いのまま)
+    LEG = os.path.join(ROOT, 'data', '_added_legacy.json')
+    stamp = [s for s in spots if not s.get('added')]
+    if stamp and os.path.exists(LEG):
+        old = set(json.load(io.open(LEG, encoding='utf-8'))['ids'])
+        new = [s for s in stamp if s['id'] not in old]
+        for s in new:
+            s['added'] = TODAY
+        if new:
+            io.open(SPOTS, 'w', encoding='utf-8').write(json.dumps(spots, ensure_ascii=False, indent=1))
+            print('  added(登録日)を付けた: %d件' % len(new))
     sdir = os.path.join(ROOT, 's'); adir = os.path.join(ROOT, 'area')
     # 作業ディレクトリが Dropbox 配下にあり、同期プロセスがファイルを掴んでいて
     # rmtree が PermissionError(WinError 32) で落ちる。ディレクトリは消さず、

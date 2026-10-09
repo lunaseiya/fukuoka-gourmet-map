@@ -185,6 +185,10 @@ def main():
         if p.get('borrow'):
             lat, lng = p['borrow']['lat'], p['borrow']['lng']
             p['addr'] = p['borrow'].get('address') or p['addr'] or None
+        elif p.get('ev', {}).get('lat') and p.get('ev', {}).get('lng'):
+            # ★候補JSONに確認済みの座標(lat/lng)が書いてあればそれを使う(2026-10-09:
+            #   geocoding.jp が一時的に失敗し、事前に確かめた座標があるのに3件見送りになったため)
+            lat, lng = p['ev']['lat'], p['ev']['lng']
         else:
             if n:
                 time.sleep(11)        # geocoding.jp は10秒以上あける

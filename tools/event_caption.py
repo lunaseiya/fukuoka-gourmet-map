@@ -141,12 +141,20 @@ def main():
     ap.add_argument('--json', default=CAND)
     ap.add_argument('--today', default='')
     ap.add_argument('--title', default='今週行ける')
+    # ★event_carousel.py と同じ窓で絞る(2026-10-10 連休後半だけの出し直しで、
+    #   カードは13件なのにキャプションに土曜だけの5件まで載っていた)
+    ap.add_argument('--from', dest='f', default='')
+    ap.add_argument('--to', dest='t', default='')
     a = ap.parse_args()
     D = json.load(io.open(a.json, encoding='utf-8'))
     by = {e['url']: e for e in D['events']}
     evs = [by[u] for u in D['selected'] if u in by]
     ov = json.load(io.open(OVER, encoding='utf-8')) if os.path.exists(OVER) else {}
-    frm, to = d(D['from']), d(D['to'])
+    frm, to = d(a.f or D['from']), d(a.t or D['to'])
+    if a.f or a.t:
+        fs, ts = frm.isoformat(), to.isoformat()
+        evs = [e for e in evs if (e.get('span') or [None])[0]
+               and e['span'][0] <= ts and (e['span'][1] or e['span'][0]) >= fs]
     today = d(a.today) if a.today else frm
 
     os.makedirs(a.dir, exist_ok=True)

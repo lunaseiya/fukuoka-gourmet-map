@@ -37,6 +37,8 @@
 | `category` | string(省略可) | `"onsen"` なら「日帰り温泉」タブに表示(スーパー銭湯・ホテルの日帰り湯含む)。省略時はグルメ・おでかけタブ | `"onsen"` |
 | `bathAge` | string \| null(省略可) | 温泉スポット用。何歳から入浴できるか・オムツ児可否など | `"オムツの取れていない子はベビーバス利用"` |
 | `ages` | string[] \| 省略可 | 向いている年齢(2026-10-01追加)。`"baby"`=乳幼児(0〜2歳) / `"toddler"`=幼児(3〜6歳) / `"kids"`=小人(小学生)。**根拠があるものだけ**。マップのバッジと「年齢」絞り込み(選んだ区分を全部満たす所)・詳細ページの「向いている年齢」に出る | `["baby","toddler","kids"]` |
+| `photos` | string[](省略可) | ギャラリー写真のファイル名(`map/photos/` 内、幅1080)。詳細カードに横スワイプで出る | `["tsubuku-park_01_園内.jpg"]` |
+| `photoCredits` | object[](省略可) | **自分で撮っていない写真**(ウィキメディア・コモンズ等のCCライセンス写真)を `thumb`/`photos` に使ったときの出典。`{author, lic, url(ファイルページ), licurl}` の配列。カードに「📷 写真: 作者 / ライセンス」が出る(2026-10-12追加)。**他人のSNS投稿や自治体サイト(All rights reserved)の写真は載せない**。自分で撮った写真に差し替えたらこの項目ごと消す | `[{"author":"Peka","lic":"CC BY-SA 4.0","url":"https://commons.wikimedia.org/wiki/File:Kurume_Tsubuku_Park.jpg","licurl":"https://creativecommons.org/licenses/by-sa/4.0"}]` |
 | `ages_src` | string(省略可) | `"manual"`=実際に行って付けた(自動付与で上書きしない) / `"auto"`=tools/assign_ages.py が説明文・ジャンルから付与 | `"manual"` |
 
 ### kids オブジェクト

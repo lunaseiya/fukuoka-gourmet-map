@@ -391,7 +391,11 @@
     cursor: pointer;
   }
   /* 対象年齢(2026-10-01) */
-  .agefilters { margin-top: 6px; }
+  /* 年齢の行は遊び場・宿温泉タブだけに出す(2026-10-12)。お食事タブは年齢タグが2%しか付いておらず、
+     押すとほぼ全滅して使い物にならないため。タグが3割程度付いたら解禁する */
+  .agefilters { margin-top: 6px; display: none; }
+  body.cat-play .agefilters, body.cat-onsen .agefilters { display: flex; }
+  .b-age.unk { background: #f1f1f1; color: #8a8a8a; }
   .age-label { font-size: 12px; color: var(--muted); margin-right: 2px; }
   .age-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 6px 12px;
              border-radius: 999px; font-size: 12.5px; white-space: nowrap; cursor: pointer; }
@@ -519,6 +523,9 @@
     color: var(--muted);
     margin-top: 2px;
   }
+  /* 他者撮影(ウィキメディア・コモンズ等のCC写真)の出典表示。CCライセンスの帰属表示義務(2026-10-12) */
+  .card-credit { font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .card-credit a { color: var(--muted); }
   .card-verdict {
     font-size: 13px;
     margin-top: 6px;
@@ -981,7 +988,11 @@ function applyFilters(spots) {
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
     if (state.areas.size && !state.areas.has(s.city)) return false;
-    if (state.ages.size && ![...state.ages].every(a => (s.ages || []).includes(a))) return false;
+    // 年齢は「除外フィルター」(2026-10-12変更)。年齢タグが付いていて合わない所だけ外し、
+    // 未確定(ages無し)は残す。以前の「選んだ区分を全部満たす所だけ」だと未確定が多い今は
+    // 情報がほぼ消えて使えなかった。残した未確定にはカードに「年齢の目安なし」と出す
+    if (state.ages.size && Array.isArray(s.ages) && s.ages.length
+        && ![...state.ages].every(a => s.ages.includes(a))) return false;
     return true;
   });
 }
@@ -1115,8 +1126,26 @@ function limitedHtml(spot) {
 }
 
 const AGE_LABEL = { baby: "👶 乳幼児(0〜2歳)", toddler: "🧒 幼児(3〜6歳)", kids: "🎒 小人(小学生)" };
+// 写真の出典(photoCredits)。自分で撮っていない写真はCCライセンスの帰属表示が必須なので、
+// サムネ・ギャラリーにこの配列があるスポットはカードに「写真: 作者 / ライセンス」を出す(2026-10-12)
+function photoCreditHtml(spot) {
+  if (!Array.isArray(spot.photoCredits) || !spot.photoCredits.length) return "";
+  const seen = new Set();
+  const items = spot.photoCredits.filter(c => c && c.author).filter(c => {
+    const k = c.author + "|" + (c.lic || ""); if (seen.has(k)) return false; seen.add(k); return true;
+  }).map(c => {
+    const a = c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
+    const l = c.lic ? (c.licurl ? ` / <a href="${escapeHtml(c.licurl)}" target="_blank" rel="noopener">${escapeHtml(c.lic)}</a>` : ` / ${escapeHtml(c.lic)}`) : "";
+    return a + l;
+  });
+  return `<div class="card-credit">📷 写真: ${items.join("、")}(Wikimedia Commons)</div>`;
+}
+
 function ageBadgesHtml(spot) {
-  if (!Array.isArray(spot.ages) || !spot.ages.length) return "";
+  if (!Array.isArray(spot.ages) || !spot.ages.length) {
+    // 年齢で絞っている最中に残った未確定スポットは、その旨を薄く出す(除外フィルター化に伴う・2026-10-12)
+    return state.ages.size ? `<div><span class="b-age unk">年齢の目安なし</span></div>` : "";
+  }
   return `<div>${["baby", "toddler", "kids"].filter(a => spot.ages.includes(a))
     .map(a => `<span class="b-age">${AGE_LABEL[a]}</span>`).join("")}</div>`;
 }
@@ -1145,6 +1174,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${kidsFacilityHtml(spot)}
       ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
+      ${photoCreditHtml(spot)}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
       ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
       ${videoLinksHtml(spot, "card-links")}
@@ -1309,6 +1339,7 @@ function jumpToSpot(spot) {
   if (cat !== state.category) {
     state.category = cat;
     document.querySelectorAll(".cat-btn").forEach(b => b.classList.toggle("active", b.dataset.cat === cat));
+    syncCatClass();
     populateAreaSelect(state.spots);
   }
   // 現在のフィルタで対象が表示されない場合は「すべて」に戻す
@@ -1798,12 +1829,24 @@ qInput.addEventListener("input", applyQuery);
 qInput.addEventListener("search", applyQuery);
 qClear.addEventListener("click", () => { qInput.value = ""; applyQuery(); qInput.focus(); });
 
+// タブに応じて body に cat-gourmet / cat-onsen / cat-play を付ける。
+// 温泉専用フィルタと年齢の行の表示切替がこのクラスを見る。年齢の行が隠れるタブへ移ったら
+// 年齢の選択も解除する(見えないフィルタが効いたままにしない)(2026-10-12)
+function syncCatClass() {
+  ["gourmet", "onsen", "play"].forEach(c => document.body.classList.toggle("cat-" + c, state.category === c));
+  if (state.ages.size && !["play", "onsen"].includes(state.category)) {
+    state.ages = new Set();
+    document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
+  }
+}
+syncCatClass();
+
 document.querySelectorAll(".cat-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
     state.category = btn.dataset.cat;
-    document.body.classList.toggle("cat-onsen", state.category === "onsen");
+    syncCatClass();
     // 温泉タブ専用フィルタを選んだまま他タブへ移ったら「すべて」に戻す
     if (state.category !== "onsen" && (state.filter === "dayuse" || state.filter === "stay")) {
       state.filter = "all";
@@ -1855,7 +1898,7 @@ function openFromHash() {
     state.category = cats[0];
     document.querySelectorAll(".cat-btn").forEach(b =>
       b.classList.toggle("active", b.dataset.cat === state.category));
-    document.body.classList.toggle("cat-onsen", state.category === "onsen");
+    syncCatClass();
   }
   state.q = "";
   state.filter = "all";

@@ -57990,5 +57990,37 @@
    "menya-gorira_06_テラス席.jpg"
   ],
   "added": "2026-10-13"
+ },
+ {
+  "id": "osuasiri-chihaya",
+  "name": "オスアシリ アーユルヴェーダ ダイニング サロン",
+  "area": "千早・香椎(香椎宮前駅)",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "スリランカカレー",
+  "lat": 33.656403,
+  "lng": 130.440629,
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐子供椅子あり。香椎駅・香椎宮前駅から歩ける、このあたりのカレーで人気の店(2015年7月開店、九州初のセイロン・アーユルヴェーダ料理)。名物はスパイシーココナツチキンカレー(1,650円・要確認)。半個室(2〜6名)あり、52席、全席禁煙。営業 11:00〜15:00(LO14:30)/18:00〜22:00(LO21:30)、水曜はランチのみ。駐車場 昼4台・夜7台。料金・営業時間は2026年10月時点の食べログ/Retty表記。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "address": "福岡県福岡市東区千早5-18-2",
+  "photos": [],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40040221/",
+  "added": "2026-10-14"
  }
 ]

@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<title>福岡グルメマップ</title>
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="apple-mobile-web-app-title" content="福岡子育てグルメ">
+<meta name="theme-color" content="#d63031">
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css">
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<style>
+  :root {
+    --accent: #d63031;
+    --accent-soft: #ffe3e3;
+    --text: #222;
+    --muted: #767676;
+    --border: #e5e5e5;
+    --bg: #fafafa;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    font-family: "Hiragino Sans", "Hiragino Kaku Gothic ProN", "Noto Sans JP", "Yu Gothic", Meiryo, sans-serif;
+    color: var(--text);
+    background: var(--bg);
+    -webkit-text-size-adjust: 100%;
+  }
+  header {
+    position: sticky; top: 0; z-index: 20;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    padding: 10px 12px 8px;
+  }
+  h1 {
+    font-size: 15px;
+    margin: 0 0 8px;
+    font-weight: 700;
+    color: var(--text);
+  }
+  .cat-toggle {
+    display: flex;
+    gap: 0;
+    margin-bottom: 8px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    overflow: hidden;
+    width: fit-content;
+  }
+  .cat-btn {
+    border: none;
+    background: #fff;
+    color: var(--text);
+    padding: 8px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .cat-btn.active {
+    background: #2d3436;
+    color: #fff;
+  }
+  /* ★イベント一覧への入口【2026-09-16追加】。カテゴリのタブではなく**リンク**なので
+     緑にして「別の画面へ移る」ことが分かるようにする(events.html の主色と合わせる) */
+  .cat-btn.cat-link {
+    background: #0f6e5c;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+  }
+  .b-new {
+    display: inline-block;
+    margin-right: 6px;
+    font-size: 11px;
+    font-weight: 800;
+    background: #ffd32a;
+    color: #6d4c00;
+    border-radius: 999px;
+    padding: 2px 9px;
+    animation: newpulse 1.6s ease-in-out infinite;
+  }
+  /* 会期のある企画展。ピンはオレンジ+⏳、カードには残り日数を出す */
+  /* 期間限定の帯。カードを開いた瞬間に「今だけ」が伝わるように先頭へ大きく出す */
+  .ltd-band {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin: 2px 0 7px;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #fff6d5, #ffeaa7);
+    border: 1.5px solid #f9ca24;
+    box-shadow: 0 1px 4px rgba(249,202,36,.35);
+  }
+  .ltd-band.soon {
+    background: linear-gradient(90deg, #ffe3e0, #ffc9c4);
+    border-color: #e17055;
+  }
+  .ltd-icon { font-size: 15px; line-height: 1; }
+  .ltd-main { font-size: 13px; font-weight: 800; color: #4a3600; }
+  .ltd-band.soon .ltd-main { color: #7a2018; }
+  .ltd-sub  { font-size: 11.5px; font-weight: 700; color: #7a6400; }
+  /* おもちゃの中身など、期間の次に知りたい一言。行全体を折り返して出す */
+  .ltd-note { flex-basis: 100%; font-size: 11.5px; color: #6b5800; line-height: 1.45; }
+  .ltd-band.soon .ltd-note { color: #8a3a2e; }
+  .ltd-band.soon .ltd-sub { color: #a33227; }
+  .ltd-sub b { color: #c0392b; }
+  .ltd-link {
+    margin-left: auto;
+    font-size: 11.5px;
+    font-weight: 800;
+    color: #6d4c00;
+    text-decoration: underline;
+  }
+  .pin-limited-label {
+    position: absolute;
+    top: -7px; right: -7px;
+    font-size: 12px;
+    line-height: 1;
+    pointer-events: none;
+  }
+  @keyframes newpulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: .55; }
+  }
+  .pin {
+    width: 22px; height: 22px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    border: 2px solid #fff;
+    box-shadow: 0 1px 3px rgba(0,0,0,.4);
+    cursor: pointer;
+  }
+  /* まとめたピン(中に件数) */
+  .pin-cluster {
+    min-width: 34px; height: 34px;
+    padding: 0 6px;
+    border-radius: 999px;
+    border: 2px solid #fff;
+    box-shadow: 0 2px 6px rgba(0,0,0,.35);
+    color: #fff;
+    font-size: 14px;
+    font-weight: 800;
+    display: flex; align-items: center; justify-content: center;
+    cursor: pointer;
+  }
+  .pc-blue { background: #2b5cc4; }
+  /* まとめピンは外周リングで赤(訪問済み)の割合を出し、中の丸に件数を書く */
+  .pin-cluster { padding: 4px; box-sizing: border-box; }
+  .pc-inner {
+    width: 100%; height: 100%;
+    border-radius: 999px;
+    background: #2b5cc4;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; font-weight: 800; color: #fff;
+    padding: 0 4px;
+  }
+  .pc-inner.pc-red { background: #d63031; }
+  /* 同じ施設のまとまり。押すと必ずリストが出るので、丸ピンと形を変えて区別する */
+  .pin-cluster.pc-facility {
+    border-radius: 9px;
+    min-width: 38px;
+    height: 30px;
+  }
+  .pin-cluster.pc-facility::before { content: "🏢"; font-size: 11px; margin-right: 3px; }
+  .pc-red  { background: #d63031; }
+  /* まとめたピンの中身リスト(下から出るシート) */
+  #clusterBox {
+    position: fixed; left: 0; right: 0; bottom: 0;
+    z-index: 60;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 20px rgba(0,0,0,.2);
+    max-height: 70vh;
+    max-height: 70dvh;   /* iOSはvhがブラウザUIを含むので画面外にはみ出す */
+    display: flex; flex-direction: column;
+    transform: translateY(101%);
+    transition: transform .22s ease;
+  }
+  #clusterBox.open { transform: translateY(0); }
+  .cl-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: 12px 14px 8px;
+    border-bottom: 1px solid var(--border);
+    flex: 0 0 auto;
+  }
+  .cl-head h2 { font-size: 15px; margin: 0; flex: 1; font-weight: 700; }
+  .cl-head .n { font-size: 12px; color: var(--muted); }
+  .cl-close {
+    border: none; background: #f0f0f0; color: var(--text);
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 15px; cursor: pointer;
+  }
+  #clusterList {
+    flex: 1 1 auto;
+    min-height: 0;              /* これが無いとflex子が縮まずスクロールしない */
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 2px 10px 24px;
+  }
+  .cl-item {
+    display: block; width: 100%;
+    text-align: left;
+    padding: 10px 10px 9px;
+    border: none; border-bottom: 1px solid var(--border);
+    background: #fff;
+    font-family: inherit; font-size: 14px; color: var(--text);
+    cursor: pointer;
+  }
+  .cl-item:active { background: var(--accent-soft); }
+  /* 施設そのもの(親)の行。子の店と見分けが付くように色と枠を変える
+     ⚠タブに関係なく先頭に固定で出す(2026-09-21。お食事タブで親が消えていた) */
+  .cl-item.cl-facility {
+    background: #f4f8f7;
+    border-bottom: 2px solid var(--accent);
+    border-left: 4px solid var(--accent);
+  }
+  .cl-item.cl-facility .cl-name { font-weight: 700; }
+  .cl-top { display: flex; gap: 10px; align-items: baseline; }
+  .cl-name { flex: 1; font-weight: 600; line-height: 1.35; }
+  .cl-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  .cl-tags { margin-top: 5px; display: flex; gap: 5px; flex-wrap: wrap; }
+  .cl-tag {
+    font-size: 10.5px;
+    border-radius: 999px;
+    padding: 2px 8px;
+    white-space: nowrap;
+  }
+  .t-visited { background: #ffe3e3; color: #b02525; }   /* 赤ピン=訪問済み */
+  .t-wish    { background: #e3ecff; color: #2b5cc4; }   /* 青ピン=下調べ済み */
+  .t-kids    { background: #eef7ee; color: #2f7a2f; }
+  .t-ltd     { background: #fff6d5; color: #8a6d00; font-weight: 800; }
+  .t-fk      { background: #d9f2ee; color: #0b5348; font-weight: 800; }
+  .t-video   { background: #fff3e3; color: #b05a00; }
+  .t-photo   { background: #eef3fb; color: #3a5c8c; }
+  .t-open    { background: var(--accent); color: #fff; font-weight: 700; }
+  /* 九州ふっこう応援割の帯。コラボ(金)と区別できるよう青緑系にする */
+  .fk-band {
+    display: flex; align-items: center; gap: 7px; flex-wrap: wrap;
+    margin: 2px 0 7px; padding: 7px 10px; border-radius: 10px;
+    background: linear-gradient(90deg, #e3f7f4, #c9efe9);
+    border: 1.5px solid #14a085;
+    box-shadow: 0 1px 4px rgba(20,160,133,.3);
+  }
+  .fk-icon { font-size: 15px; line-height: 1; }
+  .fk-main { font-size: 13px; font-weight: 800; color: #0b5348; }
+  .fk-rate {
+    font-size: 13px; font-weight: 900; color: #fff; background: #0E9384;
+    border-radius: 999px; padding: 1px 9px;
+  }
+  .fk-sub  { flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #12695c; line-height: 1.45; }
+  .fk-note { flex-basis: 100%; font-size: 11.5px; color: #12695c; line-height: 1.45; }
+  /* 「対象施設だが枠が尽きていると割引は出ない」の注意。見落とされると
+     予約できると誤解させるので、帯の中でも一段目立たせる(白地+橙の縁) */
+  .fk-caution {
+    flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #8a4b00;
+    line-height: 1.5; background: #fff8ee; border: 1px solid #f0b871;
+    border-radius: 8px; padding: 5px 8px;
+  }
+  .fk-caution b { color: #7a3f00; }
+  .fk-links { flex-basis: 100%; font-size: 11.5px; font-weight: 700; color: #12695c; }
+  .fk-links a { color: #0b5348; text-decoration: underline; }
+  /* 応援割のピン。赤(訪問済み)/青(下調べ)は変えず、青緑のリングと🏨だけ重ねる */
+  .pin-fukko {
+    box-shadow: 0 0 0 3px #0E9384, 0 1px 5px rgba(0,0,0,.45);
+  }
+  .pin-fukko-label {
+    position: absolute; top: -15px; left: 9px; transform: rotate(45deg);
+    background: #0E9384; color: #fff; font-size: 10px; font-weight: 800;
+    border-radius: 6px; padding: 0 3px;
+  }
+  .pin-new {
+    animation: pinpulse 1.6s ease-in-out infinite;
+  }
+  /* 開催中のコラボ・期間限定。元のピンの色(赤=訪問済み/青=下調べ)は変えず、
+     金のリングとバッジだけを重ねる。会期が切れたらリングとバッジだけ消える */
+  .pin-campaign {
+    box-shadow: 0 0 0 3px #f9ca24, 0 1px 5px rgba(0,0,0,.45);
+  }
+  .pin-campaign-label {
+    position: absolute;
+    top: -15px;
+    left: 9px;
+    transform: rotate(45deg);
+    background: #f9ca24;
+    color: #5b4300;
+    font-size: 10px;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 0 3px;
+    line-height: 14px;
+    pointer-events: none;
+    white-space: nowrap;
+  }
+  /* 会期が終わったら消えてよい単発イベント(企画展など)はピン本体を持たず、
+     金リング+バッジだけで示す */
+  .pin-eventonly {
+    background: #fffbe6 !important;
+    border-color: #f9ca24;
+  }
+  @keyframes pinpulse {
+    0%, 100% { box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 0 rgba(255,211,42,.9); }
+    50% { box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 9px rgba(255,211,42,0); }
+  }
+  .pin-new-label {
+    position: absolute;
+    top: -14px;
+    left: 10px;
+    transform: rotate(45deg);
+    background: #ffd32a;
+    color: #6d4c00;
+    font-size: 9px;
+    font-weight: 800;
+    border-radius: 6px;
+    padding: 0 4px;
+    line-height: 14px;
+    pointer-events: none;
+  }
+  .card-bath {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #b05a00;
+    background: #fff3e3;
+    border-radius: 8px;
+    padding: 4px 8px;
+    display: inline-block;
+  }
+  .searchbar {
+    position: relative;
+    margin-bottom: 8px;
+  }
+  .searchbar input {
+    width: 100%;
+    padding: 9px 34px 9px 12px;
+    font-size: 15px;   /* 16px未満だとiOSで拡大されるので注意 */
+    font-family: inherit;
+    color: var(--text);
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    -webkit-appearance: none;
+  }
+  .searchbar input:focus {
+    outline: none;
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .searchbar input::-webkit-search-cancel-button { display: none; }
+  #qClear {
+    position: absolute;
+    top: 50%; right: 6px;
+    transform: translateY(-50%);
+    display: none;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font-size: 15px;
+    padding: 4px 6px;
+    cursor: pointer;
+  }
+  #qClear.on { display: block; }
+  /* 検索中は全カテゴリを横断するので、どのタブの結果かを示す */
+  .b-cat {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #f0efe8;
+    color: #6b6552;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .filters {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .filter-btn {
+    border: 1px solid var(--border);
+    background: #fff;
+    color: var(--text);
+    padding: 7px 14px;
+    border-radius: 999px;
+    font-size: 13px;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  /* 対象年齢(2026-10-01) */
+  /* 年齢の行は遊び場・宿温泉タブだけに出す(2026-10-12)。お食事タブは年齢タグが2%しか付いておらず、
+     押すとほぼ全滅して使い物にならないため。タグが3割程度付いたら解禁する */
+  .agefilters { display: none; }
+  body.cat-play .agefilters, body.cat-onsen .agefilters { display: contents; }
+  /* ★顧客向けの1行目【2026-10-14】: 子連れOK + 年齢 + 🔍。折り返さず、はみ出したら横スクロール */
+  .filters.mainrow { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .filters.mainrow::-webkit-scrollbar { display: none; }
+  .kids-btn { font-weight: 700; }
+  .icon-btn {
+    margin-left: auto; flex: 0 0 auto;
+    width: 36px; height: 34px; border-radius: 999px;
+    border: 1px solid var(--border); background: #fff; font-size: 16px; cursor: pointer;
+  }
+  .icon-btn.on { background: #2d3436; border-color: #2d3436; }
+  #searchbar { display: none; margin: 8px 0 0; }
+  header.search-open #searchbar, body.admin #searchbar { display: block; }
+  .filters.subrow { display: none; margin-top: 6px; }
+  body.cat-onsen .filters.subrow, body.admin .filters.subrow { display: flex; }
+  .admin-only { display: none; }
+  body.admin h1.admin-only { display: block; }
+  body.admin span.admin-only { display: contents; }
+  .admin-tag { font-size: 11px; font-weight: 400; color: #fff; background: #0f6e5c; border-radius: 6px; padding: 1px 6px; margin-left: 6px; }
+  .area-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 7px 14px; border-radius: 999px; font-size: 13px; white-space: nowrap; cursor: pointer; }
+  .area-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
+  .b-age.unk { background: #f1f1f1; color: #8a8a8a; }
+  .age-label { font-size: 12px; color: var(--muted); margin-right: 2px; }
+  .age-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 6px 12px;
+             border-radius: 999px; font-size: 12.5px; white-space: nowrap; cursor: pointer; }
+  .age-btn.active { background: #2f7d5b; border-color: #2f7d5b; color: #fff; }
+  .b-age { display: inline-block; font-size: 11px; background: #e8f4ee; color: #2f6b50; border-radius: 999px;
+           padding: 2px 8px; margin: 0 4px 4px 0; }
+  .filter-btn.active {
+    background: var(--accent);
+    border-color: var(--accent);
+    color: #fff;
+  }
+  #map {
+    width: 100%;
+    height: 54vh;   /* 上部を2段に減らしたぶん地図を広く(46vh→54vh・2026-10-14) */
+    min-height: 260px;
+  }
+  #count {
+    font-size: 12px;
+    color: var(--muted);
+    padding: 8px 14px 0;
+  }
+  #list {
+    padding: 8px 10px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 12px 14px;
+    cursor: pointer;
+    transition: box-shadow .15s, border-color .15s;
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .card-thumb {
+    flex: 0 0 64px;
+    width: 64px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 8px;
+    background: var(--border);
+  }
+  /* サムネが無い店の「のれん風」プレースホルダー */
+  .ph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    position: relative;
+    overflow: hidden;
+    color: #fff;
+  }
+  .ph::before {
+    content: "";
+    position: absolute; inset: 0;
+    background:
+      repeating-linear-gradient(90deg, transparent 0 20px, rgba(255,255,255,.10) 20px 21px),
+      linear-gradient(180deg, rgba(255,255,255,.10) 0 6px, transparent 6px);
+  }
+  .ph-emoji { font-size: 26px; line-height: 1; }
+  .ph-label {
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: .15em;
+    opacity: .9;
+    writing-mode: vertical-rl;
+    max-height: 42px;
+    overflow: hidden;
+  }
+  .ph-onsen  { background: linear-gradient(170deg, #2c4a6e, #1d3350); }
+  .ph-ramen  { background: linear-gradient(170deg, #a63a3a, #6e2222); }
+  .ph-cafe   { background: linear-gradient(170deg, #8a6d4b, #5d472e); }
+  .ph-izakaya{ background: linear-gradient(170deg, #b3572d, #7a3618); }
+  .ph-hotel  { background: linear-gradient(170deg, #3e4a72, #272f4e); }
+  .ph-play   { background: linear-gradient(170deg, #3f7a55, #27503a); }
+  .ph-food   { background: linear-gradient(170deg, #566270, #39424d); }
+  .ph-mall   { background: linear-gradient(170deg, #7a4d8f, #4e2f5e); }
+  .card-body { flex: 1; min-width: 0; }
+  .b-both {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #eef3ff;
+    color: #4a5f8a;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .b-wish {
+    display: inline-block;
+    margin-top: 6px;
+    margin-right: 6px;
+    font-size: 11px;
+    background: #e3ecff;
+    color: #2b5cc4;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  .card.selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-soft);
+  }
+  .card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 8px;
+  }
+  .card-name {
+    font-size: 15px;
+    font-weight: 700;
+  }
+  .card-genre {
+    font-size: 12px;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+  .card-area {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+  }
+  /* 他者撮影(ウィキメディア・コモンズ等のCC写真)の出典表示。CCライセンスの帰属表示義務(2026-10-12) */
+  .card-credit { font-size: 10px; color: var(--muted); margin-top: 4px; }
+  .card-credit a { color: var(--muted); }
+  .card-verdict {
+    font-size: 13px;
+    margin-top: 6px;
+    line-height: 1.5;
+  }
+  .card-kids {
+    display: inline-block;
+    margin-top: 6px;
+    font-size: 11px;
+    background: #eef7ee;
+    color: #2f7a2f;
+    border-radius: 999px;
+    padding: 2px 9px;
+  }
+  /* 子連れ設備のチップ列。何があるかを一目で見せる */
+  .card-kidsrow { display: flex; flex-wrap: wrap; gap: 5px; margin-top: 7px; }
+  .kf {
+    display: inline-flex; align-items: center; gap: 4px;
+    font-size: 11px; line-height: 1.35;
+    border-radius: 999px; padding: 3px 9px; white-space: nowrap;
+  }
+  .kf-y { background: #eaf6ea; color: #2f7a2f; }   /* 確認できた */
+  .kf-f { background: #fdf2e2; color: #96650f; }   /* 店には無いが同じ建物にある */
+  .kf-n { background: #f1f1f1; color: #8b8b8b; }   /* 無いと分かっている */
+  .kf-s { font-size: 10px; opacity: .8; }
+  .card-links {
+    margin-top: 8px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+  .card-links a {
+    font-size: 12px;
+    color: var(--accent);
+    text-decoration: none;
+    border: 1px solid var(--accent-soft);
+    background: var(--accent-soft);
+    padding: 4px 10px;
+    border-radius: 999px;
+  }
+  .empty {
+    padding: 40px 20px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 14px;
+    line-height: 1.7;
+  }
+  .web-btn {
+    background: #2d3436 !important;
+    color: #fff !important;
+    border-color: #2d3436 !important;
+  }
+  /* 楽天トラベルのアフィリエイトボタン(PR) */
+  .aff-rakuten {
+    background: #bf0000 !important;
+    color: #fff !important;
+    border-color: #bf0000 !important;
+  }
+  .aff-rakuten::before { content: "🏨 "; }
+  /* じゃらんのアフィリエイトボタン(PR)。生URL→LinkSwitchが自動変換する */
+  .aff-jalan {
+    background: #f36f21 !important;
+    color: #fff !important;
+    border-color: #f36f21 !important;
+  }
+  .aff-jalan::before { content: "🛏 "; }
+  /* 食べログの店舗ページへ */
+  .tabelog-btn {
+    background: #e8730c !important;
+    color: #fff !important;
+    border-color: #e8730c !important;
+  }
+  .tabelog-btn::before { content: "🍽 "; }
+  /* アソビュー等のWEBチケット */
+  .ticket-btn {
+    background: #00a5a0 !important;
+    color: #fff !important;
+    border-color: #00a5a0 !important;
+  }
+  .ticket-btn::before { content: "🎟 "; }
+  /* 公式サイトの席予約(アフィリエイトではないのでPRバッジは付けない) */
+  .reserve-btn {
+    background: #1a7f5a !important;
+    color: #fff !important;
+    border-color: #1a7f5a !important;
+  }
+  .reserve-btn::before { content: "🪑 "; }
+  .pr-badge {
+    font-size: 10px;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    padding: 1px 4px;
+    align-self: center;
+  }
+  /* 選択中ピンの強調(赤リング) */
+  .pin-selected {
+    box-shadow: 0 1px 3px rgba(0,0,0,.4), 0 0 0 4px #fff, 0 0 0 7px var(--accent) !important;
+    z-index: 5;
+  }
+  /* ピン/リストタップで下から出る詳細カード */
+  #detail {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+    padding: 10px 16px calc(16px + env(safe-area-inset-bottom));
+    max-height: 45vh; overflow-y: auto;
+    transform: translateY(110%);
+    transition: transform .22s ease;
+  }
+  #detail.open { transform: translateY(0); }
+  #detail .card { border: none; padding: 0 24px 0 0; cursor: default; }
+  .detail-grip {
+    width: 40px; height: 4px; border-radius: 2px;
+    background: var(--border); margin: 0 auto 10px;
+  }
+  .detail-close {
+    position: absolute; top: 12px; right: 12px;
+    border: none; background: var(--bg); color: var(--muted);
+    width: 30px; height: 30px; border-radius: 50%;
+    font-size: 15px; line-height: 30px; text-align: center;
+    cursor: pointer; padding: 0;
+  }
+  .sheet-back {
+    position: fixed; inset: 0; background: rgba(0,0,0,.45);
+    z-index: 40; display: none;
+  }
+  .sheet-back.open { display: block; }
+  .sheet {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 41;
+    background: #fff; border-radius: 16px 16px 0 0;
+    max-height: 78vh; overflow-y: auto; padding: 14px 16px 20px;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.25);
+  }
+  .sheet h2 { font-size: 15px; margin: 0 0 10px; }
+  .sheet-head { display: flex; justify-content: space-between; align-items: center; gap: 8px; margin-bottom: 8px; }
+  .sheet-actions { display: flex; gap: 8px; }
+  .sheet-actions button {
+    font-size: 13px; border: 1px solid var(--border); background: #fff;
+    border-radius: 999px; padding: 6px 14px; cursor: pointer;
+  }
+  .sheet-actions button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 700; }
+  .area-group { font-size: 11px; color: var(--muted); margin: 10px 0 4px; font-weight: 700; }
+  .area-item { display: flex; align-items: center; gap: 8px; padding: 7px 2px; font-size: 14px; border-bottom: 1px solid var(--bg); }
+  .area-item input { width: 18px; height: 18px; }
+  .area-item .cnt { color: var(--muted); font-size: 12px; margin-left: auto; }
+  .b-prep {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #f0f0f0; color: #666; border-radius: 999px; padding: 2px 9px;
+  }
+  /* 施設内スポットの親チップ */
+  .b-in {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #eef1f7; color: #44506a; border-radius: 999px; padding: 2px 9px;
+    cursor: pointer;
+  }
+  .b-day {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #e6f4f7; color: #1f6f80; border-radius: 999px; padding: 2px 9px;
+  }
+  .b-stay {
+    display: inline-block; margin-top: 6px; margin-right: 6px; font-size: 11px;
+    background: #f2ecff; color: #5b3fa8; border-radius: 999px; padding: 2px 9px;
+  }
+  .onsen-only { display: none; }
+  body.cat-onsen .onsen-only { display: inline-block; }
+  /* 詳細カード内「この施設内のスポット」 */
+  .detail-children {
+    margin-top: 12px;
+    border-top: 1px solid var(--border);
+    padding-top: 10px;
+  }
+  .dc-title { font-size: 12px; font-weight: 700; color: var(--muted); margin-bottom: 6px; }
+  .dc-item {
+    display: flex; justify-content: space-between; align-items: center; gap: 8px;
+    width: 100%; text-align: left;
+    font: inherit; font-size: 14px;
+    background: var(--bg); border: 1px solid var(--border); border-radius: 10px;
+    padding: 9px 12px; margin-bottom: 6px; cursor: pointer;
+  }
+  .dc-item .dc-genre { font-size: 11px; color: var(--muted); white-space: nowrap; }
+  /* 写真ギャラリー(詳細カード内・横スワイプ) */
+  .card-photos {
+    display: flex; gap: 8px; overflow-x: auto;
+    margin-top: 10px; padding-bottom: 4px;
+    -webkit-overflow-scrolling: touch;
+  }
+  .card-photos img {
+    height: 110px; border-radius: 10px; flex: 0 0 auto;
+    cursor: pointer; background: var(--border);
+  }
+  /* 写真タップで拡大表示 */
+  .lightbox {
+    position: fixed; inset: 0; background: rgba(0,0,0,.85);
+    z-index: 70; display: none; align-items: center; justify-content: center;
+  }
+  .lightbox.open { display: flex; }
+  .lightbox img { max-width: 96vw; max-height: 92vh; border-radius: 8px; }
+  .map-foot {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 10px 0;
+  }
+  .legend {
+    font-size: 11px;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+  .lg-dot {
+    width: 10px; height: 10px;
+    border-radius: 50% 50% 50% 0;
+    transform: rotate(-45deg);
+    display: inline-block;
+    margin: 0 3px 0 6px;
+  }
+  .lg-dot:first-child { margin-left: 0; }
+  .lg-red { background: #d63031; }
+  .lg-blue { background: #2b5cc4; }
+  .osm-credit {
+    font-size: 10px;
+    color: var(--muted);
+    text-align: right;
+  }
+  .osm-credit a { color: var(--muted); }
+  /* ★「ホーム画面に追加」の案内【2026-10-14】 */
+  #a2hs {
+    display: flex; align-items: center; gap: 8px;
+    margin: 8px 10px 0;
+    padding: 9px 10px;
+    background: var(--accent-soft);
+    border: 1px solid #f5b5b5;
+    border-radius: 10px;
+    font-size: 12px; line-height: 1.45;
+  }
+  #a2hs[hidden] { display: none; }
+  .a2hs-icon { font-size: 16px; }
+  .a2hs-text { flex: 1; }
+  .a2hs-btn {
+    border: none; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    font-weight: 700; font-size: 12px;
+    padding: 7px 10px; white-space: nowrap; cursor: pointer;
+  }
+  .a2hs-close {
+    border: none; background: transparent;
+    color: var(--muted); font-size: 14px; padding: 4px 6px; cursor: pointer;
+  }
+</style>
+<!-- バリューコマース LinkSwitch: ページ内の提携先生URL(食べログ等)を自動でアフィリエイトリンクに変換 -->
+<script type="text/javascript" language="javascript">
+    var vc_pid = "892682809";
+</script><script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
+<script src="../analytics.js" defer></script>
+</head>
+<body>
+
+<!-- ★顧客向けに上部をシンプル化【2026-10-14ユーザー確定】
+     訪問者が使うのは「子連れOK」と「年齢」だけ、という判断(GA4で月100人・スマホ中心)。
+     ・タイトル行・検索欄(常時表示)・訪問済み/下調べ/期間限定/市区で絞る を顧客画面から外す
+     ・「子連れOK」は最初からON(state.kidsOnly)。赤青どちらでも設備の裏が取れた店だけ出す
+     ・検索は🔍アイコンを押したときだけ入力欄を出す(使う人が少ない)
+     ・日帰りOK/泊まれる/復興割 は宿・温泉タブのときだけ下の行に出す(従来どおり)
+     ・運用者(ユーザー本人)用に、URL末尾 ?admin=1 で従来の全ボタンとタイトルを出す(localStorage に記憶。?admin=0 で解除)
+       → body.admin で .admin-only を表示。市区で絞る(#areaBtn)もここに残す -->
+<header>
+  <h1 class="admin-only">福岡グルメマップ <span class="admin-tag">運用モード</span></h1>
+  <div class="cat-toggle">
+    <button class="cat-btn active" data-cat="gourmet">🍜 お食事</button>
+    <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
+    <button class="cat-btn" data-cat="play">🎡 遊び場</button>
+    <!-- ★イベント一覧への入口【2026-09-16追加】
+         ⚠**これは data-cat ではなくリンク**。地図を使わない別ページ(events.html)へ飛ばす。
+           入口はプロフィール→マップのままにして、そこから1タップで行けるようにする -->
+    <a class="cat-btn cat-link" href="./events.html">⏳ イベント</a>
+  </div>
+  <div class="filters mainrow">
+    <button class="filter-btn kids-btn active" id="kidsBtn" type="button" aria-pressed="true">👪 子連れOK</button>
+    <!-- 年齢は遊び場・宿タブのときだけ出る(.agefilters の表示条件は従来どおり body.cat-play / body.cat-onsen) -->
+    <span class="agefilters">
+      <button class="age-btn" data-age="baby">👶 乳幼児</button>
+      <button class="age-btn" data-age="toddler">🧒 幼児</button>
+      <button class="age-btn" data-age="kids">🎒 小人</button>
+    </span>
+    <button class="icon-btn" id="searchToggle" type="button" aria-label="検索" aria-expanded="false">🔍</button>
+  </div>
+  <div class="searchbar" id="searchbar">
+    <input id="q" type="search" placeholder="店名・地名・ジャンルで検索" autocomplete="off" enterkeyhint="search">
+    <button id="qClear" type="button" aria-label="検索をクリア">✕</button>
+  </div>
+  <div class="filters subrow">
+    <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
+    <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
+    <button class="filter-btn onsen-only" data-filter="fukko">🏨 復興割</button>
+    <span class="admin-only admin-filters">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="visited">訪問済み</button>
+      <button class="filter-btn" data-filter="limited">⏳ 期間限定</button>
+      <button class="filter-btn" data-filter="wish">下調べ</button>
+      <button class="area-btn" id="areaBtn" type="button">市区で絞る</button>
+    </span>
+  </div>
+</header>
+
+<div id="map"></div>
+<div class="map-foot">
+  <div class="legend">
+    <span class="lg-dot lg-red"></span>行った店
+    <span class="lg-dot lg-blue"></span>下調べ済み
+  </div>
+  <div class="osm-credit">地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+</div>
+
+<!-- ★「ホーム画面に追加」の案内【2026-10-14追加】
+     GA4の実測で1人あたり1.3セッション・DAU/MAU 5.9% = 動画から来てその店だけ見て閉じている。
+     再訪の入口を作るため、詳細を1回開いた後(または12秒後)に一度だけ出す。
+     ・ホーム画面から起動中(standalone)なら出さない ・✕で閉じたら30日出さない(localStorage)
+     ・Instagram/TikTok のアプリ内ブラウザでは追加できないので「ブラウザで開く」案内に切り替える
+     ・Android Chrome は beforeinstallprompt が取れたときだけ「追加する」ボタンを出す
+     文言と表示の判定は末尾の a2hs スクリプト -->
+<div id="a2hs" hidden>
+  <span class="a2hs-icon">📌</span>
+  <span class="a2hs-text" id="a2hsText"></span>
+  <button type="button" class="a2hs-btn" id="a2hsBtn" hidden>追加する</button>
+  <button type="button" class="a2hs-close" id="a2hsClose" aria-label="閉じる">✕</button>
+</div>
+
+<div id="count"></div>
+<div id="list"></div>
+
+<footer style="text-align:center; padding:8px 16px 28px; font-size:10.5px; color:var(--muted); line-height:1.8;">
+  ※当サイトはアフィリエイト広告を利用しています<br>
+  <a href="../" style="color:var(--muted);">トップページ</a> ・ <a href="../contact.html" style="color:var(--muted);">情報のご提供・お問い合わせ</a><br>
+  <a href="../about.html" style="color:var(--muted);">運営者情報</a> ・ <a href="../privacy.html" style="color:var(--muted);">プライバシーポリシー</a>
+</footer>
+
+<div id="clusterBox">
+  <div class="cl-head">
+    <h2 id="clusterTitle"></h2>
+    <span class="n" id="clusterCount"></span>
+    <button class="cl-close" id="clusterClose" aria-label="閉じる">✕</button>
+  </div>
+  <div id="clusterList"></div>
+</div>
+
+<div id="detail"></div>
+
+<div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
+
+
+
+<div class="sheet-back" id="areaBack">
+  <div class="sheet" id="areaSheet">
+    <div class="sheet-head">
+      <h2>市区で絞る(複数選択OK)</h2>
+      <div class="sheet-actions">
+        <button id="areaClear">クリア</button>
+        <button class="primary" id="areaApply">適用</button>
+      </div>
+    </div>
+    <div id="areaListBox"></div>
+  </div>
+</div>
+
+<script>
+const DATA_URL = "../data/spots.json";
+
+const state = {
+  spots: [],
+  filter: "all",
+  kidsOnly: true,    // ★「子連れOK」は最初からON(2026-10-14)。filter とは独立して掛かる(日帰りOK等と併用できる)
+  category: "gourmet",
+  q: "",
+  areas: new Set(),
+  areasDraft: new Set(),
+  ages: new Set(),   // 対象年齢の絞り込み(選んだ区分を**全部**満たす所だけ)
+  markers: [],
+  selectedId: null
+};
+
+// 投稿から1週間は NEW 扱い
+function isNew(spot) {
+  if (!spot.posted) return false;
+  const d = new Date(spot.posted + "T00:00:00+09:00");
+  return (Date.now() - d.getTime()) <= 7 * 24 * 60 * 60 * 1000;
+}
+
+async function loadSpots() {
+  try {
+    const res = await fetch(DATA_URL);
+    if (!res.ok) throw new Error("fetch failed: " + res.status);
+    const json = await res.json();
+    return Array.isArray(json) ? json : [];
+  } catch (e) {
+    console.error("spots.json の読み込みに失敗しました", e);
+    return [];
+  }
+}
+
+// 子連れ設備の値は4通り。
+//   true       … その店にある(確認済み)
+//   "facility" … 店には無いが同じ建物(モール等)にある。飛牛下原店のように実質困らないケース
+//   false      … 無いと確認した
+//   null       … 未確認。推測で埋めない
+const kidsHas = v => v === true || v === "facility";
+
+const KIDS_FACILITY = [
+  ["kidsChair", "🪑", "子供椅子"],
+  ["tatami",    "🧎", "座敷・小上がり"],
+  ["diaper",    "🚼", "おむつ替え"],
+  ["stroller",  "👶", "ベビーカーOK"],
+  ["kidsMenu",  "🍽", "キッズメニュー"],
+];
+
+function kidsFacilityHtml(spot) {
+  const k = spot.kids || {};
+  const yes = [], no = [];
+  for (const [key, icon, label] of KIDS_FACILITY) {
+    const v = k[key];
+    if (v === true) yes.push(`<span class="kf kf-y">${icon} ${label}</span>`);
+    else if (v === "facility") yes.push(`<span class="kf kf-f">${icon} ${label}<span class="kf-s">建物内</span></span>`);
+    else if (v === false) no.push(`<span class="kf kf-n">${icon} ${label}<span class="kf-s">なし</span></span>`);
+  }
+  if (k.noise === "ok") yes.push(`<span class="kf kf-y">🔉 騒いでも平気</span>`);
+  // 「なし」は、他に確認できた設備がある店でだけ出す。
+  // 単独で出すと、そもそも座敷を期待しない店(カウンターのラーメン屋等)にまで
+  // 灰色のチップが並んで邪魔になるだけで、判断の足しにならない
+  if (!yes.length) return "";
+  return `<div class="card-kidsrow">${yes.join("")}${no.join("")}</div>`;
+}
+
+function isKidsOk(spot) {
+  // 温泉は家族風呂・貸切風呂があれば周りに気を遣わず子連れで入れる(=子連れOK扱い)
+  if (/家族風呂|家族湯|貸切風呂|貸切湯/.test((spot.genre || "") + (spot.verdict || ""))) return true;
+  // 行きたい(未訪問)スポットは、ネットで設備の裏が取れたものだけ子連れOK扱いにする
+  // (取り込み時に with:"family" を仮置きしているため、withでは判定しない)
+  if (spot.wish) {
+    const k = spot.kids || {};
+    return ["stroller", "diaper", "tatami", "kidsChair", "kidsMenu"].some(key => kidsHas(k[key]));
+  }
+  return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
+}
+
+// 泊まれる施設か(明示フラグ optional: spot.stay)
+function canStay(s) {
+  if (s.stay === true) return true;
+  if (s.stay === false) return false;
+  return /旅館|ホテル|宿|リゾート|ペンション|民宿|別邸/.test((s.genre || "") + (s.name || ""));
+}
+// 日帰り入浴ができるか(明示フラグ optional: spot.dayUse)
+function canDayUse(s) {
+  if (s.dayUse === true) return true;
+  if (s.dayUse === false) return false;
+  const v = s.verdict || "";
+  // 「日帰り不可」等の否定表現が先に来る場合は除外
+  if (/日帰り[^。]{0,12}(不可|いたしており|できません|なし|していません)/.test(v)) return false;
+  if (/日帰り|立ち寄り湯|外来入浴/.test(v)) return true;
+  if (/日帰り|スーパー銭湯|銭湯|温浴|スパ|健康ランド|公衆浴場|家族湯|家族風呂|貸切風呂|サウナ|砂むし/.test(s.genre || "")) return true;
+  // 入浴料が書かれている＝外来利用できるとみなす(「大人1,500円」「小人700円」等)
+  return /(大人|小人|子供|中学生|小学生)[^。]{0,10}[0-9,]{3,6}\s*円/.test(v);
+}
+
+// スポットの所属カテゴリ(お食事/宿・温泉/遊び場)  ※おでかけ要素は遊び場に集約
+// 1スポットが複数タブに載ることがある(例: 一蘭の森=工場見学だがラーメンを食べに行く場所でもある)。
+// その場合は cats:["play","gourmet"] のように配列で持たせる。cats が無ければ従来の category 単独。
+const CAT_LABEL = { gourmet: "🍜 お食事", onsen: "♨ 宿・温泉", play: "🎡 遊び場" };
+function spotCats(s) {
+  if (Array.isArray(s.cats) && s.cats.length) return s.cats;
+  if (s.category === "onsen") return ["onsen"];
+  if (s.category === "play") return ["play"];
+  return ["gourmet"];
+}
+// 主カテゴリ(バッジ判定など「1つに決めたい」場面用)
+function spotCat(s) { return spotCats(s)[0]; }
+
+// 検索は表記ゆれを吸収するため、カタカナ→ひらがな・大小文字・全半角を寄せて比較する
+function normalize(s) {
+  return (s || "").toLowerCase()
+    .replace(/[ァ-ヶ]/g, c => String.fromCharCode(c.charCodeAt(0) - 0x60))
+    .replace(/[！-～]/g, c => String.fromCharCode(c.charCodeAt(0) - 0xfee0))
+    .replace(/[\s　・･ー\-()（）「」]/g, "");
+}
+function searchBlob(s) {
+  return normalize([s.name, s.area, s.city, s.pref, s.genre, s.verdict].join(" "));
+}
+function matchQuery(s, q) {
+  const terms = q.split(/[\s　]+/).filter(Boolean).map(normalize).filter(Boolean);
+  if (!terms.length) return true;
+  const blob = searchBlob(s);
+  return terms.every(t => blob.includes(t));
+}
+
+function applyFilters(spots) {
+  // 検索中はカテゴリ・絞り込みを無視して全件から探す(タブを跨いで見つけたいため)
+  if (state.q.trim()) return spots.filter(s => matchQuery(s, state.q));
+  return spots.filter(s => {
+    if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
+    if (!spotCats(s).includes(state.category)) return false;
+    // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
+    if (state.filter === "visited" && s.wish) return false;
+    // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.filter === "limited" && !isLimited(s)) return false;
+    if (state.filter === "fukko" && !isFukko(s)) return false;
+    if (state.filter === "wish" && !s.wish) return false;
+    if (state.filter === "dayuse" && !canDayUse(s)) return false;
+    if (state.filter === "stay" && !canStay(s)) return false;
+    if (state.areas.size && !state.areas.has(s.city)) return false;
+    // 年齢は「除外フィルター」(2026-10-12変更)。年齢タグが付いていて合わない所だけ外し、
+    // 未確定(ages無し)は残す。以前の「選んだ区分を全部満たす所だけ」だと未確定が多い今は
+    // 情報がほぼ消えて使えなかった。残した未確定にはカードに「年齢の目安なし」と出す
+    if (state.ages.size && Array.isArray(s.ages) && s.ages.length
+        && ![...state.ages].every(a => s.ages.includes(a))) return false;
+    return true;
+  });
+}
+
+// 楽天トラベル(A8)アフィリエイトリンク。宿泊・温泉系のカードに表示
+const AFF_RAKUTEN_TRAVEL = "https://rpx.a8.net/svt/ejp?a8mat=4BA7X5+1FSQEQ+2HOM+6L1YA&rakuten=y&a8ejpredirect=http%3A%2F%2Fhb.afl.rakuten.co.jp%2Fhgc%2F0eb4779e.5d30c5ba.0eb4779f.b871e4e3%2Fa26081745747_4BA7X5_1FSQEQ_2HOM_6L1YA%3Fpc%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F%26m%3Dhttp%253A%252F%252Ftravel.rakuten.co.jp%252F";
+// 楽天トラベルは宿泊予約サイトなので、実際に泊まれる施設にだけボタンを出す。
+// (日帰り専用のスーパー銭湯・家族湯に宿泊予約リンクを出すのは紹介になっておらず、
+//  楽天アフィリエイト規約の「紹介目的以外の掲載」に触れるため)
+function isStaySpot(spot) {
+  return canStay(spot);
+}
+
+function webUrl(spot) {
+  // 公式サイトが登録されていればそれを、無ければGoogleマップの該当スポットを開く
+  if (spot.web) return spot.web;
+  const q = encodeURIComponent(spot.name + " " + (spot.city || ""));
+  if (spot.lat && spot.lng) {
+    return `https://www.google.com/maps/search/?api=1&query=${q}&center=${spot.lat},${spot.lng}`;
+  }
+  return `https://www.google.com/maps/search/?api=1&query=${q}`;
+}
+
+function videoLinksHtml(spot, cls) {
+  const video = spot.video;
+  const items = [];
+  if (video && video.youtube) items.push(`<a href="${video.youtube}" target="_blank" rel="noopener">YouTube</a>`);
+  if (video && video.tiktok) items.push(`<a href="${video.tiktok}" target="_blank" rel="noopener">TikTok</a>`);
+  if (video && video.instagram) items.push(`<a href="${video.instagram}" target="_blank" rel="noopener">Instagram</a>`);
+  items.push(`<a class="web-btn" href="${webUrl(spot)}" target="_blank" rel="noopener">🌐 詳細</a>`);
+  // 食べログは「詳細」とは別ボタンにする(詳細=公式サイト/地図、食べログ=口コミ・予約)
+  if (spot.tabelog) {
+    items.push(`<a class="tabelog-btn" href="${spot.tabelog}" target="_blank" rel="noopener">食べログ</a><span class="pr-badge">PR</span>`);
+  }
+  // アソビューのWEBチケット(生URL→LinkSwitchが自動変換)
+  if (spot.asoview) {
+    items.push(`<a class="ticket-btn" href="${spot.asoview}" target="_blank" rel="noopener">チケットを買う</a><span class="pr-badge">PR</span>`);
+  }
+  // 公式サイトの席予約。提携が無く報酬も発生しないのでPR表記は付けない
+  if (spot.reserve) {
+    items.push(`<a class="reserve-btn" href="${spot.reserve}" target="_blank" rel="noopener">席を予約</a>`);
+  }
+  if (isStaySpot(spot)) {
+    // その宿のじゃらんページが分かっていれば直リンクする。
+    // トップページ着地より成約率が高いので、booking があるときは楽天(トップ)は出さない。
+    if (spot.booking) {
+      items.push(`<a class="aff-jalan" href="${spot.booking}" target="_blank" rel="nofollow noopener">じゃらんで予約</a><span class="pr-badge">PR</span>`);
+    } else {
+      items.push(`<a class="aff-rakuten" href="${AFF_RAKUTEN_TRAVEL}" target="_blank" rel="nofollow noopener">楽天トラベル</a><span class="pr-badge">PR</span>`);
+    }
+  }
+  return `<div class="${cls}">${items.join("")}</div>`;
+}
+
+function escapeHtml(str) {
+  if (str === null || str === undefined) return "";
+  return String(str)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;");
+}
+
+// verdict は **強調** 記法を使って書いてある(197件)。エスケープした後に
+// **〜** だけを <strong> に戻す。エスケープ済みなので新たなタグ注入は起きない
+function escapeRich(str) {
+  return escapeHtml(str).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
+}
+
+// ジャンル文字列から「のれん」の見た目(絵文字・色・札の文字)を決める
+function norenStyle(spot) {
+  const g = (spot.genre || "") + (spot.category || "");
+  const has = (...words) => words.some(w => g.includes(w));
+  if (spot.category === "onsen" || has("温泉", "銭湯", "スパ", "サウナ", "湯")) return { cls: "ph-onsen", emoji: "♨️", label: "湯" };
+  if (has("ラーメン", "つけ麺", "豚骨")) return { cls: "ph-ramen", emoji: "🍜", label: "麺" };
+  if (has("うどん", "そば", "蕎麦")) return { cls: "ph-ramen", emoji: "🍜", label: "麺" };
+  if (has("カフェ", "喫茶", "パン", "スイーツ", "ドーナツ", "ケーキ", "デザート")) return { cls: "ph-cafe", emoji: "☕", label: "甘味" };
+  if (has("居酒屋", "屋台", "酒場", "焼鳥", "焼き鳥", "串", "おでん", "餃子")) return { cls: "ph-izakaya", emoji: "🏮", label: "酒場" };
+  if (has("焼肉", "ホルモン", "ステーキ", "ハンバーグ")) return { cls: "ph-izakaya", emoji: "🍖", label: "肉" };
+  if (has("寿司", "鮨", "海鮮", "魚")) return { cls: "ph-food", emoji: "🍣", label: "海鮮" };
+  if (has("モール", "ショッピング", "百貨店")) return { cls: "ph-mall", emoji: "🛍️", label: "モール" };
+  if (has("ホテル", "旅館", "宿", "リゾート")) return { cls: "ph-hotel", emoji: "🏨", label: "宿" };
+  if (has("公園", "遊", "ミュージアム", "こども", "施設", "テーマ", "動物", "水族館")) return { cls: "ph-play", emoji: "🎡", label: "遊び場" };
+  return { cls: "ph-food", emoji: "🍴", label: "食事処" };
+}
+
+// 期間限定であることをカードの先頭で目立たせる。開くだけで「今だけ」が伝わるように
+function limitedHtml(spot) {
+  const c = campaignOf(spot);
+  const left = daysLeft(spot);
+  if (!c && !isEventOnly(spot)) return "";
+  if (isEventOnly(spot) && left === null) return "";
+  const soon = (left ?? 99) <= 14 ? " soon" : "";
+  const rest = (left ?? 99) <= 30 ? `<b>あと${Math.max(0, left)}日</b>` : "";
+  if (c) {
+    const until = c.untilLabel || c.until;
+    // 開始日が入っていれば「◯月◯日〜◯月◯日」の期間表示にする。
+    // ハッピーセットのように2週間で入れ替わるものは、いつ始まったかも知りたいため
+    const span = c.fromLabel ? `${escapeHtml(c.fromLabel)}〜${escapeHtml(until)}`
+                             : `${escapeHtml(until)}まで`;
+    return `<div class="ltd-band${soon}">
+        <span class="ltd-icon">🤝</span>
+        <span class="ltd-main">${escapeHtml(c.title || "コラボ開催中")}</span>
+        <span class="ltd-sub">${span} ${rest}</span>
+        ${c.note ? `<span class="ltd-note">${escapeHtml(c.note)}</span>` : ""}
+        ${c.url ? `<a class="ltd-link" href="${escapeHtml(c.url)}" target="_blank" rel="noopener">詳細</a>` : ""}
+      </div>`;
+  }
+  // 企画展は**まだ始まっていないもの**も登録する(巡回展など先の予定が分かるため)。
+  // 開始日が未来なら「◯月◯日から」と出し、残り日数ではなく開幕までの日数を見せる。
+  // 開始済みなら従来どおり「◯月◯日まで」
+  const nowMs = Date.now();
+  const startMs = spot.from ? new Date(spot.from + "T00:00:00+09:00").getTime() : null;
+  const notYet = startMs !== null && !isNaN(startMs) && startMs > nowMs;
+  if (notYet) {
+    const d = Math.ceil((startMs - nowMs) / 86400000);
+    return `<div class="ltd-band">
+        <span class="ltd-icon">📅</span>
+        <span class="ltd-main">これから開催</span>
+        <span class="ltd-sub">${escapeHtml(spot.fromLabel || spot.from)}〜${escapeHtml(spot.untilLabel || spot.until)}
+          ${d <= 60 ? `<b>あと${d}日で開幕</b>` : ""}</span>
+      </div>`;
+  }
+  const span = spot.fromLabel
+    ? `${escapeHtml(spot.fromLabel)}〜${escapeHtml(spot.untilLabel || spot.until)}`
+    : `${escapeHtml(spot.untilLabel || spot.until)}まで`;
+  return `<div class="ltd-band${soon}">
+      <span class="ltd-icon">⏳</span>
+      <span class="ltd-main">期間限定の開催</span>
+      <span class="ltd-sub">${span} ${rest}</span>
+    </div>`;
+}
+
+const AGE_LABEL = { baby: "👶 乳幼児(0〜2歳)", toddler: "🧒 幼児(3〜6歳)", kids: "🎒 小人(小学生)" };
+// 写真の出典(photoCredits)。自分で撮っていない写真はCCライセンスの帰属表示が必須なので、
+// サムネ・ギャラリーにこの配列があるスポットはカードに「写真: 作者 / ライセンス」を出す(2026-10-12)
+function photoCreditHtml(spot) {
+  if (!Array.isArray(spot.photoCredits) || !spot.photoCredits.length) return "";
+  const seen = new Set();
+  const items = spot.photoCredits.filter(c => c && c.author).filter(c => {
+    const k = c.author + "|" + (c.lic || ""); if (seen.has(k)) return false; seen.add(k); return true;
+  }).map(c => {
+    const a = c.url ? `<a href="${escapeHtml(c.url)}" target="_blank" rel="noopener">${escapeHtml(c.author)}</a>` : escapeHtml(c.author);
+    const l = c.lic ? (c.licurl ? ` / <a href="${escapeHtml(c.licurl)}" target="_blank" rel="noopener">${escapeHtml(c.lic)}</a>` : ` / ${escapeHtml(c.lic)}`) : "";
+    return a + l;
+  });
+  return `<div class="card-credit">📷 写真: ${items.join("、")}(Wikimedia Commons)</div>`;
+}
+
+function ageBadgesHtml(spot) {
+  if (!Array.isArray(spot.ages) || !spot.ages.length) {
+    // 年齢で絞っている最中に残った未確定スポットは、その旨を薄く出す(除外フィルター化に伴う・2026-10-12)
+    return state.ages.size ? `<div><span class="b-age unk">年齢の目安なし</span></div>` : "";
+  }
+  return `<div>${["baby", "toddler", "kids"].filter(a => spot.ages.includes(a))
+    .map(a => `<span class="b-age">${AGE_LABEL[a]}</span>`).join("")}</div>`;
+}
+
+function cardHtml(spot) {
+  // ⚠ここで解析イベントを送ってはいけない【2026-10-14】。cardHtml は一覧(renderList)でも1枚ずつ呼ばれるので、
+  //   絞り込みのたびに全カード分の spot_open が飛び、28日で9,610件という実態と無関係な数になっていた。
+  //   「読まれた店」の計測は openDetail() 側で送る
+  const area = spot.area ? escapeHtml(spot.area) : "";
+  const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
+  const kidsOk = isKidsOk(spot);
+  // 訪問済みだが動画がまだ無い店
+  const v = spot.video || {};
+  const noVideo = !spot.wish && !spot.memo && !v.youtube && !v.tiktok && !v.instagram;
+  const ph = norenStyle(spot);
+  const thumb = spot.thumb
+    ? `<img class="card-thumb" src="thumbs/${escapeHtml(spot.thumb)}" alt="" loading="lazy">`
+    : `<div class="card-thumb ph ${ph.cls}"><span class="ph-emoji">${ph.emoji}</span><span class="ph-label">${ph.label}</span></div>`;
+  const parent = spot.in ? state.spots.find(p => p.id === spot.in) : null;
+  return `
+    ${thumb}
+    <div class="card-body">
+      <div class="card-top">
+        <div class="card-name">${escapeHtml(spot.name)}</div>
+        <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
+      </div>
+      <div class="card-area">${cityArea}</div>
+      ${kidsFacilityHtml(spot)}
+      ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
+      ${photoCreditHtml(spot)}
+      ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
+      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${videoLinksHtml(spot, "card-links")}
+    </div>
+  `;
+}
+
+function areaTabSpots(spots) {
+  return spots.filter(s => {
+    if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
+    if (!spotCats(s).includes(state.category)) return false;
+    if (state.filter === "visited" && s.wish) return false;
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
+    if (state.filter === "limited" && !isLimited(s)) return false;
+    if (state.filter === "fukko" && !isFukko(s)) return false;
+    if (state.filter === "wish" && !s.wish) return false;
+    if (state.filter === "dayuse" && !canDayUse(s)) return false;
+    if (state.filter === "stay" && !canStay(s)) return false;
+    return true;
+  });
+}
+
+function populateAreaSelect(spots) {
+  const tabSpots = areaTabSpots(spots);
+  const prefBy = {};
+  tabSpots.forEach(s => { if (s.city && !prefBy[s.city]) prefBy[s.city] = s.pref || "福岡県"; });
+  const cities = Object.keys(prefBy);
+  const WARDS = ["福岡市東区", "福岡市博多区", "福岡市中央区", "福岡市南区", "福岡市城南区", "福岡市早良区", "福岡市西区"];
+  const PREFS = ["佐賀県", "長崎県", "大分県", "熊本県", "宮崎県", "鹿児島県", "山口県", "広島県", "岡山県", "愛媛県", "大阪府"];
+  const rank = c => {
+    const w = WARDS.indexOf(c);
+    if (w >= 0) return w;
+    if (prefBy[c] === "福岡県") return 100;
+    const p = PREFS.indexOf(prefBy[c]);
+    return 200 + (p >= 0 ? p : PREFS.length);
+  };
+  cities.sort((a, b) => rank(a) - rank(b) || a.localeCompare(b, "ja"));
+  const countBy = {};
+  tabSpots.forEach(s => { if (s.city) countBy[s.city] = (countBy[s.city] || 0) + 1; });
+  // 選択中で消えた市区を落とす
+  [...state.areas].forEach(a => { if (!cities.includes(a)) state.areas.delete(a); });
+  state.areasDraft = new Set(state.areas);
+  const box = document.getElementById("areaListBox");
+  let html = ""; let lastGroup = "";
+  cities.forEach(c => {
+    const g = rank(c) < 100 ? "福岡市" : (prefBy[c] === "福岡県" ? "福岡県内" : prefBy[c]);
+    if (g !== lastGroup) { html += `<div class="area-group">${g}</div>`; lastGroup = g; }
+    const label = prefBy[c] === "福岡県" ? c : c;
+    html += `<label class="area-item"><input type="checkbox" value="${escapeHtml(c)}" ${state.areasDraft.has(c) ? "checked" : ""}><span>${escapeHtml(label)}</span><span class="cnt">${countBy[c]}</span></label>`;
+  });
+  box.innerHTML = html || `<div class="memo-hint">このタブに市区データがありません</div>`;
+  box.querySelectorAll("input[type=checkbox]").forEach(cb => {
+    cb.addEventListener("change", () => {
+      if (cb.checked) state.areasDraft.add(cb.value); else state.areasDraft.delete(cb.value);
+    });
+  });
+  updateAreaBtn();
+}
+
+function updateAreaBtn() {
+  const b = document.getElementById("areaBtn");
+  b.textContent = state.areas.size ? `市区で絞る(${state.areas.size})` : "市区で絞る";
+  b.classList.toggle("active", state.areas.size > 0);
+}
+
+function clearMarkers() {
+  state.markers.forEach(m => m.marker.remove());
+  state.markers = [];
+}
+
+// ===== 詳細カード(ピン/リスト共通の詳細表示) =====
+function updatePinHighlight() {
+  state.markers.forEach(({ spot, items, marker }) => {
+    // まとめたピンは中に選択中の店が含まれていれば強調する
+    const on = spot ? spot.id === state.selectedId
+                    : !!(items && items.some(s => s.id === state.selectedId));
+    marker.getElement().classList.toggle("pin-selected", on);
+  });
+}
+
+function openDetail(spot) {
+  // 施設リストが開いたままだと、同じ下寄せのシート同士が重なって詳細カードが隠れてしまう
+  const cbox = document.getElementById("clusterBox");
+  if (cbox) cbox.classList.remove("open");
+  const detail = document.getElementById("detail");
+  // 写真ギャラリー(横スワイプ、タップで拡大)
+  const photosHtml = (spot.photos && spot.photos.length) ? `
+    <div class="card-photos">${spot.photos.map(p => `<img src="photos/${escapeHtml(p)}" loading="lazy" data-photo="${escapeHtml(p)}" alt="">`).join("")}</div>` : "";
+  // この施設内に登録されているスポット(親→子リンク)
+  // 情報が充実しているもの(動画あり>写真あり>訪問済み>ひとことあり)を上に並べる
+  const childScore = c => {
+    const v = c.video || {};
+    let n = 0;
+    if (v.youtube || v.tiktok || v.instagram) n += 8;
+    if (c.photos && c.photos.length) n += 4;
+    if (!c.wish) n += 2;
+    if (c.verdict) n += 1;
+    return n;
+  };
+  const children = state.spots.filter(s => s.in === spot.id)
+    .sort((a, b) => childScore(b) - childScore(a) || (a.name || "").localeCompare(b.name || "", "ja"));
+  const childrenHtml = children.length ? `
+    <div class="detail-children">
+      <div class="dc-title">この施設内のスポット</div>
+      ${children.map(c => {
+        const v = c.video || {};
+        const mark = (v.youtube || v.tiktok || v.instagram) ? "🎬" : (c.photos && c.photos.length ? "📷" : "");
+        return `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${mark}${escapeHtml(c.name)}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`;
+      }).join("")}
+    </div>` : "";
+  // 関連スポット(同チェーンの動画がある店など)
+  const relatedSpots = (spot.related || []).map(id => state.spots.find(s => s.id === id)).filter(Boolean);
+  const relatedHtml = relatedSpots.length ? `
+    <div class="detail-children">
+      <div class="dc-title">関連スポット(同チェーン等)</div>
+      ${relatedSpots.map(c => { const v = c.video || {}; const hasV = v.youtube || v.tiktok || v.instagram; return `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}${hasV ? " 🎬動画あり" : ""}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`; }).join("")}
+    </div>` : "";
+  detail.innerHTML = `
+    <div class="detail-grip"></div>
+    <button class="detail-close" id="detailClose">✕</button>
+    <div class="card">${cardHtml(spot)}</div>
+    ${photosHtml}
+    ${childrenHtml}
+    ${relatedHtml}
+  `;
+  detail.classList.add("open");
+  // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)。
+  // 詳細を開いたときだけ送る = 「読まれた店」の数になる(一覧描画では送らない・2026-10-14)
+  try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
+  try { window.showA2hs && window.showA2hs("detail"); } catch (e) {}
+  document.getElementById("detailClose").addEventListener("click", closeDetail);
+document.getElementById("clusterClose").addEventListener("click", () => {
+  document.getElementById("clusterBox").classList.remove("open");
+});
+  bindJumpLinks(detail);
+  detail.querySelectorAll("[data-photo]").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      document.getElementById("lightboxImg").src = "photos/" + el.dataset.photo;
+      document.getElementById("lightbox").classList.add("open");
+    });
+  });
+}
+
+document.getElementById("lightbox").addEventListener("click", () => {
+  document.getElementById("lightbox").classList.remove("open");
+  document.getElementById("lightboxImg").src = "";
+});
+
+// 親子リンク([data-jump])のクリックで対象スポットへ飛ぶ
+function bindJumpLinks(root) {
+  root.querySelectorAll("[data-jump]").forEach(el => {
+    el.addEventListener("click", (e) => {
+      e.stopPropagation();
+      const target = state.spots.find(s => s.id === el.dataset.jump);
+      if (target) jumpToSpot(target);
+    });
+  });
+}
+
+function jumpToSpot(spot) {
+  // 検索中はカテゴリ横断で出しているので、タブ切り替えはしない
+  if (state.q.trim()) { renderAll(); focusSpot(spot); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
+  // 別カテゴリのスポットならタブを切り替える
+  const cat = spotCat(spot);
+  if (cat !== state.category) {
+    state.category = cat;
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.toggle("active", b.dataset.cat === cat));
+    syncCatClass();
+    populateAreaSelect(state.spots);
+  }
+  // 現在のフィルタで対象が表示されない場合は「すべて」に戻す
+  if (!applyFilters(state.spots).some(s => s.id === spot.id)) {
+    state.filter = "all";
+    state.areas = new Set();
+    state.ages = new Set();
+    document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
+    updateAreaBtn();
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+  }
+  renderAll();
+  focusSpot(spot);
+  window.scrollTo({ top: 0, behavior: "smooth" });
+}
+
+function closeDetail() {
+  document.getElementById("detail").classList.remove("open");
+  state.selectedId = null;
+  renderList();
+  updatePinHighlight();
+}
+
+function focusSpot(spot) {
+  state.selectedId = spot.id;
+  renderList();
+  updatePinHighlight();
+  openDetail(spot);
+  if (spot.lat !== null && spot.lng !== null && spot.lat !== undefined && spot.lng !== undefined && window._map) {
+    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true });
+  }
+}
+
+function renderList() {
+  const list = document.getElementById("list");
+  const countEl = document.getElementById("count");
+  // 並び順: NEW(投稿1週間以内) → 赤ピン(訪問済み・登録順のまま) → 青ピン(新しく登録した順)
+  // spots.json は追記で増えるので、配列の後ろほど新しい登録(2026-10-07ユーザー要望)
+  // 並び: NEW(投稿7日以内) → 最近登録した青ピン(14日以内・新しい順) → 赤ピン(登録順) → 残りの青ピン(新しい順)
+  const order = new Map(state.spots.map((s, i) => [s, i]));
+  const recentBlue = (s) => !!(s.wish && s.added &&
+    (Date.now() - new Date(s.added + "T00:00:00+09:00").getTime()) <= 14 * 24 * 60 * 60 * 1000);
+  const rank = (s) => isNew(s) ? 0 : recentBlue(s) ? 1 : !s.wish ? 2 : 3;
+  const filtered = applyFilters(state.spots).slice().sort((a, b) =>
+    (rank(a) - rank(b)) ||
+    (rank(a) === 1 ? (b.added.localeCompare(a.added) || order.get(b) - order.get(a)) :
+     a.wish ? order.get(b) - order.get(a) : order.get(a) - order.get(b)));
+
+  countEl.textContent = !state.spots.length ? ""
+    : state.q.trim() ? `「${state.q.trim()}」の検索結果 ${filtered.length}件(全カテゴリから)`
+    : `${filtered.length}件表示中(全${state.spots.length}件)`;
+
+  if (!state.spots.length) {
+    list.innerHTML = `<div class="empty">まだ登録されたお店がありません。<br>data/spots.json に追加すると、ここと地図に表示されます。</div>`;
+    return;
+  }
+  if (!filtered.length) {
+    list.innerHTML = state.q.trim()
+      ? `<div class="empty">「${escapeHtml(state.q.trim())}」に一致するお店はありませんでした。<br>店名の一部・エリア名・ジャンルでも探せます。</div>`
+      : `<div class="empty">条件に合うお店が見つかりませんでした。</div>`;
+    return;
+  }
+
+  list.innerHTML = filtered.map(s => `
+    <div class="card${s.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(s.id)}">
+      ${cardHtml(s)}
+    </div>
+  `).join("");
+
+  list.querySelectorAll(".card").forEach(el => {
+    el.addEventListener("click", () => {
+      const spot = state.spots.find(s => s.id === el.dataset.id);
+      if (spot) {
+        focusSpot(spot);
+        // リストから選んだら地図までスクロールで戻す(ハイライトを見せる)
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    });
+  });
+  bindJumpLinks(list);
+}
+
+// 同じ場所に集まったピンは1つにまとめ、中に件数を出す。
+// 福岡空港やモールのように「1施設に何十軒も入る」場所で、
+// ピンが積み重なってタップできなくなるのを防ぐ目的。
+const CLUSTER_PX = 44;   // この画素数より近いピン同士はまとめる
+
+// 期間限定の情報は2種類ある。
+//  campaign … 常設の店で開催中のコラボ(スシロー×キティ等)。終わっても店は残るので
+//             会期が切れたら campaign だけ無効化し、スポット自体は残す
+//  until    … スポットそのものが期間限定(企画展など)。会期が切れたら地図から消す
+function campaignOf(spot) {
+  const c = spot.campaign;
+  if (!c || !c.until) return null;
+  const d = new Date(c.until + "T23:59:59+09:00");
+  if (isNaN(d) || d < new Date()) return null;   // 終わったコラボは無かったことにする
+  return c;
+}
+function isEventOnly(spot) { return !!spot.until; }
+function isLimited(spot) { return isEventOnly(spot) || !!campaignOf(spot); }
+
+/* ───────── 九州ふっこう応援割(2026-10-01 宿泊分〜) ─────────
+   国交省155億円を九州7県に配分する旅行支援。
+
+   ⚠**2つの別物を混同しないこと**(2026-09-15に実地で確認):
+     ① 対象施設かどうか … **宿ごとに参加登録する方式**。同じ県でも未参加の宿は対象外
+     ② クーポン枠       … **県単位の予算**。上限に達すると、対象施設であっても
+                          予約画面に「当該都道府県の…クーポンは予算上限に達したため停止」と出て
+                          割引が使えなくなる
+   熊本・長崎は 2026-09-15 10:00 に販売開始し、**同日のうちにじゃらん・楽天とも枠が尽きた**。
+   なので「対象」と出すだけでは予約できると誤解させる。帯に②の注意を必ず併記する。
+
+   ⚠**対象施設の一覧は県によって公表されている**(memoryの「公表されない」は誤り):
+     熊本県 https://kumamoto-ouenwari.com/yoshiki/ichiran.pdf … 295施設。tools/fukko_apply_official.py で突合
+     長崎県 … 一覧の公表なし
+   ⚠**じゃらんは特設ページ型**(対象宿を選ぶと支払画面で自動割引)なので、
+     宿ページに「応援割プラン」は並ばない。tools/fukko_watch.py の判定はこれを外す。
+
+   データ形は spots.json の宿に:
+     "fukko": { "checked":"2026-09-15", "url":"<宿のじゃらんURL>",
+                "official":"<公式一覧での表記>", "source":"<出典URL>", "note":"任意" }
+   fukko が無い = 未確認。**勝手に対象扱いしない**(誤情報で予約させないため) */
+const FUKKO_RATE = {           // 県 → 割引率(%)
+  熊本県: 60, 鹿児島県: 60,
+  福岡県: 50, 佐賀県: 50, 長崎県: 50, 大分県: 50, 宮崎県: 50,
+};
+// クーポンの残りを見に行く先。**枠は県単位でサイトごとに別配分**なので両方出す
+const FUKKO_RAKUTEN = {
+  熊本県: "kumamoto", 鹿児島県: "kagoshima", 福岡県: "fukuoka",
+  佐賀県: "saga", 長崎県: "nagasaki", 大分県: "oita", 宮崎県: "miyazaki",
+};
+const FUKKO_JALAN = "https://www.jalan.net/kyushu-shien/";
+const FUKKO_START = "2026-10-01";
+function fukkoRate(spot) { return FUKKO_RATE[spot.pref] || null; }
+// 「対象と確認できた宿」だけ true。県が対象でも確認前は false のまま
+function isFukko(spot) {
+  return !!(spot.fukko && fukkoRate(spot));
+}
+// まだ始まっていない期間なら「10月1日から」と出したいので開始前か判定する
+function fukkoNotStarted() {
+  return new Date() < new Date(FUKKO_START + "T00:00:00+09:00");
+}
+// カード先頭の帯。割引率と上限は県から自動で決まるので手入力しない
+function fukkoHtml(spot) {
+  if (!isFukko(spot)) return "";
+  const r = fukkoRate(spot);
+  const f = spot.fukko;
+  const head = fukkoNotStarted() ? "10月1日の宿泊分から対象" : "九州ふっこう応援割の対象施設";
+  const rk = FUKKO_RAKUTEN[spot.pref];
+  // ⚠「対象施設」と「いま予約できるか」は別。枠は**県単位**で尽きるので必ず併記する
+  return `<div class="fk-band">
+      <span class="fk-icon">🏨</span>
+      <span class="fk-main">${head}</span>
+      <span class="fk-rate">${r}%OFF</span>
+      <span class="fk-sub">上限 1人あたり 宿泊のみ2万円 / 交通付き2泊以上3万円 / 2県以上3万5千円</span>
+      <span class="fk-caution">⚠クーポン枠は<b>${escapeHtml(spot.pref || "県")}単位</b>で、上限に達すると対象施設でも割引が出ません。<b>予約サイトごとに別枠</b>なので、片方が終了でも他方に残っていることがあります</span>
+      ${f.note ? `<span class="fk-note">${escapeHtml(f.note)}</span>` : ""}
+      <span class="fk-links">クーポンの残りを確認:
+        <a href="${FUKKO_JALAN}" rel="nofollow noopener" target="_blank">じゃらん</a>
+        ${rk ? ` / <a href="https://travel.rakuten.co.jp/special/kyushuouen/${rk}/" rel="nofollow noopener" target="_blank">楽天トラベル</a>` : ""}
+      </span>
+      ${f.url ? `<a class="ltd-link" href="${escapeHtml(f.url)}" rel="nofollow noopener" target="_blank">この宿を見る</a><span class="pr-badge">PR</span>` : ""}
+    </div>`;
+}
+function isExpired(spot) {
+  if (!spot.until) return false;                 // campaign は期限切れでもスポットは残す
+  const d = new Date(spot.until + "T23:59:59+09:00");
+  return !isNaN(d) && d < new Date();
+}
+// 残り日数(campaign を優先。過ぎていれば負)
+function daysLeft(spot) {
+  const c = campaignOf(spot);
+  const u = c ? c.until : spot.until;
+  if (!u) return null;
+  const d = new Date(u + "T23:59:59+09:00");
+  return Math.ceil((d - new Date()) / 86400000);
+}
+function limitedLabel(spot) {
+  const c = campaignOf(spot);
+  if (c) return c.label || c.title || "コラボ開催中";
+  return (spot.untilLabel || spot.until) + "まで";
+}
+
+function makePinEl(spot) {
+  const el = document.createElement("div");
+  el.className = "pin";
+  // ピンの色は「行った(赤)/調べた(青)」を必ず保つ。期間限定は金リングで足す
+  el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
+  if (isEventOnly(spot)) el.classList.add("pin-eventonly");
+  if (!isLimited(spot) && isFukko(spot)) {
+    el.classList.add("pin-fukko");
+    const fl = document.createElement("span");
+    fl.className = "pin-fukko-label";
+    fl.textContent = "🏨";
+    el.appendChild(fl);
+  }
+  if (isLimited(spot)) {
+    el.classList.add("pin-campaign");
+    const lab = document.createElement("span");
+    lab.className = "pin-campaign-label";
+    lab.textContent = campaignOf(spot) ? "🤝" : "⏳";
+    el.appendChild(lab);
+  }
+  if (isNew(spot)) {
+    el.classList.add("pin-new");
+    const lab = document.createElement("span");
+    lab.className = "pin-new-label";
+    lab.textContent = "NEW";
+    el.appendChild(lab);
+  }
+  return el;
+}
+
+function makeClusterEl(items) {
+  const el = document.createElement("div");
+  el.className = "pin-cluster";
+  // 訪問済み(赤)の割合をリングで出す。
+  // 以前は「全員が訪問済みでないと赤にしない」判定だったため、広域で
+  // まとめられると必ず青になり、実績が無いマップに見えてしまっていた。
+  // 赤429/青967 なので多数決でも青に倒れる。割合をそのまま見せるのが正しい
+  const red = items.filter(s => !s.wish).length;
+  const pct = Math.round((red / items.length) * 100);
+  el.style.background =
+    `conic-gradient(#d63031 0 ${pct}%, #2b5cc4 ${pct}% 100%)`;
+  const inner = document.createElement("span");
+  inner.className = "pc-inner";
+  inner.textContent = items.length;
+  // 中の丸は「1件でも行っていれば赤」。行った実績がある場所だと分かるようにする
+  if (red > 0) inner.classList.add("pc-red");
+  el.appendChild(inner);
+  el.title = `${items.length}件のうち ${red}件は訪問済み`;
+  return el;
+}
+
+function renderMarkers() {
+  clearMarkers();
+  const map = window._map;
+  if (!map) return;
+  const filtered = applyFilters(state.spots).filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
+
+  // ① まず「同じ施設に入っている店」を1つの単位にまとめる。
+  //    施設を最小単位として扱うので、いくらズームしてもここは分散させない
+  //    (福岡空港のように1棟に何十軒も入る場所は、バラすと同じ施設だと分からなくなるため)
+  const byParent = {};
+  const singles = [];
+  filtered.forEach(s => {
+    if (s.in && state.spots.some(p => p.id === s.in)) {
+      (byParent[s.in] = byParent[s.in] || []).push(s);
+    } else singles.push(s);
+  });
+  const units = [];   // {items, lat, lng, facility}
+  Object.keys(byParent).forEach(pid => {
+    const kids = byParent[pid];
+    if (kids.length === 1) { singles.push(kids[0]); return; }
+    const par = state.spots.find(p => p.id === pid);
+    units.push({
+      items: kids, facility: par || null,
+      lat: par ? par.lat : kids.reduce((a, s) => a + s.lat, 0) / kids.length,
+      lng: par ? par.lng : kids.reduce((a, s) => a + s.lng, 0) / kids.length
+    });
+  });
+  singles.forEach(s => units.push({ items: [s], facility: null, lat: s.lat, lng: s.lng }));
+
+  // ② その上で、画面上で近い単位同士をまとめる(ズームすれば単位ごとにほどける)
+  const pts = units.map(u => ({ u, pt: map.project([u.lng, u.lat]) }));
+  const used = new Array(pts.length).fill(false);
+  const groups = [];
+  for (let i = 0; i < pts.length; i++) {
+    if (used[i]) continue;
+    const g = [pts[i]];
+    used[i] = true;
+    for (let j = i + 1; j < pts.length; j++) {
+      if (used[j]) continue;
+      const dx = pts[i].pt.x - pts[j].pt.x, dy = pts[i].pt.y - pts[j].pt.y;
+      if (dx * dx + dy * dy < CLUSTER_PX * CLUSTER_PX) { g.push(pts[j]); used[j] = true; }
+    }
+    groups.push(g);
+  }
+
+  groups.forEach(g => {
+    const us = g.map(x => x.u);
+    const items = us.flatMap(u => u.items);
+    const lng = us.reduce((a, u) => a + u.lng, 0) / us.length;
+    const lat = us.reduce((a, u) => a + u.lat, 0) / us.length;
+
+    if (items.length === 1) {
+      const spot = items[0];
+      const el = makePinEl(spot);
+      const marker = new maplibregl.Marker({ element: el }).setLngLat([spot.lng, spot.lat]).addTo(map);
+      el.addEventListener("click", (ev) => { ev.stopPropagation(); focusSpot(spot); });
+      state.markers.push({ spot, marker });
+      return;
+    }
+    // 単位が1つだけ = 同じ施設のまとまり。ズームしても割れないので、押したら必ずリストを出す
+    const soleFacility = us.length === 1 && us[0].facility ? us[0].facility : null;
+    const el = makeClusterEl(items);
+    if (soleFacility) el.classList.add("pc-facility");
+    const marker = new maplibregl.Marker({ element: el }).setLngLat([lng, lat]).addTo(map);
+    el.addEventListener("click", (ev) => {
+      ev.stopPropagation();
+      if (soleFacility) showClusterList(items, soleFacility);
+      else openCluster(items, [lng, lat]);
+    });
+    state.markers.push({ spot: null, items, marker });
+  });
+  updatePinHighlight();
+}
+
+// まとめたピンをタップしたとき。まだ広げられるならズームし、
+// これ以上ズームしても離れない(同じ建物内など)ならリストを出す
+function openCluster(items, center) {
+  const map = window._map;
+  const z = map.getZoom();
+  const spread = Math.max(
+    ...items.map(a => Math.max(...items.map(b => Math.abs(a.lat - b.lat) + Math.abs(a.lng - b.lng))))
+  );
+  if (z < 17.5 && spread > 0.0004) {
+    map.flyTo({ center, zoom: Math.min(18, z + 2.5), essential: true });
+    return;
+  }
+  showClusterList(items);
+}
+
+function showClusterList(items, facility) {
+  const box = document.getElementById("clusterBox");
+  const parent = facility || (items[0].in ? state.spots.find(s => s.id === items[0].in) : null);
+  const sameParent = parent && items.every(s => s.in === parent.id);
+  document.getElementById("clusterTitle").textContent =
+    sameParent ? `${parent.name} 内のスポット` : "この場所のスポット";
+  document.getElementById("clusterCount").textContent = `${items.length}件`;
+  // ⚠**施設そのもの(親)の行を必ず先頭に出す**【2026-09-21ユーザー指摘】。
+  //   親のカテゴリは1つしか持てないので、例えばイオンモール香椎浜(play)を
+  //   「お食事」タブで見ると**子の飲食店だけが並んで親が出てこない**。
+  //   ベビールームや駐車場といった**施設側の情報にたどり着けない**ので、
+  //   タブに関係なく先頭に固定する。件数は子の数のままにする(親は別枠なので数えない)。
+  const facilityRow = (sameParent && !items.some(s => s.id === parent.id))
+    ? `<button class="cl-item cl-facility" data-cid="${escapeHtml(parent.id)}">
+         <span class="cl-top">
+           <span class="cl-name">🏬 ${escapeHtml(parent.name)}</span>
+           <span class="cl-genre">施設の情報</span>
+         </span>
+         <span class="cl-tags">
+           ${isKidsOk(parent) ? `<span class="cl-tag t-kids">子連れOK</span>` : ""}
+           ${(parent.photos || []).length ? `<span class="cl-tag t-photo">📷 写真${parent.photos.length}枚</span>` : ""}
+           <span class="cl-tag t-open">授乳室・トイレなど ›</span>
+         </span>
+       </button>`
+    : "";
+  document.getElementById("clusterList").innerHTML = facilityRow + items
+    // 動画あり > 訪問済み > 子連れOK を上に。同条件ならジャンル順
+    .slice().sort((a, b) => {
+      const sc = s => {
+        const v = s.video || {};
+        return ((v.youtube || v.tiktok || v.instagram) ? 4 : 0) + (!s.wish ? 2 : 0) + (isKidsOk(s) ? 1 : 0);
+      };
+      return sc(b) - sc(a) || (a.genre || "").localeCompare(b.genre || "", "ja");
+    })
+    .map(s => {
+      const v = s.video || {};
+      const tags = [
+        s.wish ? `<span class="cl-tag t-wish">🔵 下調べ済み</span>`
+               : `<span class="cl-tag t-visited">🔴 訪問済み</span>`,
+        isLimited(s) ? `<span class="cl-tag t-ltd">${campaignOf(s) ? "🤝 コラボ中" : "⏳ 期間限定"}</span>` : "",
+        isFukko(s) ? `<span class="cl-tag t-fk">🏨 復興割${fukkoRate(s)}%OFF</span>` : "",
+        isKidsOk(s) ? `<span class="cl-tag t-kids">子連れOK</span>` : "",
+        (v.youtube || v.tiktok || v.instagram) ? `<span class="cl-tag t-video">🎬 動画あり</span>` : ""
+      ].join("");
+      return `<button class="cl-item" data-cid="${escapeHtml(s.id)}">
+        <span class="cl-top">
+          <span class="cl-name">${escapeHtml(s.name)}</span>
+          <span class="cl-genre">${escapeHtml(s.genre || "")}</span>
+        </span>
+        <span class="cl-tags">${tags}</span>
+      </button>`;
+    }).join("");
+  box.querySelectorAll("[data-cid]").forEach(b => {
+    b.addEventListener("click", () => {
+      const sp = state.spots.find(x => x.id === b.dataset.cid);
+      box.classList.remove("open");
+      if (!sp) return;
+      // ⚠**今のタブに載っていないスポットは `jumpToSpot` で開く**(2026-09-21)。
+      //   施設の行は別カテゴリのことがあり(お食事タブ→イオンモールは遊び場)、
+      //   `focusSpot` だけだと次の renderAll で詳細カードが閉じてしまう。
+      //   `jumpToSpot` はタブと絞り込みを対象に合わせてから開く。
+      if (applyFilters(state.spots).some(x => x.id === sp.id)) focusSpot(sp);
+      else jumpToSpot(sp);
+    });
+  });
+  box.classList.add("open");
+}
+
+function renderAll() {
+  // フィルタ変更で選択中の店が対象外になったら詳細カードを閉じる
+  if (state.selectedId !== null && !applyFilters(state.spots).some(s => s.id === state.selectedId)) {
+    document.getElementById("detail").classList.remove("open");
+    state.selectedId = null;
+  }
+  renderMarkers();
+  renderList();
+}
+
+function initMap(spots) {
+  const withCoords = spots.filter(s => s.lat !== null && s.lng !== null && s.lat !== undefined && s.lng !== undefined);
+  // ターゲットは福岡県民のため、初期表示は常に福岡県(福岡都市圏中心)
+  const center = [130.45, 33.55];
+
+  const map = new maplibregl.Map({
+    container: "map",
+    style: {
+      version: 8,
+      sources: {
+        osm: {
+          type: "raster",
+          tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
+          tileSize: 256,
+          attribution: "&copy; OpenStreetMap contributors"
+        }
+      },
+      layers: [
+        { id: "osm", type: "raster", source: "osm" }
+      ]
+    },
+    center: center,
+    zoom: 8.7
+  });
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
+  // 現在地ボタン(Googleマップ風。押すと現在地へ移動+青ドット表示)
+  const geolocate = new maplibregl.GeolocateControl({
+    positionOptions: { enableHighAccuracy: true },
+    trackUserLocation: true,
+    showUserLocation: true,
+    fitBoundsOptions: { maxZoom: 13 }
+  });
+  map.addControl(geolocate, "top-right");
+  window._map = map;
+
+  // ズーム/移動のたびにまとめ直す(寄れば自然にピンがほどける)
+  let _reMark = null;
+  map.on("moveend", () => {
+    clearTimeout(_reMark);
+    _reMark = setTimeout(() => { if (state.spots.length) renderMarkers(); }, 120);
+  });
+
+  map.on("load", () => {
+    renderAll();
+    // 開いた時に現在地を中央へ(位置情報が許可されている場合のみ。拒否時は福岡全域表示のまま)
+    try { geolocate.trigger(); } catch (e) {}
+  });
+  map.on("click", (e) => {
+    // 地図の空きエリアタップで詳細カードを閉じる
+    if (state.selectedId !== null) closeDetail();
+  });
+}
+
+
+// ===== 市区パネル =====
+document.getElementById("areaBtn").addEventListener("click", () => {
+  populateAreaSelect(state.spots);
+  document.getElementById("areaBack").classList.add("open");
+});
+document.getElementById("areaBack").addEventListener("click", (e) => {
+  if (e.target.id === "areaBack") document.getElementById("areaBack").classList.remove("open");
+});
+document.getElementById("areaClear").addEventListener("click", () => {
+  state.areasDraft = new Set();
+  document.querySelectorAll("#areaListBox input[type=checkbox]").forEach(cb => cb.checked = false);
+});
+document.getElementById("areaApply").addEventListener("click", () => {
+  state.areas = new Set(state.areasDraft);
+  document.getElementById("areaBack").classList.remove("open");
+  updateAreaBtn();
+  renderAll();
+});
+
+// 検索ボックス。入力のたびに全件から絞り込む(件数が1000弱なので遅延不要)
+const qInput = document.getElementById("q");
+const qClear = document.getElementById("qClear");
+function applyQuery() {
+  state.q = qInput.value;
+  qClear.classList.toggle("on", !!state.q);
+  // 検索中はカテゴリ・絞り込みの見た目を無効化して、全件検索であることを示す
+  document.querySelector(".cat-toggle").style.opacity = state.q.trim() ? .4 : "";
+  document.querySelector(".filters").style.opacity = state.q.trim() ? .4 : "";
+  renderAll();
+}
+qInput.addEventListener("input", applyQuery);
+qInput.addEventListener("search", applyQuery);
+qClear.addEventListener("click", () => { qInput.value = ""; applyQuery(); qInput.focus(); });
+
+// タブに応じて body に cat-gourmet / cat-onsen / cat-play を付ける。
+// 温泉専用フィルタと年齢の行の表示切替がこのクラスを見る。年齢の行が隠れるタブへ移ったら
+// 年齢の選択も解除する(見えないフィルタが効いたままにしない)(2026-10-12)
+function syncCatClass() {
+  ["gourmet", "onsen", "play"].forEach(c => document.body.classList.toggle("cat-" + c, state.category === c));
+  if (state.ages.size && !["play", "onsen"].includes(state.category)) {
+    state.ages = new Set();
+    document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
+  }
+}
+syncCatClass();
+
+document.querySelectorAll(".cat-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".cat-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.category = btn.dataset.cat;
+    syncCatClass();
+    // 温泉タブ専用フィルタを選んだまま他タブへ移ったら「すべて」に戻す
+    if (state.category !== "onsen" && (state.filter === "dayuse" || state.filter === "stay")) {
+      state.filter = "all";
+      document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+    }
+    populateAreaSelect(state.spots);
+    renderAll();
+  });
+});
+
+// 対象年齢: トグル式・複数選択可
+document.querySelectorAll(".age-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    const a = btn.dataset.age;
+    if (state.ages.has(a)) state.ages.delete(a); else state.ages.add(a);
+    btn.classList.toggle("active", state.ages.has(a));
+    renderAll();
+  });
+});
+
+document.querySelectorAll(".filter-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+    state.filter = btn.dataset.filter;
+    populateAreaSelect(state.spots);
+    renderAll();
+  });
+});
+
+
+
+// URL の #spot=<id> で来たときに、そのスポットのカードを開く。
+// スポット個別ページの「地図で見る」ボタンと、SNS投稿からの直リンクがここを通る。
+// ⚠この処理が無く、スポットページ1,600枚超の「地図で見る」が効いていなかった(2026-09-10に発覚)。
+// タブ(お食事/宿・温泉/遊び場)や絞り込みで対象外になっていると開けないので、
+// スポットのカテゴリへタブを切り替え、絞り込みとエリアは「すべて」に戻してから開く。
+// (例: 公園は play タブなので、初期表示の gourmet タブのままでは見えない)
+function openFromHash() {
+  const m = /(?:^|[#&])spot=([^&]+)/.exec(location.hash || "");
+  if (!m) return;
+  let id;
+  try { id = decodeURIComponent(m[1]); } catch (e) { id = m[1]; }
+  const sp = state.spots.find(s => s.id === id);
+  if (!sp) return;
+
+  const cats = spotCats(sp);
+  if (!cats.includes(state.category)) {
+    state.category = cats[0];
+    document.querySelectorAll(".cat-btn").forEach(b =>
+      b.classList.toggle("active", b.dataset.cat === state.category));
+    syncCatClass();
+  }
+  state.q = "";
+  state.filter = "all";
+  document.querySelectorAll(".filter-btn").forEach(b =>
+    b.classList.toggle("active", b.dataset.filter === "all"));
+  state.areas.clear();
+  state.areasDraft.clear();
+  populateAreaSelect(state.spots);
+  renderAll();
+  focusSpot(sp);
+}
+
+window.addEventListener("hashchange", openFromHash);
+
+// ★「ホーム画面に追加」の案内(a2hs = add to home screen)【2026-10-14】
+//   出す条件: ホーム画面起動でない / 30日以内に✕していない / 詳細を1回開いた or 12秒経過
+//   文言: アプリ内ブラウザ(Instagram/TikTok/Facebook/LINE)→「ブラウザで開く」案内
+//         iPhone の Safari → 共有ボタンの手順 / それ以外 → beforeinstallprompt があれば「追加する」ボタン
+//   送る解析イベント: a2hs_shown(kind) / a2hs_click / a2hs_dismiss
+(function () {
+  const box = document.getElementById("a2hs");
+  if (!box) return;
+  const KEY = "a2hs_dismissed_at";
+  const standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+  let dismissedAt = 0;
+  try { dismissedAt = Number(localStorage.getItem(KEY)) || 0; } catch (e) {}
+  if (standalone || Date.now() - dismissedAt < 30 * 864e5) { window.showA2hs = function () {}; return; }
+
+  const ua = navigator.userAgent || "";
+  const inApp = /Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|BytedanceWebview|Line\//i.test(ua);
+  const ios = /iPhone|iPad|iPod/.test(ua);
+  const text = document.getElementById("a2hsText");
+  const btn = document.getElementById("a2hsBtn");
+  let deferred = null;
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; if (!box.hidden) btn.hidden = false; });
+
+  let kind;
+  if (inApp) { kind = "inapp"; text.textContent = "ブラウザで開くとホーム画面に追加できます(右上の「…」→ ブラウザで開く)。次からすぐ開けます"; }
+  else if (ios) { kind = "ios"; text.textContent = "共有ボタン(□↑)→「ホーム画面に追加」で、次からアプリのようにすぐ開けます"; }
+  else { kind = "other"; text.textContent = "ホーム画面に追加すると、次からアプリのようにすぐ開けます"; }
+
+  let shown = false;
+  window.showA2hs = function (why) {
+    if (shown) return;
+    shown = true;
+    box.hidden = false;
+    if (deferred) btn.hidden = false;
+    try { window.icTrack && window.icTrack("a2hs_shown", { kind: kind, why: why || "" }); } catch (e) {}
+  };
+  setTimeout(() => window.showA2hs("timer"), 12000);
+
+  btn.addEventListener("click", async () => {
+    try { window.icTrack && window.icTrack("a2hs_click", { kind: kind }); } catch (e) {}
+    if (!deferred) return;
+    deferred.prompt();
+    try { await deferred.userChoice; } catch (e) {}
+    deferred = null; btn.hidden = true;
+  });
+  document.getElementById("a2hsClose").addEventListener("click", () => {
+    box.hidden = true;
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+    try { window.icTrack && window.icTrack("a2hs_dismiss", { kind: kind }); } catch (e) {}
+  });
+})();
+
+(async function main() {
+  const spots = await loadSpots();
+  state.spots = spots;
+  populateAreaSelect(spots);
+  initMap(spots);
+  if (!spots.length) {
+    renderList();
+  }
+  openFromHash();
+})();
+</script>
+
+</body>
+</html>

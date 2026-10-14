@@ -393,8 +393,28 @@
   /* 対象年齢(2026-10-01) */
   /* 年齢の行は遊び場・宿温泉タブだけに出す(2026-10-12)。お食事タブは年齢タグが2%しか付いておらず、
      押すとほぼ全滅して使い物にならないため。タグが3割程度付いたら解禁する */
-  .agefilters { margin-top: 6px; display: none; }
-  body.cat-play .agefilters, body.cat-onsen .agefilters { display: flex; }
+  .agefilters { display: none; }
+  body.cat-play .agefilters, body.cat-onsen .agefilters { display: contents; }
+  /* ★顧客向けの1行目【2026-10-14】: 子連れOK + 年齢 + 🔍。折り返さず、はみ出したら横スクロール */
+  .filters.mainrow { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .filters.mainrow::-webkit-scrollbar { display: none; }
+  .kids-btn { font-weight: 700; }
+  .icon-btn {
+    margin-left: auto; flex: 0 0 auto;
+    width: 36px; height: 34px; border-radius: 999px;
+    border: 1px solid var(--border); background: #fff; font-size: 16px; cursor: pointer;
+  }
+  .icon-btn.on { background: #2d3436; border-color: #2d3436; }
+  #searchbar { display: none; margin: 8px 0 0; }
+  header.search-open #searchbar, body.admin #searchbar { display: block; }
+  .filters.subrow { display: none; margin-top: 6px; }
+  body.cat-onsen .filters.subrow, body.admin .filters.subrow { display: flex; }
+  .admin-only { display: none; }
+  body.admin h1.admin-only { display: block; }
+  body.admin span.admin-only { display: contents; }
+  .admin-tag { font-size: 11px; font-weight: 400; color: #fff; background: #0f6e5c; border-radius: 6px; padding: 1px 6px; margin-left: 6px; }
+  .area-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 7px 14px; border-radius: 999px; font-size: 13px; white-space: nowrap; cursor: pointer; }
+  .area-btn.active { background: var(--accent); border-color: var(--accent); color: #fff; }
   .b-age.unk { background: #f1f1f1; color: #8a8a8a; }
   .age-label { font-size: 12px; color: var(--muted); margin-right: 2px; }
   .age-btn { border: 1px solid var(--border); background: #fff; color: var(--text); padding: 6px 12px;
@@ -409,7 +429,7 @@
   }
   #map {
     width: 100%;
-    height: 46vh;
+    height: 54vh;   /* 上部を2段に減らしたぶん地図を広く(46vh→54vh・2026-10-14) */
     min-height: 260px;
   }
   #count {
@@ -756,6 +776,92 @@
     text-align: right;
   }
   .osm-credit a { color: var(--muted); }
+  /* ★「ホーム画面に追加」の案内【2026-10-14】 */
+  #a2hs {
+    display: flex; align-items: center; gap: 8px;
+    margin: 8px 10px 0;
+    padding: 9px 10px;
+    background: var(--accent-soft);
+    border: 1px solid #f5b5b5;
+    border-radius: 10px;
+    font-size: 12px; line-height: 1.45;
+  }
+  #a2hs[hidden] { display: none; }
+  .a2hs-icon { font-size: 16px; }
+  .a2hs-text { flex: 1; }
+  .a2hs-btn {
+    border: none; border-radius: 8px;
+    background: var(--accent); color: #fff;
+    font-weight: 700; font-size: 12px;
+    padding: 7px 10px; white-space: nowrap; cursor: pointer;
+  }
+  .a2hs-close {
+    border: none; background: transparent;
+    color: var(--muted); font-size: 14px; padding: 4px 6px; cursor: pointer;
+  }
+
+  /* ===== ★統合ボトムシート【2026-10-14】 =====
+     ページはスクロールさせず、header + 地図(残り全部) + 下に固定のシート。
+     シートの高さは JS(Sheet)が peek/half/full に応じて px で入れる */
+  html, body { height: 100%; }
+  body { height: 100dvh; overflow: hidden; display: flex; flex-direction: column; }
+  header { position: static; flex: 0 0 auto; }
+  #map { flex: 1 1 auto; height: auto; min-height: 200px; }
+  #bsheet {
+    position: fixed; left: 0; right: 0; bottom: 0; z-index: 30;
+    background: #fff;
+    border-radius: 16px 16px 0 0;
+    box-shadow: 0 -4px 24px rgba(0,0,0,.18);
+    display: flex; flex-direction: column;
+    height: 180px;
+    transition: height .22s ease;
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+  .bs-head {
+    flex: 0 0 auto;
+    padding: 8px 14px 6px;
+    touch-action: none;            /* つまみの上では画面スクロールではなくドラッグ */
+    cursor: grab;
+    user-select: none; -webkit-user-select: none;
+    border-bottom: 1px solid var(--border);
+  }
+  .bs-grip { width: 40px; height: 4px; border-radius: 2px; background: #cfcfcf; margin: 0 auto 8px; }
+  .bs-title { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }
+  .bs-title #count { flex: 1; padding: 0; }
+  .bs-hint { font-size: 11px; color: var(--accent); font-weight: 700; white-space: nowrap; }
+  .bs-hint-down, .bs-detail-title { display: none; }
+  #bsheet[data-state="full"] .bs-hint-up { display: none; }
+  #bsheet[data-state="full"] .bs-hint-down { display: inline; }
+  .bs-head .legend { margin-top: 4px; }
+  .bs-body {
+    flex: 1 1 auto; min-height: 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+    padding: 0 10px 8px;
+  }
+  #bsheet[data-state="peek"] .bs-body { overflow: hidden; }
+  #bsheet[data-state="peek"] .bs-body::after {   /* 先頭カードの下を白くぼかして「続きがある」と分かるように */
+    content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 36px;
+    background: linear-gradient(rgba(255,255,255,0), #fff); pointer-events: none;
+  }
+  #bsheet { overflow: hidden; }
+  #bsheet[data-state="peek"] { cursor: grab; }
+  /* 詳細モード: 一覧・案内・凡例を隠して #detail だけ */
+  #bsheet[data-mode="detail"] #list, #bsheet[data-mode="detail"] #a2hs, #bsheet[data-mode="detail"] footer,
+  #bsheet[data-mode="detail"] .legend, #bsheet[data-mode="detail"] #count, #bsheet[data-mode="detail"] .bs-hint { display: none; }
+  #bsheet[data-mode="detail"] .bs-detail-title { display: inline; flex: 1; font-weight: 700; color: var(--text); }
+  #detail {
+    position: relative; left: auto; right: auto; bottom: auto; z-index: auto;
+    display: none;
+    box-shadow: none; border-radius: 0;
+    padding: 10px 6px 16px;
+    max-height: none; overflow: visible;
+    transform: none; transition: none;
+  }
+  #detail.open { display: block; transform: none; }
+  #detail .detail-grip { display: none; }
+  #list { padding: 8px 0 12px; }
 </style>
 <!-- バリューコマース LinkSwitch: ページ内の提携先生URL(食べログ等)を自動でアフィリエイトリンクに変換 -->
 <script type="text/javascript" language="javascript">
@@ -765,8 +871,16 @@
 </head>
 <body>
 
+<!-- ★顧客向けに上部をシンプル化【2026-10-14ユーザー確定】
+     訪問者が使うのは「子連れOK」と「年齢」だけ、という判断(GA4で月100人・スマホ中心)。
+     ・タイトル行・検索欄(常時表示)・訪問済み/下調べ/期間限定/市区で絞る を顧客画面から外す
+     ・「子連れOK」は最初からON(state.kidsOnly)。赤青どちらでも設備の裏が取れた店だけ出す
+     ・検索は🔍アイコンを押したときだけ入力欄を出す(使う人が少ない)
+     ・日帰りOK/泊まれる/復興割 は宿・温泉タブのときだけ下の行に出す(従来どおり)
+     ・運用者(ユーザー本人)用に、URL末尾 ?admin=1 で従来の全ボタンとタイトルを出す(localStorage に記憶。?admin=0 で解除)
+       → body.admin で .admin-only を表示。市区で絞る(#areaBtn)もここに残す -->
 <header>
-  <h1>福岡グルメマップ</h1>
+  <h1 class="admin-only">福岡グルメマップ <span class="admin-tag">運用モード</span></h1>
   <div class="cat-toggle">
     <button class="cat-btn active" data-cat="gourmet">🍜 お食事</button>
     <button class="cat-btn" data-cat="onsen">♨ 宿・温泉</button>
@@ -776,46 +890,86 @@
            入口はプロフィール→マップのままにして、そこから1タップで行けるようにする -->
     <a class="cat-btn cat-link" href="./events.html">⏳ イベント</a>
   </div>
-  <div class="searchbar">
-    <input id="q" type="search" placeholder="店名・エリア・ジャンルで検索" autocomplete="off" enterkeyhint="search">
+  <div class="filters mainrow">
+    <button class="filter-btn kids-btn active" id="kidsBtn" type="button" aria-pressed="true">👪 子連れOK</button>
+    <!-- 年齢は遊び場・宿タブのときだけ出る(.agefilters の表示条件は従来どおり body.cat-play / body.cat-onsen) -->
+    <span class="agefilters">
+      <button class="age-btn" data-age="baby">👶 乳幼児</button>
+      <button class="age-btn" data-age="toddler">🧒 幼児</button>
+      <button class="age-btn" data-age="kids">🎒 小人</button>
+    </span>
+    <button class="icon-btn" id="searchToggle" type="button" aria-label="検索" aria-expanded="false">🔍</button>
+  </div>
+  <div class="searchbar" id="searchbar">
+    <input id="q" type="search" placeholder="店名・地名・ジャンルで検索" autocomplete="off" enterkeyhint="search">
     <button id="qClear" type="button" aria-label="検索をクリア">✕</button>
   </div>
-  <div class="filters">
-    <button class="filter-btn active" data-filter="all">すべて</button>
-    <button class="filter-btn" data-filter="visited">訪問済み</button>
-    <button class="filter-btn" data-filter="kids">子連れOK</button>
-    <button class="filter-btn" data-filter="limited">⏳ 期間限定</button>
-    <button class="filter-btn" data-filter="wish">下調べ</button>
+  <div class="filters subrow">
     <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
     <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
     <button class="filter-btn onsen-only" data-filter="fukko">🏨 復興割</button>
-    <button class="filter-btn" id="areaBtn">市区で絞る</button>
-  </div>
-  <div class="filters agefilters">
-    <span class="age-label">年齢</span>
-    <button class="age-btn" data-age="baby">👶 乳幼児</button>
-    <button class="age-btn" data-age="toddler">🧒 幼児</button>
-    <button class="age-btn" data-age="kids">🎒 小人</button>
+    <span class="admin-only admin-filters">
+      <button class="filter-btn active" data-filter="all">すべて</button>
+      <button class="filter-btn" data-filter="visited">訪問済み</button>
+      <button class="filter-btn" data-filter="limited">⏳ 期間限定</button>
+      <button class="filter-btn" data-filter="wish">下調べ</button>
+      <button class="area-btn" id="areaBtn" type="button">市区で絞る</button>
+    </span>
   </div>
 </header>
 
 <div id="map"></div>
-<div class="map-foot">
-  <div class="legend">
-    <span class="lg-dot lg-red"></span>行った店
-    <span class="lg-dot lg-blue"></span>下調べ済み
+
+<!-- ★統合ボトムシート【2026-10-14ユーザー確定「統一感で進めましょう」】
+     それまで「ピンを押すと下から出る詳細(#detail)」と「地図の下に常にあるリスト(#list)」が別々に動いていた。
+     顧客に必要なのはピンを押したときの詳細で、常設リストは運用者向け。ただしリストを別画面にすると
+     動画のCTA「マップを開いたら一番上にこの店」が崩れるので、Googleマップ型の1枚のシートに統合した:
+       peek(初期) … シートの頭 + 先頭の1枚(=NEWの店)だけ見える。約束はそのまま成立
+       half/full … 上にスワイプで絞り込み済みの一覧(運用者もここで見る)
+       detail    … ピン/カードを押すと同じシートの中身が詳細に切り替わる(✕で一覧に戻る)
+     ドラッグは .bs-head(つまみ)から。peek のときだけシート全体をつまめる(中身はスクロールしない)。
+     ページ自体はスクロールしない(body overflow hidden)。地図は header の残り全部 -->
+<div id="bsheet" data-state="peek" data-mode="list">
+  <div class="bs-head">
+    <div class="bs-grip"></div>
+    <div class="bs-title">
+      <span id="count"></span>
+      <span class="bs-hint bs-hint-up">▲ 上にスワイプで一覧</span>
+      <span class="bs-hint bs-hint-down">▼ 下にスワイプで地図</span>
+      <span class="bs-detail-title">お店の詳細</span>
+    </div>
+    <div class="legend">
+      <span class="lg-dot lg-red"></span>行った店
+      <span class="lg-dot lg-blue"></span>下調べ済み
+    </div>
   </div>
-  <div class="osm-credit">地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap</a> contributors</div>
+  <div class="bs-body">
+
+<!-- ★「ホーム画面に追加」の案内【2026-10-14追加】
+     GA4の実測で1人あたり1.3セッション・DAU/MAU 5.9% = 動画から来てその店だけ見て閉じている。
+     再訪の入口を作るため、詳細を1回開いた後(または12秒後)に一度だけ出す。
+     ・ホーム画面から起動中(standalone)なら出さない ・✕で閉じたら30日出さない(localStorage)
+     ・Instagram/TikTok のアプリ内ブラウザでは追加できないので「ブラウザで開く」案内に切り替える
+     ・Android Chrome は beforeinstallprompt が取れたときだけ「追加する」ボタンを出す
+     文言と表示の判定は末尾の a2hs スクリプト -->
+<div id="a2hs" hidden>
+  <span class="a2hs-icon">📌</span>
+  <span class="a2hs-text" id="a2hsText"></span>
+  <button type="button" class="a2hs-btn" id="a2hsBtn" hidden>追加する</button>
+  <button type="button" class="a2hs-close" id="a2hsClose" aria-label="閉じる">✕</button>
 </div>
 
-<div id="count"></div>
 <div id="list"></div>
+<div id="detail"></div>
 
 <footer style="text-align:center; padding:8px 16px 28px; font-size:10.5px; color:var(--muted); line-height:1.8;">
   ※当サイトはアフィリエイト広告を利用しています<br>
+  地図データ: © <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener" style="color:var(--muted);">OpenStreetMap</a> contributors<br>
   <a href="../" style="color:var(--muted);">トップページ</a> ・ <a href="../contact.html" style="color:var(--muted);">情報のご提供・お問い合わせ</a><br>
   <a href="../about.html" style="color:var(--muted);">運営者情報</a> ・ <a href="../privacy.html" style="color:var(--muted);">プライバシーポリシー</a>
 </footer>
+  </div><!-- /.bs-body -->
+</div><!-- /#bsheet -->
 
 <div id="clusterBox">
   <div class="cl-head">
@@ -825,8 +979,6 @@
   </div>
   <div id="clusterList"></div>
 </div>
-
-<div id="detail"></div>
 
 <div class="lightbox" id="lightbox"><img id="lightboxImg" alt=""></div>
 
@@ -851,6 +1003,7 @@ const DATA_URL = "../data/spots.json";
 const state = {
   spots: [],
   filter: "all",
+  kidsOnly: true,    // ★「子連れOK」は最初からON(2026-10-14)。filter とは独立して掛かる(日帰りOK等と併用できる)
   category: "gourmet",
   q: "",
   areas: new Set(),
@@ -981,7 +1134,8 @@ function applyFilters(spots) {
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
     if (state.filter === "visited" && s.wish) return false;
     // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
-    if (state.filter === "kids" && !isKidsOk(s)) return false;
+    // 2026-10-14: 単独のフィルタ値ではなく state.kidsOnly(初期ON)として他の絞り込みと併用する
+    if ((state.kidsOnly || state.filter === "kids") && !isKidsOk(s)) return false;
     if (state.filter === "limited" && !isLimited(s)) return false;
     if (state.filter === "fukko" && !isFukko(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
@@ -1151,8 +1305,9 @@ function ageBadgesHtml(spot) {
 }
 
 function cardHtml(spot) {
-  // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)
-  try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
+  // ⚠ここで解析イベントを送ってはいけない【2026-10-14】。cardHtml は一覧(renderList)でも1枚ずつ呼ばれるので、
+  //   絞り込みのたびに全カード分の spot_open が飛び、28日で9,610件という実態と無関係な数になっていた。
+  //   「読まれた店」の計測は openDetail() 側で送る
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
   const kidsOk = isKidsOk(spot);
@@ -1255,6 +1410,76 @@ function updatePinHighlight() {
   });
 }
 
+// ===== ★統合ボトムシート(peek / half / full × list / detail)【2026-10-14】 =====
+const Sheet = (() => {
+  const el = document.getElementById("bsheet");
+  const head = el.querySelector(".bs-head");
+  const body = el.querySelector(".bs-body");
+  let st = "peek", mode = "list", prevBeforeDetail = "peek";
+  const hdrH = () => (document.querySelector("header") || {}).offsetHeight || 0;
+  function peekH() {
+    // 頭 + (ホーム画面案内が出ていればその分) + 先頭カード(NEWの店)1枚ぶん。長いカードは200pxで切る
+    const a = document.getElementById("a2hs");
+    const extra = (a && !a.hidden) ? a.offsetHeight + 8 : 0;
+    const first = document.querySelector("#list .card");
+    const card = first ? Math.min(first.offsetHeight, 200) : 56;
+    return head.offsetHeight + extra + card + 16;
+  }
+  function hFor(s) {
+    const H = window.innerHeight;
+    if (s === "full") return Math.max(200, H - hdrH() - 6);
+    if (s === "half") return Math.round(H * 0.52);
+    return Math.min(peekH(), Math.round(H * 0.45));
+  }
+  function set(s) {
+    st = s; el.dataset.state = s;
+    el.style.height = hFor(s) + "px";
+  }
+  function refresh() { set(st); }
+  function setMode(m) { mode = m; el.dataset.mode = m; }
+  function openDetailMode() { prevBeforeDetail = st; setMode("detail"); body.scrollTop = 0; set(st === "peek" ? "half" : st); }
+  function closeDetailMode() { setMode("list"); body.scrollTop = 0; set(prevBeforeDetail); }
+
+  // ドラッグ: つまみ(.bs-head)から。peek のときはシートのどこからでも
+  let y0 = null, h0 = 0, dragging = false, moved = false;
+  el.addEventListener("touchstart", e => {
+    if (!(st === "peek" || head.contains(e.target))) return;
+    y0 = e.touches[0].clientY; h0 = el.offsetHeight; dragging = true; moved = false;
+    el.style.transition = "none";
+  }, { passive: true });
+  el.addEventListener("touchmove", e => {
+    if (!dragging) return;
+    const dy = y0 - e.touches[0].clientY;
+    if (Math.abs(dy) > 6) moved = true;
+    if (!moved) return;
+    const h = Math.max(Math.round(hFor("peek") * 0.6), Math.min(hFor("full"), h0 + dy));
+    el.style.height = h + "px";
+    e.preventDefault();
+  }, { passive: false });
+  const endDrag = () => {
+    if (!dragging) return;
+    dragging = false; el.style.transition = "";
+    if (!moved) { refresh(); return; }
+    const h = el.offsetHeight;
+    const states = mode === "detail" ? ["half", "full"] : ["peek", "half", "full"];
+    // 行き先は「ドラッグ方向に一番近い段」。peek より下へ引いたら peek に戻す
+    const best = states.map(s => [s, Math.abs(hFor(s) - h)]).sort((a, b) => a[1] - b[1])[0][0];
+    set(best);
+    try { window.icTrack && window.icTrack("sheet_drag", { to: best, mode: mode }); } catch (e) {}
+    setTimeout(() => { moved = false; }, 50);
+  };
+  el.addEventListener("touchend", endDrag);
+  el.addEventListener("touchcancel", endDrag);
+  // つまみをタップ: peek⇄half(詳細モードでは half⇄full)
+  head.addEventListener("click", () => {
+    if (moved) return;
+    if (mode === "detail") set(st === "full" ? "half" : "full");
+    else set(st === "peek" ? "half" : "peek");
+  });
+  window.addEventListener("resize", refresh);
+  return { set, refresh, setMode, openDetailMode, closeDetailMode, get state() { return st; }, get mode() { return mode; } };
+})();
+
 function openDetail(spot) {
   // 施設リストが開いたままだと、同じ下寄せのシート同士が重なって詳細カードが隠れてしまう
   const cbox = document.getElementById("clusterBox");
@@ -1301,6 +1526,11 @@ function openDetail(spot) {
     ${relatedHtml}
   `;
   detail.classList.add("open");
+  Sheet.openDetailMode();   // 同じシートの中身を詳細に切り替える(2026-10-14)
+  // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)。
+  // 詳細を開いたときだけ送る = 「読まれた店」の数になる(一覧描画では送らない・2026-10-14)
+  try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
+  try { window.showA2hs && window.showA2hs("detail"); } catch (e) {}
   document.getElementById("detailClose").addEventListener("click", closeDetail);
 document.getElementById("clusterClose").addEventListener("click", () => {
   document.getElementById("clusterBox").classList.remove("open");
@@ -1349,7 +1579,8 @@ function jumpToSpot(spot) {
     state.ages = new Set();
     document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
     updateAreaBtn();
-    document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+    document.querySelectorAll(".filter-btn[data-filter]").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+    if (!isKidsOk(spot)) setKidsOnly(false);   // 設備未確認の店へ飛ぶときだけ子連れOKを外す
   }
   renderAll();
   focusSpot(spot);
@@ -1361,6 +1592,7 @@ function closeDetail() {
   state.selectedId = null;
   renderList();
   updatePinHighlight();
+  Sheet.closeDetailMode();   // 一覧に戻す(開く前の段に戻る)
 }
 
 function focusSpot(spot) {
@@ -1369,7 +1601,8 @@ function focusSpot(spot) {
   updatePinHighlight();
   openDetail(spot);
   if (spot.lat !== null && spot.lng !== null && spot.lat !== undefined && spot.lng !== undefined && window._map) {
-    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true });
+    // シートが下半分を覆うので、ピンが見える上半分の真ん中に来るよう上へずらす(offset は一時的で padding と違い残らない)
+    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true, offset: [0, -Math.round(window.innerHeight * 0.2)] });
   }
 }
 
@@ -1420,6 +1653,7 @@ function renderList() {
     });
   });
   bindJumpLinks(list);
+  Sheet.refresh();   // 先頭カードの高さで peek の高さが決まる
 }
 
 // 同じ場所に集まったピンは1つにまとめ、中に件数を出す。
@@ -1736,6 +1970,7 @@ function renderAll() {
   if (state.selectedId !== null && !applyFilters(state.spots).some(s => s.id === state.selectedId)) {
     document.getElementById("detail").classList.remove("open");
     state.selectedId = null;
+    Sheet.closeDetailMode();
   }
   renderMarkers();
   renderList();
@@ -1848,9 +2083,9 @@ document.querySelectorAll(".cat-btn").forEach(btn => {
     state.category = btn.dataset.cat;
     syncCatClass();
     // 温泉タブ専用フィルタを選んだまま他タブへ移ったら「すべて」に戻す
-    if (state.category !== "onsen" && (state.filter === "dayuse" || state.filter === "stay")) {
+    if (state.category !== "onsen" && (state.filter === "dayuse" || state.filter === "stay" || state.filter === "fukko")) {
       state.filter = "all";
-      document.querySelectorAll(".filter-btn").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
+      document.querySelectorAll(".filter-btn[data-filter]").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
     }
     populateAreaSelect(state.spots);
     renderAll();
@@ -1867,15 +2102,54 @@ document.querySelectorAll(".age-btn").forEach(btn => {
   });
 });
 
-document.querySelectorAll(".filter-btn").forEach(btn => {
+// 絞り込みピル(data-filter を持つものだけ。子連れOKと市区は別扱い)
+// 2026-10-14: 顧客画面には「すべて」が無いので、ONのピルをもう一度押すと「すべて」に戻る
+document.querySelectorAll(".filter-btn[data-filter]").forEach(btn => {
   btn.addEventListener("click", () => {
-    document.querySelectorAll(".filter-btn").forEach(b => b.classList.remove("active"));
-    btn.classList.add("active");
-    state.filter = btn.dataset.filter;
+    const next = (state.filter === btn.dataset.filter && btn.dataset.filter !== "all") ? "all" : btn.dataset.filter;
+    state.filter = next;
+    document.querySelectorAll(".filter-btn[data-filter]").forEach(b => b.classList.toggle("active", b.dataset.filter === next));
     populateAreaSelect(state.spots);
     renderAll();
   });
 });
+
+// ★子連れOK(初期ON)。押すたびに ON/OFF
+function setKidsOnly(on) {
+  state.kidsOnly = !!on;
+  const b = document.getElementById("kidsBtn");
+  if (b) { b.classList.toggle("active", state.kidsOnly); b.setAttribute("aria-pressed", String(state.kidsOnly)); }
+}
+document.getElementById("kidsBtn").addEventListener("click", () => {
+  setKidsOnly(!state.kidsOnly);
+  try { window.icTrack && window.icTrack("kids_toggle", { on: state.kidsOnly ? 1 : 0 }); } catch (e) {}
+  populateAreaSelect(state.spots);
+  renderAll();
+});
+
+// ★🔍で検索欄を出し入れ。文字が入っているあいだは閉じない(閉じるには✕で消す)
+document.getElementById("searchToggle").addEventListener("click", () => {
+  const h = document.querySelector("header");
+  const open = !h.classList.contains("search-open");
+  if (!open && state.q.trim()) { document.getElementById("q").focus(); return; }
+  h.classList.toggle("search-open", open);
+  const t = document.getElementById("searchToggle");
+  t.classList.toggle("on", open); t.setAttribute("aria-expanded", String(open));
+  if (open) setTimeout(() => document.getElementById("q").focus(), 50);
+});
+
+// ★運用モード(?admin=1 で入り、?admin=0 で抜ける。localStorage に記憶)
+(function () {
+  const p = new URLSearchParams(location.search).get("admin");
+  try {
+    if (p === "1") localStorage.setItem("map_admin", "1");
+    if (p === "0") localStorage.removeItem("map_admin");
+    if (localStorage.getItem("map_admin") === "1") {
+      document.body.classList.add("admin");
+      setKidsOnly(false);   // 運用時は全件から始める(下調べの店も見たい)
+    }
+  } catch (e) {}
+})();
 
 
 
@@ -1902,16 +2176,70 @@ function openFromHash() {
   }
   state.q = "";
   state.filter = "all";
-  document.querySelectorAll(".filter-btn").forEach(b =>
+  document.querySelectorAll(".filter-btn[data-filter]").forEach(b =>
     b.classList.toggle("active", b.dataset.filter === "all"));
   state.areas.clear();
   state.areasDraft.clear();
+  if (!isKidsOk(sp)) setKidsOnly(false);   // 設備未確認の店への直リンクだけ子連れOKを外す
   populateAreaSelect(state.spots);
   renderAll();
   focusSpot(sp);
 }
 
 window.addEventListener("hashchange", openFromHash);
+
+// ★「ホーム画面に追加」の案内(a2hs = add to home screen)【2026-10-14】
+//   出す条件: ホーム画面起動でない / 30日以内に✕していない / 詳細を1回開いた or 12秒経過
+//   文言: アプリ内ブラウザ(Instagram/TikTok/Facebook/LINE)→「ブラウザで開く」案内
+//         iPhone の Safari → 共有ボタンの手順 / それ以外 → beforeinstallprompt があれば「追加する」ボタン
+//   送る解析イベント: a2hs_shown(kind) / a2hs_click / a2hs_dismiss
+(function () {
+  const box = document.getElementById("a2hs");
+  if (!box) return;
+  const KEY = "a2hs_dismissed_at";
+  const standalone = (window.matchMedia && window.matchMedia("(display-mode: standalone)").matches) || navigator.standalone === true;
+  let dismissedAt = 0;
+  try { dismissedAt = Number(localStorage.getItem(KEY)) || 0; } catch (e) {}
+  if (standalone || Date.now() - dismissedAt < 30 * 864e5) { window.showA2hs = function () {}; return; }
+
+  const ua = navigator.userAgent || "";
+  const inApp = /Instagram|FBAN|FBAV|FB_IAB|TikTok|musical_ly|BytedanceWebview|Line\//i.test(ua);
+  const ios = /iPhone|iPad|iPod/.test(ua);
+  const text = document.getElementById("a2hsText");
+  const btn = document.getElementById("a2hsBtn");
+  let deferred = null;
+  window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferred = e; if (!box.hidden) btn.hidden = false; });
+
+  let kind;
+  if (inApp) { kind = "inapp"; text.textContent = "ブラウザで開くとホーム画面に追加できます(右上の「…」→ ブラウザで開く)。次からすぐ開けます"; }
+  else if (ios) { kind = "ios"; text.textContent = "共有ボタン(□↑)→「ホーム画面に追加」で、次からアプリのようにすぐ開けます"; }
+  else { kind = "other"; text.textContent = "ホーム画面に追加すると、次からアプリのようにすぐ開けます"; }
+
+  let shown = false;
+  window.showA2hs = function (why) {
+    if (shown) return;
+    shown = true;
+    box.hidden = false;
+    if (deferred) btn.hidden = false;
+    try { Sheet.refresh(); } catch (e) {}
+    try { window.icTrack && window.icTrack("a2hs_shown", { kind: kind, why: why || "" }); } catch (e) {}
+  };
+  setTimeout(() => window.showA2hs("timer"), 12000);
+
+  btn.addEventListener("click", async () => {
+    try { window.icTrack && window.icTrack("a2hs_click", { kind: kind }); } catch (e) {}
+    if (!deferred) return;
+    deferred.prompt();
+    try { await deferred.userChoice; } catch (e) {}
+    deferred = null; btn.hidden = true;
+  });
+  document.getElementById("a2hsClose").addEventListener("click", () => {
+    box.hidden = true;
+    try { Sheet.refresh(); } catch (e) {}
+    try { localStorage.setItem(KEY, String(Date.now())); } catch (e) {}
+    try { window.icTrack && window.icTrack("a2hs_dismiss", { kind: kind }); } catch (e) {}
+  });
+})();
 
 (async function main() {
   const spots = await loadSpots();
@@ -1922,6 +2250,12 @@ window.addEventListener("hashchange", openFromHash);
     renderList();
   }
   openFromHash();
+  Sheet.refresh();
+  // header の高さが変わったら(🔍の開閉・タブで年齢行が出入り)地図の大きさとシートの段を合わせ直す
+  if (window.ResizeObserver) {
+    new ResizeObserver(() => { try { window._map && window._map.resize(); } catch (e) {} Sheet.refresh(); })
+      .observe(document.querySelector("header"));
+  }
 })();
 </script>
 

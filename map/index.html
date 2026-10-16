@@ -1480,6 +1480,13 @@ const Sheet = (() => {
   return { set, refresh, setMode, openDetailMode, closeDetailMode, get state() { return st; }, get mode() { return mode; } };
 })();
 
+// まとめピンのリスト(#clusterBox)の✕。⚠以前は openDetail() の中で登録していたため、
+// 詳細カードを一度も開いていない状態ではボタンが効かなかった(2026-10-16ユーザー指摘)。起動時に1回だけ登録する
+document.getElementById("clusterClose").addEventListener("click", (ev) => {
+  ev.stopPropagation();
+  document.getElementById("clusterBox").classList.remove("open");
+});
+
 function openDetail(spot) {
   // 施設リストが開いたままだと、同じ下寄せのシート同士が重なって詳細カードが隠れてしまう
   const cbox = document.getElementById("clusterBox");
@@ -1532,9 +1539,6 @@ function openDetail(spot) {
   try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
   try { window.showA2hs && window.showA2hs("detail"); } catch (e) {}
   document.getElementById("detailClose").addEventListener("click", closeDetail);
-document.getElementById("clusterClose").addEventListener("click", () => {
-  document.getElementById("clusterBox").classList.remove("open");
-});
   bindJumpLinks(detail);
   detail.querySelectorAll("[data-photo]").forEach(el => {
     el.addEventListener("click", (e) => {

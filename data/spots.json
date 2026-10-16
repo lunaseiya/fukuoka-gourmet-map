@@ -58325,7 +58325,7 @@
    "url": "https://www.boatrace-fukuoka.com/"
   },
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/lijYoTua_Es",
    "tiktok": null,
    "instagram": null
   },
@@ -58340,7 +58340,8 @@
   ],
   "wish": false,
   "category": "play",
-  "added": "2026-10-14"
+  "added": "2026-10-14",
+  "posted": "2026-10-15"
  },
  {
   "id": "shigemi-land",
@@ -62595,5 +62596,44 @@
   "untilLabel": "10月18日",
   "official": "https://iko-yo.net/events/599972",
   "added": "2026-10-16"
+ },
+ {
+  "id": "shanshan-kasuya",
+  "name": "中華料理 香香(シャンシャン)",
+  "area": "粕屋町仲原",
+  "city": "糟屋郡粕屋町",
+  "pref": "福岡県",
+  "genre": "中華料理(麻婆丼・刀削麺)",
+  "lat": 33.609847,
+  "lng": 130.453097,
+  "visited": "2026-10-15",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐名物はグツグツ熱々の黒い鉄皿で出てくる麻婆丼850円(スープ・漬物付き、辛さ1〜5を選べる・普通は2。2026-10-15実食)。四ツ星ホテル出身の料理人の本場マーボー。ソファのテーブル席のほか座敷(円卓)もあり、駐車場あり。⚠支払いは現金のみ、待ちは順番に並ぶ方式(代表者待ち不可)。ランチ11:30〜14:30 / 夜17:00〜22:00、火曜は夜休み(要確認)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "shanshan-kasuya.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "web": null,
+  "photos": [
+   "shanshan-kasuya_01_外観.jpg",
+   "shanshan-kasuya_02_麻婆丼850円.jpg",
+   "shanshan-kasuya_03_ソファ席.jpg",
+   "shanshan-kasuya_04_ランチメニュー.jpg",
+   "shanshan-kasuya_05_入口の掲示_現金のみ.jpg"
+  ],
+  "added": "2026-10-16",
+  "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40036080/"
  }
 ]

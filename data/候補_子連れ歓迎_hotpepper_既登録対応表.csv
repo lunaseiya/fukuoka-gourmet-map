@@ -1,0 +1,148 @@
+﻿area,hp_name,spot_id,spot_name,reason,hp_url
+Y706,いけすと炭と薪焼と 博多 とりとりと,toritorito-tenjin,いけすと炭と薪焼と 博多 とりとりと,店名完全一致,https://www.hotpepper.jp/strJ004403794/
+Y706,もつ鍋専門店 元祖もつ鍋楽天地 福岡天神総本店,gansomotsunaberakutenchitenj,元祖もつ鍋 楽天地 天神本店(ACROS福岡),店名核一致,https://www.hotpepper.jp/strJ001178005/
+Y706,牛角 天神西通り店,sp112473cf95,牛角 天神西通り店,店名完全一致,https://www.hotpepper.jp/strJ001161509/
+Y706,焼肉 極味や 大名店,sp6d2d7851e6,焼肉 極味や 大名店,店名完全一致,https://www.hotpepper.jp/strJ000805140/
+Y706,YEBISUBAR ワンビル店,onefukuoka_10,YEBISU BAR ワン・フクオカ店,住所一致+店名類似,https://www.hotpepper.jp/strJ004065001/
+Y706,元祖もつ鍋楽天地 天神本店,gansomotsunaberakutenchitenj,元祖もつ鍋 楽天地 天神本店(ACROS福岡),店名核一致,https://www.hotpepper.jp/strJ001267191/
+Y706,居酒屋 小金ちゃん,yataikoganechan-29,屋台 小金ちゃん,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ003450902/
+Y706,The Spoon,onefukuoka_27,DE･NI&TheSpoon,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ003916464/
+Y706,LE BISTRO AKi,onefukuoka_11,LE BISTRO AKi,店名完全一致,https://www.hotpepper.jp/strJ004678470/
+Y706,BAKE CHEESE TART 天神地下街店,tenchika_11,BAKE CHEESE TART 天神地下街店,店名完全一致,https://www.hotpepper.jp/strJ003388108/
+Y706,極味や 福岡パルコ店,sp958a08e130,極味や 福岡パルコ店,店名完全一致,https://www.hotpepper.jp/strJ000805657/
+Y706,梅山鉄平食堂 本店,umeyamateppeishokudouhon-68,梅山鉄平食堂 本店,店名完全一致,https://www.hotpepper.jp/strJ000832461/
+Y712,博多天ぷら スタンド◎まるに 今泉店,hakatatenpurasutandomaruniim,博多天ぷら スタンド◎まるに 今泉店,店名完全一致,https://www.hotpepper.jp/strJ004699106/
+Y712,しのわ 今泉,shinowaimaizumi,しのわ 今泉,店名完全一致,https://www.hotpepper.jp/strJ003941553/
+Y712,博多くまちゃんらぁめん,hakatakumachanraamendaimyouh,博多くまちゃんらぁめん 大名本店,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001267695/
+Y712,鉄板焼酒場 いくら 天神今泉店,teppanyakisakabaikuraten-49,鉄板焼酒場 いくら 天神今泉店,店名完全一致,https://www.hotpepper.jp/strJ001264901/
+Y713,きんぎょ,harukichikingyo,春吉きんぎょ,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ000653176/
+Y700,うまや キャナルシティ店,canalcity_09,うまや キャナルシティ博多店,住所一致+店名類似,https://www.hotpepper.jp/strJ000553636/
+Y700,博多焼肉 NURUBON,sp75a50d37a9,博多焼肉 NURUBON,店名完全一致,https://www.hotpepper.jp/strJ003505012/
+Y700,焼肉・韓国料理 KollaBo（コラボ）キャナルシティ博多店,canalcity_10,KollaBo(コラボ)キャナルシティ博多店,店名核一致,https://www.hotpepper.jp/strJ003851746/
+Y700,博多もつ鍋 おおやま 福岡空港,ap9c6b1374ec,博多もつ鍋おおやま 福岡空港店,店名核一致,https://www.hotpepper.jp/strJ001194253/
+Y700,博多 もつ鍋 前田屋 総本店,hakatamotsunabemaedayaso-55,博多もつ鍋 前田屋 総本店,店名完全一致,https://www.hotpepper.jp/strJ001208240/
+Y700,らーめん二男坊 博多デイトス店,raamenjinanbouhakatadeitosum,らーめん二男坊 博多デイトス店,店名完全一致,https://www.hotpepper.jp/strJ001221962/
+Y700,極味や博多店,sp49b1c80c94,極味や 博多店,店名完全一致,https://www.hotpepper.jp/strJ003473183/
+Y700,長浜ナンバーワン 祇園店,nagahamananbaawangionmis-41,長浜ナンバーワン 祇園店,店名完全一致,https://www.hotpepper.jp/strJ000709361/
+Y700,麺屋 たいそん,canalcity_05,麺屋たいそん ラーメンスタジアム店,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001267736/
+Y700,一蘭 キャナルシティ博多店,ichirankyanarushiteihakatami,一蘭 キャナルシティ博多店,店名完全一致,https://www.hotpepper.jp/strJ000553631/
+Y700,電光石火 キャナルシティ博多店,canalcity_15,広島お好み焼き 電光石火 キャナルシティ博多店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ001265890/
+Y700,サーティワンアイスクリーム,canalcity_27,サーティワンアイスクリーム キャナルシティ博多店,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001008751/
+Y700,スターバックスコーヒー キャナルシティ博多店,canalcity_28,スターバックスコーヒー キャナルシティ博多店,店名完全一致,https://www.hotpepper.jp/strJ000553630/
+Y700,初代 秀ちゃん,canalcity_02,博多豚骨 初代秀ちゃん ラーメンスタジアム店,住所一致+店名類似,https://www.hotpepper.jp/strJ001008662/
+Y700,銀だこ,canalcity_19,築地銀だこ キャナルシティ博多店,住所一致+店名類似,https://www.hotpepper.jp/strJ000755606/
+Y700,いっぱちラーメン 駅南店,18ippachiraamenhakataekimina,18いっぱちラーメン 博多駅南店,店名核一致,https://www.hotpepper.jp/strJ000954788/
+Y705,ひつまぶし和食備長中洲川端店,hitsumabushiwashokubinch-20,ひつまぶし和食備長 中洲川端店,店名完全一致,https://www.hotpepper.jp/strJ001001006/
+Y705,はかたや 川端店,hakataraamenhakatayakawabata,博多ラーメン はかたや 川端店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000554062/
+Y710,イタリアン酒場西JINバル,sp7867e8e6d4,イタリアン酒場 西JINバル,店名完全一致,https://www.hotpepper.jp/strJ004633971/
+Y710,焼肉 極味や 藤崎店,spb5c266693c,焼肉 極味や 藤崎店,店名完全一致,https://www.hotpepper.jp/strJ000709639/
+Y710,焼肉 極味や 西新駅前店,sp1217b22ee7,焼肉 極味や 西新駅前店,店名完全一致,https://www.hotpepper.jp/strJ001260733/
+Y710,辛麺屋 楊喜,spd78fac6ff5,辛麺屋 楊喜,店名完全一致,https://www.hotpepper.jp/strJ004089441/
+Y710,下町ビストロ リカリカ 西新,rikarikanishijin,下町ビストロ リカリカ,住所一致+店名類似,https://www.hotpepper.jp/strJ003850186/
+Y710,焼肉ヌルボンガーデン福重店,sp0408cc0f01,焼肉ヌルボンガーデン 福重店,店名完全一致,https://www.hotpepper.jp/strJ001124320/
+Y710,博多割烹流れ鮨 海進丸 (2階 博多割烹),sp2826af6e68,博多割烹流れ鮨 海進丸,店名核一致,https://www.hotpepper.jp/strJ003763457/
+Y710,鮨 酒 肴 杉玉 西新店,sp62a04717ea,鮨・酒・肴 杉玉 西新,店名核一致,https://www.hotpepper.jp/strJ001262647/
+Y710,西新初喜 本店,sp7c68565a33,西新初喜 本店(肉の勉強屋),店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000650890/
+Y710,台湾餃子 楊喜,spb9aa2aca22,台湾餃子 楊喜,店名完全一致,https://www.hotpepper.jp/strJ001280305/
+Y710,糸島海鮮食堂 そらり,sp3edbe70a8d,糸島海鮮食堂 そらり,店名完全一致,https://www.hotpepper.jp/strJ003498260/
+Y710,焼きとりとぶた串 一期（いちご） 西新,sp44c7560ac4,焼きとりとぶた串 一期,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001154827/
+Y710,うえすたん西新店,westernnishijin,うえすたん 西新店,店名完全一致,https://www.hotpepper.jp/strJ000027483/
+Y710,焼肉きんぐ 福岡原店,spd16e3a20d9,焼肉きんぐ 福岡原店,店名完全一致,https://www.hotpepper.jp/strJ000980313/
+Y710,西新ホウテン食堂,sp4ad4b61052,西新ホウテン食堂,店名完全一致,https://www.hotpepper.jp/strJ003806034/
+Y710,博多天ぷら のぼせもん,spa9b599e897,博多天ぷら のぼせもん,店名完全一致,https://www.hotpepper.jp/strJ004444041/
+Y710,牛角食べ放題専門店 福岡姪浜店,sp83df274c24,牛角食べ放題専門店福岡姪浜店,店名完全一致,https://www.hotpepper.jp/strJ004591681/
+Y710,ブラッセリー＆ラウンジ シアラ,brasserie-lounge-seala,ブラッセリー&ラウンジ シアラ,店名完全一致,https://www.hotpepper.jp/strJ001049159/
+Y710,pia Sapido 木の葉モール橋本店,konoha-97804900,pia Sapido(ピアサピド) 木の葉モール橋本店,店名核一致,https://www.hotpepper.jp/strJ001049019/
+Y710,たてがみキッチン,spdb4c0c5497,たてがみキッチン,店名完全一致,https://www.hotpepper.jp/strJ001293356/
+Y710,鉄なべ 荒江本店,sp201bd2474f,鉄なべ 荒江本店,店名完全一致,https://www.hotpepper.jp/strJ000112756/
+Y710,はかたや 西新店,spc9e2953a70,博多ラーメン はかたや 西新店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000559515/
+Y710,冨ちゃんラーメン,tomichanraamen,冨ちゃんラーメン,店名完全一致,https://www.hotpepper.jp/strJ000559979/
+Y710,ふくちゃんラーメン 田隈本店,fukuchanraamentagumahont-59,ふくちゃんラーメン 田隈本店,店名完全一致,https://www.hotpepper.jp/strJ000112750/
+Y710,ひなっ子 西新店,hinakkonishijin,ひなっ子 西新店,店名完全一致,https://www.hotpepper.jp/strJ000559473/
+Y711,竹乃屋 福岡空港店,ap934ce38c18,竹乃屋 福岡空港店,店名完全一致,https://www.hotpepper.jp/strJ001250773/
+Y711,赤から福岡東店,akakara-fukuokahigashi,赤から 福岡東店,店名完全一致,https://www.hotpepper.jp/strJ000556871/
+Y711,町中華 ぎっちゃん,gicchan-kashii,町中華 ぎっちゃん,店名完全一致,https://www.hotpepper.jp/strJ004591715/
+Y711,鶏料理と釜めし 居酒屋 かまどか 福岡和白店,sp4ceaad55dd,かまどか 福岡和白店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ001136937/
+Y711,フォルクス 名島店,sp14137a1635,フォルクス 名島店,店名完全一致,https://www.hotpepper.jp/strJ000557349/
+Y711,個室居酒屋 くいもの屋わん 香椎駅前店,spd5604f4c18,くいもの屋わん 香椎駅前店,店名核一致,https://www.hotpepper.jp/strJ001134584/
+Y711,牛角 箱崎店,spdf8155a62c,牛角 箱崎店,店名完全一致,https://www.hotpepper.jp/strJ004576822/
+Y711,local resort dining caffe & bar JAYA,jaya-kashii,local resort dining caffe&bar JAYA,店名完全一致,https://www.hotpepper.jp/strJ001264997/
+Y711,やきにく飛牛 BRANCH福岡下原店,sp72a8556a9d,やきにく飛牛 BRANCH福岡下原店,店名完全一致,https://www.hotpepper.jp/strJ001209162/
+Y711,ＭＫ（エムケイ）レストラン 土井店 しゃぶしゃぶ食べ放題,spa9b5b5bd90,MKレストラン 土井店,店名核一致,https://www.hotpepper.jp/strJ003298718/
+Y711,焼肉AZUMA 香椎浜店,sp38d0e23b0c,焼肉AZUMA 香椎浜店,店名完全一致,https://www.hotpepper.jp/strJ001119379/
+Y711,溶岩焼肉居酒屋 Beans（ビーンズ）,sp2cdc461f39,溶岩焼肉居酒屋Beans,店名核一致,https://www.hotpepper.jp/strJ001218640/
+Y711,アジフライたるたる食堂,spf29751bcef,アジフライ たるたる食堂,店名完全一致,https://www.hotpepper.jp/strJ001273951/
+Y711,魚☆きんぐ イオンモール香椎浜店,uoking-kashiihama,魚☆きんぐ(UOKING) イオンモール香椎浜店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ001264607/
+Y711,焼肉きんぐ 福岡千早店,sp20ca48cc55,焼肉きんぐ 福岡千早店,店名完全一致,https://www.hotpepper.jp/strJ000723517/
+Y711,博多もつ鍋 権 和白,speacb13267f,博多もつ鍋 権 和白,店名完全一致,https://www.hotpepper.jp/strJ001218603/
+Y711,花もも,sp8f2eefc547,花もも 唐原,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ000557392/
+Y711,PARK72 ネコCAFE,sp40ca4a4cd2,PARK72 ネコCAFE,店名完全一致,https://www.hotpepper.jp/strJ004004868/
+Y711,筥崎 鳩太郎商店,hakozakihatotaroushouten,筥崎 鳩太郎商店,店名完全一致,https://www.hotpepper.jp/strJ001169686/
+Y711,牛角 仲原店,sp7c0ebbee50,牛角 仲原店,店名完全一致,https://www.hotpepper.jp/strJ001169755/
+Y711,そば茶屋 華元 本膳庵 福岡空港店,ap8b73bd0774,そば茶屋華元 本膳庵 福岡空港店,店名完全一致,https://www.hotpepper.jp/strJ004558999/
+Y711,静香,sp9d6534583c,静香,店名完全一致,https://www.hotpepper.jp/strJ000557211/
+Y711,Happily,sp330f619971,Happily(ハッピリー),店名核一致,https://www.hotpepper.jp/strJ001284114/
+Y711,とうのはる食堂こはく,sp3049dcb34c,とうのはる食堂 こはく,店名完全一致,https://www.hotpepper.jp/strJ004090046/
+Y711,たこ焼き すたん堂,stando-takoyaki,たこ焼き すたん堂,店名完全一致,https://www.hotpepper.jp/strJ001269150/
+Y711,ハネノネ ピッツア＆バール,sp247bda1680,ハネノネ ピッツア&バール,店名完全一致,https://www.hotpepper.jp/strJ001250584/
+Y711,カフェBARあんばー,sp75b137eae4,カフェBAR あんばー,店名完全一致,https://www.hotpepper.jp/strJ001267635/
+Y711,中華料理順興閣,spb5547c5957,順興閣,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ001199308/
+Y711,ラーメン工房 にへい,raamenkoubounihei-07,ラーメン工房にへい,店名完全一致,https://www.hotpepper.jp/strJ001273153/
+Y711,麺どころ千屋,sp84245d44b1,麺どころ 千屋,店名完全一致,https://www.hotpepper.jp/strJ001124021/
+Y711,花山,sp5dd459ce3f,花山,店名完全一致,https://www.hotpepper.jp/strJ000556999/
+Y711,美松コーヒー 本店,spc296e5da5a,美松コーヒー 本店,店名完全一致,https://www.hotpepper.jp/strJ001267917/
+Y711,はかたきねやうどん 原田店,sp9a06e45a61,きねや,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ000556907/
+Y711,居酒屋おぎはら,spac6a586946,居酒屋おぎはら,店名完全一致,https://www.hotpepper.jp/strJ001275518/
+Y711,御膳屋 照葉スパリゾート店,spc64aa5d4c0,御膳屋 照葉店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ001268094/
+Y711,濃麻呂 名島橋店,spf1283d2313,博多濃麻呂 名島橋店(こくまろ),店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000832132/
+Y711,横浜家系ラーメン 内田家 博多本店,raamenuchidaie-57,ラーメン内田家,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001269925/
+Y711,まるしげ,sp7514847efa,まるしげ(土井),店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000557527/
+Y711,二葉鮨 三苫店,sp2196e8480a,二葉鮨 三苫店,店名完全一致,https://www.hotpepper.jp/strJ000603569/
+Y711,バッカナーレ,sp8364200df3,窯焼き×ワイン食堂 バッカナーレ,店名核一致(支店名未確認),https://www.hotpepper.jp/strJ001269494/
+Y711,焼肉 広州苑,sp3f1efb7ce9,焼肉広州苑,店名完全一致,https://www.hotpepper.jp/strJ000556820/
+Y711,串カツ田中 香椎店,kushikatsutanaka-kashii,串カツ田中 香椎店,店名完全一致,https://www.hotpepper.jp/strJ001246837/
+Y711,博多発祥とり皮・もつ鍋 博多良品,spf91d90c082,博多発祥とり皮・もつ鍋 博多良品,店名完全一致,https://www.hotpepper.jp/strJ000557370/
+Y711,魁龍 博多本店,dotonkotsuraamenkairyuuhakat,魁龍 博多本店,店名完全一致,https://www.hotpepper.jp/strJ000554996/
+Y711,ウサギ食堂 和白店,sp8e2881196e,ウサギ食堂 和白店,店名完全一致,https://www.hotpepper.jp/strJ003784013/
+Y711,食べ放題 お好み焼き専門店 どんどん亭 ブランチ福岡下原店,dondonteibranchshimobaru,どんどん亭 ブランチ福岡下原店,店名核一致,https://www.hotpepper.jp/strJ004089604/
+Y711,ごはんや,sp54928039e6,ごはんや 香椎,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ000557475/
+Y714,やきにく飛牛 七隈本店,sp63af546948,やきにく飛牛 七隈本店,店名完全一致,https://www.hotpepper.jp/strJ000766219/
+Y714,牛角 福大通り店,sp8ca56cbcc3,牛角 福大通り店,店名完全一致,https://www.hotpepper.jp/strJ000560076/
+Y714,五島丸,sp6f9a0de2b8,五島丸,店名完全一致,https://www.hotpepper.jp/strJ001025247/
+Y714,かっぱ寿司 福岡長丘店,spd20e1b5d92,かっぱ寿司 福岡長丘店,店名完全一致,https://www.hotpepper.jp/strJ000859118/
+Y714,サケハジメ,sp6c7546fc22,サケハジメ,店名完全一致,https://www.hotpepper.jp/strJ001264454/
+Y714,ケロムレスト,spce8af31ddc,ケロムレスト,店名完全一致,https://www.hotpepper.jp/strJ000556100/
+Y714,中華そば 郷家,chuukasobagouke,中華そば 郷家,店名完全一致,https://www.hotpepper.jp/strJ000112420/
+Y714,酒とお食事の店 わたなべ,sp4de9174fa2,酒とお食事の店わたなべ,店名完全一致,https://www.hotpepper.jp/strJ000560012/
+Y714,台湾飯店,sp291cb3f9c2,台湾飯店,店名完全一致,https://www.hotpepper.jp/strJ000555146/
+Y714,屋台の味 鬼多郎,spc457e10277,鬼多郎,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ001292354/
+Y714,串カツ田中 大橋店,spa5935164d2,串カツ田中 大橋店,店名完全一致,https://www.hotpepper.jp/strJ001203884/
+Y714,はかたや 百年橋店,sp01b043ed6e,博多ラーメン はかたや 百年橋店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000555260/
+Y714,一九ラーメン 老司店,ikkuraamenroujimise,一九ラーメン 老司店,店名完全一致,https://www.hotpepper.jp/strJ000555956/
+Y714,とらや 東油山本店,toraya-higashiaburayama,とらや 東油山本店,店名完全一致,https://www.hotpepper.jp/strJ000560060/
+Y730,牛角 小倉南葛原店,sp6a9393aec2,牛角 小倉南葛原店,店名完全一致,https://www.hotpepper.jp/strJ000605690/
+Y730,魁龍 小倉本店,kairyuuogurahonten,魁龍 小倉本店,店名完全一致,https://www.hotpepper.jp/strJ000112900/
+Y730,中国料理 耕治 井筒屋店,chuugokuryourikoujiizutsuyao,中国料理 耕治 井筒屋小倉店,店名核一致,https://www.hotpepper.jp/strJ000799424/
+Y731,らぁめん鉄兵本店,tonkotsuraamenteppeihonten,とんこつらぁめん 鉄兵 本店,店名核一致,https://www.hotpepper.jp/strJ000604145/
+Y732,チキン南蛮 こんぺい亭 イオンモール筑紫野店,chikushino-rs-konpeitei,こんぺい亭 イオンモール筑紫野店,店名核一致,https://www.hotpepper.jp/strJ001274629/
+Y732,すたみな太郎 飯塚店,spa1cdbb7414,すたみな太郎 飯塚店,店名完全一致,https://www.hotpepper.jp/strJ000893905/
+Y901,神戸クック・ワールドビュッフェ アーバンモール新宮中央店,worldbuffetshingu,神戸クック ワールドビュッフェ アーバンモール新宮中央店,店名完全一致,https://www.hotpepper.jp/strJ004559350/
+Y901,焼肉ウエスト新宮店,uesutoshinguumise,ウエスト 新宮店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ000561344/
+Y901,牛角 新宮店,gyukakushingu,牛角 新宮店,店名完全一致,https://www.hotpepper.jp/strJ001230857/
+Y901,牛角 行橋店,spb9efc2873e,牛角 行橋店,店名完全一致,https://www.hotpepper.jp/strJ000561568/
+Y901,牛角 太宰府西店,sp85ef799273,牛角 太宰府西店,店名完全一致,https://www.hotpepper.jp/strJ000560290/
+Y901,串カツ田中 福岡志免店,kushikatsutanaka-shime,串カツ田中 福岡志免店,店名完全一致,https://www.hotpepper.jp/strJ004470256/
+Y901,焼肉ヌルボンガーデン新宮店,sp8763a01c0f,焼肉ヌルボンガーデン 新宮店,店名完全一致,https://www.hotpepper.jp/strJ001215587/
+Y901,いの吉,meshiya-inokichi-dazaifu,飯屋 いの吉,住所一致+店名類似,https://www.hotpepper.jp/strJ001222262/
+Y901,九州名物とめ手羽 仲原店,tometeba-nakabaru,九州名物とめ手羽 仲原店,店名完全一致,https://www.hotpepper.jp/strJ001225897/
+Y901,焼肉ヌルボン那珂川,sp827786faf4,焼肉ヌルボン 那珂川,店名完全一致,https://www.hotpepper.jp/strJ000561204/
+Y901,ＭＫ（エムケイ）レストラン 新宮店 しゃぶしゃぶ食べ放題,mkrestaurantshingu,MKレストラン ライフガーデン新宮中央店,店名核一致,https://www.hotpepper.jp/strJ003298725/
+Y901,韓国家庭料理・焼肉 ちんぐ,chingu-shime,韓国家庭料理 焼肉 ちんぐ,店名完全一致,https://www.hotpepper.jp/strJ003736367/
+Y901,かくれ酒場 ココハレ,cocohare-shime,かくれ酒場ココハレ,店名完全一致,https://www.hotpepper.jp/strJ001280011/
+Y901,串家物語 イオンモール福津店,fukutsu-rs-kushiya,神楽食堂 串家物語 イオンモール福津店,店名核一致(短)+市区一致,https://www.hotpepper.jp/strJ001147104/
+Y901,焼肉 伽耶 春日フォレストシティ店,yakiniku-kaya-kasuga,焼肉 伽耶,店名核一致(短)+市区一致(支店名未確認),https://www.hotpepper.jp/strJ001199689/
+Y901,かっぱ寿司 大野城店,spe84194d1b4,かっぱ寿司 大野城店,店名完全一致,https://www.hotpepper.jp/strJ000998016/
+Y901,かっぱ寿司 ゆめモール柳川店,sp220a9912b2,かっぱ寿司 ゆめモール柳川店,店名完全一致,https://www.hotpepper.jp/strJ001099865/
+Y901,CAFE COCCOLO,cafe-coccolo-dazaifu,CAFE COCCOLO,店名完全一致,https://www.hotpepper.jp/strJ001277477/
+Y901,いっぱちラーメン 大土居店,18ippachiraamendaitsuchiimis,18いっぱちラーメン 大土居店,店名核一致,https://www.hotpepper.jp/strJ000954789/
+Y901,清香園 志免店,seikaen-shime,清香園 志免店,店名完全一致,https://www.hotpepper.jp/strJ001222296/

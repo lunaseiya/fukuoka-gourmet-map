@@ -28,7 +28,7 @@ WINDOW_DAYS = 13        # 収集する窓(今日 + 13日 = 14日間。events.jso
 
 NEED = ['mall', 'lala', 'canal', 'icp', 'ie', 'kgk', 'map', 'ikoyo', 'pref',
         'daimaru', 'hankyu', 'yokanavi', 'kurume', 'torius', 'hkc', 'aeonkyushu',
-        'across', 'branch', 'konoha', 'ezo', 'yume', 'manual']
+        'across', 'branch', 'konoha', 'ezo', 'yume', 'boatrace', 'manual']
 
 
 def cand_state():

@@ -9,6 +9,9 @@
   python tools/opening_watch.py            巡回して data/openings.json を更新、近い順に表示
   python tools/opening_watch.py --list     巡回せず表示   --kind 公園 で種別を絞る
   data/openings_watch.json                 名前で追う「注目案件」(★表示)。ここに足せば記事に出た時期を拾う
+  テナント(2026-10-14追加)                  openings.json の各案件に tenants(行のリスト)・tenants_src(出典URL)・tenants_checked(確認日)を
+                                           手で入れると --list の出典URLの下に「テナント:」として出る。自動収集はしない(発表が小出しで誤りが混ざるため)。
+                                           週1の巡回で★案件の新しい発表を見つけたら行を足す。大店立地法だけの案件(届出者=店)は不要
 
 ────────────────────────────────────────
 【1案件ごとに持ちたい情報】(openings.json の各エントリに足していく)

@@ -167,7 +167,13 @@
   "src_url": "https://fukuoka-leapup.jp/biz/202601.71308",
   "found": "2026-10-11",
   "note": "",
-  "area": "福岡市東区箱崎"
+  "area": "福岡市東区箱崎",
+  "tenants": [
+   "BOX FUKUOKA(イノベーション拠点) / 福岡サステナブルフードパーク(食の交流施設)",
+   "ライフスタイルセンター(ホームセンター核の商業)。個別の店名は未発表"
+  ],
+  "tenants_src": "https://fukuoka-leapup.jp/biz/202601.71308",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "九州大学箱崎キャンパス跡地 概成",
@@ -240,7 +246,12 @@
   "src_url": "https://www.pref.fukuoka.lg.jp/contents/daiten2026.html",
   "note": "届出日 2026-04-30 +8か月の推定 / 現地看板(2026-10-11ユーザー目視): アベイル・しまむら・同グループもう1店が建つ予定。周辺はエリアごと開発中(マックスバリュ新宮下府店 2026-11推定・ケーズデンキ福岡新宮店 2027-04推定も同エリア)",
   "found": "2026-10-11",
-  "area": "新宮町"
+  "area": "新宮町",
+  "tenants": [
+   "しまむら(届出者) / A棟・B棟の2棟。同グループ(アベイル・バースデイ等)かは未発表"
+  ],
+  "tenants_src": "https://www.pref.fukuoka.lg.jp/contents/5-1shingufasshonmoru.html",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "(仮称)ドラッグコスモス潤野店",
@@ -644,7 +655,12 @@
   "note": "届出日 2026-03-25 +8か月の推定",
   "found": "2026-10-11",
   "area": "遠賀郡遠賀町遠賀川駅",
-  "area_src": "auto"
+  "area_src": "auto",
+  "tenants": [
+   "ロピア(食品スーパー・福岡初出店) / 他は未定"
+  ],
+  "tenants_src": "https://shutten-watch.com/kyushu/48612",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "(仮称)マックスバリュ新宮下府店",
@@ -690,8 +706,8 @@
   "name": "西日本シティビル",
   "kind": "複合",
   "event": "開業",
-  "when": "",
-  "when_iso": "",
+  "when": "2026年7月21日",
+  "when_iso": "2026-07-21",
   "title": "西日本シティビルが開業、いま熱い博多駅前3丁目の開発プロジェクト",
   "address": "",
   "src": "フクリパ",
@@ -712,7 +728,14 @@
   "note": "",
   "found": "2026-10-11",
   "history": [],
-  "area": "福岡市博多区(福岡空港国内線)"
+  "area": "福岡市博多区(福岡空港国内線)",
+  "tenants": [
+   "ソラリア西鉄ホテル福岡エアポート(仮称・165室・5-11F)",
+   "1F カフェ・食品スーパー / 2F 土産・食べ歩き / 3F ポップカルチャー / 4F アジアンフードコート",
+   "新規約180店(店名未発表)。既存と合わせ約270店で国内空港最大級"
+  ],
+  "tenants_src": "https://travel.watch.impress.co.jp/docs/news/1667855.html",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "BEB5門司港 by 星野リゾート",
@@ -731,8 +754,8 @@
   "name": "天神ビジネスセンターⅡ",
   "kind": "複合",
   "event": "完成",
-  "when": "",
-  "when_iso": "",
+  "when": "2026年6月",
+  "when_iso": "2026-06-01",
   "title": "〖天神ビッグバン〗外観ほぼ完成した「天神ビジネスセンターⅡ」最新状況｜2026年5月撮影",
   "address": "",
   "src": "再開発調査兵団",
@@ -764,7 +787,13 @@
   "src": "再開発調査兵団",
   "src_url": "https://view.tokyo/?p=79008",
   "note": "",
-  "found": "2026-10-11"
+  "found": "2026-10-11",
+  "tenants": [
+   "シェイクシャック(九州初) / STAND T -HAKATA-(九州初) / ブルーボトルコーヒー(九州2店目)",
+   "I'm donut? / dacō(ベーカリーカフェ)  計5店・1F  ※2026-07-21開業済"
+  ],
+  "tenants_src": "https://fanfun.jp/321634/",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "（仮称）福岡天神センタービル建替計画",
@@ -796,8 +825,8 @@
   "name": "プリンスホテル",
   "kind": "ホテル",
   "event": "オープン",
-  "when": "",
-  "when_iso": "",
+  "when": "2026年春",
+  "when_iso": "2026-04-01",
   "title": "「プリンスホテル」ブランドのホテルがオープン予定の、「（仮称）シーサイドももち開発計画」の様子 2025年5月上旬撮影",
   "address": "",
   "src": "再開発調査兵団",
@@ -809,8 +838,8 @@
   "name": "天神住友生命FJビジネスセンター",
   "kind": "複合",
   "event": "竣工",
-  "when": "",
-  "when_iso": "",
+  "when": "2025年6月",
+  "when_iso": "2025-06-01",
   "title": "6月竣工予定の、24階約113m「天神住友生命FJビジネスセンター」（（仮称）住友生命福岡ビル・西通りビジネスセンター建替計画）の様子 2025年5月上旬撮影",
   "address": "",
   "src": "再開発調査兵団",
@@ -822,8 +851,8 @@
   "name": "ONE FUKUOKA BLDG. （ワン・フクオカ・ビルディング）",
   "kind": "複合",
   "event": "開業",
-  "when": "",
-  "when_iso": "",
+  "when": "3月27日",
+  "when_iso": "2026-03-27",
   "title": "開業していた、19階約97m「ONE FUKUOKA BLDG. （ワン・フクオカ・ビルディング）」の様子 2025年5月上旬撮影",
   "address": "",
   "src": "再開発調査兵団",
@@ -870,7 +899,13 @@
   "note": "",
   "found": "2026-10-11",
   "history": [],
-  "area": "福岡市中央区天神"
+  "area": "福岡市中央区天神",
+  "tenants": [
+   "エースホテル福岡(192室・九州初・1-3F/16-20F) / manu coffee(3F OPEN LOBBY)",
+   "B2〜2Fがショップ&レストラン(店名未発表)"
+  ],
+  "tenants_src": "https://travel.watch.impress.co.jp/docs/news/2136941.html",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "博多新三井ビル",
@@ -883,7 +918,12 @@
   "src": "saitoshika-west",
   "src_url": "https://saitoshika-west.com/blog-entry-10095.html",
   "note": "",
-  "found": "2026-10-11"
+  "found": "2026-10-11",
+  "tenants": [
+   "低層階に商業(店名未発表)。地下広場が博多駅地下街と直結・屋上ラウンジ"
+  ],
+  "tenants_src": "https://www.mitsuifudosan.co.jp/corporate/news/2026/0603_01/",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "明治公園",
@@ -911,7 +951,13 @@
   "note": "",
   "found": "2026-10-11",
   "history": [],
-  "area": "福岡市西区小戸(マリノアシティ跡)"
+  "area": "福岡市西区小戸(マリノアシティ跡)",
+  "tenants": [
+   "約200店(九州最大)。国内外ブランド・スポーツ・アウトドア・キッズ・飲食ゾーン",
+   "店名は未発表(三井のアウトレットは開業2〜3か月前に一括発表が通例)"
+  ],
+  "tenants_src": "https://prtimes.jp/main/html/rd/p/000000940.000051782.html",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "福岡天神センタービル建替計画",
@@ -1162,17 +1208,24 @@
   "found": "2026-10-11"
  },
  {
-  "name": "ボートレース福岡に新たなパークが今年10月",
+  "name": "ボートレース福岡 天神ストリートパーク",
   "kind": "その他",
-  "event": "オープン",
-  "when": "令和8年10月30日",
+  "event": "開業",
+  "when": "2026年10月30日",
   "when_iso": "2026-10-30",
   "title": "ボートレース福岡に新たなパークが今年10月オープン！",
-  "address": "",
+  "address": "福岡市中央区那の津1-7-5",
   "src": "福岡市 記者発表",
   "src_url": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2026/documents/20260623_boatracefukuokaniaratanapa-kugakotoshi10gatsuopen.pdf",
-  "note": "発表 2026年6月23日",
-  "found": "2026-10-11"
+  "note": "発表 2026年6月23日 2026-10-14 現地:ほぼ完成。隣の那の津1-1は分譲マンション(JR九州ほか・18階201戸・2026-10-01着工)で住宅のため対象外",
+  "found": "2026-10-11",
+  "area": "福岡市中央区那の津",
+  "tenants": [
+   "国内最大級の屋内スケートボード場 / アートウォール / イベント広場 / 飲食 / 子供の遊び場",
+   "授乳室・おむつ替えあり(公式サイト)。運営は大和リース・ムラサキスポーツ"
+  ],
+  "tenants_src": "https://boatracefukuoka-tenjinstreetpark.com/",
+  "tenants_checked": "2026-10-14"
  },
  {
   "name": "明治公園",
@@ -1238,5 +1291,46 @@
   "src_url": "https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html",
   "note": "整備中。市ページでは「順次オープンする予定」",
   "found": "2026-10-11"
+ },
+ {
+  "name": "ボートレース福岡に新たなパークが今年10月",
+  "kind": "その他",
+  "event": "オープン",
+  "when": "令和8年10月30日",
+  "when_iso": "2026-10-30",
+  "title": "ボートレース福岡に新たなパークが今年10月オープン！",
+  "address": "",
+  "src": "福岡市 記者発表",
+  "src_url": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2026/documents/20260623_boatracefukuokaniaratanapa-kugakotoshi10gatsuopen.pdf",
+  "note": "発表 2026年6月23日",
+  "found": "2026-10-16"
+ },
+ {
+  "name": "アイランドシティ 新設中学校(照葉はばたき小の隣・名称未定)",
+  "kind": "その他",
+  "event": "開校",
+  "when": "2029年4月",
+  "when_iso": "2029-04-01",
+  "title": "アイランドシティ 新設中学校(照葉はばたき小の隣・名称未定)",
+  "address": "",
+  "area": "福岡市東区香椎照葉",
+  "src": "manual",
+  "src_url": "https://www.nishinippon.co.jp/item/1176208/",
+  "found": "2026-10-11",
+  "note": "令和11年度開校予定。敷地約23,200㎡・地上4階以下・延床約7,500㎡・概算約40億円(X @fukunaman 2025-07 が市資料を引用)"
+ },
+ {
+  "name": "(仮称)福岡アリーナ(アイランドアイ内・6,000席・やずや)",
+  "kind": "その他",
+  "event": "開業",
+  "when": "2029年3月",
+  "when_iso": "2029-03-01",
+  "title": "(仮称)福岡アリーナ(アイランドアイ内・6,000席・やずや)",
+  "address": "",
+  "area": "福岡市東区香椎照葉",
+  "src": "manual",
+  "src_url": "https://fukuoka-leapup.jp/biz/202510.64494",
+  "found": "2026-10-11",
+  "note": "2026年8月着工・2028年12月完成予定。B2ライジングゼファー福岡の本拠地。運営はやずや+JLL"
  }
 ]

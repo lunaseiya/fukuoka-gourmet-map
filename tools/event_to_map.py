@@ -30,6 +30,11 @@ sys.stdout.reconfigure(encoding='utf-8')
 HERE = os.path.dirname(os.path.abspath(__file__))
 SPOTS = os.path.join(HERE, '..', 'data', 'spots.json')
 CAND = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
+# 手で裏取りした detail(何ができるか4行)。あればイベントスポットの verdict にする【2026-10-16】
+try:
+    EXTRA = json.load(io.open(os.path.join(HERE, '..', 'data', '_イベント補足.json'), encoding='utf-8'))
+except Exception:
+    EXTRA = {}
 UA = {'User-Agent': 'Mozilla/5.0', 'Accept-Language': 'ja'}
 WK = '月火水木金土日'
 # `venues` には**集約サイト名が混ざる**(いこーよ/県公式)。会場として扱うと座標を引けないので除く
@@ -164,7 +169,7 @@ def main():
         e = p['ev']
         d = datetime.strptime(p['until'], '%Y-%m-%d').date()
         print('  ○ %s' % p['title'][:52])
-        print('      会場 %s' % (e.get('place') or (e.get('venues') or ['-'])[0]))
+        print('      会場 %s' % (e.get('venue') or e.get('place') or (e.get('venues') or ['-'])[0]))
         if p.get('borrow'):
             print('      座標 %s の登録を流用 (%.5f, %.5f)'
                   % (p['borrow']['name'][:26], p['borrow']['lat'], p['borrow']['lng']))
@@ -233,7 +238,13 @@ def main():
         #   「イオンモール大牟田(糟屋郡粕屋町)」のような矛盾になる(2026-09-13に実際に出した)
         b = p.get('borrow')
         city = (b.get('city') if b else None) or e.get('city') or ''
-        area = (b.get('name') if b else None) or e.get('place') or ''
+        # ⚠`venue`(施設名)を先に見る。`place` は館内の場所なので area が「館内1F」になる(2026-10-16)
+        area = (b.get('name') if b else None) or e.get('venue') or e.get('place') or ''
+        # verdict は補足ファイルの detail(手で書いた「何ができるか」4行)があればそれを使う。
+        # lead(告知文の1文目)はタイトルの言い換えにしかならないことが多い(2026-10-16)
+        ex = EXTRA.get(e.get('url')) or {}
+        verdict = ('・'.join(x for x in ex['detail'] if x) if ex.get('detail')
+                   else (e.get('lead') or ''))[:200] or None
         sp.append({
             'id': sid, 'name': p['title'][:60],
             'area': area, 'city': city, 'pref': '福岡県',
@@ -241,7 +252,7 @@ def main():
             'visited': None, 'with': 'family',
             'kids': {'stroller': None, 'diaper': None, 'tatami': None,
                      'kidsChair': None, 'serveMin': None, 'noise': 'ok'},
-            'verdict': (e.get('lead') or '')[:200] or None,
+            'verdict': verdict,
             'video': {'youtube': None, 'tiktok': None, 'instagram': None},
             'thumb': None, 'wish': True, 'category': 'play',
             'until': p['until'], 'untilLabel': '%d月%d日' % (d.month, d.day),

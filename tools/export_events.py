@@ -396,7 +396,8 @@ def main():
             k = core(tt)[:10]
             if k and k in seen:         # 裏取り済みと同じものは**裏取り側を残す**
                 seen[k]['poster'] = seen[k]['poster'] or (
-                    r.get('poster') if W.poster_ok(r['title'], r.get('lead')) else None)
+                    r.get('poster') if W.poster_ok(r['title'], r.get('lead'))
+                    and not sp.get('no_poster') else None)
                 seen[k]['price'] = seen[k]['price'] or sp.get('price')
                 seen[k]['time'] = seen[k]['time'] or sp.get('time')
                 # ★**memo も引き継ぐ**【2026-09-18に発覚】
@@ -414,8 +415,10 @@ def main():
                 'title': tt, 'venue': venue(r, tt, head), 'city': r.get('city') or '',
                 'pref': '', 'start': st, 'end': en, 'untilLabel': '',
                 'days': days, 'n': len(days), 'url': r['url'],
-                # ⚠IPコラボのポスターは参照しない(貼れない回)
-                'poster': r.get('poster') if W.poster_ok(r['title'], r.get('lead')) else None,
+                # ⚠IPコラボのポスターは参照しない(貼れない回)。
+                #   補足に no_poster:true と書いた回(来場者が写った現地写真)も同じ【2026-10-16】
+                'poster': (r.get('poster') if W.poster_ok(r['title'], r.get('lead'))
+                           and not sp.get('no_poster') else None),
                 # ⚠**源が取った time/price も使う**【2026-09-18に発覚】。
                 #   補足ファイル(手入力)しか見ていなかったので、
                 #   イオン九州の館の詳細ページから取れた時間・料金が**捨てられていた**。

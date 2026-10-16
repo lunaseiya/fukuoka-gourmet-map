@@ -540,6 +540,12 @@ def card(ev, idx, extra=None, days=None, cur=None):
     y += 18
     # ポスター(IP絡みは貼らない)
     ok = W.poster_ok(ev['title'], ev.get('lead'))
+    # ★`_イベント補足.json` に `"no_poster": true` と書いた回は貼らない【2026-10-16】
+    #   源の画像が「ポスター」ではなく**来場者が写った現地写真**のことがある
+    #   (ちっご祭2026=県公式の画像が吹奏楽部と観客の写真だった)。
+    #   他人が写った写真は出典があっても出さない(マップの写真ライセンスと同じ方針)
+    if ev.get('no_poster'):
+        ok = False
     # ⚠**ポスターの高さは情報行のぶんを引いて決める**。固定560pxだと、
     #   縦長ポスター + 行数が多いカードで情報行がCTAバーに押し出され、
     #   **一番大事な「検索」が消える**(2026-09-13に踏んだ)。
@@ -632,8 +638,10 @@ def card(ev, idx, extra=None, days=None, cur=None):
             #   旧文「ポスターは/権利の都合で非掲載」では理由が伝わらなかったので、
             #   **キャラクターの権利であること**を明示し、色も薄すぎない灰にする
             icx = cw - ICO // 2 - 30
-            for k, ln in enumerate(('キャラクターの権利が', 'あるため、ポスターは',
-                                    'お見せできません')):
+            # no_poster(来場者が写った現地写真しか無い回)は理由を変える【2026-10-16】
+            why = (('公式の画像は', '来場者が写るため', '載せていません') if ev.get('no_poster')
+                   else ('キャラクターの権利が', 'あるため、ポスターは', 'お見せできません'))
+            for k, ln in enumerate(why):
                 cd.text((icx, iy + ICO + 10 + k * 28), ln,
                         font=font(MEI, 22), fill=(138, 118, 108, 255), anchor='ma')
         yy = 92
@@ -672,7 +680,12 @@ def card(ev, idx, extra=None, days=None, cur=None):
     # 場所は **venue(施設名)が主**。place(館内の場所)は施設名のあとに足す。
     # place だけを出すと「プラネタリウム・4階天体観測広場」のように**どこの施設か分からない**
     fac = ev.get('venue') or (ven[0] if ven else '') or ''
-    pl = ' '.join([x for x in (fac, ev.get('place') or '') if x]).strip()
+    # ⚠源によっては place に施設名そのものが入る(ボートレース福岡の公式一覧)。
+    #   そのまま足すと「ボートレース福岡 ボートレース福岡」になる(2026-10-16に踏んだ)
+    place = ev.get('place') or ''
+    if fac and (place == fac or place in fac):
+        place = ''
+    pl = ' '.join([x for x in (fac, place) if x]).strip()
     if len(pl) > 22:            # 入り切らないなら館内の場所を捨てて**施設名を残す**
         pl = fac or pl
     pl = pl or ev.get('city') or ''

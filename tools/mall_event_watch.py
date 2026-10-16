@@ -7,8 +7,13 @@
     <li class="result-box event"><a href="/event/<uuid>">
       <p class="name">タイトル</p><p class="info">2026/09/01 (火) - 2026/09/29 (火)</p>
   さらに埋め込みJSONに eventStartAt / eventEndAt が ISO で入っている。
-  イオンモール社(<slug>-aeonmall.com)とイオン九州(<slug>.aeon-kyushu.info)で**同じ構造**。
+  イオンモール社(<slug>.aeonmall.jp)とイオン九州(<slug>.aeon-kyushu.info)で**同じ構造**。
   福岡県6館で**週189件**取れる(筑紫野39/福岡37/大牟田37/福津33/直方29/香椎浜14)。
+  ⚠**イオンモール社は 2026-10 に <slug>-aeonmall.com → <slug>.aeonmall.jp へ移転した**
+    (2026-10-16に実測。旧URLの一覧は新ドメインへリダイレクトされるが、**旧URLの個別ページは
+     館トップへ飛ばされて中身が読めない**。新ドメインの /news/event は 400)。
+    新ドメインの個別ページは**静的HTML**で、イオン九州と同じ <td>日程/時間/場所</td> の表と
+    本文が入っている(旧ドメインは完全JS描画で何も取れなかった)。
 
 ■ 設計の要点: ボトルネックは収集ではなく選別
   12選に対して189件=25倍あるので、**除外ルールで落とすほうが効く**。
@@ -37,20 +42,20 @@ UA = {'User-Agent': ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.
 WAIT = 2.0
 
 # (表示名, 市区, イベント一覧のURL)
-#  ⚠**パスが2系統ある**(2026-09-12に踏んだ):
-#     イオンモール社 <slug>-aeonmall.com は **/news/event**
-#     イオン九州     <slug>.aeon-kyushu.info は **/event**
-#   片方に揃えると、もう片方が黙って0件になる(HTTP 200 で空ページが返る)
-#   2026-09-12 に実測して生きている館だけ載せている。
-#   ⚠八幡東/鹿児島/長崎/佐賀大和/下関/三光 は <slug>-aeonmall.com がDNSで引けなかった(slug違い)。
-#     熊本・宇城はページは200だが result-box が無い。いずれも要調査
+#  ★**2026-10-16 イオンモール社の新ドメインに切り替えた**(ユーザー「イオンモール福津はメインで使用する」)
+#     イオンモール社 <slug>.aeonmall.jp は **/event**(旧 <slug>-aeonmall.com/news/event は
+#       一覧だけリダイレクトで生きているが、個別ページが館トップに飛ぶので**候補JSONのURLが死ぬ**)
+#     イオン九州     <slug>.aeon-kyushu.info も **/event**
+#   新ドメイン5館の実測(2026-10-16): 福岡28/福津28/筑紫野32/直方18/大牟田29 件で BLK がそのまま効く
+#   ⚠八幡東/鹿児島/長崎/佐賀大和/下関/三光 は旧ドメインで DNS が引けなかった(slug違い)。
+#     新ドメインでは yahatahigashi.aeonmall.jp が存在する(spots 登録時に実測)。要るなら足す
 MALLS = [
-    ('イオンモール福岡',   '糟屋郡粕屋町', 'https://fukuoka-aeonmall.com/news/event'),
+    ('イオンモール福岡',   '糟屋郡粕屋町', 'https://fukuoka.aeonmall.jp/event'),
     ('イオンモール香椎浜', '福岡市東区',   'https://kashiihama.aeon-kyushu.info/event'),
-    ('イオンモール福津',   '福津市',       'https://fukutsu-aeonmall.com/news/event'),
-    ('イオンモール筑紫野', '筑紫野市',     'https://chikushino-aeonmall.com/news/event'),
-    ('イオンモール直方',   '直方市',       'https://nogata-aeonmall.com/news/event'),
-    ('イオンモール大牟田', '大牟田市',     'https://omuta-aeonmall.com/news/event'),
+    ('イオンモール福津',   '福津市',       'https://fukutsu.aeonmall.jp/event'),
+    ('イオンモール筑紫野', '筑紫野市',     'https://chikushino.aeonmall.jp/event'),
+    ('イオンモール直方',   '直方市',       'https://nogata.aeonmall.jp/event'),
+    ('イオンモール大牟田', '大牟田市',     'https://omuta.aeonmall.jp/event'),
 ]
 
 # ───────── 除外ルール(これで落とす。実測189件の中身から作った) ─────────
@@ -339,21 +344,18 @@ TD = re.compile(r'<td[^>]*>([\s\S]{0,40}?)</td>\s*<td[^>]*>([\s\S]{0,200}?)</td>
 
 
 def detail(r):
-    """個別ページから時間・場所・料金を取る(採用分だけ呼ぶ)。
+    """個別ページから時間・場所・料金(+本文)を取る(採用分だけ呼ぶ)。
 
-    ⚠**イオン九州の館しか自動で取れない**(2026-09-12実測):
-      ・イオン九州(<slug>.aeon-kyushu.info) … 詳細ページに
-          <td>日程</td><td>2026/09/19 (土) - 2026/09/20 (日)</td>
-          <td>時間</td><td>10:30～17:30</td><td>場所</td><td>1階 セントラルコート</td>
-        のテーブルがあるので確実に取れる
-      ・イオンモール社(<slug>-aeonmall.com) … 詳細ページは**完全にJS描画**で、
-        静的HTMLにイベント本文が1文字も無い(タイトルすら出ない)。一覧の埋め込みJSONにも
-        title/eventStartAt/eventEndAt/eventMediaFile1 しか無く**時間・場所・料金は入っていない**。
-        → ここは「要確認」として**ポスター画像のURLを出す**。会期以外はポスターを見て埋める
+    どちらの系列も詳細ページに
+        <td>日程</td><td>2026/09/19 (土) - 2026/09/20 (日)</td>
+        <td>時間</td><td>10:30～17:30</td><td>場所</td><td>1階 セントラルコート</td>
+    のテーブルがあるので確実に取れる。
+      ・イオン九州(<slug>.aeon-kyushu.info) … 2026-09-12 から
+      ・イオンモール社(<slug>.aeonmall.jp) … **2026-10-16 の新ドメイン移行で静的HTMLになった**。
+        旧 <slug>-aeonmall.com は完全JS描画で本文が1文字も無く「要確認」で返していた。
+        新ドメインは本文(「参加は無料」「アンケート回答が条件」等)まで入るので `body` に返す
       ⚠以前は本文から最初の「HH:MM〜HH:MM」を拾っていたが、それは**モールの営業時間
         (10:00-21:00)**で、全イベントが同じ時間になっていた。誤情報なのでやめた"""
-    if not r.get('kyushu'):
-        return {'need_check': '時間・場所はJS描画のため未取得。ポスターか個別ページで確認'}
     try:
         h = fetch(r['url'])
     except Exception:
@@ -371,6 +373,19 @@ def detail(r):
             d.setdefault('note', []).append('%s:%s' % (k, v))
     if isinstance(d.get('note'), list):
         d['note'] = ' / '.join(d['note'])
+    if not d:
+        # テーブルが無い = 旧ドメインのJS描画ページか、館トップへ飛ばされている
+        d['need_check'] = '時間・場所が取れない。URLが旧ドメイン(<slug>-aeonmall.com)なら新ドメインで開き直す'
+        return d
+    # 本文: 表の直後から「お問い合わせ先」「このページをシェア」まで(新ドメインで実測)
+    m = (re.search(r'class="event-detail-text[^"]*"[^>]*>([\s\S]*?)</section>', h) or
+         re.search(r'</table>([\s\S]*?)(?:お問い合わせ先|このページをシェア|最新のイベント)', h))
+    if m:
+        body = html.unescape(re.sub(r'<[^>]+>', ' ', re.sub(r'(?i)<br\s*/?>|</p>', '\n', m.group(1))))
+        body = re.sub(r'[ \t　]+', ' ', body)
+        lines = [x.strip() for x in body.split('\n') if x.strip()]
+        if lines:
+            d['body'] = '\n'.join(lines)[:600]
     return d
 
 

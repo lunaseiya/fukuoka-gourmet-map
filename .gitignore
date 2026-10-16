@@ -32,3 +32,6 @@ data/_週末イベント候補_*.json
 
 # その場の検証用スクリプト(_ 始まり)。残す価値があるものは名前を付けて置く
 tools/_*.py
+
+# 過去動画の索引キャッシュ(video_archive.py plan/download)。**200MB超**で公開不要(2026-10-16)
+data/video_cache/

@@ -86,7 +86,9 @@ def block(ev, i, ov, today, with_url):
     bits = []
     if ev.get('time'):
         bits.append('🕐' + ev['time'])
-    bits.append('¥無料' if ev.get('free') else '¥料金は公式で確認')
+    # 料金は 補足の free → price → 不明 の順(2026-10-16: price を見ておらず「公式で確認」ばかりだった)
+    pr = (ev.get('price') or '').strip()
+    bits.append('¥無料' if ev.get('free') else ('¥' + pr if pr and len(pr) <= 18 else '¥料金は公式で確認'))
     pk = (ev.get('parking') or '').strip()
     if pk and len(pk) <= 18:
         bits.append('🅿' + pk)
@@ -150,6 +152,15 @@ def main():
     by = {e['url']: e for e in D['events']}
     evs = [by[u] for u in D['selected'] if u in by]
     ov = json.load(io.open(OVER, encoding='utf-8')) if os.path.exists(OVER) else {}
+    # ★`_イベント補足.json`(手で裏取りした time/free/price/parking)をカードと同じく差し込む
+    #   【2026-10-16】これが無く、カードは「無料」なのにキャプションは「料金は公式で確認」、
+    #   時間は源の生文字列(「10:00～17:00（②③は10:30～14:30）」)が出ていた
+    exp = os.path.join(os.path.dirname(OVER), '_イベント補足.json')
+    ext = json.load(io.open(exp, encoding='utf-8')) if os.path.exists(exp) else {}
+    for e in evs:
+        for k, v in (ext.get(e['url']) or {}).items():
+            if not k.startswith('_') and v:
+                e[k] = v
     frm, to = d(a.f or D['from']), d(a.t or D['to'])
     if a.f or a.t:
         fs, ts = frm.isoformat(), to.isoformat()

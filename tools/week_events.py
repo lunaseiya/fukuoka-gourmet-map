@@ -22,6 +22,9 @@
             tenpo.aeon-kyushu.info の**総合スーパー10店舗**(マリナタウン/笹丘/野芥/原/
             福岡伊都/大野城/乙金/小郡/福津/直方)。AEONモール6館とは**別系列**で、
             ここが抜けていて「キッズボート」を取りこぼしていた
+  boatrace… ボートレース福岡 公式イベント一覧            【2026-10-14追加】
+            /modules/news/?page=index_event。キッズ向けの企画(海辺のカーニバル等)が
+            月に数本。会期は個別ページの「日程：」行で決める(一覧のタイトルでは読み切れない)
   manual… data/_手動イベント.json                      【2026-09-17追加】
             **公式サイトにイベント一覧が無い主催**(万代など)を現地チラシから手で書く。
             ファイルが無ければ0件で通る
@@ -1508,14 +1511,14 @@ def from_kurume(maxpage=3):
 
 
 # ───────────────────────── 商業施設 ─────────────────────────
-def from_mall():
+def from_mall(f=None, t=None):
     rows = []
     n_det = 0
     for r in M.collect():
         row = {'src': r['mall'], 'title': r['title'], 'city': r['city'],
                'venue': r['mall'], 'url': r['url'], 'span': r['span'],
                'raw': r['info'], 'free': False, 'lead': '',
-               'poster': r.get('poster'), 'kyushu': r.get('kyushu')}
+               'poster': r.get('poster'), 'kyushu': r.get('kyushu'), 'mall': True}
         # ★**イオン九州の館は詳細ページから 時間/場所/料金/先着人数 を取る**
         #   【2026-09-18ユーザー指摘「キッズモデル体験のところにmemoがないのはなんでだろう？」】
         #   原因: from_mall は `lead: ''` を固定で入れていて**説明文を1文字も集めていなかった**。
@@ -1524,10 +1527,21 @@ def from_mall():
         #     つまり「どんな企画か」の文章は**そもそも取れない**。
         #   → 代わりに「**先着100名・10時から整理券**」のような
         #     **行く前に効く情報**を memo に載せる。これが実質いちばん価値が高い。
-        #   ⚠開くのは `kyushu` の館だけ。イオンモール社の館は完全にJS描画で
-        #     静的HTMLに1文字も無いので、開いても無駄打ちになる(M.detail のコメント参照)。
-        #     実測で kyushu は香椎浜だけなので追加のリクエストは10件程度で済む
-        if r.get('kyushu'):
+        #   ★**2026-10-16 からイオンモール社の館(<slug>.aeonmall.jp)も開く**。
+        #     新ドメインは静的HTMLで、イオン九州と同じ表+本文が入る(M.detail のコメント参照)。
+        #     旧ドメインは完全JS描画で無駄打ちだったので `kyushu` の館だけ開いていた。
+        #   ⚠6館で150件前後あるので、**窓に掛かり・除外ルールを通るものだけ**開く
+        #     (全件開くと WAIT 2秒×150 = 5分増える)。窓が渡されなければ従来どおり kyushu だけ
+        def want_detail():
+            if f is None:
+                return bool(r.get('kyushu'))
+            if not M.overlaps(r['span'], f, t):
+                return False
+            s = re.sub(r'[\s　]+', '', r['title'])
+            if M.DROP_HARD.search(s) or (M.DROP.search(s) and not M.SAVE.search(s)):
+                return False
+            return True
+        if want_detail():
             try:
                 d = M.detail(r)
                 time.sleep(M.WAIT)
@@ -1564,6 +1578,13 @@ def from_mall():
                 if len(x) >= 4 and x not in seen:
                     seen.add(x); mm.append(x)
             row['memo'] = mm[:3] or None
+            # 新ドメインの館は本文が取れる。lead(告知文の1文目)として使い、
+            # 「無料」「予約」の判定材料にもする(旧ドメインでは本文が無く lead='' 固定だった)
+            if d.get('body'):
+                body = n(d['body'].replace('\n', ' '))
+                row['lead'] = body[:160]
+                if re.search(r'無料', body):
+                    row['free'] = True
         rows.append(row)
     print('  商業施設 %d件(うち個別を開いた %d件)' % (len(rows), n_det), file=sys.stderr)
     return rows
@@ -1968,6 +1989,145 @@ def from_yume():
     return rows
 
 
+# ═══ ボートレース福岡(福岡市中央区那の津)【2026-10-14追加】════════════════
+#  ユーザーが現地で「海辺のカーニバル2026」(10/17・18)のポスターを撮ってきたが、
+#  候補ファイルにもイベント一覧にも無かった(どの源にも載らない主催)。
+#  公式サイトに**イベント一覧ページ**があり、キッズ向けの企画が月に数本の頻度で出るので源にする。
+#  構造(2026-10-14に実測):
+#    一覧 /modules/news/?page=index_event
+#      <div class='racer-datas'>
+#        <div class='data-div1'> 2026/09/24 </div>                      ← 投稿日(年の基準に使う)
+#        <div class='data-div2'><a href="…?page=index_event&storyid=2703">
+#          <span class="row-title">10/17（土）、18（日）海辺のカーニバル2026</span></a>
+#    個別 …&storyid=NNNN  <p class="text"> 日程：10月17日（土曜日）、18日（日曜日）<br />
+#                                          場所：ボートレース福岡<br />時間：10時から17時まで<br />
+#                                          内容：<br />(1)キッズ☆ドライビング☆スクール<br />【対象者】3才～小学生以下 …
+#  ⚠**一覧のタイトルの日付は jspan で読み切れない**。「10/17（土）、18（日）」は 17 しか取れず、
+#    「10/10（土）～28（水）」も 10/10 だけになる(全角括弧の曜日が列挙を切る)。
+#    個別ページの「日程：」行は「10月17日（土曜日）、18日（日曜日）」で**2日とも days_list に入る**ので、
+#    **必ず個別を開いて「日程：」行で会期を決める**(一覧は10件前後なので全部開いてよい)。
+#  ⚠タイトルが日付で始まらないもの(「VRスプラッシュバトルの実施日について（9月〜12月）」)は
+#    お知らせなので落とす。jspan が「9月〜12月」を会期に読んで毎日出てしまう
+#  ⚠ポスター画像は公式に無い(本文がテキストだけ)。poster は None
+#  ⚠場内の撮影は公式FAQ「営利目的での撮影はお断り」→ マップ側の扱いは memory の project-boatrace-fukuoka
+BOAT = 'https://www.boatrace-fukuoka.com'
+TSP = 'https://boatracefukuoka-tenjinstreetpark.com/'   # 南側の新パーク(2026-10-30開業)の公式
+BOAT_CARD = re.compile(r"<div class='racer-datas'>([\s\S]*?)<span class=\"detail-btn\">")
+BOAT_DATE = re.compile(r"class='data-div1'>\s*(20\d{2})/(\d{1,2})/(\d{1,2})")
+BOAT_LINK = re.compile(r'<a href="([^"]*storyid=\d+[^"]*)"><span class="row-title">([\s\S]*?)</span>')
+BOAT_BODY = re.compile(r'<p class="text">([\s\S]*?)</p>')
+BOAT_ITEM = re.compile(r'^\(\d{1,2}\)\s*(.+)$')
+BOAT_MAX = 15
+
+
+def from_boatrace():
+    rows = []
+    try:
+        h = M.fetch(BOAT + '/modules/news/?page=index_event')
+    except Exception as ex:
+        print('  ! ボートレース福岡 %s' % type(ex).__name__, file=sys.stderr)
+        return rows
+    opened = 0
+    for c in BOAT_CARD.findall(h):
+        lm = BOAT_LINK.search(c)
+        if not lm:
+            continue
+        url, title = html.unescape(lm.group(1)), n(lm.group(2))
+        if not re.match(r'^\s*\d{1,2}/\d{1,2}', title):
+            continue                      # 日付で始まらないものはお知らせ
+        dm = BOAT_DATE.search(c)
+        try:
+            pdate = date(int(dm.group(1)), int(dm.group(2)), int(dm.group(3))) if dm else None
+        except ValueError:
+            pdate = None
+        body, when, place, tm = '', '', '', ''
+        if opened < BOAT_MAX:
+            try:
+                bm = BOAT_BODY.search(M.fetch(url))
+                time.sleep(M.WAIT)
+                opened += 1
+            except Exception:
+                bm = None
+            if bm:
+                body = re.sub(r'<br\s*/?>', chr(10), bm.group(1))
+                body = html.unescape(re.sub(r'<[^>]+>', '', body))
+                body = re.sub(r'[ \t　]+', ' ', body).strip()
+                for ln in body.split(chr(10)):
+                    ln = ln.strip()
+                    if ln.startswith('日程') and not when:
+                        # ⚠「10月10日（土曜日）から28日（水曜日）」の**から**は jspan が範囲と読まない
+                        #   (10/10 の単日になった。2026-10-14に実測)。〜 に直してから渡す
+                        when = re.sub(r'^日程\s*[:：]\s*', '', ln).replace('から', '〜')
+                    elif ln.startswith('場所') and not place:
+                        place = re.sub(r'^場所\s*[:：]\s*', '', ln)
+                    elif ln.startswith('時間') and not tm:
+                        tm = re.sub(r'^時間[^:：]*[:：]\s*', '', ln)
+        a, e, days = jspan(when or title, base=pdate)
+        if a in (False, 'ended'):
+            continue
+        # memo = 企画名の列挙(「(1)〜(21)」の見出し)。対象年齢は先頭のものだけ添える
+        names, target = [], ''
+        for ln in body.split(chr(10)):
+            im = BOAT_ITEM.match(ln.strip())
+            if im:
+                names.append(n(im.group(1)))
+            elif not target and ln.strip().startswith('【対象者】'):
+                target = n(ln.strip()[5:])
+        memo = []
+        if names:
+            memo.append('・'.join(names[:5]) + ('…ほか%d企画' % (len(names) - 5) if len(names) > 5 else ''))
+        if target:
+            memo.append('対象 ' + target)
+        if place and place != 'ボートレース福岡':
+            memo.append('場所 ' + place)
+        # lead は説明文だけ(日程・場所・時間の行はカードの別枠で出すので落とす)
+        lead = chr(10).join(ln for ln in body.split(chr(10))
+                            if not re.match(r'^\s*(日程|場所|時間|内容)', ln))
+        lead = re.sub(r'【[^】]*】', ' ', lead)
+        lead = re.sub(r'\s+', ' ', lead).strip()[:300]
+        rows.append({'src': 'ボートレース福岡', 'title': title,
+                     'city': '福岡市中央区', 'venue': 'ボートレース福岡',
+                     'url': url, 'span': (a, e), 'days_list': days,
+                     'raw': when or title, 'free': '無料' in body,
+                     'lead': lead or title, 'poster': None,
+                     'place': place[:60], 'time': tm[:40],
+                     'memo': memo[:3] or None})
+    # ── 南側の「天神ストリートパーク」(2026-10-30開業)の公式サイトも同じ源で拾う ──
+    #  トップページに <dl> で並ぶ: <p class="event-date">開催日:  2026.10.30 - 2026.11.01</p>
+    #                            <p class="title"><a href="…/xo_event/…">OPENING EVENT 第1弾 開催！</a></p>
+    #  日付がISO風で確実。/xo_event はカレンダー表示なので使わない。noimg2.png はポスター無し
+    np = 0
+    try:
+        h2 = M.fetch(TSP)
+        for c in re.findall(r'<dl>([\s\S]*?)</dl>', h2):
+            dm = re.search(r'event-date">\s*開催日[:：]\s*(20\d{2})\.(\d{1,2})\.(\d{1,2})'
+                           r'(?:\s*-\s*(20\d{2})\.(\d{1,2})\.(\d{1,2}))?', c)
+            tm = re.search(r'class="title"><a href="([^"]+)">([\s\S]*?)</a>', c)
+            if not dm or not tm:
+                continue
+            try:
+                a = date(int(dm.group(1)), int(dm.group(2)), int(dm.group(3)))
+                e = date(int(dm.group(4)), int(dm.group(5)), int(dm.group(6))) if dm.group(4) else a
+            except ValueError:
+                continue
+            url, title = html.unescape(tm.group(1)), n(tm.group(2))
+            em = re.search(r'class="excerpt"><a[^>]*>([\s\S]*?)</a>', c)
+            ex_txt = n(em.group(1)).replace('…', '') if em else ''
+            im = re.search(r'<img[^>]+src="([^"]+)"', c)
+            poster = im.group(1) if im and 'noimg' not in im.group(1) else None
+            rows.append({'src': '天神ストリートパーク', 'title': title,
+                         'city': '福岡市中央区', 'venue': 'ボートレース福岡 天神ストリートパーク',
+                         'url': url, 'span': (a, e), 'days_list': None,
+                         'raw': dm.group(0), 'free': '無料' in (title + ex_txt),
+                         'lead': ex_txt or title, 'poster': poster})
+            np += 1
+    except Exception as ex:
+        print('  ! 天神ストリートパーク %s' % type(ex).__name__, file=sys.stderr)
+    print('  ボートレース福岡 %d件(個別を開いた %d件・うち天神ストリートパーク %d件)'
+          % (len(rows), opened, np), file=sys.stderr)
+    return rows
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--from', dest='f')
@@ -1975,7 +2135,7 @@ def main():
     ap.add_argument('--n', type=int, default=12)
     ap.add_argument('--src', default='mall,lala,canal,icp,ie,kgk,map,ikoyo,pref,'
                                      'daimaru,hankyu,yokanavi,kurume,torius,hkc,aeonkyushu,'
-                                     'across,branch,konoha,ezo,yume,fcity,manual')
+                                     'across,branch,konoha,ezo,yume,fcity,boatrace,manual')
     ap.add_argument('--detail', action='store_true', help='採用分の個別ページも開く(商業施設のみ)')
     ap.add_argument('--all', action='store_true')
     a = ap.parse_args()
@@ -1990,7 +2150,7 @@ def main():
     print('対象期間: %s 〜 %s / 情報源: %s' % (f, t, ' '.join(srcs)), file=sys.stderr)
 
     rows, per = [], {}
-    for s, fn in (('mall', from_mall), ('lala', from_lalaport), ('canal', from_canal),
+    for s, fn in (('mall', lambda: from_mall(f, t)), ('lala', from_lalaport), ('canal', from_canal),
                   ('icp', from_iccentral), ('ie', from_islandeye),
                   ('kgk', from_kagakukan), ('map', from_spots),
                   ('ikoyo', lambda: from_ikoyo(f, t)), ('pref', from_pref),
@@ -2019,6 +2179,9 @@ def main():
                   ('yume', from_yume),
                   # 【2026-09-24追加】福岡市「今週末のおでかけ情報」(市政だよりの市主催イベント)
                   ('fcity', from_fukuokacity),
+                  # 【2026-10-14追加】ボートレース福岡(那の津)。公式のイベント一覧から。
+                  # 海辺のカーニバル(10/17・18)がどの源にも無かったので足した
+                  ('boatrace', from_boatrace),
                   # 公式にイベント一覧が無い主催のぶん(現地チラシから手で書く)
                   ('manual', from_manual)):
         if s in srcs:
@@ -2258,7 +2421,7 @@ def main():
                 r.update(iko_detail(r['url'])); time.sleep(M.WAIT)
             elif r['src'] == '県公式':
                 r.update(pref_detail(r['url'])); time.sleep(M.WAIT)
-            elif r.get('kyushu'):
+            elif r.get('mall') or r.get('kyushu'):
                 r.update(M.detail(r)); time.sleep(M.WAIT)
 
     def span_str(r):

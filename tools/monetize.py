@@ -98,13 +98,20 @@ def find_tabelog(spot):
             #   下の市区チェックが `addr and …` で丸ごと飛ばされて素通り**していた。
             #   → 全都道府県を取れる正規表現にして、**都道府県の一致を必須(positive)にする**。
             #     取れなかった場合も弾く(確認できないものにリンクは付けない)
-            addr = re.search(r'(北海道|東京都|大阪府|京都府|.{2,3}県)[^<"]{2,40}', page)
+            # ⚠**最初の1件だけを住所とみなしてはいけない**【2026-10-15に踏んだ】
+            #   丸亀製麺のページは紹介文「北海道産100%の小麦粉…」が先に引っかかり、
+            #   住所(福岡県糟屋郡…)を見る前に「都道府県が違う」で全件はじいていた(58件が0/58)。
+            #   → 候補を全部拾い、**スポットの都道府県で始まるもの**を住所として採用する
+            addrs = [a.group(0) for a in re.finditer(r'(北海道|東京都|大阪府|京都府|.{2,3}県)[^<"]{2,40}', page)]
             pref = str(spot.get('pref') or '')
-            if pref and not (addr and addr.group(0).startswith(pref)):
+            #   `.{2,3}県` は「a福岡県…」「"福岡県…」のように前の1文字を巻き込むので、都道府県名の位置から切り出す
+            pref_hits = [a[a.index(pref):] for a in addrs if pref and pref in a]
+            if pref and not pref_hits:
                 continue   # 都道府県が確認できない/違う。次の候補へ
-            if citykey and addr and citykey not in addr.group(0):
+            city_ok = bool(citykey and any(citykey in a for a in pref_hits))
+            if citykey and not city_ok:
                 continue   # 同名の他都市店。次の候補へ
-            if not strong and not (citykey and addr and citykey in addr.group(0)):
+            if not strong and not city_ok:
                 continue   # 弱一致は住所一致が取れたときだけ採用
             return url, cand.strip()
         time.sleep(SLEEP)

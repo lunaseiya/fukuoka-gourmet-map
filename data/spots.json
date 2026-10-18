@@ -3106,26 +3106,35 @@
   "genre": "居酒屋・餃子",
   "lat": 33.581013,
   "lng": 130.409194,
-  "visited": null,
+  "visited": "2026-10-16",
   "with": "family",
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": false,
+   "tatami": true,
    "kidsChair": null,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "カウンター8席+テーブル・テラス計48席、駐車場なし、渡辺通駅徒歩7分。",
+  "verdict": "2026-10-16訪問(夜)。とり屋台の2号店(2019年開店)。糸島産豚の手づくり焼き餃子1人前319円、タン刺し539円、餃子屋のポテサラ429円(税込・店内表示は税抜290円+税)。⭐掘りごたつ席あり(靴を脱いでゆったり)・2階席とテラス席も。⚠全席喫煙可の大人向けの居酒屋なので、小さな子連れには向かない。⚠予約なしだと満席のことが多い。支払いは現金かPayPay(カード不可)。営業18:00〜翌1:00(L.O.24:00)、不定休。ハイボール・レモンサワーは4杯目以降ずっと180円(税込198円)。駐車場なし(近隣コインP)、渡辺通駅から徒歩約7分。",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/dwMKeIPNnhQ",
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
+  "thumb": "kiyokawagyouzateiryuusho.jpg",
+  "wish": false,
   "pref": "福岡県",
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40053268/"
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40053268/",
+  "category": "gourmet",
+  "photos": [
+   "kiyokawagyouzateiryuusho_01_外観.jpg",
+   "kiyokawagyouzateiryuusho_02_バス停の看板と入口のドリンク掲示.jpg",
+   "kiyokawagyouzateiryuusho_03_掘りごたつ席.jpg",
+   "kiyokawagyouzateiryuusho_04_掘りごたつ席の引き.jpg",
+   "kiyokawagyouzateiryuusho_05_焼き餃子.jpg"
+  ],
+  "posted": "2026-10-17"
  },
  {
   "id": "yukemuriyougashimise",
@@ -58400,7 +58409,7 @@
   },
   "verdict": "⭐ランチ(11:30〜14:00)の地鶏親子丼(黒/白)は刺身・鶏スープ・サラダ・漬物付きで1,100円(2026-10-14実食・黒)。子供椅子(ベルト付きハイチェア)あり、全席テーブルで個室もある。⚠12時前には行列ができるので早めに。天神駅徒歩3分・昭和通り沿い、駐車場なし。夜は炭火焼きの地鶏と生簀の鮮魚(無休・17:00〜24:00)。",
   "video": {
-   "youtube": null,
+   "youtube": "https://youtube.com/shorts/PthuUjtu_Mw",
    "tiktok": null,
    "instagram": null
   },
@@ -58416,7 +58425,8 @@
    "toritorito-tenjin_05_ランチメニュー.jpg"
   ],
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40071147/",
-  "added": "2026-10-15"
+  "added": "2026-10-15",
+  "posted": "2026-10-16"
  },
  {
   "id": "aeonfukuokahigashi",
@@ -62612,11 +62622,11 @@
    "stroller": null,
    "diaper": null,
    "tatami": true,
-   "kidsChair": null,
+   "kidsChair": false,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "⭐名物はグツグツ熱々の黒い鉄皿で出てくる麻婆丼850円(スープ・漬物付き、辛さ1〜5を選べる・普通は2。2026-10-15実食)。四ツ星ホテル出身の料理人の本場マーボー。ソファのテーブル席のほか座敷(円卓)もあり、駐車場あり。⚠支払いは現金のみ、待ちは順番に並ぶ方式(代表者待ち不可)。ランチ11:30〜14:30 / 夜17:00〜22:00、火曜は夜休み(要確認)。",
+  "verdict": "⭐名物はグツグツ熱々の黒い鉄皿で出てくる麻婆丼850円(スープ・漬物付き、辛さ1〜5を選べる・普通は2。2026-10-15実食)。しっかり甘く煮込まれた肉に、選んだ辛さの痺れが合わさる本場マーボー(四ツ星ホテル出身の料理人)。1階は片側がソファのテーブル席、2階は座敷(円卓・使えるかは要確認)。駐車場あり。⚠子供椅子なし。中華でメニューが豊富で、玉子チャーハンや焼き餃子など辛くない定番もある。⚠支払いは現金のみ、待ちは順番に並ぶ方式(代表者待ち不可)。ランチ11:30〜14:30 / 夜17:00〜22:00、火曜は夜休み(要確認)。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -62635,5 +62645,159 @@
   ],
   "added": "2026-10-16",
   "tabelog": "https://tabelog.com/fukuoka/A4003/A400303/40036080/"
+ },
+ {
+  "id": "shinari-otemon",
+  "name": "讃岐うどん 志成(しなり)",
+  "area": "赤坂・大手門",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "讃岐うどん",
+  "lat": 33.590863,
+  "lng": 130.381068,
+  "address": "福岡県福岡市中央区大手門3-3-24 小金丸ビル1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "ネット調べ(2026-10-16・未訪問)。ミシュラン福岡ビブグルマン選出の本格讃岐うどん。看板は志成ぶっかけうどん(820円・税抜)、志成かけうどん780円。⭐口コミにベビーカーで入店できたとの記述あり(店の公式表記ではないので要確認)。⚠予約不可・行列あり。⚠支払いは現金かPayPay(カード不可)。⚠駐車場なし(近隣コインP)。席はカウンター10+テーブル12の22席(座敷なし)。営業時間: 火〜金・祝11:00〜15:00、土日11:00〜16:00(Rettyは11:30開店表記・要確認)。定休日: 月曜(祝日の場合は翌日)。地下鉄大濠公園駅から徒歩約3分、赤坂駅からも徒歩圏。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.tnc.co.jp/store/shop/archives/31807",
+  "added": "2026-10-16",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400105/40006145/"
+ },
+ {
+  "id": "takechan-takasago",
+  "name": "馬刺し専門店 たけちゃん 高砂店",
+  "area": "平尾・高砂",
+  "city": "福岡市中央区",
+  "genre": "馬肉料理・居酒屋",
+  "lat": 33.576972,
+  "lng": 130.410659,
+  "visited": "2026-10-16",
+  "with": "friends",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-10-16訪問(夜)。一度も冷凍しない純国産の馬刺し専門店(大衆酒場スタイル)。赤身刺し800円・馬焼(鉄板・塩かタレ)800円・三種盛り2,500円・五種盛り3,500円(店内はすべて税抜表記)。⭐昼12時から通しで営業(〜23:00)で昼飲みOK。⚠予約不可(到着10分前の空席確認は電話可)で土日は並ぶことも。⚠カウンター中心の約25席・背もたれのない丸椅子で、加熱式たばこ可(紙巻は不可)の大人向けの店なので、小さな子連れには向かない。支払いはカード・電子マネー・PayPay可。駐車場なし。西鉄平尾駅から徒歩約10分、薬院駅から約15分。定休日は情報源で食い違い(不定休/火曜)のため要確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "takechan-takasago.jpg",
+  "wish": false,
+  "pref": "福岡県",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40064945/",
+  "web": "https://www.instagram.com/basashitakechantakasago/",
+  "category": "gourmet",
+  "photos": [
+   "takechan-takasago_01_外観.jpg",
+   "takechan-takasago_02_カウンターと壁の短冊メニュー.jpg",
+   "takechan-takasago_03_奥のカウンター席.jpg",
+   "takechan-takasago_04_赤身刺し.jpg",
+   "takechan-takasago_05_馬焼.jpg",
+   "takechan-takasago_06_ホワイトボードのおすすめメニュー.jpg"
+  ],
+  "posted": null,
+  "added": "2026-10-17"
+ },
+ {
+  "id": "kurofune-daimyo",
+  "name": "焼鳥とイロリ くろ船",
+  "area": "大名・天神西通り",
+  "city": "福岡市中央区",
+  "genre": "焼き鳥・居酒屋",
+  "lat": 33.588652,
+  "lng": 130.395877,
+  "visited": "2026-10-17",
+  "with": "friends",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-10-17訪問(夜)。天神で24年の老舗居酒屋(現在の大名の店舗で8年目)。国産備長炭の焼き鳥と囲炉裏の藁焼きが名物で、手ごねつくね(月見)380円・藁焼き三種980円・鳥かわ200円・豚バラ250円(店内はすべて税抜表示)。⭐掘りごたつの個室(2〜30人)とテーブル席があり全席禁煙、食べログでは子供可。⚠カウンター席は囲炉裏の煙が近いので子連れは個室かテーブルを予約するのが無難。17:00〜24:00(L.O.23:30)、定休日は情報源で食い違い(無休/月曜)のため要確認。カード・QR決済可。駐車場なし。西鉄福岡(天神)駅から徒歩5分、天神西通りのSGビル3F。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kurofune-daimyo.jpg",
+  "wish": false,
+  "pref": "福岡県",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001395/",
+  "web": "https://kurofune.net/",
+  "category": "gourmet",
+  "photos": [
+   "kurofune-daimyo_01_暖簾.jpg",
+   "kurofune-daimyo_02_掘りごたつの個室.jpg",
+   "kurofune-daimyo_03_テーブル席.jpg",
+   "kurofune-daimyo_04_月見つくね団子.jpg",
+   "kurofune-daimyo_05_藁焼き三種.jpg"
+  ],
+  "posted": null,
+  "added": "2026-10-18"
+ },
+ {
+  "id": "sutadon-tenjin",
+  "name": "伝説のすた丼屋 福岡天神店",
+  "area": "天神・新天町",
+  "city": "福岡市中央区",
+  "genre": "丼・すた丼",
+  "lat": 33.589962,
+  "lng": 130.397398,
+  "visited": "2026-10-18",
+  "with": "solo",
+  "kids": {
+   "stroller": null,
+   "diaper": false,
+   "tatami": false,
+   "kidsChair": false,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-10-18訪問(昼)。新天町商店街の中、天神駅から徒歩3分。秘伝のニンニク醤油ダレの豚バラ丼「すた丼」は元祖盛り937円(税込1,030円)で生卵と味噌汁付き、定食はご飯おかわり無料。卓上にほりにし・ニンニク・辣油があり味変自由。⚠子連れ向けの設備は子供用スプーンと取り皿のみ(子供椅子・おむつ替え台なし)。にんにくが強いので大人の一人飯向き。11:00〜23:00、年中無休。券売機・QR決済可(カード・電子マネー不可)。1階カウンター9席+テーブル12席、2階テーブル24席。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "sutadon-tenjin.jpg",
+  "wish": false,
+  "pref": "福岡県",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40051085/",
+  "web": "https://sutadonya.com/",
+  "category": "gourmet",
+  "photos": [
+   "sutadon-tenjin_01_外観.jpg",
+   "sutadon-tenjin_02_子供用スプーンと取り皿.jpg",
+   "sutadon-tenjin_03_テーブル席.jpg",
+   "sutadon-tenjin_04_すた丼.jpg",
+   "sutadon-tenjin_05_グランドメニュー.jpg"
+  ],
+  "posted": null,
+  "added": "2026-10-18"
  }
 ]

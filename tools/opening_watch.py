@@ -9,6 +9,7 @@
   python tools/opening_watch.py --deep     # 見出しに日付が無い記事は本文も開いて日付を探す(アクセス数が増える)
   python tools/opening_watch.py --all      # 開業日を過ぎたものも一覧に出す
   python tools/opening_watch.py --areas    # 巡回せず、同じエリアに今日以降の予定が2件以上あるところを近い順に出す
+  python tools/opening_watch.py --list --higashi   # 巡回せず、福岡市東区だけを規模を問わず出す(これから/時期不明/最近オープン)
 
 ■ エリア集約(area)
   単発の小売は弱いが「同じエリアに2件以上」はまちが変わるサイン(例: 新宮町下府 = 新宮ファッションモール+
@@ -95,6 +96,32 @@ CITY_PRESS  = 'https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/%d/
 CITY_PARKS  = 'https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html'
 PARKS = ['東平尾公園', '明治公園', '清流公園', '香椎浜北公園', '長垂海浜公園', '音羽公園', '今泉公園']
 
+# ■ 福岡市東区は細かい店まで拾う(2026-10-20ユーザー要望「東区の施設は細かいものでも出してほしい」)
+#   大店立地法(1,000㎡超)や再開発ブログには個人店・カフェ・小さな遊び場が載らないので、
+#   Googleニュースの検索RSS(PR TIMES / ファンファン福岡 / KBC / 号外NET 等をまとめて引ける)を町名で回す。
+#   ⚠号外NET 福岡市東区(fukuokahigashi.goguynet.jp)・開店閉店.com は 2024年8月以降ほぼ更新が無い(2026-10-20実測)ので源にしない
+GNEWS = 'https://news.google.com/rss/search?q=%s+when:60d&hl=ja&gl=JP&ceid=JP:ja'
+HIGASHI_TOWNS = ['香椎', '千早', '箱崎', '筥松', '筥崎', '和白', '照葉', 'アイランドシティ', '名島', '松崎', '多の津',
+                 '三苫', '奈多', '志賀島', '西戸崎', '海の中道', '馬出', '貝塚', '舞松原', '唐原', '下原', '美和台',
+                 '青葉', '土井', '蒲田', '名子', '若宮', '水谷', '八田', '多々良', '原田', '社領', '二又瀬', '東浜',
+                 '雁の巣', '雁ノ巣', '塩浜', '高美台', 'みどりが丘', '香住ケ丘', '香住ヶ丘', '御島崎', '浜松', '九産大',
+                 '九大病院', 'ガーデンズ千早', 'いーなテラス', 'BRANCH福岡下原', 'ブランチ福岡下原', 'イオンモール香椎浜',
+                 'ゆめタウン博多', '福岡市東区']
+GNEWS_QUERIES = ['福岡市東区 オープン', '福岡市東区 開業', '福岡市東区 新店', '福岡市東区 オープン予定',
+                 '香椎 オープン', '千早 オープン', '箱崎 オープン', '照葉 オープン', 'アイランドシティ オープン',
+                 '和白 オープン', '志賀島 オープン', '海の中道 オープン']
+# 子連れの発信に関係しない開設(介護・医療・パチンコ等)は東区でも拾わない
+HIGASHI_DROP_RE = re.compile(r'(介護|ホスピス|老人|デイサービス|グループホーム|訪問看護|クリニック|歯科|調剤|'
+                             r'ホスピタル|ナーシング|障がい|障害福祉|パチンコ|パチスロ|来店レポート|求人|採用|'
+                             r'閉店|閉園|閉館|撤退|事務所|支店開設|営業所)')
+# 東区の小さな店の記事は「新店」「出店」「移転」「登場」で書かれることが多い(EVENT_RE だけだと KBC の新店紹介を落とす)
+HIGASHI_EVENT_RE = re.compile(r'(グランドオープン|供用開始|街開き|まちびらき|開業|開園|開館|開店|開設|竣工|完成|オープン|着工|'
+                              r'新店|出店|移転|リニューアル|ニューオープン|NEW OPEN|上陸|登場)')
+# 同じ町名が他県にもある(松崎・原田・浜松・青葉・若宮 等)ので、町名だけで当たったときは福岡の文脈を要求する
+HIGASHI_STRONG = ['福岡市東区', '東区', '照葉', 'アイランドシティ', '香椎', '箱崎', '筥崎', '筥松', '和白',
+                  '志賀島', '西戸崎', '海の中道', '三苫', '雁の巣', '雁ノ巣', 'ガーデンズ千早', 'いーなテラス',
+                  'ブランチ福岡下原', 'BRANCH福岡下原', 'イオンモール香椎浜', 'ゆめタウン博多']
+
 # 見出しに含まれていれば「これから出来る建物」の記事とみなす語
 EVENT_RE = re.compile(r'(グランドオープン|供用開始|街開き|まちびらき|開業|開園|開館|開店|開設|竣工|完成|オープン|着工)')
 # 住宅専用は除外(複合・商業・ホテルを伴うものは残す)
@@ -154,7 +181,7 @@ SEEDS = [
     ('清流公園 北側プロムナード・橋上広場', '公園', '2026年9月', CITY_PARKS, '供用開始', 'オープン済み(2026年9月11日供用開始)',
      '福岡市中央区清川'),
     ('清流公園 南端広場', '公園', '未定', CITY_PARKS, '開園', '整備中。市ページでは「今後順次オープン」', '福岡市中央区清川'),
-    ('香椎浜北公園', '公園', '未定', _LEAP52246, '開園', '報道では2026年7月予定。市ページでは整備中', '福岡市東区香椎浜'),
+    ('香椎浜北公園', '公園', '2026年秋以降(工事は10/31まで延長)', 'https://fuk813.jp/kashiihamanorthpark_renewal/', '開園', 'ウミノテラス(木造2階・カフェ/お肉の工場直売所/大階段とステージ)。当初2026春→工事を2026/10/31まで延長(FUK813 2026/8/9時点)', '福岡市東区香椎浜'),
     ('長垂海浜公園', '公園', '2027年3月', _LEAP52246, '開園', '', '福岡市西区今宿'),
     ('須崎公園 2期(市民会館跡)', '公園', '2027年3月', 'https://fukuoka-leapup.jp/biz/202212.1027', '開園', '', '福岡市中央区天神'),
     ('東平尾公園 全域(山頂広場・ローラーすべり台・展望デッキ)', '公園', '2027年春', _LEAP52246, '開園',
@@ -815,6 +842,78 @@ def src_city_parks(deep):
     return list(out.values())
 
 
+def higashi_town(text):
+    """東区の町名を返す(無ければ '')。他県と同名の町名は「福岡」の文脈があるときだけ"""
+    t = norm(text)
+    explicit = re.search(r'福岡市\s*東区|福岡・東区|（福岡市東区）|\(福岡市東区\)', t)
+    # 「名島亭が宗像市に初出店」のように、店名に町名が入っているだけで出店先は別の市区のもの
+    if not explicit and re.search(r'(宗像|北九州|久留米|飯塚|糸島|春日市|大野城|筑紫野|太宰府|古賀|福津|新宮町|'
+                                  r'粕屋|志免|宇美|篠栗|須恵|博多区|中央区|南区|城南区|早良区|西区|佐賀|熊本|大分|長崎)', t):
+        return ''
+    for w in HIGASHI_STRONG:
+        if w in t:
+            if w == '東区' and not re.search(r'福岡市?\s*[・･]?\s*東区|（福岡・東区|福岡・東区|福岡市東区', t):
+                continue
+            return w
+    if '福岡' in t:
+        for w in HIGASHI_TOWNS:
+            if w in t:
+                return w
+    return ''
+
+
+def src_gnews_higashi(deep):
+    """福岡市東区の小さな開店・開業(Googleニュース検索RSS)。見出しに東区/町名があるものだけ"""
+    import urllib.parse
+    from email.utils import parsedate_to_datetime
+    out, seen = [], set()
+    for q in GNEWS_QUERIES:
+        x = fetch(GNEWS % urllib.parse.quote(q))
+        pause()
+        if not x:
+            continue
+        n = 0
+        for it in re.findall(r'<item>(.*?)</item>', x, re.S):
+            tm = re.search(r'<title>(.*?)</title>', it, re.S)
+            lm = re.search(r'<link>(.*?)</link>', it, re.S)
+            pm = re.search(r'<pubDate>(.*?)</pubDate>', it, re.S)
+            if not tm or not lm:
+                continue
+            raw = strip_tags(tm.group(1).replace('&amp;', '&'))
+            title, _, media = raw.rpartition(' - ')
+            title = title or raw
+            if title in seen:
+                continue
+            seen.add(title)
+            town = higashi_town(title)
+            if not town or not HIGASHI_EVENT_RE.search(title) or HIGASHI_DROP_RE.search(title):
+                continue
+            if ANNIV_RE.search(norm(title)) or (HOUSING_RE.search(title) and not NONHOUSE_RE.search(title)):
+                continue
+            pub = ''
+            if pm:
+                try:
+                    pub = parsedate_to_datetime(pm.group(1).strip()).date().isoformat()
+                except Exception:
+                    pub = ''
+            when, iso, ev = find_when(title)
+            # 年なし「10月31日」が記事日より前なら、それは「もうオープンした」日。来年に送らない
+            if iso and pub and iso > TODAY.isoformat() and (date.fromisoformat(iso) - date.fromisoformat(pub)).days > 240:
+                iso = iso.replace(iso[:4], str(int(iso[:4]) - 1), 1)
+            # 店名は「」『』のうち一番長いもの(「肉うどん」が箱崎へ…『うどん酒場 こめや』 → こめや側)
+            qs = re.findall(r'[「『]([^」』]{2,40})[」』]', title)
+            name = max(qs, key=len) if qs else guess_name(title)
+            out.append(dict(name=name, kind=guess_kind(title), event=ev or '',
+                            when=when or '', when_iso=iso or '', title=title, address='',
+                            area='福岡市東区' + ('' if town in ('福岡市東区', '東区') else town), area_src='gnews',
+                            ward='福岡市東区', pub=pub, media=media.strip(),
+                            src='Googleニュース(%s)' % (media.strip() or '?'), src_url=lm.group(1).strip(),
+                            note='記事 %s' % pub if pub else ''))
+            n += 1
+        print('  「%s」 東区ヒット %d件' % (q, n))
+    return out
+
+
 SOURCES = [
     ('福岡市 大店立地法(新設)',   src_city_daiten),
     ('福岡県 大店立地法(新設)',   src_pref_daiten),
@@ -823,6 +922,7 @@ SOURCES = [
     ('saitoshika-west 福岡',      src_saitoshika),
     ('福岡市 記者発表',           src_city_press),
     ('福岡市 公園づくり(Park-PFI)', src_city_parks),
+    ('Googleニュース 福岡市東区(小さな店も)', src_gnews_higashi),
 ]
 
 
@@ -935,6 +1035,54 @@ def show_areas(items):
     print('(1件だけのエリア %d / エリア不明(所在地なし) %d件 — 見出し由来の案件は所在地が無いので手で area を入れると集計に乗る)' % (single, noarea))
 
 
+def is_higashi(x):
+    if x.get('ward') == '福岡市東区':
+        return True
+    if '福岡市東区' in (x.get('address') or '') + (x.get('area') or ''):
+        return True
+    # 見出し由来(所在地なし)は名前だけで判定。title まで見ると「…香椎浜北公園、音羽公園…」の並びで他区の公園が混ざる
+    return bool(higashi_town(x.get('name') or ''))
+
+
+def show_higashi(items, recent_days=45):
+    """福岡市東区だけの欄。規模を問わず出す: ①これから(日付あり) ②時期不明 ③最近オープン(記事が45日以内)"""
+    hx = [x for x in items if is_higashi(x)]
+    today = TODAY.isoformat()
+    fut = sorted([x for x in hx if x.get('when_iso') and x['when_iso'] >= today], key=lambda x: x['when_iso'])
+    und = [x for x in hx if not x.get('when_iso') and (not x.get('pub') or
+           (TODAY - date.fromisoformat(x['pub'])).days <= recent_days)]
+    rec = sorted([x for x in hx if x.get('when_iso') and x['when_iso'] < today and
+                  (TODAY - date.fromisoformat(x['when_iso'])).days <= recent_days],
+                 key=lambda x: x['when_iso'], reverse=True)
+    # 同じ店の記事が媒体違いで何本も出る(REC COFFEE が3本)。名前の頭8文字が同じなら日付ありを優先して1件に
+    def dedupe(rows):
+        keep, seen = [], {}
+        for x in rows:
+            k = name_key(x['name'])[:8] if x.get('area_src') == 'gnews' else name_key(x['name'])
+            if k in seen or any(x.get('area_src') == 'gnews' and q.startswith(k) for q in seen):
+                continue
+            seen[k] = 1
+            keep.append(x)
+        return keep
+    allx = dedupe(sorted(fut + rec + und, key=lambda x: (not x.get('when_iso'), x.get('src') == 'manual')))
+    ids = set(map(id, allx))
+    fut, und, rec = [x for x in fut if id(x) in ids], [x for x in und if id(x) in ids], [x for x in rec if id(x) in ids]
+    print()
+    print('■ 福岡市東区(規模を問わず) — これから %d件 / 時期不明 %d件 / 最近オープン %d件' % (len(fut), len(und), len(rec)))
+    for label, rows in (('これから', fut), ('時期不明(記事は%d日以内)' % recent_days, und), ('最近オープン(%d日以内)' % recent_days, rec)):
+        if not rows:
+            continue
+        print('  ── %s ──' % label)
+        for x in rows:
+            left = '%d日後' % (date.fromisoformat(x['when_iso']) - TODAY).days if x.get('when_iso') else ''
+            if x.get('when_iso') and x['when_iso'] < today:
+                left = '%d日前' % (TODAY - date.fromisoformat(x['when_iso'])).days
+            print('  %-10s %-7s %-5s %-14s %-38s %s' % (x.get('when_iso') or (x.get('pub') or '')[:10], left,
+                  x['kind'], (x.get('area') or '-')[:14], x['name'][:38], x['src']))
+            if x.get('title') and x['title'] != x['name']:
+                print('%s%s' % (' ' * 14, x['title'][:90]))
+
+
 def show(items, show_all, kind=None):
     if kind:
         items = [x for x in items if x.get('kind') == kind]
@@ -1006,7 +1154,13 @@ def main():
         print()
         print('新規 %d件を追記 → %s(累計 %d件)' % (total, os.path.relpath(OUT, os.path.join(HERE, '..')), len(items)))
     save(items)
-    show(items, '--all' in args, kind)
+    if '--higashi' in args:
+        show_higashi(items)
+        print('OPENING_WATCH_DONE')
+        return
+    # 本体の一覧は東区の小さな店(Googleニュース由来)で埋もれないよう外し、末尾に東区の欄を別に出す
+    show([x for x in items if x.get('area_src') != 'gnews'], '--all' in args, kind)
+    show_higashi(items)
     print('OPENING_WATCH_DONE')
 
 

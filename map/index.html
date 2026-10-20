@@ -232,7 +232,7 @@
   }
   .t-visited { background: #ffe3e3; color: #b02525; }   /* 赤ピン=訪問済み */
   .t-wish    { background: #e3ecff; color: #2b5cc4; }   /* 青ピン=下調べ済み */
-  .t-kids    { background: #eef7ee; color: #2f7a2f; }
+  .t-kids    { background: #e8772e; color: #fff; }   /* 子連れ歓迎 */
   .t-ltd     { background: #fff6d5; color: #8a6d00; font-weight: 800; }
   .t-fk      { background: #d9f2ee; color: #0b5348; font-weight: 800; }
   .t-video   { background: #fff3e3; color: #b05a00; }
@@ -399,6 +399,7 @@
   .filters.mainrow { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .filters.mainrow::-webkit-scrollbar { display: none; }
   .kids-btn { font-weight: 700; }
+  .kids-btn.kids-lv1 { opacity: .85; }   /* 可まで広げている段 */
   .icon-btn {
     margin-left: auto; flex: 0 0 auto;
     width: 36px; height: 34px; border-radius: 999px;
@@ -568,6 +569,13 @@
     border-radius: 999px; padding: 3px 9px; white-space: nowrap;
   }
   .kf-y { background: #eaf6ea; color: #2f7a2f; }   /* 確認できた */
+  .kf-w { background: #2f7a2f; color: #fff; font-weight: 700; }   /* 歓迎の根拠(店が子供のために用意しているもの) */
+  .kf-k { background: #fff; color: #5f6b5f; border: 1px solid #cfd8cf; }   /* 可レベル(座れる・入れる) */
+  /* 子連れ歓迎/可のバッジ(2026-10-19)。歓迎=塗りつぶしオレンジ、可=グレーの枠線 */
+  .kl { display: inline-flex; align-items: center; font-size: 11px; font-weight: 700; border-radius: 999px; padding: 3px 10px; white-space: nowrap; }
+  .kl-2 { background: #e8772e; color: #fff; }
+  .kl-1 { background: #fff; color: #6b6b6b; border: 1.5px solid #b9b9b9; }
+  .t-kids1 { background: #fff; color: #6b6b6b; border: 1px solid #c4c4c4; }
   .kf-f { background: #fdf2e2; color: #96650f; }   /* 店には無いが同じ建物にある */
   .kf-n { background: #f1f1f1; color: #8b8b8b; }   /* 無いと分かっている */
   .kf-s { font-size: 10px; opacity: .8; }
@@ -891,7 +899,7 @@
     <a class="cat-btn cat-link" href="./events.html">⏳ イベント</a>
   </div>
   <div class="filters mainrow">
-    <button class="filter-btn kids-btn active" id="kidsBtn" type="button" aria-pressed="true">👪 子連れOK</button>
+    <button class="filter-btn kids-btn active" id="kidsBtn" type="button" aria-pressed="true">👪 子連れ歓迎</button>
     <!-- 年齢は遊び場・宿タブのときだけ出る(.agefilters の表示条件は従来どおり body.cat-play / body.cat-onsen) -->
     <span class="agefilters">
       <button class="age-btn" data-age="baby">👶 乳幼児</button>
@@ -1003,6 +1011,7 @@ const DATA_URL = "../data/spots.json";
 const state = {
   spots: [],
   filter: "all",
+  kidsLevel: 2,      // ★2026-10-19: 子連れ歓迎(2)→可まで(1)→すべて(0) の3段。初期は歓迎だけ
   kidsOnly: true,    // ★「子連れOK」は最初からON(2026-10-14)。filter とは独立して掛かる(日帰りOK等と併用できる)
   category: "gourmet",
   q: "",
@@ -1041,40 +1050,86 @@ const kidsHas = v => v === true || v === "facility";
 
 const KIDS_FACILITY = [
   ["kidsChair", "🪑", "子供椅子"],
-  ["tatami",    "🧎", "座敷・小上がり"],
-  ["diaper",    "🚼", "おむつ替え"],
-  ["stroller",  "👶", "ベビーカーOK"],
   ["kidsMenu",  "🍽", "キッズメニュー"],
+  ["diaper",    "🚼", "おむつ替え"],
+  ["kidsSpace", "🧸", "キッズスペース"],
+  ["tatami",    "🧎", "座敷・小上がり"],
+  ["sofa",        "🛋", "ソファ席"],
+  ["horigotatsu", "🪵", "掘りごたつ"],
+  ["stroller",  "👶", "ベビーカーOK"],
+  ["babyKeep",    "🚻", "トイレに補助チェア"],
+  ["kidsPlate",   "🥣", "子供用の食器"],
 ];
+
+// ★子連れは「歓迎」と「可」の2段(2026-10-19ユーザー確定)
+//   歓迎(2) = 店が子供のために用意しているものがある: 子供椅子・キッズメニュー・おむつ替え台(店の)・キッズスペース・普段使える座敷
+//   可  (1) = 子供と座れる/入れるが店は大人向け: ソファ席・掘りごたつ・ベビーカー入店可・トイレの補助チェア・
+//             建物(モール)のおむつ替え等、△(子供用の食器・板のソファ)は2つ以上で可。△1つだけは入れない
+//   tatami:"banquet"(宴会用の座敷)は数えない。新項目が未入力の店は verdict の文言からも拾う
+const KIDS_WELCOME = ["kidsChair", "kidsMenu", "diaper", "kidsSpace"];
+const KIDS_CAN     = ["horigotatsu", "babyKeep", "stroller"];
+const NEG = "(?!.{0,4}(なし|無し|はない|ありません))";
+// ★喫煙可の店は無条件に「歓迎」にしない(2026-10-19ユーザー確定)。最大でも「可」
+//   spot.smoking: "ok"=喫煙可 / "separate"=分煙 / "no"=禁煙 / 未入力は verdict の文言から拾う
+function isSmokingOk(spot) {
+  if (spot.smoking) return spot.smoking === "ok";
+  return /(喫煙可|喫煙OK|全席喫煙|喫煙席あり|タバコOK|たばこOK)(?!.{0,2}(不可|なし))/.test(spot.verdict || "");
+}
+function kidsLevelOf(spot) {
+  const lv = kidsLevelRaw(spot);
+  return (lv === 2 && isSmokingOk(spot)) ? 1 : lv;
+}
+function kidsLevelRaw(spot) {
+  const k = spot.kids || {};
+  const v = spot.verdict || "";
+  // 家族風呂・貸切風呂は家族のために用意された設備
+  if (/家族風呂|家族湯|貸切風呂|貸切湯/.test((spot.genre || "") + v)) return 2;
+  // 家族で行った遊び場・宿(赤ピン)は、設備を登録していなくても歓迎(飲食店は設備が要る)
+  // (青ピンは取り込み時に with:"family" を仮置きしているため、withでは判定しない)
+  if (!spot.wish && spot.with === "family" && spotCats(spot).some(c => c !== "gourmet")) return 2;
+  if (KIDS_WELCOME.some(key => k[key] === true) || k.tatami === true) return 2;
+  if (k.kidsChair == null && new RegExp("(キッズチェア|子供椅子|子ども椅子|子供イス|ベビーチェア)" + NEG).test(v)) return 2;
+  if (k.kidsMenu == null && new RegExp("(お子様メニュー|お子さまメニュー|キッズメニュー|お子様ランチ|お子さまランチ|おこさまセット|お子様セット)" + NEG).test(v)) return 2;
+  if (k.kidsSpace == null && new RegExp("(キッズスペース|キッズルーム|プレイルーム)" + NEG).test(v)) return 2;
+  // ここから「可」
+  if (KIDS_CAN.some(key => kidsHas(k[key])) || k.sofa === true) return 1;
+  if (KIDS_WELCOME.some(key => k[key] === "facility")) return 1;   // 建物にはあるが店のものではない
+  if (k.sofa == null && new RegExp("ソファ" + NEG).test(v)) return 1;
+  if (k.horigotatsu == null && /掘りごたつ|掘り炬燵/.test(v)) return 1;
+  if (k.babyKeep == null && /ベビーキープ|補助便座|補助チェア/.test(v)) return 1;
+  let weak = 0;
+  if (k.sofa === "board") weak++;
+  if (kidsHas(k.kidsPlate)) weak++;
+  if (k.kidsPlate == null && /取り皿|取り分け|子(供|ども)用の?(食器|お?皿)/.test(v)) weak++;
+  return weak >= 2 ? 1 : 0;
+}
+// 歓迎の根拠になる項目か(チップを濃く出す)
+const isWelcomeKey = (key, val) => val === true && (KIDS_WELCOME.includes(key) || key === "tatami");
 
 function kidsFacilityHtml(spot) {
   const k = spot.kids || {};
   const yes = [], no = [];
   for (const [key, icon, label] of KIDS_FACILITY) {
     const v = k[key];
-    if (v === true) yes.push(`<span class="kf kf-y">${icon} ${label}</span>`);
+    if (key === "tatami" && v === "banquet") { yes.push(`<span class="kf kf-k">${icon} ${label}<span class="kf-s">宴会用</span></span>`); continue; }
+    if (key === "sofa" && v === "board") { yes.push(`<span class="kf kf-k">${icon} ${label}<span class="kf-s">板張り</span></span>`); continue; }
+    if (v === true) yes.push(`<span class="kf ${isWelcomeKey(key, v) ? "kf-w" : "kf-k"}">${icon} ${label}</span>`);
     else if (v === "facility") yes.push(`<span class="kf kf-f">${icon} ${label}<span class="kf-s">建物内</span></span>`);
     else if (v === false) no.push(`<span class="kf kf-n">${icon} ${label}<span class="kf-s">なし</span></span>`);
   }
-  if (k.noise === "ok") yes.push(`<span class="kf kf-y">🔉 騒いでも平気</span>`);
+  if (k.noise === "ok") yes.push(`<span class="kf kf-k">🔉 騒いでも平気</span>`);
+  if (isSmokingOk(spot)) no.push(`<span class="kf kf-n">🚬 喫煙可</span>`);
+  const lv = kidsLevelOf(spot);
+  const badge = lv === 2 ? `<span class="kl kl-2">👪 子連れ歓迎</span>` : lv === 1 ? `<span class="kl kl-1">🙆 子連れ可</span>` : "";
   // 「なし」は、他に確認できた設備がある店でだけ出す。
   // 単独で出すと、そもそも座敷を期待しない店(カウンターのラーメン屋等)にまで
   // 灰色のチップが並んで邪魔になるだけで、判断の足しにならない
-  if (!yes.length) return "";
-  return `<div class="card-kidsrow">${yes.join("")}${no.join("")}</div>`;
+  if (!yes.length && !badge) return "";
+  return `<div class="card-kidsrow">${badge}${yes.join("")}${yes.length ? no.join("") : ""}</div>`;
 }
 
-function isKidsOk(spot) {
-  // 温泉は家族風呂・貸切風呂があれば周りに気を遣わず子連れで入れる(=子連れOK扱い)
-  if (/家族風呂|家族湯|貸切風呂|貸切湯/.test((spot.genre || "") + (spot.verdict || ""))) return true;
-  // 行きたい(未訪問)スポットは、ネットで設備の裏が取れたものだけ子連れOK扱いにする
-  // (取り込み時に with:"family" を仮置きしているため、withでは判定しない)
-  if (spot.wish) {
-    const k = spot.kids || {};
-    return ["stroller", "diaper", "tatami", "kidsChair", "kidsMenu"].some(key => kidsHas(k[key]));
-  }
-  return spot.with === "family" || (spot.kids !== null && spot.kids !== undefined);
-}
+// 子連れ可以上か(直リンクで開くときの判定などに使う)
+function isKidsOk(spot) { return kidsLevelOf(spot) >= 1; }
 
 // 泊まれる施設か(明示フラグ optional: spot.stay)
 function canStay(s) {
@@ -1135,7 +1190,9 @@ function applyFilters(spots) {
     if (state.filter === "visited" && s.wish) return false;
     // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
     // 2026-10-14: 単独のフィルタ値ではなく state.kidsOnly(初期ON)として他の絞り込みと併用する
-    if ((state.kidsOnly || state.filter === "kids") && !isKidsOk(s)) return false;
+    // 2026-10-19: state.kidsLevel = 2(歓迎だけ・初期) / 1(可まで) / 0(すべて)
+    if (state.kidsLevel && kidsLevelOf(s) < state.kidsLevel) return false;
+    if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "limited" && !isLimited(s)) return false;
     if (state.filter === "fukko" && !isFukko(s)) return false;
     if (state.filter === "wish" && !s.wish) return false;
@@ -1310,7 +1367,6 @@ function cardHtml(spot) {
   //   「読まれた店」の計測は openDetail() 側で送る
   const area = spot.area ? escapeHtml(spot.area) : "";
   const cityArea = [spot.city ? escapeHtml(spot.city) : "", area].filter(Boolean).join("・");
-  const kidsOk = isKidsOk(spot);
   // 訪問済みだが動画がまだ無い店
   const v = spot.video || {};
   const noVideo = !spot.wish && !spot.memo && !v.youtube && !v.tiktok && !v.instagram;
@@ -1331,7 +1387,7 @@ function cardHtml(spot) {
       ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
       ${photoCreditHtml(spot)}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
-      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}${kidsOk ? `<div class="card-kids">${spot.wish ? "子連れOK(下調べ)" : "子連れOK"}</div>` : ""}
+      ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}
       ${videoLinksHtml(spot, "card-links")}
     </div>
   `;
@@ -1584,7 +1640,7 @@ function jumpToSpot(spot) {
     document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
     updateAreaBtn();
     document.querySelectorAll(".filter-btn[data-filter]").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
-    if (!isKidsOk(spot)) setKidsOnly(false);   // 設備未確認の店へ飛ぶときだけ子連れOKを外す
+    if (kidsLevelOf(spot) < state.kidsLevel) setKidsLevel(kidsLevelOf(spot));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
   }
   renderAll();
   focusSpot(spot);
@@ -1920,7 +1976,7 @@ function showClusterList(items, facility) {
            <span class="cl-genre">施設の情報</span>
          </span>
          <span class="cl-tags">
-           ${isKidsOk(parent) ? `<span class="cl-tag t-kids">子連れOK</span>` : ""}
+           ${kidsLevelOf(parent) === 2 ? `<span class="cl-tag t-kids">子連れ歓迎</span>` : kidsLevelOf(parent) === 1 ? `<span class="cl-tag t-kids1">子連れ可</span>` : ""}
            ${(parent.photos || []).length ? `<span class="cl-tag t-photo">📷 写真${parent.photos.length}枚</span>` : ""}
            <span class="cl-tag t-open">授乳室・トイレなど ›</span>
          </span>
@@ -1931,7 +1987,7 @@ function showClusterList(items, facility) {
     .slice().sort((a, b) => {
       const sc = s => {
         const v = s.video || {};
-        return ((v.youtube || v.tiktok || v.instagram) ? 4 : 0) + (!s.wish ? 2 : 0) + (isKidsOk(s) ? 1 : 0);
+        return ((v.youtube || v.tiktok || v.instagram) ? 4 : 0) + (!s.wish ? 2 : 0) + (kidsLevelOf(s) === 2 ? 1 : 0);
       };
       return sc(b) - sc(a) || (a.genre || "").localeCompare(b.genre || "", "ja");
     })
@@ -1942,7 +1998,7 @@ function showClusterList(items, facility) {
                : `<span class="cl-tag t-visited">🔴 訪問済み</span>`,
         isLimited(s) ? `<span class="cl-tag t-ltd">${campaignOf(s) ? "🤝 コラボ中" : "⏳ 期間限定"}</span>` : "",
         isFukko(s) ? `<span class="cl-tag t-fk">🏨 復興割${fukkoRate(s)}%OFF</span>` : "",
-        isKidsOk(s) ? `<span class="cl-tag t-kids">子連れOK</span>` : "",
+        kidsLevelOf(s) === 2 ? `<span class="cl-tag t-kids">子連れ歓迎</span>` : kidsLevelOf(s) === 1 ? `<span class="cl-tag t-kids1">子連れ可</span>` : "",
         (v.youtube || v.tiktok || v.instagram) ? `<span class="cl-tag t-video">🎬 動画あり</span>` : ""
       ].join("");
       return `<button class="cl-item" data-cid="${escapeHtml(s.id)}">
@@ -2118,15 +2174,23 @@ document.querySelectorAll(".filter-btn[data-filter]").forEach(btn => {
   });
 });
 
-// ★子連れOK(初期ON)。押すたびに ON/OFF
-function setKidsOnly(on) {
-  state.kidsOnly = !!on;
+// ★子連れボタン(2026-10-19): 押すたびに 歓迎 → 可まで → すべて → 歓迎…
+const KIDS_BTN_LABEL = { 2: "👪 子連れ歓迎", 1: "🙆 子連れ可まで", 0: "👪 すべて" };
+function setKidsLevel(lv) {
+  state.kidsLevel = lv;
+  state.kidsOnly = lv > 0;   // 旧フラグ(他の箇所の参照用)
   const b = document.getElementById("kidsBtn");
-  if (b) { b.classList.toggle("active", state.kidsOnly); b.setAttribute("aria-pressed", String(state.kidsOnly)); }
+  if (b) {
+    b.textContent = KIDS_BTN_LABEL[lv];
+    b.classList.toggle("active", lv > 0);
+    b.classList.toggle("kids-lv1", lv === 1);
+    b.setAttribute("aria-pressed", String(lv > 0));
+  }
 }
+function setKidsOnly(on) { setKidsLevel(on ? 2 : 0); }
 document.getElementById("kidsBtn").addEventListener("click", () => {
-  setKidsOnly(!state.kidsOnly);
-  try { window.icTrack && window.icTrack("kids_toggle", { on: state.kidsOnly ? 1 : 0 }); } catch (e) {}
+  setKidsLevel(state.kidsLevel === 2 ? 1 : state.kidsLevel === 1 ? 0 : 2);
+  try { window.icTrack && window.icTrack("kids_toggle", { on: state.kidsLevel }); } catch (e) {}
   populateAreaSelect(state.spots);
   renderAll();
 });
@@ -2184,7 +2248,7 @@ function openFromHash() {
     b.classList.toggle("active", b.dataset.filter === "all"));
   state.areas.clear();
   state.areasDraft.clear();
-  if (!isKidsOk(sp)) setKidsOnly(false);   // 設備未確認の店への直リンクだけ子連れOKを外す
+  if (kidsLevelOf(sp) < state.kidsLevel) setKidsLevel(kidsLevelOf(sp));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
   populateAreaSelect(state.spots);
   renderAll();
   focusSpot(sp);

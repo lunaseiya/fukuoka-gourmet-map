@@ -49,10 +49,26 @@
 |---|---|---|---|
 | `stroller` | boolean \| null | ベビーカーで入店できるか | `true` |
 | `diaper` | boolean \| null | おむつ替え台があるか | `false` |
-| `tatami` | boolean \| null | 座敷・小上がりがあるか | `true` |
+| `tatami` | boolean \| `"banquet"` \| null | 座敷・小上がりがあるか。宴会用で普段使えないなら `"banquet"` | `true` |
 | `kidsChair` | boolean \| null | キッズチェアがあるか | `true` |
+| `kidsMenu` | boolean \| null | キッズメニュー(お子様ランチ等)があるか | `true` |
+| `sofa` | boolean \| `"board"` \| null | ソファ席があるか。板張りのソファ(クッションなし)は `"board"` | `true` |
+| `horigotatsu` | boolean \| null | 掘りごたつの席があるか | `true` |
+| `babyKeep` | boolean \| null | トイレに補助チェア(ベビーキープ)があるか | `true` |
+| `kidsPlate` | boolean \| null | 子供用の食器(取り皿・スプーン)があるか | `true` |
+| `kidsSpace` | boolean \| null | キッズスペース・おもちゃ・赤ちゃんを寝かせられる席があるか | `true` |
 | `serveMin` | number \| null | 提供までの実測分数 | `12` |
 | `noise` | string \| null | 騒音許容度。`"ok"` / `"careful"` / `"ng"` | `"ok"` |
+
+**子連れの判定は「歓迎」と「可」の2段(2026-10-19ユーザー確定)**:
+- **歓迎** = 店が子供のために用意しているものがある … `kidsChair`・`kidsMenu`・`diaper`(店の)・`kidsSpace`・`tatami:true`(普段使える座敷)。
+  ほかに家族風呂・貸切風呂、家族で行った遊び場・宿(赤ピン・with:"family"・グルメ以外)
+- **可** = 子供と座れる/入れるが店は大人向け … `sofa:true`・`horigotatsu`・`stroller`・`babyKeep`・`"facility"`(モール等の建物にある)。
+  △(`kidsPlate`・`sofa:"board"`)は2つ以上で可、1つだけは入れない
+- **喫煙可の店は無条件に「歓迎」にしない**(最大でも可)。トップレベルの `smoking`: `"ok"`=喫煙可 / `"separate"`=分煙 / `"no"`=禁煙(未入力は verdict の「喫煙可」「全席喫煙」等から拾う)。**分煙は判定に影響させない**(2026-10-19ユーザー確定)
+- `tatami:"banquet"` = 座敷はあるが宴会用(普段は使えない)。数えない。⚠**掘りごたつを `tatami` で代用しない**(`horigotatsu` を使う)
+- 新項目が未入力の店は verdict の文言からも拾う。実装は `map/index.html` の `kidsLevelOf()`。
+  マップの子連れボタンは押すたびに 歓迎(初期) → 可まで → すべて
 
 ### video オブジェクト
 

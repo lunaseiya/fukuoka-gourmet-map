@@ -528,16 +528,22 @@
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    gap: 8px;
+    flex-wrap: wrap;   /* ジャンルが長いと店名が1文字幅に潰れて縦長になるので、入らなければジャンルを次の行へ(2026-10-21) */
+    gap: 2px 8px;
   }
   .card-name {
     font-size: 15px;
     font-weight: 700;
+    flex: 1 1 9em;
+    min-width: 0;
   }
   .card-genre {
     font-size: 12px;
     color: var(--muted);
     white-space: nowrap;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
   .card-area {
     font-size: 12px;

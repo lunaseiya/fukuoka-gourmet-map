@@ -181,6 +181,9 @@
     transition: transform .22s ease;
   }
   #clusterBox.open { transform: translateY(0); }
+  /* まとめピンのリストを出している間は下の一覧シートを隠す。隠さないと、リストの背の低いときに
+     一覧の先頭カード(ボートレース福岡など無関係の店)が上にはみ出して見える(2026-10-21ユーザー指摘) */
+  body.cl-open #bsheet { visibility: hidden; }
   .cl-head {
     display: flex; align-items: center; gap: 8px;
     padding: 12px 14px 8px;
@@ -1544,6 +1547,10 @@ const Sheet = (() => {
 
 // まとめピンのリスト(#clusterBox)の✕。⚠以前は openDetail() の中で登録していたため、
 // 詳細カードを一度も開いていない状態ではボタンが効かなかった(2026-10-16ユーザー指摘)。起動時に1回だけ登録する
+// 開閉は複数の場所から行うので、class の変化を見て body.cl-open を合わせる(一覧シートを隠す用)
+new MutationObserver(() => {
+  document.body.classList.toggle("cl-open", document.getElementById("clusterBox").classList.contains("open"));
+}).observe(document.getElementById("clusterBox"), { attributes: true, attributeFilter: ["class"] });
 document.getElementById("clusterClose").addEventListener("click", (ev) => {
   ev.stopPropagation();
   document.getElementById("clusterBox").classList.remove("open");

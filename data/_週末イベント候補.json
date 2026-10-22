@@ -28,26 +28,17 @@
   "manual": 1
  },
  "selected": [
-  "https://www.city.fukuoka.lg.jp/shicho/koho/event/weekend_event.html",
-  "https://www.city.fukuoka.lg.jp/shicho/koho/event/weekend_event.html",
-  "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974157/",
-  "https://kashiihama.aeon-kyushu.info/event/cf9a9cb5-9bdc-4b34-a173-74cd4d6d4801",
-  "https://e-zofukuoka.com/news/event/2026100937970/",
-  "https://www.jrhakatacity.com/kids/detail/?cd=000185",
-  "https://iko-yo.net/events/600895",
-  "https://www.izumi.jp/tenpo/kurume/event/20260910-607494",
-  "https://www.izumi.jp/tenpo/hakata/event/20261006-610039",
-  "https://www.izumi.jp/tenpo/omuta/event/20261002-609734",
   "https://yokanavi.com/events/274546",
-  "https://torius.com/event/205526/",
-  "https://www.boatrace-fukuoka.com/modules/news/?page=index_event&storyid=2698",
-  "https://lunaseiya.github.io/fukuoka-gourmet-map/#spot=ev-aso-165201-duema",
-  "https://welcome-kurume.com/events/detail/efec13aa-af81-4244-9320-024be37d4475",
-  "https://fukutsu.aeonmall.jp/event/b604bfdc-23b4-4942-9b51-1d6d302ff21a",
   "https://www.jrhakatacity.com/kids/detail/?cd=000169",
-  "https://iko-yo.net/events/607251",
-  "https://yokanavi.com/events/274549",
-  "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974815/"
+  "https://chikushino.aeonmall.jp/event/917b283b-7dbd-4866-a955-8b0bde65e4c7",
+  "https://iko-yo.net/events/600895",
+  "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974815/",
+  "https://kashiihama.aeon-kyushu.info/event/75e405fa-c8f2-44fc-965e-9b9bd6d2715e",
+  "https://fukutsu.aeonmall.jp/event/b8808059-1dec-4266-a880-c704fd4aaeb9",
+  "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974165/",
+  "https://kashiihama.aeon-kyushu.info/event/cf9a9cb5-9bdc-4b34-a173-74cd4d6d4801",
+  "https://fukutsu.aeonmall.jp/event/b604bfdc-23b4-4942-9b51-1d6d302ff21a",
+  "https://torius.com/event/205526/"
  ],
  "events": [
   {
@@ -237,14 +228,15 @@
    "left": 2,
    "since": -2,
    "kids_add": 0,
-   "score": 32
+   "score": 32,
+   "addr": "福岡県福岡市西区豊浜3丁目1-10"
   },
   {
    "src": "いこーよ",
    "title": "【福岡市】キッズマネースクール★ワクワクおかいもの大作戦",
    "poster2": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755665/normal.png?1789478847",
    "city": "福岡市博多区",
-   "venue": "",
+   "venue": "パピヨン24",
    "url": "https://iko-yo.net/events/600895",
    "span": [
     "2026-10-24",
@@ -255,7 +247,7 @@
    "lead": "【参加無料】親子で楽しむ体験型のお金のイベント",
    "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755665/normal.png?1789478847",
    "venues": [
-    "いこーよ"
+    "パピヨン24"
    ],
    "srcs": [
     "いこーよ"
@@ -264,13 +256,14 @@
    "left": 2,
    "since": -2,
    "kids_add": 0,
-   "score": 31
+   "score": 31,
+   "addr": "福岡県福岡市博多区千代1丁目17-1"
   },
   {
    "src": "よかなび",
    "title": "ひかりの鴻臚館まつり【舞鶴公園鴻臚館広場】2026年～鴻臚館北館東門の復元後初公開・平安時代の外交拠点「鴻臚館」が光と体験で蘇る！～",
    "city": "福岡市",
-   "venue": "大濠・六本松（福岡城・鴻臚館）エリア",
+   "venue": "舞鶴公園 鴻臚館広場",
    "url": "https://yokanavi.com/events/274546",
    "span": [
     "2026-10-17",
@@ -282,8 +275,7 @@
    "lead": "全長6mの「光る遣唐使船」や古代の遊びを現代技術で遊ぶ「ひかる屋台」、平安の食文化に着想を得た「平安ジビエ」まで。夜の舞鶴公園が歴史体験空間に！ 古代〜平安時代、大陸との外交・交易の拠点であった迎賓館「鴻臚館」。その「北館東門」の復元公開に合わせ、光・体験・食で歴史を体感するナイトイベントを開催します。 ★会場の見どころ★光・遊び・食の3テーマで、古代の鴻臚館を“夜”に体感 01｜光で彩る...",
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwODYzLCJwdXIiOiJibG9iX2lkIn19--f020fb0822618078e12af9c74c8f834cf1e4aed7/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/%E7%A2%BA%E5%AE%9A%E7%89%88_260925_%E3%81%B2%E3%81%8B%E3%82%8A%E3%81%AE%E9%B4%BB%E8%87%9A%E9%A4%A8%E3%81%BE%E3%81%A4%E3%82%8A_%E3%83%81%E3%83%A9%E3%82%B7_page-0001.jpg",
    "venues": [
-    "大濠・六本松（福岡城・鴻臚館）エリア",
-    "舞鶴公園・鴻臚館広場"
+    "舞鶴公園 鴻臚館広場"
    ],
    "srcs": [
     "よかなび",
@@ -293,7 +285,8 @@
    "left": 3,
    "since": 5,
    "kids_add": 0,
-   "score": 31
+   "score": 31,
+   "addr": "福岡県福岡市中央区城内1-1"
   },
   {
    "src": "イオンモール香椎浜",
@@ -710,7 +703,7 @@
     "メイクアップブースやヘアアレンジブースもあるのでその場でかわいく変身できちゃいます！ 今年は仮装コンテストも開催しますので、皆様からのエントリーをお待ちしています！ 日時：2026年10月25日(日) 11:00-16:30 場所：トリアスモールスクエア イベントコンテンツ紹介 ＜仮装パレード＞ トリアスモールを練り歩く爆音仮装パレード！ パレード参加者にはお菓子をプレゼント！ 【時間】15:00",
     "（先着100名） お菓子交換チケットが無くてもパレードには参加できます！ 始発点：マップA ＜お菓子まきパーティー＞ ハロウィン特別企画 全員参加可能なお菓子まきパーティーを開催！"
    ],
-   "poster": null,
+   "poster": "https://torius.com/wp-content/uploads/2026/09/2609%E3%83%8F%E3%83%AD%E3%82%A6%E3%82%A3%E3%83%B3%E3%82%AB%E3%83%BC%E3%83%8B%E3%83%90%E3%83%AB_B2%E3%83%9D%E3%82%B9%E3%82%BF%E3%83%BC_OL-1087x1536.jpg",
    "venues": [
     "トリアス久山"
    ],
@@ -721,7 +714,8 @@
    "left": 3,
    "since": -3,
    "kids_add": 0,
-   "score": 22
+   "score": 22,
+   "addr": "福岡県糟屋郡久山町大字山田1111"
   },
   {
    "src": "イオンモール筑紫野",
@@ -1345,7 +1339,8 @@
    "left": 2,
    "since": -2,
    "kids_add": 0,
-   "score": 17
+   "score": 17,
+   "addr": "福岡県福岡市西区豊浜3丁目1-10"
   },
   {
    "src": "いこーよ",
@@ -4849,5 +4844,6 @@
    "kids_add": 0,
    "score": 1
   }
- ]
+ ],
+ "selected_note": "2026-10-22 ユーザー選抜11件(7 まち育ミライ・24 おぱんちゅうさぎは外した)"
 }

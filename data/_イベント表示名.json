@@ -210,5 +210,49 @@
  "https://www.crossroadfukuoka.jp/event/12237": {
   "name": "ちっご祭2026(花火あり)",
   "venue": "県営筑後広域公園"
+ },
+ "https://yokanavi.com/events/274546": {
+  "name": "ひかりの鴻臚館まつり",
+  "venue": "舞鶴公園 鴻臚館広場"
+ },
+ "https://www.jrhakatacity.com/kids/detail/?cd=000169": {
+  "name": "ミニ動物園 ビジョナリーアーZooの杜",
+  "venue": "JR博多シティ 屋上つばめの杜ひろば"
+ },
+ "https://iko-yo.net/events/600895": {
+  "name": "キッズマネースクール おかいもの大作戦",
+  "venue": "パピヨン24(千代)"
+ },
+ "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974815/": {
+  "name": "ひつじのショーン ミニミニバラエティショー",
+  "venue": "イオンマリナタウン店"
+ },
+ "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/1974165/": {
+  "name": "ハロウィントレイン",
+  "venue": "イオンマリナタウン店"
+ },
+ "https://kashiihama.aeon-kyushu.info/event/75e405fa-c8f2-44fc-965e-9b9bd6d2715e": {
+  "name": "ハワイアンフェスタvol.6",
+  "venue": "イオンモール香椎浜"
+ },
+ "https://kashiihama.aeon-kyushu.info/event/cf9a9cb5-9bdc-4b34-a173-74cd4d6d4801": {
+  "name": "ハロウィン演奏＆九産大まなびやマルシェ",
+  "venue": "イオンモール香椎浜"
+ },
+ "https://fukutsu.aeonmall.jp/event/b604bfdc-23b4-4942-9b51-1d6d302ff21a": {
+  "name": "福岡黒田忍者隊 忍者ショー＆手裏剣打ち体験",
+  "venue": "イオンモール福津"
+ },
+ "https://fukutsu.aeonmall.jp/event/b8808059-1dec-4266-a880-c704fd4aaeb9": {
+  "name": "チャイニー古賀 変面・マジックショー",
+  "venue": "イオンモール福津"
+ },
+ "https://torius.com/event/205526/": {
+  "name": "ハロウィンカーニバル2026",
+  "venue": "トリアス久山"
+ },
+ "https://chikushino.aeonmall.jp/event/917b283b-7dbd-4866-a955-8b0bde65e4c7": {
+  "name": "ハロウィンパレード",
+  "venue": "イオンモール筑紫野"
  }
 }

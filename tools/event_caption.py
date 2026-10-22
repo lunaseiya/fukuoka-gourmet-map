@@ -29,6 +29,7 @@ sys.stdout.reconfigure(encoding='utf-8')
 HERE = os.path.dirname(os.path.abspath(__file__))
 CAND = os.path.join(HERE, '..', 'data', '_週末イベント候補.json')
 OVER = os.path.join(HERE, '..', 'data', '_イベント表示名.json')
+EVENTS_URL = 'https://lunaseiya.github.io/fukuoka-gourmet-map/map/events.html'   # マップの「⏳イベント」一覧(export_events.py)
 WK = '月火水木金土日'
 LIMIT = {'instagram': 2200, 'tiktok': 2200, 'youtube': 5000}
 MARGIN = 80          # 上限ぴったりを狙うと弾かれるので手前で止める
@@ -119,6 +120,14 @@ def block(ev, i, ov, today, with_url):
 def build(evs, plat, ov, today, frm, to, lead_title):
     head = ['【福岡】%s〜%s %s 子連れおでかけ%d選'
             % (md(frm), md(to), lead_title, len(evs)), '']
+    # ★マップ誘導は**最初**に置く(2026-10-22ユーザー指示「後ろになっていたはずなので、最初にmap誘導」)。
+    #   載せきれなかったイベントがマップのイベント一覧にあることを、本文を読む前に伝える
+    if plat == 'youtube':
+        head += ['🗺ここに載せきれなかった分も含めて、福岡の子連れイベントは全部この一覧に載せてます(毎日更新・日付で絞れます)',
+                 EVENTS_URL, '']
+    else:
+        head += ['🗺ここに載せきれなかった分も含めて、福岡の子連れイベントは全部',
+                 '　プロフィールのマップ →「⏳イベント」に載せてます(日付で絞れます)', '']
     head += ['家族で行けるところを今週分まとめました。',
              '★は今週で終わるものです。', '']
     if plat == 'youtube':
@@ -129,7 +138,7 @@ def build(evs, plat, ov, today, frm, to, lead_title):
     body = [block(e, i, ov, today, plat == 'youtube') for i, e in enumerate(evs, 1)]
     tail = ['──────────',
             '保存しておくと行くときに使えます📌',
-            '期間限定イベントはプロフィールのマップにも載せてます🗺', '',
+            '載せきれなかったイベントはプロフィールのマップ →「⏳イベント」へ🗺', '',
             '※画像は各主催者・施設の告知物です(出典は各カードに記載)',
             '※キャラクター作品の画像は権利の都合で掲載していません',
             '※お出かけ前に公式サイトで最新情報をご確認ください', '',

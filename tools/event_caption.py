@@ -168,17 +168,29 @@ def teaser(D, evs, ov, frm, to, n):
     return [clean_title(disp(e, ov)[0]) for e in picked[:n]]
 
 
-def build(evs, plat, ov, today, frm, to, lead_title, more=()):
-    head = ['【福岡】%s〜%s %s 子連れおでかけ%d選'
-            % (md(frm), md(to), lead_title, len(evs)), '']
+def count_in_window(D, frm, to):
+    """窓に掛かるイベントの件数(マップの「⏳イベント」に出る数の目安)"""
+    fs, ts = frm.isoformat(), to.isoformat()
+    return sum(1 for e in D['events'] if (e.get('span') or [None])[0]
+               and e['span'][0] <= ts and (e['span'][1] or e['span'][0]) >= fs)
+
+
+def build(evs, plat, ov, today, frm, to, lead_title, more=(), total=0):
+    # ★1行目は「ほか◯件はマップに」【2026-10-23ユーザー確定】。
+    #   フィードでは1〜2行しか見えないので、タイトル行より先にマップの存在と件数を出す
+    head = []
+    if total:
+        head.append('🗺福岡の子連れイベント、今週末は約%d件。ここには%d件だけ載せてます'
+                    % (round(total, -1), len(evs)))
+    head += ['【福岡】%s〜%s %s 子連れおでかけ%d選'
+             % (md(frm), md(to), lead_title, len(evs)), '']
     # ★マップ誘導は**最初**に置く(2026-10-22ユーザー指示「後ろになっていたはずなので、最初にmap誘導」)。
     #   載せきれなかったイベントがマップのイベント一覧にあることを、本文を読む前に伝える
+    rest = ('残り約%d件は' % round(total - len(evs), -1)) if total else 'ここに載せきれなかった分も含めて、福岡の子連れイベントは全部'
     if plat == 'youtube':
-        head += ['🗺ここに載せきれなかった分も含めて、福岡の子連れイベントは全部この一覧に載せてます(毎日更新・日付で絞れます)',
-                 EVENTS_URL, '']
+        head += [rest + 'この一覧に載せてます(毎日更新・日付で絞れます)🗺', EVENTS_URL, '']
     else:
-        head += ['🗺ここに載せきれなかった分も含めて、福岡の子連れイベントは全部',
-                 '　プロフィールのマップ →「⏳イベント」に載せてます(日付で絞れます)', '']
+        head += [rest + 'プロフィールのマップ →「⏳イベント」に載せてます(日付で絞れます)🗺', '']
     head += ['家族で行けるところを今週分まとめました。',
              '日程・時間・何ができるかは各カードに書いてます。', '']
     if plat == 'youtube':
@@ -186,7 +198,8 @@ def build(evs, plat, ov, today, frm, to, lead_title, more=()):
     body = [block(e, i, ov, today, plat == 'youtube') for i, e in enumerate(evs, 1)]
     tail = ['──────────']
     if more:
-        tail += ['🗺ほかにもこんなイベントがあります(載せきれなかった分)'] + ['・' + t for t in more] \
+        tail += ['🗺ほかにもこんなイベントがあります(載せきれなかった%sから5つ)'
+                 % (('約%d件' % round(total - len(evs), -1)) if total else '分')] + ['・' + t for t in more] \
               + ['→ 全部プロフィールのマップ →「⏳イベント」に載せてます' if plat != 'youtube'
                  else '→ 全部ここに載せてます ' + EVENTS_URL, '']
     tail += ['保存しておくと行くときに使えます📌', '',
@@ -229,6 +242,7 @@ def main():
                and e['span'][0] <= ts and (e['span'][1] or e['span'][0]) >= fs]
     today = d(a.today) if a.today else frm
     more = teaser(D, evs, ov, frm, to, a.teaser) if a.teaser else []
+    total = count_in_window(D, frm, to)
     if more:
         print('ほかにもこんなイベント:', ' / '.join(more))
         if not a.f and not a.t:
@@ -239,7 +253,7 @@ def main():
         use = list(evs)
         # **上限を超えたら件数を減らす**。末尾を切ると読者に不親切
         while True:
-            s = build(use, plat, ov, today, frm, to, a.title, more)
+            s = build(use, plat, ov, today, frm, to, a.title, more, total)
             if clen(s) <= LIMIT[plat] - MARGIN or len(use) <= 6:
                 break
             use = use[:-1]

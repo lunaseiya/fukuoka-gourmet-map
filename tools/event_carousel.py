@@ -243,25 +243,47 @@ MAPSHOT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\マッ�
 COVER_DEFAULT = r'C:\Users\totor\Dropbox\ショート動画用\5.共通素材\表紙用_キャナル噴水_縦.jpg'
 
 
-def closing():
+def closing(more=(), total=0, shown=0):
     """締め。**マップ画面 → イベント一覧 の2枚を横並びにして矢印で結ぶ**
     【2026-09-24ユーザー指示】。1枚だけだと「どこを押せばこの一覧に行くのか」が
     伝わらない。左=マップでイベントタブを押すところ(赤丸付き) / 右=出てくる一覧。
-    素材は 5.共通素材/マップ操作_静止カード_マップ画面.jpg と _イベント一覧.png"""
+    素材は 5.共通素材/マップ操作_静止カード_マップ画面.jpg と _イベント一覧.png
+    ★上段に「ほかにもこんなイベント」(載せなかった5件のタイトル)と、載せた件数/マップの件数を出す
+      【2026-10-23ユーザー確定】。キャプションは折りたたまれて読まれにくいので、
+      最後のカードで「まだある」を見せてからマップ誘導につなげる"""
     im = Image.new('RGBA', (W_, H_), BG + (255,))
     d = ImageDraw.Draw(im)
-    d.text((W_ // 2, 46), '気になったイベントは「検索」の言葉で調べられます',
-           font=font(MEI, 30), fill=SUB + (255,), anchor='ma')
-    d.text((W_ // 2, 96), '行った店も 今やってるイベントも', font=font(MEIB, 44),
-           fill=INK + (255,), anchor='ma')
-    d.text((W_ // 2, 152), 'マップにまとめてます', font=font(ROUND, 72),
-           fill=PREF_RED + (255,), anchor='ma')
-    y = 268
+    if more:
+        if total:
+            d.text((W_ // 2, 40), '載せたのは%d件。福岡の子連れイベントは今週末だけで約%d件'
+                   % (shown, round(total, -1)), font=font(MEI, 30), fill=SUB + (255,), anchor='ma')
+        d.text((W_ // 2, 90), 'ほかにもこんなイベントが', font=font(MEIB, 44),
+               fill=INK + (255,), anchor='ma')
+        d.text((W_ // 2, 146), 'マップにまとめてます', font=font(ROUND, 72),
+               fill=PREF_RED + (255,), anchor='ma')
+        # 5件のタイトル箱
+        pitch, pad = 52, 22
+        bh = pad * 2 + pitch * len(more)
+        box = rounded((W_ - 120, bh), 22, (255, 251, 240, 255))
+        bd = ImageDraw.Draw(box)
+        bd.rounded_rectangle((0, 0, W_ - 121, bh - 1), 22, outline=(232, 214, 178, 255), width=3)
+        for k, t in enumerate(more):
+            bd.text((40, pad + k * pitch + 4), '・' + t, font=font(MEIB, 34), fill=INK + (255,))
+        shadow(im, box, (60, 250), blur=14, alpha=40, dy=5)
+        y = 250 + bh + 40
+        ch, gap = 420, 80
+    else:
+        d.text((W_ // 2, 46), '気になったイベントは「検索」の言葉で調べられます',
+               font=font(MEI, 30), fill=SUB + (255,), anchor='ma')
+        d.text((W_ // 2, 96), '行った店も 今やってるイベントも', font=font(MEIB, 44),
+               fill=INK + (255,), anchor='ma')
+        d.text((W_ // 2, 152), 'マップにまとめてます', font=font(ROUND, 72),
+               fill=PREF_RED + (255,), anchor='ma')
+        y = 268
+        ch, gap = 620, 96
     shots = [(MAPSHOT, 'マップのイベントタブを押すと'), (MAPCARD, '今週のイベントが一覧で出ます')]
     have = [(a, b) for a, b in shots if os.path.exists(a)]
     if have:
-        ch = 620
-        gap = 96
         cws = []
         for a, _b in have:
             c = Image.open(a).convert('RGB')
@@ -274,8 +296,9 @@ def closing():
             card = rounded((cw + 16, ch + 16), 18, (255, 255, 255, 255))
             card.paste(c.resize((cw, ch), Image.LANCZOS), (8, 8))
             shadow(im, card, (x, y), blur=20, alpha=66, dy=7)
-            d.text((x + (cw + 16) // 2, y + ch + 34), cap, font=font(MEIB, 27),
-                   fill=SUB + (255,), anchor='ma')
+            if not more:      # 小さい2枚のときは下で1行にまとめる(2枚の下に別々だと重なる)
+                d.text((x + (cw + 16) // 2, y + ch + 34), cap, font=font(MEIB, 27),
+                       fill=SUB + (255,), anchor='ma')
             if k < n - 1:
                 ax = x + cw + 16 + 16
                 ay = y + ch // 2
@@ -285,11 +308,24 @@ def closing():
                 d.polygon([(ax + aw - 28, ay - 28), (ax + aw, ay), (ax + aw - 28, ay + 28)],
                           fill=PREF_RED + (255,))
             x += cw + 16 + gap
+        if more:
+            d.text((W_ // 2, y + ch + 34), 'マップのイベントタブを押すと → 今週のイベントが一覧で出ます',
+                   font=font(MEIB, 27), fill=SUB + (255,), anchor='ma')
         y += ch + 92
-    for lb, dy in (('子供椅子で絞れる', 0), ('おむつ替えで絞れる', 56), ('期間限定も出る', 112)):
-        t = pill(lb, (96, 90, 86), 28)
-        im.alpha_composite(t, ((W_ - t.width) // 2, y + dy))
-    y += 186
+    if more:
+        # 機能ピルは横1列(縦に積む高さが無い)
+        ps = [pill(lb, (96, 90, 86), 28) for lb in ('子供椅子で絞れる', 'おむつ替えで絞れる', '期間限定も出る')]
+        tw = sum(p.width for p in ps) + 24 * (len(ps) - 1)
+        x = (W_ - tw) // 2
+        for p in ps:
+            im.alpha_composite(p, (x, y))
+            x += p.width + 24
+        y += 86
+    else:
+        for lb, dy in (('子供椅子で絞れる', 0), ('おむつ替えで絞れる', 56), ('期間限定も出る', 112)):
+            t = pill(lb, (96, 90, 86), 28)
+            im.alpha_composite(t, ((W_ - t.width) // 2, y + dy))
+        y += 186
     pl = pill('プロフィールのリンクから見れます', PREF_RED, 38)
     shadow(im, pl, ((W_ - pl.width) // 2, y))
     d.text((W_ // 2, H_ - 50), '保存しておくと行くときに使えます',
@@ -873,7 +909,18 @@ def main():
         cur = next((x for x in alld if sp[0] and sp[0] <= x <= (sp[1] or sp[0])), None)
         pages.append(('%02d_%s' % (i + 1, re.sub(r'[^\w一-龥ぁ-んァ-ヶー]', '', ev['title'])[:16]),
                       card(ev, i, extra, alld if use_tabs else None, cur)))
-    pages.append(('%02d_締め' % (len(evs) + 2), closing()))
+    # ★締めに「ほかにもこんなイベント」5件と件数(キャプションと同じ teaser())【2026-10-23】
+    more, total = [], 0
+    try:
+        import event_caption as EC
+        ov = json.load(io.open(EC.OVER, encoding='utf-8')) if os.path.exists(EC.OVER) else {}
+        more = EC.teaser(D, evs, ov, f, t, 5)
+        total = sum(1 for e in D['events'] if inwin(e))
+        if more:
+            print('締めの「ほかにも」:', ' / '.join(more), '/ 窓の件数', total)
+    except Exception as ex:
+        print('※締めの「ほかにも」を作れなかった:', type(ex).__name__, ex)
+    pages.append(('%02d_締め' % (len(evs) + 2), closing(more, total, len(evs))))
     for name, im in pages:
         p = os.path.join(out, name + '.jpg')
         im.save(p, quality=92)

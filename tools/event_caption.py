@@ -76,48 +76,99 @@ def span_txt(ev, today):
     return s
 
 
+def fee_txt(ev):
+    # 料金は 補足の free → price → 不明 の順(2026-10-16: price を見ておらず「公式で確認」ばかりだった)
+    pr = (ev.get('price') or '').strip()
+    return '¥無料' if ev.get('free') else ('¥' + pr if pr and len(pr) <= 18 else '¥有料(料金は公式で確認)')
+
+
 def block(ev, i, ov, today, with_url):
+    """1件 = 2行。**場所と無料/有料だけ**【2026-10-23ユーザー確定】
+    「検索ワードは使うことはおそらくない。日時もカードを見てもらうのでいらない。
+     つまり場所と、無料有料しか載せません」
+    → 🔎検索ワード・📅日程・🕐時間・🅿駐車は落とした(全部カードに書いてある)。
+      YouTube だけはカードが無いので 📅 と公式URLを残す。"""
     name, venue = disp(ev, ov)
     L = ['%d. %s' % (i, name[:46])]
     line = '   📍%s' % (venue or ev.get('city') or '')
     if ev.get('city') and ev['city'] not in line:
         line += '(%s)' % ev['city']
-    L.append('%s  📅%s' % (line, span_txt(ev, today)))
-    # 時間・料金・駐車は**入り切らないなら項目ごと落とす**。途中で切らない
-    bits = []
-    if ev.get('time'):
-        bits.append('🕐' + ev['time'])
-    # 料金は 補足の free → price → 不明 の順(2026-10-16: price を見ておらず「公式で確認」ばかりだった)
-    pr = (ev.get('price') or '').strip()
-    bits.append('¥無料' if ev.get('free') else ('¥' + pr if pr and len(pr) <= 18 else '¥料金は公式で確認'))
-    pk = (ev.get('parking') or '').strip()
-    if pk and len(pk) <= 18:
-        bits.append('🅿' + pk)
-    L.append('   ' + ' '.join(bits))
-    # 検索ワードは施設名 + タイトルの核。**壊れた会場名を混ぜない**
-    # タイトルの核。**語の区切りで切る**。字数で機械的に切ると
-    # 「キャナルお目覚めフェス zo」「イオンモールでプリキュアを探」のように途中で切れて検索できない。
-    # 「!」は名前の一部(「チン!するレストラン」「もっと！こどもの視展」)なので消さない
-    t = re.sub(r'[【】『』（）()\[\]★☆♪～~/・]+', ' ', name)
-    core, n = '', 0
-    for w in re.sub(r'\s+', ' ', t).strip().split(' '):
-        if n and n + 1 + len(w) > 18:
-            break
-        core, n = (core + ' ' + w).strip(), n + (1 if n else 0) + len(w)
-    core = core or re.sub(r'\s+', ' ', t).strip()[:18]
-    # 検索ワードの会場は**館内の場所を落として施設名だけ**にする。
-    # 「イオン甘木店 2階 楽市楽座横」まで入れると検索でヒットしない
-    sv = re.split(r'\s+(?=[0-9０-９]+\s*[FＦ階]|特設|セントラル|イベントホール|会場)',
-                  venue or '')[0].strip()
-    # 施設名がタイトルに既に入っているなら重ねない(「筥崎宮 筥崎宮 放生会」を作らない)
-    kw = core if (sv and sv in core) else ('%s %s' % (sv or ev.get('city') or '', core)).strip()
-    L.append('   🔎「%s」で検索' % kw)
+    line += ' ' + fee_txt(ev)
+    if with_url:
+        line += '  📅' + span_txt(ev, today)
+    L.append(line)
+    # 要予約のものは**申込の動線**を1行足す(2026-10-23ユーザー「LINE予約のやり方わかる動線載せられますか」)。
+    # `_イベント補足.json` の reserve(文)/reserve_url(YouTube用)に書く
+    if ev.get('reserve'):
+        L.append('   📲要予約: ' + ev['reserve'])
+        if with_url and ev.get('reserve_url'):
+            L.append('   ' + ev['reserve_url'])
     if with_url:
         L.append('   ' + (ev.get('official') or ev['url']))
     return '\n'.join(L)
 
 
-def build(evs, plat, ov, today, frm, to, lead_title):
+IP_RE = re.compile(r'ポケモン|ピカチュウ|プリキュア|サンリオ|ちいかわ|おぱんちゅ|ピングー|デュエル|アンパンマン|'
+                   r'ディズニー|すみっコ|パウ・?パトロール|鬼滅|仮面ライダー|ウルトラマン|トミカ|プラレール|'
+                   r'おでかけ情報')   # 最後は福岡市の週報ページ(イベント名ではない)
+
+
+def clean_title(t):
+    """「【10/24(土)博多】無料ハロウィン撮影会🎃」→「無料ハロウィン撮影会」。
+    先頭の【】・末尾の絵文字・半端な副題を落として22字まで(語の区切りで切る)"""
+    t = re.sub(r'^\s*[【\[][^】\]]*[】\]]\s*', '', t)
+    t = re.sub(r'[\U0001F300-\U0001FAFF☀-➿]+', '', t)
+    t = re.sub(r'\s+', ' ', t).strip()
+    if len(t) <= 22:
+        return t
+    core, n = '', 0
+    for w in re.split(r'[ 　/／・「」『』（）()]', t):
+        if not w:
+            continue
+        if n and n + len(w) > 22:
+            break
+        core, n = (core + ' ' + w).strip(), n + len(w)
+    return core or t[:22]
+
+
+def teaser(D, evs, ov, frm, to, n):
+    """★カルーセルに載せなかったイベントの**タイトルだけ5件**【2026-10-23ユーザー発案】
+    「その代わり、他にもこんなイベントありますよという、タイトルだけを5件ほど並べましょう。
+     それが誘導になるかもしれません」
+    - 候補JSONに `teaser`(URLの配列)があればそれを使う(手で選んだ回)
+    - 無ければ自動: 窓に掛かる未掲載イベントをスコア順、IP・週報ページを除き、
+      **同じ市区は1件まで**(福岡市中心の本編に対して北九州・久留米など別エリアが混ざるほうが
+      「マップには他のエリアもある」と伝わる)。選んだURLは JSON の `teaser` に書き戻す"""
+    used = {e['url'] for e in evs}
+    if D.get('teaser'):
+        # 項目は URL か **タイトルの先頭**。⚠福岡市の週報ページは複数イベントが同じURLなので
+        #   URLだと別のイベント(オクトーバーフェスト)を掴む。そういうものはタイトルで書く
+        picked = []
+        for s in D['teaser']:
+            e = next((x for x in D['events'] if (x['url'] == s or x['title'].startswith(s))
+                      and x['url'] not in used), None)
+            if e and e not in picked:
+                picked.append(e)
+    else:
+        fs, ts = frm.isoformat(), to.isoformat()
+        cand = [e for e in D['events'] if e['url'] not in used and (e.get('span') or [None])[0]
+                and e['span'][0] <= ts and (e['span'][1] or e['span'][0]) >= fs
+                and not IP_RE.search(e['title']) and not e.get('nostart')]
+        cand.sort(key=lambda e: -e.get('score', 0))
+        picked, cities, names = [], set(), set()
+        for e in cand:
+            c = e.get('city') or ''
+            nm = clean_title(disp(e, ov)[0])
+            if c in cities or nm in names:
+                continue
+            picked.append(e); cities.add(c); names.add(nm)
+            if len(picked) >= n:
+                break
+        D['teaser'] = [e['url'] for e in picked]
+    return [clean_title(disp(e, ov)[0]) for e in picked[:n]]
+
+
+def build(evs, plat, ov, today, frm, to, lead_title, more=()):
     head = ['【福岡】%s〜%s %s 子連れおでかけ%d選'
             % (md(frm), md(to), lead_title, len(evs)), '']
     # ★マップ誘導は**最初**に置く(2026-10-22ユーザー指示「後ろになっていたはずなので、最初にmap誘導」)。
@@ -129,20 +180,20 @@ def build(evs, plat, ov, today, frm, to, lead_title):
         head += ['🗺ここに載せきれなかった分も含めて、福岡の子連れイベントは全部',
                  '　プロフィールのマップ →「⏳イベント」に載せてます(日付で絞れます)', '']
     head += ['家族で行けるところを今週分まとめました。',
-             '★は今週で終わるものです。', '']
+             '日程・時間・何ができるかは各カードに書いてます。', '']
     if plat == 'youtube':
         head += ['各イベントの公式リンクは下に全部貼っています。', '']
-    else:
-        head += ['🔎の言葉で検索すると一番早く出てきます。',
-                 '(インスタはキャプションのリンクがタップできないので検索ワードにしています)', '']
     body = [block(e, i, ov, today, plat == 'youtube') for i, e in enumerate(evs, 1)]
-    tail = ['──────────',
-            '保存しておくと行くときに使えます📌',
-            '載せきれなかったイベントはプロフィールのマップ →「⏳イベント」へ🗺', '',
-            '※画像は各主催者・施設の告知物です(出典は各カードに記載)',
-            '※キャラクター作品の画像は権利の都合で掲載していません',
-            '※お出かけ前に公式サイトで最新情報をご確認ください', '',
-            '#福岡イベント #福岡おでかけ #子連れおでかけ #福岡ママ #福岡子連れ']
+    tail = ['──────────']
+    if more:
+        tail += ['🗺ほかにもこんなイベントがあります(載せきれなかった分)'] + ['・' + t for t in more] \
+              + ['→ 全部プロフィールのマップ →「⏳イベント」に載せてます' if plat != 'youtube'
+                 else '→ 全部ここに載せてます ' + EVENTS_URL, '']
+    tail += ['保存しておくと行くときに使えます📌', '',
+             '※画像は各主催者・施設の告知物です(出典は各カードに記載)',
+             '※キャラクター作品の画像は権利の都合で掲載していません',
+             '※お出かけ前に公式サイトで最新情報をご確認ください', '',
+             '#福岡イベント #福岡おでかけ #子連れおでかけ #福岡ママ #福岡子連れ']
     return '\n'.join(head) + '\n' + '\n\n'.join(body) + '\n\n' + '\n'.join(tail) + '\n'
 
 
@@ -156,6 +207,7 @@ def main():
     #   カードは13件なのにキャプションに土曜だけの5件まで載っていた)
     ap.add_argument('--from', dest='f', default='')
     ap.add_argument('--to', dest='t', default='')
+    ap.add_argument('--teaser', type=int, default=5, help='末尾に並べる「ほかにもこんなイベント」の件数(0で出さない)')
     a = ap.parse_args()
     D = json.load(io.open(a.json, encoding='utf-8'))
     by = {e['url']: e for e in D['events']}
@@ -176,13 +228,18 @@ def main():
         evs = [e for e in evs if (e.get('span') or [None])[0]
                and e['span'][0] <= ts and (e['span'][1] or e['span'][0]) >= fs]
     today = d(a.today) if a.today else frm
+    more = teaser(D, evs, ov, frm, to, a.teaser) if a.teaser else []
+    if more:
+        print('ほかにもこんなイベント:', ' / '.join(more))
+        if not a.f and not a.t:
+            io.open(a.json, 'w', encoding='utf-8').write(json.dumps(D, ensure_ascii=False, indent=1))
 
     os.makedirs(a.dir, exist_ok=True)
     for plat in ('instagram', 'youtube'):
         use = list(evs)
         # **上限を超えたら件数を減らす**。末尾を切ると読者に不親切
         while True:
-            s = build(use, plat, ov, today, frm, to, a.title)
+            s = build(use, plat, ov, today, frm, to, a.title, more)
             if clen(s) <= LIMIT[plat] - MARGIN or len(use) <= 6:
                 break
             use = use[:-1]

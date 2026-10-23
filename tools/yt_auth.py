@@ -18,9 +18,21 @@ TOKEN = os.path.join(HERE, 'yt_token.json')
 # アップロード / 自分のチャンネル情報 / アナリティクス(視聴者の年齢層まで)。
 # yt-analytics.readonly は yt_report.py が使う。2026-09-10 に追加したので、
 # それ以前に作った yt_token.json では 403 になる → このスクリプトで再認証すること
+# youtube.force-ssl は videos().update(予約時刻の変更 = yt_reschedule.py)に要る。
+# 2026-10-23 追加。無いと 403 insufficientPermissions(2026-09-14 実測)
 SCOPES = ['https://www.googleapis.com/auth/youtube.upload',
+          'https://www.googleapis.com/auth/youtube.force-ssl',
           'https://www.googleapis.com/auth/youtube.readonly',
           'https://www.googleapis.com/auth/yt-analytics.readonly']
+
+# ⚠【2026-10-23 判明】refresh token が 7日で失効していた(invalid_grant)。
+#   2026-09-10 02:28 に発行 → 09-16 まで動作 → 以降ずっと失敗。
+#   原因は Google Cloud の OAuth 同意画面が「テスト」状態のままだと、
+#   発行される refresh token の寿命が 7日に固定されること(Google の仕様)。
+#   恒久対策: Cloud Console → APIs & Services → OAuth consent screen →
+#   「アプリを公開」(Publishing status を Testing → In production)。
+#   自分のアカウントで使うだけなら審査は不要(警告画面が出るが「続行」で通る)。
+#   公開後にこのスクリプトで再認証した token は失効しなくなる。
 
 
 def main():

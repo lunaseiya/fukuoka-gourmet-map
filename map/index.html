@@ -447,6 +447,29 @@
     flex-direction: column;
     gap: 10px;
   }
+  /* ★検索結果の行【2026-10-23ユーザー要望】
+     「検索ボタンを押してもピンが立つだけで何が起きたか分からない」→ 検索中はカードではなく
+     1行ずつの結果リストをシートに出し、タップでその店へ地図が飛ぶ。カードより密にして見渡せるように */
+  .sr-lead { font-size: 12px; color: var(--muted); padding: 2px 4px 0; }
+  body.searching #a2hs { display: none; }   /* 検索中はホーム画面案内を出さず、結果を上に詰める */
+  .sr-item {
+    display: flex; align-items: center; gap: 10px;
+    width: 100%; text-align: left;
+    background: #fff; border: 1px solid var(--border); border-radius: 10px;
+    padding: 10px 12px; cursor: pointer; font: inherit; color: var(--text);
+  }
+  .sr-item.selected { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(230,96,60,.18); }
+  .sr-pin { flex: 0 0 auto; font-size: 18px; line-height: 1; }
+  .sr-main { flex: 1 1 auto; min-width: 0; }
+  .sr-name { font-weight: 700; font-size: 14px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sr-name mark { background: #fff3b0; color: inherit; padding: 0 1px; border-radius: 2px; }
+  .sr-sub { font-size: 12px; color: var(--muted); margin-top: 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .sr-tags { display: flex; gap: 4px; flex-wrap: wrap; margin-top: 4px; }
+  .sr-tag { font-size: 10px; padding: 1px 6px; border-radius: 999px; background: #f1f1f1; color: #555; }
+  .sr-tag.k2 { background: #e8f7ea; color: #1f7a2e; }
+  .sr-tag.k1 { background: #eef3fb; color: #2b5fa8; }
+  .sr-tag.vd { background: #fdeeee; color: #b0322f; }
+  .sr-go { flex: 0 0 auto; font-size: 12px; color: var(--accent); font-weight: 700; white-space: nowrap; }
   .card {
     background: #fff;
     border: 1px solid var(--border);
@@ -1709,6 +1732,56 @@ function renderList() {
     return;
   }
 
+  // ★検索中は「結果リスト」を出す【2026-10-23ユーザー要望】
+  //   カード(写真・ひとこと付き)だと1画面に2件しか入らず、検索して何が出たのか見渡せない。
+  //   店名・ジャンル・市区・札だけの1行にして、店名に当たったものを先頭に並べる。
+  //   タップで focusSpot → 地図がその店へ飛んで詳細が開く(詳細の✕で結果リストに戻る)
+  if (state.q.trim()) {
+    const terms = state.q.split(/[\s　]+/).filter(Boolean).map(normalize).filter(Boolean);
+    const nameHit = s => { const n = normalize(s.name); return terms.filter(t => n.includes(t)).length; };
+    const sorted = filtered.slice().sort((a, b) =>
+      (nameHit(b) - nameHit(a)) || ((a.wish ? 1 : 0) - (b.wish ? 1 : 0)) || (order.get(a) - order.get(b)));
+    const hl = (name) => {
+      // 一致した語を黄色マーカーで示す(表記ゆれ吸収前の原文に対して、ひらがな/カタカナ・大小文字を無視して探す)
+      let html = escapeHtml(name);
+      for (const raw of state.q.split(/[\s　]+/).filter(Boolean)) {
+        const re = new RegExp(raw.replace(/[.*+?^${}()|[\]\\]/g, "\\$&"), "i");
+        if (re.test(html)) { html = html.replace(re, m => `<mark>${m}</mark>`); }
+      }
+      return html;
+    };
+    list.innerHTML = `<div class="sr-lead">タップするとその場所へ地図が移動します</div>` + sorted.map(s => {
+      const v = s.video || {};
+      const tags = [
+        kidsLevelOf(s) === 2 ? `<span class="sr-tag k2">子連れ歓迎</span>` : kidsLevelOf(s) === 1 ? `<span class="sr-tag k1">子連れ可</span>` : "",
+        (v.youtube || v.tiktok || v.instagram) ? `<span class="sr-tag vd">🎬 動画</span>` : "",
+        isLimited(s) ? `<span class="sr-tag">⏳ 期間限定</span>` : "",
+        (s.lat === null || s.lat === undefined) ? `<span class="sr-tag">📍地図なし</span>` : ""
+      ].join("");
+      const sub = [s.genre, [s.city, s.area].filter(Boolean).join(" ")].filter(Boolean).join(" ・ ");
+      return `<button class="sr-item${s.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(s.id)}" type="button">
+        <span class="sr-pin">${s.wish ? "🔵" : "🔴"}</span>
+        <span class="sr-main">
+          <span class="sr-name">${hl(s.name)}</span>
+          <span class="sr-sub">${escapeHtml(sub)}</span>
+          ${tags ? `<span class="sr-tags">${tags}</span>` : ""}
+        </span>
+        <span class="sr-go">地図で見る ›</span>
+      </button>`;
+    }).join("");
+    list.querySelectorAll(".sr-item").forEach(el => {
+      el.addEventListener("click", () => {
+        const spot = state.spots.find(s => s.id === el.dataset.id);
+        if (!spot) return;
+        document.getElementById("q").blur();     // キーボードを閉じて地図を見せる
+        try { window.icTrack && window.icTrack("search_pick", { q: state.q.trim(), id: spot.id }); } catch (e) {}
+        focusSpot(spot);
+      });
+    });
+    Sheet.refresh();
+    return;
+  }
+
   list.innerHTML = filtered.map(s => `
     <div class="card${s.id === state.selectedId ? " selected" : ""}" data-id="${escapeHtml(s.id)}">
       ${cardHtml(s)}
@@ -2125,16 +2198,51 @@ document.getElementById("areaApply").addEventListener("click", () => {
 // 検索ボックス。入力のたびに全件から絞り込む(件数が1000弱なので遅延不要)
 const qInput = document.getElementById("q");
 const qClear = document.getElementById("qClear");
+let _fitTimer = null;
 function applyQuery() {
+  const was = state.q.trim();
   state.q = qInput.value;
   qClear.classList.toggle("on", !!state.q);
   // 検索中はカテゴリ・絞り込みの見た目を無効化して、全件検索であることを示す
   document.querySelector(".cat-toggle").style.opacity = state.q.trim() ? .4 : "";
   document.querySelector(".filters").style.opacity = state.q.trim() ? .4 : "";
+  document.body.classList.toggle("searching", !!state.q.trim());
   renderAll();
+  // ★検索したら「何が起きたか」が見えるようにする【2026-10-23ユーザー要望】
+  //   それまでは絞り込んだピンが立つだけで、シートは peek(先頭1枚)のまま・地図も動かなかった。
+  //   ①シートを half に上げて結果リストを見せる ②結果のピンが全部入る範囲へ地図を寄せる
+  //   ③検索語を消したら peek に戻す(地図はそのまま)
+  if (state.q.trim()) {
+    if (Sheet.mode === "detail") closeDetail();
+    if (Sheet.state === "peek") Sheet.set("half");
+    clearTimeout(_fitTimer);
+    _fitTimer = setTimeout(fitToResults, 250);     // 1文字ごとに飛ばさない
+  } else if (was) {
+    clearTimeout(_fitTimer);
+    if (Sheet.mode !== "detail") Sheet.set("peek");
+  }
+}
+function fitToResults() {
+  const map = window._map;
+  if (!map || !state.q.trim()) return;
+  const pts = applyFilters(state.spots).filter(s => s.lat !== null && s.lat !== undefined && s.lng !== null && s.lng !== undefined);
+  if (!pts.length) return;
+  // シートが画面の下52%を覆うので、その分を下の余白にしてピンが隠れないようにする
+  const sheetH = document.getElementById("bsheet").offsetHeight || Math.round(window.innerHeight * 0.52);
+  const mapH = document.getElementById("map").offsetHeight || window.innerHeight;
+  const bottom = Math.min(sheetH + 24, Math.max(0, mapH - 120));
+  if (pts.length === 1) {
+    map.flyTo({ center: [pts[0].lng, pts[0].lat], zoom: 15, essential: true, offset: [0, -Math.round(bottom / 2)] });
+    return;
+  }
+  const b = new maplibregl.LngLatBounds();
+  pts.forEach(s => b.extend([s.lng, s.lat]));
+  map.fitBounds(b, { padding: { top: 24, left: 24, right: 24, bottom }, maxZoom: 15, duration: 600, essential: true });
 }
 qInput.addEventListener("input", applyQuery);
-qInput.addEventListener("search", applyQuery);
+// Enter(キーボードの🔍)で確定したらキーボードを閉じて、地図と結果リストを見せる
+qInput.addEventListener("search", () => { applyQuery(); if (state.q.trim()) { qInput.blur(); clearTimeout(_fitTimer); fitToResults(); } });
+qInput.addEventListener("keydown", (e) => { if (e.key === "Enter") { e.preventDefault(); qInput.blur(); applyQuery(); clearTimeout(_fitTimer); fitToResults(); } });
 qClear.addEventListener("click", () => { qInput.value = ""; applyQuery(); qInput.focus(); });
 
 // タブに応じて body に cat-gourmet / cat-onsen / cat-play を付ける。

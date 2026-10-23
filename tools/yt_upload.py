@@ -178,6 +178,18 @@ def main():
         return
 
     creds = Credentials.from_authorized_user_file(TOKEN)
+    # ⚠先にトークンを更新して、失効していたら分かる言葉で止める【2026-10-23】
+    #   2026-09-17 以降の自動投稿が全部止まっていた原因は refresh token の失効(invalid_grant)。
+    #   OAuth 同意画面が「テスト」状態だと refresh token は 7日で切れる。
+    #   直し方: Cloud Console で「アプリを公開」→ python tools/yt_auth.py で再認証(ブラウザ操作が要る)
+    try:
+        from google.auth.transport.requests import Request
+        creds.refresh(Request())
+    except Exception as ex:
+        sys.exit('!! YouTube の認証トークンが失効しています(%s: %s)\n'
+                 '   → ユーザーが `python tools/yt_auth.py` を実行して再認証する必要があります。\n'
+                 '     恒久対策は Cloud Console の OAuth 同意画面で「アプリを公開」(テスト状態だと7日で切れる)'
+                 % (type(ex).__name__, str(ex)[:120]))
     yt = build('youtube', 'v3', credentials=creds)
     ch = yt.channels().list(part='snippet', mine=True).execute()['items'][0]
     print('投稿先:', ch['snippet']['title'], ch['snippet'].get('customUrl', ''))

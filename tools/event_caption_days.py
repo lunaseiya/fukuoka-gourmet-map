@@ -184,14 +184,14 @@ def main():
                 break
             cut += 1
         p = os.path.join(a.dir, '_キャプション_%s.txt' % plat)
-        io.open(p, 'w', encoding='utf-8').write(s)
+        io.open(p, 'w', encoding='utf-8-sig').write(s)   # BOM付き。無いとプレビューで文字化け(2026-10-23)
         n = sum(len(e) for _, e in g)
         print('%-10s %4d字(UTF-16) / 上限%d  %s  掲載%d件%s'
               % (plat, clen(s), LIMIT[plat],
                  'OK' if clen(s) <= LIMIT[plat] else '超過!',
                  n, '' if not cut else ' (%d件はキャプションから省いた)' % cut))
-    ig = io.open(os.path.join(a.dir, '_キャプション_instagram.txt'), encoding='utf-8').read()
-    io.open(os.path.join(a.dir, '_キャプション_tiktok.txt'), 'w', encoding='utf-8').write(ig)
+    ig = io.open(os.path.join(a.dir, '_キャプション_instagram.txt'), encoding='utf-8-sig').read()
+    io.open(os.path.join(a.dir, '_キャプション_tiktok.txt'), 'w', encoding='utf-8-sig').write(ig)
     print('%-10s %4d字(UTF-16) / 上限%d  OK  (Instagramと同文)'
           % ('tiktok', clen(ig), LIMIT['tiktok']))
 

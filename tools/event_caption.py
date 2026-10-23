@@ -258,13 +258,14 @@ def main():
                 break
             use = use[:-1]
         p = os.path.join(a.dir, '_キャプション_%s.txt' % plat)
-        io.open(p, 'w', encoding='utf-8').write(s)
+        # BOM付き(utf-8-sig)で書く。BOM無しだとDropboxのプレビュー等がShift_JISと誤判定して文字化けする(2026-10-23)
+        io.open(p, 'w', encoding='utf-8-sig').write(s)
         print('%-10s %4d字(UTF-16) / 上限%d  %s  掲載%d件%s'
               % (plat, clen(s), LIMIT[plat], 'OK' if clen(s) <= LIMIT[plat] else '超過!',
                  len(use), '' if len(use) == len(evs) else ' (%d件は入らず省いた)' % (len(evs) - len(use))))
     # TikTokはInstagramと同文でよい
-    ig = io.open(os.path.join(a.dir, '_キャプション_instagram.txt'), encoding='utf-8').read()
-    io.open(os.path.join(a.dir, '_キャプション_tiktok.txt'), 'w', encoding='utf-8').write(ig)
+    ig = io.open(os.path.join(a.dir, '_キャプション_instagram.txt'), encoding='utf-8-sig').read()
+    io.open(os.path.join(a.dir, '_キャプション_tiktok.txt'), 'w', encoding='utf-8-sig').write(ig)
     print('%-10s %4d字(UTF-16) / 上限%d  OK  (Instagramと同文)'
           % ('tiktok', clen(ig), LIMIT['tiktok']))
 

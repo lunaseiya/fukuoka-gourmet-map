@@ -10,12 +10,14 @@
   二重管理を避けるため、ここでも台本を唯一の正とする。
 ・公開は privacyStatus=private + publishAt で**予約**する。時刻は下記ルール。
 
-【予約時刻のルール】2026-09-07 ユーザー確定
-  直近の 07:00 → 過ぎていれば 10:00 → それも過ぎていれば
-    子連れOKを扱う回   → 21:00  ← 2026-09-10ユーザー確定(20:00から変更)
-    子連れ非推奨の回   → 18:00
-  全部過ぎていたら**翌日の07:00**。
-  子連れの別は --kids ok / --kids ng で渡す(店の実態で決める)。
+【予約時刻のルール】2026-10-24 ユーザー確定(実測で改訂)
+  YouTube は **07:00 → 過ぎていれば 17:00 → それも過ぎていれば翌日の07:00**。
+  根拠: 2026-06〜10 の89本を投稿月の中央値で正規化すると 5-8時 1.11 / 17-19時 1.11 / 9-11時 1.01 /
+        20-22時 0.92(月中央値を超えた回は17%) / 23時〜 0.70。21時枠は弱かったので廃止。
+  ⚠媒体ごとに時刻を変える: Instagram は 21:00 か 10:00(16〜18時は弱い)、TikTok は木金に寄せ日月を避ける。
+    詳細は memory の project-posting-time-analysis / short-video スキル「各SNSへの投稿」。
+  旧ルール(2026-09-07〜10-23): 07:00 → 10:00 → 子連れOK回21:00 / 非推奨18:00。
+  --kids は互換のために残しているが**時刻には影響しない**(省略可)。
 """
 import argparse, os, re, sys
 from datetime import datetime, timedelta, timezone
@@ -30,13 +32,12 @@ TOKEN = os.path.join(HERE, 'yt_token.json')
 JST = timezone(timedelta(hours=9), 'JST')
 
 
-def next_slot(kids_ok, now=None):
-    """次に来る投稿枠を返す"""
+def next_slot(kids_ok=None, now=None):
+    """次に来る投稿枠を返す(07:00 → 17:00 → 翌07:00)。
+    2026-10-24 実測で改訂: 21時枠(子連れOK回)は YouTube では月中央値を超えた回が17%しか無く弱かった。
+    朝7時と夕方17-18時がどちらも 1.11倍で最良。kids_ok は互換のために受けるだけで使わない。"""
     now = now or datetime.now(JST)
-    # 子連れOK回の夜枠は21:00。20:00だと子供の寝かしつけ真っ只中で親が見られない
-    # (2026-09-10ユーザー確定。アイランドシティ中央公園回の20:00投稿のあとに指摘)
-    evening = 21 if kids_ok else 18
-    for h in (7, 10, evening):
+    for h in (7, 17):
         t = now.replace(hour=h, minute=0, second=0, microsecond=0)
         if t > now:
             return t
@@ -134,8 +135,8 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--script', required=True, help='台本のパス')
     ap.add_argument('--video', required=True, help='アップロードする mp4')
-    ap.add_argument('--kids', choices=['ok', 'ng'], required=True,
-                    help='子連れOKを扱う回なら ok(夕方枠が20時)/ 非推奨なら ng(18時)')
+    ap.add_argument('--kids', choices=['ok', 'ng'], default=None,
+                    help='(互換用・省略可)2026-10-24から時刻には影響しない。枠は 07:00 → 17:00 固定')
     ap.add_argument('--at', help='予約時刻を直接指定 "2026-09-08 19:00"(ルールを上書き)')
     ap.add_argument('--no-schedule', action='store_true',
                     help='予約せず**非公開のまま**上げる(テスト用/既に別途投稿済みの回)')

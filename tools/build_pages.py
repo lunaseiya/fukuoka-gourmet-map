@@ -246,6 +246,8 @@ def build():
             links.append('<a class="btn aso" href="%s" rel="nofollow noopener" target="_blank">チケットを買う</a><span class="pr">PR</span>' % esc(s['asoview']))
         if s.get('web'):
             links.append('<a class="btn" href="%s" rel="nofollow noopener" target="_blank">公式サイト</a>' % esc(s['web']))
+        if s.get('floormap'):   # 公式フロアマップ(館内図は画像を複製せずリンク・2026-10-24)
+            links.append('<a class="btn" href="%s" rel="nofollow noopener" target="_blank">フロアマップ(公式)</a>' % esc(s['floormap']))
         v = s.get('video') or {}
         for key, label in (('youtube', 'YouTube'), ('tiktok', 'TikTok'), ('instagram', 'Instagram')):
             if v.get(key):

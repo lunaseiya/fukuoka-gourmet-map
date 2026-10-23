@@ -33,6 +33,7 @@
 | `thumb` | string \| null | サムネ画像のファイル名(`map/thumbs/` 内、幅240pxに縮小したもの)。無ければ `null` | `"sansenkaku-beppu.jpg"` |
 | `wish` | boolean(省略可) | `true` なら「行きたい」(未訪問)スポット。ピンが青になり、動画リンクは無くてよい | `true` |
 | `web` | string(省略可) | 公式サイト等のURL。設定すると「🌐 詳細」ボタンの飛び先になる(未設定はGoogleマップ検索に飛ぶ) | `"https://oncri.com/"` |
+| `floormap` | string(省略可) | 公式サイトのフロアマップ(館内図)ページのURL。設定すると詳細に「🗺 フロアマップ(公式)」ボタンが出る(2026-10-24追加)。**現地で撮った館内図の写真は解像度が足りず読めないので、モール類はこちらを使う**。公式の画像をダウンロードして `photos` に入れるのは著作権上NG(リンクのみ)。イオンモールは `https://<slug>.aeonmall.jp/floormap`(イオン九州運営の館は `<slug>.aeon-kyushu.info/floormap`) | `"https://fukuoka.aeonmall.jp/floormap"` |
 | `posted` | string(省略可) | 動画を投稿した日 `"YYYY-MM-DD"`。投稿から1週間はマップ・リストに NEW 表示される | `"2026-08-10"` |
 | `category` | string(省略可) | `"onsen"` なら「日帰り温泉」タブに表示(スーパー銭湯・ホテルの日帰り湯含む)。省略時はグルメ・おでかけタブ | `"onsen"` |
 | `bathAge` | string \| null(省略可) | 温泉スポット用。何歳から入浴できるか・オムツ児可否など | `"オムツの取れていない子はベビーバス利用"` |

@@ -673,6 +673,15 @@
     border-color: #1a7f5a !important;
   }
   .reserve-btn::before { content: "🪑 "; }
+  /* ★公式のフロアマップへ【2026-10-24ユーザー要望】
+     モールの館内図は現地で撮ると解像度が足りず読めない。公式の画像を複製すると著作権に触れるので、
+     公式サイトのフロアマップページへのリンクにする(常に最新・店舗検索もできる) */
+  .floormap-btn {
+    background: #5b4bd6 !important;
+    color: #fff !important;
+    border-color: #5b4bd6 !important;
+  }
+  .floormap-btn::before { content: "🗺 "; }
   .pr-badge {
     font-size: 10px;
     color: var(--muted);
@@ -919,7 +928,12 @@
   /* 詳細モード: 一覧・案内・凡例を隠して #detail だけ */
   #bsheet[data-mode="detail"] #list, #bsheet[data-mode="detail"] #a2hs, #bsheet[data-mode="detail"] footer,
   #bsheet[data-mode="detail"] .legend, #bsheet[data-mode="detail"] #count, #bsheet[data-mode="detail"] .bs-hint { display: none; }
-  #bsheet[data-mode="detail"] .bs-detail-title { display: inline; flex: 1; font-weight: 700; color: var(--text); }
+  #bsheet[data-mode="detail"] .bs-detail-title { display: inline; flex: 1; min-width: 0; font-weight: 700; color: var(--text);
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* ★詳細モードでも下にスワイプで畳める【2026-10-24ユーザー要望】: 畳んだときは店名の帯だけ残して地図を見せる */
+  .bs-hint-detail { display: none; }
+  #bsheet[data-mode="detail"][data-state="peek"] .bs-hint-detail { display: inline; }
+  #bsheet[data-mode="detail"][data-state="peek"] .bs-body { visibility: hidden; }
   #detail {
     position: relative; left: auto; right: auto; bottom: auto; z-index: auto;
     display: none;
@@ -1006,6 +1020,7 @@
       <span class="bs-hint bs-hint-up">▲ 上にスワイプで一覧</span>
       <span class="bs-hint bs-hint-down">▼ 下にスワイプで地図</span>
       <span class="bs-detail-title">お店の詳細</span>
+      <span class="bs-hint bs-hint-detail">▲ 詳細を見る</span>
     </div>
     <div class="legend">
       <span class="lg-dot lg-red"></span>行った店
@@ -1315,6 +1330,10 @@ function videoLinksHtml(spot, cls) {
   if (spot.reserve) {
     items.push(`<a class="reserve-btn" href="${spot.reserve}" target="_blank" rel="noopener">席を予約</a>`);
   }
+  // 公式フロアマップ(モール等)。画像は複製せずリンクで飛ばす(2026-10-24)
+  if (spot.floormap) {
+    items.push(`<a class="floormap-btn" href="${spot.floormap}" target="_blank" rel="noopener">フロアマップ(公式)</a>`);
+  }
   if (isStaySpot(spot)) {
     // その宿のじゃらんページが分かっていれば直リンクする。
     // トップページ着地より成約率が高いので、booking があるときは楽天(トップ)は出さない。
@@ -1554,6 +1573,10 @@ const Sheet = (() => {
     const H = window.innerHeight;
     if (s === "full") return Math.max(200, H - hdrH() - 6);
     if (s === "half") return Math.round(H * 0.52);
+    // ★詳細モードの peek は「つまみ+店名の帯」だけ。下にスワイプしてここまで畳むと地図が全部見える
+    //   (2026-10-24ユーザー要望「この画面から下のリストをしまいたい。スワイプすれば隠せる感じで」。
+    //    それまで詳細モードは half/full の2段しかなく、下に引いても half で止まっていた)
+    if (mode === "detail") return head.offsetHeight + 10;
     return Math.min(peekH(), Math.round(H * 0.45));
   }
   function set(s) {
@@ -1562,7 +1585,11 @@ const Sheet = (() => {
   }
   function refresh() { set(st); }
   function setMode(m) { mode = m; el.dataset.mode = m; }
-  function openDetailMode() { prevBeforeDetail = st; setMode("detail"); body.scrollTop = 0; set(st === "peek" ? "half" : st); }
+  function openDetailMode() {
+    // 畳んだ詳細から別のピンを押したときは、一覧に戻る先(prevBeforeDetail)を上書きしない
+    if (mode !== "detail") prevBeforeDetail = st;
+    setMode("detail"); body.scrollTop = 0; set(st === "peek" ? "half" : st);
+  }
   function closeDetailMode() { setMode("list"); body.scrollTop = 0; set(prevBeforeDetail); }
 
   // ドラッグ: つまみ(.bs-head)から。peek のときはシートのどこからでも
@@ -1586,7 +1613,7 @@ const Sheet = (() => {
     dragging = false; el.style.transition = "";
     if (!moved) { refresh(); return; }
     const h = el.offsetHeight;
-    const states = mode === "detail" ? ["half", "full"] : ["peek", "half", "full"];
+    const states = ["peek", "half", "full"];   // 詳細モードも peek(店名の帯だけ)まで畳める(2026-10-24)
     // 行き先は「ドラッグ方向に一番近い段」。peek より下へ引いたら peek に戻す
     const best = states.map(s => [s, Math.abs(hFor(s) - h)]).sort((a, b) => a[1] - b[1])[0][0];
     set(best);
@@ -1598,8 +1625,9 @@ const Sheet = (() => {
   // つまみをタップ: peek⇄half(詳細モードでは half⇄full)
   head.addEventListener("click", () => {
     if (moved) return;
-    if (mode === "detail") set(st === "full" ? "half" : "full");
-    else set(st === "peek" ? "half" : "peek");
+    if (st === "peek") set("half");                       // 畳んだ帯をタップ → 開く(一覧・詳細とも)
+    else if (mode === "detail") set(st === "full" ? "half" : "full");
+    else set("peek");
   });
   window.addEventListener("resize", refresh);
   return { set, refresh, setMode, openDetailMode, closeDetailMode, get state() { return st; }, get mode() { return mode; } };
@@ -1662,6 +1690,9 @@ function openDetail(spot) {
     ${relatedHtml}
   `;
   detail.classList.add("open");
+  // シートの頭に店名を出す。畳んだとき(peek)に「どの店の詳細をしまっているか」が帯だけで分かるように(2026-10-24)
+  const dt = document.querySelector("#bsheet .bs-detail-title");
+  if (dt) dt.textContent = spot.name || "お店の詳細";
   Sheet.openDetailMode();   // 同じシートの中身を詳細に切り替える(2026-10-14)
   // どのスポットが読まれているかを解析に送る(analytics.js が未設定なら何もしない)。
   // 詳細を開いたときだけ送る = 「読まれた店」の数になる(一覧描画では送らない・2026-10-14)

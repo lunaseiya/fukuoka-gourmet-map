@@ -78,7 +78,8 @@ def parse_script(path):
     if not desc:
         sys.exit('!! 台本に「■ YouTube ...」のセクションが見つからない: ' + path)
 
-    titles = section(r'動画タイトル案')
+    # 見出しは「■ 動画タイトル案」でも「■ 動画タイトル【そのまま貼れます】」でも拾う(エモ回の台本は後者・2026-10-24)
+    titles = section(r'動画タイトル')
     title = ''
     for ln in titles.split('\n'):
         ln = ln.strip().lstrip('・').strip()

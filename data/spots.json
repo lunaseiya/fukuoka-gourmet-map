@@ -27926,26 +27926,37 @@
   "genre": "ラーメン",
   "lat": 33.581375,
   "lng": 130.407867,
-  "visited": null,
-  "with": "family",
+  "visited": "2026-10-17",
+  "with": "solo",
   "kids": {
    "stroller": null,
    "diaper": null,
-   "tatami": null,
+   "tatami": false,
    "kidsChair": null,
    "kidsMenu": null,
    "serveMin": null,
    "noise": null
   },
-  "verdict": "海鳴の店舗のひとつ。魚介豚骨とラーメンジェノバ。",
+  "verdict": "2009年創業・魚介とんこつの元祖「海鳴」の1号店。看板は魚介とんこつ(870円)だが、とんこつ×自家製バジルソースの「ラーメンジェノバ」(950円)が唯一無二。かためにするとパツンと弾ける細麺・肉厚の炙りチャーシュー・卓上のタバスコで味変。⭐18:00〜翌3:00(L.O.2:50)・水曜定休。カウンター10席のみ・券売機は現金のみ・予約不可。渡辺通駅 徒歩6分。駐車場なし(近くのトラストパーク清川6は60分300円・20〜8時 最大500円)。⚠カウンターのみの深夜営業なので子連れ向きではない(大人の〆の一杯)。TEL 092-524-0744",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
-  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40024136/"
+  "thumb": "sp15c2619405.jpg",
+  "wish": false,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40020958/",
+  "photos": [
+   "sp15c2619405_01_外観(看板と赤提灯).jpg",
+   "sp15c2619405_02_ラーメンジェノバ.jpg",
+   "sp15c2619405_03_麺リフト.jpg",
+   "sp15c2619405_04_炙りチャーシュー.jpg",
+   "sp15c2619405_05_券売機(ジェノバ950円・魚介とんこつ870円).jpg",
+   "sp15c2619405_06_営業時間(18時〜翌3時・水曜定休).jpg",
+   "sp15c2619405_07_サイン色紙の壁.jpg",
+   "sp15c2619405_08_自家製麺の提灯.jpg",
+   "sp15c2619405_09_近くのコインパーキング(60分300円・夜最大500円).jpg"
+  ]
  },
  {
   "id": "spba3b4cbfbb",

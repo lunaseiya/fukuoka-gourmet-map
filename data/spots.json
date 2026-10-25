@@ -64132,5 +64132,51 @@
    "namikinomachi-hakatanomori_04_店頭の秋メニュー(渋皮栗とマスカットのパンケーキ).jpg"
   ],
   "added": "2026-10-25"
+ },
+ {
+  "id": "tullys-fukuoka-higashihirao-park",
+  "name": "タリーズコーヒー 福岡東平尾公園店",
+  "area": "東平尾公園",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.58332,
+  "lng": 130.460552,
+  "address": "福岡県福岡市博多区東平尾公園2丁目1-5",
+  "visited": "2026-10-22",
+  "with": "family",
+  "category": "gourmet",
+  "wish": false,
+  "in": "touheiokouenootanihiroba",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "kidsSpace": true,
+   "sofa": true,
+   "babyKeep": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐2025年4月1日オープン。タリーズとして**九州初の公園内店舗**で、東平尾公園 大谷広場(博多の森)の入口にある。全面ガラス張りで店内から遊具や草スキー場が見え、テラス席(20席)も公園に面している。62席・ドライブスルーあり。⭐子連れ歓迎: **ベルト付きの子供椅子**・**キッズスペース**(ソファで囲ったコーナーに絵本)・仕切れる半個室のソファ席・トイレ内に**おむつ替え台とベビーキープ**。⭐キッズメニューあり(税込): キッズドリンク各370円(りんご100%・ココア・ミルク)/キッズパンケーキ アイス付き ドリンクセット765円/おやこパスタセット1,625円/アイス300円。実食はドッグ チーズメルト500円・アイスチャイティー(S)530円(税込・2026年10月)。平日9:00〜20:00/土日祝8:00〜20:00。**公園の駐車場(大谷第1)がタリーズ利用で1時間無料**(通常は入庫後20分無料・60分100円・最大500円)。遊んだあとの休憩に。土日は混む・ドライブスルーは時間がかかるという口コミあり(食べログ)。TEL 092-402-5070",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400107/40070151/",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "tullys-fukuoka-higashihirao-park.jpg",
+  "photos": [
+   "tullys-fukuoka-higashihirao-park_01_外観(テラス席と看板).jpg",
+   "tullys-fukuoka-higashihirao-park_02_ベルト付きの子供椅子.jpg",
+   "tullys-fukuoka-higashihirao-park_03_キッズスペース(ソファの囲いと絵本).jpg",
+   "tullys-fukuoka-higashihirao-park_04_トイレ内のおむつ替え台とベビーキープ.jpg",
+   "tullys-fukuoka-higashihirao-park_05_キッズメニューの黒板.jpg",
+   "tullys-fukuoka-higashihirao-park_06_店内から公園が見える全面ガラス.jpg",
+   "tullys-fukuoka-higashihirao-park_07_入口の営業時間.jpg"
+  ],
+  "added": "2026-10-25"
  }
 ]

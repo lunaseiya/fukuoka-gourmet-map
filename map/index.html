@@ -608,6 +608,11 @@
   .kl-2 { background: #e8772e; color: #fff; }
   .kl-1 { background: #fff; color: #6b6b6b; border: 1.5px solid #b9b9b9; }
   .t-kids1 { background: #fff; color: #6b6b6b; border: 1px solid #c4c4c4; }
+  /* ★「リクエストで行った店」の札【2026-10-25】: 視聴者のコメントで行った店。spots.json の request:{by,via,date} で出す
+     (ユーザー「見てる人もマップを作るキッカケの入口を」→ 共同編集ではなく、コメント→訪問→名前を出す形で参加の痕跡を残す) */
+  .card-request { margin: 4px 0 2px; display: flex; align-items: center; gap: 6px; flex-wrap: wrap; font-size: 11px; color: #6b6b6b; }
+  .card-request .t-req { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: 11px; font-weight: 700;
+    background: #eaf3ff; color: #1f5fa8; border: 1px solid #bcd6f5; white-space: nowrap; }
   .kf-f { background: #fdf2e2; color: #96650f; }   /* 店には無いが同じ建物にある */
   .kf-n { background: #f1f1f1; color: #8b8b8b; }   /* 無いと分かっている */
   .kf-s { font-size: 10px; opacity: .8; }
@@ -1455,6 +1460,18 @@ function ageBadgesHtml(spot) {
     .map(a => `<span class="b-age">${AGE_LABEL[a]}</span>`).join("")}</div>`;
 }
 
+// ★視聴者のコメント(リクエスト)で行った店の札【2026-10-25】
+//   spots.json: "request": {"by": "〇〇さん", "via": "instagram|tiktok|youtube", "date": "YYYY-MM-DD"}
+//   by が無ければ札だけ。他人の写真は載せない方針なので、参加の痕跡は名前(ハンドル)の文字だけで残す
+const REQUEST_VIA = { instagram: "Instagram", tiktok: "TikTok", youtube: "YouTube" };
+function requestHtml(spot) {
+  const r = spot.request;
+  if (!r) return "";
+  const via = REQUEST_VIA[r.via] || "";
+  const who = r.by ? `${escapeHtml(r.by)}の${via ? via + "の" : ""}コメントから` : "";
+  return `<div class="card-request"><span class="t-req">💬 リクエストで行った店</span>${who ? `<span>${who}</span>` : ""}</div>`;
+}
+
 function cardHtml(spot) {
   // ⚠ここで解析イベントを送ってはいけない【2026-10-14】。cardHtml は一覧(renderList)でも1枚ずつ呼ばれるので、
   //   絞り込みのたびに全カード分の spot_open が飛び、28日で9,610件という実態と無関係な数になっていた。
@@ -1477,6 +1494,7 @@ function cardHtml(spot) {
         <div class="card-genre">${escapeHtml(spot.genre || "")}</div>
       </div>
       <div class="card-area">${cityArea}</div>
+      ${requestHtml(spot)}
       ${kidsFacilityHtml(spot)}
       ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
       ${photoCreditHtml(spot)}

@@ -3414,8 +3414,16 @@
   "lng": 130.300414,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": "屋内。入館大人500円・小中高200円・未就学無料。専用駐車場有(窓口で無料処理)。授乳室あり",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "屋内で天候を気にせず遊べる熱気球のミュージアム。バルーンの仕組みを遊びながら学べる体験展示。入館 大人500円・小中高生200円・未就学児無料。10:00〜17:00(最終入館16:30)・月曜休館(祝日の場合は翌日)。⭐おむつ交換台・授乳室あり。駐車場は30分100円だが展示エリア利用で最大2時間分のサービスあり。⚠館内展示エリアは再入場不可。佐賀インターナショナルバルーンフェスタ(2026年は10/30〜11/3)の期間中は開館日が変わることがある。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -3431,7 +3439,8 @@
    "toddler",
    "kids"
   ],
-  "ages_src": "auto"
+  "ages_src": "auto",
+  "address": "佐賀県佐賀市松原2-2-27"
  },
  {
   "id": "genkaichoujisedaienerugiipaa",

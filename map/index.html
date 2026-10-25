@@ -919,6 +919,11 @@
     padding: 0 10px 8px;
   }
   #bsheet[data-state="peek"] .bs-body { overflow: hidden; }
+  /* ★一覧モードも「つまみ+件数の帯」まで畳める min 段【2026-10-25ユーザー要望「初期画面のリストにおいても下にスライドすれば最小に」】
+     peek(先頭1枚)の下にもう1段。中身と凡例を隠して地図を全部見せる */
+  #bsheet[data-state="min"] .bs-body { visibility: hidden; }
+  #bsheet[data-state="min"] .legend { display: none; }
+  #bsheet[data-state="min"] { cursor: grab; }
   #bsheet[data-state="peek"] .bs-body::after {   /* 先頭カードの下を白くぼかして「続きがある」と分かるように */
     content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 36px;
     background: linear-gradient(rgba(255,255,255,0), #fff); pointer-events: none;
@@ -1007,6 +1012,7 @@
      それまで「ピンを押すと下から出る詳細(#detail)」と「地図の下に常にあるリスト(#list)」が別々に動いていた。
      顧客に必要なのはピンを押したときの詳細で、常設リストは運用者向け。ただしリストを別画面にすると
      動画のCTA「マップを開いたら一番上にこの店」が崩れるので、Googleマップ型の1枚のシートに統合した:
+       min       … つまみ+件数の帯だけ(2026-10-25追加)。初期画面から下にスワイプすると地図が全部見える
        peek(初期) … シートの頭 + 先頭の1枚(=NEWの店)だけ見える。約束はそのまま成立
        half/full … 上にスワイプで絞り込み済みの一覧(運用者もここで見る)
        detail    … ピン/カードを押すと同じシートの中身が詳細に切り替わる(✕で一覧に戻る)
@@ -1577,8 +1583,12 @@ const Sheet = (() => {
     //   (2026-10-24ユーザー要望「この画面から下のリストをしまいたい。スワイプすれば隠せる感じで」。
     //    それまで詳細モードは half/full の2段しかなく、下に引いても half で止まっていた)
     if (mode === "detail") return head.offsetHeight + 10;
+    // ★一覧モードの min も同じ「つまみ+帯」だけ(2026-10-25)。peek より下へ引くとここで止まる
+    if (s === "min") return head.offsetHeight + 10;
     return Math.min(peekH(), Math.round(H * 0.45));
   }
+  // いちばん畳んだ段(ドラッグの下限・スナップ先の候補に使う)。詳細モードは peek が帯だけなので min を持たない
+  const lowest = () => (mode === "detail" ? "peek" : "min");
   function set(s) {
     st = s; el.dataset.state = s;
     el.style.height = hFor(s) + "px";
@@ -1588,14 +1598,14 @@ const Sheet = (() => {
   function openDetailMode() {
     // 畳んだ詳細から別のピンを押したときは、一覧に戻る先(prevBeforeDetail)を上書きしない
     if (mode !== "detail") prevBeforeDetail = st;
-    setMode("detail"); body.scrollTop = 0; set(st === "peek" ? "half" : st);
+    setMode("detail"); body.scrollTop = 0; set((st === "peek" || st === "min") ? "half" : st);
   }
   function closeDetailMode() { setMode("list"); body.scrollTop = 0; set(prevBeforeDetail); }
 
   // ドラッグ: つまみ(.bs-head)から。peek のときはシートのどこからでも
   let y0 = null, h0 = 0, dragging = false, moved = false;
   el.addEventListener("touchstart", e => {
-    if (!(st === "peek" || head.contains(e.target))) return;
+    if (!(st === "peek" || st === "min" || head.contains(e.target))) return;
     y0 = e.touches[0].clientY; h0 = el.offsetHeight; dragging = true; moved = false;
     el.style.transition = "none";
   }, { passive: true });
@@ -1604,7 +1614,7 @@ const Sheet = (() => {
     const dy = y0 - e.touches[0].clientY;
     if (Math.abs(dy) > 6) moved = true;
     if (!moved) return;
-    const h = Math.max(Math.round(hFor("peek") * 0.6), Math.min(hFor("full"), h0 + dy));
+    const h = Math.max(Math.round(hFor(lowest()) * 0.7), Math.min(hFor("full"), h0 + dy));
     el.style.height = h + "px";
     e.preventDefault();
   }, { passive: false });
@@ -1613,8 +1623,9 @@ const Sheet = (() => {
     dragging = false; el.style.transition = "";
     if (!moved) { refresh(); return; }
     const h = el.offsetHeight;
-    const states = ["peek", "half", "full"];   // 詳細モードも peek(店名の帯だけ)まで畳める(2026-10-24)
-    // 行き先は「ドラッグ方向に一番近い段」。peek より下へ引いたら peek に戻す
+    // 一覧モードは min(帯だけ)→peek→half→full の4段、詳細モードは peek(店名の帯だけ)→half→full の3段(2026-10-24/25)
+    const states = mode === "detail" ? ["peek", "half", "full"] : ["min", "peek", "half", "full"];
+    // 行き先は「いまの高さに一番近い段」。いちばん下の段より下へ引いたらその段に戻す
     const best = states.map(s => [s, Math.abs(hFor(s) - h)]).sort((a, b) => a[1] - b[1])[0][0];
     set(best);
     try { window.icTrack && window.icTrack("sheet_drag", { to: best, mode: mode }); } catch (e) {}
@@ -1625,7 +1636,7 @@ const Sheet = (() => {
   // つまみをタップ: peek⇄half(詳細モードでは half⇄full)
   head.addEventListener("click", () => {
     if (moved) return;
-    if (st === "peek") set("half");                       // 畳んだ帯をタップ → 開く(一覧・詳細とも)
+    if (st === "peek" || st === "min") set("half");       // 畳んだ帯をタップ → 開く(一覧・詳細とも)
     else if (mode === "detail") set(st === "full" ? "half" : "full");
     else set("peek");
   });

@@ -64084,5 +64084,44 @@
   ],
   "added": "2026-10-23",
   "posted": "2026-10-24"
+ },
+ {
+  "id": "namikinomachi-hakatanomori",
+  "name": "並木街珈琲 博多の森店",
+  "area": "東平尾(博多の森)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.589857,
+  "lng": 130.456089,
+  "address": "福岡県福岡市博多区東平尾1-182-1",
+  "visited": "2026-10-22",
+  "with": "family",
+  "category": "gourmet",
+  "wish": false,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": false,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "ファミレス「ジョイフル」が運営するカフェ(2020年5月オープン)。並木街珈琲は福岡県内ではここだけ(ほかは大分に3店)。看板は注文を受けてからメレンゲを立てて1枚ずつ焼く「ふわふわパンケーキ」と、ネルドリップの珈琲。2杯目はおかわり価格(ブレンド税込291円)。⭐子連れ歓迎: ベルト付きの子供椅子・取り皿あり・絵本の棚。椅子はゆったりしたアームチェアとソファ席で大人もゆっくりできる。⭐トイレは「みんなのトイレ(車いす・おむつ替え台)」と女性用に分かれていて、男性でもおむつ替え台が使える。受付は整理券方式なので待ち時間を管理しやすい(週末は15〜20分待ちの口コミあり)。平日10:00〜22:00/土日祝8:00〜22:00(L.O.21:00)。87席・全席禁煙・Wi-Fi・ペット不可・予約不可・駐車場あり。東平尾公園(大谷広場)から車ですぐ。福岡空港駅から徒歩14分。⚠入口に「撮影禁止」のピクトあり(ジョイフルは撮影許可の事前申請制)。館内の写真はそのため載せていません。TEL 092-624-3566",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400107/40054278/",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "namikinomachi-hakatanomori.jpg",
+  "photos": [
+   "namikinomachi-hakatanomori_01_外観(店名サイン).jpg",
+   "namikinomachi-hakatanomori_02_駐車場入口の看板(平日10時〜22時・土日祝8時〜22時).jpg",
+   "namikinomachi-hakatanomori_03_入口の表示(営業時間・全席禁煙・Wi-Fi・撮影禁止・ペット不可).jpg",
+   "namikinomachi-hakatanomori_04_店頭の秋メニュー(渋皮栗とマスカットのパンケーキ).jpg"
+  ],
+  "added": "2026-10-25"
  }
 ]

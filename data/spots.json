@@ -64179,5 +64179,46 @@
   ],
   "added": "2026-10-25",
   "posted": "2026-10-27"
+ },
+ {
+  "id": "amayadori-hirao",
+  "name": "居酒屋 あまや鳥",
+  "area": "平尾",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "居酒屋",
+  "lat": 33.575118,
+  "lng": 130.403825,
+  "address": "福岡県福岡市中央区平尾2-2-18",
+  "visited": "2023-08-08",
+  "with": "friend",
+  "category": "gourmet",
+  "wish": false,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐西鉄平尾駅から徒歩3分、高宮通り沿いの焼鳥と海鮮の居酒屋(2019年11月オープン。店名は「海(あま)の幸」+「鶏(とり)」)。焼鳥は1本132円〜、おまかせ5本盛り1,188円、つくね275円、トマトチーズ巻き330円、大根の唐揚げ550円、鯛わた塩辛・梅水晶 各528円(2026年10月 ホットペッパー掲載・税込)。口コミでは白レバ刺し・鳥刺し盛り合わせ・大根の唐揚げの評判が高い(食べログ・ホットペッパー)。⚠**全席喫煙可**(紙・加熱式)で個室・座敷なし、18時開店の夜の店。子連れ向きではなく、大人の夜飲みに。カード払いは4%上乗せの掲示あり(2023年8月時点)。営業 18:00〜24:00(金土祝前〜翌2:00・サイトにより表記差あり)。定休日は不定休または水曜(要確認)。TEL 092-406-9698。※動画は2023年8月の撮影",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400104/40053356/",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "amayadori-hirao.jpg",
+  "photos": [
+   "amayadori-hirao_01_外観(電飾看板と提灯).jpg",
+   "amayadori-hirao_02_おまかせ5本盛り.jpg",
+   "amayadori-hirao_03_鯛わた塩辛.jpg",
+   "amayadori-hirao_04_トマトチーズ巻き.jpg",
+   "amayadori-hirao_05_大根の唐揚げ.jpg",
+   "amayadori-hirao_06_店内の壁(手書きの額と日本酒).jpg"
+  ],
+  "added": "2026-10-26"
  }
 ]

@@ -64220,5 +64220,44 @@
    "amayadori-hirao_06_店内の壁(手書きの額と日本酒).jpg"
   ],
   "added": "2026-10-26"
+ },
+ {
+  "id": "kizaemon-haruyoshi",
+  "name": "紀左衛門(キザエモン)",
+  "area": "春吉",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "たこ焼き",
+  "lat": 33.589379,
+  "lng": 130.406331,
+  "address": "福岡県福岡市中央区春吉3-13-27",
+  "visited": "2023-03-01",
+  "with": "friend",
+  "category": "gourmet",
+  "wish": false,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐天神南駅から徒歩5分、春吉のたこ焼きバー(Takoyaki Bar Kizaemon)。表面はとろっと、皮はクレープのようにきめ細かい生地で、ソース・塩マヨ・ゆず胡椒マヨ・明太マヨ・テリタマなどの味がある。ハイボールと合わせる「2軒目」の店で、持ち帰りもできる(食べログ・Retty・hamoni)。⚠**カウンター7席だけの深夜バー**(19:00〜翌2:00・金土は〜翌5:00、日曜定休。媒体で表記差あり)。店内飲食はチャージあり。2023年3月の訪問時は卓上に灰皿があった。**子連れ向きではなく大人の〆の一軒**。価格は現行の表が取れていないので未記載。営業は2025年1月の訪問記録まで確認(閉店表示なし・行く前に電話確認を)。TEL 092-762-8808。※動画は作らず保留(2023年撮影の素材のみ)",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40040863/",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kizaemon-haruyoshi.jpg",
+  "photos": [
+   "kizaemon-haruyoshi_01_外観(紀左衛門の看板).jpg",
+   "kizaemon-haruyoshi_02_たこ焼き2皿(白マヨと明太マヨ).jpg",
+   "kizaemon-haruyoshi_03_たこ焼き(マヨ).jpg",
+   "kizaemon-haruyoshi_04_バーカウンターの酒棚.jpg"
+  ],
+  "added": "2026-10-26"
  }
 ]

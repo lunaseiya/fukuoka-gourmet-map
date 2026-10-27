@@ -401,8 +401,22 @@
   /* ★顧客向けの1行目【2026-10-14】: 子連れOK + 年齢 + 🔍。折り返さず、はみ出したら横スクロール */
   .filters.mainrow { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
   .filters.mainrow::-webkit-scrollbar { display: none; }
-  .kids-btn { font-weight: 700; }
-  .kids-btn.kids-lv1 { opacity: .85; }   /* 可まで広げている段 */
+  /* ★子連れボタンを「押せるボタン」に見せる(2026-10-27ユーザー要望「アイコンに見える」)。
+     立体の影+押したら沈む+右に「切替」の小札(押すたびに 歓迎→可まで→すべて と変わることを示す) */
+  .kids-btn {
+    font-weight: 700; font-size: 14px; padding: 8px 10px 8px 14px;
+    display: inline-flex; align-items: center; gap: 8px;
+    box-shadow: 0 3px 0 rgba(0,0,0,.18), 0 3px 8px rgba(0,0,0,.12);
+    transition: transform .05s, box-shadow .05s;
+  }
+  .kids-btn::after {
+    content: "切替 ▾"; font-size: 11px; font-weight: 700; padding: 2px 8px; border-radius: 999px;
+    background: rgba(255,255,255,.3); border: 1px solid rgba(255,255,255,.55);
+  }
+  .kids-btn:not(.active)::after { background: #f1f2f6; border-color: #dfe4ea; color: #57606f; }
+  .kids-btn.active { background: #e8772e; border-color: #c9621f; color: #fff; }
+  .kids-btn.kids-lv1 { background: #f39c5a; border-color: #d9803d; }   /* 可まで広げている段 */
+  .kids-btn:active { transform: translateY(3px); box-shadow: 0 0 0 rgba(0,0,0,.18), 0 1px 3px rgba(0,0,0,.12); }
   .icon-btn {
     margin-left: auto; flex: 0 0 auto;
     width: 36px; height: 34px; border-radius: 999px;
@@ -590,9 +604,14 @@
   .card-points li.pt-warn::before { content: "⚠"; position: absolute; left: 0; color: #c0392b; }
   .card-points li.pt-warn { color: #8a3a2f; }
   .card-memo { color: var(--muted); font-size: 12.5px; white-space: normal; overflow-wrap: anywhere; }
-  .memo-more { display: inline; }
-  .memo-more[open] { display: block; white-space: normal; overflow-wrap: anywhere; }
-  .memo-more summary { display: inline; cursor: pointer; color: #2a6fb0; margin-left: 4px; list-style: none; }
+  .memo-more { display: block; margin-top: 4px; }
+  .memo-more[open] { white-space: normal; overflow-wrap: anywhere; }
+  /* 押しやすく(2026-10-27ユーザー要望): 指で狙える大きさのピル型ボタン。高さ36px以上 */
+  .memo-more summary { display: inline-flex; align-items: center; gap: 4px; cursor: pointer; list-style: none;
+    min-height: 36px; padding: 0 16px; border: 1px solid #b9d3ec; border-radius: 999px; background: #f2f8fe;
+    color: #2a6fb0; font-size: 13px; font-weight: 700; -webkit-tap-highlight-color: transparent; }
+  .memo-more summary::after { content: "▼"; font-size: 10px; }
+  .memo-more summary:active { background: #dcebfa; }
   .memo-more summary::-webkit-details-marker { display: none; }
   .memo-more[open] summary { display: none; }
   .card-kids {

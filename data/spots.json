@@ -89682,5 +89682,51 @@
    "daco-seiryu-park_02_ダコーバーガーとピスタチオクリーム.jpg"
   ],
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40075012/"
+ },
+ {
+  "id": "taito-station-canalcity",
+  "name": "タイトーステーション キャナルシティ博多(太東夜市)",
+  "area": "キャナルシティ博多",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ゲームセンター",
+  "lat": 33.589481,
+  "lng": 130.41095,
+  "address": "福岡県福岡市博多区住吉1-2 キャナルシティ博多 センターウォーク5F",
+  "visited": "2026-10-27",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": "facility",
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐2026年8月8日オープンの、台湾夜市風のゲームセンター「太東夜市」。天井一面の提灯とネオンの中に、台湾式を含むクレーンゲーム約100台(景品は食品・お菓子中心。うまかっちゃんも)、1回10円のゲーム、PONG・シャッフルボード。⭐ベビーカーのまま入れた(現地で確認)。大人はセルフのクラフトビール、カラオケ4室・ダーツ2台もある。営業10:00〜23:00。トイレはキャナルの館内(おむつ交換台・ベビーキープ)。",
+  "points": [
+   "1回10円で遊べるゲームあり",
+   "ベビーカーのまま入れた",
+   "景品はお菓子・食品が中心",
+   "館内におむつ交換台・こどものトイレ"
+  ],
+  "memo": "キャナルシティ博多5Fの、台湾夜市風のゲームセンター。2026年10月27日に訪問。提灯とネオンの通りにクレーンゲームが約100台並ぶ。営業は10:00〜23:00で、大人向けにセルフのクラフトビールやカラオケもある。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "taito-station-canalcity.jpg",
+  "wish": false,
+  "category": "play",
+  "added": "2026-10-28",
+  "in": "canalcityhakata",
+  "web": "https://gamebiz.jp/news/430620",
+  "photos": [
+   "taito-station-canalcity_01_入口のネオン(太東夜市).jpg",
+   "taito-station-canalcity_02_提灯の天井.jpg",
+   "taito-station-canalcity_03_1回10円のドームゲーム.jpg",
+   "taito-station-canalcity_04_うまかっちゃんのクレーン.jpg"
+  ]
  }
 ]

@@ -78640,5 +78640,5888 @@
    "⚠ 子連れ設備は店の自己申告(要確認)"
   ],
   "memo": "天然魚・活魚を使ういけす料理の店。ホットペッパー調べ(未訪問)。月火木17:00〜21:30、金〜日祝11:30〜14:00ほか。水曜定休・火曜不定休。東郷駅から徒歩3分。"
+ },
+ {
+  "id": "wkfd9bd48e53",
+  "name": "清川サロン",
+  "area": "中央区",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "ダイニング",
+  "lat": 33.58112,
+  "lng": 130.410324,
+  "address": "福岡県福岡市中央区清川2-6-4 F.garage 1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4)(2026-10-27・未訪問)。⭐「キッズスペースあり、お子様ランチメニュー」。営業時間: 11:30〜14:00、18:00〜22:00。定休日: 水・日曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/kiyokawa_salon/",
+  "source": "https://macaro-ni.jp/175680",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "お子様ランチあり"
+  ],
+  "memo": "キッズスペースとお子様ランチがある、清川のダイニング。macaroniの記事で紹介(未訪問)。F.garage 1F。11:30〜14:00、18:00〜22:00。水・日曜定休。"
+ },
+ {
+  "id": "wk5a9f1db73c",
+  "name": "ザ・パイホール ロサンゼルス フクオカ",
+  "area": "中央区",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "パイ専門店・カフェ",
+  "lat": 33.575294,
+  "lng": 130.40831,
+  "address": "福岡県福岡市中央区白金2-11-20 パセオ平尾1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4)(2026-10-27・未訪問)。⭐「キッズスペースもあり、子どもも一緒に楽しめます」。営業時間: 08:15～19:00。定休日: なし。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://instagram.com/piehole.fukuoka_staff",
+  "source": "https://macaro-ni.jp/175680?page=2",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり"
+  ],
+  "memo": "キッズスペースもある、ロサンゼルス発のパイ専門店・カフェ。macaroniの記事で紹介(未訪問)。パセオ平尾1F。8:15〜19:00、定休日なし。"
+ },
+ {
+  "id": "wk63690e8998",
+  "name": "ピエトロ 次郎丸店",
+  "area": "早良区",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "パスタレストラン",
+  "lat": 33.549503,
+  "lng": 130.327606,
+  "address": "福岡県福岡市早良区次郎丸4-3-21",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4) / ウォーカープラス(2019) / いこーよ(2026-10-27・未訪問)。⭐「キッズルームやお子様メニューも用意されている」。子連れ設備: ベビーカー対応。営業時間: 11:00～21:30。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.pietro.co.jp/restaurant/detail/9",
+  "source": "https://macaro-ni.jp/175680?page=2",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "お子様メニューあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "キッズルームとお子様メニューがあるピエトロのパスタレストラン。macaroniの記事で紹介(未訪問)。11:00〜21:30、不定休。"
+ },
+ {
+  "id": "wk97a43a151a",
+  "name": "魔女のおこのみ たばさ",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "お好み焼き",
+  "lat": 33.314404,
+  "lng": 130.531006,
+  "address": "福岡県久留米市合川町2120-4",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)(2026-10-27・未訪問)。⭐「店内にはキッズスペースが設けられており、子どもが遊びながら過ごせる」。子連れ設備: 座敷席。営業時間: 水～日11:00～14:00、17:00～20:00。定休日: 月・火曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://majotabasa.wixsite.com/tabasa-okunote",
+  "source": "https://macaro-ni.jp/176064?page=2",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "座敷席あり"
+  ],
+  "memo": "店内にキッズスペースがあり子供が遊びながら過ごせるお好み焼き店。macaroniの記事で紹介(未訪問)。水〜日 11:00〜14:00、17:00〜20:00。月・火曜定休。"
+ },
+ {
+  "id": "wk1818586441",
+  "name": "チャイナ梅の花 久留米店",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "中華料理",
+  "lat": 33.321922,
+  "lng": 130.503967,
+  "address": "福岡県久留米市城南町5-26",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)+まいぷれ久留米 / まいぷれ久留米(2026-10-27・未訪問)。⭐「キッズルームでお子様を遊ばせながら」。子連れ設備: 個室、掘りごたつ席、駐車場あり。営業時間: 11:00-15:30、17:00-21:30。定休日: 年末年始。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.umenohana.co.jp",
+  "source": "https://macaro-ni.jp/176064",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "個室・掘りごたつ席あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズルームで子供を遊ばせながら食事できる、梅の花グループの中華料理店。macaroniの記事で紹介(未訪問)。11:00〜15:30、17:00〜21:30。年末年始休み。"
+ },
+ {
+  "id": "wk18496b72b0",
+  "name": "ケンちゃんかき",
+  "area": "糸島市",
+  "city": "糸島市",
+  "pref": "福岡県",
+  "genre": "牡蠣小屋",
+  "lat": 33.556049,
+  "lng": 130.122757,
+  "address": "福岡県糸島市志摩船越415-17",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2025/1)(2026-10-27・未訪問)。⭐「メニュー数豊富＆キッズスペースも充実の注目店」。営業時間: 11:00〜17:00。定休日: 不定。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/524193/",
+  "source": "https://arne.media/gourmet/524193/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースが充実"
+  ],
+  "memo": "メニュー数が豊富でキッズスペースも充実した糸島・船越の牡蠣小屋。ARNEの記事で紹介(未訪問)。11:00〜17:00、不定休。"
+ },
+ {
+  "id": "wk27c1f57797",
+  "name": "鉄板ダイニング チオハウス",
+  "area": "豊前市",
+  "city": "豊前市",
+  "pref": "福岡県",
+  "genre": "鉄板・ハンバーグ",
+  "lat": 33.620377,
+  "lng": 131.133682,
+  "address": "福岡県豊前市赤熊929-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2023/10)(2026-10-27・未訪問)。⭐「そして、なんと、キッズスペースがあるんです！」。営業時間: ランチ11:00～15:00、ディナー17:00～20:30。定休日: 木曜ディナー。営業確認: 食べログに閉店表示なし・2025年8月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/414375/",
+  "source": "https://arne.media/gourmet/414375/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり"
+  ],
+  "memo": "キッズスペースがある、豊前市の鉄板ダイニング。ARNEの記事で紹介(未訪問)。ランチ11:00〜15:00、ディナー17:00〜20:30。木曜はディナー休み。"
+ },
+ {
+  "id": "wkfb07090ef8",
+  "name": "café＆photo haco.(カフェアンドフォトハコ)",
+  "area": "朝倉市",
+  "city": "朝倉市",
+  "pref": "福岡県",
+  "genre": "カフェ・フォトスタジオ",
+  "lat": 33.47802,
+  "lng": 130.709686,
+  "address": "福岡県朝倉市秋月野鳥685-1 1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2023/5)(2026-10-27・未訪問)。⭐「店内の中心にはキッズスペースがあり、どの席からも子どもの様子を見られる」。営業時間: 11:00～16:00(ランチは完全予約制)。定休日: 不定(基本は平日休み)。営業確認: 食べログに閉店表示なし・最新口コミは2024年12月。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/373979/",
+  "source": "https://arne.media/gourmet/373979/",
+  "added": "2026-10-27",
+  "points": [
+   "店の中心にキッズスペース(どの席からも見える)",
+   "⚠ ランチは完全予約制",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "店内の中心にキッズスペースがあり、どの席からも子供の様子が見える秋月のカフェ兼フォトスタジオ。ARNEの記事で紹介(未訪問)。11:00〜16:00、不定休(基本は平日休み)。"
+ },
+ {
+  "id": "wk01414a8296",
+  "name": "cafeありんこ",
+  "area": "東区",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.621235,
+  "lng": 130.435486,
+  "address": "福岡県福岡市東区松島1-1-39",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2023/3)(2026-10-27・未訪問)。⭐「うれしいのがキッズスペースがあること！店主がDIYしたおままごとキッチンがあ…」。営業確認: 食べログに閉店表示なし・最新口コミは2024年8月(Uber Eats掲載あり)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/369397/",
+  "source": "https://arne.media/gourmet/369397/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり(店主手作りのままごとキッチン)",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "店主がDIYしたおままごとキッチンのあるキッズスペースがある、東区松島のカフェ。ARNEの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk569b195efc",
+  "name": "アクアマリン糸島",
+  "area": "糸島市",
+  "city": "糸島市",
+  "pref": "福岡県",
+  "genre": "海鮮丼",
+  "lat": 33.55061,
+  "lng": 130.141922,
+  "address": "福岡県糸島市志摩久家2779-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2025/9)(2026-10-27・未訪問)。⭐「遊具充実で子どもが大喜びな、糸島市にあるお気に入りの飲食店」。営業時間: 11:00～17:00。定休日: 木曜日＋不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/557285/",
+  "source": "https://arne.media/gourmet/557285/",
+  "added": "2026-10-27",
+  "points": [
+   "遊具が充実"
+  ],
+  "memo": "遊具が充実していて子供が喜ぶ、糸島・志摩の海鮮丼の店。ARNEの記事で紹介(未訪問)。11:00〜17:00。木曜+不定休。"
+ },
+ {
+  "id": "wk0a50ed9441",
+  "name": "Cafe＆Studio KURUMERU(くるめる)",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.317318,
+  "lng": 130.528458,
+  "address": "福岡県久留米市東櫛原町1752-1 久留米市中央公園内",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2023/12)(2026-10-27・未訪問)。⭐「靴を脱いで上がる個室のようなキッズスペースでは、食事を楽しむこともできます。」。子連れ設備: 遊具の貸し出し。営業時間: 10:00(土日祝9:00)～17:00。定休日: なし。営業確認: 食べログに閉店表示なし・最新口コミは2024年4月。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/433361/",
+  "source": "https://arne.media/gourmet/433361/",
+  "added": "2026-10-27",
+  "points": [
+   "靴を脱いで上がる個室風キッズスペース(食事もできる)",
+   "遊具の貸し出しあり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "靴を脱いで上がる個室風のキッズスペースで食事もできる、久留米市中央公園内のカフェ。ARNEの記事で紹介(未訪問)。10:00(土日祝9:00)〜17:00、定休日なし。"
+ },
+ {
+  "id": "wkd35fb2e293",
+  "name": "ミルクホール門司港",
+  "area": "門司区",
+  "city": "北九州市門司区",
+  "pref": "福岡県",
+  "genre": "カフェ・焼きカレー",
+  "lat": 33.94577,
+  "lng": 130.961395,
+  "address": "福岡県北九州市門司区西海岸1-4-3 日産船舶ビル1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "山口さん(2023/8)(2026-10-27・未訪問)。⭐「店内には、キッズスペースが設けられていました！／キッズメニューも充実していました！」。営業時間: 日~木 10:00～20:00。定休日: なし。営業確認: 食べログに閉店表示なし・2026年6月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yamaguchi-san.com/post-5751/",
+  "source": "https://yamaguchi-san.com/post-5751/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズメニューが充実"
+  ],
+  "memo": "キッズスペースとキッズメニューがある門司港の焼きカレーのカフェ。山口さんの記事で紹介(未訪問)。日〜木 10:00〜20:00、定休日なし。日産船舶ビル1F。"
+ },
+ {
+  "id": "wk065c9407ed",
+  "name": "CUCU",
+  "area": "小倉北区",
+  "city": "北九州市小倉北区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.872025,
+  "lng": 130.875595,
+  "address": "福岡県北九州市小倉北区吉野町11-21",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "kids-cham(2022/11) / いこーよ(2026-10-27・未訪問)。⭐「2階にキッズスペースがある親子カフェ」。子連れ設備: 離乳食、ベビーカーOK、オムツ交換台。営業時間: 月～土11:30～15:00、18:00～20:00(火11:30～17:00)。定休日: 日曜日 祝祭日 不定休日あり。営業確認: 食べログに閉店表示なし・2026年10月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/kitchen_cafe_cucu/",
+  "source": "https://kids-cham.com/for-mother/kitakyusyu-kidsspace-restrant/",
+  "added": "2026-10-27",
+  "points": [
+   "2階にキッズスペース",
+   "キッズメニュー・離乳食あり",
+   "おむつ替え台あり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "2階にキッズスペースがある、小倉北区吉野町の親子カフェ。kids-chamの記事で紹介(未訪問)。月〜土 11:30〜15:00、18:00〜20:00(火は11:30〜17:00)。日曜・祝日定休、不定休あり。"
+ },
+ {
+  "id": "wkd7cb84f4d1",
+  "name": "ふわふわ食堂",
+  "area": "八幡西区",
+  "city": "北九州市八幡西区",
+  "pref": "福岡県",
+  "genre": "食堂",
+  "lat": 33.833538,
+  "lng": 130.736572,
+  "address": "福岡県北九州市八幡西区三ヶ森3-2-8",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "kids-cham(2022/11) / いこーよ(2026-10-27・未訪問)。⭐「キッズルーム完備、子ども向けイベント開催」。子連れ設備: 授乳室、オムツ替えシート。営業時間: 9:00～17:00。定休日: 日曜日 年末年始等。営業確認: 食べログに閉店表示なし・2026年4月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/fuwafuwashokudo/",
+  "source": "https://kids-cham.com/for-mother/kitakyusyu-kidsspace-restrant/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルーム完備",
+   "授乳室・おむつ替えシートあり",
+   "子供向けイベントを開催"
+  ],
+  "memo": "キッズルーム完備で子供向けイベントも開く、八幡西区三ヶ森の食堂。kids-chamの記事で紹介(未訪問)。9:00〜17:00。日曜・年末年始など休み。"
+ },
+ {
+  "id": "wk0fd5415d50",
+  "name": "しいたけ専門店 陽より子",
+  "area": "筑後市",
+  "city": "筑後市",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.208637,
+  "lng": 130.520615,
+  "address": "福岡県筑後市長浜1529",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペース完備！」。子連れ設備: ベビーカーOK、駐車場あり。営業時間: 売店営業　10:00～18:00 ランチ営業　11:00～14:00。定休日: 日曜日 祝祭日 年末年始。営業確認: 食べログに閉店表示なし・2025年12月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.hiyoriko.co.jp/",
+  "source": "https://iko-yo.net/facilities/152486",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "キッズメニューあり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペース完備の、筑後市のしいたけ専門店のレストラン・カフェ。いこーよ掲載(未訪問)。売店10:00〜18:00、ランチ11:00〜14:00。日曜・祝日・年末年始休み。"
+ },
+ {
+  "id": "wk7b91cfa165",
+  "name": "石橋ファームランドラッテビアンコ",
+  "area": "筑紫野市",
+  "city": "筑紫野市",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.462395,
+  "lng": 130.535126,
+  "address": "福岡県筑紫野市筑紫1052-16",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「遊具もあるので、動物とのふれあいと外遊び、グルメが一か所で楽しめるのも家族連れには大きな魅力。」。営業時間: 09時00分 ～ 17時00分。定休日: 火曜日。営業確認: 食べログに閉店表示なし・2025年8月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/%E7%9F%B3%E6%A9%8B%E3%83%95%E3%82%A1%E3%83%BC%E3%83%A0%E3%83%A9%E3%83%B3%E3%83%89%E3%83%A9%E3%83%83%E3%83%86%E3%83%93%E3%82%A2%E3%83%B3%E3%82%B3-794839603900511/?ref=br_rs",
+  "source": "https://iko-yo.net/facilities/130365",
+  "added": "2026-10-27",
+  "points": [
+   "遊具あり",
+   "動物とふれあえる"
+  ],
+  "memo": "動物とのふれあいと外遊び、食事が一か所で楽しめる筑紫野の牧場レストラン・カフェ。いこーよ掲載(未訪問)。9:00〜17:00。火曜定休。"
+ },
+ {
+  "id": "wk332e6415d7",
+  "name": "門司港レトロ 王様のたまご",
+  "area": "門司区",
+  "city": "北九州市門司区",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.94619,
+  "lng": 130.961853,
+  "address": "福岡県北九州市門司区港町9-4 バルク館1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「ガラス張り冷暖房完備のキッズルーム付きのレストラン！」。営業時間: 11時00分 ～ 21時00分。定休日: 不定休。営業確認: 食べログに閉店表示なし・2026年9月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.crossroadfukuoka.jp/jp/event/?mode=detail&amp;id=400000009027&amp;isSpot=1",
+  "source": "https://iko-yo.net/facilities/114722",
+  "added": "2026-10-27",
+  "points": [
+   "ガラス張りのキッズルーム(冷暖房完備)",
+   "キッズメニューあり"
+  ],
+  "memo": "ガラス張りで冷暖房完備のキッズルームが付いた、門司港レトロのレストラン。いこーよ掲載(未訪問)。バルク館1F。11:00〜21:00、不定休。"
+ },
+ {
+  "id": "wk0f60abbefa",
+  "name": "Queen Cook Cafe（クイーンクックカフェ）",
+  "area": "飯塚市",
+  "city": "飯塚市",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.64489,
+  "lng": 130.68219,
+  "address": "福岡県飯塚市片島1-3-25 1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「この店の嬉しいポイントは、完全禁煙でキッズスペースやベビーベッド、おむつ替え、授乳室、お子さんの椅子も用意されているこ…」。子連れ設備: おむつ替え、授乳室、ベビーベッド、駐車場あり、授乳室あり、ベビーカーOK、オムツ交換台。営業時間: 11時00分 ～ 16時00分 平　日：11:00-16:00(LO15:30） 土日祝：11:00-17:00(LO16:30）。定休日: 不定休。営業確認: 2022年6月に八木山展望台から現住所へ移転済み・食べログ2026年8月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://profile.ameba.jp/ameba/tenbo-dai/",
+  "source": "https://iko-yo.net/facilities/120537",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "授乳室・おむつ替え・ベビーベッドあり",
+   "子供椅子あり",
+   "完全禁煙",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペース・授乳室・ベビーベッドまでそろう、飯塚の完全禁煙のカフェ。いこーよ掲載(未訪問)。旧西日本新聞ビル。平日11:00〜16:00、土日祝11:00〜17:00。不定休。"
+ },
+ {
+  "id": "wk6c19cc43d4",
+  "name": "フルフル風の森店",
+  "area": "東区",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ,ショッピング",
+  "lat": 33.666702,
+  "lng": 130.432281,
+  "address": "福岡県福岡市東区香住ヶ丘7-4-2",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「階段下のキッズスペースは屋根裏部屋のようなかわいらしい雰囲気。」。子連れ設備: ベビーカーOK、授乳室あり、駐車場あり。営業時間: 08時00分 ～ 18時00分。定休日: 火曜日。営業確認: 食べログに閉店表示なし・2026年7月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.full-full.jp/shop/?id=target4",
+  "source": "https://iko-yo.net/facilities/151332",
+  "added": "2026-10-27",
+  "points": [
+   "階段下に屋根裏部屋風のキッズスペース",
+   "授乳室あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "階段下に屋根裏部屋のようなキッズスペースがある、パン屋フルフルの風の森店。いこーよ掲載(未訪問)。8:00〜18:00。火曜定休。"
+ },
+ {
+  "id": "wk974cbe57d5",
+  "name": "Baby Face Planets 久留米店",
+  "area": "久留米市",
+  "city": "久留米市",
+  "pref": "福岡県",
+  "genre": "カフェレストラン",
+  "lat": 33.293476,
+  "lng": 130.529495,
+  "address": "福岡県久留米市国分町1941-4",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "macaroni(2026/5)(2026-10-27・未訪問)。⭐「キッズメニューあり」。子連れ設備: 半個室風ソファ席、駐車場あり。営業時間: 11:00-23:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://babyfe-fukuoka.co.jp",
+  "source": "https://macaro-ni.jp/176064",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "半個室風ソファ席",
+   "駐車場あり"
+  ],
+  "memo": "キッズメニューと半個室風のソファ席がある、久留米・国分町のカフェレストラン。macaroniの記事で紹介(未訪問)。11:00〜23:00、不定休。"
+ },
+ {
+  "id": "wk8d18420963",
+  "name": "ねことうさぎのカフェ クリームシャンティ",
+  "area": "春日市",
+  "city": "春日市",
+  "pref": "福岡県",
+  "genre": "体験施設,レストラン・カフェ",
+  "lat": 33.539291,
+  "lng": 130.452347,
+  "address": "福岡県春日市岡本2-11 レジデンス春日1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子様ランチ（平日限定）や、お子様にもおすすめなネコパフェ・うさぎパフェなどのスイーツもご用意しております。」。子連れ設備: 駐車場あり、ベビーカーOK。営業時間: 11時00分 ～ 18時00分 営業時間 月〜金。定休日: 定休日：不定休 Instagramかお電話にてご確認ください。。営業確認: 食べログに閉店表示なし・最新口コミは2024年6月。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://creamchantilly.cafe.to/",
+  "source": "https://iko-yo.net/facilities/173097",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり(平日限定)",
+   "ベビーカーで入れる",
+   "駐車場あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "平日限定のお子様ランチやネコ・うさぎのパフェがある、春日市の猫とうさぎのカフェ。いこーよ掲載(未訪問)。11:00〜18:00、不定休(Instagramか電話で確認)。"
+ },
+ {
+  "id": "wk75be207389",
+  "name": "梅の花 大宰府別荘自然庵",
+  "area": "太宰府市",
+  "city": "太宰府市",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.518589,
+  "lng": 130.53598,
+  "address": "福岡県太宰府市宰府4-4-41 太宰府天満宮裏隣",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お料理は予算によって色々用意されており、お子様メニューもあります。」。営業時間: 11時00分 ～ 22時00分 昼は15時半オーダーストップ。 夜は21時オーダーストップ。。定休日: 年末年始。営業確認: 食べログに閉店表示なし・2026年8月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://umenohana-restaurant.co.jp/shop-list/umenohana/%E5%A4%AA%E5%AE%B0%E5%BA%9C%E5%88%A5%E8%8D%98%E8%87%AA%E7%84%B6%E5%BA%B5/",
+  "source": "https://iko-yo.net/facilities/43811",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり"
+  ],
+  "memo": "太宰府天満宮裏にある、お子様メニューもある梅の花の別荘。いこーよ掲載(未訪問)。11:00〜22:00(昼は15:30、夜は21:00オーダーストップ)。年末年始休み。"
+ },
+ {
+  "id": "wk3e936b4946",
+  "name": "コミュニティカフェ はらの木",
+  "area": "早良区",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.570858,
+  "lng": 130.342484,
+  "address": "福岡県福岡市早良区原団地10-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「「お子様カレー」や「お子様おにぎりセット」キッズメニューもあるのがうれしいですね。」。営業時間: 10:00〜17:00 10:00〜20:00 (水曜のみ)。定休日: 月曜日 日曜日。営業確認: 2024年6月開業の記録のみ・2025-26年の活動は確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://haranoki.com/",
+  "source": "https://iko-yo.net/facilities/185585",
+  "added": "2026-10-27",
+  "points": [
+   "お子様カレー・お子様おにぎりセットあり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "お子様カレーやお子様おにぎりセットがある、早良区原団地のコミュニティカフェ。いこーよ掲載(未訪問)。10:00〜17:00(水曜のみ20:00まで)。月・日曜定休。"
+ },
+ {
+  "id": "wkc265086dd3",
+  "name": "ひよこカフェ 兵庫店",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "カフェ(たまご家併設)",
+  "lat": 33.263641,
+  "lng": 130.314011,
+  "address": "佐賀県佐賀市兵庫南2-3-30",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)(2026-10-27・未訪問)。⭐「小上がり席やキッズスペースがあり、小さな子ども連れでも利用しやすい」。子連れ設備: 小上がり席、バリアフリー、駐車場。営業時間: 11:00～16:00。定休日: 火曜日、月曜日不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.tamagoyasan.com/index.html",
+  "source": "https://macaro-ni.jp/176065",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "小上がり席あり",
+   "駐車場あり"
+  ],
+  "memo": "小上がり席とキッズスペースがある、たまご家併設のカフェ。macaroniの記事で紹介(未訪問)。11:00〜16:00。火曜定休、月曜不定休。バリアフリー。"
+ },
+ {
+  "id": "wk5002a3c63d",
+  "name": "ものづくりカフェ こねくり家",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "カフェ",
+  "lat": 33.254166,
+  "lng": 130.307999,
+  "address": "佐賀県佐賀市柳町4-16(旧久富家住宅)",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)(2026-10-27・未訪問)。⭐「キッズスペースが設けられており、子どもを遊ばせながらゆっくり食事を楽しめる」。子連れ設備: 畳席。営業時間: 火～日11:00～15:00。定休日: 月曜日、毎月最終火曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://conekuriya.com/",
+  "source": "https://macaro-ni.jp/176065",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "畳席あり"
+  ],
+  "memo": "キッズスペースで子供を遊ばせながら食事できる、旧久富家住宅のものづくりカフェ。macaroniの記事で紹介(未訪問)。火〜日 11:00〜15:00。月曜・毎月最終火曜休み。"
+ },
+ {
+  "id": "wkb88b3031d3",
+  "name": "wood-style cafe(ウッドスタイルカフェ)",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "カフェ",
+  "lat": 33.222149,
+  "lng": 130.366745,
+  "address": "佐賀県佐賀市諸富町徳富71-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)+EDITORS SAGA(2024/11)(2026-10-27・未訪問)。⭐「遊び場感覚で楽しめるキッズスペース付き」。子連れ設備: ベビーベッド、木のおもちゃ、ベビーカー対応。営業時間: 11:00～15:00、18:00～21:00(金土のみ)。定休日: 水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/wood_style_cafe/",
+  "source": "https://macaro-ni.jp/176065",
+  "added": "2026-10-27",
+  "points": [
+   "遊び場感覚のキッズスペース",
+   "ベビーベッド・木のおもちゃあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "遊び場感覚のキッズスペースが付いた、諸富町の木のぬくもりのカフェ。macaroniの記事で紹介(未訪問)。11:00〜15:00、18:00〜21:00(夜は金土のみ)。水曜定休。"
+ },
+ {
+  "id": "wk54e4aeb97e",
+  "name": "slow café(スローカフェ)",
+  "area": "多久市",
+  "city": "多久市",
+  "pref": "佐賀県",
+  "genre": "カフェ",
+  "lat": 33.260723,
+  "lng": 130.091156,
+  "address": "佐賀県多久市多久町3795-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/5)+EDITORS SAGA(2024/11)(2026-10-27・未訪問)。⭐「小上がり座敷席の目の前にキッズスペースがあるため、遊ぶ様子を見守りながら食事できます」。子連れ設備: 子ども用椅子、子ども用机、座敷、ヤギとの触れ合い。営業時間: 11:00～17:00。定休日: 月・火曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/slowcafe_taku/",
+  "source": "https://macaro-ni.jp/176065",
+  "added": "2026-10-27",
+  "points": [
+   "座敷席の目の前にキッズスペース",
+   "子供用の椅子・机あり",
+   "ヤギとふれあえる"
+  ],
+  "memo": "小上がり座敷の目の前にキッズスペースがあり、遊ぶ様子を見ながら食事できる多久のカフェ。macaroniの記事で紹介(未訪問)。11:00〜17:00。月・火曜定休。"
+ },
+ {
+  "id": "wkd195ea6c74",
+  "name": "きみどりバーガー",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "ハンバーガー",
+  "lat": 33.261986,
+  "lng": 130.283585,
+  "address": "佐賀県佐賀市神園1-5-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "EDITORS SAGA(2024/11) / いこーよ(2026-10-27・未訪問)。⭐「キッズメニューも充実」。子連れ設備: 個室、授乳室、おむつ替え設備。営業時間: 11:00～20:00(L.O.19:45)。定休日: 火曜日。営業確認: 食べログに閉店表示なし・2025年6月の口コミあり(諸富町から移転済み)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/kimidoriburger/",
+  "source": "https://editors-saga.jp/editors/editorssaga/20241119_2417.html",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューが充実",
+   "個室あり",
+   "授乳室・おむつ替え設備あり"
+  ],
+  "memo": "キッズメニューが充実した、佐賀市神園のハンバーガー店。EDITORS SAGAの記事で紹介(未訪問)。11:00〜20:00(LO19:45)。火曜定休。"
+ },
+ {
+  "id": "wkfebd0d2c2b",
+  "name": "天然菓房 のがり",
+  "area": "神埼市",
+  "city": "神埼市",
+  "pref": "佐賀県",
+  "genre": "スイーツ",
+  "lat": 33.414715,
+  "lng": 130.346298,
+  "address": "佐賀県神埼市脊振町服巻1126",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "EDITORS SAGA(2024/11)(2026-10-27・未訪問)。⭐「キッズスペースが設けられている」。子連れ設備: 遊具、子どもサイズのかき氷。営業時間: 金・土・日・祭日 10:00～18:00。定休日: 月～木曜日。営業確認: 食べログに閉店表示なし・2025年11月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/nogari.oyatu/",
+  "source": "https://editors-saga.jp/editors/editorssaga/20241119_2417.html",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース・遊具あり",
+   "子供サイズのかき氷"
+  ],
+  "memo": "キッズスペースと遊具があり、子供サイズのかき氷もある脊振の和菓子・スイーツの店。EDITORS SAGAの記事で紹介(未訪問)。金・土・日・祝 10:00〜18:00(月〜木は休み)。"
+ },
+ {
+  "id": "wkf3b744bcb8",
+  "name": "Cafe charmmy（カフェ チャーミー）",
+  "area": "小城市",
+  "city": "小城市",
+  "pref": "佐賀県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.286732,
+  "lng": 130.198257,
+  "address": "佐賀県小城市三日月町久米2120-2",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペース完備、親子で楽しめるカフェ」。子連れ設備: 子供椅子、離乳食、ベビーカーOK、授乳室あり、オムツ交換台。営業時間: 11時30分 ～ 17時00分。定休日: 不定休。営業確認: 食べログに閉店表示なし・口コミ0件で近況確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/Cafe-charmmy%E3%82%AB%E3%83%95%E3%82%A7-%E3%83%81%E3%83%A3%E3%83%BC%E3%83%9F%E3%83%BC-205079686276336/",
+  "source": "https://iko-yo.net/facilities/109390",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "子供椅子・離乳食あり",
+   "授乳室・おむつ替え台あり",
+   "ベビーカーで入れる",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "キッズスペース完備で親子で楽しめる、小城市三日月町のカフェ。いこーよ掲載(未訪問)。11:30〜17:00、不定休。"
+ },
+ {
+  "id": "wkb051b0f3d1",
+  "name": "キッチンこはく",
+  "area": "佐賀市",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.267288,
+  "lng": 130.304138,
+  "address": "佐賀県佐賀市駅前中央3-3-30",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペースあり！」。子連れ設備: 子供椅子、座敷、ベビーカーOK、駐車場あり、オムツ交換台。営業時間: 11時30分 ～ 23時00分 日によって営業時間の変更あり。定休日: 第二・第四日曜日。営業確認: 食べログに閉店表示なし・2025年1月の口コミあり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/149511",
+  "source": "https://iko-yo.net/facilities/149511",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズメニューあり",
+   "子供椅子・座敷あり",
+   "おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペースと座敷がある、佐賀駅前のキッチンこはく。いこーよ掲載(未訪問)。11:30〜23:00(日によって変更あり)。第2・第4日曜定休。"
+ },
+ {
+  "id": "wkf13ae38720",
+  "name": "Cafe Coeur de Nature",
+  "area": "伊万里市",
+  "city": "伊万里市",
+  "pref": "佐賀県",
+  "genre": "カフェ",
+  "lat": 33.278934,
+  "lng": 129.867996,
+  "address": "佐賀県伊万里市二里町八谷搦1179",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "muchu!(伊万里市子育て応援)(2026-10-27・未訪問)。⭐「キッズメニュー・おむつ替え台・子どもイス・子ども用食器」。子連れ設備: おむつ替え台、子どもイス、子ども用食器、絵本、木馬。営業時間: 12:00～16:00。定休日: 日・月・水。営業確認: Rettyに閉店表示なし・最新口コミは2019年。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://muchu.mobi/imarikosodate01/",
+  "source": "https://muchu.mobi/imarikosodate01/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "子供椅子・子供用の食器あり",
+   "おむつ替え台あり",
+   "絵本・木馬あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "キッズメニューに絵本や木馬まである、伊万里市二里町のカフェ。muchu!の記事で紹介(未訪問)。12:00〜16:00。日・月・水曜定休。"
+ },
+ {
+  "id": "wk4321a2a0c5",
+  "name": "TOMATO HEAD",
+  "area": "伊万里市",
+  "city": "伊万里市",
+  "pref": "佐賀県",
+  "genre": "イタリアン",
+  "lat": 33.274097,
+  "lng": 129.877106,
+  "address": "佐賀県伊万里市伊万里町甲122-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "muchu!(伊万里市子育て応援)(2026-10-27・未訪問)。⭐「個室・キッズメニュー・おむつ替え台・子どもイス・子ども用食器」。子連れ設備: 個室、おむつ替え台、子どもイス、子ども用食器。営業時間: 11:30～16:00, 18:00～23:00。定休日: 火曜。営業確認: 食べログに閉店表示なし・2025年7月の口コミあり・ふるなびに返礼品掲載中。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://muchu.mobi/imarikosodate01/",
+  "source": "https://muchu.mobi/imarikosodate01/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "個室あり",
+   "子供椅子・子供用の食器あり",
+   "おむつ替え台あり"
+  ],
+  "memo": "個室とキッズメニューがある伊万里のイタリアン。muchu!の記事で紹介(未訪問)。11:30〜16:00、18:00〜23:00。火曜定休。"
+ },
+ {
+  "id": "wk52d4d6efb3",
+  "name": "ラナカフェ",
+  "area": "神埼市",
+  "city": "神埼市",
+  "pref": "佐賀県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.310329,
+  "lng": 130.372696,
+  "address": "佐賀県神埼市神埼町神埼420(安居寺)",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子様プレートも用意されていますので、お子さん連れでも気軽に利用できます。」。子連れ設備: 駐車場あり。営業時間: 11時00分 ～ 16時00分。定休日: 月曜日 日曜日。営業確認: 食べログ・Retty・Instagram(@ranacafe_kanzaki)に掲載、閉店表記なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ranacafe_in_angoji/",
+  "source": "https://iko-yo.net/facilities/109956",
+  "added": "2026-10-27",
+  "points": [
+   "お子様プレートあり",
+   "駐車場あり"
+  ],
+  "memo": "お子様プレートがある、神埼・安居寺の中のカフェ。いこーよ掲載(未訪問)。11:00〜16:00。月・日曜定休。"
+ },
+ {
+  "id": "wk0b86aa8b89",
+  "name": "HAYAMA COFFEE 長崎オランダ通り店",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "カフェ",
+  "lat": 32.737972,
+  "lng": 129.871826,
+  "address": "長崎県長崎市大浦町5-42",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「2階にキッズスペースがあります。オムツ替えもあり子連れでもゆっくりカフェが楽しめる」。子連れ設備: オムツ替え。営業時間: 8:00〜18:00。定休日: 元旦のみ。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/hayamacoffee_nagasaki/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "2階にキッズスペース",
+   "おむつ替えあり"
+  ],
+  "memo": "2階にキッズスペースとおむつ替えがある、オランダ通りのHAYAMA COFFEE。ながさきっずぺーじの記事で紹介(未訪問)。8:00〜18:00。元日のみ休み。"
+ },
+ {
+  "id": "wked42f08ed6",
+  "name": "cote a cote",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "イタリアン",
+  "lat": 32.7472,
+  "lng": 129.86998,
+  "address": "長崎県長崎市元船町 長崎港ターミナルビル2階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズスペース完備」。子連れ設備: 駐車場(1時間無料)。営業時間: 11:00〜18:00。定休日: 火曜日／第2・4水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cote_a_cote_ngs/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "駐車場あり(1時間無料)"
+  ],
+  "memo": "キッズスペース完備の、長崎港ターミナルビル2階のイタリアン。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜18:00。火曜・第2・4水曜定休。"
+ },
+ {
+  "id": "wk0eb9400079",
+  "name": "Vin Bie(ヴァンビィ)",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "イタリアン",
+  "lat": 32.808929,
+  "lng": 129.837875,
+  "address": "長崎県長崎市滑石3丁目5-29",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7) / いこーよ(2026-10-27・未訪問)。⭐「絵本やおもちゃが置いてあるスペースがありました。お子様プレートもあり。」。子連れ設備: 駐車場完備。営業時間: 11:30〜15:00／18:00〜21:00。定休日: 水・金曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/vin_bie.1121/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "絵本・おもちゃのスペースあり",
+   "お子様プレートあり",
+   "駐車場あり"
+  ],
+  "memo": "絵本やおもちゃのスペースがあり、お子様プレートもある滑石のイタリアン。ながさきっずぺーじの記事で紹介(未訪問)。11:30〜15:00、18:00〜21:00。水・金曜定休。"
+ },
+ {
+  "id": "wk1b3d2c1a09",
+  "name": "ekarunakaN",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "ランチ",
+  "lat": 32.895988,
+  "lng": 129.779099,
+  "address": "長崎県長崎市琴海戸根町2655-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「広いキッズスペース完備でゆっくりご褒美ランチが堪能できます。」。子連れ設備: 駐車場完備。営業時間: 11:00〜16:00／18:00〜21:00。定休日: 木曜日・インスタのカレンダーによる。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ekarumakan/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "広いキッズスペース完備",
+   "駐車場あり"
+  ],
+  "memo": "広いキッズスペース完備でご褒美ランチが楽しめる、琴海のランチの店。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜16:00、18:00〜21:00。木曜定休(Instagramのカレンダーで確認)。"
+ },
+ {
+  "id": "wk0b0b46067e",
+  "name": "CAFE de LOG",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "カフェ",
+  "lat": 32.761288,
+  "lng": 129.950409,
+  "address": "長崎県長崎市田中町279-43",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズスペースあり」。営業時間: 11:00～15:00。定休日: 月〜金。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cafe_de_log_/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "⚠ 平日(月〜金)は休み"
+  ],
+  "memo": "キッズスペースがある、田中町のログハウス風カフェ。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜15:00。月〜金曜休み。"
+ },
+ {
+  "id": "wk910b65600f",
+  "name": "マクドナルド 34号東長崎店",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "ファストフード",
+  "lat": 32.771126,
+  "lng": 129.931915,
+  "address": "長崎県長崎市田中町827",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「長崎県唯一のプレイランド完備のマクドナルド。体を動かせるキッズルーム。」。営業時間: 7:00〜23:00。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "屋内プレイランド(キッズルーム)あり"
+  ],
+  "memo": "長崎県で唯一プレイランドがあるマクドナルド。体を動かせるキッズルーム付き。ながさきっずぺーじの記事で紹介(未訪問)。7:00〜23:00。"
+ },
+ {
+  "id": "wkda556be0a2",
+  "name": "牛右衛門 東長崎店",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "焼肉",
+  "lat": 32.763264,
+  "lng": 129.934799,
+  "address": "長崎県長崎市宿町500",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズスペース爆誕。座敷・オムツ替えもありで子連れに◎」。子連れ設備: 座敷、オムツ替え。営業時間: 11:00～21:30。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "座敷あり",
+   "おむつ替えあり"
+  ],
+  "memo": "キッズスペースと座敷・おむつ替えがある、東長崎の焼肉店。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜21:30。"
+ },
+ {
+  "id": "wk09385a49b5",
+  "name": "おいもdeカフェ",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "カフェ",
+  "lat": 32.777058,
+  "lng": 129.94928,
+  "address": "長崎県長崎市高城台1-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズルームあり」。営業時間: 平日10:00～16:00／土日祝10:00～18:00。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/oimo_de_cafe_official/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり"
+  ],
+  "memo": "キッズルームがある、高城台のさつまいものカフェ。ながさきっずぺーじの記事で紹介(未訪問)。平日10:00〜16:00、土日祝10:00〜18:00。"
+ },
+ {
+  "id": "wk338af0ab63",
+  "name": "N2D",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "デリカフェ",
+  "lat": 32.631626,
+  "lng": 129.822861,
+  "address": "長崎県長崎市川原町252-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズスペース完備」。子連れ設備: 駐車場完備。営業時間: 11:00〜17:00。定休日: 日・月・その他不定休有。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/n2d_2025/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペース完備の、川原町のデリカフェ。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜17:00。日・月曜定休、不定休あり。"
+ },
+ {
+  "id": "wk5490b1d53b",
+  "name": "牛右衛門 新戸町店",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "焼肉",
+  "lat": 32.728054,
+  "lng": 129.861816,
+  "address": "長崎県長崎市小菅町1-8",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「キッズルームあり」。子連れ設備: 座敷広い。営業時間: 11:00～21:30。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "広い座敷あり"
+  ],
+  "memo": "キッズルームと広い座敷がある、牛右衛門の新戸町店。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜21:30。"
+ },
+ {
+  "id": "wk265620f3ac",
+  "name": "Cafe & Restaurant うふふ",
+  "area": "時津町",
+  "city": "西彼杵郡時津町",
+  "pref": "長崎県",
+  "genre": "カフェ・レストラン",
+  "lat": 32.835182,
+  "lng": 129.844635,
+  "address": "長崎県西彼杵郡時津町左底郷1832-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2026/7)(2026-10-27・未訪問)。⭐「大きなぬいぐるみがたくさん集まったキッズスペース完備。」。子連れ設備: オムツ替え、子連れテーブル別部屋。営業時間: 9:00～22:00。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ufufu_togitsu/",
+  "source": "https://www.nagasakidsplace.com/entry/kidsspace-lunch-ngs",
+  "added": "2026-10-27",
+  "points": [
+   "大きなぬいぐるみのキッズスペース",
+   "子連れ用の別部屋のテーブル席",
+   "おむつ替えあり"
+  ],
+  "memo": "大きなぬいぐるみが集まったキッズスペースがある、時津のカフェ&レストラン。ながさきっずぺーじの記事で紹介(未訪問)。9:00〜22:00。"
+ },
+ {
+  "id": "wkdfb995dcdf",
+  "name": "GOHOUBI(ゴホウビ)",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "マフィン専門店",
+  "lat": 32.747128,
+  "lng": 129.832092,
+  "address": "長崎県長崎市大浜町846-34",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "nagasaki-spot(2024/6)(2026-10-27・未訪問)。⭐「店内の一角ににキッズスペースがあるので、ゆっくりとマフィンを選ぶことができます」。子連れ設備: 無料駐車場あり。営業時間: 火11:00～、水～土11:00～。定休日: 日曜日・月曜日。営業確認: Instagram(@gohoubi__muffin)で営業告知・イベント出店あり。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-spot.com/?p=249",
+  "source": "https://nagasaki-spot.com/?p=249",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "駐車場あり(無料)"
+  ],
+  "memo": "店内の一角にキッズスペースがある、大浜町のマフィン専門店。nagasaki-spotの記事で紹介(未訪問)。11:00〜。日・月曜定休。"
+ },
+ {
+  "id": "wkd2aeac7a54",
+  "name": "焼肉竹林 時津店",
+  "area": "時津町",
+  "city": "西彼杵郡時津町",
+  "pref": "長崎県",
+  "genre": "焼肉",
+  "lat": 32.818447,
+  "lng": 129.835938,
+  "address": "長崎県西彼杵郡時津町野田郷1108-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "nagasaki-spot(2024/6)(2026-10-27・未訪問)。⭐「大型キッズルームが完備されています」。営業確認: 食べログで旧店舗は【移転】、焼肉牛蔵跡の野田郷1108-1で営業中(ホットペッパー掲載・Instagramあり)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-spot.com/?p=249",
+  "source": "https://nagasaki-spot.com/?p=249",
+  "added": "2026-10-27",
+  "points": [
+   "大型キッズルーム完備"
+  ],
+  "memo": "大型キッズルームがある焼肉竹林の時津店。nagasaki-spotの記事で紹介(未訪問)。旧店舗から時津町野田郷1108-1へ移転して営業中。"
+ },
+ {
+  "id": "wk32df42ce06",
+  "name": "KINOBUTA",
+  "area": "大村市",
+  "city": "大村市",
+  "pref": "長崎県",
+  "genre": "お子さまランチ専門",
+  "lat": 32.899632,
+  "lng": 129.955017,
+  "address": "長崎県大村市玖島1丁目15-1 ボートレース大村こども広場内",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "nagasaki-spot(2024/6)(2026-10-27・未訪問)。⭐「キッズルームの充実具合がすごいです」。子連れ設備: 離乳食メニュー5ヶ月～、隣接公園。営業時間: 11:00～20:00。定休日: 月曜日・火曜日。営業確認: 食べログに閉店表記なし(ボートレース大村こども広場内)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-spot.com/?p=249",
+  "source": "https://nagasaki-spot.com/?p=249",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームが充実",
+   "お子様ランチ専門",
+   "離乳食メニューあり(5ヶ月〜)",
+   "隣に公園"
+  ],
+  "memo": "キッズルームが充実した、大村のお子様ランチ専門店。nagasaki-spotの記事で紹介(未訪問)。11:00〜20:00。月・火曜定休。"
+ },
+ {
+  "id": "wk8f6a4958f4",
+  "name": "路地裏ベーカリーカフェ ロージー",
+  "area": "大村市",
+  "city": "大村市",
+  "pref": "長崎県",
+  "genre": "ベーカリーカフェ",
+  "lat": 32.937576,
+  "lng": 129.952881,
+  "address": "長崎県大村市竹松本町682-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "nagasaki-spot(2024/6)(2026-10-27・未訪問)。⭐「奥の一角にキッズスペースがあります」。営業時間: 11:00～17:00。定休日: 月曜日。営業確認: 食べログに閉店表記なし(火〜土11:00〜16:00・月日休の現行情報)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-spot.com/?p=249",
+  "source": "https://nagasaki-spot.com/?p=249",
+  "added": "2026-10-27",
+  "points": [
+   "奥にキッズスペース"
+  ],
+  "memo": "奥の一角にキッズスペースがある、大村・竹松の路地裏ベーカリーカフェ。nagasaki-spotの記事で紹介(未訪問)。11:00〜17:00。月曜定休。"
+ },
+ {
+  "id": "wk29fa123464",
+  "name": "Cafe & Bar BUZZ(バズ)",
+  "area": "大村市",
+  "city": "大村市",
+  "pref": "長崎県",
+  "genre": "カフェ・バー",
+  "lat": 32.909821,
+  "lng": 129.962341,
+  "address": "長崎県大村市東本町104-7 まなビル",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "nagasaki-spot(2024/6)(2026-10-27・未訪問)。⭐「広々としたキッズスペースで、子供が遊んでいるのを眺めながら安心してお食事が楽しめます」。営業時間: 火～金11:00～16:00。定休日: 土日月曜日。営業確認: 食べログに閉店表記なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-spot.com/?p=249",
+  "source": "https://nagasaki-spot.com/?p=249",
+  "added": "2026-10-27",
+  "points": [
+   "広いキッズスペース"
+  ],
+  "memo": "広いキッズスペースで子供が遊ぶ様子を見ながら食事できる、大村のカフェ&バー。nagasaki-spotの記事で紹介(未訪問)。火〜金 11:00〜16:00。土・日・月曜休み。まなビル。"
+ },
+ {
+  "id": "wkd0ac6b416b",
+  "name": "DUNK(ダンク)",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "カフェ",
+  "lat": 32.69207,
+  "lng": 129.849167,
+  "address": "長崎県長崎市三和町388-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2024/3)(2026-10-27・未訪問)。⭐「キッズスペースも広々充実。キッズスペース内にもテーブルがあるので、ここで食べることもできる」。子連れ設備: 駐車場完備。営業確認: 食べログ等で店舗ページを確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cafe.dunk/",
+  "source": "https://www.nagasakidsplace.com/entry/dunk",
+  "added": "2026-10-27",
+  "points": [
+   "広いキッズスペース(中にテーブルあり)",
+   "駐車場あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "広いキッズスペースの中にテーブルがあり、そこで食事もできる三和町のカフェ。ながさきっずぺーじの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wkc72c004360",
+  "name": "焼肉竹林 ララプレイス愛宕店",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "焼肉",
+  "lat": 32.732182,
+  "lng": 129.891708,
+  "address": "長崎県長崎市愛宕4丁目18-20 ララプレイス愛宕3階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ながさきっずぺーじ(2023/5)(2026-10-27・未訪問)。⭐「お店の外にはアスレチック遊具完備で待ち時間も食べ終わった後も楽しめる」。営業時間: 11:30～14:30／16:30～22:00。営業確認: 食べログ・Retty・ホットペッパー掲載、閉店表記なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nagasakidsplace.com/entry/chikurin-atago",
+  "source": "https://www.nagasakidsplace.com/entry/chikurin-atago",
+  "added": "2026-10-27",
+  "points": [
+   "店の外にアスレチック遊具"
+  ],
+  "memo": "店の外にアスレチック遊具があり、待ち時間も食後も遊べる焼肉竹林の愛宕店。ながさきっずぺーじの記事で紹介(未訪問)。ララプレイス愛宕3階。11:30〜14:30、16:30〜22:00。"
+ },
+ {
+  "id": "wk454c784350",
+  "name": "パンプラス",
+  "area": "壱岐市",
+  "city": "壱岐市",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ,ショッピング",
+  "lat": 33.736839,
+  "lng": 129.725937,
+  "address": "長崎県壱岐市郷ノ浦町釘山触628",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペースあり！」。営業時間: 07時00分 ～ 19時00分。定休日: 月曜日 毎月1日（パン教室の為）。営業確認: 食べログ・Rettyに掲載(パンプラス本店)、閉店表記なし。現行は9:00〜17:00・月木休の情報。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/114249",
+  "source": "https://iko-yo.net/facilities/114249",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり"
+  ],
+  "memo": "キッズスペースがある、壱岐・郷ノ浦のパン屋。いこーよ掲載(未訪問)。7:00〜19:00。月曜・毎月1日(パン教室のため)休み。"
+ },
+ {
+  "id": "wk402198c14b",
+  "name": "和みカフェ 花むすび",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ,キッズカフェ",
+  "lat": 32.753853,
+  "lng": 129.88736,
+  "address": "長崎県長崎市夫婦川町1-7森田ビル1階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「店の一角にキッズスペースが設けられており、子連れでも気軽に利用できますよ。」。子連れ設備: ベビーカーOK、オムツ交換台。営業時間: 月〜金曜日 11：00〜17：00 土曜日 11：00〜17：00、18：00〜20：00 日曜日 11：30〜14：30。定休日: 不定休。営業確認: 食べログ等で店舗情報を確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/hanamusubi1111/",
+  "source": "https://iko-yo.net/facilities/120518",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "おむつ替え台あり",
+   "ベビーカーで入れる",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "店の一角にキッズスペースがある、夫婦川町の和みカフェ。いこーよ掲載(未訪問)。森田ビル1階。月〜金11:00〜17:00、土11:00〜17:00・18:00〜20:00、日11:30〜14:30。不定休。"
+ },
+ {
+  "id": "wkafd07ea9b6",
+  "name": "カフェ ハーベストキッチン",
+  "area": "佐世保市",
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.172005,
+  "lng": 129.726044,
+  "address": "長崎県佐世保市高天町6-1 Cubeビル2階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペース、おむつ交換台あり！」。子連れ設備: おむつ替え、駐車場あり、ベビーカーOK、オムツ交換台。営業時間: 11時00分 ～ 15時00分 ラストオーダー　14時。定休日: 月曜日 日曜日 祝祭日。営業確認: 食べログに閉店表記なし(夜はCafe Bar Cube)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/111235",
+  "source": "https://iko-yo.net/facilities/111235",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズメニューあり",
+   "おむつ替え台あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペースとおむつ替え台がある、佐世保・高天町のカフェ。いこーよ掲載(未訪問)。Cubeビル2階。11:00〜15:00(LO14:00)。月・日曜・祝日定休。"
+ },
+ {
+  "id": "wkc84da57d06",
+  "name": "筑後うどん たけ久",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "うどん",
+  "lat": 32.775391,
+  "lng": 129.858414,
+  "address": "長崎県長崎市城栄町2-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "ながさきっずぺーじ(2023/1)(2026-10-27・未訪問)。⭐「キッズうどん無料（3歳以下）」。子連れ設備: キッズカトラリー。営業時間: 11:00～20:00。定休日: 木曜日。営業確認: 求人サイト(Indeed)で現在スタッフ募集中。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nagasakidsplace.com/entry/chikugoudon-takehisa",
+  "source": "https://www.nagasakidsplace.com/entry/chikugoudon-takehisa",
+  "added": "2026-10-27",
+  "points": [
+   "キッズうどん無料(3歳以下)",
+   "子供用のカトラリーあり"
+  ],
+  "memo": "3歳以下はキッズうどんが無料の、城栄町の筑後うどんの店。ながさきっずぺーじの記事で紹介(未訪問)。11:00〜20:00。木曜定休。"
+ },
+ {
+  "id": "wk4f672b1898",
+  "name": "海鮮味処 漁",
+  "area": "佐世保市",
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "和食・海鮮",
+  "lat": 33.187084,
+  "lng": 129.667053,
+  "address": "長崎県佐世保市川下町232",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「子供用にはお子様ランチプレートを作って頂き」。子連れ設備: ベビーカー可、ハイチェア、離乳食持込可。営業時間: ランチ11:30-14:00。定休日: 日曜日。営業確認: 旅色等に現行の紹介あり(漁業会社直営)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.happiness-life-hl.com/nagasaki-sasebo-bringing-children-lunch/",
+  "source": "https://www.happiness-life-hl.com/nagasaki-sasebo-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチプレートあり",
+   "ハイチェアあり",
+   "離乳食の持ち込み可",
+   "ベビーカーで入れる"
+  ],
+  "memo": "お子様ランチプレートを作ってくれる、佐世保・川下町の海鮮料理店。happiness-lifeの記事で紹介(未訪問)。ランチ11:30〜14:00。日曜定休。"
+ },
+ {
+  "id": "wk081758ca15",
+  "name": "カフェ食堂 3PIECE",
+  "area": "佐世保市",
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "和食・カフェ",
+  "lat": 33.185459,
+  "lng": 129.658325,
+  "address": "長崎県佐世保市大潟町182-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様メニューも充実、おもちゃ、本等もあり」。子連れ設備: ベビーカー可、ハイチェア、おむつ替え、離乳食持込可。営業時間: ランチ11:30-14:30。定休日: 水曜日。営業確認: 公式サイト・Retty・食べログに現行情報(ランチ11:30〜14:00/ディナー18:00〜21:00・水休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://cafe-3piece.net",
+  "source": "https://www.happiness-life-hl.com/nagasaki-sasebo-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューが充実",
+   "おもちゃ・本あり",
+   "ハイチェア・おむつ替えあり",
+   "離乳食の持ち込み可"
+  ],
+  "memo": "お子様メニューが充実し、おもちゃや本もある佐世保のカフェ食堂。happiness-lifeの記事で紹介(未訪問)。ランチ11:30〜14:30。水曜定休。"
+ },
+ {
+  "id": "wkb08dc3e29f",
+  "name": "teppan steak＆vege dining 樹",
+  "area": "佐世保市",
+  "city": "佐世保市",
+  "pref": "長崎県",
+  "genre": "鉄板・洋食",
+  "lat": 33.170376,
+  "lng": 129.723755,
+  "address": "長崎県佐世保市上京町3-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様メニューは、前日までの予約が必要」。子連れ設備: ベビーカー可、ハイチェア、離乳食持込可。営業時間: 平日ランチ12:00-14:00。定休日: 日曜日。営業確認: 食べログ・Instagram(@teppan_steak_ituki)で営業中。現行は17:00〜22:00・日曜休の情報(ランチ営業は要確認)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.happiness-life-hl.com/nagasaki-sasebo-bringing-children-lunch/",
+  "source": "https://www.happiness-life-hl.com/nagasaki-sasebo-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり(前日までに予約)",
+   "ハイチェアあり",
+   "離乳食の持ち込み可",
+   "ベビーカーで入れる"
+  ],
+  "memo": "前日までの予約でお子様メニューを用意してくれる、佐世保の鉄板ステーキの店。happiness-lifeの記事で紹介(未訪問)。現在の掲載は17:00〜22:00・日曜定休(記事にある平日ランチは要確認)。"
+ },
+ {
+  "id": "wk2abee995f4",
+  "name": "ごはんCAFE 長崎茶寮 川徳",
+  "area": "長崎市",
+  "city": "長崎市",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.76696,
+  "lng": 129.948654,
+  "address": "長崎県長崎市田中町280-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お席はテーブル席と座敷席があり、キッズメニューやこども椅子も完備されていて、小さなお子さん連れにも安心。」。子連れ設備: 子供椅子、座敷、個室、駐車場あり、ベビーカーOK、オムツ交換台。営業時間: 11時00分 ～ 21時30分 ラストオーダー　21:00。定休日: 不定休、年末年始。営業確認: 公式サイト(2024年メニュー更新)・Rettyで営業中。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://nagasaki-saryo.jp/",
+  "source": "https://iko-yo.net/facilities/81431",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "子供椅子・座敷・個室あり",
+   "おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズメニューと座敷・子供椅子がそろう、田中町のごはんカフェ。いこーよ掲載(未訪問)。11:00〜21:30(LO21:00)。不定休・年末年始休み。"
+ },
+ {
+  "id": "wk9ba0a454a8",
+  "name": "藤茶屋",
+  "area": "波佐見町",
+  "city": "東彼杵郡波佐見町",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.15089,
+  "lng": 129.901184,
+  "address": "長崎県東彼杵郡波佐見町折敷瀬郷441",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「子どもの定番お子様ランチもありますので、親子で食事が楽しめます。」。子連れ設備: 駐車場あり、ベビーカーOK。営業時間: 平日：11時～LO.14時30分　17時～LO.21時30分 日・祝日：11時～LO.14時30分　17時～LO.20時30分。定休日: 要確認。営業確認: 食べログ・Retty・ホットペッパー掲載、閉店表記なし(不定休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/85926",
+  "source": "https://iko-yo.net/facilities/85926",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "お子様ランチがある、波佐見町の食事処。いこーよ掲載(未訪問)。平日11:00〜LO14:30、17:00〜LO21:30(日祝の夜はLO20:30)。"
+ },
+ {
+  "id": "wk6e087d9cdc",
+  "name": "レストランいとう",
+  "area": "大村市",
+  "city": "大村市",
+  "pref": "長崎県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.934349,
+  "lng": 129.962875,
+  "address": "長崎県大村市池田2-287",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子さん向けにお子様ランチやピザ、グラタンもあり、特にうれしいのはお子様ランチを頼むと次回使える半額券がもらえて、しか…」。子連れ設備: ベビーカーOK、駐車場あり、オムツ交換台。営業時間: 11時00分 ～ 21時00分 ラストオーダー20:30 ※売り切れが多い日は前倒しで営業終了となる場合あり。定休日: 月曜日 月曜祝日の場合は翌日に振替休。営業確認: 食べログ・Retty・ホットペッパー掲載、閉店表記なし(改装済みの老舗)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/%E3%83%AC%E3%82%B9%E3%83%88%E3%83%A9%E3%83%B3%E3%81%84%E3%81%A8%E3%81%86-1466345156986420/",
+  "source": "https://iko-yo.net/facilities/151336",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり(次回使える半額券付き)",
+   "おむつ替え台あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "お子様ランチを頼むと次回使える半額券がもらえる、大村・池田の洋食レストラン。いこーよ掲載(未訪問)。お子様ピザやグラタンもある。11:00〜21:00(LO20:30)、売り切れで早じまいあり。月曜定休(祝日なら翌日)。"
+ },
+ {
+  "id": "wk604402a3c6",
+  "name": "ハレカフェつなぐ",
+  "area": "中央区",
+  "city": "熊本市中央区",
+  "pref": "熊本県",
+  "genre": "カフェ",
+  "lat": 32.806965,
+  "lng": 130.711884,
+  "address": "熊本県熊本市中央区南坪井町1-1 NK並木坂ビル2F東",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4)(2026-10-27・未訪問)。⭐「キッズスペースもあるので子どもが退屈することもありませんよ」。子連れ設備: 座敷席、個室、ベビーカー対応。営業時間: 11:00～23:00。定休日: 水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://macaro-ni.jp/175681",
+  "source": "https://macaro-ni.jp/175681",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "座敷席・個室あり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "キッズスペースと座敷・個室がある、並木坂のカフェ。macaroniの記事で紹介(未訪問)。NK並木坂ビル2F東。11:00〜23:00。水曜定休。"
+ },
+ {
+  "id": "wk9c91e54445",
+  "name": "レストラン野っぽ",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "洋食",
+  "lat": 32.82597,
+  "lng": 130.791153,
+  "address": "熊本県熊本市東区小山3-10-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4) / いこーよ(2026-10-27・未訪問)。⭐「個室やキッズスペースも用意されているため、子連れでも安心」。子連れ設備: 個室。営業時間: 11:00～15:00、17:30～22:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://noppo1984.wixsite.com/restaurant-noppo",
+  "source": "https://macaro-ni.jp/175681",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "個室あり"
+  ],
+  "memo": "個室とキッズスペースがあり子連れでも安心な、東区小山の洋食レストラン。macaroniの記事で紹介(未訪問)。11:00〜15:00、17:30〜22:00。不定休。"
+ },
+ {
+  "id": "wk99f82da7b3",
+  "name": "焼肉ホルモン 恵比寿",
+  "area": "中央区",
+  "city": "熊本市中央区",
+  "pref": "熊本県",
+  "genre": "焼肉",
+  "lat": 32.800686,
+  "lng": 130.755432,
+  "address": "熊本県熊本市中央区三郎1-1-5 帯山プラザ1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4)(2026-10-27・未訪問)。⭐「キッズスペースや座敷があり子連れで訪れる人が多い」。子連れ設備: 座敷。営業時間: 月～金11:30～14:30、17:00～23:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yakinikuhorumon-ebisu.com/",
+  "source": "https://macaro-ni.jp/175681",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "座敷あり"
+  ],
+  "memo": "キッズスペースと座敷があり子連れ客が多い、帯山プラザの焼肉ホルモン店。macaroniの記事で紹介(未訪問)。月〜金 11:30〜14:30、17:00〜23:00。不定休。"
+ },
+ {
+  "id": "wk1c2186a681",
+  "name": "イタリア料理 トレ・ステッレ",
+  "area": "中央区",
+  "city": "熊本市中央区",
+  "pref": "熊本県",
+  "genre": "イタリアン",
+  "lat": 32.781723,
+  "lng": 130.717789,
+  "address": "熊本県熊本市中央区八王寺町41-22",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "macaroni(2026/4) / いこーよ(2026-10-27・未訪問)。⭐「キッズルーム完備」。子連れ設備: 駐車場あり、オムツ交換台。営業時間: 11:30～15:00/18:00～22:30。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.tre-stelle.com/",
+  "source": "https://macaro-ni.jp/175681?page=2",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルーム完備",
+   "おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズルーム完備の、八王寺町のイタリア料理店。macaroniの記事で紹介(未訪問)。11:30〜15:00、18:00〜22:30。不定休。"
+ },
+ {
+  "id": "wkbe1e66f498",
+  "name": "cafe+antiques KOKOPELLI(ココペリ)",
+  "area": "西区",
+  "city": "熊本市西区",
+  "pref": "熊本県",
+  "genre": "アンティークカフェ",
+  "lat": 32.788681,
+  "lng": 130.649033,
+  "address": "熊本県熊本市西区松尾",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "さるくま(2026)(2026-10-27・未訪問)。⭐「座敷席に加えてキッズルームやおむつ交換台もあり、小さな子連れでも過ごしやすい」。子連れ設備: 座敷、おむつ交換台、駐車場あり、ベビーカー入店可。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://sarukuma.info/feature/post-90094/",
+  "source": "https://sarukuma.info/feature/post-90094/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "座敷席あり",
+   "おむつ替え台あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "座敷とキッズルーム、おむつ替え台がある西区松尾のアンティークカフェ。さるくまの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk41f546e34c",
+  "name": "和乃蔵 希toki(きとき)",
+  "area": "南区",
+  "city": "熊本市南区",
+  "pref": "熊本県",
+  "genre": "和食",
+  "lat": 32.769844,
+  "lng": 130.722321,
+  "address": "熊本県熊本市南区出仲間7丁目15-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "さるくま(2026)(2026-10-27・未訪問)。⭐「掘りごたつの座敷席でゆったり過ごせるのが子連れには心強い。キッズスペースも完備」。子連れ設備: 座敷、子ども用イス、駐車場あり、ベビーカー入店可。営業時間: ランチ11:30～14:30、ディナー17:30～23:00。定休日: 月曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/kitoki.kumamoto",
+  "source": "https://sarukuma.info/feature/post-90094/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "掘りごたつの座敷席",
+   "子供椅子あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "掘りごたつの座敷とキッズスペースがある、南区出仲間の和食店。さるくまの記事で紹介(未訪問)。ランチ11:30〜14:30、ディナー17:30〜23:00。月曜定休。"
+ },
+ {
+  "id": "wk243faabe23",
+  "name": "SAKURA DELICA Cafe",
+  "area": "中央区",
+  "city": "熊本市中央区",
+  "pref": "熊本県",
+  "genre": "洋食・カフェ",
+  "lat": 32.797573,
+  "lng": 130.74556,
+  "address": "熊本県熊本市中央区上水前寺2丁目1-63 帯山TETOTE 1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「全天候型のキッズランドが隣接」。子連れ設備: 授乳室、おむつ替え、ミルク用温水、電子レンジ。営業時間: 10:30-17:00(ランチ11:00-14:30)。定休日: 水曜日。営業確認: 食べログ・旅色に現行情報(2022年11月開業、水曜休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://lp.ceremony-produce.co.jp/sakura-delica",
+  "source": "https://www.happiness-life-hl.com/kumamoto-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "隣に全天候型のキッズランド",
+   "授乳室・おむつ替えあり",
+   "ミルク用温水・電子レンジあり"
+  ],
+  "memo": "全天候型のキッズランドが隣接する、帯山TETOTE 1Fの洋食カフェ。happiness-lifeの記事で紹介(未訪問)。10:30〜17:00(ランチ11:00〜14:30)。水曜定休。"
+ },
+ {
+  "id": "wkcedc98a6bf",
+  "name": "BloomCafe(ブルームカフェ)",
+  "area": "菊陽町",
+  "city": "菊池郡菊陽町",
+  "pref": "熊本県",
+  "genre": "カフェ",
+  "lat": 32.863811,
+  "lng": 130.785828,
+  "address": "熊本県菊池郡菊陽町光の森6丁目6-3 アークアベニュー光の森",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "さるクマ(2026/4)(2026-10-27・未訪問)。⭐「キッズスペース完備で子連れランチにおすすめなカフェがニューオープン！」。子連れ設備: キッズチェア(6歳未満専用キッズスペース)。営業時間: 11:00～16:00。定休日: 月曜日、水曜日。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://sarukuma.info/gourmet/post-89443/",
+  "source": "https://sarukuma.info/gourmet/post-89443/",
+  "added": "2026-10-27",
+  "points": [
+   "6歳未満専用のキッズスペース",
+   "キッズチェアあり"
+  ],
+  "memo": "6歳未満専用のキッズスペースがある、光の森アークアベニューの新しいカフェ。さるクマの記事で紹介(未訪問)。11:00〜16:00。月・水曜定休。"
+ },
+ {
+  "id": "wkc9d3c1be7b",
+  "name": "清香園 浜線店",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "焼肉",
+  "lat": 32.756119,
+  "lng": 130.735596,
+  "address": "熊本県熊本市東区画図町大字下無田1149-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「◎キッズスペースあり ◎子供イスあり」。子連れ設備: 個室、掘りごたつ席、子供イス。営業時間: ランチ11:30-15:00、ディナー17:00-23:00。定休日: 無休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "子供椅子あり",
+   "個室・掘りごたつ席あり"
+  ],
+  "memo": "キッズスペースと掘りごたつの個室がある、清香園の浜線店。りんごゆるく行こうの記事で紹介(未訪問)。ランチ11:30〜15:00、ディナー17:00〜23:00。無休。"
+ },
+ {
+  "id": "wk56de2ae5d7",
+  "name": "清香園 長嶺店",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "焼肉",
+  "lat": 32.809177,
+  "lng": 130.770874,
+  "address": "熊本県熊本市東区月出8丁目1-26",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「キッズスペース、子供イス」。子連れ設備: 個室、掘りごたつ席、子供イス。営業時間: ランチ11:30-15:00、ディナー17:00-23:00。定休日: 無休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "子供椅子あり",
+   "個室・掘りごたつ席あり"
+  ],
+  "memo": "キッズスペースと掘りごたつの個室がある、清香園の長嶺店。りんごゆるく行こうの記事で紹介(未訪問)。ランチ11:30〜15:00、ディナー17:00〜23:00。無休。"
+ },
+ {
+  "id": "wk8a21fc4c38",
+  "name": "いわせ精肉店",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "焼肉",
+  "lat": 32.812386,
+  "lng": 130.781296,
+  "address": "熊本県熊本市東区戸島西2-4-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「お子様メニュー／キッズルーム」。子連れ設備: 個室、掘りごたつ。営業時間: 11:00-15:00、17:00-23:00。定休日: 無休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "お子様メニューあり",
+   "個室・掘りごたつあり"
+  ],
+  "memo": "キッズルームとお子様メニューがある、戸島西の精肉店直営の焼肉店。りんごゆるく行こうの記事で紹介(未訪問)。11:00〜15:00、17:00〜23:00。無休。"
+ },
+ {
+  "id": "wk4340f03383",
+  "name": "上田珈琲 尾ノ上店",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "カフェ",
+  "lat": 32.792141,
+  "lng": 130.758591,
+  "address": "熊本県熊本市東区尾ノ上2丁目21-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「キッズメニュー／キッズランド併設」。子連れ設備: 個室、ソファー席。営業時間: 平日9:00-20:00、土日祝8:00-21:00。定休日: 水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ueda-coffee.cafe",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズランド併設",
+   "キッズメニューあり",
+   "個室・ソファー席あり"
+  ],
+  "memo": "キッズランドが併設された、尾ノ上の上田珈琲。りんごゆるく行こうの記事で紹介(未訪問)。平日9:00〜20:00、土日祝8:00〜21:00。水曜定休。"
+ },
+ {
+  "id": "wk48eb2b644d",
+  "name": "HOME TOWN",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "ハンバーガー",
+  "lat": 32.812553,
+  "lng": 130.767548,
+  "address": "熊本県熊本市東区長嶺南1-5-23",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「キッズバーガー／キッズスペース、キッズチェア、キッズベッド」。子連れ設備: キッズチェア、キッズベッド。営業時間: 平日土11:00-19:30、日8:30-15:00。定休日: 水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズバーガーあり",
+   "キッズチェア・キッズベッドあり"
+  ],
+  "memo": "キッズバーガーとキッズスペースがある、長嶺南のハンバーガー店。りんごゆるく行こうの記事で紹介(未訪問)。平日・土11:00〜19:30、日8:30〜15:00。水曜定休。"
+ },
+ {
+  "id": "wkfaf88a194e",
+  "name": "カフェきたむら",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "カフェ",
+  "lat": 32.837101,
+  "lng": 130.773132,
+  "address": "熊本県熊本市東区上南部3丁目20-56",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「キッズルーム付き個室(条件有)」。子連れ設備: ソファー席。営業時間: 11:30-15:00(日祝-16:00)。定休日: 木曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルーム付きの個室(条件あり)",
+   "ソファー席あり"
+  ],
+  "memo": "キッズルーム付きの個室(条件あり)がある、上南部のカフェ。りんごゆるく行こうの記事で紹介(未訪問)。11:30〜15:00(日祝〜16:00)。木曜定休。"
+ },
+ {
+  "id": "wkd4cbed8c5a",
+  "name": "Re.kuru-たまな-（リクルたまな）",
+  "area": "玉名市",
+  "city": "玉名市",
+  "pref": "熊本県",
+  "genre": "室内遊び場,レストラン・カフェ",
+  "lat": 32.920322,
+  "lng": 130.541946,
+  "address": "熊本県玉名市中753-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペースで遊ぼう！」。子連れ設備: 駐車場あり、オムツ交換台。営業時間: 【キッズジム・フィットネス・ゴルフシュミレーター】 月・水～土曜日　8時30分～20時30分 日曜日　7時～19時。定休日: 【キッズジム・フィットネス・ゴルフシュミレーター・カフェ】 火曜日 【施設外サービス】。営業確認: 施設内カフェ IGReK 六田店が食べログ・Rettyで営業中(11:00〜17:00・火曜休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/p/CbbaVMulAVg/",
+  "source": "https://iko-yo.net/facilities/171536",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース・キッズジムあり",
+   "キッズメニューあり",
+   "おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズジムやキッズスペースとカフェが一緒になった、玉名の施設。いこーよ掲載(未訪問)。キッズジムなどは月・水〜土8:30〜20:30、日7:00〜19:00。施設内カフェはIGReK 六田店(11:00〜17:00、火曜定休)。"
+ },
+ {
+  "id": "wkc12103e993",
+  "name": "カフェ アルバーロ",
+  "area": "荒尾市",
+  "city": "荒尾市",
+  "pref": "熊本県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.991158,
+  "lng": 130.507156,
+  "address": "熊本県荒尾市平山1668-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズルームあり。」。子連れ設備: 離乳食、駐車場あり、授乳室あり。営業時間: ・カフェ アルバーロ水・木・土・日11時30分〜15時 ・土間カフェ水・木・土・日15時以降/金11時30分～17時 ・レンタルスペース15時～17時。定休日: 月曜日 火曜日。営業確認: 熊本DC2026公式ガイド(kumamoto.guide/dc2026)に掲載。ランチ11:30〜15:00・カフェ14:00〜17:00は要予約、月火休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://kumamoto.guide/spots/detail/10147",
+  "source": "https://iko-yo.net/facilities/126601",
+  "added": "2026-10-27",
+  "points": [
+   "キッズルームあり",
+   "キッズメニュー・離乳食あり",
+   "授乳室あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズルームと授乳室がある、荒尾市平山のカフェ。いこーよ掲載(未訪問)。ランチ11:30〜15:00・カフェ14:00〜17:00(要予約)。月・火曜定休。"
+ },
+ {
+  "id": "wk545b4d7431",
+  "name": "COFFEE&BAR AA(ダブルエー)",
+  "area": "北区",
+  "city": "熊本市北区",
+  "pref": "熊本県",
+  "genre": "カフェ・バー",
+  "lat": 32.849319,
+  "lng": 130.751083,
+  "address": "熊本県熊本市北区麻生田4-2-40",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "さるくま(2026)(2026-10-27・未訪問)。⭐「お子さまランチはおやつ付きで満足度高め。座敷や子どもイスもあって」。子連れ設備: 座敷、子ども用食器、子ども用イス、駐車場あり、ベビーカー入店可。営業時間: 月火木11:00～16:00、金土11:00～16:00/18:00～22:00、日11:00～18:00。定休日: 水曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/coffeebarAA/",
+  "source": "https://sarukuma.info/feature/post-90094/",
+  "added": "2026-10-27",
+  "points": [
+   "おやつ付きのお子様ランチ",
+   "座敷・子供椅子あり",
+   "子供用の食器あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "おやつ付きのお子様ランチが好評の、北区麻生田のカフェ&バー。さるくまの記事で紹介(未訪問)。月火木11:00〜16:00、金土11:00〜16:00・18:00〜22:00、日11:00〜18:00。水曜定休。"
+ },
+ {
+  "id": "wkef383ca860",
+  "name": "和洋酒場 かぶき",
+  "area": "南区",
+  "city": "熊本市南区",
+  "pref": "熊本県",
+  "genre": "創作和洋イタリアン",
+  "lat": 32.740211,
+  "lng": 130.68866,
+  "address": "熊本県熊本市南区八幡9丁目6-36",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "さるくま(2026)(2026-10-27・未訪問)。⭐「お子さまランチ(650円)もあり、座敷席でキッズチェアもあるので家族でゆっくり」。子連れ設備: 座敷、子ども用食器、子ども用イス、駐車場あり(店舗から離れた場所)、ベビーカー入店可。営業時間: ランチ土日月11:30～14:30、ディナー17:00～23:00。定休日: 火曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.kabuki-group.shop/",
+  "source": "https://sarukuma.info/feature/post-90094/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "座敷・キッズチェアあり",
+   "子供用の食器あり",
+   "ベビーカーで入れる",
+   "⚠ 駐車場は店から離れた場所"
+  ],
+  "memo": "お子様ランチと座敷・キッズチェアがある、南区八幡の創作和洋イタリアンの酒場。さるくまの記事で紹介(未訪問)。ランチ土日月11:30〜14:30、ディナー17:00〜23:00。火曜定休。"
+ },
+ {
+  "id": "wk750e614cc8",
+  "name": "くるくるカフェ",
+  "area": "宇土市",
+  "city": "宇土市",
+  "pref": "熊本県",
+  "genre": "カフェ(支援センター併設)",
+  "lat": 32.678814,
+  "lng": 130.650284,
+  "address": "熊本県宇土市神馬町308-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "さるクマ(2026/2)(2026-10-27・未訪問)。⭐「キッズランチ 750円／キッズうどん 350円」。子連れ設備: 離乳食、子ども椅子。営業時間: 11:00～16:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://sarukuma.info/gourmet/post-87335/",
+  "source": "https://sarukuma.info/gourmet/post-87335/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズランチ・キッズうどんあり",
+   "離乳食あり",
+   "子供椅子あり"
+  ],
+  "memo": "子育て支援センターに併設された、宇土市のカフェ。さるクマの記事で紹介(未訪問)。キッズランチやキッズうどんがある。11:00〜16:00。"
+ },
+ {
+  "id": "wk6f7edd4004",
+  "name": "大漁活魚 ほうらい茶屋 長嶺店",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "海鮮",
+  "lat": 32.82814,
+  "lng": 130.780273,
+  "address": "熊本県熊本市東区長嶺東6丁目30-8",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「キッズメニュー」。子連れ設備: 掘りごたつ、個室。営業時間: ランチ11:00-15:00、ディナー17:30-22:30。定休日: 無休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "掘りごたつ・個室あり"
+  ],
+  "memo": "キッズメニューと掘りごたつの個室がある、長嶺東の活魚料理店。りんごゆるく行こうの記事で紹介(未訪問)。ランチ11:00〜15:00、ディナー17:30〜22:30。無休。"
+ },
+ {
+  "id": "wk3825a59127",
+  "name": "だいこん亭",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "和食",
+  "lat": 32.828136,
+  "lng": 130.784546,
+  "address": "熊本県熊本市東区小山2丁目3-30",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「子供向けメニュー」。子連れ設備: 座敷。営業時間: 11:30-14:30、17:30-22:00。定休日: 月曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "子供向けメニューあり",
+   "座敷あり"
+  ],
+  "memo": "子供向けメニューと座敷がある、東区小山の和食店。りんごゆるく行こうの記事で紹介(未訪問)。11:30〜14:30、17:30〜22:00。月曜定休。"
+ },
+ {
+  "id": "wk1147baac9e",
+  "name": "カフェリセス",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "カフェ",
+  "lat": 32.773602,
+  "lng": 130.768738,
+  "address": "熊本県熊本市東区東野3丁目12-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)(2026-10-27・未訪問)。⭐「お子様ランチ」。子連れ設備: 掘りごたつ席。営業時間: 10:00-15:00。定休日: 日祝。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "掘りごたつ席あり"
+  ],
+  "memo": "お子様ランチと掘りごたつ席がある、東区東野のカフェ。りんごゆるく行こうの記事で紹介(未訪問)。10:00〜15:00。日・祝定休。"
+ },
+ {
+  "id": "wk2a9990e3b6",
+  "name": "CochaTERRACE(コチャテラス)",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "いちごカフェ",
+  "lat": 32.827633,
+  "lng": 130.803589,
+  "address": "熊本県熊本市東区戸島5丁目19-7",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "りんごゆるく行こう(2025/3)+さるクマ(2026)(2026-10-27・未訪問)。⭐「お子様ランチ」。子連れ設備: 座敷個室(予約制)、バンボ、絵本、子ども用食器、子ども用イス。営業時間: 11:00～17:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://cochaterrace.wixsite.com/cochaterrace",
+  "source": "https://ringo-yurukuikou.com/posts/family-friendly-lunch-in-higashi-ward-kumamoto",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "座敷個室あり(予約制)",
+   "バンボ・絵本あり",
+   "子供用の食器・椅子あり"
+  ],
+  "memo": "お子様ランチと予約制の座敷個室がある、戸島のいちごカフェ。りんごゆるく行こうの記事で紹介(未訪問)。11:00〜17:00、不定休。"
+ },
+ {
+  "id": "wk89ba74b03b",
+  "name": "焼肉なべしま 上熊本店",
+  "area": "西区",
+  "city": "熊本市西区",
+  "pref": "熊本県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.816204,
+  "lng": 130.699738,
+  "address": "熊本県熊本市西区上熊本1-10-22",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「駅チカのお店で、黒毛和牛やお子様メニューを堪能できます！」。子連れ設備: 駐車場あり。営業時間: 2020年6月1日～当面の間 【営業時間】 ・11:00～22:00。定休日: 12月31日。営業確認: ホットペッパー系・Yahoo!マップ等で営業中表示。同チェーンのイオンモール熊本店は閉店だが上熊本店の閉店情報なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.nabeshima-jp.com/shop/kuma-kamikuma/#",
+  "source": "https://iko-yo.net/facilities/157633",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "駐車場あり"
+  ],
+  "memo": "黒毛和牛とお子様メニューが楽しめる、上熊本駅近くの焼肉店。いこーよ掲載(未訪問)。11:00〜22:00。12月31日休み。"
+ },
+ {
+  "id": "wk6c465e2d18",
+  "name": "コッコファーム たまご庵",
+  "area": "菊池市",
+  "city": "菊池市",
+  "pref": "熊本県",
+  "genre": "農業体験,レストラン・カフェ",
+  "lat": 32.951473,
+  "lng": 130.823654,
+  "address": "熊本県菊池市森北1077",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「チキン南蛮定食とオムライス、お子様ランチを頼みました。」。子連れ設備: 駐車場あり、授乳室あり、ベビーカーOK、オムツ交換台。営業時間: 【物産館】9：00～18：00 【レストラン】9：00～17：00（ラストオーダー16：30）。定休日: 1月1日，1月2日。営業確認: じゃらん・Retty等で現行店として掲載、行列の人気店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://cocco-farm.co.jp/",
+  "source": "https://iko-yo.net/facilities/26187",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "授乳室・おむつ替え台あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "チキン南蛮やオムライス、お子様ランチがある、菊池のコッコファームのレストラン。いこーよ掲載(未訪問)。物産館9:00〜18:00、レストラン9:00〜17:00(LO16:30)。1月1・2日休み。"
+ },
+ {
+  "id": "wk8395d2dd9f",
+  "name": "cafe KAWANO（カフェ 河野）",
+  "area": "東区",
+  "city": "熊本市東区",
+  "pref": "熊本県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.77663,
+  "lng": 130.76387,
+  "address": "熊本県熊本市東区若葉2-8-12",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「本格派の石窯ピザ＆パスタ、キッズメニューがあります」。子連れ設備: 駐車場あり。営業時間: 11:00～15:30（14:30LO） 18:00〜22:00(21:00LO) 金土日のみ。定休日: 火曜日。営業確認: KAB熊本の2026/3放送回で紹介・Retty掲載。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cafekawano/",
+  "source": "https://iko-yo.net/facilities/157048",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "駐車場あり"
+  ],
+  "memo": "石窯ピザとパスタにキッズメニューもある、若葉のカフェ。いこーよ掲載(未訪問)。11:00〜15:30(LO14:30)、夜は金土日のみ18:00〜22:00。火曜定休。"
+ },
+ {
+  "id": "wk2299bf5435",
+  "name": "らーめん龍風",
+  "area": "人吉市",
+  "city": "人吉市",
+  "pref": "熊本県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.224663,
+  "lng": 130.7621,
+  "address": "熊本県人吉市鶴田町867",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「ラーメンは豚骨ラーメンが名物ですが、他にも餃子やちゃんぽんやお得なセットなどメニューも多く、お子様メニューもあるので、…」。子連れ設備: 駐車場あり、ベビーカーOK。営業時間: 11時00分 ～ 22時00分。定休日: 木曜日。営業確認: 人吉商工会議所サイト・ホットペッパーに現行掲載(創業25年と紹介)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://sunloop.jp/ronpuu/",
+  "source": "https://iko-yo.net/facilities/43660",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "豚骨ラーメンが名物でお子様メニューもある、人吉のラーメン店。いこーよ掲載(未訪問)。餃子やちゃんぽんもある。11:00〜22:00。木曜定休。"
+ },
+ {
+  "id": "wk5b3906cb68",
+  "name": "café shinya",
+  "area": "宇佐市",
+  "city": "宇佐市",
+  "pref": "大分県",
+  "genre": "カフェ(古民家)",
+  "lat": 33.379795,
+  "lng": 131.340256,
+  "address": "大分県宇佐市安心院町廣連172-2",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "edit.oita(大分県,2026/6)(2026-10-27・未訪問)。⭐「子どもが遊べる隠れ家のようなキッズスペースを設けるなど」。子連れ設備: 畳敷き席。営業時間: 10:30～16:00。定休日: 土日月+不定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://edit.pref.oita.jp/series/local-gourmet/7569/",
+  "source": "https://edit.pref.oita.jp/series/local-gourmet/7569/",
+  "added": "2026-10-27",
+  "points": [
+   "隠れ家のようなキッズスペース",
+   "畳敷きの席あり",
+   "⚠ 土・日・月曜は休み"
+  ],
+  "memo": "隠れ家のようなキッズスペースがある、安心院の古民家カフェ。edit.oitaの記事で紹介(未訪問)。10:30〜16:00。土日月+不定休。"
+ },
+ {
+  "id": "wk6b28f84817",
+  "name": "森岡食堂 てっちゃん。",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "和食・食堂",
+  "lat": 33.230907,
+  "lng": 131.627274,
+  "address": "大分県大分市下郡3666-64 大八ビル101",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「2階には、広々としたキッズスペースが完備され、おもちゃや遊具が充実」。子連れ設備: ベビーカー可、ベビーチェア、個室。営業時間: 平日11:00～14:00、土日11:00～15:00。定休日: 月曜日。営業確認: 津守店は2024/3/31閉店→2024/8/31大分市下郡へ移転オープン(公式サイト・地域ニュース)。営業時間も変更(月〜金11:00〜15:00/17:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/morioka_shokudou.tecchan/",
+  "source": "https://www.happiness-life-hl.com/oita_tyubu_bringing-children_lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり(移転前の情報・要確認)",
+   "ベビーチェア・個室あり(移転前の情報)",
+   "ベビーカーで入れる",
+   "⚠ 2024年8月に下郡へ移転"
+  ],
+  "memo": "おもちゃや遊具が充実した広いキッズスペースで紹介された食堂。happiness-lifeの記事で紹介(未訪問)。2024年3月に津守店を閉め、8月に大分市下郡(大八ビル101)へ移転。キッズスペースは移転前の情報。月〜金11:00〜15:00・17:00〜21:00、土日祝11:00〜21:00。"
+ },
+ {
+  "id": "wkaac7b8dc71",
+  "name": "道楽うどん 坂ノ市本店",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "うどん",
+  "lat": 33.240253,
+  "lng": 131.754852,
+  "address": "大分県大分市坂ノ市木田1-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「絵本の貸し出しや広いお庭にブランコや滑り台などの遊具がある」。子連れ設備: ベビーカー可、ベビーチェア。営業時間: 平日11:00～14:00。定休日: 水曜日。営業確認: ホットペッパー・食べログに現行掲載(閉店表示なし)。営業11:00〜14:30/17:30〜21:00、水休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://instagram.com/douraku_udon6",
+  "source": "https://www.happiness-life-hl.com/oita_tyubu_bringing-children_lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "庭にブランコ・滑り台",
+   "絵本の貸し出しあり",
+   "ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "広い庭にブランコや滑り台がある、坂ノ市のうどん店。happiness-lifeの記事で紹介(未訪問)。11:00〜14:30、17:30〜21:00。水曜定休。"
+ },
+ {
+  "id": "wk8c79629f0a",
+  "name": "とんねるをぬけると…たまりば",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "洋食・カフェ",
+  "lat": 33.241119,
+  "lng": 131.728653,
+  "address": "大分県大分市竹下1丁目7-20",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life / いこーよ(2026-10-27・未訪問)。⭐「屋内外に遊び場...屋外にはブランコや滑り台もあり」。子連れ設備: ベビーカー可、ベビーチェア、オムツ替え、授乳室。営業時間: 11:00～16:30。定休日: 火曜日。営業確認: 公式サイト・ホットペッパーでネット予約受付中。営業11:00〜16:30、火休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://tonneru.com/",
+  "source": "https://www.happiness-life-hl.com/oita_tyubu_bringing-children_lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "屋内外に遊び場(ブランコ・滑り台)",
+   "授乳室・おむつ替えあり",
+   "ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "屋内と屋外に遊び場があり、ブランコや滑り台もある竹下の洋食カフェ。happiness-lifeの記事で紹介(未訪問)。11:00〜16:30。火曜定休。"
+ },
+ {
+  "id": "wkee9f280d64",
+  "name": "喫茶032",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "カフェ",
+  "lat": 33.2444,
+  "lng": 131.718231,
+  "address": "大分県大分市角子南2-4-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "OITA Drip.(2023.11.16)(2026-10-27・未訪問)。⭐「店主は元保育士ということもあり、キッズスペースや子ども用のイスなども完備しており、子ども連れにも優しい空間となっている。」。子連れ設備: 駐車場4台。営業時間: 10:00～LO19:00。定休日: 木曜。営業確認: 2023/3開店。各種グルメサイト・BASEショップは残るが2025-26年の営業を示す情報は確認できず(閉店情報もなし)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/032.cafe",
+  "source": "https://www.oitadrip.jp/spots/kissa032/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "子供椅子あり",
+   "駐車場あり(4台)",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "元保育士の店主が営む、キッズスペースと子供椅子がある角子南のカフェ。OITA Drip.の記事で紹介(未訪問)。10:00〜LO19:00。木曜定休。"
+ },
+ {
+  "id": "wk60a2824578",
+  "name": "森のカフェテリア 11区 （旧つみきの森 ＭＵＧＡ～むぅが～）",
+  "area": "由布市",
+  "city": "由布市",
+  "pref": "大分県",
+  "genre": "アスレチック,レストラン・カフェ",
+  "lat": 33.235416,
+  "lng": 131.302628,
+  "address": "大分県由布市湯布院町川西1750-145",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「すべり台にボルダリングといった子どもの好きな遊具が集まったアスレチックは、なんと手作り！」。子連れ設備: 駐車場あり、オムツ交換台。営業時間: 11時00分 ～ 17時00分。定休日: 木曜日 月曜日 火曜日。営業確認: 食べログ・Retty・公式(storeinfo)に現行掲載。営業は土日祝11:00〜17:00が基本、ピザは1日30枚限定。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://pizzasweets11.storeinfo.jp/",
+  "source": "https://iko-yo.net/facilities/151442",
+  "added": "2026-10-27",
+  "points": [
+   "手作りのアスレチック(すべり台・ボルダリング)",
+   "おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "すべり台やボルダリングがある手作りアスレチック付きの、湯布院のカフェテリア(旧つみきの森MUGA)。いこーよ掲載(未訪問)。営業は土日祝11:00〜17:00が基本。ピザは1日30枚限定。"
+ },
+ {
+  "id": "wkee8a39a549",
+  "name": "石窯パン工房モコモコ 別府店",
+  "area": "別府市",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ,ショッピング",
+  "lat": 33.281197,
+  "lng": 131.485184,
+  "address": "大分県別府市山の手町8-42",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペースも完備！」。子連れ設備: ベビーカーOK、駐車場あり。営業時間: 08時00分 ～ 19時00分。定休日: 月曜日 不定休あり。営業確認: ホットペッパー・Facebook等に現行掲載、閉店情報なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/148635",
+  "source": "https://iko-yo.net/facilities/148635",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペースがある、別府・山の手町の石窯パン工房。いこーよ掲載(未訪問)。8:00〜19:00。月曜定休、不定休あり。"
+ },
+ {
+  "id": "wk07ea8d490b",
+  "name": "Cote a Cote（コート・ア・コート）",
+  "area": "宇佐市",
+  "city": "宇佐市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.533073,
+  "lng": 131.329117,
+  "address": "大分県宇佐市四日市71-4 翔山デリ2F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペース有。」。子連れ設備: 駐車場あり。営業時間: 11時00分 ～ 16時30分 (16:00オーダーストップ)。定休日: 日曜日。営業確認: ぐるなび等に掲載は残るが2025-26年の営業を確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.shozan.biz/cote_a_cote/",
+  "source": "https://iko-yo.net/facilities/126597",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "駐車場あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "キッズスペースがある、宇佐・翔山デリ2Fのカフェ。いこーよ掲載(未訪問)。11:00〜16:30(LO16:00)。日曜定休。"
+ },
+ {
+  "id": "wkfd658c527d",
+  "name": "焼肉韓国苑 下郡店",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.229168,
+  "lng": 131.628998,
+  "address": "大分県大分市下郡北2丁目1-23",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「ミニ屋内遊園地のようなスペースのキッズルームがあり、お子様連れも楽しく利用出来ます。」。子連れ設備: ベビーカーOK、駐車場あり、授乳室あり、オムツ交換台。営業時間: ランチ　11：00～15：00 ディナー　16：00～03：00 土日祝日　11：00～03：00。定休日: 年中無休。営業確認: 店舗公式サイト・LINE公式あり、ぐるなび等に現行掲載(年中無休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.hotpepper.jp/strJ000585498/yoyaku/hpds/",
+  "source": "https://iko-yo.net/facilities/148632",
+  "added": "2026-10-27",
+  "points": [
+   "ミニ屋内遊園地のようなキッズルーム",
+   "キッズメニューあり",
+   "授乳室・おむつ替え台あり",
+   "駐車場あり"
+  ],
+  "memo": "ミニ屋内遊園地のようなキッズルームがある、下郡の焼肉店。いこーよ掲載(未訪問)。ランチ11:00〜15:00、ディナー16:00〜翌3:00(土日祝は11:00〜翌3:00)。年中無休。"
+ },
+ {
+  "id": "wk5f54f7c39a",
+  "name": "鮮度一番（さいき海の市場〇 敷地内）",
+  "area": "佐伯市",
+  "city": "佐伯市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 32.976944,
+  "lng": 131.904129,
+  "address": "大分県佐伯市葛港3-21",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「店舗2階に約60席ほどあるイートインスペースには、かわいらしいマリンテイストのキッズスペースも完備。」。子連れ設備: ベビーカーOK、駐車場あり、オムツ交換台。営業時間: 09時30分 ～ 18時00分。定休日: 元旦 他、メンテナンス時に不定休あり（詳細は公式HPをご覧ください）。営業確認: さいき海の市場〇の公式サイトに現行掲載、閉店情報なし(店名表記は鮮度壱番)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://uminoichiba.jp/ichiban/",
+  "source": "https://iko-yo.net/facilities/151338",
+  "added": "2026-10-27",
+  "points": [
+   "マリンテイストのキッズスペース",
+   "おむつ替え台あり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "2階のイートインにマリンテイストのキッズスペースがある、さいき海の市場の店。いこーよ掲載(未訪問)。約60席。9:30〜18:00。元日・メンテナンス時休み。"
+ },
+ {
+  "id": "wk4d25458375",
+  "name": "cafe kohana",
+  "area": "佐伯市",
+  "city": "佐伯市",
+  "pref": "大分県",
+  "genre": "カフェ",
+  "lat": 32.950886,
+  "lng": 131.869873,
+  "address": "大分県佐伯市稲垣463-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "OITA Drip.(2025.06.14)(2026-10-27・未訪問)。⭐「お子様メニュー」。子連れ設備: 駐車場10台。営業時間: 11:00～16:30（LO16:00）。定休日: 不定。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cafe_kohana",
+  "source": "https://www.oitadrip.jp/spots/cafe-kohana/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "駐車場あり(10台)"
+  ],
+  "memo": "お子様メニューがある、佐伯市稲垣のカフェ。OITA Drip.の記事で紹介(未訪問)。11:00〜16:30(LO16:00)、不定休。"
+ },
+ {
+  "id": "wk80f8a585b5",
+  "name": "ペンギンベーカリー別府やまなみ店",
+  "area": "別府市",
+  "city": "別府市",
+  "pref": "大分県",
+  "genre": "ベーカリー",
+  "lat": 33.312305,
+  "lng": 131.49054,
+  "address": "大分県別府市北石垣1454",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "OITA Drip.(2025.05.15)(2026-10-27・未訪問)。⭐「お子様メニュー」。子連れ設備: バリアフリー、駐車場10台。営業時間: 8:30～19:00。定休日: なし。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.penguinbakery.com",
+  "source": "https://www.oitadrip.jp/spots/%e3%83%9a%e3%83%b3%e3%82%ae%e3%83%b3%e3%83%99%e3%83%bc%e3%82%ab%e3%83%aa%e3%83%bc%e5%88%a5%e5%ba%9c%e3%82%84%e3%81%be%e3%81%aa%e3%81%bf%e5%ba%97/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "バリアフリー",
+   "駐車場あり(10台)"
+  ],
+  "memo": "お子様メニューがある、別府やまなみのペンギンベーカリー。OITA Drip.の記事で紹介(未訪問)。8:30〜19:00、定休日なし。"
+ },
+ {
+  "id": "wkb475f26c78",
+  "name": "グルテンフリー米粉パン専門店 ちゃびのパン工房",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "ベーカリー",
+  "lat": 33.233135,
+  "lng": 131.751938,
+  "address": "大分県大分市坂ノ市中央3-16-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "OITA Drip.(2024.01.03)(2026-10-27・未訪問)。⭐「お子様メニュー」。子連れ設備: 駐車場8台。営業時間: 8:00～18:00※売り切れ次第終了。定休日: 水曜※ほか不定休あり。営業確認: ホットペッパー・食べログに現行掲載(閉店表示なし)。2023/7開店。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/chabinopan/",
+  "source": "https://www.oitadrip.jp/spots/chabi/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "駐車場あり(8台)",
+   "⚠ 売り切れ次第終了"
+  ],
+  "memo": "お子様メニューもある、坂ノ市のグルテンフリー米粉パン専門店。OITA Drip.の記事で紹介(未訪問)。8:00〜18:00。水曜定休、不定休あり。"
+ },
+ {
+  "id": "wk0dc2d42b52",
+  "name": "SNOOPY茶屋（スヌーピー茶屋） 由布院店",
+  "area": "由布市",
+  "city": "由布市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.266418,
+  "lng": 131.365463,
+  "address": "大分県由布市湯布院町川上1540-2",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子様ランチあり！」。営業時間: 【3/6～12/5】 茶屋 10:00～17:00 （ランチ16:00 LO　カフェ16:30 LO）。定休日: 年中無休。営業確認: 公式サイト・SNOOPY Village店舗一覧に掲載、年中無休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.snoopychaya.jp/",
+  "source": "https://iko-yo.net/facilities/97861",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり"
+  ],
+  "memo": "お子様ランチがある、由布院のスヌーピー茶屋。いこーよ掲載(未訪問)。茶屋10:00〜17:00(ランチLO16:00)。年中無休。"
+ },
+ {
+  "id": "wkacfb3ccdb7",
+  "name": "大分濃厚生豚骨ラーメン トラの夢",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.21772,
+  "lng": 131.680191,
+  "address": "大分県大分市森633-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズメニューありのラーメン屋さん」。子連れ設備: ベビーカーOK、駐車場あり。営業時間: 11時00分 ～ 23時30分。定休日: 水曜日 水曜日祝日の時は営業。営業確認: 公式サイト(toranoyume.info)あり、行列店として近年の記事・Yahoo!ニュースで紹介。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/148631",
+  "source": "https://iko-yo.net/facilities/148631",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "キッズメニューがある、大分市森の濃厚生豚骨ラーメンの店。いこーよ掲載(未訪問)。11:00〜23:30。水曜定休(祝日は営業)。"
+ },
+ {
+  "id": "wk3780a8f696",
+  "name": "らーめんごくまる 高尾店",
+  "area": "大分市",
+  "city": "大分市",
+  "pref": "大分県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.208286,
+  "lng": 131.661575,
+  "address": "大分県大分市横尾4092-9",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「ハーフラーメンに半チャーハン、杏仁豆腐がついたレディースセットや、おにぎり、ゼリー、ジュースがついたお子様セットなどち…」。子連れ設備: 駐車場あり。営業時間: 11：00～21：00（ラストオーダー　20：45）。定休日: 1月1日。営業確認: チェーン公式サイト(gokumaru.jp)・食べログ等に現行掲載。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://gokumaru.jp/",
+  "source": "https://iko-yo.net/facilities/152573",
+  "added": "2026-10-27",
+  "points": [
+   "お子様セットあり",
+   "駐車場あり"
+  ],
+  "memo": "おにぎりやゼリー、ジュースが付いたお子様セットがある、高尾のラーメン店。いこーよ掲載(未訪問)。11:00〜21:00(LO20:45)。1月1日休み。"
+ },
+ {
+  "id": "wkf0e72cb21e",
+  "name": "Pasta & Cafe Salute(サルーテ)",
+  "area": "都城市",
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "パスタ・カフェ",
+  "lat": 31.72847,
+  "lng": 131.05542,
+  "address": "宮崎県都城市宮丸町3017",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "go-withkids(2026/8更新)(2026-10-27・未訪問)。⭐「なんとキッズスペースやキッズメニューもあって、子連れにめちゃくちゃ優しいお店です」。子連れ設備: キッズチェア、子ども用食器、ソファー席、駐車場あり。営業時間: 11:00～18:00。定休日: 日曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://go-withkids.com/salute",
+  "source": "https://go-withkids.com/salute",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズメニューあり",
+   "キッズチェア・子供用の食器あり",
+   "ソファー席あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペースとキッズメニューがあり子連れにやさしい、都城のパスタカフェ。go-withkidsの記事で紹介(未訪問)。11:00〜18:00。日曜定休。"
+ },
+ {
+  "id": "wk186b3cc3a6",
+  "name": "自由料理屋 て",
+  "area": "都城市",
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "カフェ・食堂",
+  "lat": 31.719307,
+  "lng": 131.045654,
+  "address": "宮崎県都城市南鷹尾町2-28-2",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "go-withkids(2026/3)(2026-10-27・未訪問)。⭐「1階の座敷エリアには、小さい子どもも安心して遊べるキッズスペースがあります。」。子連れ設備: 座敷、2階にもキッズスペース(テレビゲーム)、バウンサー、キッズチェア。営業時間: 11:00〜15:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://go-withkids.com/miyakonojo-lunch-te",
+  "source": "https://go-withkids.com/miyakonojo-lunch-te",
+  "added": "2026-10-27",
+  "points": [
+   "1階座敷にキッズスペース",
+   "2階にもキッズスペース(テレビゲーム)",
+   "バウンサー・キッズチェアあり"
+  ],
+  "memo": "1階の座敷にキッズスペースがあり、2階にもテレビゲームのスペースがある都城のカフェ食堂。go-withkidsの記事で紹介(未訪問)。11:00〜15:00、不定休。"
+ },
+ {
+  "id": "wka5375b1b7c",
+  "name": "SWEET×ONE(スイートワン)",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "カフェ",
+  "lat": 31.926085,
+  "lng": 131.4245,
+  "address": "宮崎県宮崎市江平西1丁目5-11 江平ビル101",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "ARNE(2023/4)(2026-10-27・未訪問)。⭐「一部のソファ席はキッズスペース付き。ぬり絵やおもちゃが」。子連れ設備: ソファ席。営業時間: 11:00か12:00〜19:00。定休日: 水曜。営業確認: 2022/3開店。食べログの口コミは2022年の1件のみで2025-26年の営業を確認できず(閉店情報もなし)。営業は11:00〜売り切れまで。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://arne.media/gourmet/375965/",
+  "source": "https://arne.media/gourmet/375965/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース付きのソファ席(ぬり絵・おもちゃ)",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "一部のソファ席にぬり絵やおもちゃのキッズスペースが付いた、江平西のカフェ。ARNEの記事で紹介(未訪問)。11:00か12:00〜19:00。水曜定休。江平ビル101。"
+ },
+ {
+  "id": "wka76b4cb161",
+  "name": "のむとこそよか",
+  "area": "延岡市",
+  "city": "延岡市",
+  "pref": "宮崎県",
+  "genre": "ごはん屋・カフェ",
+  "lat": 32.58305,
+  "lng": 131.629379,
+  "address": "宮崎県延岡市小峰町6215-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "MONE(UMK,2026/8)(2026-10-27・未訪問)。⭐「世代を問わず愛されるバリアフリーなお店はキッズスペースも♪」。子連れ設備: 土間席、ベビーカー可(バリアフリー)。営業時間: lunch 11:30 – 14:30。定休日: 日曜日、月曜日、祝日。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.umk.co.jp/mone/gourmet/18922/",
+  "source": "https://www.umk.co.jp/mone/gourmet/18922/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "土間席あり",
+   "バリアフリー(ベビーカーで入れる)"
+  ],
+  "memo": "バリアフリーでキッズスペースもある、延岡のごはん屋・カフェ。MONEの記事で紹介(未訪問)。ランチ11:30〜14:30。日・月曜・祝日定休。"
+ },
+ {
+  "id": "wk0b3fdba292",
+  "name": "Cafe&Paint DAIKUMACHI",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "カフェ",
+  "lat": 31.917759,
+  "lng": 131.411118,
+  "address": "宮崎県宮崎市大工2-98-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "MONE(UMK,2025/8) / MONE(UMK,2025/12)(2026-10-27・未訪問)。⭐「キッズスペース完備！子ども連れでもゆったり寛げるカフェ」。子連れ設備: 子ども用椅子貸出、おむつ交換台、キッズメニュー、駐車場あり。定休日: 日曜・祝日(不定休あり)。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.umk.co.jp/mone/gourmet/2483/",
+  "source": "https://www.umk.co.jp/mone/gourmet/2483/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "キッズメニューあり",
+   "子供用椅子の貸し出し・おむつ交換台あり",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペース完備で子連れでもくつろげる、大工のカフェ。MONEの記事で紹介(未訪問)。日曜・祝日定休(不定休あり)。"
+ },
+ {
+  "id": "wk6c4d6e6760",
+  "name": "若草HUTTE",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "カフェ&コワーキング",
+  "lat": 31.915356,
+  "lng": 131.424011,
+  "address": "宮崎県宮崎市橘通東3丁目5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "MONE(UMK,2025/10) / MONE(UMK,2025/12)(2026-10-27・未訪問)。⭐「キッズスペース付きの座敷タイプの席」。子連れ設備: 座敷席。営業時間: 10:00~18:30。定休日: 月曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/wakakusa_hutte/",
+  "source": "https://www.umk.co.jp/mone/gourmet/4702/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース付きの座敷席"
+  ],
+  "memo": "キッズスペース付きの座敷席がある、橘通東のカフェ&コワーキング。MONEの記事で紹介(未訪問)。10:00〜18:30。月曜定休。"
+ },
+ {
+  "id": "wkfa437908a7",
+  "name": "AOSHIMA PICNIC CLUB RESTAURANT",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "レストラン",
+  "lat": 31.799717,
+  "lng": 131.430283,
+  "address": "宮崎県宮崎市加江田",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "MONE(UMK,2025/12)(2026-10-27・未訪問)。⭐「子ども用の椅子とキッズスペース」。子連れ設備: 子ども用椅子。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.umk.co.jp/mone/gourmet/6827/",
+  "source": "https://www.umk.co.jp/mone/gourmet/6827/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "子供用の椅子あり"
+  ],
+  "memo": "子供用の椅子とキッズスペースがある、青島のピクニッククラブのレストラン。MONEの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk6e1a5925d2",
+  "name": "dish5",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "カフェ",
+  "lat": 31.808731,
+  "lng": 131.296478,
+  "address": "宮崎県宮崎市田野町甲5168-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "MONE(UMK,2025/12) / happiness-life(2026-10-27・未訪問)。⭐「キッズメニューには離乳食も」。子連れ設備: 個室、座敷席多数、子ども用椅子。営業時間: 11:00-15:00。定休日: 日曜日、祝日、第2・4月曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://5cafediningdish5.business.site/",
+  "source": "https://www.umk.co.jp/mone/gourmet/6827/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニュー(離乳食もあり)",
+   "個室・座敷席が多い",
+   "子供用の椅子あり"
+  ],
+  "memo": "離乳食まであるキッズメニューと座敷・個室がある、田野町のカフェ。MONEの記事で紹介(未訪問)。11:00〜15:00。日曜・祝日・第2・4月曜定休。"
+ },
+ {
+  "id": "wk14c8b6ba48",
+  "name": "おうちごはん 人と喜",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "和食",
+  "lat": 31.898167,
+  "lng": 131.426956,
+  "address": "宮崎県宮崎市城ケ崎1丁目6-26",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life / いこーよ(2026-10-27・未訪問)。⭐「子連れの方は、キッズスペースがある靴を脱いで上がる部屋で食事ができる」。子連れ設備: ベビーカー入店可、ベビーチェア、授乳室、オムツ替え。営業時間: 11:00～17:00。定休日: 月曜日、第2日曜日。営業確認: 食べログに2025/7〜2026/8訪問の口コミあり、閉店表示なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ouchigohanhitotoki/",
+  "source": "https://www.happiness-life-hl.com/miyazaki-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースのある靴を脱いで上がる部屋",
+   "授乳室・おむつ替えあり",
+   "ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "子連れはキッズスペースのある座敷の部屋で食事できる、城ケ崎の和食の店。happiness-lifeの記事で紹介(未訪問)。11:00〜17:00。月曜・第2日曜定休。"
+ },
+ {
+  "id": "wkdbddef090c",
+  "name": "ottala食堂",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "洋食",
+  "lat": 31.938848,
+  "lng": 131.457443,
+  "address": "宮崎県宮崎市阿波岐原町坊ノ下2842-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「キッズスペース付きの座敷があるため、お子様同士で遊べる」。子連れ設備: ベビーカー入店可、ベビーチェア、オムツ替え、離乳食用意。営業時間: 11:30-15:00/18:00-21:30。定休日: 水曜日、第3火曜日ランチ。営業確認: 食べログに2025/11訪問の口コミ(座敷個室におもちゃ)あり、閉店表示なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ottalakitchen/",
+  "source": "https://www.happiness-life-hl.com/miyazaki-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース付きの座敷",
+   "離乳食あり",
+   "ベビーチェア・おむつ替えあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "キッズスペース付きの座敷があり子供同士で遊べる、阿波岐原の洋食店。happiness-lifeの記事で紹介(未訪問)。11:30〜15:00、18:00〜21:30。水曜・第3火曜ランチ休み。"
+ },
+ {
+  "id": "wkc45168c7f1",
+  "name": "タマチャンショップ 都城本店",
+  "area": "都城市",
+  "city": "都城市",
+  "pref": "宮崎県",
+  "genre": "カフェ・物販",
+  "lat": 31.736074,
+  "lng": 131.062088,
+  "address": "宮崎県都城市平江町47-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "go-withkids(2026)(2026-10-27・未訪問)。⭐「タマチャンショップ都城本店は、キッズプレートにいちごスイーツ」。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://go-withkids.com/miyakonojo-lunch-tamachanshop",
+  "source": "https://go-withkids.com/miyakonojo-lunch-tamachanshop",
+  "added": "2026-10-27",
+  "points": [
+   "キッズプレートあり"
+  ],
+  "memo": "キッズプレートといちごスイーツがある、タマチャンショップの都城本店。go-withkidsの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wkdd76d4e660",
+  "name": "あめいろカフェ",
+  "area": "宮崎市",
+  "city": "宮崎市",
+  "pref": "宮崎県",
+  "genre": "カフェ",
+  "lat": 31.911694,
+  "lng": 131.426041,
+  "address": "宮崎県宮崎市宮田町",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "MONE(UMK,2025/12)(2026-10-27・未訪問)。⭐「お子様プレート」。子連れ設備: 座敷席、子ども用椅子。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.umk.co.jp/mone/gourmet/6827/",
+  "source": "https://www.umk.co.jp/mone/gourmet/6827/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様プレートあり",
+   "座敷席・子供用椅子あり"
+  ],
+  "memo": "お子様プレートと座敷席がある、宮田町のカフェ。MONEの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wke844bb7c66",
+  "name": "鹿遊茶屋",
+  "area": "木城町",
+  "city": "児湯郡木城町",
+  "pref": "宮崎県",
+  "genre": "体験施設,レストラン・カフェ",
+  "lat": 32.24548,
+  "lng": 131.396484,
+  "address": "宮崎県児湯郡木城町石河内414-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子様ランチも充実！」。子連れ設備: 駐車場あり。営業時間: 11時00分 ～ 14時00分。定休日: 月曜日。営業確認: 食べログに2026年4月の口コミ(11:00〜14:00・月曜休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://ishikawauchi.jimdofree.com/",
+  "source": "https://iko-yo.net/facilities/159411",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "駐車場あり"
+  ],
+  "memo": "お子様ランチもある、木城町石河内の体験施設の茶屋。いこーよ掲載(未訪問)。11:00〜14:00。月曜定休。"
+ },
+ {
+  "id": "wkdc8ea55007",
+  "name": "喫茶you&me",
+  "area": "指宿市",
+  "city": "指宿市",
+  "pref": "鹿児島県",
+  "genre": "喫茶店",
+  "lat": 31.193665,
+  "lng": 130.521378,
+  "address": "鹿児島県指宿市開聞十町2800番地",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(リビング新聞,2026/10)(2026-10-27・未訪問)。⭐「おもちゃや絵本がそろうキッズスペースもあり、子ども連れのファミリーから地域の年配の方まで」。営業時間: 9:00～16:15。定休日: 不定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://achi-kochi.jp/article/29363/",
+  "source": "https://achi-kochi.jp/article/29363/",
+  "added": "2026-10-27",
+  "points": [
+   "おもちゃ・絵本のキッズスペース"
+  ],
+  "memo": "おもちゃや絵本のキッズスペースがあり、家族連れから年配の人まで集まる開聞の喫茶店。あちこちの記事で紹介(未訪問)。9:00〜16:15、不定休。"
+ },
+ {
+  "id": "wk594d6c04ae",
+  "name": "トキメキの森",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "雑貨・植物・カフェ",
+  "lat": 31.51436,
+  "lng": 130.519958,
+  "address": "鹿児島県鹿児島市卸本町6-4",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(リビング新聞,2026/8)(2026-10-27・未訪問)。⭐「店舗の奥にはキッズスペースがあるため、小さな子ども連れでも落ち着いてお買い物やカフェ時間が楽しめる」。定休日: 不定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://achi-kochi.jp/article/27580/",
+  "source": "https://achi-kochi.jp/article/27580/",
+  "added": "2026-10-27",
+  "points": [
+   "店の奥にキッズスペース"
+  ],
+  "memo": "店の奥にキッズスペースがある、卸本町の雑貨・植物とカフェの店。あちこちの記事で紹介(未訪問)。不定休。"
+ },
+ {
+  "id": "wkd279f42194",
+  "name": "meshiya park108(メシヤパーク108)",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "創作和食",
+  "lat": 31.602816,
+  "lng": 130.443512,
+  "address": "鹿児島県鹿児島市上谷口町1086-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(リビング新聞,2025/2・2026/7) / あちこち(2026/7)(2026-10-27・未訪問)。⭐「子ども連れにうれしいロフトの座敷席やキッズスペースも完備」。子連れ設備: 座敷、屋外に築山・ブランコ・鉄棒などの遊具、子ども向けランチメニュー。営業時間: 火～木曜11:00〜16:00。定休日: 月曜。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://achi-kochi.jp/article/12798/",
+  "source": "https://achi-kochi.jp/article/12798/",
+  "added": "2026-10-27",
+  "points": [
+   "ロフトの座敷席・キッズスペース",
+   "屋外に築山・ブランコ・鉄棒",
+   "子供向けランチメニューあり"
+  ],
+  "memo": "ロフトの座敷とキッズスペース、屋外に遊具もある上谷口町の創作和食の店。あちこちの記事で紹介(未訪問)。火〜木 11:00〜16:00。月曜定休。"
+ },
+ {
+  "id": "wk99fe15a666",
+  "name": "ごはんshuttle",
+  "area": "日置市",
+  "city": "日置市",
+  "pref": "鹿児島県",
+  "genre": "カフェ・レストラン",
+  "lat": 31.603041,
+  "lng": 130.36264,
+  "address": "鹿児島県日置市日吉町日置493",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(リビング新聞,2026/6) / あちこち(2026/7)(2026-10-27・未訪問)。⭐「おもちゃやキッズスペースも用意されているため、子どもを見守りながら大人がゆっくりと過ごせる」。子連れ設備: 芝生広場、遊具、レジャーシート無料貸出。営業時間: 月～金曜 11:00～15:00。定休日: 不定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://achi-kochi.jp/article/24936/",
+  "source": "https://achi-kochi.jp/article/24936/",
+  "added": "2026-10-27",
+  "points": [
+   "おもちゃ・キッズスペースあり",
+   "芝生広場・遊具あり",
+   "レジャーシートの無料貸し出し"
+  ],
+  "memo": "キッズスペースと芝生広場があり、子供を見守りながら過ごせる日吉町のカフェ。あちこちの記事で紹介(未訪問)。月〜金 11:00〜15:00、不定休。"
+ },
+ {
+  "id": "wk636741455e",
+  "name": "ANGELO CAFE",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "カフェ",
+  "lat": 31.586992,
+  "lng": 130.552551,
+  "address": "鹿児島県鹿児島市山之口町4-27 土肥ビル2階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(2026/7) / happiness-life(2026-10-27・未訪問)。⭐「おもちゃや絵本のほか、2メートル以上の大きさのクマのぬいぐるみ」。子連れ設備: キッズスペース。営業時間: 11:00～17:00。定休日: 不定休。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/angelo_cafe/",
+  "source": "https://achi-kochi.jp/article/16825/",
+  "added": "2026-10-27",
+  "points": [
+   "2m超えのクマのぬいぐるみのキッズスペース",
+   "おもちゃ・絵本あり",
+   "キッズメニューあり"
+  ],
+  "memo": "2メートル超えのクマのぬいぐるみやおもちゃ・絵本がある、山之口町のカフェ。あちこちの記事で紹介(未訪問)。土肥ビル2階。11:00〜17:00、不定休。"
+ },
+ {
+  "id": "wk3aed365e0f",
+  "name": "Cafe Ours",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "カフェ・レストラン",
+  "lat": 31.589525,
+  "lng": 130.557373,
+  "address": "鹿児島県鹿児島市船津町5-1 ホテルゲートイン鹿児島2階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "あちこち(2026/7) / happiness-life(2026-10-27・未訪問)。⭐「離乳食は5ヶ月から取りそろえ、豊富なキッズメニュー」。子連れ設備: 座敷席、子ども用椅子、おむつ替え台。営業時間: ランチ11:00-15:30。定休日: 日曜日・祝日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/cafe.ours2/",
+  "source": "https://achi-kochi.jp/article/16825/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューが豊富(離乳食は5ヶ月から)",
+   "キッズスペースあり",
+   "座敷席・子供用椅子あり",
+   "おむつ替え台あり"
+  ],
+  "memo": "5ヶ月からの離乳食など豊富なキッズメニューがある、ホテルゲートイン鹿児島2階のカフェ。あちこちの記事で紹介(未訪問)。ランチ11:00〜15:30。日曜・祝日定休。"
+ },
+ {
+  "id": "wkebe2c45842",
+  "name": "地球畑カフェ 草原をわたる船",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "和洋食",
+  "lat": 31.572187,
+  "lng": 130.552887,
+  "address": "鹿児島県鹿児島市下荒田3-17-1 レジデンスキュウノビル1F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様も飽きずに過ごせるキッズスペース完備」。子連れ設備: ベビーカー入店可、ベビーチェア、離乳食持ち込み可。営業時間: ランチ11:00～15:00、カフェ15:00～17:00。定休日: 月曜日。営業確認: 食べログに2025年2月の口コミ・閉店表示なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.chikyubatake.jp/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "ベビーチェアあり",
+   "離乳食の持ち込み可",
+   "ベビーカーで入れる"
+  ],
+  "memo": "キッズスペース完備の、下荒田の地球畑のカフェ。happiness-lifeの記事で紹介(未訪問)。レジデンスキュウノビル1F。ランチ11:00〜15:00、カフェ15:00〜17:00。月曜定休。"
+ },
+ {
+  "id": "wke8f5c3e5fa",
+  "name": "つばめcafe",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "洋食・カフェ",
+  "lat": 31.590094,
+  "lng": 130.557678,
+  "address": "鹿児島県鹿児島市呉服町5-9 井料ビル2F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「キッズスペースがある(真ん中に配置で親が見守れる)」。子連れ設備: ベビーカー入店可、ベビーチェア、授乳室、オムツ替え。営業時間: 10:30～14:00。定休日: 月曜日。営業確認: 食べログに閉店表示なし(口コミは2024年まで)・営業時間は火〜日11:00〜15:00。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/tsubame_cafe/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "真ん中にキッズスペース(親が見守れる)",
+   "授乳室・おむつ替えあり",
+   "ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "店の真ん中にキッズスペースがあり親が見守れる、呉服町のカフェ。happiness-lifeの記事で紹介(未訪問)。井料ビル2F。10:30〜14:00。月曜定休。"
+ },
+ {
+  "id": "wkb3042b333b",
+  "name": "リトルキッチン Kids Café（キッズ カフェ）",
+  "area": "鹿屋市",
+  "city": "鹿屋市",
+  "pref": "鹿児島県",
+  "genre": "レストラン・カフェ,キッズカフェ",
+  "lat": 31.386417,
+  "lng": 130.862473,
+  "address": "鹿児島県鹿屋市寿5-18-4",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズスペース有。」。子連れ設備: 駐車場あり。営業時間: ランチ11時～15時/ディナー18時～22時。定休日: 不定休。営業確認: 食べログでは鹿屋市寿5-18-4で掲載(笠之原から移転の可能性)・最近の口コミ確認できず。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.facebook.com/littlekitchen1004/",
+  "source": "https://iko-yo.net/facilities/126505",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "駐車場あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "キッズスペースがある、鹿屋のキッズカフェ。いこーよ掲載(未訪問)。ランチ11:00〜15:00、ディナー18:00〜22:00。不定休。"
+ },
+ {
+  "id": "wkfb6b996a5a",
+  "name": "喫茶よしはる",
+  "area": "霧島市",
+  "city": "霧島市",
+  "pref": "鹿児島県",
+  "genre": "喫茶店",
+  "lat": 31.702023,
+  "lng": 130.848587,
+  "address": "鹿児島県霧島市国分",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "あちこち(2026/7)(2026-10-27・未訪問)。⭐「キッズメニューでカプセルトイが回せるサービス」。子連れ設備: おもちゃ。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://achi-kochi.jp/article/16825/",
+  "source": "https://achi-kochi.jp/article/16825/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューでカプセルトイが回せる",
+   "おもちゃあり"
+  ],
+  "memo": "キッズメニューを頼むとカプセルトイが回せる、国分の喫茶店。あちこちの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk119d52ee43",
+  "name": "マザルバ カフェ",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "カフェ",
+  "lat": 31.589809,
+  "lng": 130.459702,
+  "address": "鹿児島県鹿児島市春山町1509-10",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "Retty(2026-10-27・未訪問)。⭐「キッズメニューもあり、子供用に椅子もちゃんとある気遣いがうれしい。」。子連れ設備: 子供用椅子。営業確認: 食べログに2025年7〜11月の口コミ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://retty.me/theme/100791603/",
+  "source": "https://retty.me/theme/100791603/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューあり",
+   "子供用椅子あり"
+  ],
+  "memo": "キッズメニューと子供用の椅子がある、春山町のカフェ。Rettyの記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk3e656ddd46",
+  "name": "夜カフェ酒場 路のカフェ",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "カフェ",
+  "lat": 31.592756,
+  "lng": 130.553787,
+  "address": "鹿児島県鹿児島市東千石町18-7 井上ビル2F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "Retty / happiness-life(2026-10-27・未訪問)。⭐「「お子様ランチ（600円）」の用意もあり。」。子連れ設備: 個室のお座敷。営業時間: ランチ11:00～15:00、ディナー18:00～21:00。定休日: 火曜日。営業確認: 2025年6月に改装し夜は「酒場 路のカフェ」として営業(食べログ)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/michi_no_cafe/",
+  "source": "https://retty.me/theme/100791603/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "個室の座敷あり"
+  ],
+  "memo": "お子様ランチと個室の座敷がある、東千石町の夜カフェ酒場。Rettyの記事で紹介(未訪問)。ランチ11:00〜15:00、ディナー18:00〜21:00。火曜定休。"
+ },
+ {
+  "id": "wk8bccdd7f46",
+  "name": "らぁ麺 そら",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "ラーメン",
+  "lat": 31.536427,
+  "lng": 130.499802,
+  "address": "鹿児島県鹿児島市中山町5243-6",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「充実のお子様セット」。子連れ設備: ベビーカー入店可、ベビーチェア、お座敷。営業時間: 11:00～15:00、17:30～21:00。定休日: 不定休。営業確認: 食べログに2025年3月の口コミ・閉店表示なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://www.instagram.com/ramen_sora/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様セットが充実",
+   "座敷・ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "お子様セットが充実した、中山町のらぁ麺の店。happiness-lifeの記事で紹介(未訪問)。11:00〜15:00、17:30〜21:00。不定休。"
+ },
+ {
+  "id": "wk3459f6a26f",
+  "name": "開花亭 谷山本店",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "とんかつ・和食",
+  "lat": 31.522137,
+  "lng": 130.517685,
+  "address": "鹿児島県鹿児島市谷山中央1丁目4970",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様メニューあり」。子連れ設備: ベビーカー入店可、ベビーチェア、オムツ替え。営業時間: 11:00～21:00。定休日: 木曜日。営業確認: 食べログに閉店表示なし・口コミ93件で営業中の掲載(11:00〜22:00・木曜休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.tonkatu-kaikatei.jp/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューあり",
+   "ベビーチェア・おむつ替えあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "お子様メニューがある、谷山のとんかつ・和食の店。happiness-lifeの記事で紹介(未訪問)。11:00〜21:00。木曜定休。"
+ },
+ {
+  "id": "wkfa7cbd00c6",
+  "name": "cafe食堂 JyuJyu",
+  "area": "鹿児島市",
+  "city": "鹿児島市",
+  "pref": "鹿児島県",
+  "genre": "和洋食",
+  "lat": 31.496971,
+  "lng": 130.498581,
+  "address": "鹿児島県鹿児島市坂之上8丁目15-7",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様ランチもあって子どもの好きなものばかり」。子連れ設備: ベビーカー入店可、ベビーチェア、授乳室、オムツ替え。営業時間: 11:00～18:00。定休日: 不定休。営業確認: 食べログに2025年11月の口コミ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://jyujyu.chesuto.jp/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチあり",
+   "授乳室・おむつ替えあり",
+   "ベビーチェアあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "子供の好きなものが並ぶお子様ランチがある、坂之上のカフェ食堂。happiness-lifeの記事で紹介(未訪問)。11:00〜18:00、不定休。"
+ },
+ {
+  "id": "wk1d12304678",
+  "name": "そば茶屋 吹上庵 伊集院店",
+  "area": "日置市",
+  "city": "日置市",
+  "pref": "鹿児島県",
+  "genre": "そば・和食",
+  "lat": 31.641096,
+  "lng": 130.410339,
+  "address": "鹿児島県日置市伊集院町郡1201-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": true,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "happiness-life(2026-10-27・未訪問)。⭐「お子様メニューも豊富」。子連れ設備: ベビーカー入店可、ベビーチェア、オムツ替え、座敷多数。営業時間: 平日11:00～20:30、土日祝10:30～20:30。定休日: 不定休。営業確認: チェーンの現行店舗(2021年開店)・食べログに閉店表示なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://fukiagean.jp/",
+  "source": "https://www.happiness-life-hl.com/kagoshima-tyubu-bringing-children-lunch/",
+  "added": "2026-10-27",
+  "points": [
+   "お子様メニューが豊富",
+   "座敷が多い",
+   "ベビーチェア・おむつ替えあり",
+   "ベビーカーで入れる"
+  ],
+  "memo": "お子様メニューが豊富で座敷も多い、吹上庵の伊集院店。happiness-lifeの記事で紹介(未訪問)。平日11:00〜20:30、土日祝10:30〜20:30。不定休。"
+ },
+ {
+  "id": "wk97f19b43df",
+  "name": "cafe de curage",
+  "area": "下関市",
+  "city": "下関市",
+  "pref": "山口県",
+  "genre": "パスタカフェ",
+  "lat": 33.961609,
+  "lng": 130.94075,
+  "address": "山口県下関市田中町1-18 2F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "下関fun(2024/11)+ちるどれん'S WELT(2026-10-27・未訪問)。⭐「キッズスペース(絵本・おもちゃ)」。子連れ設備: 座敷、個室。営業時間: 10:00～15:00、17:00～22:00。定休日: 日曜・不定休。営業確認: 食べログで「運営状況が確認できず掲載保留」(最終口コミ2025年2月)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://shimonoseki.fun/2024/11/16/%E4%B8%8B%E9%96%A2%E3%81%A7%E5%AD%90%E9%80%A3%E3%82%8C%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%81%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E5%AE%8C/",
+  "source": "https://shimonoseki.fun/2024/11/16/%E4%B8%8B%E9%96%A2%E3%81%A7%E5%AD%90%E9%80%A3%E3%82%8C%E3%83%A9%E3%83%B3%E3%83%81%E3%81%AA%E3%82%89%E3%81%93%E3%81%93%EF%BC%81%E3%82%AD%E3%83%83%E3%82%BA%E3%82%B9%E3%83%9A%E3%83%BC%E3%82%B9%E5%AE%8C/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース(絵本・おもちゃ)",
+   "座敷・個室あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "絵本やおもちゃのキッズスペースと座敷・個室がある、下関・田中町のパスタカフェ。下関funの記事で紹介(未訪問)。10:00〜15:00、17:00〜22:00。日曜・不定休。"
+ },
+ {
+  "id": "wka02b4075d6",
+  "name": "mucu mucu(ムクムク)",
+  "area": "周南市",
+  "city": "周南市",
+  "pref": "山口県",
+  "genre": "うどん・カフェ",
+  "lat": 34.082413,
+  "lng": 131.775848,
+  "address": "山口県周南市下上1501-1",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "まいぷれ周南(2026-10-27・未訪問)。⭐「Kids udon menu／奥の部屋にキッズスペース(靴を脱いで上がる)」。子連れ設備: テラス席。営業時間: 10:00～17:00。営業確認: 食べログに閉店表示なし(月〜土10:48〜17:00・日祝休)・最近の投稿は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "source": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "added": "2026-10-27",
+  "points": [
+   "奥の部屋にキッズスペース(靴を脱いで上がる)",
+   "キッズうどんあり",
+   "テラス席あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "奥に靴を脱いで上がるキッズスペースがある、周南市下上のうどんカフェ。まいぷれ周南の記事で紹介(未訪問)。10:00〜17:00。"
+ },
+ {
+  "id": "wk81a2c971ce",
+  "name": "やないろ",
+  "area": "柳井市",
+  "city": "柳井市",
+  "pref": "山口県",
+  "genre": "カフェ",
+  "lat": 33.968849,
+  "lng": 132.108582,
+  "address": "山口県柳井市柳井津457",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "山口さん(2023/9)(2026-10-27・未訪問)。⭐「2階には子連れの方には嬉しいキッズスペースがあり／お子様ランチは「松・竹・梅」３種類」。営業時間: 10:00～17:00。定休日: 月曜日・第3日曜日。営業確認: 食べログに閉店表示なし(火〜土12:00〜17:00)・最近の投稿は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yamaguchi-san.com/post-5982/",
+  "source": "https://yamaguchi-san.com/post-5982/",
+  "added": "2026-10-27",
+  "points": [
+   "2階にキッズスペース",
+   "お子様ランチは松・竹・梅の3種類",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "2階にキッズスペースがあり、お子様ランチが3種類ある柳井・白壁の町並みのカフェ。山口さんの記事で紹介(未訪問)。10:00〜17:00。月曜・第3日曜定休。"
+ },
+ {
+  "id": "wkc3cda61234",
+  "name": "純喫茶 わんぷれーと",
+  "area": "柳井市",
+  "city": "柳井市",
+  "pref": "山口県",
+  "genre": "喫茶店",
+  "lat": 33.957275,
+  "lng": 132.10527,
+  "address": "山口県柳井市旭ヶ丘1-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "山口さん(2026/1)(2026-10-27・未訪問)。⭐「子ども椅子やベビーカー用のスペースが確保されているほか、キッズスペースも完備されています。」。子連れ設備: 子ども椅子、ベビーカー用スペース。営業時間: 8:00〜17:00。定休日: 木曜日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yamaguchi-san.com/post-39332/",
+  "source": "https://yamaguchi-san.com/post-39332/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "子供椅子あり",
+   "ベビーカー用のスペースあり"
+  ],
+  "memo": "キッズスペースとベビーカー用のスペースがある、柳井・旭ヶ丘の純喫茶。山口さんの記事で紹介(未訪問)。8:00〜17:00。木曜定休。"
+ },
+ {
+  "id": "wka4299a831a",
+  "name": "サンハウス",
+  "area": "宇部市",
+  "city": "宇部市",
+  "pref": "山口県",
+  "genre": "カレー",
+  "lat": 34.002655,
+  "lng": 131.221832,
+  "address": "山口県宇部市西宇部南4-5-28",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "山口さん(2025/2)(2026-10-27・未訪問)。⭐「ベビーカーでも来店できる十分なスペースとキッズスペースも設けているようです。」。子連れ設備: ベビーカー可。営業時間: 11:00〜18:00。定休日: 水・日。営業確認: 2025-26年の記事に掲載(記事時点で営業)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yamaguchi-san.com/post-31086/",
+  "source": "https://yamaguchi-san.com/post-31086/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "ベビーカーで入れる広さ"
+  ],
+  "memo": "キッズスペースがあり、ベビーカーでも入れる宇部のカレー店。山口さんの記事で紹介(未訪問)。11:00〜18:00。水・日曜定休。"
+ },
+ {
+  "id": "wkb3d6d3f114",
+  "name": "間鍋竹士のうつわを愉しむカフェギャラリー",
+  "area": "防府市",
+  "city": "防府市",
+  "pref": "山口県",
+  "genre": "カフェギャラリー",
+  "lat": 34.061584,
+  "lng": 131.574066,
+  "address": "山口県防府市松崎町2-5",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "山口さん(2024/7)(2026-10-27・未訪問)。⭐「キッズプレート 500円／キッズスペースもあり、貸し切りもできます！」。営業時間: 13:00～16:00。営業確認: 食べログに閉店表示なし・最終口コミ2022年12月。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://yamaguchi-san.com/post-21309/",
+  "source": "https://yamaguchi-san.com/post-21309/",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペースあり",
+   "キッズプレートあり",
+   "貸し切りもできる",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "キッズプレートとキッズスペースがある、間鍋竹士のうつわを楽しむ防府のカフェギャラリー。山口さんの記事で紹介(未訪問)。13:00〜16:00。"
+ },
+ {
+  "id": "wka3fd06ab28",
+  "name": "Nicoli Kitchen（ニコリ キッチン）",
+  "area": "岩国市",
+  "city": "岩国市",
+  "pref": "山口県",
+  "genre": "レストラン・カフェ",
+  "lat": 34.17075,
+  "lng": 132.223831,
+  "address": "山口県岩国市麻里布町2-4-21 都志見ビル2F",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「大きな黒板やおもちゃ、絵本が用意されているキッズスペースがあるので、親子でゆっくりと食事を楽しむことができますよ。」。子連れ設備: 座敷。営業時間: 11時30分 ～ 22時00分 ランチタイム：11時半～14時半(L.O.14時) ディナータイム：18時半～22時(L.O.21時)。定休日: 不定休。営業確認: 食べログに2026年8月の口コミ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://iko-yo.net/facilities/97903",
+  "source": "https://iko-yo.net/facilities/97903",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース(大きな黒板・おもちゃ・絵本)",
+   "キッズメニューあり",
+   "座敷あり"
+  ],
+  "memo": "大きな黒板やおもちゃ・絵本のキッズスペースがある、岩国・麻里布町のカフェ。いこーよ掲載(未訪問)。都志見ビル2F。ランチ11:30〜14:30(LO14:00)、ディナー18:30〜22:00(LO21:00)。不定休。"
+ },
+ {
+  "id": "wk44c9d2102f",
+  "name": "お茶の鴻雪園",
+  "area": "山口市",
+  "city": "山口市",
+  "pref": "山口県",
+  "genre": "レストラン・カフェ,ショッピング",
+  "lat": 34.184097,
+  "lng": 131.476364,
+  "address": "山口県山口市後河原163",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsSpace": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「お子さんも嬉しいキッズスペースも完備！」。子連れ設備: 駐車場あり。営業時間: 10時00分 ～ 18時00分。定休日: 日曜日。営業確認: 食べログに2025年10月の口コミ(本町から後河原へ移転済みの現店舗)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.kousetuen.co.jp/",
+  "source": "https://iko-yo.net/facilities/97806",
+  "added": "2026-10-27",
+  "points": [
+   "キッズスペース完備",
+   "駐車場あり"
+  ],
+  "memo": "キッズスペースがある、山口市後河原のお茶の店のカフェ。いこーよ掲載(未訪問)。10:00〜18:00。日曜定休。"
+ },
+ {
+  "id": "wk4deb6f9999",
+  "name": "TOTOMATO 周南店",
+  "area": "周南市",
+  "city": "周南市",
+  "pref": "山口県",
+  "genre": "レストラン",
+  "lat": 34.041256,
+  "lng": 131.832611,
+  "address": "山口県周南市徳山427 ゼオンアリーナ周南内",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "まいぷれ周南(2026-10-27・未訪問)。⭐「キッズランチ、キッズ用食器」。営業確認: 食べログに2025年8月の口コミ(周南市総合スポーツセンター内・火曜休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "source": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "added": "2026-10-27",
+  "points": [
+   "キッズランチあり",
+   "キッズ用の食器あり"
+  ],
+  "memo": "キッズランチとキッズ用の食器がある、ゼオンアリーナ周南内のレストラン。まいぷれ周南の記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk3efbd3b376",
+  "name": "cafe Agora",
+  "area": "光市",
+  "city": "光市",
+  "pref": "山口県",
+  "genre": "カフェ",
+  "lat": 33.974281,
+  "lng": 131.934219,
+  "address": "山口県光市島田4丁目13-15",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "まいぷれ周南(2026-10-27・未訪問)。⭐「キッズランチ(ジュース付き)」。子連れ設備: 子ども用食器。営業確認: ホットペッパーに掲載あり(最終更新2024年7月)・2025年以降の情報は未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "source": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "added": "2026-10-27",
+  "points": [
+   "キッズランチ(ジュース付き)",
+   "子供用の食器あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "ジュース付きのキッズランチがある、光市のカフェ。まいぷれ周南の記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wk7eccc7a139",
+  "name": "ビストロ四季音",
+  "area": "周南市",
+  "city": "周南市",
+  "pref": "山口県",
+  "genre": "ビストロ",
+  "lat": 34.028706,
+  "lng": 131.951492,
+  "address": "山口県周南市大河内363-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "まいぷれ周南(2026-10-27・未訪問)。⭐「キッズランチ」。子連れ設備: 座敷。営業確認: 公式サイトに2026年10〜11月の営業カレンダー。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "source": "https://shunan.mypl.net/article/lunch_shunan/86379",
+  "added": "2026-10-27",
+  "points": [
+   "キッズランチあり",
+   "座敷あり"
+  ],
+  "memo": "キッズランチと座敷がある、周南・大河内のビストロ。まいぷれ周南の記事で紹介(未訪問)。"
+ },
+ {
+  "id": "wke58f6d3432",
+  "name": "カフェレストラン瀬里家",
+  "area": "上関町",
+  "city": "熊毛郡上関町",
+  "pref": "山口県",
+  "genre": "レストラン・カフェ",
+  "lat": 33.82235,
+  "lng": 132.078217,
+  "address": "山口県熊毛郡上関町長島619-3",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「キッズメニューも充実しており、キッズプレート・カレーや、お刺身まで！」。子連れ設備: ベビーカーOK、駐車場あり。営業時間: 平日9：30～16：30/土日祝日8：30～17：00 モーニング(要予約)9：30～10：30/8：30～10：30 ランチ11：00～14：00/11：00。定休日: 木曜日 ※木曜日が祝日の場合は営業。営業確認: 食べログに2026年9月の口コミ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://www.caferest-serika.com/",
+  "source": "https://iko-yo.net/facilities/149501",
+  "added": "2026-10-27",
+  "points": [
+   "キッズメニューが充実(キッズプレート・カレー・刺身)",
+   "ベビーカーで入れる",
+   "駐車場あり"
+  ],
+  "memo": "キッズプレートやカレー、刺身までキッズメニューが充実した、上関・長島のカフェレストラン。いこーよ掲載(未訪問)。平日9:30〜16:30、土日祝8:30〜17:00。モーニングは要予約。木曜定休(祝日は営業)。"
+ },
+ {
+  "id": "wka365b9e8d9",
+  "name": "おうちカフェ4038",
+  "area": "下松市",
+  "city": "下松市",
+  "pref": "山口県",
+  "genre": "レストラン・カフェ,教室・習い事",
+  "lat": 34.025326,
+  "lng": 131.840515,
+  "address": "山口県下松市末武中40-38",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null,
+   "kidsMenu": true
+  },
+  "verdict": "いこーよ(2026-10-27・未訪問)。⭐「メニューはパスタを中心にカレーやオムライスなどの他にお子様ランチ・離乳食の用意もありますよ。」。子連れ設備: 離乳食、駐車場あり。営業時間: 11:00～15:30（ラストオーダー　15：00）。定休日: 不定休。営業確認: 食べログで「運営状況が確認できず掲載保留」・口コミは数年前のみ。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "gourmet",
+  "web": "http://ameblo.jp/le-chiot-cava-4038/",
+  "source": "https://iko-yo.net/facilities/58489",
+  "added": "2026-10-27",
+  "points": [
+   "お子様ランチ・離乳食あり",
+   "駐車場あり",
+   "⚠ 営業状況は要確認(情報が古い可能性)"
+  ],
+  "memo": "パスタ中心でお子様ランチや離乳食もある、下松のおうちカフェ。いこーよ掲載(未訪問)。11:00〜15:30(LO15:00)。不定休。"
  }
 ]

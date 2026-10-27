@@ -271,6 +271,12 @@
   .pin-fukko {
     box-shadow: 0 0 0 3px #0E9384, 0 1px 5px rgba(0,0,0,.45);
   }
+  /* ★運用モードだけ: 子連れ大歓迎(4段目)のピンに星 */
+  .pin-top-label { display: none; }
+  body.admin .pin-top-label {
+    display: block; position: absolute; top: -14px; left: -10px; transform: rotate(45deg);
+    font-size: 13px; line-height: 1; filter: drop-shadow(0 0 1px #fff);
+  }
   .pin-fukko-label {
     position: absolute; top: -15px; left: 9px; transform: rotate(45deg);
     background: #0E9384; color: #fff; font-size: 10px; font-weight: 800;
@@ -1245,12 +1251,36 @@ function kidsFacilityHtml(spot) {
   if (k.noise === "ok") yes.push(`<span class="kf kf-k">🔉 騒いでも平気</span>`);
   if (isSmokingOk(spot)) no.push(`<span class="kf kf-n">🚬 喫煙可</span>`);
   const lv = kidsLevelOf(spot);
-  const badge = lv === 2 ? `<span class="kl kl-2">👪 子連れ歓迎</span>` : lv === 1 ? `<span class="kl kl-1">🙆 子連れ可</span>` : "";
+  const top = document.body.classList.contains("admin") && isKidsTop(spot)
+    ? `<span class="kl kl-2">🌟 大歓迎 ${kidsScore(spot)}点</span>` : "";
+  const badge = top ? top : lv === 2 ? `<span class="kl kl-2">👪 子連れ歓迎</span>` : lv === 1 ? `<span class="kl kl-1">🙆 子連れ可</span>` : "";
   // 「なし」は、他に確認できた設備がある店でだけ出す。
   // 単独で出すと、そもそも座敷を期待しない店(カウンターのラーメン屋等)にまで
   // 灰色のチップが並んで邪魔になるだけで、判断の足しにならない
   if (!yes.length && !badge) return "";
   return `<div class="card-kidsrow">${badge}${yes.join("")}${yes.length ? no.join("") : ""}</div>`;
+}
+
+// ★子連れ大歓迎(4段目・運用モード専用・2026-10-27ユーザー確定)
+//   歓迎は「どれか1つ」で届くので、行き先選び用にもう1段上を作る。顧客画面には出さない。
+//   条件 = 歓迎(喫煙可でない) + 点数7以上。キッズスペースは必須にしない(丸源ラーメンを大歓迎にするため・同日ユーザー)
+//   点数: キッズスペース3 / キッズメニュー2 / 離乳食2 /
+//         子供椅子・おむつ替え・座敷・掘りごたつ・ベビーカー・ソファ・子供用食器・ベビーキープ・おもちゃ付き 各1
+//   kids 欄に無い項目は verdict と points の文言からも拾う(離乳食・おもちゃ付きは kids 欄に項目が無い)
+const KIDS_SCORE = { kidsSpace: 3, kidsMenu: 2, kidsChair: 1, diaper: 1, tatami: 1, horigotatsu: 1, stroller: 1, sofa: 1, kidsPlate: 1, babyKeep: 1 };
+function kidsScore(spot) {
+  const k = spot.kids || {};
+  const v = (spot.verdict || "") + " " + (spot.points || []).join(" ");
+  let n = Object.entries(KIDS_SCORE).reduce((a, [key, p]) => a + (k[key] === true ? p : 0), 0);
+  if (k.kidsMenu !== true && /お子様メニュー|お子さま(ラーメン|ランチ|メニュー)|キッズメニュー|お子様ランチ/.test(v)) n += 2;
+  if (k.kidsChair !== true && /子供椅子|キッズチェア|ベビーチェア|ハイチェア/.test(v)) n += 1;
+  if (/離乳食/.test(v) && !/離乳食.{0,4}(なし|ない|不可)/.test(v)) n += 2;
+  if (k.kidsPlate !== true && /子(供|ども)用の?(食器|取り皿|お?皿|カトラリー)|子供取り皿|麺切り/.test(v)) n += 1;
+  if (/おもちゃ付|おもちゃの?プレゼント|おもちゃがもらえ/.test(v)) n += 1;
+  return n;
+}
+function isKidsTop(spot) {
+  return kidsLevelOf(spot) === 2 && kidsScore(spot) >= 7;
 }
 
 // 子連れ可以上か(直リンクで開くときの判定などに使う)
@@ -1316,7 +1346,9 @@ function applyFilters(spots) {
     // 子連れOKは赤(実績)+青(下調べで設備の裏が取れた店)の両方を出す(2026-08-27仕様変更)
     // 2026-10-14: 単独のフィルタ値ではなく state.kidsOnly(初期ON)として他の絞り込みと併用する
     // 2026-10-19: state.kidsLevel = 2(歓迎だけ・初期) / 1(可まで) / 0(すべて)
-    if (state.kidsLevel && kidsLevelOf(s) < state.kidsLevel) return false;
+    // 2026-10-27: 3 = 大歓迎だけ(運用モードのボタンでのみ選べる)
+    if (state.kidsLevel === 3) { if (!isKidsTop(s)) return false; }
+    else if (state.kidsLevel && kidsLevelOf(s) < state.kidsLevel) return false;
     if (state.filter === "kids" && !isKidsOk(s)) return false;
     if (state.filter === "limited" && !isLimited(s)) return false;
     if (state.filter === "fukko" && !isFukko(s)) return false;
@@ -1944,7 +1976,7 @@ function jumpToSpot(spot) {
     document.querySelectorAll(".age-btn").forEach(b => b.classList.remove("active"));
     updateAreaBtn();
     document.querySelectorAll(".filter-btn[data-filter]").forEach(b => b.classList.toggle("active", b.dataset.filter === "all"));
-    if (kidsLevelOf(spot) < state.kidsLevel) setKidsLevel(kidsLevelOf(spot));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
+    if (state.kidsLevel === 3 ? !isKidsTop(spot) : kidsLevelOf(spot) < state.kidsLevel) setKidsLevel(kidsLevelOf(spot));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
   }
   renderAll();
   focusSpot(spot);
@@ -2177,6 +2209,12 @@ function makePinEl(spot) {
   // ピンの色は「行った(赤)/調べた(青)」を必ず保つ。期間限定は金リングで足す
   el.style.background = spot.wish ? "#2b5cc4" : "#d63031";
   if (isEventOnly(spot)) el.classList.add("pin-eventonly");
+  if (isKidsTop(spot)) {
+    const st = document.createElement("span");
+    st.className = "pin-top-label";
+    st.textContent = "🌟";
+    el.appendChild(st);
+  }
   if (!isLimited(spot) && isFukko(spot)) {
     el.classList.add("pin-fukko");
     const fl = document.createElement("span");
@@ -2564,7 +2602,7 @@ document.querySelectorAll(".filter-btn[data-filter]").forEach(btn => {
 });
 
 // ★子連れボタン(2026-10-19): 押すたびに 歓迎 → 可まで → すべて → 歓迎…
-const KIDS_BTN_LABEL = { 2: "👪 子連れ歓迎", 1: "🙆 子連れ可まで", 0: "👪 すべて" };
+const KIDS_BTN_LABEL = { 3: "🌟 大歓迎だけ", 2: "👪 子連れ歓迎", 1: "🙆 子連れ可まで", 0: "👪 すべて" };
 function setKidsLevel(lv) {
   state.kidsLevel = lv;
   state.kidsOnly = lv > 0;   // 旧フラグ(他の箇所の参照用)
@@ -2578,7 +2616,10 @@ function setKidsLevel(lv) {
 }
 function setKidsOnly(on) { setKidsLevel(on ? 2 : 0); }
 document.getElementById("kidsBtn").addEventListener("click", () => {
-  setKidsLevel(state.kidsLevel === 2 ? 1 : state.kidsLevel === 1 ? 0 : 2);
+  // 運用モードは 歓迎 → 可まで → すべて → 大歓迎 → 歓迎…(顧客画面は大歓迎を飛ばす)
+  const admin = document.body.classList.contains("admin");
+  const lv = state.kidsLevel;
+  setKidsLevel(lv === 3 ? 2 : lv === 2 ? 1 : lv === 1 ? 0 : (admin ? 3 : 2));
   try { window.icTrack && window.icTrack("kids_toggle", { on: state.kidsLevel }); } catch (e) {}
   populateAreaSelect(state.spots);
   renderAll();
@@ -2637,7 +2678,7 @@ function openFromHash() {
     b.classList.toggle("active", b.dataset.filter === "all"));
   state.areas.clear();
   state.areasDraft.clear();
-  if (kidsLevelOf(sp) < state.kidsLevel) setKidsLevel(kidsLevelOf(sp));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
+  if (state.kidsLevel === 3 ? !isKidsTop(sp) : kidsLevelOf(sp) < state.kidsLevel) setKidsLevel(kidsLevelOf(sp));   // 対象外の段の店へ飛ぶときは段を下げて見えるようにする
   populateAreaSelect(state.spots);
   renderAll();
   focusSpot(sp);

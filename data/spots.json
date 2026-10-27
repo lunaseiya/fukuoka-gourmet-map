@@ -89583,5 +89583,93 @@
    "⚠ 11/7午前は式典で駐車場も使えない"
   ],
   "memo": "2026年11月7日に遊具が使えるようになる予定の、広川町の公園。Instagramの子連れおでかけ投稿を参考に登録(未訪問)で、公式の告知はまだ確認できていない。広川ICから車で約4分。初日は午前が式典で駐車場も使えないので、行くなら午後から。"
+ },
+ {
+  "id": "seiryu-park",
+  "name": "清流公園",
+  "area": "中洲・春吉",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.59,
+  "lng": 130.408,
+  "address": "福岡県福岡市博多区中洲(那珂川沿い)",
+  "visited": "2026-10-27",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐2026年9月11日に北側プロムナードと橋上広場(春吉橋の上)がリニューアル開業。川床のようなテラス席で那珂川を見ながら食べられる。⭐みんなのトイレ(バリアフリー)におむつ替え台あり(現地で確認)。店は dacō？清流公園(パンと I'm donut? の生ドーナツ)・COFFEE GALLERY・HELLO BREWERY の3つ。⚠南端エリアは工事中で、翼のようなシンボルの建物を含めて2026年12月に供用開始予定。",
+  "points": [
+   "おむつ替え台あり(みんなのトイレ)",
+   "川沿いのテラス席で食べられる",
+   "I'm donut? のスタンドが公園内",
+   "⚠ 南端エリアは12月オープン予定(工事中)"
+  ],
+  "memo": "那珂川沿いにリニューアルした中洲の公園で、春吉橋の上が広場になっている。2026年10月27日に訪問。テイクアウトの店が3つあり、川を見ながら食べられる。南端の翼のような建物は12月にオープン予定。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "seiryu-park.jpg",
+  "wish": false,
+  "category": "play",
+  "added": "2026-10-28",
+  "photos": [
+   "seiryu-park_01_橋上広場から那珂川と翼の建物.jpg",
+   "seiryu-park_02_おむつ替え台(みんなのトイレ).jpg",
+   "seiryu-park_03_バリアフリートイレ.jpg"
+  ]
+ },
+ {
+  "id": "daco-seiryu-park",
+  "name": "dacō？清流公園",
+  "area": "春吉",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "パン・ドーナツ(テイクアウト)",
+  "lat": 33.590385,
+  "lng": 130.406982,
+  "address": "福岡県福岡市中央区春吉3丁目1(清流公園内)",
+  "visited": "2026-10-27",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": "facility",
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐アマムダコタン系のパン屋 dacō と生ドーナツの I'm donut? が一緒になった、ブランド初のテイクアウト専門スタンド(2026年9月11日オープン)。パン6種・生ドーナツ6種を厳選、ドリンク約15種。今回はダコーバーガーとピスタチオクリームを購入。⭐すぐ横の川沿いテラスで食べられ、公園のみんなのトイレにおむつ替え台あり。営業 11:00〜24:00・不定休。",
+  "points": [
+   "公園のトイレにおむつ替え台",
+   "川沿いのテラスで食べられる",
+   "I'm donut? の生ドーナツが買える",
+   "⚠ テイクアウトのみ(店内席なし)"
+  ],
+  "memo": "清流公園(中洲)の川沿いにある、dacō と I'm donut? のテイクアウト専門スタンド。2026年10月27日に訪問し、ダコーバーガーとピスタチオクリームを購入。営業は11:00〜24:00・不定休。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "daco-seiryu-park.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "added": "2026-10-28",
+  "in": "seiryu-park",
+  "web": "https://prtimes.jp/main/html/rd/p/000000041.000129324.html",
+  "photos": [
+   "daco-seiryu-park_01_外観(daco清流公園).jpg",
+   "daco-seiryu-park_02_ダコーバーガーとピスタチオクリーム.jpg"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40075012/"
  }
 ]

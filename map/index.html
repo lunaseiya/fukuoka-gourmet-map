@@ -430,6 +430,14 @@
   .icon-btn.on { background: #2d3436; border-color: #2d3436; }
   #searchbar { display: none; margin: 8px 0 0; }
   header.search-open #searchbar, body.admin #searchbar { display: block; }
+  /* ★育っているマップの見える化(2026-10-27ユーザー「せっかくやってることが伝わらないのはもったいない」) */
+  .growbar { display: flex; align-items: center; gap: 8px; margin-top: 6px; font-size: 12px; color: #3a5a40; }
+  .growbar .g-total { font-weight: 800; }
+  .growbar .g-week { color: #1f7a2e; font-weight: 700; }
+  .growbar .g-new { margin-left: auto; border: 1px solid #1f7a2e; color: #1f7a2e; background: #fff; border-radius: 999px;
+    padding: 4px 10px; font-size: 12px; font-weight: 700; cursor: pointer; white-space: nowrap; }
+  .growbar .g-new.active { background: #1f7a2e; color: #fff; }
+  .growbar:empty { display: none; }
   .filters.subrow { display: none; margin-top: 6px; }
   body.cat-onsen .filters.subrow, body.admin .filters.subrow { display: flex; }
   .admin-only { display: none; }
@@ -1032,6 +1040,7 @@
     <input id="q" type="search" placeholder="店名・地名・ジャンルで検索" autocomplete="off" enterkeyhint="search">
     <button id="qClear" type="button" aria-label="検索をクリア">✕</button>
   </div>
+  <div class="growbar" id="growbar"></div>
   <div class="filters subrow">
     <button class="filter-btn onsen-only" data-filter="dayuse">日帰りOK</button>
     <button class="filter-btn onsen-only" data-filter="stay">泊まれる</button>
@@ -1151,6 +1160,33 @@ const state = {
   markers: [],
   selectedId: null
 };
+
+// この7日間にマップへ載った所(added)。「今週増えたお店」と育っている数字に使う
+function isAddedThisWeek(spot) {
+  if (!spot.added) return false;
+  const d = new Date(spot.added + "T00:00:00+09:00");
+  return (Date.now() - d.getTime()) <= 7 * 24 * 60 * 60 * 1000;
+}
+function renderGrowbar() {
+  const el = document.getElementById("growbar");
+  if (!el || !state.spots.length) return;
+  const live = state.spots.filter(s => !isExpired(s));
+  const week = live.filter(isAddedThisWeek).length;
+  const on = state.filter === "newweek";
+  el.innerHTML = `<span>🌱 九州の子連れおでかけ <span class="g-total">${live.length.toLocaleString()}件</span></span>`
+    + (week ? `<span class="g-week">今週 +${week.toLocaleString()}件</span>` : "")
+    + (week ? `<button class="g-new${on ? " active" : ""}" id="gNew" type="button">${on ? "✕ 新着を閉じる" : "今週増えたお店 ▸"}</button>` : "");
+  const b = document.getElementById("gNew");
+  if (b) b.onclick = () => {
+    const turnOn = state.filter !== "newweek";
+    state.filter = turnOn ? "newweek" : "all";
+    if (turnOn) setKidsLevel(0);   // 新着は子連れの段に関係なく全部見せる
+    else setKidsLevel(2);
+    try { window.icTrack && window.icTrack("newweek_toggle", { on: turnOn }); } catch (e) {}
+    populateAreaSelect(state.spots);
+    renderAll();
+  };
+}
 
 // 投稿から1週間は NEW 扱い
 function isNew(spot) {
@@ -1358,6 +1394,7 @@ function applyFilters(spots) {
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
+    if (state.filter === "newweek" && !isAddedThisWeek(s)) return false;
     if (state.areas.size && !state.areas.has(s.city)) return false;
     // 年齢は「除外フィルター」(2026-10-12変更)。年齢タグが付いていて合わない所だけ外し、
     // 未確定(ages無し)は残す。以前の「選んだ区分を全部満たす所だけ」だと未確定が多い今は
@@ -1605,6 +1642,7 @@ function areaTabSpots(spots) {
     if (state.filter === "wish" && !s.wish) return false;
     if (state.filter === "dayuse" && !canDayUse(s)) return false;
     if (state.filter === "stay" && !canStay(s)) return false;
+    if (state.filter === "newweek" && !isAddedThisWeek(s)) return false;
     return true;
   });
 }
@@ -2016,15 +2054,15 @@ function renderList() {
   const order = new Map(state.spots.map((s, i) => [s, i]));
   const recentBlue = (s) => !!(s.wish && s.added &&
     (Date.now() - new Date(s.added + "T00:00:00+09:00").getTime()) <= 14 * 24 * 60 * 60 * 1000);
-  const rank = (s) => isNew(s) ? 0 : recentBlue(s) ? 1 : !s.wish ? 2 : 3;
+  const rank = (s) => state.filter === "newweek" ? 1 : isNew(s) ? 0 : recentBlue(s) ? 1 : !s.wish ? 2 : 3;
   const filtered = applyFilters(state.spots).slice().sort((a, b) =>
     (rank(a) - rank(b)) ||
-    (rank(a) === 1 ? (b.added.localeCompare(a.added) || order.get(b) - order.get(a)) :
+    (rank(a) === 1 ? ((b.added || "").localeCompare(a.added || "") || order.get(b) - order.get(a)) :
      a.wish ? order.get(b) - order.get(a) : order.get(a) - order.get(b)));
 
   countEl.textContent = !state.spots.length ? ""
     : state.q.trim() ? `「${state.q.trim()}」の検索結果 ${filtered.length}件(全カテゴリから)`
-    : `${filtered.length}件表示中(全${state.spots.length}件)`;
+    : `${filtered.length}件表示中(全${state.spots.filter(s => !isExpired(s)).length}件)`;
 
   if (!state.spots.length) {
     list.innerHTML = `<div class="empty">まだ登録されたお店がありません。<br>data/spots.json に追加すると、ここと地図に表示されます。</div>`;
@@ -2423,6 +2461,7 @@ function showClusterList(items, facility) {
 }
 
 function renderAll() {
+  renderGrowbar();
   // フィルタ変更で選択中の店が対象外になったら詳細カードを閉じる
   if (state.selectedId !== null && !applyFilters(state.spots).some(s => s.id === state.selectedId)) {
     document.getElementById("detail").classList.remove("open");

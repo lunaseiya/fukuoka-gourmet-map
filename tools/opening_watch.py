@@ -122,6 +122,33 @@ HIGASHI_STRONG = ['福岡市東区', '東区', '照葉', 'アイランドシテ�
                   '志賀島', '西戸崎', '海の中道', '三苫', '雁の巣', '雁ノ巣', 'ガーデンズ千早', 'いーなテラス',
                   'ブランチ福岡下原', 'BRANCH福岡下原', 'イオンモール香椎浜', 'ゆめタウン博多']
 
+# ■ 天神・博多(2026-10-27ユーザー確定「天神、博多でも需要ある」)。既存ビルへのテナント入居・移転
+#   (例: アニメイトラシック福岡天神 10/24 = 福岡パルコから三越8階へ移転)は大店立地法にも再開発ブログにも出ない
+CENTER_QUERIES = ['天神 オープン', '天神 新店', '天神 移転 オープン', '天神 グランドオープン', '福岡市中央区 オープン',
+                  '大名 オープン 福岡', '今泉 オープン 福岡', '薬院 オープン 福岡',
+                  '博多駅 オープン', '博多 新店 福岡', '博多 グランドオープン', '福岡市博多区 オープン', '中洲 オープン',
+                  'キャナルシティ オープン', 'ラシック オープン', '福岡三越 オープン', '岩田屋 オープン', '大丸福岡天神 オープン',
+                  '博多阪急 オープン', 'アミュプラザ博多 オープン', 'KITTE博多 オープン', 'ワンビル オープン',
+                  '天神地下街 オープン', 'ソラリア オープン', '博多リバレイン オープン', '清流公園 オープン']
+CENTER_HAKATA = ['博多駅', '福岡市博多区', '博多区', '中洲', '祇園', '住吉', 'キャナルシティ', '博多阪急', 'アミュプラザ博多',
+                 'KITTE博多', 'JRJP博多', '博多マルイ', '博多リバレイン', 'リバレイン', '清流公園', '博多']
+CENTER_STRONG = ['福岡市中央区', '福岡市博多区', '天神', '博多駅', '中洲', 'キャナルシティ', 'ラシック', '福岡三越', '岩田屋',
+                 '大丸福岡天神', 'ソラリア', 'ワンビル', 'ONE FUKUOKA', 'ONEFUKUOKA', '天神地下街', '博多阪急',
+                 'アミュプラザ博多', 'KITTE博多', 'JRJP博多', '博多マルイ', '博多リバレイン', '清流公園']
+CENTER_WEAK = ['博多', '大名', '今泉', '薬院', '春吉', '警固', '赤坂', '渡辺通', '祇園', '住吉', '中央区', '博多区']
+CENTER_DROP_RE = re.compile(HIGASHI_DROP_RE.pattern[:-1] + r'|美容|サロン|脱毛|エステ|ネイル|まつ毛|まつげ|ヘア|理容|'
+                            r'ジム|パーソナル|フィットネス|オフィス|コワーキング|不動産|マンション|保険|銀行|ATM|証券|'
+                            r'携帯|スマホ|ショールーム|セミナー|説明会|期間限定|ポップアップ|POP ?UP|催事|物産展|'
+                            r'人事|決算|株主|IR|社長|就任)', re.I)
+# 子連れ・観光に関係しそうなもの(食・買い物・遊び・宿・キャラクター・「九州初」級)だけ残す
+CENTER_KEEP_RE = re.compile(r'(カフェ|喫茶|レストラン|食堂|ラーメン|うどん|そば|寿司|鮨|焼肉|焼き鳥|居酒屋|バル|ビュッフェ|'
+                            r'スイーツ|ケーキ|パン|ベーカリー|ドーナツ|アイス|クレープ|チョコ|和菓子|フード|グルメ|屋台|'
+                            r'ショップ|専門店|ストア|雑貨|書店|本屋|アニメ|キャラクター|ゲーム|ホビー|おもちゃ|トイ|'
+                            r'ポケモン|サンリオ|ガンダム|ディズニー|ジブリ|ちいかわ|キッズ|子ども|こども|子供|親子|ファミリー|'
+                            r'ベビー|遊び場|遊具|公園|広場|ミュージアム|美術館|博物館|水族館|展望|体験|ホテル|旅館|'
+                            r'商業施設|モール|百貨店|フロア|旗艦|フラッグシップ|九州最大|九州初|福岡初|日本初|上陸|'
+                            r'グランドオープン|移転|リニューアル)')
+
 # 見出しに含まれていれば「これから出来る建物」の記事とみなす語
 EVENT_RE = re.compile(r'(グランドオープン|供用開始|街開き|まちびらき|開業|開園|開館|開店|開設|竣工|完成|オープン|着工)')
 # 住宅専用は除外(複合・商業・ホテルを伴うものは残す)
@@ -333,6 +360,10 @@ def find_when(text):
     """見出し/本文から「時期 + イベント語」を探す。
     返り値 (時期の表記, ISO, イベント語) か (None, None, イベント語 or None)"""
     t = norm(text)
+    # PDFの文字抽出は「2026 年 12 月」「令和 8 年」と数字の前後に空白が入る(2026-10-27 清流公園の市発表で取りこぼし)
+    t = re.sub(r'(\d)\s+(?=年度|年|月|日)', r'\1', t)
+    t = re.sub(r'(年度|年|月)\s+(?=\d)', r'\1', t)
+    t = re.sub(r'令和\s*(\d{1,2})\s*年', lambda m: '%d年' % (2018 + int(m.group(1))), t)
     # 「2026年5月撮影」「2026年5月2日撮影」は撮影日。時期扱いしないので消す
     t = re.sub(DATE_RE.pattern + r'(上旬|中旬|下旬|頃)?\s*(に)?撮影', ' ', t)
     best = None
@@ -484,12 +515,10 @@ def watch_terms(w):
 
 
 def watch_of(name):
-    """エントリ名がどのウォッチ対象に当たるか(無ければ None)"""
+    """エントリ名がどのウォッチ対象に当たるか(無ければ None)。複数当たれば名前が一番長い(=具体的な)もの"""
     n = norm(name)
-    for w in WATCH:
-        if any(norm(a) in n for a in watch_terms(w)):
-            return w
-    return None
+    hits = [w for w in WATCH if any(norm(a) in n for a in watch_terms(w))]
+    return max(hits, key=lambda w: len(norm(w['name']))) if hits else None
 
 
 def watch_mentioned(text):
@@ -548,7 +577,8 @@ def apply_watch(items):
         if not hits:
             continue
         # 該当エントリ: 手動シード > 名前一致 > alias を含むもの
-        cands = [x for x in items if any(norm(a) in norm(x['name']) for a in watch_terms(w))]
+        # 一番具体的なウォッチ対象に当たるエントリだけ(「清流公園」のヒットを「清流公園 南端広場」に付けない・2026-10-27)
+        cands = [x for x in items if any(norm(a) in norm(x['name']) for a in watch_terms(w)) and watch_of(x['name']) is w]
         cands.sort(key=lambda x: (0 if x.get('src') == 'manual' else 1,
                                   0 if norm(x['name']) == norm(w['name']) else 1))
         if cands:
@@ -863,12 +893,45 @@ def higashi_town(text):
     return ''
 
 
+def center_town(text):
+    """天神・博多の地名/施設名を返す(無ければ '')。「天神橋筋(大阪)」「博多ラーメン(他県の店)」を弾くため弱い語は福岡の文脈を要求"""
+    t = norm(text)
+    if re.search(r'天神橋|天神祭|天神様|北野天満|湯島天神|亀戸天神', t):
+        return ''
+    if re.search(r'(北九州|久留米|飯塚|宗像|糸島|東京|大阪|名古屋|横浜|札幌|仙台|京都|神戸|広島|熊本|鹿児島|佐賀|長崎|大分|宮崎|沖縄)', t) \
+            and not re.search(r'福岡市|天神|博多駅', t):
+        return ''
+    for w in CENTER_STRONG:
+        if w in t:
+            return w
+    if '福岡' in t:
+        for w in CENTER_WEAK:
+            if w in t:
+                return w
+    return ''
+
+
+def center_ward(town):
+    return '福岡市博多区' if town in CENTER_HAKATA else '福岡市中央区'
+
+
+def src_gnews_center(deep):
+    """天神・博多の開店・移転・開業(Googleニュース検索RSS)。2026-10-27追加: アニメイトラシック福岡天神(パルコから移転)を取りこぼしたため。
+    既存ビルへのテナント入居・移転は大店立地法にも再開発ブログにも出ないので、東区と同じくニュース検索で拾う。
+    件数が多いので「子連れ・観光に関係しそうなもの」(CENTER_KEEP_RE)だけ残し、美容・オフィス・期間限定ポップアップ等は落とす"""
+    return gnews_collect(CENTER_QUERIES, center_town, CENTER_DROP_RE, CENTER_KEEP_RE, center_ward, '天神・博多')
+
+
 def src_gnews_higashi(deep):
     """福岡市東区の小さな開店・開業(Googleニュース検索RSS)。見出しに東区/町名があるものだけ"""
+    return gnews_collect(GNEWS_QUERIES, higashi_town, HIGASHI_DROP_RE, None, lambda town: '福岡市東区', '東区')
+
+
+def gnews_collect(queries, town_fn, drop_re, keep_re, ward_fn, label):
     import urllib.parse
     from email.utils import parsedate_to_datetime
     out, seen = [], set()
-    for q in GNEWS_QUERIES:
+    for q in queries:
         x = fetch(GNEWS % urllib.parse.quote(q))
         pause()
         if not x:
@@ -886,8 +949,10 @@ def src_gnews_higashi(deep):
             if title in seen:
                 continue
             seen.add(title)
-            town = higashi_town(title)
-            if not town or not HIGASHI_EVENT_RE.search(title) or HIGASHI_DROP_RE.search(title):
+            town = town_fn(title)
+            if not town or not HIGASHI_EVENT_RE.search(title) or drop_re.search(title):
+                continue
+            if keep_re and not keep_re.search(title):
                 continue
             if ANNIV_RE.search(norm(title)) or (HOUSING_RE.search(title) and not NONHOUSE_RE.search(title)):
                 continue
@@ -904,14 +969,15 @@ def src_gnews_higashi(deep):
             # 店名は「」『』のうち一番長いもの(「肉うどん」が箱崎へ…『うどん酒場 こめや』 → こめや側)
             qs = re.findall(r'[「『]([^」』]{2,40})[」』]', title)
             name = max(qs, key=len) if qs else guess_name(title)
+            ward = ward_fn(town)
             out.append(dict(name=name, kind=guess_kind(title), event=ev or '',
                             when=when or '', when_iso=iso or '', title=title, address='',
-                            area='福岡市東区' + ('' if town in ('福岡市東区', '東区') else town), area_src='gnews',
-                            ward='福岡市東区', pub=pub, media=media.strip(),
+                            area=ward + ('' if town in (ward, ward[3:]) else town), area_src='gnews',
+                            ward=ward, pub=pub, media=media.strip(),
                             src='Googleニュース(%s)' % (media.strip() or '?'), src_url=lm.group(1).strip(),
                             note='記事 %s' % pub if pub else ''))
             n += 1
-        print('  「%s」 東区ヒット %d件' % (q, n))
+        print('  「%s」 %sヒット %d件' % (q, label, n))
     return out
 
 
@@ -924,6 +990,7 @@ SOURCES = [
     ('福岡市 記者発表',           src_city_press),
     ('福岡市 公園づくり(Park-PFI)', src_city_parks),
     ('Googleニュース 福岡市東区(小さな店も)', src_gnews_higashi),
+    ('Googleニュース 天神・博多(テナントの入居・移転も)', src_gnews_center),
 ]
 
 
@@ -1045,9 +1112,14 @@ def is_higashi(x):
     return bool(higashi_town(x.get('name') or ''))
 
 
-def show_higashi(items, recent_days=45):
-    """福岡市東区だけの欄。規模を問わず出す: ①これから(日付あり) ②時期不明 ③最近オープン(記事が45日以内)"""
-    hx = [x for x in items if is_higashi(x)]
+def is_center(x):
+    return x.get('ward') in ('福岡市中央区', '福岡市博多区') and x.get('area_src') == 'gnews'
+
+
+def show_higashi(items, recent_days=45, pred=None, head='福岡市東区(規模を問わず)'):
+    """福岡市東区だけの欄。規模を問わず出す: ①これから(日付あり) ②時期不明 ③最近オープン(記事が45日以内)
+    pred/head を渡すと別の地域の欄にも使う(天神・博多 2026-10-27)"""
+    hx = [x for x in items if (pred or is_higashi)(x)]
     today = TODAY.isoformat()
     fut = sorted([x for x in hx if x.get('when_iso') and x['when_iso'] >= today], key=lambda x: x['when_iso'])
     und = [x for x in hx if not x.get('when_iso') and (not x.get('pub') or
@@ -1069,7 +1141,7 @@ def show_higashi(items, recent_days=45):
     ids = set(map(id, allx))
     fut, und, rec = [x for x in fut if id(x) in ids], [x for x in und if id(x) in ids], [x for x in rec if id(x) in ids]
     print()
-    print('■ 福岡市東区(規模を問わず) — これから %d件 / 時期不明 %d件 / 最近オープン %d件' % (len(fut), len(und), len(rec)))
+    print('■ %s — これから %d件 / 時期不明 %d件 / 最近オープン %d件' % (head, len(fut), len(und), len(rec)))
     for label, rows in (('これから', fut), ('時期不明(記事は%d日以内)' % recent_days, und), ('最近オープン(%d日以内)' % recent_days, rec)):
         if not rows:
             continue
@@ -1155,6 +1227,10 @@ def main():
         print()
         print('新規 %d件を追記 → %s(累計 %d件)' % (total, os.path.relpath(OUT, os.path.join(HERE, '..')), len(items)))
     save(items)
+    if '--center' in args:
+        show_higashi(items, pred=is_center, head='天神・博多(テナントの入居・移転も・子連れ/観光に関係するもの)')
+        print('OPENING_WATCH_DONE')
+        return
     if '--higashi' in args:
         show_higashi(items)
         print('OPENING_WATCH_DONE')
@@ -1162,6 +1238,7 @@ def main():
     # 本体の一覧は東区の小さな店(Googleニュース由来)で埋もれないよう外し、末尾に東区の欄を別に出す
     show([x for x in items if x.get('area_src') != 'gnews'], '--all' in args, kind)
     show_higashi(items)
+    show_higashi(items, pred=is_center, head='天神・博多(テナントの入居・移転も・子連れ/観光に関係するもの)')
     print('OPENING_WATCH_DONE')
 
 

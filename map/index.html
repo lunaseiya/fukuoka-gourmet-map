@@ -584,6 +584,17 @@
     margin-top: 6px;
     line-height: 1.5;
   }
+  .card-points { list-style: none; margin: 0 0 4px; padding: 0; }
+  .card-points li { position: relative; padding-left: 1.3em; line-height: 1.55; }
+  .card-points li.pt-ok::before { content: "✓"; position: absolute; left: 0; color: #2f7a2f; font-weight: 700; }
+  .card-points li.pt-warn::before { content: "⚠"; position: absolute; left: 0; color: #c0392b; }
+  .card-points li.pt-warn { color: #8a3a2f; }
+  .card-memo { color: var(--muted); font-size: 12.5px; white-space: normal; overflow-wrap: anywhere; }
+  .memo-more { display: inline; }
+  .memo-more[open] { display: block; white-space: normal; overflow-wrap: anywhere; }
+  .memo-more summary { display: inline; cursor: pointer; color: #2a6fb0; margin-left: 4px; list-style: none; }
+  .memo-more summary::-webkit-details-marker { display: none; }
+  .memo-more[open] summary { display: none; }
   .card-kids {
     display: inline-block;
     margin-top: 6px;
@@ -1371,6 +1382,28 @@ function escapeRich(str) {
   return escapeHtml(str).replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
 }
 
+// 店紹介の表示(2026-10-27ユーザー確定「パッと見られて、詳細も見られる」)。
+// points(子連れポイントの箇条書き。先頭が ⚠ なら注意)と memo(1文目だけ見せ、残りは「詳しく」で開く)があればそれを使い、
+// 無い店は従来の verdict の文章をそのまま出す。verdict は検索・子連れ判定の材料として残す(金額入りでも画面には出ない)
+function verdictHtml(spot) {
+  const pts = spot.points || [];
+  if (!pts.length && !spot.memo) {
+    return spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : "";
+  }
+  const li = pts.map(p => {
+    const warn = /^⚠/.test(p);
+    return `<li class="${warn ? "pt-warn" : "pt-ok"}">${escapeHtml(p.replace(/^⚠\s*/, ""))}</li>`;
+  }).join("");
+  let memo = "";
+  if (spot.memo) {
+    const m = spot.memo.match(/^(.+?[。！!？?])\s*([\s\S]*)$/);
+    const head = m ? m[1] : spot.memo, rest = m ? m[2].trim() : "";
+    memo = `<div class="card-memo">${escapeHtml(head)}${rest
+      ? `<details class="memo-more" onclick="event.stopPropagation()"><summary>詳しく</summary>${escapeHtml(rest)}</details>` : ""}</div>`;
+  }
+  return `<div class="card-verdict">${li ? `<ul class="card-points">${li}</ul>` : ""}${memo}</div>`;
+}
+
 // ジャンル文字列から「のれん」の見た目(絵文字・色・札の文字)を決める
 function norenStyle(spot) {
   const g = (spot.genre || "") + (spot.category || "");
@@ -1496,7 +1529,7 @@ function cardHtml(spot) {
       <div class="card-area">${cityArea}</div>
       ${requestHtml(spot)}
       ${kidsFacilityHtml(spot)}
-      ${spot.verdict ? `<div class="card-verdict">${escapeRich(spot.verdict)}</div>` : ""}
+      ${verdictHtml(spot)}
       ${photoCreditHtml(spot)}
       ${spot.bathAge ? `<div class="card-bath">♨ ${escapeHtml(spot.bathAge)}</div>` : (spot.category === "onsen" ? `<div class="card-bath">♨ 子供の年齢制限・オムツ可否: 記載無し(要問合せ)</div>` : "")}
       ${fukkoHtml(spot)}${limitedHtml(spot)}${isNew(spot) ? `<span class="b-new">NEW</span>` : ""}${spot.wish ? `<span class="b-wish">下調べ済み</span>` : ""}${noVideo ? `<span class="b-prep">🎬 動画準備中</span>` : ""}${parent ? `<span class="b-in" data-jump="${escapeHtml(parent.id)}">📍${escapeHtml(parent.name)} 内</span>` : ""}${spotCats(spot).includes("onsen") && canStay(spot) ? `<span class="b-stay">🛏 泊まれる</span>` : ""}${spotCats(spot).includes("onsen") && canDayUse(spot) ? `<span class="b-day">♨ 日帰りOK</span>` : ""}${state.q.trim() ? `<span class="b-cat">${CAT_LABEL[spotCat(spot)]}</span>` : ""}${spotCats(spot).length > 1 ? `<span class="b-both">${spotCats(spot).includes("gourmet") ? "🍜お食事にも" : "🎡遊び場にも"}</span>` : ""}${ageBadgesHtml(spot)}

@@ -89945,5 +89945,60 @@
    "⚠ 駐車場は小さい"
   ],
   "memo": "天神のアクロス福岡の南、那珂川沿いに広がる県営公園。2026年10月28日に訪問。芝生広場・貴賓館・川沿いのカフェ群HARENO GARDENがあり、多目的トイレにおむつ交換台がある。入園無料。"
+ },
+ {
+  "id": "nintendo-fukuoka",
+  "name": "Nintendo FUKUOKA(任天堂 直営オフィシャルストア)",
+  "area": "博多駅(アミュプラザ博多 8F)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "任天堂オフィシャルストア",
+  "lat": 33.59,
+  "lng": 130.4206,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 アミュプラザ博多 8F",
+  "visited": "2026-10-28",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": "facility",
+   "tatami": false,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐博多駅直結アミュプラザ博多8Fの任天堂直営店。2025年11月14日オープンで、売場約1,000㎡は国内4店舗(東京・大阪・京都・福岡)で最大、九州唯一。店員さんも「日本一大きい」と話していた。入口の大きなマリオ像・ドット絵マリオ、壁一面のぬいぐるみ、ソフト売場、FUKUOKAロゴの限定グッズ。大画面でSwitchのゲーム(Switch Sports)を体験できるコーナーと、館内に記念撮影スポットあり。2026年はJR博多シティが『スーパーマリオ』と年間コラボ中でエスカレーターの壁や吹き抜けまでマリオの装飾。営業10:00〜20:00。店内撮影は店員さんの声かけでOK(2026-10-28)。⚠おむつ替え台・授乳室は店内ではなくアミュプラザ各階(子ども用トイレは6F・8F)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "nintendo-fukuoka.jpg",
+  "wish": false,
+  "category": "play",
+  "added": "2026-10-28",
+  "web": "https://www.nintendo.com/jp/officialstore/",
+  "ages": [
+   "kids"
+  ],
+  "ages_src": "manual",
+  "photos": [
+   "nintendo-fukuoka_01_店のサイン.jpg",
+   "nintendo-fukuoka_02_入口のマリオ像.jpg",
+   "nintendo-fukuoka_03_ドット絵のマリオ.jpg",
+   "nintendo-fukuoka_04_ソフト売場.jpg",
+   "nintendo-fukuoka_05_ぬいぐるみの壁.jpg",
+   "nintendo-fukuoka_06_カービィの棚.jpg",
+   "nintendo-fukuoka_07_FUKUOKAロゴのTシャツ.jpg",
+   "nintendo-fukuoka_08_COURSE CLEARの撮影スポット.jpg",
+   "nintendo-fukuoka_09_ゲーム体験の種目(Switch Sports).jpg"
+  ],
+  "points": [
+   "国内4店舗で最大・九州唯一の任天堂直営店",
+   "大画面でゲーム体験ができる",
+   "入口のマリオ像・館内の撮影スポット",
+   "博多駅直結で雨でも行ける",
+   "⚠ おむつ替え・授乳室は店内でなくアミュプラザ各階(子ども用トイレは8F)"
+  ],
+  "memo": "博多駅直結アミュプラザ博多8Fにある任天堂の直営店。2026年10月28日に訪問。売場約1,000㎡は国内4店舗で最大で九州唯一。大きなマリオ像、壁一面のぬいぐるみ、ソフト売場、FUKUOKAロゴの限定グッズ。大画面でSwitch Sportsを体験できる。営業10:00〜20:00。"
  }
 ]

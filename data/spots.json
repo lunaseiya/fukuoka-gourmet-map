@@ -58033,7 +58033,7 @@
   "genre": "屋上ひろば",
   "lat": 33.590667,
   "lng": 130.420392,
-  "visited": null,
+  "visited": "2026-10-28",
   "with": "family",
   "kids": {
    "stroller": true,
@@ -58043,17 +58043,17 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "⭐JR博多駅ビルの屋上にある無料のひろば。10:00〜22:00で、鉄道神社・芝生・展望テラスがあり、こどもCITY HAKATAとして月1回ペースで子連れイベント(収穫体験・天体観測・工作教室・ミニ動物園)を開催。ベビーカーは1F・3Fインフォメーションで無料貸出。⚠おむつ交換台はアミュプラザ各階にあるが**屋上には無い**(公式表記が「屋上を除く」)。授乳室は6F・7F・9F・10F、子ども用トイレは6F・8F。⚠**屋上つばめ電車は運行終了**、天空の広場の三輪車もやけど防止で当面使用中止。荒天時は閉鎖の場合あり(2026-09-17時点の公式情報)",
+  "verdict": "⭐JR博多駅ビルの屋上にある無料のひろば。2026-10-28訪問: 屋根付きのテラス席がたくさんあり、ハロウィンのおばけ提灯が下がっていた。くうてん(9F・10F)で買ったものをここで食べられる。10:00〜22:00で、鉄道神社・芝生・展望テラスがあり、こどもCITY HAKATAとして月1回ペースで子連れイベント(収穫体験・天体観測・工作教室・ミニ動物園)を開催。ベビーカーは1F・3Fインフォメーションで無料貸出。⚠おむつ交換台はアミュプラザ各階にあるが**屋上には無い**(公式表記が「屋上を除く」)。授乳室は6F・7F・9F・10F、子ども用トイレは6F・8F。⚠**屋上つばめ電車は運行終了**、天空の広場の三輪車もやけど防止で当面使用中止。荒天時は閉鎖の場合あり(2026-09-17時点の公式情報)",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
+  "thumb": "tsubamenomori-hirobajrhakatacity.jpg",
   "city": "福岡市博多区",
   "pref": "福岡県",
   "category": "play",
-  "wish": true,
+  "wish": false,
   "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ屋上",
   "web": "https://www.jrhakatacity.com/kids/",
   "ages": [
@@ -58063,12 +58063,15 @@
   "ages_src": "auto",
   "points": [
    "無料のひろば・芝生あり",
+   "屋根付きのテラス席が多い",
    "ベビーカー無料貸出(1F・3F)",
    "月1回ペースで子連れイベント",
-   "⚠ 屋上にはおむつ替え台なし",
-   "⚠ つばめ電車は運行終了"
+   "⚠ 屋上にはおむつ替え台なし(9F・10Fの授乳室へ)"
   ],
-  "memo": "鉄道神社・芝生・展望テラスがある、JR博多駅ビル屋上の無料のひろば。10:00〜22:00。こどもCITY HAKATAとして収穫体験・天体観測・工作教室・ミニ動物園を開催。授乳室は6F・7F・9F・10F、子ども用トイレは6F・8F。三輪車はやけど防止で当面使用中止、荒天時は閉鎖の場合あり(2026-09-17時点の公式情報)。"
+  "memo": "鉄道神社・芝生・展望テラスがある、JR博多駅ビル屋上の無料のひろば。2026年10月28日に訪問。屋根付きのテラス席が多く、くうてんで買ったものを食べられる。10:00〜22:00。こどもCITY HAKATAとして収穫体験・天体観測・工作教室・ミニ動物園を開催。",
+  "photos": [
+   "tsubamenomori-hirobajrhakatacity_01_ハロウィンの提灯テラス.jpg"
+  ]
  },
  {
   "id": "forest-adventure-yoshinogari",
@@ -89757,5 +89760,139 @@
    "taito-station-canalcity_03_1回10円のドームゲーム.jpg",
    "taito-station-canalcity_04_うまかっちゃんのクレーン.jpg"
   ]
+ },
+ {
+  "id": "kuten-jrhakatacity",
+  "name": "シティダイニング くうてん(JR博多シティ 9F・10F)",
+  "area": "博多駅(JR博多シティ アミュプラザ博多 9F・10F)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "レストランフロア",
+  "lat": 33.5904,
+  "lng": 130.4205,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ 9F・10F",
+  "visited": "2026-10-28",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": "facility",
+   "tatami": false,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐博多駅直結のレストランフロア。9Fに23店・10Fに22店(うどん・ラーメン・水たき・もつ鍋・寿司・天ぷら・鼎泰豐・ステーキなど)。営業11:00〜22:00(店により最大24:00)。⭐9Fに授乳室(ベビーソファ4台・調乳用の給湯器・おむつ替え台。⚠奥は女性専用、入口横にヤクルトの自販機)。女性トイレ・男性トイレの両方におむつ替え台とベビーチェア付きの個室、多目的トイレにベッドあり(館内のトイレ案内で確認)。ベビーチェアの数が多い店はぶどうの樹。10Fのうまやは改装休で10/29再開、もつ鍋 田しゅうが11/27オープン予定。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kuten-jrhakatacity.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "added": "2026-10-28",
+  "web": "https://www.jrhakatacity.com/",
+  "photos": [
+   "kuten-jrhakatacity_01_10Fの店舗一覧.jpg",
+   "kuten-jrhakatacity_02_9Fの店舗一覧.jpg",
+   "kuten-jrhakatacity_03_9Fフロアマップ(授乳室あり).jpg",
+   "kuten-jrhakatacity_04_トイレ案内(おむつ替え・ベビーチェア).jpg",
+   "kuten-jrhakatacity_05_9F授乳室の入口.jpg",
+   "kuten-jrhakatacity_06_授乳室のベビーソファ.jpg",
+   "kuten-jrhakatacity_07_調乳用の給湯器.jpg",
+   "kuten-jrhakatacity_08_授乳室(奥は女性専用).jpg"
+  ],
+  "points": [
+   "9Fに授乳室(ベビーソファ・調乳用給湯器)",
+   "男女トイレともおむつ替え台・ベビーチェア付き個室",
+   "博多駅直結で雨でも行ける",
+   "⚠ 授乳室の奥は女性専用"
+  ],
+  "memo": "博多駅直結のJR博多シティ9F・10Fのレストランフロアで、45店が入る。2026年10月28日に訪問。営業11:00〜22:00(店により最大24:00)。9Fの授乳室にはベビーソファ4台と調乳用の給湯器、おむつ替え台がある。"
+ },
+ {
+  "id": "budounoki-kuten",
+  "name": "ステーキ&ワインスタイル ぶどうの樹 くうてん店",
+  "area": "博多駅(JR博多シティ くうてん 10F)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ステーキ・グリル",
+  "lat": 33.5903,
+  "lng": 130.4207,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ 10F くうてん",
+  "visited": "2026-10-28",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": "facility",
+   "tatami": false,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐入口にベビーチェアが何台も積んであり、子連れ客が多い店(現地で確認)。岡垣町の「ぶどうの樹」が運営するステーキ&ワインの店で、自社農園・自社ぶどう畑のクラフトワイン・地産地消がコンセプト。アラカルトは牛ハラミ・ハンバーグ・パスタなど。営業11:00〜22:00(くうてんに準ずる)。おむつ替え・授乳室は同じ9F・10Fの館内設備を使う。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "budounoki-kuten.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "added": "2026-10-28",
+  "in": "kuten-jrhakatacity",
+  "photos": [
+   "budounoki-kuten_01_入口のベビーチェア.jpg"
+  ],
+  "points": [
+   "ベビーチェアが多い",
+   "館内に授乳室・おむつ替え台",
+   "博多駅直結"
+  ],
+  "memo": "JR博多シティ10Fくうてんにある、岡垣町のぶどうの樹が運営するステーキ&ワインの店。2026年10月28日に訪問。入口にベビーチェアが何台も用意されている。自社農園の野菜とクラフトワインが売り。"
+ },
+ {
+  "id": "ev-manual-hikari-kirie-jrkyushuhall",
+  "name": "旅する光の切り絵展 〜くうそうって、まほうだよ〜(JR九州ホール)",
+  "area": "博多駅(JR博多シティ 9F JR九州ホール)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "期間限定イベント",
+  "lat": 33.5906,
+  "lng": 130.4202,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 JR博多シティ 9F JR九州ホール",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": "facility",
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "切り絵作家・酒井敦美さんの、映像×物語の体験型の空間アート展。2026年11月28日(土)〜2027年1月11日(月祝)、10:00〜18:00(最終入場17:30)、休館12/30〜1/1。一般1,600円(前売1,400円)・中高生1,000円(800円)・3歳〜小学生500円(400円)・⭐2歳以下無料。くうてんのお食事券1,000円付きセット券2,400円(前売2,200円)。⭐会場内は写真撮影OK(一部作品を除く)。同じ9Fに授乳室あり。※ポスターの表記から(2026-10-28撮影)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "ev-manual-hikari-kirie-jrkyushuhall.jpg",
+  "wish": true,
+  "category": "play",
+  "until": "2027-01-11",
+  "untilLabel": "1月11日",
+  "added": "2026-10-28",
+  "in": "kuten-jrhakatacity",
+  "photos": [
+   "ev-manual-hikari-kirie-jrkyushuhall_01_ポスター.jpg"
+  ],
+  "points": [
+   "2歳以下無料・3歳〜小学生500円",
+   "会場内は写真撮影OK",
+   "くうてんの食事券付きセット券あり",
+   "同じ9Fに授乳室"
+  ],
+  "memo": "JR博多シティ9FのJR九州ホールで2026年11月28日〜2027年1月11日に開催される、光と音の切り絵の体験型アート展。10:00〜18:00、休館12/30〜1/1。3歳〜小学生500円、2歳以下は無料。会場内の写真撮影OK。"
  }
 ]

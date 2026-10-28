@@ -89894,5 +89894,56 @@
    "同じ9Fに授乳室"
   ],
   "memo": "JR博多シティ9FのJR九州ホールで2026年11月28日〜2027年1月11日に開催される、光と音の切り絵の体験型アート展。10:00〜18:00、休館12/30〜1/1。3歳〜小学生500円、2歳以下は無料。会場内の写真撮影OK。"
+ },
+ {
+  "id": "tenjin-chuo-park",
+  "name": "天神中央公園(福岡県営)",
+  "area": "天神(アクロス福岡の南・那珂川沿い)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "公園",
+  "lat": 33.5888,
+  "lng": 130.4055,
+  "address": "福岡県福岡市中央区天神1丁目1",
+  "visited": "2026-10-28",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐天神のど真ん中、アクロス福岡の南に広がる県営公園。「FUKUOKA」のサインがある芝生広場・さくら広場・噴水広場と、那珂川沿いに国重文の旧福岡県公会堂貴賓館。⭐園内の多目的トイレに**おむつ交換台**あり(現地で確認・貴賓館側)。西中洲エリアは2023年に再整備され、川沿いの飲食施設「HARENO GARDEN EAST&WEST」(TOFFEE・NO COFFEE・A TAVOLA・Au Bord d'Eau・COFFEE COUNTY など)とテラス席、リバークルーズの乗り場(boat house)がある。天神地下街・博多駅方面で買ったテイクアウトを芝生やテラスで食べるのに向く。⚠専用駐車場は小さい(公園管理事務所側にP表示)。入園無料。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "tenjin-chuo-park.jpg",
+  "wish": false,
+  "category": "play",
+  "added": "2026-10-28",
+  "web": "https://www.pref.fukuoka.lg.jp/",
+  "photos": [
+   "tenjin-chuo-park_01_旧福岡県公会堂貴賓館.jpg",
+   "tenjin-chuo-park_02_FUKUOKAのサインと芝生広場.jpg",
+   "tenjin-chuo-park_03_川沿いのテラス席(HARENO GARDEN).jpg",
+   "tenjin-chuo-park_04_園内マップ.jpg",
+   "tenjin-chuo-park_05_HARENO GARDEN WEST(TOFFEE・NO COFFEE・A TAVOLA).jpg",
+   "tenjin-chuo-park_06_boat house(リバークルーズ乗り場).jpg",
+   "tenjin-chuo-park_07_COFFEE COUNTY.jpg",
+   "tenjin-chuo-park_08_多目的トイレの入口.jpg",
+   "tenjin-chuo-park_09_多目的トイレのおむつ交換台.jpg"
+  ],
+  "points": [
+   "多目的トイレにおむつ交換台(現地確認)",
+   "FUKUOKAサインの芝生広場で遊べる",
+   "川沿いのカフェ・テラス席(HARENO GARDEN)",
+   "天神地下街から地下通路で直結",
+   "⚠ 駐車場は小さい"
+  ],
+  "memo": "天神のアクロス福岡の南、那珂川沿いに広がる県営公園。2026年10月28日に訪問。芝生広場・貴賓館・川沿いのカフェ群HARENO GARDENがあり、多目的トイレにおむつ交換台がある。入園無料。"
  }
 ]

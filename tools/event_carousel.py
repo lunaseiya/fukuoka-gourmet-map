@@ -111,6 +111,33 @@ def pill(text, fill, fs=34, pad=(22, 10)):
     return im
 
 
+def starburst(text, r=88, fill=(226, 58, 38), fs=52):
+    """ギザギザ丸の赤バッジ(白文字)。ポスターの左上角に重ねて使う【2026-10-29ユーザー指定】
+    「ギザギザの丸で、NEWと赤塗り、白文字。画像の左上端に重ねる形」"""
+    import math
+    S = 4                                   # 4倍で描いて縮小(ギザギザの縁を滑らかに)
+    R = r * S
+    im = Image.new('RGBA', (R * 2 + 16 * S, R * 2 + 16 * S), (0, 0, 0, 0))
+    cx = cy = R + 8 * S
+    pts = []
+    n = 18
+    for k in range(n * 2):
+        a = math.pi * 2 * k / (n * 2) - math.pi / 2
+        rr = R if k % 2 == 0 else R * 0.80
+        pts.append((cx + rr * math.cos(a), cy + rr * math.sin(a)))
+    d = ImageDraw.Draw(im)
+    d.polygon(pts, fill=fill + (255,), outline=(255, 255, 255, 255), width=4 * S)
+    im = im.resize((im.width // S, im.height // S), Image.LANCZOS)
+    d = ImageDraw.Draw(im)
+    lines = str(text).split('\n')
+    f = font(ROUND, fs if len(lines) == 1 else int(fs * 0.72))
+    lh = f.size + 4
+    y0 = im.height // 2 - lh * (len(lines) - 1) // 2
+    for i, ln in enumerate(lines):
+        d.text((im.width // 2, y0 + i * lh), ln, font=f, fill=(255, 255, 255, 255), anchor='mm')
+    return im
+
+
 CACHE = os.path.join(HERE, '..', 'data', '_poster_cache')
 EXTRA = os.path.join(HERE, '..', 'data', '_イベント補足.json')
 
@@ -577,15 +604,17 @@ def card(ev, idx, extra=None, days=None, cur=None):
            fill=(216, 210, 202), anchor='ra')
     # ★目玉の回に「NEW」などのラベルを右上に大きく出す(`_イベント補足.json` の `badge`)。
     #   2026-10-29ユーザー指示「光の街・博多の点灯式を1に、補足を2にして。newとラベルで目立たせて」
-    if ev.get('badge'):
-        bl = pill(str(ev['badge']), (226, 58, 38), 44, (30, 12))
-        shadow(im, bl, (W_ - 64 - 56 - bl.width, top + 30), blur=10, alpha=70, dy=4)
+    #   ⚠右上のピルは市区ピルや無料バッジと同化して目立たなかった(2026-10-29ユーザー指摘)。
+    #   → ポスターを描いたあとに**ギザギザ丸をポスターの左上角に重ねる**(poster_xy を各分岐で記録)
+    poster_xy = None
     # イベント名
     f = font(MEIB, 52)
     y = top + 126
     for ln in wrap(d, deemoji(ev['title']), f, W_ - 128, 3):
         d.text((64, y), ln, font=f, fill=INK); y += 66
     y += 18
+    if ev.get('badge'):
+        y += 30          # バッジがタイトルに掛からないよう、ポスターを少し下げて角に掛ける余白を作る
     # ポスター(IP絡みは貼らない)
     ok = W.poster_ok(ev['title'], ev.get('lead'))
     # ★`_イベント補足.json` に `"no_poster": true` と書いた回は貼らない【2026-10-16】
@@ -651,6 +680,7 @@ def card(ev, idx, extra=None, days=None, cur=None):
         frame = rounded((pw + 24, ph + 24), 18, (255, 255, 255, 255))
         frame.paste(img.resize((pw, ph), Image.LANCZOS), (12, 12))
         shadow(im, frame, (64, y))
+        poster_xy = (64, y)
         sx = 64 + pw + 24 + 20
         side = (sx, y, W_ - 64 - sx, y + ph + 24)
     elif img:
@@ -660,6 +690,7 @@ def card(ev, idx, extra=None, days=None, cur=None):
         frame = rounded((pw + 24, ph + 24), 18, (255, 255, 255, 255))
         frame.paste(ph_im, (12, 12))
         shadow(im, frame, ((W_ - pw - 24) // 2, y))
+        poster_xy = ((W_ - pw - 24) // 2, y)
         y += ph + 30
         mb = memobox(ev, MEMO_W, mlines)
         if mb:
@@ -724,6 +755,14 @@ def card(ev, idx, extra=None, days=None, cur=None):
             yy += 52
         shadow(im, c, (64, y))
         y += h2 + 30
+    # ★NEW バッジ(ギザギザ丸)をポスターの左上角に重ねる。ポスターが無い回はタイトル右上に置く
+    if ev.get('badge'):
+        sb = starburst(str(ev['badge']).replace(' ', '\n', 1) if len(str(ev['badge'])) > 4 else ev['badge'], r=78)
+        if poster_xy:
+            bx, by = poster_xy[0] - sb.width // 2 + 34, poster_xy[1] - sb.height // 2 + 34
+        else:
+            bx, by = W_ - 64 - sb.width, top + 90
+        shadow(im, sb, (bx, by), blur=10, alpha=60, dy=4)
     # 情報行
     fi = font(MEI, 38)
     fb = font(MEIB, 38)

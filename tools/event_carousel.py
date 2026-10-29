@@ -610,12 +610,38 @@ def card(ev, idx, extra=None, days=None, cur=None):
     box_h = max(210, min(560, H_ - 200 - y - nrow * 54
                          - (memo_h(mlines) + 22 if has_memo else 0)))
     img = get_poster(ev.get('poster')) if ok else None
+    # ★`photo2`(補足JSON・ローカルパスかURL)があれば**ポスターの横に2枚並べて1枚にする**
+    #   【2026-10-29ユーザー指示】横長バナーだけだと会場の姿が分からない(天神ストリートパークの
+    #   オープニングイベント)。自分で撮った公園の写真を横の余白に並べる。高さを揃えて横に連結
+    if img and ev.get('photo2'):
+        p2 = ev['photo2']
+        try:
+            im2 = get_poster(p2) if str(p2).startswith('http') else Image.open(p2).convert('RGB')
+        except Exception:
+            im2 = None
+        if im2:
+            hh = 600
+            a = img.resize((max(1, round(img.width * hh / img.height)), hh), Image.LANCZOS)
+            b = im2.resize((max(1, round(im2.width * hh / im2.height)), hh), Image.LANCZOS)
+            pair = Image.new('RGB', (a.width + 20 + b.width, hh), (255, 255, 255))
+            pair.paste(a, (0, 0)); pair.paste(b, (a.width + 20, 0))
+            img = pair
     side = None     # 縦長ポスターのとき (右列のx, 右列の上端y, 右列の幅, ポスター下端y)
-    if img and img.height >= img.width * 1.15:
+    # ★正方形に近いポスター(1080x1080等)も縦長と同じ「左に大きく・右に memo と情報行」にする
+    #   【2026-10-29ユーザー指示「04の画像とか小さいので大きくして見せたい。縦長と同じ手法で構わない」】。
+    #   従来の中央置きだと memo と情報行に押されて1080pxの画像が230px程度まで縮んでいた
+    side_sq = False
+    if img and img.height >= img.width * 0.9:
         # ★縦長ポスターは**最大限大きく**: 左にポスターをCTAバーの手前まで、
         #   右列に memo と情報行(日程・時間・場所・料金・検索)をまとめて並べる(2026-10-09ユーザー指定)
         avail = H_ - 176 - y - 24
         s = min((W_ - 128) * 0.60 / img.width, avail / img.height)
+        if img.height < img.width * 1.15:
+            # 正方形は右列が狭くて情報行が2行に折れ、memo が1行しか残らなかった(2026-10-29実測)。
+            # → ポスターは左50%、右列は memo だけ、情報行はポスターの下に全幅で出す
+            side_sq = True
+            s = min((W_ - 128) * 0.50 / img.width,
+                    max(200, H_ - 166 - y - nrow * 54 - 30) / img.height)
         pw, ph = max(1, int(img.width * s)), max(1, int(img.height * s))
         frame = rounded((pw + 24, ph + 24), 18, (255, 255, 255, 255))
         frame.paste(img.resize((pw, ph), Image.LANCZOS), (12, 12))
@@ -751,6 +777,14 @@ def card(ev, idx, extra=None, days=None, cur=None):
     # ⚠**CTAバー(y=H_-156)までに入る行数だけ出す**。固定の上限だと、
     #   ポスターの高さで残り幅が変わるため6行目がCTAバーに上書きされて消える(2026-09-13に踏んだ)
     rh = 54
+    if side and side_sq:
+        # ★正方形ポスター: 右列は memo だけ(入るだけ全行)。情報行は下の全幅ブロックに任せる
+        sx, cy, cw_, pbot = side
+        mb = memobox_side(ev, cw_, None, maxl=min(10, max(1, (pbot - cy) // MEMO_PITCH))) if has_memo else None
+        if mb:
+            shadow(im, mb, (sx, cy), blur=12, alpha=40, dy=4)
+        y = pbot + 16
+        side = None
     if side:
         # ★縦長ポスターの右列: memo → 情報行(ラベルの下に値、2行まで折り返す)
         sx, cy, cw_, pbot = side

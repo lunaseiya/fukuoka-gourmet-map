@@ -117,6 +117,10 @@ def main():
         key = re.sub(r'[\s　]+', '', title)
         if e.get('from_map'):
             skip.append((title, 'すでにマップ登録済み(この源から来ている)')); continue
+        # ★カルーセルの「補足カード」(ハカタリウムとは? 等)はイベントではないのでマップに立てない。
+        #   候補JSONのイベントに `nomap: true` を書く(2026-10-29)
+        if e.get('nomap'):
+            skip.append((title, '補足カード(マップには出さない)')); continue
         if key in names:
             skip.append((title, '同名がすでにある')); continue
         addr = e.get('addr') or ''

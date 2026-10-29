@@ -271,7 +271,9 @@ def closing(more=(), total=0, shown=0):
             bd.text((40, pad + k * pitch + 4), '・' + t, font=font(MEIB, 34), fill=INK + (255,))
         shadow(im, box, (60, 250), blur=14, alpha=40, dy=5)
         y = 250 + bh + 40
-        ch, gap = 420, 80
+        # ★「ほかにも」が5件を超える回(ユーザーが外した分を全部並べる・2026-10-29)は
+        #   スクショの高さを1件52pxずつ詰めて、CTAピルと下の一文が収まるようにする
+        ch, gap = max(300, 420 - 52 * max(0, len(more) - 5)), 80
     else:
         d.text((W_ // 2, 46), '気になったイベントは「検索」の言葉で調べられます',
                font=font(MEI, 30), fill=SUB + (255,), anchor='ma')
@@ -341,7 +343,12 @@ def search_word(ev):
     """読み手がそのまま検索できる語を作る【2026-09-13ユーザーFB】
     「公式で確認」と書いても**どこを見ればいいのか分からない**と言われた。
     InstagramはキャプションのURLもリンクにならないので、**検索ワードを書く**のが確実。
-    会場名 + イベント名の核(記号と長い枕を落としたもの)で組む"""
+    会場名 + イベント名の核(記号と長い枕を落としたもの)で組む
+    ★`_イベント補足.json` に `search` を書いた回はそれをそのまま使う(2026-10-29)。
+      「ど〜んとかがし祭」が「〜」で切れて「ど」になる、会場名が長くて肝心の
+      イベント名が「…」で消える、といった機械生成の事故をここで止める"""
+    if ev.get('search'):
+        return str(ev['search'])
     t = ev.get('title', '')
     t = re.sub(r'^[【（(\[][^】）)\]]{0,20}[】）)\]]\s*', '', t)     # 先頭の【福岡】等を落とす
     t = re.sub(r'\s*(開催中|開催決定|のお知らせ|スタート|好評)+[！!]*$', '', t)
@@ -914,7 +921,8 @@ def main():
     try:
         import event_caption as EC
         ov = json.load(io.open(EC.OVER, encoding='utf-8')) if os.path.exists(EC.OVER) else {}
-        more = EC.teaser(D, evs, ov, f, t, 5)
+        # 候補JSONに `teaser` を手で書いた回は**その件数ぶん全部**出す(既定は自動5件)
+        more = EC.teaser(D, evs, ov, f, t, len(D['teaser']) if D.get('teaser') else 5)
         total = sum(1 for e in D['events'] if inwin(e))
         if more:
             print('締めの「ほかにも」:', ' / '.join(more), '/ 窓の件数', total)

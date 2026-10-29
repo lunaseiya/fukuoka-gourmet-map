@@ -79,7 +79,8 @@ def span_txt(ev, today):
 def fee_txt(ev):
     # 料金は 補足の free → price → 不明 の順(2026-10-16: price を見ておらず「公式で確認」ばかりだった)
     pr = (ev.get('price') or '').strip()
-    return '¥無料' if ev.get('free') else ('¥' + pr if pr and len(pr) <= 18 else '¥有料(料金は公式で確認)')
+    # ⚠18字で切ると「大人2,500円/小中1,200円/3歳以上700円」が全部「有料(公式で確認)」になる(2026-10-29)
+    return '¥無料' if ev.get('free') else ('¥' + pr if pr and len(pr) <= 34 else '¥有料(料金は公式で確認)')
 
 
 def block(ev, i, ov, today, with_url):
@@ -198,8 +199,8 @@ def build(evs, plat, ov, today, frm, to, lead_title, more=(), total=0):
     body = [block(e, i, ov, today, plat == 'youtube') for i, e in enumerate(evs, 1)]
     tail = ['──────────']
     if more:
-        tail += ['🗺ほかにもこんなイベントがあります(載せきれなかった%sから5つ)'
-                 % (('約%d件' % round(total - len(evs), -1)) if total else '分')] + ['・' + t for t in more] \
+        tail += ['🗺ほかにもこんなイベントがあります(載せきれなかった%sから%dつ)'
+                 % (('約%d件' % round(total - len(evs), -1)) if total else '分', len(more))] + ['・' + t for t in more] \
               + ['→ 全部プロフィールのマップ →「⏳イベント」に載せてます' if plat != 'youtube'
                  else '→ 全部ここに載せてます ' + EVENTS_URL, '']
     tail += ['保存しておくと行くときに使えます📌', '',

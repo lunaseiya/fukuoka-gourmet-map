@@ -91329,5 +91329,39 @@
   "untilLabel": "11月3日",
   "official": "https://iko-yo.net/events/604937",
   "added": "2026-10-29"
+ },
+ {
+  "id": "ev-100fes-2026-html",
+  "name": "70歳以上の先輩達がもてなす人生の文化祭！ 全世代交流イベント「100FES」開催決定！",
+  "area": "福岡市",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "期間限定イベント",
+  "lat": 33.58806,
+  "lng": 130.39533,
+  "address": "福岡県福岡市中央区大名2丁目6-50",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "70歳以上の先輩たちが企画・運営する文化祭。入場無料・猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験・けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ・太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "category": "play",
+  "until": "2026-11-03",
+  "untilLabel": "11月3日",
+  "official": "https://www.city.fukuoka.lg.jp/fukushi/k_sensin/charm/100fes_2026.html",
+  "added": "2026-10-29"
  }
 ]

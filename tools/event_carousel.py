@@ -172,6 +172,12 @@ def get_poster(url):
     """ポスター画像を落としてくる(キャッシュする)。**リサイズ以外の加工はしない**"""
     if not url:
         return None
+    # ★ローカルの画像パス(チラシPDFを画像化したもの等)も `poster` に書けるようにする(2026-10-29)
+    if not str(url).startswith('http') and os.path.exists(str(url)):
+        try:
+            return Image.open(url).convert('RGB')
+        except Exception:
+            return None
     os.makedirs(CACHE, exist_ok=True)
     key = re.sub(r'[^0-9a-zA-Z]', '_', url)[-90:]
     p = os.path.join(CACHE, key + '.img')

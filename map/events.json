@@ -70,6 +70,71 @@
    "rank": 33
   },
   {
+   "id": "ev-100fes-2026-html",
+   "title": "70歳以上の先輩達がもてなす人生の文化祭！ 全世代交流イベント「100FES」開催決定！",
+   "venue": "福岡市",
+   "city": "福岡市中央区",
+   "pref": "福岡県",
+   "start": null,
+   "end": "2026-11-03",
+   "untilLabel": "11月3日",
+   "days": [
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-01",
+    "2026-11-02",
+    "2026-11-03"
+   ],
+   "n": 6,
+   "url": "",
+   "poster": "C:\\Users\\totor\\Dropbox\\ショート動画用\\4.MAP生成\\data\\carousel_2026-10-31\\_素材_100FES_チラシ裏面(福岡市).jpg",
+   "price": null,
+   "time": "11:00〜19:00",
+   "memo": [
+    "70歳以上の先輩たちが企画・運営する文化祭。",
+    "入場無料・猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験・けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ・太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)"
+   ],
+   "free": true,
+   "verified": true,
+   "spot": "ev-100fes-2026-html",
+   "lat": 33.58806,
+   "lng": 130.39533,
+   "kids": true,
+   "ks": 27,
+   "score": null,
+   "near": [
+    {
+     "id": "hp77fc182e1b",
+     "name": "どんどん亭 天神大名店",
+     "genre": "居酒屋",
+     "km": 0.03,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40069919/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "hpecddf0c918",
+     "name": "餃子拉麺酒場 暖暮 天神大名店",
+     "genre": "居酒屋",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40060096/",
+     "asoview": null,
+     "booking": null
+    },
+    {
+     "id": "kurofune-daimyo",
+     "name": "焼鳥とイロリ くろ船",
+     "genre": "焼き鳥・居酒屋",
+     "km": 0.08,
+     "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40001395/",
+     "asoview": null,
+     "booking": null
+    }
+   ],
+   "rank": 31
+  },
+  {
    "id": "ev-1372-sp37496008",
    "title": "《10/31(土)》ハロウィンイベント開催！",
    "venue": "シエナ食堂 アイランドアイ店",
@@ -132,52 +197,6 @@
    "rank": 30
   },
   {
-   "id": "cetevents600849",
-   "title": "第33回 鉄道の日イベント",
-   "venue": "北九州市小倉北区",
-   "city": "北九州市小倉北区",
-   "pref": "",
-   "start": "2026-10-10",
-   "end": "2027-01-17",
-   "untilLabel": "",
-   "days": [
-    "2026-10-29",
-    "2026-10-30",
-    "2026-10-31",
-    "2026-11-01",
-    "2026-11-02",
-    "2026-11-03",
-    "2026-11-04",
-    "2026-11-05",
-    "2026-11-06",
-    "2026-11-07",
-    "2026-11-08",
-    "2026-11-09",
-    "2026-11-10",
-    "2026-11-11"
-   ],
-   "n": 14,
-   "url": "https://iko-yo.net/events/600849",
-   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755519/normal.png?1792069639",
-   "price": null,
-   "time": null,
-   "free": false,
-   "memo": [
-    "ミニトレインや運転シミュレーターなど親子で体験"
-   ],
-   "verified": false,
-   "spot": null,
-   "lat": null,
-   "lng": null,
-   "kids": true,
-   "ks": 25,
-   "score": 25,
-   "src": "いこーよ",
-   "near": [],
-   "img": "cetevents600849.jpg",
-   "rank": 27
-  },
-  {
    "id": "teamlab-fukuokacastle-2026",
    "title": "チームラボ 福岡城跡 光ノ祭 2026-2027",
    "venue": "大濠・城内(舞鶴公園 福岡城跡)",
@@ -205,8 +224,8 @@
    "n": 14,
    "url": "https://www.teamlab.art/jp/e/fukuoka-castle/",
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMjk5LCJwdXIiOiJibG9iX2lkIn19--b0c6eff9d1271df142950dc4a6edebfcabd0679f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/01_Pillar%20of%20Constant%20Flux_Fukuoka_01.JPG",
-   "price": null,
-   "time": null,
+   "price": "未就学児無料/小学生700円〜/大人2,300円〜(前売)",
+   "time": "日没後〜22:00(最終入場21:30)",
    "memo": [
     "福岡城跡の石垣や木々が人の動きで色を変える、チームラボの夜の屋外アート展。",
     "7年ぶりの開催。",
@@ -252,6 +271,52 @@
     }
    ],
    "img": "teamlab-fukuokacastle-2026.jpg",
+   "rank": 28
+  },
+  {
+   "id": "cetevents600849",
+   "title": "第33回 鉄道の日イベント",
+   "venue": "北九州市小倉北区",
+   "city": "北九州市小倉北区",
+   "pref": "",
+   "start": "2026-10-10",
+   "end": "2027-01-17",
+   "untilLabel": "",
+   "days": [
+    "2026-10-29",
+    "2026-10-30",
+    "2026-10-31",
+    "2026-11-01",
+    "2026-11-02",
+    "2026-11-03",
+    "2026-11-04",
+    "2026-11-05",
+    "2026-11-06",
+    "2026-11-07",
+    "2026-11-08",
+    "2026-11-09",
+    "2026-11-10",
+    "2026-11-11"
+   ],
+   "n": 14,
+   "url": "https://iko-yo.net/events/600849",
+   "poster": "https://d2goguvysdoarq.cloudfront.net/system/event_photos/photos/1755519/normal.png?1792069639",
+   "price": null,
+   "time": null,
+   "free": false,
+   "memo": [
+    "ミニトレインや運転シミュレーターなど親子で体験"
+   ],
+   "verified": false,
+   "spot": null,
+   "lat": null,
+   "lng": null,
+   "kids": true,
+   "ks": 25,
+   "score": 25,
+   "src": "いこーよ",
+   "near": [],
+   "img": "cetevents600849.jpg",
    "rank": 27
   },
   {
@@ -2225,7 +2290,7 @@
    ],
    "n": 6,
    "url": "",
-   "poster": "https://twitfukuoka.com/wp-content/uploads/2026/10/202610230006-.jpg",
+   "poster": "https://twitfukuoka.com/wp-content/uploads/2026/10/202610230006-02.jpg",
    "price": null,
    "time": "点灯式18:15〜 / 点灯18:30",
    "memo": [
@@ -12381,38 +12446,6 @@
     }
    ],
    "img": "c261016hokkaido.jpg",
-   "rank": 8
-  },
-  {
-   "id": "c100fes2026html",
-   "title": "70歳以上の先輩達がもてなす人生の文化祭！ 全世代交流イベント「100FES」開催決定！",
-   "venue": "福岡市",
-   "city": "福岡市",
-   "pref": "",
-   "start": "2026-11-03",
-   "end": "2026-11-03",
-   "untilLabel": "",
-   "days": [
-    "2026-11-03"
-   ],
-   "n": 1,
-   "url": "https://www.city.fukuoka.lg.jp/fukushi/k_sensin/charm/100fes_2026.html",
-   "poster": null,
-   "price": null,
-   "time": null,
-   "free": false,
-   "memo": [
-    "maincontents\">本文へジャンプ Language 言語選択 Choose your language option 外国語ポータル （Multilingual Portal） このページでは、外国人向けの情報を次の言語で紹介しています"
-   ],
-   "verified": false,
-   "spot": null,
-   "lat": null,
-   "lng": null,
-   "kids": false,
-   "ks": 4,
-   "score": 14,
-   "src": "福岡市(新着イベント)",
-   "near": [],
    "rank": 8
   },
   {

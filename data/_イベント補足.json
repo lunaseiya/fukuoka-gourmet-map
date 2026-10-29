@@ -1765,5 +1765,54 @@
    "JR博多シティ"
   ],
   "badge": "NEW"
+ },
+ "https://www.city.fukuoka.lg.jp/fukushi/k_sensin/charm/100fes_2026.html": {
+  "city": "福岡市中央区",
+  "time": "11:00〜19:00",
+  "free": true,
+  "poster": "C:\\Users\\totor\\Dropbox\\ショート動画用\\4.MAP生成\\data\\carousel_2026-10-31\\_素材_100FES_チラシ裏面(福岡市).jpg",
+  "venues": [
+   "福岡市 福岡100推進課(チラシ)"
+  ],
+  "search": "100FES 福岡 大名ガーデンシティ",
+  "detail": [
+   "70歳以上の先輩たちが企画・運営する文化祭。入場無料",
+   "猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験",
+   "けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ",
+   "太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)"
+  ],
+  "_poster": "福岡市のチラシPDF(100Fes2026_A4Flyer)の2ページ目を画像化。1ページ目は出演者の顔が大きいので裏面を使用",
+  "_memo": "2026-10-29 10/31〜11/3回・11/3が薄いので追加(ユーザー指示)。公式ページ・チラシPDF・spots.jsonの登録内容から記入",
+  "memo": [
+   "70歳以上の先輩たちが企画・運営する文化祭。入場無料",
+   "猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験",
+   "けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ",
+   "太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)"
+  ]
+ },
+ "https://yokanavi.com/events/274536": {
+  "city": "福岡市中央区",
+  "time": "日没後〜22:00(最終入場21:30)",
+  "price": "未就学児無料/小学生700円〜/大人2,300円〜(前売)",
+  "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMjk5LCJwdXIiOiJibG9iX2lkIn19--b0c6eff9d1271df142950dc4a6edebfcabd0679f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/01_Pillar%20of%20Constant%20Flux_Fukuoka_01.JPG",
+  "venues": [
+   "チームラボ © teamLab(よかなび掲載)"
+  ],
+  "search": "チームラボ 福岡城跡 光ノ祭",
+  "note": "前売りが現地より大人200円安い。夜の屋外で石垣の高低差あり",
+  "detail": [
+   "福岡城跡の石垣や木々が光る夜の屋外アート。7年ぶり3回目",
+   "未就学児は無料。小学生は平日700円・土日祝900円",
+   "大人は前売り平日2,300円・土日祝2,500円(現地は+200円)",
+   "1/11まで。大濠公園駅・赤坂駅から徒歩約8分"
+  ],
+  "_poster": "よかなび掲載のチームラボ公式写真(Pillar of Constant Flux)。マップの自撮影ポスター写真は映り込みが強いので使わず",
+  "_memo": "2026-10-29 10/31〜11/3回・11/3が薄いので追加(ユーザー指示)。公式ページ・チラシPDF・spots.jsonの登録内容から記入",
+  "memo": [
+   "福岡城跡の石垣や木々が光る夜の屋外アート。7年ぶり3回目",
+   "未就学児は無料。小学生は平日700円・土日祝900円",
+   "大人は前売り平日2,300円・土日祝2,500円(現地は+200円)",
+   "1/11まで。大濠公園駅・赤坂駅から徒歩約8分"
+  ]
  }
 }

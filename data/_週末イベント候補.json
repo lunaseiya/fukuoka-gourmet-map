@@ -31,7 +31,6 @@
   "https://www.jrhakatacity.com/event/#hikarinomachi2026-tentoushiki",
   "https://www.jrhakatacity.com/event/#hakatarium",
   "https://boatracefukuoka-tenjinstreetpark.com/xo_event/opening-event-line-up-2",
-  "https://island-eye.com/topics/1372",
   "https://fukuoka.aeonmall.jp/event/446659a3-eefc-4d81-b86a-9b781f8d3161",
   "https://chikushino.aeonmall.jp/event/3c7cf815-7eb5-4a84-ba3b-9ff6e7a0bb91",
   "https://www.crossroadfukuoka.jp/event/15747",
@@ -40,7 +39,8 @@
   "https://kashiihama.aeon-kyushu.info/event/736dd533-85ae-4aff-b7d3-53de22c97dfa",
   "https://yokanavi.com/events/274306",
   "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632301.html",
-  "https://iko-yo.net/events/604937"
+  "https://iko-yo.net/events/604937",
+  "https://yokanavi.com/events/274536"
  ],
  "events": [
   {
@@ -297,19 +297,20 @@
    "time": "前夜祭10/31 16:00〜20:30 / 本祭11/1 10:00〜16:00",
    "park": "臨時駐車場あり・無料シャトルバス",
    "detail": [
-    "巨大わらかがしのテーマは「マンモス」(展示は12/5まで)",
+    "テーマは「マンモス」(写真は過去の作品)",
     "前夜祭(10/31)は花火の打ち上げあり",
     "本祭は太鼓・ひょっとこ踊り・バザー・消防ポンプ放水体験",
     "臨時駐車場あり(三輪小は不可)。無料シャトルバスも"
    ],
    "memo": [
-    "巨大わらかがしのテーマは「マンモス」(展示は12/5まで)",
+    "テーマは「マンモス」(写真は過去の作品)",
     "前夜祭(10/31)は花火の打ち上げあり",
     "本祭は太鼓・ひょっとこ踊り・バザー・消防ポンプ放水体験",
     "臨時駐車場あり(三輪小は不可)。無料シャトルバスも"
    ],
    "search": "ど〜んとかがし祭 筑前町",
-   "addr": "福岡県朝倉郡筑前町松延60-5"
+   "addr": "福岡県朝倉郡筑前町松延60-5",
+   "photo2": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/13659/responsive_images/znqOxAAvX7JYqYPvhfjY7hcublRn8fZcqSLeU6tY__1679_1199.jpg"
   },
   {
    "src": "イオンモール福岡",
@@ -2555,7 +2556,7 @@
   {
    "src": "福岡市(新着イベント)",
    "title": "70歳以上の先輩達がもてなす人生の文化祭！ 全世代交流イベント「100FES」開催決定！",
-   "city": "福岡市",
+   "city": "福岡市中央区",
    "venue": "福岡市",
    "url": "https://www.city.fukuoka.lg.jp/fukushi/k_sensin/charm/100fes_2026.html",
    "span": [
@@ -2564,12 +2565,12 @@
    ],
    "days_list": null,
    "raw": "maincontents\">本文へジャンプ Language 言語選択 Choose your language option ① 外国語ポータル （Multilingual Portal） このページでは、外国人向けの情報を次の言語で紹介しています。 This page introduces information for foreigners in the languages below. Click here for Multilingual Portal English 简体中文 한국어 Tiếng Việt नेपाली भाषा やさしい日本語 ② 機械翻訳 （Machine Translation） 福岡市役所のホームページをほかの言語に機械翻訳します。言語を選んでください。 This option machine translates the Fukuoka City Ha",
-   "free": false,
-   "lead": "maincontents\">本文へジャンプ Language 言語選択 Choose your language option ① 外国語ポータル （Multilingual Portal） このページでは、外国人向けの情報を次の言語で紹介しています。 This page introduces information for foreigners in the languages below. C",
+   "free": true,
+   "lead": "70歳以上の先輩達がもてなす人生の文化祭。体験ワークショップ・ステージ・屋台。入場無料",
    "place": "",
-   "poster": null,
+   "poster": "C:\\Users\\totor\\Dropbox\\ショート動画用\\4.MAP生成\\data\\carousel_2026-10-31\\_素材_100FES_チラシ裏面(福岡市).jpg",
    "venues": [
-    "福岡市"
+    "福岡市 福岡100推進課(チラシ)"
    ],
    "srcs": [
     "福岡市(新着イベント)"
@@ -2578,7 +2579,25 @@
    "left": 5,
    "since": -5,
    "kids_add": 0,
-   "score": 14
+   "score": 14,
+   "addr": "福岡県福岡市中央区大名2丁目6-50",
+   "time": "11:00〜19:00",
+   "search": "100FES 福岡 大名ガーデンシティ",
+   "detail": [
+    "70歳以上の先輩たちが企画・運営する文化祭。入場無料",
+    "猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験",
+    "けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ",
+    "太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)"
+   ],
+   "memo": [
+    "70歳以上の先輩たちが企画・運営する文化祭。入場無料",
+    "猿面の色付け・博多人形の色塗り・マイ箸づくりなどの体験",
+    "けん玉・お手玉の昔あそび、折り紙、似顔絵、ダーツ",
+    "太鼓・ジャズ・ダンスのステージと福岡の屋台(ゲスト泉谷しげる)"
+   ],
+   "lat": 33.58806,
+   "lng": 130.39533,
+   "_coord_note": "geocoding.jp失敗→福岡大名ガーデンシティ(大名2-6-50)の座標を手で指定 2026-10-29"
   },
   {
    "src": "県公式",
@@ -5288,7 +5307,7 @@
   {
    "src": "よかなび",
    "title": "『チームラボ 福岡城跡 光ノ祭』、10月30日(金)から7年ぶりに開催。～作品紹介・チケット・イベントスケジュール。",
-   "city": "福岡市",
+   "city": "福岡市中央区",
    "venue": "大濠・六本松（福岡城・鴻臚館）エリア",
    "url": "https://yokanavi.com/events/274536",
    "span": [
@@ -5301,9 +5320,7 @@
    "lead": "チームラボは、福岡・舞鶴公園の福岡城跡にて、7年ぶり3回目となる夜の野外アート展『 チームラボ 福岡城跡 光ノ祭 2026-2027 』を開催します。会期は、2026年10月30日（金曜日）から2027年1月11日（月曜日・祝日）まで。 福岡城は、1601年から7年の歳月をかけて築かれた、城の規模としては九州一の巨城です。本丸・二の丸・三の丸などの中心部は総石垣造りで、別名、石城とも呼ばれて...",
    "poster": "https://yokanavi.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsiZGF0YSI6MTUwMjk5LCJwdXIiOiJibG9iX2lkIn19--b0c6eff9d1271df142950dc4a6edebfcabd0679f/eyJfcmFpbHMiOnsiZGF0YSI6eyJmb3JtYXQiOiJ3ZWJwIiwicmVzaXplX3RvX2ZpdCI6WzEyODAsNzIwXX0sInB1ciI6InZhcmlhdGlvbiJ9fQ==--3198f452c354967ea15934ed3194a5aa20c58348/01_Pillar%20of%20Constant%20Flux_Fukuoka_01.JPG",
    "venues": [
-    "チームラボ 福岡城跡 光ノ祭 2026-2027",
-    "大濠・六本松（福岡城・鴻臚館）エリア",
-    "県公式"
+    "チームラボ © teamLab(よかなび掲載)"
    ],
    "srcs": [
     "よかなび",
@@ -5315,7 +5332,24 @@
    "since": -1,
    "kids_add": 0,
    "score": 8,
-   "note_mitake": true
+   "note_mitake": true,
+   "nomap": true,
+   "time": "日没後〜22:00(最終入場21:30)",
+   "price": "未就学児無料/小学生700円〜/大人2,300円〜(前売)",
+   "search": "チームラボ 福岡城跡 光ノ祭",
+   "note": "前売りが現地より大人200円安い。夜の屋外で石垣の高低差あり",
+   "detail": [
+    "福岡城跡の石垣や木々が光る夜の屋外アート。7年ぶり3回目",
+    "未就学児は無料。小学生は平日700円・土日祝900円",
+    "大人は前売り平日2,300円・土日祝2,500円(現地は+200円)",
+    "1/11まで。大濠公園駅・赤坂駅から徒歩約8分"
+   ],
+   "memo": [
+    "福岡城跡の石垣や木々が光る夜の屋外アート。7年ぶり3回目",
+    "未就学児は無料。小学生は平日700円・土日祝900円",
+    "大人は前売り平日2,300円・土日祝2,500円(現地は+200円)",
+    "1/11まで。大濠公園駅・赤坂駅から徒歩約8分"
+   ]
   },
   {
    "src": "いこーよ",
@@ -7356,10 +7390,11 @@
    ],
    "search": "光の街・博多 ハカタリウム",
    "nomap": true,
-   "badge": "NEW 今年初登場"
+   "badge": "NEW"
   }
  ],
  "teaser": [
+  "https://island-eye.com/topics/1372",
   "https://iko-yo.net/events/602292",
   "https://yokanavi.com/events/268229",
   "https://yokanavi.com/events/274390",

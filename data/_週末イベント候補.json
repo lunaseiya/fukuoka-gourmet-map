@@ -28,6 +28,8 @@
   "manual": 1
  },
  "selected": [
+  "https://www.jrhakatacity.com/event/#hikarinomachi2026-tentoushiki",
+  "https://www.jrhakatacity.com/event/#hakatarium",
   "https://boatracefukuoka-tenjinstreetpark.com/xo_event/opening-event-line-up-2",
   "https://island-eye.com/topics/1372",
   "https://fukuoka.aeonmall.jp/event/446659a3-eefc-4d81-b86a-9b781f8d3161",
@@ -38,9 +40,7 @@
   "https://kashiihama.aeon-kyushu.info/event/736dd533-85ae-4aff-b7d3-53de22c97dfa",
   "https://yokanavi.com/events/274306",
   "https://mitsui-shopping-park.com/lalaport/fukuoka/event/3632301.html",
-  "https://iko-yo.net/events/604937",
-  "https://www.jrhakatacity.com/event/#hikarinomachi2026-tentoushiki",
-  "https://www.jrhakatacity.com/event/#hakatarium"
+  "https://iko-yo.net/events/604937"
  ],
  "events": [
   {
@@ -258,14 +258,12 @@
    "detail": [
     "芝生の広場で週末ピクニック。約30店",
     "旬の農産物・グルメ・スイーツが並ぶ",
-    "テーマは「Eat Local & Make Future!」",
-    "アイランドアイのハロウィンとはしごできる"
+    "アイランドアイとはしご"
    ],
    "memo": [
     "芝生の広場で週末ピクニック。約30店",
     "旬の農産物・グルメ・スイーツが並ぶ",
-    "テーマは「Eat Local & Make Future!」",
-    "アイランドアイのハロウィンとはしごできる"
+    "アイランドアイとはしご"
    ],
    "search": "福マルシェ アイランドシティ",
    "addr": "福岡県福岡市東区香椎照葉6丁目1-1"
@@ -3965,7 +3963,8 @@
     "THE RAMPAGEのライブ16:15。キッチンカーは11〜19時"
    ],
    "search": "天神ストリートパーク オープニングイベント",
-   "place": "ボートレース福岡内"
+   "place": "ボートレース福岡内",
+   "photo2": "C:\\Users\\totor\\Dropbox\\ショート動画用\\4.MAP生成\\data\\carousel_2026-10-31\\_素材_天神ストリートパーク_遊具(自撮影2026-10-14).jpg"
   },
   {
    "src": "イオンモール香椎浜",
@@ -7289,7 +7288,7 @@
    "raw": "2026-11-03〜2026-11-03",
    "free": true,
    "lead": "今年の初日は11/3(祝)。18:15から点灯式、18:30に一斉点灯　イルミネーションは1/11まで毎日17:00〜23:00　約80万球。新シンボル「ハカタリウム」が登場(次のカード)　クリスマスマーケットは11/7(土)から12/25まで",
-   "poster": "https://twitfukuoka.com/wp-content/uploads/2026/10/202610230006-.jpg",
+   "poster": "https://twitfukuoka.com/wp-content/uploads/2026/10/202610230006-02.jpg",
    "venues": [
     "JR博多シティ"
    ],
@@ -7356,7 +7355,8 @@
     "1/11(月・祝)まで毎日17:00〜23:00点灯"
    ],
    "search": "光の街・博多 ハカタリウム",
-   "nomap": true
+   "nomap": true,
+   "badge": "NEW 今年初登場"
   }
  ],
  "teaser": [

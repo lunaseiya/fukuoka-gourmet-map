@@ -575,6 +575,11 @@ def card(ev, idx, extra=None, days=None, cur=None):
         shadow(im, pb, (64 + cp.width + 14, top + 34))
     d.text((W_ - 64, top + 48), '%d' % idx, font=font(ROUND, 52),
            fill=(216, 210, 202), anchor='ra')
+    # ★目玉の回に「NEW」などのラベルを右上に大きく出す(`_イベント補足.json` の `badge`)。
+    #   2026-10-29ユーザー指示「光の街・博多の点灯式を1に、補足を2にして。newとラベルで目立たせて」
+    if ev.get('badge'):
+        bl = pill(str(ev['badge']), (226, 58, 38), 44, (30, 12))
+        shadow(im, bl, (W_ - 64 - 56 - bl.width, top + 30), blur=10, alpha=70, dy=4)
     # イベント名
     f = font(MEIB, 52)
     y = top + 126

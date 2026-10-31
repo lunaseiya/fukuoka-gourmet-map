@@ -92488,7 +92488,6 @@
   "thumb": null,
   "photos": null,
   "source": "instagram:@kodomoto_cafe",
-  "in": "spd486e8fa57",
   "added": "2026-10-31"
  },
  {
@@ -92563,6 +92562,47 @@
   ],
   "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、施設内に授乳室・オムツ替え台、施設敷地に遊具。設備は現地未確認。",
   "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・施設内に授乳室・オムツ替え台・施設敷地に遊具」とあった店。当方は未訪問で設備は未確認。営業 11:00〜19:00(木曜定休)(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig3b332ed091",
+  "name": "NHK福岡放送局 食堂",
+  "area": "六本松",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "食堂",
+  "lat": 33.57741,
+  "lng": 130.378231,
+  "address": "福岡県福岡市中央区六本松1丁目1-10",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズチェアあり",
+   "施設内に授乳室・オムツ替え台",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)",
+   "⚠ 座標は六本松の近隣スポットから借用(要修正)"
+  ],
+  "memo": "NHK福岡放送局内の食堂。Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズチェアあり、施設内に授乳室・オムツ替え台。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズチェアあり・施設内に授乳室・オムツ替え台」とあった店。当方は未訪問で設備は未確認。営業 11:30〜14:30(投稿時点)。行ったら確認して更新します。",
   "video": {
    "youtube": null,
    "tiktok": null,

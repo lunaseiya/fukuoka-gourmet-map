@@ -3361,7 +3361,8 @@
   "points": [
    "座敷・掘りごたつ・個室あり",
    "おむつ交換台あり",
-   "ベビーカーで入れる"
+   "ベビーカーで入れる",
+   "オムツ替え台あり、キッズチェアあり、ベビーカー店内入り口で預かり(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "座敷・掘りごたつ・個室がそろう120席の居酒屋。箱崎宮前駅から徒歩3分。"
  },
@@ -24256,7 +24257,8 @@
   "wish": true,
   "points": [
    "駅構内にある",
-   "ベビーカーで入れる"
+   "ベビーカーで入れる",
+   "ベビーカー入店OK(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "千早駅構内にある、花に囲まれたカフェ。10:00〜19:00。"
  },
@@ -32035,7 +32037,8 @@
   "wish": true,
   "in": "fukuokaairportdomestic",
   "points": [
-   "キッズメニューあり(プリン付き)"
+   "キッズメニューあり(プリン付き)",
+   "ベビーカー入店OK、キッズメニューあり、キッズチェアあり、施設内に授乳室・オムツ替え台(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "オムライスやカレーのキッズプレートがある、札幌発の洋食店の福岡空港店。北海道ミルクデザートもある。国内線ターミナル3F(保安検査通過前)。"
  },
@@ -32473,7 +32476,8 @@
   "points": [
    "窓際にキッズスペース(ベビールーム)",
    "木のおもちゃ・ままごとキッチン",
-   "キッズメニューあり"
+   "キッズメニューあり",
+   "キッズメニューあり、キッズチェアあり、ベビーカー入店OK(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "飛行機が見える窓際にキッズスペースがある、福岡空港のタリーズ。木のおもちゃやままごとキッチンで遊べて、子連れの待ち時間に最適。国内線ターミナル3F(保安検査通過前)。"
  },
@@ -50970,7 +50974,8 @@
   "wish": true,
   "points": [
    "館内にベビーケアルーム・おむつ替え台",
-   "ベビーチェアあり"
+   "ベビーチェアあり",
+   "離乳食無料、キッズメニューあり、キッズチェアあり、ベビーカー入店OK(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "天神地下街11番街にあるスープ専門店の店で、席数31のイートインあり。営業10:00-21:00(LO20:30)。天神地下街のFREE Wi-Fiあり。情報は2026年8月19日現在のフロアガイドによる。"
  },
@@ -78556,7 +78561,8 @@
    "キッズスペース・子供図書室あり",
    "ドライブスルーあり",
    "駐車場あり(6台)",
-   "⚠ 子連れ設備は店の自己申告(要確認)"
+   "⚠ 子連れ設備は店の自己申告(要確認)",
+   "ベビーカー入店OK、キッズスペースあり、絵本、オムツ替え台あり、食事持ち込みOK、授乳対応(Instagramの投稿より・2023〜24年時点・未確認)"
   ],
   "memo": "薬局が併設された、ゆったりしたカフェ。ホットペッパー調べ(未訪問)。平日・祝前日8:30〜19:00、土8:30〜17:00。日・祝定休。下大利駅から車で10分。"
  },
@@ -91446,5 +91452,1125 @@
   "url": "https://boatracefukuoka-tenjinstreetpark.com/",
   "in": "boatrace-fukuoka",
   "posted": "2026-10-30"
+ },
+ {
+  "id": "igd5aa271e3a",
+  "name": "#602 CAFE&DINER",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.589201,
+  "lng": 130.398443,
+  "address": "福岡県福岡市中央区天神2丁目2-43",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズメニューあり",
+   "キッズカトラリーあり",
+   "ベビーカー店内入口で預かり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズメニューあり、キッズカトラリーあり、ベビーカー店内入口で預かり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズメニューあり・キッズカトラリーあり・ベビーカー店内入口で預かり」とあった店。当方は未訪問で設備は未確認。営業 11:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig53024349dc",
+  "name": "THE SANDWICH STAND",
+  "area": "薬院",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "サンドイッチ",
+  "lat": 33.580167,
+  "lng": 130.396086,
+  "address": "福岡県福岡市中央区薬院4丁目7-11",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK」とあった店。当方は未訪問で設備は未確認。営業 8:00〜18:00(日曜は16:00まで)(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig6212e4c127",
+  "name": "E PRONTO ミーナ天神店",
+  "area": "天神",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.593458,
+  "lng": 130.39808,
+  "address": "福岡県福岡市中央区天神4丁目3-8",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズカトラリーあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズカトラリーあり、キッズチェアあり、ベビーカー入店OK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズカトラリーあり・キッズチェアあり・ベビーカー入店OK」とあった店。当方は未訪問で設備は未確認。営業 10:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "in": "minatenjin",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig5b685add3b",
+  "name": "CAFE KUBRICK",
+  "area": "箱崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.617137,
+  "lng": 130.426318,
+  "address": "福岡県福岡市東区箱崎1丁目5-14",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、キッズメニューあり、キッズチェアあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・キッズメニューあり・キッズチェアあり」とあった店。当方は未訪問で設備は未確認。営業 11:00〜17:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig0b8d419900",
+  "name": "cafe IRWOL",
+  "area": "姪の浜",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.587805,
+  "lng": 130.323092,
+  "address": "福岡県福岡市西区姪の浜6丁目1-40",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入口で預かり",
+   "絵本・おもちゃあり",
+   "キッズチェア(お孫さん用の貸出)",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入口で預かり、絵本・おもちゃあり、キッズチェア(お孫さん用の貸出)。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入口で預かり・絵本・おもちゃあり・キッズチェア(お孫さん用の貸出)」とあった店。当方は未訪問で設備は未確認。営業 10:00〜15:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig0cbc7924f5",
+  "name": "MLB cafe FUKUOKA",
+  "area": "地行浜",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.594969,
+  "lng": 130.363783,
+  "address": "福岡県福岡市中央区地行浜2-2-6",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "店内にお手洗いあり",
+   "おむつ替え台あり",
+   "授乳室はE・ZO FUKUOKA 5階",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、キッズメニューあり、店内にお手洗いあり、おむつ替え台あり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・キッズメニューあり・店内にお手洗いあり・おむつ替え台あり・授乳室はE・ZO FUKUOKA 5階」とあった店。当方は未訪問で設備は未確認。営業 11:30〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig5cfafe1fb9",
+  "name": "アンパンマン&ペコズキッチン",
+  "area": "下川端町",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "レストラン",
+  "lat": 33.59509,
+  "lng": 130.405871,
+  "address": "福岡県福岡市博多区下川端町3-1 5F",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "離乳食あり",
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "施設内に授乳室・オムツ替え台",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。離乳食あり、キッズメニューあり、キッズチェアあり、施設内に授乳室・オムツ替え台。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「離乳食あり・キッズメニューあり・キッズチェアあり・施設内に授乳室・オムツ替え台」とあった店。当方は未訪問で設備は未確認。営業 10:00〜17:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igc93448c2a5",
+  "name": "HONEY COFFEE 志免店",
+  "area": "田富",
+  "city": "糟屋郡志免町",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.580029,
+  "lng": 130.492986,
+  "address": "福岡県糟屋郡志免町田富1丁目1-1",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "施設内にオムツ替え台・授乳室",
+   "施設内に遊具",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、キッズメニューあり、施設内にオムツ替え台・授乳室、施設内に遊具。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・キッズメニューあり・施設内にオムツ替え台・授乳室・施設内に遊具」とあった店。当方は未訪問で設備は未確認。営業 10:00〜20:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig44cc8dad8b",
+  "name": "童子",
+  "area": "山王",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.581002,
+  "lng": 130.432253,
+  "address": "福岡県福岡市博多区山王1丁目12-30",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズチェアあり",
+   "ベビーカー入店OK",
+   "ペット同伴可",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズチェアあり、ベビーカー入店OK、ペット同伴可。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズチェアあり・ベビーカー入店OK・ペット同伴可」とあった店。当方は未訪問で設備は未確認。営業 11:00〜21:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igcc31a53cbe",
+  "name": "KOSeling JAPAN cafe",
+  "area": "二日市中央",
+  "city": "筑紫野市",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.496256,
+  "lng": 130.518437,
+  "address": "福岡県筑紫野市二日市中央2丁目",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズスペースあり",
+   "オムツ替え台あり",
+   "ベビーカー入店OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズスペースあり、オムツ替え台あり、ベビーカー入店OK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズスペースあり・オムツ替え台あり・ベビーカー入店OK」とあった店。当方は未訪問で設備は未確認。営業 9:30〜17:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig10193bb4df",
+  "name": "foop",
+  "area": "大橋",
+  "city": "福岡市南区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.558501,
+  "lng": 130.425557,
+  "address": "福岡県福岡市南区大橋1丁目16-9 シュロス大橋1階",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズスペースあり",
+   "キッズチェアあり",
+   "キッズメニューあり",
+   "離乳食あり(無料)",
+   "おむつ替え台あり",
+   "スタイ・授乳ケープ貸出",
+   "ベビーカー入店OK",
+   "アレルギー対応OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズスペースあり、キッズチェアあり、キッズメニューあり、離乳食あり(無料)。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズスペースあり・キッズチェアあり・キッズメニューあり・離乳食あり(無料)・おむつ替え台あり・スタイ・授乳ケープ貸出・ベビーカー入店OK・アレルギー対応OK」とあった店。当方は未訪問で設備は未確認。営業 11:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig15b4fc14f6",
+  "name": "cafe Ruruq",
+  "area": "中原",
+  "city": "那珂川市",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.518026,
+  "lng": 130.436163,
+  "address": "福岡県那珂川市中原2丁目120 2階",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "同じフロアにキッズスペース・授乳室",
+   "ベビーカー入店OK",
+   "ノンカフェインあり",
+   "キッズメニューあり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。同じフロアにキッズスペース・授乳室、ベビーカー入店OK、ノンカフェインあり、キッズメニューあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「同じフロアにキッズスペース・授乳室・ベビーカー入店OK・ノンカフェインあり・キッズメニューあり」とあった店。当方は未訪問で設備は未確認。営業 10:00〜19:00(土は17:00まで)(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig9c02274597",
+  "name": "しまうまcafe Fika",
+  "area": "千代",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.606588,
+  "lng": 130.41692,
+  "address": "福岡県福岡市博多区千代4丁目29-30 ふうかろん",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズスペースあり",
+   "ベビーカー入店OK",
+   "ノンカフェインあり",
+   "小麦粉・卵・乳不使用のスイーツ",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズスペースあり、ベビーカー入店OK、ノンカフェインあり、小麦粉・卵・乳不使用のスイーツ。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズスペースあり・ベビーカー入店OK・ノンカフェインあり・小麦粉・卵・乳不使用のスイーツ」とあった店。当方は未訪問で設備は未確認。営業 9:00〜17:30(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig5c1ce0fc6e",
+  "name": "PEANUTS Cafe 博多",
+  "area": "博多駅中央街",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.58981,
+  "lng": 130.420432,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 アミュプラザ博多",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK",
+   "施設の授乳室が近い",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズメニューあり、キッズチェアあり、ベビーカー入店OK、施設の授乳室が近い。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズメニューあり・キッズチェアあり・ベビーカー入店OK・施設の授乳室が近い」とあった店。当方は未訪問で設備は未確認。営業 11:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig5685ba3100",
+  "name": "TSUTAYA BOOK GARAGE 福岡志免",
+  "area": "田富",
+  "city": "糟屋郡志免町",
+  "pref": "福岡県",
+  "genre": "本屋カフェ",
+  "lat": 33.580029,
+  "lng": 130.492986,
+  "address": "福岡県糟屋郡志免町田富1丁目1-1",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "広々キッズスペース",
+   "授乳室あり",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "ベビーカーOK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。広々キッズスペース、授乳室あり、おむつ交換台あり、キッズチェアあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「広々キッズスペース・授乳室あり・おむつ交換台あり・キッズチェアあり・ベビーカーOK」とあった店。当方は未訪問で設備は未確認。営業 10:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igbc09053f79",
+  "name": "caffe るるど",
+  "area": "大和町久池井",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "カフェ",
+  "lat": 33.32414,
+  "lng": 130.270257,
+  "address": "佐賀県佐賀市大和町久池井3178-4",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "漫画・絵本・おもちゃあり",
+   "授乳ケープ貸出",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。漫画・絵本・おもちゃあり、授乳ケープ貸出。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「漫画・絵本・おもちゃあり・授乳ケープ貸出」とあった店。当方は未訪問で設備は未確認。営業 11:30〜18:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig5da7e8ff0f",
+  "name": "Neutral coffee",
+  "area": "藤崎",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.57703,
+  "lng": 130.348845,
+  "address": "福岡県福岡市早良区藤崎2丁目1-1 寿ビル103",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズメニューあり",
+   "ベビーカー入店OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズメニューあり、ベビーカー入店OK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズメニューあり・ベビーカー入店OK」とあった店。当方は未訪問で設備は未確認。営業 11:00〜19:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igaf53d72707",
+  "name": "cafe Pippi",
+  "area": "南庄",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.578754,
+  "lng": 130.335663,
+  "address": "福岡県福岡市早良区南庄6-2-30 古開ビル2F",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "広々キッズスペース",
+   "授乳スペースあり",
+   "キッズ用トイレ",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "キッズメニューあり",
+   "アレルギー対応可",
+   "ベビーカーOK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。広々キッズスペース、授乳スペースあり、キッズ用トイレ、おむつ交換台あり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「広々キッズスペース・授乳スペースあり・キッズ用トイレ・おむつ交換台あり・キッズチェアあり・キッズメニューあり・アレルギー対応可・ベビーカーOK」とあった店。当方は未訪問で設備は未確認。営業 10:00〜17:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ige2ee7e244e",
+  "name": "REC COFFEE 県庁東店",
+  "area": "馬出",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.608385,
+  "lng": 130.420332,
+  "address": "福岡県福岡市東区馬出1丁目10-3",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズメニューあり",
+   "ベビーカー入店OK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズメニューあり、ベビーカー入店OK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズメニューあり・ベビーカー入店OK」とあった店。当方は未訪問で設備は未確認。営業 平日8:00〜20:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig054f2f809a",
+  "name": "抹茶カフェ HACHI",
+  "area": "姪浜駅南",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.577786,
+  "lng": 130.324201,
+  "address": "福岡県福岡市西区姪浜駅南2丁目25-43",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズチェアあり",
+   "キッズメニューあり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズチェアあり、キッズメニューあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズチェアあり・キッズメニューあり」とあった店。当方は未訪問で設備は未確認。営業 11:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig39d50bdc13",
+  "name": "展望台カフェ(小笹)",
+  "area": "小笹",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.571442,
+  "lng": 130.391593,
+  "address": "福岡県福岡市中央区小笹5丁目15 展望台",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズチェアあり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズチェアあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズチェアあり」とあった店。当方は未訪問で設備は未確認。営業 9:00〜17:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igc47cc02fc4",
+  "name": "restaurant Reilly",
+  "area": "西戸崎",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "レストラン",
+  "lat": 33.660975,
+  "lng": 130.363478,
+  "address": "福岡県福岡市東区西戸崎18-28",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。キッズメニューあり、キッズチェアあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「キッズメニューあり・キッズチェアあり」とあった店。当方は未訪問で設備は未確認。営業 9:30〜17:30(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig1aa70504ea",
+  "name": "福丸茶房",
+  "area": "城西",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.58171,
+  "lng": 130.359676,
+  "address": "福岡県福岡市早良区城西3-21-27",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカーOK",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカーOK。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカーOK」とあった店。当方は未訪問で設備は未確認。営業 11:00〜19:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igf119b93254",
+  "name": "親子カフェ bao・bab",
+  "area": "城西",
+  "city": "福岡市早良区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.58171,
+  "lng": 130.359676,
+  "address": "福岡県福岡市早良区城西3-21-27",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "広々キッズスペース",
+   "授乳室あり",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "ベビーベッドあり",
+   "アレルギー対応可",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。広々キッズスペース、授乳室あり、おむつ交換台あり、キッズチェアあり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「広々キッズスペース・授乳室あり・おむつ交換台あり・キッズチェアあり・ベビーベッドあり・アレルギー対応可」とあった店。当方は未訪問で設備は未確認。営業 10:00〜16:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig4c1ab8f5ce",
+  "name": "CAFE AUX BACCHANALES アミュプラザ博多店",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.589912,
+  "lng": 130.420395,
+  "address": "福岡県福岡市博多区博多駅中央街1-1",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーチェアあり",
+   "ベビーカー入店OK",
+   "施設内にオムツ替え台・授乳室",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーチェアあり、ベビーカー入店OK、施設内にオムツ替え台・授乳室。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーチェアあり・ベビーカー入店OK・施設内にオムツ替え台・授乳室」とあった店。当方は未訪問で設備は未確認。営業 11:00〜22:00(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "in": "spd486e8fa57",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "igdef0a3120c",
+  "name": "&LOCALS 大濠公園",
+  "area": "大濠公園",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.589461,
+  "lng": 130.373689,
+  "address": "福岡県福岡市中央区大濠公園1-9",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "オムツ替え台あり",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、オムツ替え台あり。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・オムツ替え台あり」とあった店。当方は未訪問で設備は未確認。営業 9:00〜18:30(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "in": "ohori-park",
+  "added": "2026-10-31"
+ },
+ {
+  "id": "ig38443a7e43",
+  "name": "fruits.closet.cafe ブランチ博多店",
+  "area": "千代",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.602283,
+  "lng": 130.420183,
+  "address": "福岡県福岡市博多区千代1丁目2-1",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "ベビーカー入店OK",
+   "施設内に授乳室・オムツ替え台",
+   "施設敷地に遊具",
+   "⚠ Instagramの投稿より(2023〜24年時点・未確認)"
+  ],
+  "memo": "Instagramの子連れカフェ紹介の投稿(2023〜24年)より。ベビーカー入店OK、施設内に授乳室・オムツ替え台、施設敷地に遊具。設備は現地未確認。",
+  "verdict": "Instagramの子連れカフェ紹介の投稿(2023〜24年時点)に「ベビーカー入店OK・施設内に授乳室・オムツ替え台・施設敷地に遊具」とあった店。当方は未訪問で設備は未確認。営業 11:00〜19:00(木曜定休)(投稿時点)。行ったら確認して更新します。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "source": "instagram:@kodomoto_cafe",
+  "added": "2026-10-31"
  }
 ]

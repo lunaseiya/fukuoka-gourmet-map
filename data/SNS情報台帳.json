@@ -1,0 +1,570 @@
+[
+ {
+  "code": "C3SXmQvp75j",
+  "name": "#602 CAFE&DINER",
+  "address": "福岡市中央区天神2丁目2-43",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "キッズメニューあり",
+   "キッズカトラリーあり",
+   "ベビーカー店内入口で預かり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/C3SXmQvp75j/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "C1rn5nnp_bN",
+  "name": "筥崎鳩太郎商店",
+  "address": "福岡市東区箱崎1丁目44-20",
+  "hours": "11:30〜23:30",
+  "feats": [
+   "オムツ替え台あり",
+   "キッズチェアあり",
+   "ベビーカー店内入り口で預かり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/C1rn5nnp_bN/",
+  "posted_year": "2023-2024",
+  "map_match": "hakozakihatotaroushouten / 筥崎 鳩太郎商店 / wish=True"
+ },
+ {
+  "code": "C0mN457JVsu",
+  "name": "THE SANDWICH STAND",
+  "address": "福岡市中央区薬院4丁目7-11",
+  "hours": "8:00〜18:00(日曜は16:00まで)",
+  "feats": [
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/C0mN457JVsu/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CzBzaTFJzLZ",
+  "name": "E PRONTO ミーナ天神店",
+  "address": "福岡市中央区天神4丁目3-8",
+  "hours": "10:00〜22:00",
+  "feats": [
+   "キッズカトラリーあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CzBzaTFJzLZ/",
+  "posted_year": "2023-2024",
+  "map_match": "minatenjin / ミーナ天神 / wish=True"
+ },
+ {
+  "code": "CxtFzsOPS3V",
+  "name": "タリーズコーヒー 福岡空港店",
+  "address": "福岡市博多区下臼井767-1",
+  "hours": "8:00〜21:30",
+  "feats": [
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CxtFzsOPS3V/",
+  "posted_year": "2023-2024",
+  "map_match": "apdd20f93826 / タリーズコーヒー 福岡空港店 / wish=True"
+ },
+ {
+  "code": "CxdfQGapMtV",
+  "name": "CAFE KUBRICK",
+  "address": "福岡市東区箱崎1丁目5-14",
+  "hours": "11:00〜17:00",
+  "feats": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "キッズチェアあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CxdfQGapMtV/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cw-xMfYPers",
+  "name": "cafe IRWOL",
+  "address": "福岡市西区姪の浜6丁目1-40",
+  "hours": "10:00〜15:00",
+  "feats": [
+   "ベビーカー入口で預かり",
+   "絵本・おもちゃあり",
+   "キッズチェア(お孫さん用の貸出)"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cw-xMfYPers/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CwwVj4nJOda",
+  "name": "MLB cafe FUKUOKA",
+  "address": "福岡市中央区地行浜2-2-6",
+  "hours": "11:30〜22:00",
+  "feats": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "店内にお手洗いあり",
+   "おむつ替え台あり",
+   "授乳室はE・ZO FUKUOKA 5階"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CwwVj4nJOda/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CwakAdWpaY4",
+  "name": "CAFE AUX BACCHANALES アミュプラザ博多店",
+  "address": "福岡市博多区博多駅中央街1-1",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "ベビーチェアあり",
+   "ベビーカー入店OK",
+   "施設内にオムツ替え台・授乳室"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CwakAdWpaY4/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CwLDkSBJKaT",
+  "name": "&LOCALS 大濠公園",
+  "address": "福岡市中央区大濠公園1-9",
+  "hours": "9:00〜18:30",
+  "feats": [
+   "ベビーカー入店OK",
+   "オムツ替え台あり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CwLDkSBJKaT/",
+  "posted_year": "2023-2024",
+  "map_match": "ohori-park / 大濠公園 / wish=True"
+ },
+ {
+  "code": "CvRp73ZppJZ",
+  "name": "NHK福岡放送局 食堂",
+  "address": "福岡市中央区六本松1丁目1-10",
+  "hours": "11:30〜14:30",
+  "feats": [
+   "キッズチェアあり",
+   "施設内に授乳室・オムツ替え台"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CvRp73ZppJZ/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CvAQ0RzJQJs",
+  "name": "アンパンマン&ペコズキッチン",
+  "address": "福岡市博多区下川端町3-1 5F",
+  "hours": "10:00〜17:00",
+  "feats": [
+   "離乳食あり",
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "施設内に授乳室・オムツ替え台"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CvAQ0RzJQJs/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CuzfP5Lp15U",
+  "name": "YOSHIMI 福岡空港店",
+  "address": "福岡市博多区下臼井767-1",
+  "hours": "7:00〜21:00",
+  "feats": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "施設内に授乳室・オムツ替え台"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CuzfP5Lp15U/",
+  "posted_year": "2023-2024",
+  "map_match": "apa6a48bc979 / YOSHIMI 福岡空港店 / wish=True"
+ },
+ {
+  "code": "CupZjdHvoIh",
+  "name": "HONEY COFFEE 志免店",
+  "address": "糟屋郡志免町田富1丁目1-1",
+  "hours": "10:00〜20:00",
+  "feats": [
+   "ベビーカー入店OK",
+   "キッズメニューあり",
+   "施設内にオムツ替え台・授乳室",
+   "施設内に遊具"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CupZjdHvoIh/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cub8N8sJ_Q9",
+  "name": "ファミリーガーデン大野城",
+  "address": "大野城市旭ケ丘2丁目1-16",
+  "hours": "8:30〜19:00(土は17:00まで)",
+  "feats": [
+   "ベビーカー入店OK",
+   "キッズスペースあり",
+   "絵本",
+   "オムツ替え台あり",
+   "食事持ち込みOK",
+   "授乳対応"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cub8N8sJ_Q9/",
+  "posted_year": "2023-2024",
+  "map_match": "hp6a2219f65c / ファミリーガーデン大野城店 / wish=True"
+ },
+ {
+  "code": "CuAFl6pJKcI",
+  "name": "Soup Stock Tokyo 天神",
+  "address": "福岡市中央区天神2丁目11-1",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "離乳食無料",
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CuAFl6pJKcI/",
+  "posted_year": "2023-2024",
+  "map_match": "tenchika_28 / Soup Stock Tokyo 天神地下街店 / wish=True"
+ },
+ {
+  "code": "CtxLbL0Bpxq",
+  "name": "HAMORU CAFE",
+  "address": "福岡市東区千早4丁目93-2",
+  "hours": "",
+  "feats": [
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CtxLbL0Bpxq/",
+  "posted_year": "2023-2024",
+  "map_match": "sp758403f6c3 / HAMORU CAFE / wish=True"
+ },
+ {
+  "code": "CtqQ7HcJWcO",
+  "name": "童子",
+  "address": "福岡市博多区山王1丁目12-30",
+  "hours": "11:00〜21:00",
+  "feats": [
+   "キッズチェアあり",
+   "ベビーカー入店OK",
+   "ペット同伴可"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CtqQ7HcJWcO/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CtbyrpjpjNU",
+  "name": "KOSeling JAPAN cafe",
+  "address": "筑紫野市二日市中央2丁目",
+  "hours": "9:30〜17:00",
+  "feats": [
+   "キッズスペースあり",
+   "オムツ替え台あり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CtbyrpjpjNU/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CtE4Q5RJ2Gw",
+  "name": "foop",
+  "address": "福岡市南区大橋1丁目16-9 シュロス大橋1階",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "キッズスペースあり",
+   "キッズチェアあり",
+   "キッズメニューあり",
+   "離乳食あり(無料)",
+   "おむつ替え台あり",
+   "スタイ・授乳ケープ貸出",
+   "ベビーカー入店OK",
+   "アレルギー対応OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CtE4Q5RJ2Gw/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cs53zJTpDg6",
+  "name": "Moff animal cafe",
+  "address": "福岡市中央区地行浜",
+  "hours": "10:00〜20:00",
+  "feats": [
+   "荷物置きあり",
+   "お手洗いは施設内(再入場可)"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cs53zJTpDg6/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CsuxljISDSh",
+  "name": "fruits.closet.cafe ブランチ博多店",
+  "address": "福岡市博多区千代1丁目2-1",
+  "hours": "11:00〜19:00(木曜定休)",
+  "feats": [
+   "ベビーカー入店OK",
+   "施設内に授乳室・オムツ替え台",
+   "施設敷地に遊具"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CsuxljISDSh/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CsbpwfzSawd",
+  "name": "cafe Ruruq",
+  "address": "那珂川市中原2丁目120 2階",
+  "hours": "10:00〜19:00(土は17:00まで)",
+  "feats": [
+   "同じフロアにキッズスペース・授乳室",
+   "ベビーカー入店OK",
+   "ノンカフェインあり",
+   "キッズメニューあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CsbpwfzSawd/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CsLxeFYS0zv",
+  "name": "しまうまcafe Fika",
+  "address": "福岡市博多区千代4丁目29-30 ふうかろん",
+  "hours": "9:00〜17:30",
+  "feats": [
+   "キッズスペースあり",
+   "ベビーカー入店OK",
+   "ノンカフェインあり",
+   "小麦粉・卵・乳不使用のスイーツ"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CsLxeFYS0zv/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cr_gQYRSyiP",
+  "name": "PEANUTS Cafe 博多",
+  "address": "福岡市博多区博多駅中央街1-1 アミュプラザ博多",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "キッズメニューあり",
+   "キッズチェアあり",
+   "ベビーカー入店OK",
+   "施設の授乳室が近い"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cr_gQYRSyiP/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CrtJjcbScRf",
+  "name": "TSUTAYA BOOK GARAGE 福岡志免",
+  "address": "糟屋郡志免町田富1丁目1-1",
+  "hours": "10:00〜22:00",
+  "feats": [
+   "広々キッズスペース",
+   "授乳室あり",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "ベビーカーOK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CrtJjcbScRf/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CrlMEVOyfzU",
+  "name": "caffe るるど",
+  "address": "佐賀市大和町久池井3178-4",
+  "hours": "11:30〜18:00",
+  "feats": [
+   "漫画・絵本・おもちゃあり",
+   "授乳ケープ貸出"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CrlMEVOyfzU/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CrRAMP-yYRc",
+  "name": "Neutral coffee",
+  "address": "福岡市早良区藤崎2丁目1-1 寿ビル103",
+  "hours": "11:00〜19:00",
+  "feats": [
+   "キッズメニューあり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CrRAMP-yYRc/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CrEAfZYSMS-",
+  "name": "cafe Pippi",
+  "address": "福岡市早良区南庄6-2-30 古開ビル2F",
+  "hours": "10:00〜17:00",
+  "feats": [
+   "広々キッズスペース",
+   "授乳スペースあり",
+   "キッズ用トイレ",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "キッズメニューあり",
+   "アレルギー対応可",
+   "ベビーカーOK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CrEAfZYSMS-/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cq0ycJTS2ZU",
+  "name": "REC COFFEE 県庁東店",
+  "address": "福岡市東区馬出1丁目10-3",
+  "hours": "平日8:00〜20:00",
+  "feats": [
+   "キッズメニューあり",
+   "ベビーカー入店OK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cq0ycJTS2ZU/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cqj01buyEiE",
+  "name": "抹茶カフェ HACHI",
+  "address": "福岡市西区姪浜駅南2丁目25-43",
+  "hours": "11:00〜22:00",
+  "feats": [
+   "キッズチェアあり",
+   "キッズメニューあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cqj01buyEiE/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CqatCsuysig",
+  "name": "展望台カフェ(小笹)",
+  "address": "福岡市中央区小笹5丁目15 展望台",
+  "hours": "9:00〜17:00",
+  "feats": [
+   "キッズチェアあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CqatCsuysig/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CqF-XRhSWK3",
+  "name": "文喫 福岡天神",
+  "address": "福岡市中央区天神",
+  "hours": "10:00〜20:00",
+  "feats": [
+   "ベビーカーOK",
+   "キッズスペースあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CqF-XRhSWK3/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cp-YRB0SVmQ",
+  "name": "グランダイニング(ららぽーと福岡)",
+  "address": "福岡市博多区那珂6丁目23-1",
+  "hours": "10:00〜22:00",
+  "feats": [
+   "ベビーカー置き場あり",
+   "キッズチェアあり",
+   "キッズメニュー豊富",
+   "お湯あり",
+   "キッズスペースあり",
+   "トレー用カートあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cp-YRB0SVmQ/",
+  "posted_year": "2023-2024",
+  "map_match": "lalaportfukuoka / ららぽーと福岡 / wish=False"
+ },
+ {
+  "code": "CprU29kv9vV",
+  "name": "restaurant Reilly",
+  "address": "福岡市東区西戸崎18-28",
+  "hours": "9:30〜17:30",
+  "feats": [
+   "キッズメニューあり",
+   "キッズチェアあり"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CprU29kv9vV/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "Cpg-8wQvSud",
+  "name": "福丸茶房",
+  "address": "福岡市早良区城西3-21-27",
+  "hours": "11:00〜19:00",
+  "feats": [
+   "ベビーカーOK"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/Cpg-8wQvSud/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ },
+ {
+  "code": "CpZsPtTvtIc",
+  "name": "親子カフェ bao・bab",
+  "address": "福岡市早良区城西3-21-27",
+  "hours": "10:00〜16:00",
+  "feats": [
+   "広々キッズスペース",
+   "授乳室あり",
+   "おむつ交換台あり",
+   "キッズチェアあり",
+   "ベビーベッドあり",
+   "アレルギー対応可"
+  ],
+  "src": "instagram:@kodomoto_cafe",
+  "post": "https://www.instagram.com/p/CpZsPtTvtIc/",
+  "posted_year": "2023-2024",
+  "map_match": null
+ }
+]

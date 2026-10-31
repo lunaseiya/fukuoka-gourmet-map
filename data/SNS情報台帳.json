@@ -566,5 +566,136 @@
   "post": "https://www.instagram.com/p/CpZsPtTvtIc/",
   "posted_year": "2023-2024",
   "map_match": null
+ },
+ {
+  "name": "由布院温泉グランピング 風の響き",
+  "address": "大分県由布市湯布院町川上1314-1",
+  "feats": [
+   "ハイチェア・ベビーソープの貸出あり",
+   "おもちゃ貸出あり"
+  ],
+  "src": "instagram:@fumi_odekake",
+  "post": "https://www.instagram.com/p/C9eyjFKyoCi/",
+  "posted_year": "2024",
+  "map_match": "ig9064d48d87"
+ },
+ {
+  "name": "Wenavillage(ウェナヴィレッジ)くじゅう",
+  "address": "大分県玖珠郡九重町田野1685-3",
+  "feats": [
+   "お子様メニューあり"
+  ],
+  "src": "instagram:@fumi_odekake",
+  "post": "https://www.instagram.com/p/C53AP3fSfGu/",
+  "posted_year": "2024",
+  "map_match": "igac7713a683"
+ },
+ {
+  "name": "三瀬ルベール牧場 どんぐり村",
+  "address": "佐賀県佐賀市三瀬村杠2234-67",
+  "feats": [
+   "授乳室・おむつ替えコーナーあり",
+   "飲食の持ち込みOK"
+  ],
+  "src": "instagram:@fumi_odekake",
+  "post": "https://www.instagram.com/p/C4uz3jJy1hl/",
+  "posted_year": "2024",
+  "map_match": "igb17d893824"
+ },
+ {
+  "name": "caffel ひなのさと",
+  "address": "大分県日田市隈1-3-8",
+  "feats": [
+   "個室でくつろげる",
+   "漫画・おもちゃの貸出あり"
+  ],
+  "src": "instagram:@fumi_odekake",
+  "post": "https://www.instagram.com/p/C2jwfTlyY2c/",
+  "posted_year": "2024",
+  "map_match": "igdf639f0714"
+ },
+ {
+  "name": "道の駅うきは",
+  "address": "福岡県うきは市浮羽町山北729-2",
+  "feats": [
+   "授乳室あり",
+   "子供サイズのトイレあり"
+  ],
+  "src": "instagram:@fumi_odekake",
+  "post": "https://www.instagram.com/p/CyVZiV0JeGp/",
+  "posted_year": "2023",
+  "map_match": "ig876365fab2"
+ },
+ {
+  "name": "あまぎ水の文化村",
+  "address": "福岡県朝倉市矢野竹1819",
+  "feats": [
+   "授乳室・オムツ替えシートあり",
+   "駐車場無料(約250台)",
+   "⚠ 平日は基本的に休み(要確認)"
+  ],
+  "src": "instagram:@naco_fukuoka_odekake",
+  "post": "https://www.instagram.com/p/DXc_qVIE2DN/",
+  "posted_year": "2026",
+  "map_match": "ig0944aa380e"
+ },
+ {
+  "name": "フォレスタ阿蘇車帰",
+  "address": "熊本県阿蘇市車帰361-1",
+  "feats": [
+   "お子様メニューあり"
+  ],
+  "src": "instagram:@weekend_outdoor_family",
+  "post": "https://www.instagram.com/p/DO1syTEE9KL/",
+  "posted_year": "2026",
+  "map_match": "ig6fc3b6b608"
+ },
+ {
+  "name": "太陽ハーモニーファーム",
+  "address": "福岡県豊前市四郎丸2024-1",
+  "feats": [
+   "授乳室あり",
+   "おむつ替えスペースあり",
+   "野外遊具あり"
+  ],
+  "src": "instagram:@fukuoka_odekake_kyouiku",
+  "post": "https://www.instagram.com/p/Ddq5gFrSepP/",
+  "posted_year": "2026",
+  "map_match": "ig7fab6f3f94"
+ },
+ {
+  "name": "OLIP アサイーボウル&サラダボウル 赤坂店",
+  "address": "福岡県福岡市中央区赤坂3-6-37 102",
+  "feats": [
+   "キッズスペースあり"
+  ],
+  "src": "instagram:@fukuoka_odekake_kyouiku",
+  "post": "https://www.instagram.com/p/DYa28idEkRD/",
+  "posted_year": "2026",
+  "map_match": "igbbf5d5e973"
+ },
+ {
+  "name": "築上町図書館 築きのもり",
+  "address": "福岡県築上郡築上町築城1096",
+  "feats": [
+   "キッズスペースあり",
+   "読み聞かせ室・授乳室・親子トイレあり"
+  ],
+  "src": "instagram:@fukuoka_odekake_kyouiku",
+  "post": "https://www.instagram.com/p/DU2wmBcEbW_/",
+  "posted_year": "2026",
+  "map_match": "ig5f01c58a28"
+ },
+ {
+  "name": "ひばる子どもプラザ ひつじのおうち",
+  "address": "福岡県福岡市南区桧原2-36-15",
+  "feats": [
+   "赤ちゃん専用の部屋あり",
+   "授乳コーナーあり"
+  ],
+  "src": "instagram:施設公式(@plaza_hitsujinoouti)",
+  "post": "https://www.instagram.com/p/DabjGWggWcd/",
+  "posted_year": "2026",
+  "map_match": "ig3103aea9d4"
  }
 ]

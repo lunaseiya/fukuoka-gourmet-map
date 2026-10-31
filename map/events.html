@@ -566,7 +566,7 @@ function card(e, iso){
   if (ft) tags.push(`<span class="tag ${ft[0]}">${ft[1]}</span>`);
   if (e.pick) tags.push('<span class="tag t-pick">今週のおすすめ</span>');
   tags.push(e.verified
-    ? '<span class="tag t-ver">現地確認済み</span>'
+    ? '<span class="tag t-ver">公式情報を確認</span>'
     : '<span class="tag t-unv">要確認</span>');
   // ⚠「この日だけ」は `e.n`(会期の総日数)ではなく**残りの開催日**で判定する。
   //   9/20と9/22の2日開催でも、9/22時点で行けるのはその日だけ

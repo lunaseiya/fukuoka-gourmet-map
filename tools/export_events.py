@@ -313,6 +313,9 @@ def venue(r, tt, heads):
     return (later[0] if later else '') or (r.get('city') or '')
 
 
+DATA = os.path.join(os.path.dirname(os.path.abspath(__file__)), '..', 'data')
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--days', type=int, default=14, help='今日から何日ぶんを出すか')
@@ -652,6 +655,8 @@ def main():
             r += 2                     # ポスターがあると一覧で目に留まる
         if x.get('price') or x.get('time'):
             r += 1                     # 料金や時間が分かっているものは行動しやすい
+        if x.get('pick'):
+            r += 10                    # カルーセルで紹介した週のおすすめ(2026-10-31)
         return r
 
     # ★**各イベントに rank を持たせる**【2026-09-17】
@@ -662,6 +667,34 @@ def main():
     #     **今日から始まる単発の花火大会が後ろに回されていた**
     #     (わっしょい百万夏まつりは rank 22 なのに33位)。
     #     これが「ポスターの13選がリストで見えない」の正体。
+    # ★**カルーセルに選んだイベントを一覧でも目立たせる**【2026-10-31ユーザー要望
+    #   「カルーセルをせっかく作ってるのにイベント一覧では全く表現されていない。選ばれたイベントは
+    #    ハイライトして上に」】
+    #   選抜は data/_週末イベント候補.json の selected(URL)にしか無く毎週上書きされるので、
+    #   ここで data/_カルーセル掲載履歴.json に {窓の開始日: {url: タイトル}} として貯め、
+    #   会期が続いている限り過去週の分も効かせる。突合は URL → 無ければタイトルの core で。
+    picks = {}
+    try:
+        cand = json.load(io.open(os.path.join(DATA, '_週末イベント候補.json'), encoding='utf-8'))
+        hist_p = os.path.join(DATA, '_カルーセル掲載履歴.json')
+        hist = json.load(io.open(hist_p, encoding='utf-8')) if os.path.exists(hist_p) else {}
+        byu = {e.get('url'): e for e in cand.get('events', [])}
+        if cand.get('selected'):
+            hist[cand['from']] = {u: (byu.get(u) or {}).get('title', '') for u in cand['selected']}
+        io.open(hist_p, 'w', encoding='utf-8').write(json.dumps(hist, ensure_ascii=False, indent=1))
+        for wk, m in sorted(hist.items()):
+            for u, t in m.items():
+                picks[u] = wk
+                if t:
+                    picks['core:' + core(t)[:18]] = wk
+    except Exception as ex:
+        print('  カルーセル掲載の突合をスキップ:', ex)
+    npick = 0
+    for r in out:
+        wk = picks.get(r.get('url')) or picks.get('core:' + core(r.get('title'))[:18])
+        if wk and not (r.get('title') or '').startswith('補足'):   # 補足カード(nomap)は印を付けない
+            r['pick'] = wk; npick += 1
+    print('  カルーセル掲載として印を付けた %d件' % npick)
     for r in out:
         r['rank'] = rank(r)
     out.sort(key=lambda x: (x['days'][0], -x['rank'], -x['ks'], x['title']))

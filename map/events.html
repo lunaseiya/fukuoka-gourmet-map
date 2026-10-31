@@ -129,6 +129,9 @@
   .tag{font-size:.66rem;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
   .t-ver{background:#e3f1ec;color:#0b5546}
   .t-unv{background:#f3f1ec;color:#7a7468}
+  /* ★カルーセルで紹介したイベント(2026-10-31ユーザー要望)。日ごとの先頭に寄せ、札と左の帯で目立たせる */
+  .t-pick{background:#ffb703;color:#3a2a00}
+  .ev.pick{box-shadow:inset 4px 0 0 #ffb703;background:#fffaf0}
   /* ★有料/無料は**ひと目で分かる濃さ**にする【2026-09-17ユーザー要望】
      「有料・無料ラベル」が効いていたので、他のタグより彩度を上げて先頭に置く。
      ⚠料金が分からないものには**どちらも出さない**(推測でラベルを貼らない) */
@@ -561,6 +564,7 @@ function card(e, iso){
   //     「有料」と貼るのは嘘になるし、「無料」と貼るのはもっと悪い
   const ft = feeTag(e);
   if (ft) tags.push(`<span class="tag ${ft[0]}">${ft[1]}</span>`);
+  if (e.pick) tags.push('<span class="tag t-pick">今週のおすすめ</span>');
   tags.push(e.verified
     ? '<span class="tag t-ver">現地確認済み</span>'
     : '<span class="tag t-unv">要確認</span>');
@@ -580,7 +584,7 @@ function card(e, iso){
   const link = e.spot
     ? `<p class="srcline"><a href="../s/${esc(e.spot)}.html">マップのページで見る →</a></p>`
     : (e.url ? `<p class="srcline"><a href="${esc(e.url)}" target="_blank" rel="noopener">主催の告知を見る →</a></p>` : '');
-  return `<li class="ev ${e.kids ? 'kid' : 'oth'}" data-ev="${esc((e.title || '').slice(0, 50))}">${img}<div class="body">
+  return `<li class="ev ${e.kids ? 'kid' : 'oth'}${e.pick ? ' pick' : ''}" data-ev="${esc((e.title || '').slice(0, 50))}">${img}<div class="body">
     <p class="ttl">${esc(e.title)}</p>
     <div class="tags">${tags.join('')}</div>
     ${bits.length ? `<p class="meta">${bits.join(' ／ ')}</p>` : ''}
@@ -625,7 +629,8 @@ function allDays(){
 // その日に出るイベントを rank 順で返す(タブの件数表示と本文で同じものを使う)
 function ofDay(iso){
   return DOC.events.filter(e => (e.days||[]).includes(iso) && pass(e))
-    .slice().sort((a, b) => (b.rank||0) - (a.rank||0)
+    .slice().sort((a, b) => (b.pick ? 1 : 0) - (a.pick ? 1 : 0)
+      || (b.rank||0) - (a.rank||0)
       || (b.ks||0) - (a.ks||0)
       || (a.title||'').localeCompare(b.title||'', 'ja'));
 }

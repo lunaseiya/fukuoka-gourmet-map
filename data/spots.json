@@ -93053,5 +93053,89 @@
   "photos": null,
   "source": "instagram:施設公式(@plaza_hitsujinoouti)",
   "added": "2026-10-31"
+ },
+ {
+  "id": "reccoffee-teriha",
+  "name": "REC COFFEE アイランドシティ照葉店",
+  "area": "香椎照葉",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "カフェ",
+  "lat": 33.664244,
+  "lng": 130.424149,
+  "address": "福岡県福岡市東区香椎照葉1-3-11 照葉パビリオン内",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "2026年10月31日オープン",
+   "店内+ウッドデッキで71席(テラスは日中のみ)",
+   "隣接コインパーキングは店舗利用で60分無料",
+   "8:00〜22:00",
+   "⚠ 子供椅子・ベビーカーは未確認"
+  ],
+  "memo": "2026年10月31日オープンのスペシャルティコーヒー店。照葉パビリオン内で、ソファ席からハイカウンターまで71席。ウッドデッキのテラスあり。",
+  "verdict": "2026年10月31日オープン。REC COFFEEが住宅地側に初めて出した店で、店内とウッドデッキのテラスを合わせて71席(テラスは日中のみ)。8:00〜22:00(予定)。隣接のコインパーキングは店舗利用で60分無料。子供椅子・ベビーカーの可否は未確認(行ったら更新)。",
+  "web": "https://rec-coffee.com/blogs/news/20260904",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "added": "2026-11-01"
+ },
+ {
+  "id": "kashiihama-kita-park",
+  "name": "香椎浜北公園(ウミノテラス・再整備中)",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "公園(再整備中)",
+  "lat": 33.656893,
+  "lng": 130.434442,
+  "address": "福岡県福岡市東区香椎浜4丁目",
+  "visited": null,
+  "with": "family",
+  "category": "play",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "Park-PFIで再整備中(2026年11月1日時点でまだ工事中)",
+   "木造2階の「ウミノテラス」にあんずカフェ・レッドブルックリン(ハンバーガー)・あんずのお肉の工場直売所が入る予定",
+   "大階段+イベント広場",
+   "駐車場68台(計画)",
+   "⚠ オープン時期は「2026年秋以降」から未発表"
+  ],
+  "memo": "海沿いの公園をPark-PFIで再整備中。木造2階のウミノテラスにカフェ・ハンバーガー・肉の直売所、大階段とイベント広場、駐車場68台ができる計画。当初2026年春→秋以降に延び、2026年11月1日時点でまだ柵の中。",
+  "verdict": "Park-PFI(事業者: 株式会社香椎浜北テラス・代表は百田工務店)で再整備中。ウミノテラス(木造2階・1階2階にテラス)にアトム株式会社のあんずカフェ・レッドブルックリン・あんずのお肉の工場直売所が入る計画。観客席を兼ねた大階段とデッキ・ステージ、駐車場68台。当初2026年春の供用開始予定が「2026年秋以降・工事は10月31日まで延長」となり、2026年11月1日時点でまだ工事中。新しい開業日は未発表(福岡市のページも更新なし)。※座標は香椎浜4丁目の代表点。",
+  "web": "https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/kasiihamakitakouen.html",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "added": "2026-11-01"
  }
 ]

@@ -93137,5 +93137,47 @@
   "thumb": null,
   "photos": null,
   "added": "2026-11-01"
+ },
+ {
+  "id": "konas-kashiihama",
+  "name": "コナズ珈琲 香椎浜店",
+  "area": "香椎浜",
+  "city": "福岡市東区",
+  "pref": "福岡県",
+  "genre": "ハワイアンカフェ",
+  "lat": 33.656237427029325,
+  "lng": 130.43126251047005,
+  "address": "福岡県福岡市東区香椎浜3-1-41 香椎いーなテラス内",
+  "visited": null,
+  "with": "family",
+  "category": "gourmet",
+  "wish": true,
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "kidsMenu": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "points": [
+   "コナズ珈琲で初めての海が見える店舗(2階席)",
+   "香椎いーなテラスの大型駐車場",
+   "順番待ちはスマホ受付",
+   "テラス席は犬同伴可",
+   "⚠ 子供椅子・キッズメニューは未確認"
+  ],
+  "memo": "香椎いーなテラス内のハワイアンカフェ(2025年3月20日オープン)。コナズ珈琲で初めて海が見える店舗で、2階席がオーシャンビュー。パンケーキとロコモコが看板。",
+  "verdict": "2025年3月20日オープン、福岡市内初のコナズ珈琲。2階席から海が見える。土日祝9:00〜22:00(L.O.60分前・平日は要確認)。香椎いーなテラスの大型駐車場、順番待ちのスマホ受付・モバイルオーダーあり。子供椅子・キッズメニューは未確認(行ったら更新)。TEL 092-672-4880。※座標は同じ施設のはま寿司から。",
+  "web": "https://stores.konas-coffee.com/111445",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "photos": null,
+  "added": "2026-11-01"
  }
 ]

@@ -237,7 +237,11 @@ def main():
     if not th:
         d = os.path.dirname(os.path.abspath(a.video))
         cand = sorted(f for f in os.listdir(d) if f.startswith('インスタサムネ_') and f.endswith('.jpg'))
-        th = os.path.join(d, cand[0]) if cand else None
+        # ⚠1フォルダに複数回分のサムネがあると先頭(別の回)を掴む【2026-11-02 REC回でHappilyのサムネが付いた】
+        #   → 完成_<TITLE>_YouTube.mp4 の <TITLE> と一致するサムネを優先。無ければ1枚のときだけ採用
+        m = re.match(r'完成_(.+?)_(YouTube|TikTok|Instagram)', os.path.basename(a.video))
+        hit = [f for f in cand if m and f == 'インスタサムネ_%s.jpg' % m.group(1)]
+        th = os.path.join(d, hit[0]) if hit else (os.path.join(d, cand[0]) if len(cand) == 1 else None)
     if th and os.path.exists(th):
         try:
             yt.thumbnails().set(videoId=vid, media_body=MediaFileUpload(th)).execute()

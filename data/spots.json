@@ -18522,33 +18522,55 @@
  {
   "id": "yumetownsaga",
   "name": "ゆめタウン佐賀",
-  "area": null,
+  "area": "兵庫北",
   "city": "佐賀市",
   "pref": "佐賀県",
   "genre": "ショッピングモール",
   "lat": 33.275646,
   "lng": 130.308182,
-  "visited": null,
+  "visited": "2026-11-03",
   "with": "family",
-  "kids": null,
-  "verdict": "ベビールーム・おむつ替え台完備。1Fレストラン街・2Fフードコート。",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "佐賀のゆめタウン。1Fレストラン街・2Fフードコート、トイザらス・ベビーザらス(1F)とアカチャンホンポ(2F)が入る。⭐2Fのトイレは5か所とも**キッズトイレ付き**、うち2か所は多目的トイレがオストメイト対応。⭐**男子トイレにもおむつ交換台と幼児用チェア**があり、パパ1人でも替えられる。多目的トイレにはおむつ交換台とフィッティングボード。2Fのアカチャンホンポ横に赤ちゃんの部屋・授乳室。⭐**ベビーザらス内のベビールーム**(現地確認・写真あり): 授乳室は奥に2室(男性は入室不可)、おむつ替え台2台、**調乳専用の浄水給湯器**とシンク、ベビースケール、手洗い、ソファのあるベビー休憩室。食事スペースには木製のキッズチェアあり。営業10:00〜21:00(1Fレストラン街11:00〜21:00)。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
-  "thumb": null,
-  "wish": true,
+  "thumb": "yumetownsaga.jpg",
+  "wish": false,
   "category": "play",
   "ages": [
-   "baby"
+   "baby",
+   "toddler"
   ],
   "ages_src": "auto",
   "points": [
-   "ベビールーム・おむつ替え台完備",
-   "2Fにフードコート"
+   "2Fトイレは全部キッズトイレ付き",
+   "男子トイレにもおむつ交換台",
+   "ベビーザらス内に調乳用給湯器・授乳室",
+   "木製のキッズチェアあり",
+   "トイザらス・アカチャンホンポ入居"
   ],
-  "memo": "ベビールームとおむつ替え台を完備した、佐賀のショッピングモール。1Fにレストラン街もある。"
+  "memo": "男子トイレにもおむつ交換台がある、佐賀の大型モール。2Fのトイレはキッズトイレ付きで、ベビーザらス内のベビールームには調乳用の給湯器・ベビースケール・授乳室2室・休憩ソファ。トイザらス・ベビーザらスとアカチャンホンポが入る。",
+  "photos": [
+   "yumetownsaga_01_2Fトイレ案内(キッズトイレ・授乳室).jpg",
+   "yumetownsaga_02_多目的トイレ(おむつ交換台・フィッティングボード).jpg",
+   "yumetownsaga_03_男子トイレにもおむつ交換台と幼児用チェア.jpg",
+   "yumetownsaga_04_食事スペースの席.jpg",
+   "yumetownsaga_05_木製のキッズチェア.jpg",
+   "yumetownsaga_06_ベビーザらス内の授乳室とおむつ替え台.jpg",
+   "yumetownsaga_07_ベビーザらス内の調乳用給湯器とベビースケール.jpg",
+   "yumetownsaga_08_ベビーザらス内のベビー休憩室.jpg"
+  ],
+  "web": "https://www.izumi.jp/tenpo/saga"
  },
  {
   "id": "yumetownyumesaito",
@@ -93280,5 +93302,46 @@
    "kukuri-sancaruna-teriha_04_案内看板.jpg"
   ],
   "added": "2026-11-02"
+ },
+ {
+  "id": "yumetownsaga-toysrus",
+  "name": "トイザらス・ベビーザらス ゆめタウン佐賀店",
+  "area": "兵庫北",
+  "city": "佐賀市",
+  "pref": "佐賀県",
+  "genre": "おもちゃ・ベビー用品",
+  "lat": 33.275646,
+  "lng": 130.308182,
+  "visited": "2026-11-03",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": true,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "ゆめタウン佐賀1Fのおもちゃ・ベビー用品の大型店。⭐店内のベビールームが充実: 授乳室2室(男性入室不可)・おむつ替え台2台・調乳専用の浄水給湯器・ベビースケール・ソファのベビー休憩室。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": false,
+  "in": "yumetownsaga",
+  "category": "play",
+  "photos": [
+   "yumetownsaga_06_ベビーザらス内の授乳室とおむつ替え台.jpg",
+   "yumetownsaga_07_ベビーザらス内の調乳用給湯器とベビースケール.jpg",
+   "yumetownsaga_08_ベビーザらス内のベビー休憩室.jpg"
+  ],
+  "points": [
+   "店内に授乳室2室・おむつ替え台",
+   "調乳用給湯器・ベビースケール"
+  ],
+  "memo": "ゆめタウン佐賀1Fの、おもちゃ・ベビー用品の大型店。店内のベビールームに調乳用給湯器と授乳室がある。",
+  "added": "2026-11-03"
  }
 ]

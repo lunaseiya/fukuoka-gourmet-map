@@ -5728,16 +5728,23 @@
  },
  {
   "id": "hakataryouhin",
-  "name": "博多良品(旧よのすけ本店)",
+  "name": "博多発祥とり皮・もつ鍋 博多良品(旧よのすけ本店)",
   "area": "香椎駅前",
   "city": "福岡市東区",
-  "genre": "ラーメン",
+  "genre": "もつ鍋・居酒屋",
   "lat": 33.659812,
   "lng": 130.441232,
   "visited": null,
   "with": "family",
-  "kids": null,
-  "verdict": null,
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "もつ鍋・とり皮の居酒屋(ラーメン店ではない)。食べログでは子供可(乳児〜小学生)・お子様メニューあり・ベビーカー入店可・「お子様連れ、大歓迎です」。掘りごたつの半個室あり・全席禁煙(テラスに喫煙所)。駐車場なし。予算は夜4,000〜4,999円。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -5745,7 +5752,14 @@
   },
   "thumb": null,
   "wish": true,
-  "pref": "福岡県"
+  "pref": "福岡県",
+  "points": [
+   "✓ お子様メニューあり・子連れ大歓迎(食べログ)",
+   "✓ 掘りごたつの半個室",
+   "✓ 全席禁煙",
+   "⚠ 駐車場なし"
+  ],
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40065286/"
  },
  {
   "id": "tomichanraamen",
@@ -40371,8 +40385,15 @@
   "address": "福岡市東区香椎駅前1-11-1",
   "visited": null,
   "with": "solo",
-  "kids": null,
-  "verdict": "⭐えきマチ1丁目香椎の拉担麺。",
+  "kids": {
+   "stroller": true,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐JR香椎駅直結(えきマチ1丁目香椎)の拉担麺。食べログでは子供可(乳児・未就学児・小学生)・ベビーカー入店可・全席禁煙。カウンター中心の18席、券売機。1,000円以上でビル直結の立体駐車場400円割引。予算〜999円。",
   "video": {
    "youtube": null,
    "tiktok": null,
@@ -40380,8 +40401,14 @@
   },
   "thumb": null,
   "wish": true,
-  "points": [],
-  "memo": "えきマチ1丁目香椎にある博多拉担麺の店。"
+  "points": [
+   "✓ 子供可・ベビーカーOK(食べログ)",
+   "✓ 全席禁煙",
+   "✓ 駅直結・駐車場割引あり",
+   "⚠ カウンター中心の18席"
+  ],
+  "memo": "えきマチ1丁目香椎にある博多拉担麺の店。",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400201/40053492/"
  },
  {
   "id": "gicchan-kashii",

@@ -108,7 +108,10 @@ def find_location(script_text):
     すでに spots.json に入っているので、**二重入力せずマップを使い回す**。
     """
     import json
-    m = re.search(r'【マップ】\s*id=([A-Za-z0-9_-]+)', script_text) or         re.search(r'id=([A-Za-z0-9_-]{6,})', script_text)
+    # エモ回の台本は「■ マップID: xxx(…)」の書式(2026-11-05 体育館・Happily回で拾えていなかったので追加)
+    m = (re.search(r'【マップ】\s*id=([A-Za-z0-9_-]+)', script_text)
+         or re.search(r'マップID[:：]\s*([A-Za-z0-9_-]+)', script_text)
+         or re.search(r'id=([A-Za-z0-9_-]{6,})', script_text))
     if not m:
         return None, None
     sid = m.group(1)

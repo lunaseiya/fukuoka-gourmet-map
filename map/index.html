@@ -1290,7 +1290,7 @@ function kidsFacilityHtml(spot) {
   const lv = kidsLevelOf(spot);
   // 点数は運用モードだけに出す(お客さんには段の名前だけ)
   const top = isKidsTop(spot)
-    ? `<span class="kl kl-2">🌟 子連れ大歓迎${document.body.classList.contains("admin") ? " " + kidsScore(spot) + "点" : ""}</span>` : "";
+    ? `<span class="kl kl-2">🌟 子連れ大歓迎${document.body.classList.contains("admin") ? " " + kidsScore(spot) + "点" + (kidsInherit(spot).pts ? `(うち建物${kidsInherit(spot).pts})` : "") : ""}</span>` : "";
   const badge = top ? top : lv === 2 ? `<span class="kl kl-2">👪 子連れ歓迎</span>` : lv === 1 ? `<span class="kl kl-1">🙆 子連れ可</span>` : "";
   // 「なし」は、他に確認できた設備がある店でだけ出す。
   // 単独で出すと、そもそも座敷を期待しない店(カウンターのラーメン屋等)にまで
@@ -1306,10 +1306,34 @@ function kidsFacilityHtml(spot) {
 //         子供椅子・おむつ替え・座敷・掘りごたつ・ベビーカー・ソファ・子供用食器・麺切りカッター・ベビーキープ・おもちゃ付き 各1
 //   kids 欄に無い項目は verdict と points の文言からも拾う(離乳食・おもちゃ付きは kids 欄に項目が無い)
 const KIDS_SCORE = { kidsSpace: 3, kidsMenu: 2, kidsChair: 1, diaper: 1, tatami: 1, horigotatsu: 1, stroller: 1, sofa: 1, kidsPlate: 1, babyKeep: 1 };
+// ★親施設(モール等)の設備を子ピンの点数に足す「下駄」【2026-11-08ユーザー要望
+//   「大型ショッピングモールには子連れ施設が親ピンに整っている。子ピンに下駄を履かせたい」】
+//   足すのは**建物の共用設備**だけ: おむつ替え/授乳室・ベビーカー・ベビーキープ/子供トイレ・キッズスペース。
+//   子供椅子・キッズメニュー・座敷のような店固有のものは足さない(歓迎の判定も店のもので決める=変えない)。
+//   合計は4点まで(7点に届くには店自身の用意が3点以上要る)。子ピン側の "facility"(建物内) も同じ扱いで1点
+const KIDS_INHERIT = { diaper: 1, stroller: 1, babyKeep: 1, kidsSpace: 2 };
+function kidsInherit(spot) {
+  if (!spot.in) return { pts: 0, from: null };
+  const parent = state.spots.find(p => p.id === spot.in);
+  if (!parent) return { pts: 0, from: null };
+  const pk = parent.kids || {}, ck = spot.kids || {};
+  const pv = (parent.verdict || "") + " " + (parent.points || []).join(" ");
+  let n = 0;
+  for (const [key, p] of Object.entries(KIDS_INHERIT)) {
+    if (ck[key] === true) continue;                       // 店自身が持っていれば本体で数える
+    if (pk[key] === true || pk[key] === "facility" || ck[key] === "facility") { n += p; continue; }
+    if (key === "diaper" && /授乳室|おむつ(替え|交換|台)|ベビー休憩室|ベビールーム/.test(pv)) n += p;
+    else if (key === "stroller" && /ベビーカー(の?貸し?出し?|OK|可|で|ごと)/.test(pv)) n += p;
+    else if (key === "babyKeep" && /ベビーキープ|こども(の)?トイレ|キッズトイレ|幼児用トイレ|子供用トイレ|補助便座/.test(pv)) n += p;
+    else if (key === "kidsSpace" && /キッズスペース|キッズルーム|プレイルーム|遊び場|キッズパーク/.test(pv)) n += p;
+  }
+  return { pts: Math.min(4, n), from: parent };
+}
 function kidsScore(spot) {
   const k = spot.kids || {};
   const v = (spot.verdict || "") + " " + (spot.points || []).join(" ");
   let n = Object.entries(KIDS_SCORE).reduce((a, [key, p]) => a + (k[key] === true ? p : 0), 0);
+  n += kidsInherit(spot).pts;
   if (k.kidsMenu !== true && /お子様メニュー|お子さま(ラーメン|ランチ|メニュー)|キッズメニュー|お子様ランチ/.test(v)) n += 2;
   if (k.kidsChair !== true && /子供椅子|キッズチェア|ベビーチェア|ハイチェア/.test(v)) n += 1;
   // 離乳食は「店が出している」ときだけ(2026-10-28ユーザー: 持ち込みOK・温め対応・離乳食用レンジ/席は数えない)

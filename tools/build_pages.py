@@ -346,4 +346,10 @@ def build():
     print('  ※1〜2件の市区 %d件は県別ページに集約' % len(thin))
 
 if __name__ == '__main__':
+    # ★新しいピンに added(載った日)を押してから作る【2026-11-08】。
+    #   マップ上部の「今週 +N件」は added で数えるので、取り込みツールが書き忘れても数字に乗るようにする
+    import sys
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import stamp_added
+    stamp_added.stamp()
     build()

@@ -1227,6 +1227,13 @@ def main():
         print()
         print('新規 %d件を追記 → %s(累計 %d件)' % (total, os.path.relpath(OUT, os.path.join(HERE, '..')), len(items)))
     save(items)
+    # 2026-11-08: 巡回のたびにマップの「これから」一覧(openings.html)へ自動で流し込む
+    if '--list' not in args:
+        try:
+            import subprocess
+            subprocess.run([sys.executable, os.path.join(HERE, 'sync_openings_from_watch.py')], check=True)
+        except Exception as e:
+            print('  ! これから一覧への反映に失敗: %s' % repr(e)[:100])
     if '--center' in args:
         show_higashi(items, pred=is_center, head='天神・博多(テナントの入居・移転も・子連れ/観光に関係するもの)')
         print('OPENING_WATCH_DONE')

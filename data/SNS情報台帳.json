@@ -697,5 +697,873 @@
   "post": "https://www.instagram.com/p/DabjGWggWcd/",
   "posted_year": "2026",
   "map_match": "ig3103aea9d4"
+ },
+ {
+  "name": "御宿 湯のしずく",
+  "address": "大分県別府市鉄輪1000-1",
+  "feats": [
+   "24時間のドリンクと軽食が無料",
+   "チェックイン15:00〜"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DfRUMstBMJb/",
+  "posted_year": "2025-2026",
+  "map_match": "snb2eda40b02",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "バーガートウカ",
+  "address": "福岡県糟屋郡篠栗町金出3280",
+  "feats": [
+   "⚠ 金曜定休+不定休"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/De_ZbeeRC-_/",
+  "posted_year": "2025-2026",
+  "map_match": "snc3b234e0a2",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ハニーガーデン瑞梅寺",
+  "address": "福岡県糸島市瑞梅寺880-10",
+  "feats": [
+   "はちみつの採蜜体験(大人6,000円・子ども3,000円)",
+   "⚠ 体験は開催日が決まっている。要確認"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DeoPhYSxMue/",
+  "posted_year": "2025-2026",
+  "map_match": "sn08253161c7",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "枕崎お魚センター",
+  "address": "鹿児島県枕崎市松之尾町33",
+  "feats": [
+   "大きな円筒形の水槽がある",
+   "お子様うどんあり",
+   "無料駐車場"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DdYUMLfRfLC/",
+  "posted_year": "2025-2026",
+  "map_match": "sn60907854d9",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "出の山淡水魚水族館",
+  "address": "宮崎県小林市南西方1091",
+  "feats": [
+   "大人300円・小中高200円・未就学児無料"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DdQsxRmRPso/",
+  "posted_year": "2025-2026",
+  "map_match": "sne0782ee3d2",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "丸岡公園",
+  "address": "鹿児島県霧島市横川町上ノ3201",
+  "feats": [
+   "日本一の長さのゴーカート(1人乗り300円・2人乗り500円)",
+   "1人乗りは身長130cm以上・7歳以上",
+   "駐車場無料"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DO6BnH7EvBX/",
+  "posted_year": "2025-2026",
+  "map_match": "sn8979195a43",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "霧島 神話の里公園",
+  "address": "鹿児島県霧島市霧島田口2583-22",
+  "feats": [
+   "リフトで上がる長いスライダー(1回600円・リフト代込み)",
+   "9:00〜17:00"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DPI1rujADvN/",
+  "posted_year": "2025-2026",
+  "map_match": "sn2acb545cb0",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "タツノオトシゴ養殖場",
+  "address": "鹿児島県南九州市頴娃町別府5202",
+  "feats": [
+   "入場無料",
+   "10:00〜16:30",
+   "⚠ 火曜定休"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DWsND-aknav/",
+  "posted_year": "2025-2026",
+  "map_match": "sn4bd50f9b07",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "きららビーチ焼野",
+  "address": "山口県山陽小野田市松浜612",
+  "feats": [
+   "駐車場とトイレあり",
+   "⚠ 満潮時は砂浜が狭い"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DcpPbajSi3q/",
+  "posted_year": "2025-2026",
+  "map_match": "sn0f53766afc",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "金魚と鯉の郷広場",
+  "address": "熊本県玉名郡長洲町長洲3150",
+  "feats": [
+   "駐車場無料"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DXO5XKrkdH9/",
+  "posted_year": "2025-2026",
+  "map_match": "sn74f008c8e4",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "小林 地鶏の里",
+  "address": "宮崎県小林市南西方1247-1",
+  "feats": [
+   "⚠ 不定休"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DciZFYXxK5J/",
+  "posted_year": "2025-2026",
+  "map_match": "sn940cab0a92",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "のんのこ温水センター",
+  "address": "長崎県諫早市福田町1184",
+  "feats": [
+   "スライダーと流れるプール",
+   "おむつが取れていない子は水遊び用おむつ+水着で利用可",
+   "⚠ 水泳帽が必要"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DcW-MlryWhg/",
+  "posted_year": "2025-2026",
+  "map_match": "snac2b92bba1",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "竹中池公園(そうめん流し・プール)",
+  "address": "鹿児島県姶良郡湧水町川添1032-6",
+  "feats": [
+   "名水百選の池のそばでそうめん流し",
+   "隣にスライダー付きのプール(小学生未満100円・小学生以上200円)"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DcPZ-Yly0AF/",
+  "posted_year": "2025-2026",
+  "map_match": "sn48c48167aa",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "いおワールド かごしま水族館",
+  "address": "鹿児島県鹿児島市本港新町3-1",
+  "feats": [
+   "大人2,000円・小中学生1,000円"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DafD09kEWJv/",
+  "posted_year": "2025-2026",
+  "map_match": "sn5b4926499d",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "RVパークたかざき",
+  "address": "宮崎県都城市高崎町大牟田1388-2",
+  "feats": [
+   "車中泊1台1泊1,020円",
+   "遊具あり"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DbMLFUrzcvH/",
+  "posted_year": "2025-2026",
+  "map_match": "sn74f1f1897f",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "嘉島町湧水公園 天然プール",
+  "address": "熊本県上益城郡嘉島町下六嘉3707",
+  "feats": [
+   "魚が泳ぐ湧水の天然プール",
+   "入場無料・駐車場1,000円",
+   "⚠ 駐車場は早い時間に埋まりやすい"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DbSdUPhx-kd/",
+  "posted_year": "2025-2026",
+  "map_match": "snbee299c9dd",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "空火海",
+  "address": "福岡県糸島市福吉2丁目",
+  "feats": [
+   "最大8名の一棟貸し",
+   "バレルサウナとプール付き",
+   "無料駐車場"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DaP8y62SvtE/",
+  "posted_year": "2025-2026",
+  "map_match": "sn5f8e54d61f",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "シーライフひらど",
+  "address": "長崎県平戸市鏡川町850",
+  "feats": [
+   "大人1名につき小学2年生以下2名まで無料",
+   "スライダー3回110円",
+   "水遊びおむつOK",
+   "屋内プールは通年"
+  ],
+  "src": "instagram:@chimuchi",
+  "post": "https://www.instagram.com/p/DZZchkjR2s7/",
+  "posted_year": "2025-2026",
+  "map_match": "sn99c8659bcc",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "Leaf(御船町の一棟貸し)",
+  "address": "熊本県上益城郡御船町辺田見164-1",
+  "feats": [
+   "最大20名まで泊まれる",
+   "8名まで同一料金",
+   "無料駐車場10台以上"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DfMZhnqzEeC/",
+  "posted_year": "2025-2026",
+  "map_match": "sn9f8657d170",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "サープラ荒尾 あそびタウンOUTLET",
+  "address": "熊本県荒尾市原万田700-1",
+  "feats": [
+   "10円から遊べるコーナー",
+   "年中無休",
+   "無料駐車場400台"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DfHRzKTT2K9/",
+  "posted_year": "2025-2026",
+  "map_match": "sn6039c7d927",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "グランドーム福岡ふくつ",
+  "address": "福岡県福津市津屋崎4-45-1",
+  "feats": [
+   "遊具とボードゲームが遊び放題",
+   "最大12人の大部屋あり",
+   "大人と子供の部屋着あり",
+   "チェックイン15:00〜"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/Dd5_f7aTiwV/",
+  "posted_year": "2025-2026",
+  "map_match": "sn646eb8afde",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "Carriage Project 馬カフェ",
+  "address": "福岡県福岡市早良区石釜313-3",
+  "feats": [
+   "90分2,000円(1人)",
+   "無料駐車場",
+   "⚠ 開催日は要確認"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DdTRcLlzuL2/",
+  "posted_year": "2025-2026",
+  "map_match": "snf5e123e609",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "みどり工場直売所 福岡春日店",
+  "address": "福岡県春日市下白水北3-85",
+  "feats": [
+   "10:00〜17:00",
+   "無料駐車場",
+   "⚠ 土日祝は時短営業のことがある"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DdGye0zTgyl/",
+  "posted_year": "2025-2026",
+  "map_match": "sn5707ef2c9a",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "雲仙みかどホテル",
+  "address": "長崎県南島原市深江町甲5292-2",
+  "feats": [
+   "カニの食べ放題",
+   "キッズメニューあり",
+   "3歳以下は添い寝で食事付き2,200円",
+   "チェックイン15:30〜"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DdJDb4Yzm36/",
+  "posted_year": "2025-2026",
+  "map_match": "sned5290d42b",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "鯉の泳ぐまち(島原)",
+  "address": "長崎県島原市新町2丁目",
+  "feats": [
+   "水路に鯉が泳ぐ町並み",
+   "周辺に駐車場あり"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DcBVI3XzqeZ/",
+  "posted_year": "2025-2026",
+  "map_match": "sn349a22720d",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "一尺屋 海の家",
+  "address": "大分県大分市一尺屋1565",
+  "feats": [
+   "海の近くの一棟貸し",
+   "2名で1人10,000円〜(人数で変動)"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/Dcx0SW9TP3Q/",
+  "posted_year": "2025-2026",
+  "map_match": "sn08193b82ec",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "田川市民プール",
+  "address": "福岡県田川市伊田2754-2",
+  "feats": [
+   "全長265mの流れるプール",
+   "水深約30cmの幼児プールと小さい子のすべり台",
+   "スライダーも追加料金なし",
+   "⚠ プール内は撮影禁止・駐車場は9時前に並ぶのがおすすめ"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DcS73E0ztXV/",
+  "posted_year": "2025-2026",
+  "map_match": "sn4d1569908d",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "宝満宮 竈門神社",
+  "address": "福岡県太宰府市内山883",
+  "feats": [
+   "夏は七夕のライトアップ(入場無料)",
+   "駐車場500円",
+   "⚠ 境内は石段が多い"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DbpxIJuzuwW/",
+  "posted_year": "2025-2026",
+  "map_match": "sn981ba3a6d0",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "寿司海都 直方店",
+  "address": "福岡県直方市下新入388-2",
+  "feats": [
+   "ランチ1,000円〜"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DbalbTLzqXP/",
+  "posted_year": "2025-2026",
+  "map_match": "sn11876dc37a",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "雲仙ロープウェイ",
+  "address": "長崎県雲仙市小浜町雲仙551",
+  "feats": [
+   "往復 大人1,500円・小学生750円"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DbO9JIzzGPu/",
+  "posted_year": "2025-2026",
+  "map_match": "snf3bf50ab1a",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "花畑園芸公園",
+  "address": "福岡県福岡市南区柏原7丁目",
+  "feats": [
+   "入場無料",
+   "ベビーカーでも回れる",
+   "⚠ 駐車場から歩く"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DbHL6pqzdVh/",
+  "posted_year": "2025-2026",
+  "map_match": "sn97f7ce33a9",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "トリアスふれあい動物園",
+  "address": "福岡県糟屋郡久山町山田991",
+  "feats": [
+   "入園500円・3歳未満無料",
+   "エサは100円〜",
+   "トリアスの駐車場(無料)の目の前"
+  ],
+  "src": "instagram:@yumehapi",
+  "post": "https://www.instagram.com/p/DeVm2heph6m/",
+  "posted_year": "2025-2026",
+  "map_match": "sndb5aa37bfb",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ザ・ルイガンズ",
+  "address": "福岡県福岡市東区西戸崎18-25",
+  "feats": [
+   "夏はBBQとプールとサウナ付き大浴場の日帰りプランあり",
+   "プールのみ追加 大人1,500円・小学生以下800円"
+  ],
+  "src": "instagram:@yumehapi",
+  "post": "https://www.instagram.com/p/DchMD1kTUFT/",
+  "posted_year": "2025-2026",
+  "map_match": "snc8608cc5c8",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "やまやファクトリーテラス",
+  "address": "福岡県糟屋郡篠栗町彩り台1-1",
+  "feats": [
+   "工場見学は入場無料・予約不要",
+   "めんたいビュッフェのセットあり",
+   "無料駐車場",
+   "⚠ 不定休(営業日は公式で確認)"
+  ],
+  "src": "instagram:@yumehapi",
+  "post": "https://www.instagram.com/p/DbrUWwlSYiz/",
+  "posted_year": "2025-2026",
+  "map_match": "sn61518df3b3",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "もちだんご村 もち吉 工場直売所",
+  "address": "福岡県直方市下境916-3",
+  "feats": [
+   "特製うどん・つきたて餅",
+   "9:00〜17:00"
+  ],
+  "src": "instagram:@yumehapi",
+  "post": "https://www.instagram.com/p/Dbcdpc8p6tu/",
+  "posted_year": "2025-2026",
+  "map_match": "sn92f84be75d",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "北山キャンプ場",
+  "address": "佐賀県佐賀市富士町関屋52-1",
+  "feats": [
+   "1区画1泊 平日3,700円・土日祝4,400円",
+   "チェックイン13:00〜17:30",
+   "本や漫画の貸し出しあり"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DeOgslrRk5a/",
+  "posted_year": "2025-2026",
+  "map_match": "snc055ff1ed9",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "道の駅 鹿北 小栗郷 親水プール",
+  "address": "熊本県山鹿市鹿北町岩野4186-130",
+  "feats": [
+   "3歳以上390円",
+   "テント持ち込みOK",
+   "⚠ 夏季のみ・土日祝は午前と午後の2部制"
+  ],
+  "src": "instagram:@mami",
+  "post": "https://www.instagram.com/p/DbkyOS4vh4u/",
+  "posted_year": "2025-2026",
+  "map_match": "sned5de31ca1",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "紅葉谷の湯",
+  "address": "大分県玖珠郡九重町町田3077",
+  "feats": [
+   "1室60分1,500円〜2,000円",
+   "10:00〜21:00",
+   "無料駐車場10台",
+   "⚠ 火・水曜定休"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DaH2Xymyxdi/",
+  "posted_year": "2025-2026",
+  "map_match": "snad4dea0b08",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "里山温泉 四季彩の湯",
+  "address": "大分県玖珠郡九重町町田2174-1",
+  "feats": [
+   "1棟ずつ独立した家族湯 60分1,500円",
+   "年中無休"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DZ6PHatvr8l/",
+  "posted_year": "2025-2026",
+  "map_match": "sn2f9405a16b",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "歌瀬キャンプ場",
+  "address": "熊本県上益城郡山都町菅尾1344-1",
+  "feats": [
+   "キャンプ場利用者だけが使えるスライダー付きプール(夏)",
+   "遊具あり",
+   "⚠ シャワー室は混みやすい"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DZyFp2NBR5_/",
+  "posted_year": "2025-2026",
+  "map_match": "snee35646c8e",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "サンスパおおむら",
+  "address": "長崎県大村市森園町663-3",
+  "feats": [
+   "10円から遊べるクレーンゲーム",
+   "入浴 大人820円・小学生370円・幼児220円",
+   "10:00〜22:00"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DZOGVVvT4kG/",
+  "posted_year": "2025-2026",
+  "map_match": "sn70e7c9e57e",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "森のカフェ 緑の詩",
+  "address": "福岡県糸島市白糸561",
+  "feats": [
+   "11:00〜15:30"
+  ],
+  "src": "instagram:@hapi",
+  "post": "https://www.instagram.com/p/DXxTngFS-nm/",
+  "posted_year": "2025-2026",
+  "map_match": "sn52b687316c",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ACUPA(アクパ) 宗像",
+  "address": "福岡県宗像市くりえいと1-7-1",
+  "feats": [
+   "トランポリン(3歳以上)とスポンジプール",
+   "1歳から遊べるキッズパーク",
+   "⚠ 小2以下は保護者の同伴が必要"
+  ],
+  "src": "instagram:@maru",
+  "post": "https://www.instagram.com/p/DdKrSZBTEEf/",
+  "posted_year": "2025-2026",
+  "map_match": "sn8468a67811",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "千仏鍾乳洞",
+  "address": "福岡県北九州市小倉南区平尾台3-2-1",
+  "feats": [
+   "大人1,100円",
+   "所要約40分",
+   "⚠ 入口まで急な坂でベビーカーは難しい",
+   "⚠ 中に大人の膝下くらいの水深の場所がある"
+  ],
+  "src": "instagram:@maru",
+  "post": "https://www.instagram.com/p/DcdKlROOVdV/",
+  "posted_year": "2025-2026",
+  "map_match": "sn21a10e1642",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "平塚川添遺跡公園",
+  "address": "福岡県朝倉市平塚444-4",
+  "feats": [
+   "入園無料",
+   "まが玉づくり100円〜などの体験",
+   "⚠ 体験は受付時間がある"
+  ],
+  "src": "instagram:@mami",
+  "post": "https://www.instagram.com/p/Dev7fpPug5Q/",
+  "posted_year": "2025-2026",
+  "map_match": "sn72c1740da0",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "太陽園(みかん狩り)",
+  "address": "福岡県宗像市用山411-16",
+  "feats": [
+   "収穫袋1.5kg 900円・3kg 1,650円",
+   "⚠ 営業日は要確認"
+  ],
+  "src": "instagram:@mami",
+  "post": "https://www.instagram.com/p/DeGlniIuWJo/",
+  "posted_year": "2025-2026",
+  "map_match": "sn5633181484",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ピクニカ(八木山)",
+  "address": "福岡県飯塚市八木山2288",
+  "feats": [
+   "ひよこ・モルモットのふれあいは入場料だけで何度でも",
+   "大人800円・子ども500円",
+   "⚠ 水・木曜定休"
+  ],
+  "src": "instagram:@mami",
+  "post": "https://www.instagram.com/p/DcxzFWquBvb/",
+  "posted_year": "2025-2026",
+  "map_match": "sn18322bccce",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ノボルト",
+  "address": "福岡県福岡市西区小戸2-10-76",
+  "feats": [
+   "110cm未満はキッズプラン",
+   "トランポリンゾーン・アスレチックメイズ",
+   "マリノアシティの駐車場が最大4時間無料"
+  ],
+  "src": "instagram:@mami",
+  "post": "https://www.instagram.com/p/Db5UMwkOhNj/",
+  "posted_year": "2025-2026",
+  "map_match": "sn461e389fd0",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "吉祥園(みかん・柿狩り)",
+  "address": "福岡県久留米市田主丸町森部1305-4",
+  "feats": [
+   "入園無料・量り売り(みかん1kg 350円)",
+   "9:00〜17:00",
+   "無料駐車場"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/DfIx1CXB8OO/",
+  "posted_year": "2025-2026",
+  "map_match": "sne13835185d",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "林檎と葡萄の樹",
+  "address": "福岡県朝倉市山田758",
+  "feats": [
+   "りんご狩りは量り売り(1kg 850円)",
+   "無料駐車場"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/DeeVYZFIBHe/",
+  "posted_year": "2025-2026",
+  "map_match": "sn51e20c6491",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "高倉神社(岡垣町)",
+  "address": "福岡県遠賀郡岡垣町高倉1113",
+  "feats": [
+   "無料駐車場"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/Db2q3d4I855/",
+  "posted_year": "2025-2026",
+  "map_match": "sn1f0ac22cb5",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "調音の滝公園 流水プール",
+  "address": "福岡県うきは市浮羽町妹川3184",
+  "feats": [
+   "夏だけの流水プール(協力金200円程度)",
+   "そうめん流しあり",
+   "⚠ 夏季のみ・月曜休み"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/DcTUllsoppt/",
+  "posted_year": "2025-2026",
+  "map_match": "sn662e91f6ee",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "くるめ市民流水プール",
+  "address": "福岡県久留米市東櫛原町1667",
+  "feats": [
+   "幼児用プールにもミニスライダー",
+   "プール入場者は当日鳥類センターに無料で入れる",
+   "⚠ 夏季のみ"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/DcKLYgch869/",
+  "posted_year": "2025-2026",
+  "map_match": "snfc8a2b213f",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "高良大社",
+  "address": "福岡県久留米市御井町1",
+  "feats": [
+   "展望所から久留米の夜景",
+   "無料駐車場"
+  ],
+  "src": "instagram:@konatsu",
+  "post": "https://www.instagram.com/p/DbuwbGFIM4F/",
+  "posted_year": "2025-2026",
+  "map_match": "sn2609811810",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "芦屋歴史の里",
+  "address": "福岡県遠賀郡芦屋町山鹿1200",
+  "feats": [
+   "大人200〜300円・小中高生100円",
+   "無料駐車場"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/DfZccaQobSb/",
+  "posted_year": "2025-2026",
+  "map_match": "snbd31c434a9",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "ルートイングランディア福岡宮若 脇田温泉",
+  "address": "福岡県宮若市脇田778-1",
+  "feats": [
+   "キッズコーナー(わんぱくランド300円〜)",
+   "乳児用の椅子とベビーバスの貸し出しあり",
+   "日帰り入浴 大人800円・子ども500円"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/Dd5-AREP57B/",
+  "posted_year": "2025-2026",
+  "map_match": "sn43ba19139b",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "雲仙おもちゃ博物館",
+  "address": "長崎県雲仙市小浜町雲仙310",
+  "feats": [
+   "近くに有料駐車場(500円前後)"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/Dcxxf2MvyqI/",
+  "posted_year": "2025-2026",
+  "map_match": "snc92db906a1",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "棚田親水公園 河川プール",
+  "address": "福岡県朝倉郡東峰村宝珠山3100-1",
+  "feats": [
+   "深めと足首丈の2つのプールとすべり台3本",
+   "協力金200〜300円",
+   "更衣室・ロッカー・シャワーあり",
+   "⚠ 監視員なし・木曜は清掃で休み"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/DcQVduavPpz/",
+  "posted_year": "2025-2026",
+  "map_match": "sn6df3735471",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "松柏園ホテル(ランチビュッフェ)",
+  "address": "福岡県北九州市小倉北区上富野4丁目",
+  "feats": [
+   "ランチビュッフェ(90分制)にキッズスペース",
+   "ベビーカーで入れる広さ",
+   "無料駐車場",
+   "⚠ 火〜金曜のみ"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/DbcwMA8vVoP/",
+  "posted_year": "2025-2026",
+  "map_match": "sn33121058cf",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "竜王峡",
+  "address": "福岡県直方市上頓野184-1",
+  "feats": [
+   "川遊びとキャンプ(テントサイト500円)",
+   "シャワーあり(10分200円)",
+   "駐車場300円"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/DbIN13avEXD/",
+  "posted_year": "2025-2026",
+  "map_match": "sn504f5d1a84",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "若杉の湯",
+  "address": "福岡県糟屋郡篠栗町若杉679",
+  "feats": [
+   "1部屋50分2,800円",
+   "無料駐車場",
+   "⚠ 木曜定休"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/Da4wPvWv3I6/",
+  "posted_year": "2025-2026",
+  "map_match": "sn56c934d69a",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "健康の森公園市民プール",
+  "address": "福岡県飯塚市吉北118-11",
+  "feats": [
+   "流れるプールと幼児プール",
+   "大人でもワンコイン以下",
+   "無料駐車場"
+  ],
+  "src": "instagram:@yuimei",
+  "post": "https://www.instagram.com/p/DaoRLDlTUM7/",
+  "posted_year": "2025-2026",
+  "map_match": "sn256770c847",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "カラオケまねきねこ 久留米中央公園店",
+  "address": "福岡県久留米市野中町997-2",
+  "feats": [
+   "キッズルーム完備",
+   "13歳以上770円・4〜12歳550円・0〜3歳無料(利用時間内は無制限)"
+  ],
+  "src": "instagram:@yuyu",
+  "post": "https://www.instagram.com/p/DcVhywzzQ5e/",
+  "posted_year": "2025-2026",
+  "map_match": "sn66edd971a7",
+  "imported": "2026-11-08"
+ },
+ {
+  "name": "オールデイダイニング カメリア(ホテルオークラ福岡)",
+  "address": "福岡県福岡市博多区下川端町3-2",
+  "feats": [
+   "小学生3,500円・4〜6歳1,200円・4歳未満無料",
+   "夏休みは子ども料金の割引あり(要予約)"
+  ],
+  "src": "instagram:@yumehapi",
+  "post": "https://www.instagram.com/p/Dbg5nPmTuRS/",
+  "posted_year": "2025-2026",
+  "map_match": "sn729f531d44",
+  "imported": "2026-11-08"
  }
 ]

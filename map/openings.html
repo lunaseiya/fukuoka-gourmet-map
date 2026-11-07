@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>福岡にこれからできるもの｜開業予定カレンダー(子連れ目線)</title>
+<meta name="description" content="福岡でこれからできる公園・商業施設・遊び場・新店を、公表資料をもとに開業時期の近い順にまとめています。子連れで行けるものと、すべてを切り替えられます。">
+<link rel="apple-touch-icon" href="../icons/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="../icons/favicon-32.png">
+<link rel="manifest" href="../manifest.json">
+<meta name="apple-mobile-web-app-title" content="福岡子育てグルメ">
+<meta name="theme-color" content="#5b4b8a">
+<!--
+  開業予定の一覧【2026-11-08 新設】。events.html と同じ作り(地図を読み込まない・同じドメイン)。
+  ⚠データは data/openings.json が正。tools/export_openings.py で map/openings.json を書き出す。
+  ⚠既定の欄は「子連れ」(子連れの一言が書けるものだけ)。「すべて」は公表資料の全件。
+    マップの子育ての軸を崩さないための線引き(2026-11-08 ユーザー確定)。
+-->
+<style>
+  :root{
+    --accent:#5b4b8a;          /* 開業予定の主色(紫)。イベントの緑・マップの赤と分ける */
+    --map-accent:#d63031;
+    --text:#222; --muted:#767676; --border:#e5e5e5;
+    --bg:#faf9f7; --card:#fff;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--text);
+    font-family:-apple-system,BlinkMacSystemFont,"Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+    line-height:1.7;-webkit-text-size-adjust:100%}
+  a{color:inherit}
+  .wrap{max-width:720px;margin:0 auto;padding:0 0 40px}
+  header{position:sticky;top:0;z-index:30;background:rgba(250,249,247,.94);
+    backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding:10px 14px 8px}
+  .top{display:flex;align-items:center;gap:10px}
+  h1{margin:0;font-size:1.02rem;font-weight:800;letter-spacing:.01em}
+  .tomap{margin-left:auto;flex:0 0 auto;font-size:.8rem;font-weight:700;text-decoration:none;
+    background:var(--map-accent);color:#fff;border-radius:999px;padding:7px 14px}
+  .range{margin:4px 0 0;font-size:.76rem;color:var(--muted)}
+  .seg{display:flex;gap:4px;margin:9px 0 0;background:#eceae6;border-radius:999px;padding:3px}
+  .seg button{flex:1;font:inherit;font-size:.84rem;font-weight:700;color:var(--muted);
+    background:transparent;border:0;border-radius:999px;padding:7px 4px;cursor:pointer}
+  .seg button[aria-pressed="true"]{background:var(--accent);color:#fff}
+  .filters{display:flex;gap:6px;overflow-x:auto;margin:8px -14px 0;padding:0 14px 2px;scrollbar-width:none}
+  .filters::-webkit-scrollbar{display:none}
+  .fb{flex:0 0 auto;font:inherit;font-size:.78rem;font-weight:700;color:var(--muted);
+    background:#fff;border:1px solid var(--border);border-radius:999px;padding:6px 13px;cursor:pointer}
+  .fb[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:#fff}
+  .fb .n{font-weight:600;opacity:.75;margin-left:3px}
+
+  .grp{padding:0 14px}
+  .ghead{display:flex;align-items:baseline;gap:9px;margin:24px 0 10px;padding-bottom:7px;border-bottom:2px solid var(--text)}
+  .gttl{font-size:1.05rem;font-weight:800}
+  .gcnt{margin-left:auto;font-size:.78rem;font-weight:700;color:var(--muted)}
+  .cards{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+  .op{background:var(--card);border:1px solid var(--border);border-radius:13px;padding:11px 12px}
+  .op.kid{border-left:4px solid var(--accent)}
+  .op.oth{border-left:4px solid #b9b5ae}
+  .ttl{font-size:.96rem;font-weight:700;line-height:1.45;margin:0 0 4px;text-wrap:pretty}
+  .tags{display:flex;flex-wrap:wrap;gap:4px;margin:0 0 5px}
+  .tag{font-size:.66rem;font-weight:700;border-radius:999px;padding:1px 8px;white-space:nowrap}
+  .t-planned{background:#ebe7f5;color:#4b3b7a}
+  .t-dated{background:#dceefc;color:#17507a}
+  .t-open{background:#e3f1ec;color:#0b5546}
+  .t-new{background:#ffb703;color:#3a2a00}
+  .t-tbd{background:#f3f1ec;color:#7a7468}
+  .t-over{background:#fbe8df;color:#c2410c}
+  .t-kind{background:#f3f1ec;color:#5a554c}
+  .when{font-size:.84rem;font-weight:700;margin:0 0 2px}
+  .when .left{font-weight:600;color:var(--muted);font-size:.74rem;margin-left:6px}
+  .meta{font-size:.78rem;color:var(--muted);margin:0}
+  .note{font-size:.8rem;margin:6px 0 0;line-height:1.6;text-wrap:pretty}
+  .kids{margin:7px 0 0;padding:7px 9px;background:#f2eefb;border:1px solid #ddd3f2;border-radius:9px}
+  .kids-h{font-size:.66rem;font-weight:800;color:#5b4b8a;margin:0 0 2px;letter-spacing:.06em}
+  .kids p{margin:0;font-size:.8rem;line-height:1.55;text-wrap:pretty}
+  .links{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0 0}
+  .lk{font-size:.72rem;font-weight:700;text-decoration:none;border-radius:999px;padding:4px 10px;white-space:nowrap}
+  .lk-map{background:var(--map-accent);color:#fff}
+  .lk-vid{background:#111;color:#fff}
+  .src{font-size:.7rem;color:var(--muted);margin:7px 0 0;line-height:1.6}
+  .src a{color:#2563a8}
+  .upd{font-size:.66rem;color:#a39d94;margin:3px 0 0}
+  .empty{padding:18px;text-align:center;color:var(--muted);font-size:.86rem;border:1px dashed var(--border);border-radius:12px}
+  footer{padding:26px 16px 10px;font-size:.72rem;color:var(--muted);line-height:1.85}
+  footer a{color:#2563a8}
+  .contact{margin:0 14px;padding:12px 14px;background:#fff;border:1px solid var(--border);border-radius:13px}
+  .contact h2{font-size:.9rem;margin:0 0 4px}
+  .contact p{margin:0;font-size:.78rem;line-height:1.7}
+  .contact .cb{display:inline-block;margin:8px 8px 0 0;font-size:.78rem;font-weight:700;text-decoration:none;
+    color:#fff;background:var(--accent);border-radius:999px;padding:7px 14px}
+</style>
+<script type="text/javascript">
+    var vc_pid = "892682809";
+</script><script type="text/javascript" src="//aml.valuecommerce.com/vcdal.js" async></script>
+<script src="../analytics.js" defer></script>
+</head>
+<body>
+<div class="wrap">
+<header>
+  <div class="top">
+    <h1>🏗 これからできるもの</h1>
+    <a class="tomap" href="./index.html">🗺 マップで見る</a>
+  </div>
+  <p class="range" id="range"></p>
+  <div class="seg" role="group" aria-label="表示の切り替え">
+    <button id="segKids" aria-pressed="true">子連れで行ける</button>
+    <button id="segAll" aria-pressed="false">すべて</button>
+  </div>
+  <div class="filters" id="filters"></div>
+</header>
+
+<main id="list"></main>
+
+<section class="contact" id="contact">
+  <h2>情報の提供・訂正はこちら</h2>
+  <p>「ここにこれができるらしい」「時期が変わった」「もう開いている」など、気づいたことを教えてください。
+     公表資料(自治体の発表・現地の標識・プレスリリース)で確認できたものから載せます。</p>
+  <a class="cb" href="https://ig.me/m/lunamasao" target="_blank" rel="noopener">Instagramで送る</a>
+  <a class="cb" href="https://www.youtube.com/@tenjinconnect" target="_blank" rel="noopener">YouTubeのコメントで送る</a>
+</section>
+
+<footer>
+  <p>時期は自治体の発表・事業者のリリース・現地の「建築計画のお知らせ」から転記しています。
+     工事の進み具合で前後するので、<b>お出かけ前に公式でご確認ください</b>。
+     「推定」と書いたものは届出からの見込みで、実際はもっと後になることが普通です。</p>
+  <p>「子連れで行ける」の欄は、子連れでどう嬉しいかが一言で書けるものだけを載せています。
+     それ以外は「すべて」の欄にあります。</p>
+  <p><a href="./index.html">福岡こそだてグルメマップに戻る</a>／<a href="./events.html">子連れイベント一覧</a></p>
+</footer>
+</div>
+
+<script>
+const esc = s => String(s==null?'':s).replace(/[&<>"']/g,
+  c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+let DOC = null, kidsOnly = true, kind = '';
+const KINDS = ['公園','遊び場','商業','飲食','施設','複合','ホテル'];
+
+function todayISO(){
+  const d = new Date();
+  return `${d.getFullYear()}-${String(d.getMonth()+1).padStart(2,'0')}-${String(d.getDate()).padStart(2,'0')}`;
+}
+
+fetch('./openings.json?d=' + todayISO()).then(r => r.json()).then(d => { DOC = d; boot(); })
+  .catch(() => { document.getElementById('list').innerHTML =
+    '<p class="empty">一覧を読み込めませんでした。時間をおいて開いてください。</p>'; });
+
+function boot(){
+  document.getElementById('range').textContent = `${DOC.items.length}件 ／ ${DOC.generated} 更新`;
+  const sk = document.getElementById('segKids'), sa = document.getElementById('segAll');
+  sk.addEventListener('click', () => { kidsOnly = true; sync(); });
+  sa.addEventListener('click', () => { kidsOnly = false; sync(); });
+  function sync(){ sk.setAttribute('aria-pressed', kidsOnly); sa.setAttribute('aria-pressed', !kidsOnly);
+    try{ localStorage.setItem('op.kids', kidsOnly ? '1':'0'); }catch(e){} render(); }
+  try{ if (localStorage.getItem('op.kids') === '0') kidsOnly = false; }catch(e){}
+  const fl = document.getElementById('filters');
+  fl.addEventListener('click', ev => {
+    const b = ev.target.closest('.fb'); if (!b) return;
+    kind = (kind === b.dataset.kind) ? '' : b.dataset.kind;
+    render();
+  });
+  sync();
+}
+
+function pass(e){
+  if (kidsOnly && !e.kids) return false;
+  if (kind && e.kind !== kind) return false;
+  return true;
+}
+
+function renderFilters(){
+  const base = DOC.items.filter(e => !kidsOnly || e.kids);
+  const cs = {};
+  base.forEach(e => { cs[e.kind] = (cs[e.kind]||0)+1; });
+  document.getElementById('filters').innerHTML = KINDS.filter(k => cs[k]).map(k =>
+    `<button class="fb" data-kind="${esc(k)}" aria-pressed="${kind === k}">${esc(k)}<span class="n">${cs[k]}</span></button>`).join('');
+}
+
+function leftText(e){
+  if (e.status === 'open') return '';
+  const d = e.days;
+  if (d < 0) return '';
+  if (d < 31) return `あと${d}日`;
+  if (d < 365) return `あと約${Math.round(d/30)}か月`;
+  return `あと約${(d/365).toFixed(1).replace(/\.0$/,'')}年`;
+}
+
+function statusTag(e){
+  if (e.status === 'open') return (e.new ? '<span class="tag t-new">NEW</span>' : '') + '<span class="tag t-open">🎉 開業済み</span>';
+  if (e.overdue) return '<span class="tag t-over">予定日を過ぎています・要確認</span>';
+  if (e.status === 'dated') return '<span class="tag t-dated">📅 時期が決まっている</span>';
+  if (e.status === 'tbd') return '<span class="tag t-tbd">時期未定</span>';
+  return '<span class="tag t-planned">🏗 工事中・計画中</span>';
+}
+
+function card(e){
+  const links = [];
+  if (e.spot) links.push(`<a class="lk lk-map" href="../s/${esc(e.spot)}.html">マップのページ →</a>`);
+  (e.videos||[]).forEach(v => { if (v.u) links.push(`<a class="lk lk-vid" href="${esc(v.u)}" target="_blank" rel="noopener">▶ ${esc(v.t)}</a>`); });
+  const srcs = (e.sources||[]).map(s => s.u
+    ? `<a href="${esc(s.u)}" target="_blank" rel="noopener">${esc(s.t)}</a>(${esc(s.d)}確認)`
+    : `${esc(s.t)}(${esc(s.d)}確認)`).join('／');
+  const kids = e.kids_note ? `<div class="kids"><p class="kids-h">子連れで</p><p>${esc(e.kids_note)}</p></div>` : '';
+  const left = leftText(e);
+  return `<li class="op ${e.kids ? 'kid' : 'oth'}" data-op="${esc(e.id)}">
+    <p class="ttl">${esc(e.name)}</p>
+    <div class="tags">${statusTag(e)}<span class="tag t-kind">${esc(e.kind)}</span></div>
+    <p class="when">${esc(e.when_text)}${left ? `<span class="left">${left}</span>` : ''}</p>
+    <p class="meta">${esc(e.city)}${e.place ? '・' + esc(e.place) : ''}</p>
+    ${e.note ? `<p class="note">${esc(e.note)}</p>` : ''}
+    ${kids}
+    ${links.length ? `<div class="links">${links.join('')}</div>` : ''}
+    ${srcs ? `<p class="src">出典: ${srcs}</p>` : ''}
+    <p class="upd">この行の更新 ${esc(e.updated)}</p>
+  </li>`;
+}
+
+function group(items){
+  const g = {open: [], soon: [], later: [], far: [], tbd: []};
+  items.forEach(e => {
+    if (e.status === 'open') g.open.push(e);
+    else if (e.status === 'tbd') g.tbd.push(e);
+    else if (e.days <= 180) g.soon.push(e);
+    else if (e.days <= 540) g.later.push(e);
+    else g.far.push(e);
+  });
+  return [
+    ['🎉 最近できた(90日以内)', g.open],
+    ['半年以内にできる', g.soon],
+    ['1年半以内にできる', g.later],
+    ['その先(2028年〜)', g.far],
+    ['時期未定', g.tbd],
+  ];
+}
+
+function render(){
+  renderFilters();
+  const items = DOC.items.filter(pass);
+  let html = '';
+  group(items).forEach(([ttl, arr]) => {
+    if (!arr.length) return;
+    html += `<section class="grp"><div class="ghead"><span class="gttl">${ttl}</span><span class="gcnt">${arr.length}件</span></div>
+      <ul class="cards">${arr.map(card).join('')}</ul></section>`;
+  });
+  document.getElementById('list').innerHTML = html ||
+    '<div class="grp"><p class="empty">条件に合うものがありませんでした。「すべて」に切り替えてみてください。</p></div>';
+}
+</script>
+</body>
+</html>

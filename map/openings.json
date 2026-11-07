@@ -1,0 +1,842 @@
+{
+ "generated": "2026-11-08",
+ "items": [
+  {
+   "id": "rec-coffee-teriha",
+   "name": "REC COFFEE アイランドシティ照葉店",
+   "kind": "飲食",
+   "city": "福岡市東区",
+   "place": "香椎照葉(照葉パビリオン)",
+   "status": "open",
+   "opened": "2026-10-31",
+   "when": "2026-10-31",
+   "when_text": "2026年10月31日 開業",
+   "note": "71席。8:00〜22:00。照葉パビリオンの駐車場が60分無料",
+   "kids_note": "子供椅子と子供用のおやつ。多目的トイレにおむつ替え台とベビーキープ",
+   "sources": [
+    {
+     "t": "PR TIMES 2026-09-04",
+     "u": "https://prtimes.jp/",
+     "d": "2026-11-02"
+    }
+   ],
+   "videos": [
+    {
+     "t": "REC COFFEE照葉(2026-11-02)",
+     "u": "https://youtube.com/shorts/587gYTKV6G0"
+    }
+   ],
+   "spot": "reccoffee-teriha",
+   "updated": "2026-11-08",
+   "kids": true,
+   "new": true,
+   "days": -8
+  },
+  {
+   "id": "tenjin-street-park",
+   "name": "ボートレース福岡 天神ストリートパーク",
+   "kind": "遊び場",
+   "city": "福岡市中央区",
+   "place": "那の津1丁目",
+   "status": "open",
+   "opened": "2026-10-30",
+   "when": "2026-10-30",
+   "when_text": "2026年10月30日 開業",
+   "note": "国内最大級の屋内スケートボード場・アートウォール・イベント広場・飲食。運営は大和リースとムラサキスポーツ",
+   "kids_note": "子供の遊び場と授乳室・おむつ替えあり。入場無料",
+   "sources": [
+    {
+     "t": "福岡市 記者発表(2026-06-23)",
+     "u": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2026/documents/20260623_boatracefukuokaniaratanapa-kugakotoshi10gatsuopen.pdf",
+     "d": "2026-10-27"
+    },
+    {
+     "t": "公式サイト",
+     "u": "https://boatracefukuoka-tenjinstreetpark.com/",
+     "d": "2026-10-14"
+    }
+   ],
+   "videos": [],
+   "spot": "boatrace-fukuoka",
+   "updated": "2026-11-08",
+   "kids": true,
+   "new": true,
+   "days": -9
+  },
+  {
+   "id": "moomin-shop-canal",
+   "name": "ムーミンショップ フクオカ(キャナルシティオーパ)",
+   "kind": "商業",
+   "city": "福岡市博多区",
+   "place": "キャナルシティ博多",
+   "status": "open",
+   "opened": "2026-10-28",
+   "when": "2026-10-28",
+   "when_text": "2026年10月28日 開業",
+   "note": "九州初上陸の6号店",
+   "kids_note": "ムーミンのグッズ店。キャナルは1階にこどものトイレ、各階の多目的トイレにおむつ交換台",
+   "sources": [
+    {
+     "t": "Dtimes",
+     "u": "https://www.dtimes.jp/",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": "canalcity_02",
+   "updated": "2026-11-08",
+   "kids": true,
+   "new": true,
+   "days": -11
+  },
+  {
+   "id": "jack-in-the-donuts-tenjin",
+   "name": "JACK IN THE DONUTS 天神地下街",
+   "kind": "飲食",
+   "city": "福岡市中央区",
+   "place": "天神地下街",
+   "status": "open",
+   "opened": "2026-10-07",
+   "when": "2026-10-07",
+   "when_text": "2026年10月7日 開業",
+   "note": "世界のドーナツ専門店。天神地下街は10月に新店が4つ",
+   "kids_note": "子供と選ぶドーナツ。地下街はベビーカーで回れる",
+   "sources": [
+    {
+     "t": "PR TIMES",
+     "u": "https://prtimes.jp/",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "new": false,
+   "days": -32
+  },
+  {
+   "id": "seiryu-park-south",
+   "name": "清流公園 南端広場",
+   "kind": "公園",
+   "city": "福岡市博多区",
+   "place": "中洲(キャナルシティ側)",
+   "status": "dated",
+   "when": "2026-12-01",
+   "when_text": "2026年12月予定",
+   "note": "南端広場と広場に面する建物(アーバンスポーツ・イベント・飲食)。北側プロムナードと橋上広場は2026年9月11日に供用開始済み",
+   "kids_note": "北側はすでに開いていて、dacō？のスタンドと川床テラスがある。南端は広場と飲食が加わる",
+   "sources": [
+    {
+     "t": "福岡市「魅力あふれる公園づくり」",
+     "u": "https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html",
+     "d": "2026-10-27"
+    },
+    {
+     "t": "博多経済新聞 2026-09-25",
+     "u": "https://hakata.keizai.biz/",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [
+    {
+     "t": "清流公園×dacō？(2026-10-30)",
+     "u": "https://youtube.com/shorts/i3ZNAcGM26c"
+    }
+   ],
+   "spot": "daco-seiryu-park",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 23,
+   "overdue": false
+  },
+  {
+   "id": "shingu-fashion-mall",
+   "name": "(仮称)新宮ファッションモール(しまむら A棟・B棟)",
+   "kind": "商業",
+   "city": "新宮町",
+   "place": "新宮町",
+   "status": "planned",
+   "when": "2026-12-28",
+   "when_text": "2026年12月頃(大店立地法の届出から推定。実際はもっと後が普通)",
+   "note": "届出者はしまむら。A棟・B棟の2棟。同グループ(アベイル・バースデイ等)かは未発表",
+   "kids_note": "バースデイ(子供服)が入れば子連れの買い物先。未発表",
+   "sources": [
+    {
+     "t": "福岡県 大店立地法(令和8年度)",
+     "u": "https://www.pref.fukuoka.lg.jp/contents/5-1shingufasshonmoru.html",
+     "d": "2026-10-14"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 50,
+   "overdue": false
+  },
+  {
+   "id": "shintencho-rebuild",
+   "name": "新天町商店街 建て替え",
+   "kind": "商業",
+   "city": "福岡市中央区",
+   "place": "天神2丁目",
+   "status": "dated",
+   "when": "2027-02-14",
+   "when_text": "2027年2月14日に感謝セレモニー。その後、各店が順に今の場所での営業を終了。新しい新天町は2030年代",
+   "note": "1946年から80年続く商店街(約100店)が建て替えで一時移転。約10店は2027年3月からソラリアステージM2F・M3Fで仮営業。からくり時計メルヘンチャイムは引き継ぐ",
+   "kids_note": "閉まる前に行くなら2027年2月まで。釜めしのビクトリアに子供椅子と子供用の食器",
+   "sources": [
+    {
+     "t": "新天町商店街商業協同組合「建替えと一時移転のお知らせ」",
+     "u": "https://www.shintencho.or.jp/pdf/relocation.pdf",
+     "d": "2026-11-03"
+    },
+    {
+     "t": "TNC 2026-08-12",
+     "u": "https://news.tnc.co.jp/news/articles/NID2026081231642",
+     "d": "2026-11-03"
+    }
+   ],
+   "videos": [
+    {
+     "t": "見納め回(2026-11-04)",
+     "u": "https://youtube.com/shorts/VtQ7ZLkWClU"
+    },
+    {
+     "t": "思い出の新天町(2026-11-08)",
+     "u": "https://youtube.com/shorts/tWZ5bWa4i2c"
+    }
+   ],
+   "spot": "victoria-kamameshi",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 98,
+   "overdue": false
+  },
+  {
+   "id": "nagatare-beach-park",
+   "name": "長垂海浜公園 リニューアル",
+   "kind": "公園",
+   "city": "福岡市西区",
+   "place": "今宿",
+   "status": "dated",
+   "when": "2027-03-01",
+   "when_text": "2027年3月",
+   "note": "海沿いの公園の整備。内容は公表資料で要確認",
+   "kids_note": "海の公園。砂浜と芝生で遊べる場所が増える見込み(要確認)",
+   "sources": [
+    {
+     "t": "フクリパ 2025-05",
+     "u": "https://fukuoka-leapup.jp/biz/202505.52246",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 113,
+   "overdue": false
+  },
+  {
+   "id": "susaki-park-2",
+   "name": "須崎公園 2期(市民会館跡)",
+   "kind": "公園",
+   "city": "福岡市中央区",
+   "place": "天神5丁目",
+   "status": "dated",
+   "when": "2027-03-01",
+   "when_text": "2027年3月",
+   "note": "旧市民会館の跡に公園が広がる。1期は供用済み",
+   "kids_note": "天神の北側に芝生の広場が広がる。拠点文化施設と一体",
+   "sources": [
+    {
+     "t": "フクリパ 2022-12",
+     "u": "https://fukuoka-leapup.jp/biz/202212.1027",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 113,
+   "overdue": false
+  },
+  {
+   "id": "karadomari-kakigoya",
+   "name": "唐泊恵比須かき小屋(新施設)",
+   "kind": "飲食",
+   "city": "福岡市西区",
+   "place": "唐泊",
+   "status": "dated",
+   "when": "2027-03-01",
+   "when_text": "2027年3月",
+   "note": "市の記者発表",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "福岡市 記者発表",
+     "u": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2026/documents/261019kakigoyaopen.pdf",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 113,
+   "overdue": false
+  },
+  {
+   "id": "kashiihama-uminoterrace",
+   "name": "香椎浜北公園 ウミノテラス(あんずカフェ)",
+   "kind": "公園",
+   "city": "福岡市東区",
+   "place": "香椎浜",
+   "status": "planned",
+   "when": "2027-03-31",
+   "when_text": "2027年3月末まで工事(現地の看板・2026年11月1日確認)。当初2026年春→秋以降→約1年延期",
+   "note": "公園のリニューアルに合わせてカフェが入る。建物はほぼできている",
+   "kids_note": "芝生と遊具の公園にカフェが入る。香椎浜はこれでカフェ3店目",
+   "sources": [
+    {
+     "t": "fuk813 香椎浜北公園リニューアル",
+     "u": "https://fuk813.jp/kashiihamanorthpark_renewal/",
+     "d": "2026-11-01"
+    }
+   ],
+   "videos": [
+    {
+     "t": "香椎浜のカフェどころ(2026-11-01)",
+     "u": "https://youtube.com/shorts/a02sr2yr7Mo"
+    }
+   ],
+   "spot": "kashiihama-kita-park",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 143,
+   "overdue": false
+  },
+  {
+   "id": "higashihirao-park-all",
+   "name": "東平尾公園 全域(山頂広場・ローラーすべり台・展望デッキ)",
+   "kind": "公園",
+   "city": "福岡市博多区",
+   "place": "東平尾公園",
+   "status": "planned",
+   "when": "2027-04-01",
+   "when_text": "2027年春",
+   "note": "大谷広場は2026年4月22日に開園済み。山頂広場とローラーすべり台が加わる",
+   "kids_note": "大谷広場(冒険のとりで)はもう遊べる。次はローラーすべり台",
+   "sources": [
+    {
+     "t": "フクリパ 2025-05",
+     "u": "https://fukuoka-leapup.jp/biz/202505.52246",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [
+    {
+     "t": "大谷広場(2026-10-25)",
+     "u": "https://youtube.com/shorts/CQ-kcjue30M"
+    }
+   ],
+   "spot": "touheiokouenootanihiroba",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 144,
+   "overdue": false
+  },
+  {
+   "id": "mitsui-outlet-fukuoka",
+   "name": "(仮称)三井アウトレットパーク福岡(マリノアシティ跡)",
+   "kind": "商業",
+   "city": "福岡市西区",
+   "place": "小戸",
+   "status": "planned",
+   "when": "2027-04-01",
+   "when_text": "2027年春",
+   "note": "約200店で九州最大。国内外ブランド・スポーツ・アウトドア・キッズ・飲食ゾーン。店名は開業2〜3か月前に一括発表が通例",
+   "kids_note": "キッズゾーンと飲食ゾーンがある。マリノアにあった観覧車は無い",
+   "sources": [
+    {
+     "t": "三井不動産 PR TIMES",
+     "u": "https://prtimes.jp/main/html/rd/p/000000940.000051782.html",
+     "d": "2026-10-14"
+    },
+    {
+     "t": "再開発調査兵団",
+     "u": "https://saitoshika-west.com/blog-entry-9786.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 144,
+   "overdue": false
+  },
+  {
+   "id": "amu-plaza-tenjin",
+   "name": "アミュプラザ天神(現VIORO)",
+   "kind": "商業",
+   "city": "福岡市中央区",
+   "place": "天神2丁目",
+   "status": "planned",
+   "when": "2027-04-01",
+   "when_text": "2027年春",
+   "note": "出店店舗第1弾(31店・九州初2店・福岡初1店)を2026年9月に発表",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "ファンファン福岡 2026-09-25",
+     "u": "https://fanfunfukuoka.nishinippon.co.jp/",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 144,
+   "overdue": false
+  },
+  {
+   "id": "jr-kashii-kaizuka-station",
+   "name": "JR貝塚駅(新駅・九州初の顔認証改札)",
+   "kind": "施設",
+   "city": "福岡市東区",
+   "place": "貝塚",
+   "status": "planned",
+   "when": "2027-04-01",
+   "when_text": "2027年春",
+   "note": "九大箱崎跡地のスマートシティに隣接。顔認証改札は博多駅でも計画",
+   "kids_note": "九大跡地の新しい街の玄関になる駅",
+   "sources": [
+    {
+     "t": "FNNプライムオンライン",
+     "u": "https://www.fnn.jp/",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 144,
+   "overdue": false
+  },
+  {
+   "id": "nishi-park-observatory",
+   "name": "西公園 中央展望広場(カフェ・展望デッキ)",
+   "kind": "公園",
+   "city": "福岡市中央区",
+   "place": "西公園",
+   "status": "dated",
+   "when": "2027-05-01",
+   "when_text": "2027年5月",
+   "note": "県営。展望デッキとカフェ",
+   "kids_note": "桜の名所に通年のカフェと展望デッキ。坂が多いのでベビーカーは要注意",
+   "sources": [
+    {
+     "t": "プランテック 2026-03-18",
+     "u": "https://plantec.co.jp/news/260318",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 174,
+   "overdue": false
+  },
+  {
+   "id": "tenjin-taiju",
+   "name": "天神大樹(エースホテル福岡・イムズ跡)",
+   "kind": "複合",
+   "city": "福岡市中央区",
+   "place": "天神1丁目",
+   "status": "dated",
+   "when": "2027-05-01",
+   "when_text": "2027年5月 竣工",
+   "note": "エースホテル福岡(192室・九州初)、manu coffee(3F)、B2〜2Fにショップ&レストラン(店名未発表)",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "トラベルWatch",
+     "u": "https://travel.watch.impress.co.jp/docs/news/2136941.html",
+     "d": "2026-10-14"
+    },
+    {
+     "t": "再開発調査兵団",
+     "u": "https://saitoshika-west.com/blog-entry-10322.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 174,
+   "overdue": false
+  },
+  {
+   "id": "shikanoshima-center",
+   "name": "志賀島センター リニューアル",
+   "kind": "施設",
+   "city": "福岡市東区",
+   "place": "志賀島",
+   "status": "tbd",
+   "when": "2027-06-01",
+   "when_text": "時期は記者発表で要確認",
+   "note": "市の記者発表(第2弾)あり",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "福岡市 記者発表",
+     "u": "https://www.city.fukuoka.lg.jp/shisei/kouhou-hodo/hodo-happyo/2026/documents/shikanosimasentarrinyuarudai2dan.pdf",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 205,
+   "overdue": false
+  },
+  {
+   "id": "fukuoka-airport-complex",
+   "name": "福岡空港 国内線複合施設(ホテル・商業フロア)",
+   "kind": "複合",
+   "city": "福岡市博多区",
+   "place": "福岡空港 国内線",
+   "status": "planned",
+   "when": "2027-07-01",
+   "when_text": "2027年夏(商業は4月頃の届出)",
+   "note": "ソラリア西鉄ホテル福岡エアポート(165室)。1Fカフェ・食品スーパー/2F土産・食べ歩き/3Fポップカルチャー/4Fアジアンフードコート。新規約180店で合計約270店",
+   "kids_note": "食べ歩きの階とフードコートができる。見送りデッキと合わせて半日遊べる",
+   "sources": [
+    {
+     "t": "トラベルWatch",
+     "u": "https://travel.watch.impress.co.jp/docs/news/1667855.html",
+     "d": "2026-10-14"
+    },
+    {
+     "t": "福岡市 大店立地法 届出",
+     "u": "https://www.city.fukuoka.lg.jp/keizai/policy_mng/business/daiten269_1.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": "fukuokaairportdomestic",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 235,
+   "overdue": false
+  },
+  {
+   "id": "higashi-fire-islandcity",
+   "name": "東消防署アイランドシティ出張所",
+   "kind": "施設",
+   "city": "福岡市東区",
+   "place": "香椎照葉",
+   "status": "planned",
+   "when": "2027-07-01",
+   "when_text": "2027年",
+   "note": "",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "note(fukunaman)",
+     "u": "https://note.com/fukunaman/n/n1e7a69a836d1",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 235,
+   "overdue": false
+  },
+  {
+   "id": "otowa-park",
+   "name": "音羽公園(森・水遊びの浅瀬・飲食6店)",
+   "kind": "公園",
+   "city": "福岡市博多区",
+   "place": "博多駅南",
+   "status": "tbd",
+   "when": "2027-12-01",
+   "when_text": "2027年冬(市の資料では時期未定)",
+   "note": "森と水遊びの浅瀬、飲食6店。博多駅から徒歩圏",
+   "kids_note": "博多駅の近くで水遊びができる公園になる。飲食6店付き",
+   "sources": [
+    {
+     "t": "TNC 2025-08-18",
+     "u": "https://news.tnc.co.jp/news/articles/NID2025081826809",
+     "d": "2026-10-27"
+    },
+    {
+     "t": "福岡市「魅力あふれる公園づくり」",
+     "u": "https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 388,
+   "overdue": false
+  },
+  {
+   "id": "habataki-park-all",
+   "name": "アイランドシティはばたき公園 全面開園",
+   "kind": "公園",
+   "city": "福岡市東区",
+   "place": "香椎照葉",
+   "status": "planned",
+   "when": "2028-03-01",
+   "when_text": "2027年度",
+   "note": "西側の芝生広場と築山が加わる",
+   "kids_note": "中央公園と同じ市の公園。今は東側だけ開いている",
+   "sources": [
+    {
+     "t": "フクリパ 2024-05",
+     "u": "https://fukuoka-leapup.jp/biz/202405.30561",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 479,
+   "overdue": false
+  },
+  {
+   "id": "hakata-shin-mitsui-bldg",
+   "name": "博多新三井ビル",
+   "kind": "複合",
+   "city": "福岡市博多区",
+   "place": "博多駅前",
+   "status": "planned",
+   "when": "2028-07-01",
+   "when_text": "2028年",
+   "note": "低層階に商業(店名未発表)。地下広場が博多駅地下街と直結・屋上ラウンジ",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "三井不動産 2026-06-03",
+     "u": "https://www.mitsuifudosan.co.jp/corporate/news/2026/0603_01/",
+     "d": "2026-10-14"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 601,
+   "overdue": false
+  },
+  {
+   "id": "fukuoka-arena",
+   "name": "(仮称)福岡アリーナ(アイランドアイ内)",
+   "kind": "施設",
+   "city": "福岡市東区",
+   "place": "香椎照葉",
+   "status": "dated",
+   "when": "2029-03-01",
+   "when_text": "2029年3月開業予定(完成は2028年12月)。2026年11月時点は杭打ち中",
+   "note": "約6,000席・VIPルーム18室・一周200mの大型ビジョン。鉄骨造4階・延べ約1万4,755㎡。設計施工は戸田建設。やずやグループの民設民営、ライジングゼファー福岡の新ホーム",
+   "kids_note": "今のアリーナ(照葉積水ハウスアリーナ)の1階には無料のキッズルームがある",
+   "sources": [
+    {
+     "t": "フクリパ 2025-10",
+     "u": "https://fukuoka-leapup.jp/biz/202510.64494",
+     "d": "2026-10-27"
+    },
+    {
+     "t": "現地の標識(建築計画のお知らせ)",
+     "u": "",
+     "d": "2026-11-04"
+    }
+   ],
+   "videos": [
+    {
+     "t": "工事中回(2026-11-05)",
+     "u": "https://youtube.com/shorts/rgtSCa-xUNc"
+    },
+    {
+     "t": "キッズルーム(2026-11-06)",
+     "u": "https://youtube.com/shorts/miVM_932EYg"
+    }
+   ],
+   "spot": "teriha-arena-kidsroom",
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 844,
+   "overdue": false
+  },
+  {
+   "id": "kyudai-hakozaki-phase1",
+   "name": "九州大学箱崎キャンパス跡地 第1期まちびらき",
+   "kind": "複合",
+   "city": "福岡市東区",
+   "place": "箱崎",
+   "status": "planned",
+   "when": "2029-03-01",
+   "when_text": "2028年度",
+   "note": "BOX FUKUOKA(イノベーション拠点)、福岡サステナブルフードパーク(食の交流施設)、ホームセンター核の商業。エディオン・ロイヤルホームセンター・イオン九州が出店",
+   "kids_note": "ホームセンターとイオンが核の商業と、食の交流施設。箱崎の家族の買い物が変わる",
+   "sources": [
+    {
+     "t": "フクリパ 2026-01",
+     "u": "https://fukuoka-leapup.jp/biz/202601.71308",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 844,
+   "overdue": false
+  },
+  {
+   "id": "imaizumi-park",
+   "name": "今泉公園(Park-PFI)",
+   "kind": "公園",
+   "city": "福岡市中央区",
+   "place": "今泉",
+   "status": "planned",
+   "when": "2029-03-01",
+   "when_text": "2028年度(2027年度着工)",
+   "note": "民間のカフェなどが入る公園に",
+   "kids_note": "天神南の小さな公園がカフェ付きに",
+   "sources": [
+    {
+     "t": "フクリパ 2026-04",
+     "u": "https://fukuoka-leapup.jp/biz/202604.76514",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 844,
+   "overdue": false
+  },
+  {
+   "id": "tenjin-center-bldg",
+   "name": "福岡天神センタービル 建替計画",
+   "kind": "複合",
+   "city": "福岡市中央区",
+   "place": "天神",
+   "status": "planned",
+   "when": "2029-03-01",
+   "when_text": "2028年度",
+   "note": "",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "再開発調査兵団",
+     "u": "https://saitoshika-west.com/blog-entry-9653.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 844,
+   "overdue": false
+  },
+  {
+   "id": "island-city-junior-high",
+   "name": "アイランドシティ 新設中学校(名称未定)",
+   "kind": "施設",
+   "city": "福岡市東区",
+   "place": "香椎照葉(照葉はばたき小の隣)",
+   "status": "planned",
+   "when": "2029-04-01",
+   "when_text": "2029年4月開校予定",
+   "note": "名称は未定",
+   "kids_note": "照葉はばたき小の隣に中学校ができる。照葉の家族には通学の情報",
+   "sources": [
+    {
+     "t": "西日本新聞",
+     "u": "https://www.nishinippon.co.jp/item/1176208/",
+     "d": "2026-10-16"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 875,
+   "overdue": false
+  },
+  {
+   "id": "intercontinental-fukuoka",
+   "name": "インターコンチネンタルホテル福岡",
+   "kind": "ホテル",
+   "city": "福岡市中央区",
+   "place": "天神",
+   "status": "planned",
+   "when": "2030-07-01",
+   "when_text": "2030年",
+   "note": "",
+   "kids_note": null,
+   "sources": [
+    {
+     "t": "再開発調査兵団",
+     "u": "https://saitoshika-west.com/blog-entry-9116.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": false,
+   "days": 1331,
+   "overdue": false
+  },
+  {
+   "id": "parco-redevelopment",
+   "name": "福岡パルコ跡地 再開発",
+   "kind": "複合",
+   "city": "福岡市中央区",
+   "place": "天神2丁目",
+   "status": "planned",
+   "when": "2031-12-01",
+   "when_text": "2027年2月で営業終了 → 2031年末に高さ110m・地上22階の複合ビル",
+   "note": "新天町と一体で建て替え。公表資料では跡地の一部が公園に",
+   "kids_note": "跡地の一部が公園予定。かっぱの泉は継承される",
+   "sources": [
+    {
+     "t": "再開発調査兵団(saitoshika-west)",
+     "u": "https://saitoshika-west.com/blog-entry-10381.html",
+     "d": "2026-10-27"
+    }
+   ],
+   "videos": [
+    {
+     "t": "見納め回(2026-11-04)",
+     "u": "https://youtube.com/shorts/VtQ7ZLkWClU"
+    }
+   ],
+   "spot": null,
+   "updated": "2026-11-08",
+   "kids": true,
+   "days": 1849,
+   "overdue": false
+  }
+ ]
+}

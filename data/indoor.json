@@ -3272,5 +3272,215 @@
   },
   "source": "https://www.hakata-riverainmall.jp/floor/",
   "checked": "2026-11-09"
+ },
+ "hakataeki": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F",
+   "10F",
+   "屋上"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "アミュプラザ 1F ハンズ側インフォメーション"
+   },
+   {
+    "floor": "3F",
+    "kind": "インフォメーション",
+    "where": "アミュプラザ 3F 博多シティ3F改札口そば"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "アミュエスト 1F デイトスサービスカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "駅構内 中央コンコース 博多駅総合案内所"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "アミュプラザ 1Fインフォメーション(無料)"
+   },
+   {
+    "floor": "3F",
+    "kind": "ベビーカー貸出",
+    "where": "アミュプラザ 3Fインフォメーション(無料)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "博多阪急 1F(無料)"
+   },
+   {
+    "floor": "7F",
+    "kind": "ベビーカー貸出",
+    "where": "博多阪急 7F(無料)"
+   },
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "アミュプラザ ハンズ側エレベーター横・お湯あり"
+   },
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "アミュプラザ 阪急側・筑紫口方面"
+   },
+   {
+    "floor": "9F",
+    "kind": "授乳室",
+    "where": "アミュプラザ くうてん ハンズ側(AED前)"
+   },
+   {
+    "floor": "10F",
+    "kind": "授乳室",
+    "where": "アミュプラザ くうてん 阪急側・筑紫口方面"
+   },
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "デイトス B1 ごはん処 アミュプラザ側通路"
+   },
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "博多阪急 7F"
+   },
+   {
+    "kind": "授乳室",
+    "where": "駅構内 阪急IC専用改札口付近(多目的トイレ横)"
+   },
+   {
+    "kind": "授乳室",
+    "where": "駅構内 筑紫口側 TiS博多支店近く"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "アミュプラザ B1〜10F(1F・2F・屋上除く)"
+   },
+   {
+    "floor": "B1",
+    "kind": "おむつ替え",
+    "where": "アミュエスト B1 アミュプラザ側"
+   },
+   {
+    "floor": "7F",
+    "kind": "おむつ替え",
+    "where": "博多阪急 7F"
+   },
+   {
+    "floor": "6F",
+    "kind": "キッズトイレ",
+    "where": "アミュプラザ 6F ハンズ側トイレ"
+   },
+   {
+    "floor": "8F",
+    "kind": "キッズトイレ",
+    "where": "アミュプラザ 8F 阪急側・筑紫口方面"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズトイレ",
+    "where": "博多阪急 7F"
+   },
+   {
+    "kind": "調乳用お湯",
+    "where": "アミュプラザ 授乳室そば(6/7/9/10F)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "アミュプラザ みんなのトイレ(1F・2F・屋上除く)"
+   },
+   {
+    "floor": "屋上",
+    "kind": "キッズスペース",
+    "where": "アミュプラザ 屋上 天空の広場(三輪車無料)"
+   },
+   {
+    "floor": "屋上",
+    "kind": "キッズスペース",
+    "where": "アミュプラザ 屋上 つばめの杜ひろば 列車展望"
+   },
+   {
+    "floor": "10F",
+    "kind": "キッズスペース",
+    "where": "アミュプラザ くうてん10F VIVISTOP HAKATA"
+   },
+   {
+    "floor": "9F",
+    "kind": "レストラン街",
+    "where": "アミュプラザ くうてん 9F"
+   },
+   {
+    "floor": "10F",
+    "kind": "レストラン街",
+    "where": "アミュプラザ くうてん 10F"
+   },
+   {
+    "floor": "2F",
+    "kind": "レストラン街",
+    "where": "デイトス 2F 博多めん街道(ラーメン)"
+   },
+   {
+    "floor": "B1",
+    "kind": "レストラン街",
+    "where": "デイトス B1 博多のごはん処"
+   },
+   {
+    "floor": "1F",
+    "kind": "レストラン街",
+    "where": "デイトス 1F 博多ほろよい通り"
+   },
+   {
+    "floor": "B1",
+    "kind": "レストラン街",
+    "where": "博多1番街 B1(14店)"
+   },
+   {
+    "floor": "B1",
+    "kind": "レストラン街",
+    "where": "地下街 博多口側B1 グルメ店舗"
+   }
+  ],
+  "tenants": {
+   "hakataraamenshinshin-03": "2F",
+   "mohikanraamenajiikkahaka-22": "2F",
+   "ippuudouhakataekimise-83": "10F",
+   "raamenjinanbouhakatadeitosum": "2F",
+   "meishimateihakatadeitosu": "2F",
+   "spd486e8fa57": "B1",
+   "sp19ddf55ac7": "2F",
+   "sp3bcb788ba2": "2F",
+   "sp7d9c16af25": "B1",
+   "spfc270b5004": "2F",
+   "sp226480b37f": "2F",
+   "nagahamano1_deitos": "2F",
+   "kanetora_deitos": "2F",
+   "darma_deitos": "2F",
+   "ikkousha_deitos": "2F",
+   "tsukiya_deitos": "2F",
+   "naoto_deitos": "2F",
+   "tsubamenomori-hirobajrhakatacity": "屋上",
+   "kuten-jrhakatacity": "9F",
+   "hpceb190a9f4": "9F",
+   "nintendo-fukuoka": "8F",
+   "ig4c1ab8f5ce": "9F"
+  },
+  "source": "https://www.jrhakatacity.com/information/service/ / https://www.jrhakatacity.com/floor/floorguide/ / https://www.jrhakatacity.com/kids/ / https://www.hakata-1bangai.com/floorguide/ / https://www.e-ekichika.com/floormap/ / https://www.jrkyushu.co.jp/railway/station/1191771_1601.html",
+  "checked": "2026-11-09"
  }
 }

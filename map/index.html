@@ -1038,6 +1038,14 @@
   .in-photos { display: flex; gap: 6px; overflow-x: auto; margin: 6px 0; }
   .in-photos img { height: 88px; border-radius: 8px; flex: none; }
   .in-note { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin: 10px 0; }
+  /* 簡易フロア図(公式図を写さず、位置関係だけ自前で描いたSVG・2026-11-09) */
+  .in-plan { margin: 4px auto 0; max-width: 560px; border: 1px solid var(--border); border-radius: 12px; overflow: hidden; background: #fff; }
+  .in-plan svg { display: block; width: 100%; height: auto; touch-action: manipulation; }
+  .in-plan svg .fp-ic, .in-plan svg .fp-pin { cursor: pointer; }
+  .in-plan-bar { display: flex; align-items: center; gap: 8px; margin: 6px 0 2px; }
+  .in-plan-cap { flex: 1; font-size: 12.5px; line-height: 1.45; min-height: 18px; color: #333; }
+  .in-plan-zoom { flex: none; border: 1px solid var(--border); background: #fff; border-radius: 999px; padding: 5px 11px; font-size: 12px; }
+  .in-legend { display: flex; flex-wrap: wrap; gap: 4px 10px; font-size: 11px; color: var(--muted); margin: 2px 0 6px; }
   .in-empty { font-size: 13px; color: var(--muted); padding: 16px 2px; }
   .indoor-btn {
     display: block; width: calc(100% - 24px); margin: 8px 12px 4px; padding: 11px 12px;
@@ -2927,8 +2935,10 @@ window.addEventListener("hashchange", openFromHash);
 //   ・位置情報の許可は開いた瞬間には求めない(断られると二度と聞けない)。許可済みの人だけ黙って取り、
 //     館内モードのある施設の近くなら小さな案内を出す(×か8秒で消える)
 const INDOOR_URL = "../data/indoor.json";
+const PLANS_URL = "../data/indoor_plans.json";
 const Indoor = (() => {
   let conf = {};          // indoor.json
+  let plans = {};         // indoor_plans.json(簡易フロア図の座標)
   let facs = null;        // 館内モードを持つ施設の一覧(spots 読み込み後に作る)
   let myPos = null;       // {lat, lng, acc}
   let cur = null, curTab = null;
@@ -2939,6 +2949,10 @@ const Indoor = (() => {
       const r = await fetch(INDOOR_URL + "?d=" + new Date().toISOString().slice(0, 10));
       if (r.ok) conf = await r.json();
     } catch (e) { conf = {}; }
+    try {
+      const r2 = await fetch(PLANS_URL + "?d=" + new Date().toISOString().slice(0, 10));
+      if (r2.ok) plans = await r2.json();
+    } catch (e) { plans = {}; }
     facs = null;
   }
 
@@ -3092,12 +3106,117 @@ const Indoor = (() => {
       <span class="cl-tags">${tags}</span></button>`;
   }
 
+  // ===== 簡易フロア図(SVG)【2026-11-09ユーザー「文章では視覚的でない。図は見にくい？」→ 試作】 =====
+  //   公式の館内図はなぞらない。建物の外形・主なブロック・設備アイコン・登録店のピンだけを
+  //   自前の色とアイコンで描く(座標は data/indoor_plans.json。0〜w × 0〜h の自由単位)
+  const PLAN_FILL = { anchor: "#ffe1bd", shop: "#eef1f6", food: "#ffd9d4", kids: "#d6f2dc", service: "#dfe9ff",
+                      corridor: "#fbfaf7", parking: "#ececec", outdoor: "#e3f3e5", station: "#e6e3ff" };
+  const PLAN_LEGEND = [["anchor", "大型店"], ["food", "飲食"], ["kids", "遊び場"], ["station", "駅・改札"], ["shop", "お店"]];
+  function planSvg(P) {
+    const W = P.w || 1000, H = P.h || 600, k = Math.max(W, H) / 1000, e = escapeHtml;
+    let s = `<svg viewBox="0 0 ${W} ${H}" xmlns="http://www.w3.org/2000/svg" font-family="'Hiragino Sans','Noto Sans JP','Meiryo',sans-serif">`;
+    s += `<rect x="0" y="0" width="${W}" height="${H}" fill="#fff"/>`;
+    if (P.outline && P.outline.length > 2)
+      s += `<polygon points="${P.outline.map(q => q.join(",")).join(" ")}" fill="#f7f4ef" stroke="#b9b2a6" stroke-width="${4 * k}"/>`;
+    if (P.hl) s += `<rect x="${P.hl.x}" y="${P.hl.y}" width="${P.hl.w}" height="${P.hl.h}" fill="#fff1a8" stroke="#f0b400" stroke-width="${3 * k}" rx="${8 * k}"/>`;
+    (P.areas || []).forEach(a => {
+      const dash = a.type === "corridor" ? ` stroke-dasharray="${10 * k} ${6 * k}"` : "";
+      s += `<rect x="${a.x}" y="${a.y}" width="${a.w}" height="${a.h}" rx="${8 * k}" fill="${PLAN_FILL[a.type] || PLAN_FILL.shop}" stroke="#c9c4ba" stroke-width="${2 * k}"${dash}/>`;
+      if (a.label) {
+        const L = [...a.label].length;
+        const fs = Math.max(13 * k, Math.min(34 * k, a.w / (L * 1.05), a.h * 0.42));
+        s += `<text x="${a.x + a.w / 2}" y="${a.y + a.h / 2}" font-size="${fs.toFixed(1)}" text-anchor="middle" dominant-baseline="central" fill="#5a544b" font-weight="700">${e(a.label)}</text>`;
+      }
+    });
+    (P.texts || []).forEach(t => {   // 地下街のブロック内の店名など(タップで店へ)
+      s += `<text class="fp-pin" data-sid="${e(t.id)}" x="${t.x}" y="${t.y}" font-size="${t.fs || 17}" fill="#b71c1c" font-weight="700" dominant-baseline="central">● ${e(t.text)}</text>`;
+    });
+    (P.labels || []).forEach(l => {
+      s += `<text x="${l.x}" y="${l.y}" font-size="${l.fs || 19 * k}" text-anchor="middle" dominant-baseline="central" fill="#8a7f70" font-weight="700" paint-order="stroke" stroke="#fff" stroke-width="${5 * k}">${e(l.text)}</text>`;
+    });
+    const pins = P.pins || [];
+    pins.forEach(p => {
+      const sp = state.spots.find(x => x.id === p.id); if (!sp) return;
+      // 近くに別のピンが3つ以上あるときは名前を出さない(めん街道・フードコートのように密集して読めなくなるため)
+      const crowd = pins.filter(q => q !== p && Math.hypot(q.x - p.x, q.y - p.y) < 70 * k).length >= 2;
+      const nm = [...(sp.name || "").replace(/[\s(（].*$/, "")].slice(0, 8).join("");
+      s += `<g class="fp-pin" data-sid="${e(p.id)}"><circle cx="${p.x}" cy="${p.y}" r="${11 * k}" fill="#e53935" stroke="#fff" stroke-width="${3 * k}"/>` +
+           (crowd ? "" : `<text x="${p.x}" y="${p.y - 20 * k}" font-size="${17 * k}" text-anchor="middle" fill="#b71c1c" font-weight="700" paint-order="stroke" stroke="#fff" stroke-width="${4 * k}">${e(nm)}</text>`) + `</g>`;
+    });
+    (P.icons || []).forEach((c, i) => {
+      // エレベーターは目立たせない小さな灰色の「EV」(🛗 は古い端末で豆腐になる)
+      if (/エレベ/.test(c.kind)) {
+        s += `<g class="fp-ic" data-i="${i}"><rect x="${c.x - 15 * k}" y="${c.y - 11 * k}" width="${30 * k}" height="${22 * k}" rx="${4 * k}" fill="#8d8d8d"/>` +
+             `<text x="${c.x}" y="${c.y + 1}" font-size="${14 * k}" text-anchor="middle" dominant-baseline="central" fill="#fff" font-weight="700">EV</text></g>`;
+        return;
+      }
+      s += `<g class="fp-ic" data-i="${i}"><circle cx="${c.x}" cy="${c.y}" r="${24 * k}" fill="#fff" stroke="#222" stroke-width="${3 * k}"/>` +
+           `<text x="${c.x}" y="${c.y + 1}" font-size="${28 * k}" text-anchor="middle" dominant-baseline="central">${AM_ICON(c.kind)}</text></g>`;
+    });
+    return s + "</svg>";
+  }
+  // 地下街は通路の形が単純なので、手持ちのデータ(番街・東西・設備の場所)から自動で描く
+  function ugPlan(f) {
+    const c = f.conf.corridor, n = c.n, W = 600, top = 80, segH = 104, H = top + n * segH + 70;
+    const col = { "西": { x: 40, w: 230 }, "東": { x: 330, w: 230 } };
+    const P = { w: W, h: H, areas: [], labels: [], texts: [], icons: [] };
+    P.labels.push({ x: W / 2, y: 26, text: "↑ 天神駅側(北)", fs: 22 });
+    P.labels.push({ x: W / 2, y: H - 26, text: "↓ 天神南駅側(南)", fs: 22 });
+    P.labels.push({ x: col["西"].x + col["西"].w / 2, y: top - 22, text: "西の通り", fs: 20 });
+    P.labels.push({ x: col["東"].x + col["東"].w / 2, y: top - 22, text: "東の通り", fs: 20 });
+    if (myPos && hereText(f)) {
+      const loc = ugLocate(c, myPos);
+      P.hl = { x: 8, y: top + (loc.n - 1) * segH, w: W - 16, h: segH };
+    }
+    for (let i = 1; i <= n; i++) {
+      const y = top + (i - 1) * segH;
+      ["西", "東"].forEach(sd => P.areas.push({ x: col[sd].x, y: y + 3, w: col[sd].w, h: segH - 6, type: "shop" }));
+      P.labels.push({ x: W / 2, y: y + segH / 2, text: i + "番街", fs: 17 });
+    }
+    // 店名はブロックの中に縦に並べる(東西が不明な店は空いている方へ)
+    const slot = {};
+    f.kids.forEach(s => {
+      const b = ugBlockOf(s); if (!b) return;
+      let sd = b.side;
+      if (!sd) { const a = (slot[b.n + "西"] || 0), z = (slot[b.n + "東"] || 0); sd = a <= z ? "西" : "東"; }
+      const key = b.n + sd, j = slot[key] = (slot[key] || 0) + 1;
+      const nm = [...(s.name || "").replace(/(天神地下街店?|\s.*$)/g, "")].slice(0, 9).join("");
+      P.texts.push({ id: s.id, x: col[sd].x + 10, y: top + (b.n - 1) * segH + 4 + j * 19, text: nm, fs: 16 });
+    });
+    (f.conf.amenities || []).forEach(a => {
+      const m = (a.where || "").match(/([東西])?(\d{1,2})番街/); if (!m) return;
+      const sd = m[1] || "西", y = top + (Number(m[2]) - 0.5) * segH;
+      P.icons.push({ x: col[sd].x + col[sd].w - 26, y, kind: a.kind, label: `${a.kind}: ${a.where}` });   // 東西不明は西の通りの端に置く(中央の「◯番街」を隠さない)
+    });
+    return P;
+  }
+  function planBlock(P, caption) {
+    const svg = planSvg(P);
+    return `<div class="in-plan" id="inPlan">${svg}</div>
+      <div class="in-plan-bar"><span class="in-plan-cap" id="inPlanCap">${escapeHtml(caption || "アイコンをタップすると説明が出ます")}</span>
+      <button class="in-plan-zoom" id="inPlanZoom" type="button">🔍 拡大</button></div>
+      <div class="in-legend">${PLAN_LEGEND.map(([t, l]) => `<span><span style="display:inline-block;width:10px;height:10px;border-radius:2px;background:${PLAN_FILL[t]};border:1px solid #c9c4ba;vertical-align:-1px"></span> ${l}</span>`).join("")}<span>🔴 登録しているお店</span></div>`;
+  }
+  function bindPlan(P) {
+    const box = document.getElementById("inPlan"); if (!box) return;
+    box.querySelectorAll(".fp-ic").forEach(g => g.addEventListener("click", () => {
+      const c = P.icons[Number(g.dataset.i)];
+      document.getElementById("inPlanCap").textContent = `${AM_ICON(c.kind)} ${c.label || c.kind}`;
+    }));
+    document.getElementById("inPlanZoom").addEventListener("click", () =>
+      Lightbox.open("data:image/svg+xml;charset=utf-8," + encodeURIComponent(planSvg(P))));
+  }
+
   function renderTab() {
     const f = cur, body = document.getElementById("inBody");
     const groups = groupsOf(f);
     document.querySelectorAll("#inTabs .in-tab").forEach(b => b.classList.toggle("active", b.dataset.tab === curTab));
-    let html = "";
-    if (curTab === "__am") {
+    let html = "", planP = null;
+    if (curTab === "__plan") {
+      planP = ugPlan(f);
+      html += planBlock(planP, planP.hl ? "黄色の帯が今いるあたりです。お店の名前をタップすると詳しく見られます" : "お店の名前をタップすると詳しく見られます");
+      html += `<div class="in-note">番街の並びと東西は天神地下街の案内をもとにした目安の図です(縮尺は正確ではありません)。</div>`;
+    } else if (curTab === "__am") {
       const A = amenities(f);
       const photos = (f.spot && f.spot.photos) || [];
       if (A.length) {
@@ -3109,6 +3228,15 @@ const Indoor = (() => {
     } else {
       const g = groups.find(x => x.key === curTab);
       const items = g ? g.items : [];
+      const FP = plans[f.id] && plans[f.id][curTab];
+      if (FP) {
+        planP = FP;
+        html += planBlock(FP);
+        const am = amenities(f).filter(a => a.floor === curTab);
+        if (am.length) html += `<div class="in-sec-title">この階の子連れ設備</div><ul class="in-am">` +
+          am.map(a => `<li><span class="ic">${AM_ICON(a.kind)}</span><span>${escapeHtml(a.text)}</span></li>`).join("") + "</ul>";
+        html += `<div class="in-sec-title">この階のお店</div>`;
+      }
       html += items.length ? items.map(s => {
         let extra = "";
         if (f.kind === "ug") { const b = ugBlockOf(s); extra = b ? (b.side ? b.side : "") + b.n + "番街" : ""; }
@@ -3119,6 +3247,7 @@ const Indoor = (() => {
     else if (f.kind !== "ug") html += `<div class="in-note">お店の階は登録情報から読んでいます(読めないものは「階不明」)。</div>`;
     body.innerHTML = html;
     body.scrollTop = 0;
+    if (planP) bindPlan(planP);
     body.querySelectorAll("[data-sid]").forEach(b => b.addEventListener("click", () => {
       const s = state.spots.find(x => x.id === b.dataset.sid);
       close();
@@ -3143,17 +3272,21 @@ const Indoor = (() => {
     document.getElementById("inActs").innerHTML = acts.join("");
     const groups = groupsOf(f);
     const hasAm = f.kind !== "ug" || (f.conf.amenities || []).length;
-    const tabs = (hasAm ? [{ key: "__am", label: "👶 子連れ設備" }] : [])
-      .concat(groups.map(g => ({ key: g.key, label: g.key, n: g.items.length })));
+    // 階のタブ = お店のある階 + 図のある階(お店が無くても授乳室だけある階がある)
+    const fp = plans[f.id] || {};
+    const keys = groups.map(g => g.key);
+    Object.keys(fp).forEach(k => { if (!keys.includes(k)) keys.push(k); });
+    if (f.kind !== "ug") keys.sort((a, b) => FLOOR_ORDER(a) - FLOOR_ORDER(b));
+    const tabs = (f.kind === "ug" ? [{ key: "__plan", label: "🗺 全体図" }] : [])
+      .concat(hasAm ? [{ key: "__am", label: "👶 子連れ設備" }] : [])
+      .concat(keys.map(k => { const g = groups.find(x => x.key === k); return { key: k, label: (fp[k] ? "🗺 " : "") + k, n: g ? g.items.length : 0 }; }));
     document.getElementById("inTabs").innerHTML = tabs.map(t =>
       `<button class="in-tab" data-tab="${escapeHtml(t.key)}" type="button">${escapeHtml(t.label)}${t.n ? `<span class="n">${t.n}</span>` : ""}</button>`).join("");
     // 最初のタブ: 地下街は今いる番街(分かれば)、施設は子連れ設備
     curTab = tabs.length ? tabs[0].key : null;
-    if (f.kind === "ug" && myPos) {
-      const loc = ugLocate(f.conf.corridor, myPos);
-      const k = groups.map(g => g.key).sort((a, b) => Math.abs(parseInt(a) - loc.n) - Math.abs(parseInt(b) - loc.n))[0];
-      if (k && hereText(f)) curTab = k;
-    }
+    // 図がある施設は、図のある階(1F優先)から開く。地下街は全体図(今いる番街を黄色で示す)
+    const fpKeys = Object.keys(fp).sort((a, b) => FLOOR_ORDER(a) - FLOOR_ORDER(b));
+    if (f.kind !== "ug" && fpKeys.length) curTab = fp["1F"] ? "1F" : fpKeys[0];
     document.querySelectorAll("#inTabs .in-tab").forEach(b => b.addEventListener("click", () => { curTab = b.dataset.tab; renderTab(); }));
     document.getElementById("inMapBtn").addEventListener("click", () => {
       close();

@@ -998,6 +998,71 @@
   #detail.open { display: block; transform: none; }
   #detail .detail-grip { display: none; }
   #list { padding: 8px 0 12px; }
+  /* ===== ★館内モード【2026-11-09ユーザー要望】 =====
+     大型施設(モール・空港・地下街)に入ったとき「どこに何があるか」を全画面で見る。
+     公式の館内図は複製しない。階・場所・設備という事実を data/indoor.json に持って一覧で出す */
+  #indoor {
+    position: fixed; inset: 0; z-index: 65; background: #fff;
+    display: none; flex-direction: column;
+  }
+  #indoor.open { display: flex; }
+  .in-head {
+    display: flex; align-items: center; gap: 8px;
+    padding: calc(10px + env(safe-area-inset-top)) 12px 8px; border-bottom: 1px solid var(--border);
+  }
+  .in-head h2 { flex: 1; font-size: 16px; margin: 0; font-weight: 700; line-height: 1.3; }
+  .in-close { border: 0; background: #f1f1f1; border-radius: 999px; width: 34px; height: 34px; font-size: 16px; }
+  .in-here { margin: 8px 12px 0; padding: 8px 10px; border-radius: 10px; background: #e8f1ff; color: #1d4f91; font-size: 12.5px; line-height: 1.5; }
+  .in-acts { display: flex; gap: 6px; flex-wrap: wrap; padding: 8px 12px 0; }
+  .in-act {
+    border: 1px solid var(--border); background: #fff; border-radius: 999px;
+    padding: 6px 12px; font-size: 12.5px; color: inherit; text-decoration: none;
+  }
+  .in-tabs { display: flex; gap: 6px; overflow-x: auto; padding: 10px 12px 8px; -webkit-overflow-scrolling: touch; }
+  .in-tab {
+    flex: none; padding: 7px 13px; border-radius: 999px; border: 1px solid var(--border);
+    background: #fff; font-size: 13px; color: inherit;
+  }
+  .in-tab.active { background: #222; color: #fff; border-color: #222; }
+  .in-tab .n { font-size: 11px; opacity: .7; margin-left: 3px; }
+  .in-body { flex: 1; overflow-y: auto; padding: 0 12px calc(20px + env(safe-area-inset-bottom)); -webkit-overflow-scrolling: touch; }
+  .in-sec-title { font-size: 12px; color: var(--muted); font-weight: 700; margin: 12px 0 6px; }
+  .in-am { list-style: none; margin: 0; padding: 0; }
+  .in-am li {
+    display: flex; gap: 8px; align-items: flex-start; padding: 9px 2px; border-bottom: 1px solid #f0f0f0;
+    font-size: 13.5px; line-height: 1.5;
+  }
+  .in-am .fl { flex: none; min-width: 34px; text-align: center; font-size: 11.5px; font-weight: 700; background: #222; color: #fff; border-radius: 6px; padding: 2px 5px; }
+  .in-am .fl.unk { background: #bbb; }
+  .in-am .ic { flex: none; }
+  .in-photos { display: flex; gap: 6px; overflow-x: auto; margin: 6px 0; }
+  .in-photos img { height: 88px; border-radius: 8px; flex: none; }
+  .in-note { font-size: 11.5px; color: var(--muted); line-height: 1.6; margin: 10px 0; }
+  .in-empty { font-size: 13px; color: var(--muted); padding: 16px 2px; }
+  .indoor-btn {
+    display: block; width: calc(100% - 24px); margin: 8px 12px 4px; padding: 11px 12px;
+    border: 0; border-radius: 12px; background: #222; color: #fff; font-size: 14px; font-weight: 700; text-align: center;
+  }
+  .indoor-btn small { display: block; font-weight: 400; font-size: 11px; opacity: .8; margin-top: 2px; }
+  .cl-item.cl-indoor { background: #222; color: #fff; }
+  .cl-item.cl-indoor .cl-genre { color: #ddd; }
+  /* 現在地の近くの施設を知らせる小さな案内(選ばなければ消える) */
+  #indoorToast {
+    position: fixed; left: 10px; right: 10px; z-index: 55; max-width: 520px; margin: 0 auto;
+    display: flex; align-items: center; gap: 8px;
+    background: #fff; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.18);
+    padding: 10px 10px 10px 12px; font-size: 13px; line-height: 1.45;
+  }
+  #indoorToast[hidden] { display: none; }
+  #indoorToast .it-text { flex: 1; }
+  #indoorToast .it-go { flex: none; border: 0; background: #222; color: #fff; border-radius: 999px; padding: 8px 12px; font-size: 13px; font-weight: 700; }
+  #indoorToast .it-x { flex: none; border: 0; background: transparent; font-size: 16px; color: #888; padding: 4px; }
+  /* 地下街の番街ラベル(地図を寄せたときだけ) */
+  .ug-label {
+    font-size: 10.5px; font-weight: 700; color: #7a4b00; background: rgba(255, 236, 196, .92);
+    border: 1px solid #f0c060; border-radius: 6px; padding: 1px 5px; white-space: nowrap; pointer-events: none;
+  }
+  #map:not(.z-deep) .ug-label { display: none; }
 </style>
 <!-- バリューコマース LinkSwitch: ページ内の提携先生URL(食べログ等)を自動でアフィリエイトリンクに変換 -->
 <script type="text/javascript" language="javascript">
@@ -1119,6 +1184,23 @@
     <button class="cl-close" id="clusterClose" aria-label="閉じる">✕</button>
   </div>
   <div id="clusterList"></div>
+</div>
+
+<div id="indoor" role="dialog" aria-label="館内モード">
+  <div class="in-head">
+    <h2 id="inTitle"></h2>
+    <button class="in-close" id="inClose" type="button" aria-label="閉じる">✕</button>
+  </div>
+  <div id="inHere" class="in-here" hidden></div>
+  <div class="in-acts" id="inActs"></div>
+  <div class="in-tabs" id="inTabs"></div>
+  <div class="in-body" id="inBody"></div>
+</div>
+
+<div id="indoorToast" hidden>
+  <span class="it-text" id="itText"></span>
+  <button class="it-go" id="itGo" type="button">見る</button>
+  <button class="it-x" id="itX" type="button" aria-label="閉じる">✕</button>
 </div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-label="写真を拡大表示">
@@ -1864,10 +1946,16 @@ function openDetail(spot) {
       <div class="dc-title">関連スポット(同チェーン等)</div>
       ${relatedSpots.map(c => { const v = c.video || {}; const hasV = v.youtube || v.tiktok || v.instagram; return `<button class="dc-item" data-jump="${escapeHtml(c.id)}"><span>${escapeHtml(c.name)}${hasV ? " 🎬動画あり" : ""}</span><span class="dc-genre">${escapeHtml(c.genre || "")}</span></button>`; }).join("")}
     </div>` : "";
+  // 館内モード(施設そのもの・施設内の店・地下街の店)への入口(2026-11-09)
+  const indoorFac = Indoor.forSpot(spot);
+  const indoorHtml = indoorFac
+    ? `<button class="indoor-btn" id="indoorOpenBtn" data-fid="${escapeHtml(indoorFac.id)}" type="button">${indoorFac.kind === "ug" ? "🚇" : "🏬"} ${escapeHtml(indoorFac.name)}の館内を見る<small>${indoorFac.kind === "ug" ? "番街ごとのお店" : "授乳室・おむつ替えの場所と、お店の階"}</small></button>`
+    : "";
   detail.innerHTML = `
     <div class="detail-grip"></div>
     <button class="detail-close" id="detailClose">✕</button>
     <div class="card">${cardHtml(spot)}</div>
+    ${indoorHtml}
     ${photosHtml}
     ${childrenHtml}
     ${relatedHtml}
@@ -1882,6 +1970,8 @@ function openDetail(spot) {
   try { window.icTrack && window.icTrack("spot_open", { spot: spot.name, id: spot.id, city: spot.city || "" }); } catch (e) {}
   try { window.showA2hs && window.showA2hs("detail"); } catch (e) {}
   document.getElementById("detailClose").addEventListener("click", closeDetail);
+  const ib = document.getElementById("indoorOpenBtn");
+  if (ib) ib.addEventListener("click", () => Indoor.open(ib.dataset.fid));
   bindJumpLinks(detail);
   detail.querySelectorAll("[data-photo]").forEach(el => {
     el.addEventListener("click", (e) => {
@@ -2068,7 +2158,7 @@ function focusSpot(spot) {
   openDetail(spot);
   if (spot.lat !== null && spot.lng !== null && spot.lat !== undefined && spot.lng !== undefined && window._map) {
     // シートが下半分を覆うので、ピンが見える上半分の真ん中に来るよう上へずらす(offset は一時的で padding と違い残らない)
-    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: 15, essential: true, offset: [0, -Math.round(window.innerHeight * 0.2)] });
+    window._map.flyTo({ center: [spot.lng, spot.lat], zoom: Indoor.focusZoom(spot) || 15, essential: true, offset: [0, -Math.round(window.innerHeight * 0.2)] });
   }
 }
 
@@ -2444,7 +2534,14 @@ function showClusterList(items, facility) {
          </span>
        </button>`
     : "";
-  document.getElementById("clusterList").innerHTML = facilityRow + items
+  const indoorF = sameParent ? Indoor.forSpot(parent) : null;
+  const indoorRow = indoorF
+    ? `<button class="cl-item cl-indoor" data-indoor="${escapeHtml(indoorF.id)}" type="button">
+         <span class="cl-top"><span class="cl-name">🏬 館内モードで見る</span><span class="cl-genre">全画面</span></span>
+         <span class="cl-tags"><span class="cl-tag">授乳室・おむつ替え・お店の階</span></span>
+       </button>`
+    : "";
+  document.getElementById("clusterList").innerHTML = indoorRow + facilityRow + items
     // 動画あり > 訪問済み > 子連れOK を上に。同条件ならジャンル順
     .slice().sort((a, b) => {
       const sc = s => {
@@ -2471,6 +2568,7 @@ function showClusterList(items, facility) {
         <span class="cl-tags">${tags}</span>
       </button>`;
     }).join("");
+  box.querySelectorAll("[data-indoor]").forEach(b => b.addEventListener("click", () => { box.classList.remove("open"); Indoor.open(b.dataset.indoor); }));
   box.querySelectorAll("[data-cid]").forEach(b => {
     b.addEventListener("click", () => {
       const sp = state.spots.find(x => x.id === b.dataset.cid);
@@ -2513,6 +2611,7 @@ function initMap(spots) {
           type: "raster",
           tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
           tileSize: 256,
+          maxzoom: 19,   // OSMのタイルは19まで。それより寄せたら19を拡大して使う(地下街・館内を深く寄せるため 2026-11-09)
           attribution: "&copy; OpenStreetMap contributors"
         }
       },
@@ -2521,7 +2620,8 @@ function initMap(spots) {
       ]
     },
     center: center,
-    zoom: 8.7
+    zoom: 8.7,
+    maxZoom: 21    // 地下街の店を1軒ずつ見分けられるところまで寄せる(2026-11-09)
   });
   map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
   // 現在地ボタン(Googleマップ風。押すと現在地へ移動+青ドット表示)
@@ -2533,6 +2633,8 @@ function initMap(spots) {
   });
   map.addControl(geolocate, "top-right");
   window._map = map;
+  // 現在地が取れたら、館内モードのある施設の近くか見る(近ければ小さな案内を出す・2026-11-09)
+  geolocate.on("geolocate", e => { try { Indoor.onPosition(e.coords); } catch (err) {} });
 
   // ズーム/移動のたびにまとめ直す(寄れば自然にピンがほどける)
   let _reMark = null;
@@ -2543,8 +2645,15 @@ function initMap(spots) {
 
   map.on("load", () => {
     renderAll();
-    // 開いた時に現在地を中央へ(位置情報が許可されている場合のみ。拒否時は福岡全域表示のまま)
-    try { geolocate.trigger(); } catch (e) {}
+    try { Indoor.drawUnderground(map); } catch (e) { console.warn(e); }
+    // 開いた時に現在地を中央へ。⚠**許可済みの人だけ**(2026-11-09): 開いた瞬間に許可を求めると
+    //   断られやすく、一度断られると二度と聞けない。まだの人は📍ボタンを押したときに聞く。
+    //   Permissions API が無いブラウザは従来どおり trigger する
+    (async () => {
+      let st = null;
+      try { st = navigator.permissions && (await navigator.permissions.query({ name: "geolocation" })).state; } catch (e) {}
+      if (st === null || st === "granted") { try { geolocate.trigger(); } catch (e) {} }
+    })();
   });
   map.on("click", (e) => {
     // 地図の空きエリアタップで詳細カードを閉じる
@@ -2809,7 +2918,337 @@ window.addEventListener("hashchange", openFromHash);
   });
 })();
 
+// ===== ★館内モード + 地下街 + 現在地の案内【2026-11-09ユーザー要望】 =====
+//   「大型施設に入ったら、館内のどこに何があるか(おむつ替え・授乳室・お店)を全画面で見たい」
+//   「地下街はピンが1か所に固まって、今どこの番街にいるか分からない」
+//   ・館内図の画像は公式のものを複製しない(著作権)。公式のフロアマップで確かめた
+//     「何階のどこに何があるか」という事実を data/indoor.json に持ち、階ごとの一覧で出す
+//   ・GPS は建物内で誤差20〜50m・階は取れない。施設の中か近くか/地下街の何番街あたりか、までに留める
+//   ・位置情報の許可は開いた瞬間には求めない(断られると二度と聞けない)。許可済みの人だけ黙って取り、
+//     館内モードのある施設の近くなら小さな案内を出す(×か8秒で消える)
+const INDOOR_URL = "../data/indoor.json";
+const Indoor = (() => {
+  let conf = {};          // indoor.json
+  let facs = null;        // 館内モードを持つ施設の一覧(spots 読み込み後に作る)
+  let myPos = null;       // {lat, lng, acc}
+  let cur = null, curTab = null;
+  const shownToast = new Set();
+
+  async function load() {
+    try {
+      const r = await fetch(INDOOR_URL + "?d=" + new Date().toISOString().slice(0, 10));
+      if (r.ok) conf = await r.json();
+    } catch (e) { conf = {}; }
+    facs = null;
+  }
+
+  // 階の並び。「本館1F」「別館2F」「東館B2」のような棟つきの階は、棟ごとにまとめてから階順にする
+  const FLOOR_ORDER = f => {
+    f = f || "";
+    const bld = /別館|東館|新館|アネックス/.test(f) ? 100 : /別棟|西館|南館|北館/.test(f) ? 200 : 0;
+    const m = /B(\d)/.exec(f); if (m) return bld - Number(m[1]);
+    const n = /M?(\d+)F/.exec(f); if (n) return bld + Number(n[1]) + (/M\d/.test(f) ? 0.5 : 0);
+    if (/RF|屋上/.test(f)) return bld + 50;
+    if (/屋外/.test(f)) return bld + 60;
+    return bld + 99;
+  };
+  // 店の階をテキストから読む(B101 のような区画番号は拾わない)
+  function floorOf(s) {
+    const t = [s.name, s.area, s.memo, s.verdict].filter(Boolean).join(" ");
+    let m = t.match(/(?:地下|B)([1-3])(?:F|Ｆ|階)?(?![0-9０-９])/);
+    if (m) return "B" + m[1];
+    m = t.match(/([1-9])\s*(?:F|Ｆ|階)(?![a-zA-Z])/);
+    if (m) return m[1] + "F";
+    return null;
+  }
+
+  function dist(a, b) {   // m
+    const R = 6371000, toR = Math.PI / 180;
+    const dLat = (b.lat - a.lat) * toR, dLng = (b.lng - a.lng) * toR;
+    const x = Math.sin(dLat / 2) ** 2 + Math.cos(a.lat * toR) * Math.cos(b.lat * toR) * Math.sin(dLng / 2) ** 2;
+    return 2 * R * Math.asin(Math.sqrt(x));
+  }
+
+  // 地下街: 番街 n(1始まり)の中心。side は "東"/"西"/null
+  function ugPoint(c, n, side) {
+    const k = n - 1;
+    let lat = c.start[0] + c.step[0] * k, lng = c.start[1] + c.step[1] * k;
+    if (side && c.sides && c.sides[side]) { lat += c.sides[side][0]; lng += c.sides[side][1]; }
+    return { lat, lng };
+  }
+  function ugBlockOf(s) {
+    const m = [s.memo, s.verdict, s.name].filter(Boolean).join(" ").match(/([東西])?([0-9０-９]{1,2})番街/);
+    if (!m) return null;
+    const n = Number(m[2].replace(/[０-９]/g, d => "０１２３４５６７８９".indexOf(d)));
+    return { n, side: m[1] || null };
+  }
+  // 地下街の中心線へ射影して「何番街あたり」と、線からの距離を返す
+  function ugLocate(c, p) {
+    let best = null;
+    for (let i = 0; i < c.n; i++) {
+      for (let f = -0.5; f <= 0.5; f += 0.1) {
+        const q = { lat: c.start[0] + c.step[0] * (i + f), lng: c.start[1] + c.step[1] * (i + f) };
+        const d = dist(p, q);
+        if (!best || d < best.d) best = { d, n: i + 1 };
+      }
+    }
+    return best;
+  }
+
+  function list() {
+    if (facs) return facs;
+    facs = [];
+    const spots = state.spots;
+    const byParent = {};
+    spots.forEach(s => { if (s.in) (byParent[s.in] = byParent[s.in] || []).push(s); });
+    spots.forEach(p => {
+      const kids = byParent[p.id] || [];
+      const c = conf[p.id];
+      if (kids.length >= 3 || p.floormap || c) {
+        if (p.lat == null || p.lng == null) return;
+        facs.push({ id: p.id, kind: "mall", name: p.name, spot: p, kids, conf: c || {},
+                    lat: p.lat, lng: p.lng, radius: (c && c.radius) || 200 });
+      }
+    });
+    Object.keys(conf).filter(k => conf[k].kind === "ug").forEach(k => {
+      const c = conf[k];
+      const kids = spots.filter(s => (c.match && c.match.area && s.area === c.match.area));
+      const mid = ugPoint(c.corridor, (c.corridor.n + 1) / 2, null);
+      facs.push({ id: k, kind: "ug", name: c.name, spot: null, kids, conf: c, lat: mid.lat, lng: mid.lng, radius: c.radius || 60 });
+    });
+    return facs;
+  }
+  function byId(id) { return list().find(f => f.id === id) || null; }
+  // そのスポットを含む館内モード(施設そのもの・施設内の店・地下街の店)
+  function forSpot(s) {
+    const L = list();
+    return L.find(f => f.spot && f.spot.id === s.id)
+        || (s.in && L.find(f => f.spot && f.spot.id === s.in))
+        || L.find(f => f.kind === "ug" && f.kids.some(k => k.id === s.id))
+        || null;
+  }
+
+  function hereText(f) {
+    if (!myPos) return "";
+    if (f.kind === "ug") {
+      const loc = ugLocate(f.conf.corridor, myPos);
+      if (loc.d > f.radius + Math.min(myPos.acc || 0, 80)) return "";
+      return `📍 今は <b>${loc.n}番街あたり</b>にいるようです(誤差±${Math.round(myPos.acc || 0)}m・地下は大きくずれることがあります)`;
+    }
+    const d = dist(myPos, f);
+    if (d > f.radius + Math.min(myPos.acc || 0, 80)) return "";
+    return "📍 今この施設の中か近くにいるようです(何階かまでは位置情報では分かりません)";
+  }
+
+  const AM_ICON = k => /授乳|ベビー|赤ちゃん|調乳/.test(k) ? "🍼" : /おむつ/.test(k) ? "🚼" : /トイレ/.test(k) ? "🚻"
+    : /遊|キッズ|プレイ|パーク/.test(k) ? "🧸" : /フードコート|食/.test(k) ? "🍽" : /カート|ベビーカー/.test(k) ? "🛒"
+    : /エレベ/.test(k) ? "🛗" : /駐車/.test(k) ? "🅿" : /案内|インフォ/.test(k) ? "ℹ" : "・";
+
+  function amenities(f) {
+    const A = (f.conf.amenities || []).map(a => ({ floor: a.floor || null, text: a.where ? `${a.kind}: ${a.where}` : a.kind, kind: a.kind }));
+    if (!A.length && f.spot) {
+      // indoor.json が無い施設は、施設の説明文から子連れ設備の文だけ拾う(階は書いてあれば読む)
+      const parts = [f.spot.verdict, ...(f.spot.points || [])].filter(Boolean).join("。").split(/[。\n]/);
+      const seen = new Set();
+      parts.forEach(t => {
+        t = t.replace(/^[⭐⚠\s]+/, "").trim();
+        if (!t || t.length < 4 || seen.has(t)) return;
+        if (!/授乳|おむつ|ベビー|赤ちゃん|調乳|キッズ|遊び|パーク|トイレ|カート|ベビーカー|子供椅子|子ども椅子/.test(t)) return;
+        seen.add(t);
+        const m = t.match(/(?:地下|B)([1-3])(?:F|階)|([1-9])\s*(?:F|階)/);
+        A.push({ floor: m ? (m[1] ? "B" + m[1] : m[2] + "F") : null, text: t, kind: t });
+      });
+    }
+    return A;
+  }
+
+  function groupsOf(f) {
+    const G = {};
+    if (f.kind === "ug") {
+      f.kids.forEach(s => {
+        const b = ugBlockOf(s); const key = b ? b.n + "番街" : "その他";
+        (G[key] = G[key] || []).push(s);
+      });
+      return Object.keys(G).sort((a, b) => (parseInt(a) || 99) - (parseInt(b) || 99)).map(k => ({ key: k, items: G[k] }));
+    }
+    const ov = f.conf.tenants || {};
+    f.kids.forEach(s => {
+      const fl = ov[s.id] || floorOf(s) || "階不明";
+      (G[fl] = G[fl] || []).push(s);
+    });
+    return Object.keys(G).sort((a, b) => FLOOR_ORDER(a) - FLOOR_ORDER(b)).map(k => ({ key: k, items: G[k] }));
+  }
+
+  function rowHtml(s, extra) {
+    const v = s.video || {};
+    const tags = [
+      extra ? `<span class="cl-tag">${escapeHtml(extra)}</span>` : "",
+      isKidsTop(s) ? `<span class="cl-tag t-kids">🌟子連れ大歓迎</span>` : kidsLevelOf(s) === 2 ? `<span class="cl-tag t-kids">子連れ歓迎</span>` : kidsLevelOf(s) === 1 ? `<span class="cl-tag t-kids1">子連れ可</span>` : "",
+      (v.youtube || v.tiktok || v.instagram) ? `<span class="cl-tag t-video">🎬 動画あり</span>` : "",
+      s.wish ? "" : `<span class="cl-tag t-visited">🔴 訪問済み</span>`
+    ].join("");
+    return `<button class="cl-item" data-sid="${escapeHtml(s.id)}" type="button">
+      <span class="cl-top"><span class="cl-name">${escapeHtml(s.name)}</span><span class="cl-genre">${escapeHtml(s.genre || "")}</span></span>
+      <span class="cl-tags">${tags}</span></button>`;
+  }
+
+  function renderTab() {
+    const f = cur, body = document.getElementById("inBody");
+    const groups = groupsOf(f);
+    document.querySelectorAll("#inTabs .in-tab").forEach(b => b.classList.toggle("active", b.dataset.tab === curTab));
+    let html = "";
+    if (curTab === "__am") {
+      const A = amenities(f);
+      const photos = (f.spot && f.spot.photos) || [];
+      if (A.length) {
+        A.sort((a, b) => FLOOR_ORDER(a.floor || "zz") - FLOOR_ORDER(b.floor || "zz"));
+        html += `<div class="in-sec-title">子連れ設備${f.conf.amenities ? "(公式フロアマップで確認)" : "(現地で確認した内容から)"}</div><ul class="in-am">` +
+          A.map(a => `<li><span class="fl${a.floor ? "" : " unk"}">${escapeHtml(a.floor || "—")}</span><span class="ic">${AM_ICON(a.kind)}</span><span>${escapeHtml(a.text)}</span></li>`).join("") + "</ul>";
+      } else html += `<div class="in-empty">子連れ設備の場所はまだ調べ中です。</div>`;
+      if (photos.length) html += `<div class="in-sec-title">現地の写真</div><div class="in-photos">${photos.map(p => `<img src="photos/${escapeHtml(p)}" data-photo="${escapeHtml(p)}" loading="lazy" alt="">`).join("")}</div>`;
+    } else {
+      const g = groups.find(x => x.key === curTab);
+      const items = g ? g.items : [];
+      html += items.length ? items.map(s => {
+        let extra = "";
+        if (f.kind === "ug") { const b = ugBlockOf(s); extra = b ? (b.side ? b.side : "") + b.n + "番街" : ""; }
+        return rowHtml(s, extra);
+      }).join("") : `<div class="in-empty">登録されているお店はまだありません。</div>`;
+    }
+    if (f.conf.source) html += `<div class="in-note">階と場所は ${escapeHtml(f.conf.checked || "")} に公式のフロアマップで確認しました。改装で変わることがあるので、現地の案内も見てください。</div>`;
+    else if (f.kind !== "ug") html += `<div class="in-note">お店の階は登録情報から読んでいます(読めないものは「階不明」)。</div>`;
+    body.innerHTML = html;
+    body.scrollTop = 0;
+    body.querySelectorAll("[data-sid]").forEach(b => b.addEventListener("click", () => {
+      const s = state.spots.find(x => x.id === b.dataset.sid);
+      close();
+      if (!s) return;
+      if (applyFilters(state.spots).some(x => x.id === s.id)) focusSpot(s); else jumpToSpot(s);
+    }));
+    body.querySelectorAll("[data-photo]").forEach(img => img.addEventListener("click", () => Lightbox.open("photos/" + img.dataset.photo)));
+  }
+
+  function open(id) {
+    const f = byId(id); if (!f) return;
+    cur = f;
+    hideToast();
+    document.getElementById("inTitle").textContent = (f.kind === "ug" ? "🚇 " : "🏬 ") + f.name + " の館内";
+    const here = hereText(f), hereEl = document.getElementById("inHere");
+    hereEl.hidden = !here; hereEl.innerHTML = here;
+    const acts = [];
+    const fm = (f.spot && f.spot.floormap) || f.conf.floormap;
+    if (fm) acts.push(`<a class="in-act" href="${escapeHtml(fm)}" target="_blank" rel="noopener">🗺 公式のフロアマップ ↗</a>`);
+    acts.push(`<button class="in-act" id="inMapBtn" type="button">📍 地図で見る</button>`);
+    if (f.spot) acts.push(`<button class="in-act" id="inInfoBtn" type="button">ℹ 施設の情報</button>`);
+    document.getElementById("inActs").innerHTML = acts.join("");
+    const groups = groupsOf(f);
+    const hasAm = f.kind !== "ug" || (f.conf.amenities || []).length;
+    const tabs = (hasAm ? [{ key: "__am", label: "👶 子連れ設備" }] : [])
+      .concat(groups.map(g => ({ key: g.key, label: g.key, n: g.items.length })));
+    document.getElementById("inTabs").innerHTML = tabs.map(t =>
+      `<button class="in-tab" data-tab="${escapeHtml(t.key)}" type="button">${escapeHtml(t.label)}${t.n ? `<span class="n">${t.n}</span>` : ""}</button>`).join("");
+    // 最初のタブ: 地下街は今いる番街(分かれば)、施設は子連れ設備
+    curTab = tabs.length ? tabs[0].key : null;
+    if (f.kind === "ug" && myPos) {
+      const loc = ugLocate(f.conf.corridor, myPos);
+      const k = groups.map(g => g.key).sort((a, b) => Math.abs(parseInt(a) - loc.n) - Math.abs(parseInt(b) - loc.n))[0];
+      if (k && hereText(f)) curTab = k;
+    }
+    document.querySelectorAll("#inTabs .in-tab").forEach(b => b.addEventListener("click", () => { curTab = b.dataset.tab; renderTab(); }));
+    document.getElementById("inMapBtn").addEventListener("click", () => {
+      close();
+      const z = f.kind === "ug" ? 18.3 : 17.5;
+      window._map && window._map.flyTo({ center: [f.lng, f.lat], zoom: z, essential: true, offset: [0, -Math.round(window.innerHeight * 0.2)] });
+    });
+    const ib = document.getElementById("inInfoBtn");
+    if (ib) ib.addEventListener("click", () => { close(); jumpToSpot(f.spot); });
+    renderTab();
+    document.getElementById("indoor").classList.add("open");
+    try { window.icTrack && window.icTrack("indoor_open", { id: f.id }); } catch (e) {}
+  }
+  function close() { document.getElementById("indoor").classList.remove("open"); }
+  document.getElementById("inClose").addEventListener("click", close);
+
+  // ---- 現在地 → 近くの施設の案内 ----
+  let toastTimer = null, toastFac = null;
+  function hideToast() { document.getElementById("indoorToast").hidden = true; clearTimeout(toastTimer); }
+  function showToast(f) {
+    if (document.getElementById("indoor").classList.contains("open")) return;
+    toastFac = f;
+    let msg;
+    if (f.kind === "ug") {
+      const loc = ugLocate(f.conf.corridor, myPos);
+      msg = `<b>${escapeHtml(f.name)}</b>(${loc.n}番街あたり)にいますか？ 近くのお店を見られます`;
+    } else msg = `<b>${escapeHtml(f.name)}</b>にいますか？ 授乳室・おむつ替えとお店の階を見られます`;
+    document.getElementById("itText").innerHTML = msg;
+    const t = document.getElementById("indoorToast");
+    const h = document.querySelector("header");
+    t.style.top = ((h ? h.getBoundingClientRect().bottom : 60) + 8) + "px";
+    t.hidden = false;
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(hideToast, 8000);
+    try { window.icTrack && window.icTrack("indoor_toast", { id: f.id }); } catch (e) {}
+  }
+  document.getElementById("itGo").addEventListener("click", () => { if (toastFac) open(toastFac.id); });
+  document.getElementById("itX").addEventListener("click", hideToast);
+
+  function onPosition(c) {
+    myPos = { lat: c.latitude, lng: c.longitude, acc: c.accuracy || 0 };
+    if (!state.spots.length) return;
+    let best = null;
+    list().forEach(f => {
+      const d = f.kind === "ug" ? ugLocate(f.conf.corridor, myPos).d : dist(myPos, f);
+      const lim = f.radius + Math.min(myPos.acc, 80);
+      if (d <= lim && (!best || d < best.d)) best = { f, d };
+    });
+    if (!best || shownToast.has(best.f.id)) return;
+    let seen = null;
+    try { seen = sessionStorage.getItem("indoorToast_" + best.f.id); } catch (e) {}
+    if (seen) return;
+    shownToast.add(best.f.id);
+    try { sessionStorage.setItem("indoorToast_" + best.f.id, "1"); } catch (e) {}
+    showToast(best.f);
+  }
+
+  // ---- 地下街の通路を地図に重ねる(寄せたときだけ) ----
+  function drawUnderground(map) {
+    const feats = [];
+    Object.keys(conf).filter(k => conf[k].kind === "ug").forEach(k => {
+      const c = conf[k].corridor;
+      const sides = c.sides ? Object.keys(c.sides) : [null];
+      sides.forEach(side => {
+        const a = ugPoint(c, 0.5, side), b = ugPoint(c, c.n + 0.5, side);
+        feats.push({ type: "Feature", properties: { name: conf[k].name }, geometry: { type: "LineString", coordinates: [[a.lng, a.lat], [b.lng, b.lat]] } });
+        for (let n = 1; n <= c.n; n++) {
+          const p = ugPoint(c, n, side);
+          const el = document.createElement("div");
+          el.className = "ug-label";
+          el.textContent = (side || "") + n + "番街";
+          new maplibregl.Marker({ element: el, anchor: side === "西" ? "right" : "left" })
+            .setLngLat([p.lng + (side === "西" ? -0.00006 : 0.00006), p.lat]).addTo(map);
+        }
+      });
+    });
+    if (!feats.length) return;
+    map.addSource("ug", { type: "geojson", data: { type: "FeatureCollection", features: feats } });
+    map.addLayer({ id: "ug-line", type: "line", source: "ug", minzoom: 15.5,
+      paint: { "line-color": "#f0a020", "line-opacity": 0.55,
+               "line-width": ["interpolate", ["linear"], ["zoom"], 15.5, 3, 18, 10, 20, 34] },
+      layout: { "line-cap": "round" } });
+    const sync = () => document.getElementById("map").classList.toggle("z-deep", map.getZoom() >= 17.3);
+    map.on("zoomend", sync); sync();
+  }
+  // 地下街の店は寄せたときに深く寄る
+  function focusZoom(s) {
+    const f = list().find(x => x.kind === "ug" && x.kids.some(k => k.id === s.id));
+    return f ? 18.6 : null;
+  }
+
+  return { load, open, close, forSpot, byId, onPosition, drawUnderground, focusZoom, reset: () => { facs = null; } };
+})();
+
 (async function main() {
+  await Indoor.load();
   const spots = await loadSpots();
   state.spots = spots;
   populateAreaSelect(spots);

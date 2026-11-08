@@ -1,0 +1,3276 @@
+{
+ "ug-tenjin": {
+  "kind": "ug",
+  "name": "天神地下街",
+  "match": {
+   "area": "天神地下街"
+  },
+  "radius": 60,
+  "floormap": "https://platinumaps.jp/d/tenchika?floor=B1",
+  "corridor": {
+   "start": [
+    33.5914514,
+    130.3984093
+   ],
+   "step": [
+    -0.0003455,
+    0.000263
+   ],
+   "n": 12,
+   "sides": {
+    "東": [
+     3.88e-05,
+     7.26e-05
+    ],
+    "西": [
+     -3.88e-05,
+     -7.26e-05
+    ]
+   }
+  },
+  "note": "番街の位置は1番街(北・天神駅側)〜12番街(南・天神南駅側)を等間隔で置いた近似。渡辺通りの真下に合わせて西へ約10m寄せ、東西の通りは約16m離した(2026-11-09 地図タイルで目視調整)。店は番街の中で少しずつずらして重ならないようにしている",
+  "floors": [
+   "B1"
+  ],
+  "amenities": [
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "12番街"
+   },
+   {
+    "floor": "B1",
+    "kind": "多目的トイレ",
+    "where": "西6番街"
+   },
+   {
+    "floor": "B1",
+    "kind": "多目的トイレ",
+    "where": "東9番街"
+   },
+   {
+    "floor": "B1",
+    "kind": "多目的トイレ",
+    "where": "12番街"
+   },
+   {
+    "floor": "B1",
+    "kind": "インフォメーション",
+    "where": "3番街 インフォメーション広場"
+   },
+   {
+    "floor": "B1",
+    "kind": "エレベーター",
+    "where": "東西8番街 石積みの広場"
+   }
+  ],
+  "source": "https://www.tenchika.com/service/child/",
+  "checked": "2026-11-09"
+ },
+ "aeonmallomuta": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃんルーム",
+    "where": "センターコート北・146オンワード横(遊び場あり)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんルーム",
+    "where": "213ドリームカプセル横(エレベーター近く)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんルーム",
+    "where": "南端・吹きぬけ横トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "センターコート北・143アエナ横"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "ありあけコート北・グルメストリート奥"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "イーストフロア・222カーブス横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "213ドリームカプセル横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "南端・吹きぬけ横トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "調乳用お湯",
+    "where": "赤ちゃんルーム内(調乳用温水器)"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "ありあけコート南(キッズコーナーあり)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "218押し花めぐり〜226ハニーズ前"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "ありあけコート「めぶきの森」"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "センターコート"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー・キッズカート貸出",
+    "where": "センターコート・ありあけコート等"
+   }
+  ],
+  "source": "https://omuta.aeonmall.jp/floormap",
+  "checked": "2026-11-09"
+ },
+ "aeonmallsanko": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "ベビールーム",
+    "where": "レストラン街・135ビスヌ横"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビールーム",
+    "where": "イオン2Fベビー服・おもちゃ売場横"
+   },
+   {
+    "floor": "1F",
+    "kind": "こどもトイレ",
+    "where": "7番入口・リバースペース横"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "もくいくひろば(121ダイソー前)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(104湖月堂横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "218イオンカード受付横"
+   }
+  ],
+  "tenants": {
+   "hp2d2a669e25": "1F"
+  },
+  "source": "https://sankoh.aeonmall.jp/floormap",
+  "checked": "2026-11-09"
+ },
+ "yumetownhikarinomori": {
+  "kind": "mall",
+  "floors": [
+   "本館1F",
+   "本館2F",
+   "南館1F",
+   "南館2F",
+   "南館3F"
+  ],
+  "amenities": [
+   {
+    "floor": "本館2F",
+    "kind": "赤ちゃんの部屋",
+    "where": "正面入口エレベーター横・リトルプラネット前"
+   },
+   {
+    "floor": "南館1F",
+    "kind": "授乳室",
+    "where": "バス停側入口・パウダールーム横"
+   },
+   {
+    "floor": "南館2F",
+    "kind": "授乳室",
+    "where": "フードコート東端・マクドナルド横"
+   },
+   {
+    "floor": "南館2F",
+    "kind": "フードコート",
+    "where": "南館2F中央〜東側"
+   },
+   {
+    "floor": "本館2F",
+    "kind": "キッズスペース",
+    "where": "ゆめキッズ内の無料遊び場"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "インフォメーション",
+    "where": "北入口横サービスカウンター"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "多目的トイレ",
+    "where": "北入口・正面入口・レストラン街入口"
+   },
+   {
+    "floor": "本館2F",
+    "kind": "多目的トイレ",
+    "where": "北側・リトルプラネット横・LEPSIM横"
+   }
+  ],
+  "tenants": {
+   "littleplanethikarinomori": "本館2F"
+  },
+  "source": "https://www.izumi.jp/tenpo/hikarinomori/floor",
+  "checked": "2026-11-09"
+ },
+ "spd7472685b2": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんの部屋",
+    "where": "赤のエレベーター前・ファミリースタジオ横"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "3F中央・赤のエレベーター側"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "食品館入口横サービスカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "赤のエレベーター横・正面入口近く"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "緑のエレベーター近く"
+   }
+  ],
+  "tenants": {
+   "hpd00ee5feee": "1F"
+  },
+  "source": "https://www.izumi.jp/tenpo/beppu/floor",
+  "checked": "2026-11-09"
+ },
+ "aeononojo": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳スペース",
+    "where": "東側・ドコモショップ横トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳スペース",
+    "where": "西側・イオン薬局横トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳スペース",
+    "where": "東側・35エステティックTBC横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳スペース",
+    "where": "西側・57マックハウス横"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳スペース",
+    "where": "東側・64モーリーファンタジー横"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃん休憩室",
+    "where": "イオン3Fベビー用品売場横"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "食料品レジ横サービスカウンター"
+   }
+  ],
+  "tenants": {
+   "onojo-mollyfantasy": "3F",
+   "onojo-saizeriya": "1F",
+   "onojo-omuraisutei": "1F",
+   "onojo-yayoiken": "1F",
+   "onojo-suraj": "1F",
+   "onojo-nokoudon": "1F",
+   "onojo-mcdonalds": "1F",
+   "onojo-misterdonut": "1F",
+   "onojo-baskinrobbins": "1F"
+  },
+  "source": "https://tenpo.aeon-kyushu.info/detail/onojo/",
+  "checked": "2026-11-09"
+ },
+ "oita-airport": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "国内線到着口〜国際線手荷物受取所の間"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "到着ロビー側の女性トイレ(ベビーベッド)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "到着ロビー・総合案内所"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "国内線出発ロビー西側キッズコーナー"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "出発ロビー西・キッズコーナー横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "搭乗待合室内・3C搭乗口横"
+   }
+  ],
+  "source": "https://www.oita-airport.jp/guide/floormap.html",
+  "checked": "2026-11-09"
+ },
+ "amuplazaoita": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "8F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "乳幼児施設",
+    "where": "東側トイレ(ユナイテッドアローズ横)"
+   },
+   {
+    "floor": "3F",
+    "kind": "乳幼児施設",
+    "where": "東側トイレ(ユニクロ横)"
+   },
+   {
+    "floor": "3F",
+    "kind": "乳幼児施設",
+    "where": "フードコート奥トイレ(ハンズ側)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "フードコート奥(授乳設備)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "フードコート奥トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "アミュのフードコート(中エスカ北)"
+   },
+   {
+    "floor": "4F",
+    "kind": "乳幼児施設",
+    "where": "中エレベーター横トイレ(タイトー側)"
+   },
+   {
+    "floor": "4F",
+    "kind": "授乳室",
+    "where": "中エレベーター横(授乳設備)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "おおいた駅横・中エスカレーター付近"
+   }
+  ],
+  "source": "https://www.jroitacity.jp/floor/",
+  "checked": "2026-11-09"
+ },
+ "nagasakisutajiamushitei-17": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F",
+   "10F",
+   "11F",
+   "12F",
+   "13F",
+   "14F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "サウス(ショッピングモール)2F・おむつ台"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ノース(オフィスビル)2F・おむつ台"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ホテル棟2F・おむつ台"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ハピネスアリーナ2F・おむつ台"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "ピーススタジアム3F・おむつ台"
+   },
+   {
+    "floor": "8F",
+    "kind": "キッズスペース",
+    "where": "サウス8F 英進館こども知育広場"
+   },
+   {
+    "floor": "12F",
+    "kind": "キッズスペース",
+    "where": "ノース屋上テラス(人工芝広場)"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "サウス インフォメーションセンター"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "ノース インフォメーションセンター"
+   }
+  ],
+  "source": "https://platinumaps.jp/d/nagasakistadiumcity",
+  "checked": "2026-11-09"
+ },
+ "kumamotokuukou": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "案内所(団体カウンター横・B〜C出入口間)"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "D出入口近くのトイレ内(マツモトキヨシ側)"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "A出入口西側のトイレ(派出所横)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "搭乗待合エリア内(保安検査後)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "キッズコーナー(搭乗待合室内・出発客のみ)"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "国内線搭乗待合エリア内(保安検査後)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "1F・3Fの各トイレに多機能トイレ"
+   }
+  ],
+  "source": "https://www.kumamoto-airport.co.jp/map-terminal-building/ ; https://www.kumamoto-airport.co.jp/facilities/",
+  "checked": "2026-11-09"
+ },
+ "aeonmallnogata": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(イオン食品入口側)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "モクイクひろば(3〜6歳)チューリップコート寄り"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "チューリップコート近くのトイレ(QBハウス横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "チューリップコート近くのトイレ(ベビーシート)"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "モールインフォメーション(2F中央・吹抜横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ベビールーム(イオンスタイル2Fベビー売場横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ベビールーム(ライトオン近くのトイレ)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "こどものあそびば(3歳以下)リリーコート横"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "フードフォレスト(2F北側)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各階トイレに優先トイレ(オストメイト)"
+   }
+  ],
+  "source": "https://nogata.aeonmall.jp/floormap (フロアガイドPDF 2026.10.16現在)",
+  "checked": "2026-11-09"
+ },
+ "aeonmallmiyazaki": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "モールインフォメーション(セントラルコート)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(イオン食品側入口)"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(レストランコート・紅虎餃子房付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(イオン北モール2Fベビー売場)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(ソフトバンク近くのトイレ横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(セイハ英語学院付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "デジタルあそび場(イオン北モール2F)"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "フードフォレスト(2F中央)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各階トイレに多機能トイレ"
+   }
+  ],
+  "tenants": {
+   "inucaferio_aeonmiyazaki": "2F",
+   "hp1467828731": "1F"
+  },
+  "source": "https://miyazaki.aeonmall.jp/floormap (フロアマップPDF 20260913更新)",
+  "checked": "2026-11-09"
+ },
+ "yumetownyamaguchi": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(食品レジ横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(西側入口近くのトイレ横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "西側入口近く"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "1F南側(フードコート入口)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(東側エレベーター近く)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "子供の遊び場(駄菓子ゆめ横丁横)"
+   }
+  ],
+  "source": "https://www.izumi.jp/tenpo/yamaguchi/floor (フロアガイドPDF 2026.10)",
+  "checked": "2026-11-09"
+ },
+ "amuplazakagoshima": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "本館AMU広場側インフォメーション"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "本館インフォメーションで無料貸出"
+   },
+   {
+    "floor": "B1",
+    "kind": "キッズトイレ",
+    "where": "本館B1F こどもといれ"
+   },
+   {
+    "floor": "6F",
+    "kind": "キッズトイレ",
+    "where": "本館6F こどもといれ"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "本館ベビールーム(授乳・おむつ替え・給湯)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "本館ベビールーム(授乳・おむつ替え・給湯)"
+   },
+   {
+    "floor": "5F",
+    "kind": "授乳室",
+    "where": "本館ベビールーム(女性専用・給湯あり)"
+   },
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "プレミアム館ベビールーム(給湯あり)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "本館全フロア・プレミアム館3F/7F"
+   }
+  ],
+  "tenants": {
+   "katsuju-amuplaza": "B1",
+   "hpe40510656e": "5F"
+  },
+  "source": "https://www.jrkagoshimacity.com/information/service/ ; https://www.jrkagoshimacity.com/floor/floorguide/",
+  "checked": "2026-11-09"
+ },
+ "spf96f99af73": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(食品レジ前・ゆめ広場横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんの部屋(ブルーのエレベーター近く)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "キッズパーク(子供服売場横)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各階トイレ横(オストメイト対応)"
+   }
+  ],
+  "source": "https://www.izumi.jp/tenpo/nakatsu/floor (フロアガイドPDF 2026.9)",
+  "checked": "2026-11-09"
+ },
+ "yumetownchikushino": {
+  "kind": "mall",
+  "floors": [
+   "本館1F",
+   "本館2F",
+   "別館1F",
+   "別館2F",
+   "別棟"
+  ],
+  "amenities": [
+   {
+    "floor": "本館1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(飲食街入口近く)"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "フードコート",
+    "where": "Kitchen Terrace(飲食街入口側)"
+   },
+   {
+    "floor": "本館2F",
+    "kind": "授乳室",
+    "where": "授乳室・赤ちゃん休憩室(アカチャンホンポ横)"
+   },
+   {
+    "floor": "本館2F",
+    "kind": "キッズスペース",
+    "where": "無料遊び場(子供服売場横)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "本館1F・2F南側トイレ横"
+   }
+  ],
+  "tenants": {
+   "ytchikushino-namco": "本館2F",
+   "ytchikushino-akachanhonpo": "本館2F",
+   "ytchikushino-namasteboss": "本館1F",
+   "ytchikushino-okonomi1banchi": "本館1F",
+   "ytchikushino-komeda": "別棟",
+   "ytchikushino-graindor": "本館1F",
+   "ytchikushino-torimotto": "本館1F",
+   "ytchikushino-baskinrobbins": "本館1F",
+   "ytchikushino-pizzahut": "本館1F",
+   "ytchikushino-misterdonut": "本館1F",
+   "ytchikushino-mcdonalds": "本館1F",
+   "ytchikushino-sanmi": "本館1F",
+   "ytchikushino-osakaohsho": "本館1F",
+   "ytchikushino-hanamaru": "本館1F",
+   "ytchikushino-shouya": "本館1F",
+   "ytchikushino-takamotoya": "別棟",
+   "ytchikushino-cocoichi": "別棟",
+   "ytchikushino-omuraisutei": "本館1F",
+   "ytchikushino-taiyaki": "本館1F"
+  },
+  "source": "https://www.izumi.jp/tenpo/chikushino/floor (フロアガイドPDF 2026.9)",
+  "checked": "2026-11-09"
+ },
+ "theoutletskitakyushu": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "F-SITE フードフォレスト北側(1922付近)"
+   },
+   {
+    "floor": "1F",
+    "kind": "離乳食室",
+    "where": "F-SITE フードフォレスト北側(1922付近)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "F-SITE フードフォレスト北側(1922付近)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "D-SITE 1701・1711付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "E-SITE 1814・1831付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "F-SITE FOOD FOREST"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "G-SITE 3001(マジックミシン横)"
+   }
+  ],
+  "tenants": {
+   "sp3c07c7fde2": "1F",
+   "spacelabo-kitakyushu": "1F",
+   "masumoto-theoutletskitakyushu": "1F",
+   "curryhonpo-theoutletskitakyushu": "1F",
+   "asoble-theoutletskitakyushu": "1F",
+   "ippudo-theoutletskitakyushu": "1F",
+   "outlets-fc-umaru": "1F",
+   "outlets-fc-inabaudon": "1F",
+   "outlets-fc-elborracho": "1F",
+   "outlets-fc-tsunoshima": "1F",
+   "outlets-fc-steakhouse88jr": "1F",
+   "outlets-fc-dipperdan": "1F",
+   "outlets-fc-hanbijen": "1F",
+   "outlets-fc-takenoya": "1F",
+   "outlets-fc-butasteak-b": "1F",
+   "hp9cb9c6f191": "1F"
+  },
+  "source": "https://the-outlets-kitakyushu.aeonmall.com/files/attachments/104484634162611e9082c2f/attachment.pdf",
+  "checked": "2026-11-09"
+ },
+ "aeonmallchikushino": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃんルーム",
+    "where": "イオン銀行・ATM横(ウエストコート南)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "グルメストリート 美山・グランドパーク付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(イオン1F)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんルーム",
+    "where": "イオンスタイル南側 リアット付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "中央 ストーンマーケット・チチュアンナ付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "ファミリーラウンジ",
+    "where": "中央 チチュアンナ付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "中央 帽子屋フレイヴァ付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんルーム",
+    "where": "西側 サンリオ・パパイヤ付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんルーム",
+    "where": "イオン内 ベビー&マタニティ用品横"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "フードフォレスト東 イオンハウジング付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "フードフォレスト"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "ミマモリガーデン(フードフォレスト内)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "キッズパーク(フードフォレスト南側)"
+   }
+  ],
+  "tenants": {
+   "chikushino-kidspark": "3F",
+   "nekocafemocha_chikushino": "2F",
+   "chikushino-mollyfantasy": "3F",
+   "chikushino-toysrus": "3F",
+   "chikushino-popondetta": "3F",
+   "chikushino-fc-mcdonalds": "3F",
+   "chikushino-fc-kfc": "3F",
+   "chikushino-fc-kairikiya": "3F",
+   "chikushino-fc-marugame": "3F",
+   "chikushino-fc-ringerhut": "3F",
+   "chikushino-fc-pepperlunch": "3F",
+   "chikushino-fc-bibintei": "3F",
+   "chikushino-fc-gindaco": "3F",
+   "chikushino-fc-misterdonut": "3F",
+   "chikushino-fc-baskinrobbins": "3F",
+   "chikushino-fc-dipperdan": "3F",
+   "chikushino-fc-torimaru-tanita": "3F",
+   "chikushino-fc-ringodou": "3F",
+   "chikushino-burgerking": "1F",
+   "chikushino-rs-pietro": "1F",
+   "chikushino-rs-umaya": "1F",
+   "chikushino-rs-hamakatsu": "1F",
+   "chikushino-rs-benitora": "1F",
+   "chikushino-rs-hyakusai": "1F",
+   "chikushino-rs-tenjinhorumon": "1F",
+   "chikushino-rs-konpeitei": "1F",
+   "chikushino-rs-aburihyakkan": "1F",
+   "chikushino-rs-ryujinmaru": "1F",
+   "chikushino-rs-inabaudon": "1F",
+   "chikushino-rs-granbuffet": "1F",
+   "chikushino-rs-miyama": "1F",
+   "chikushino-rs-tempuranakamura": "1F",
+   "chikushino-rs-piasapido": "1F",
+   "chikushino-starbucks": "1F",
+   "chikushino-tullys": "2F",
+   "chikushino-hoshino": "2F",
+   "chikushino-elkpancake": "3F",
+   "chikushino-karin": "2F",
+   "chikushino-teaway": "1F"
+  },
+  "source": "https://file-cdn.aeonmall.jp/uploads/4a45c71c-3b76-4d00-9015-7c9a486fe85d.pdf",
+  "checked": "2026-11-09"
+ },
+ "aeonmallmiyakonojoekimae": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃん休憩室",
+    "where": "北西 占いのアリーナ付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "北西 占いのアリーナ付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "赤ちゃん休憩室",
+    "where": "中央 オリーブ歯科・KiNu付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "レストラン街入口 クールカレアン付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(イオン食品側)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "北西 マジックミシン付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "北西 マジックミシン付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "フードフォレスト入口 CRYSTAL NAIL付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "西 スマートクール付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "中央通路 ファーロ・ゴンセレス前"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "フードフォレスト"
+   }
+  ],
+  "source": "https://file-cdn.aeonmall.jp/uploads/f733c23f-fd38-482e-81a5-e29010fdb497.pdf",
+  "checked": "2026-11-09"
+ },
+ "lalaportfukuoka": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "中央北 everyday/homestore付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "中央北 everyday/homestore付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 南 きものやまと付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "福岡おもちゃ美術館付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 福岡おもちゃ美術館付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "総合案内所 中央 メディアパーク付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビー休憩室",
+    "where": "北西 SAC'S BAR付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "北西 SAC'S BAR付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 東 リーバイス付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 南 CALL&RESPONSE付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "ベビー休憩室",
+    "where": "西 JUMP SHOP付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "西 JUMP SHOP付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 北 ACT-1付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 南 たいめいけん付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "グランダイニング"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "キッズパーク(アグリパーク入口横)"
+   },
+   {
+    "floor": "4F",
+    "kind": "キッズトイレ",
+    "where": "北 ガンダムパーク・namco付近"
+   },
+   {
+    "floor": "4F",
+    "kind": "おむつ替え",
+    "where": "オムツ交換室 北 ガンダムパーク付近"
+   }
+  ],
+  "tenants": {
+   "kizzaniafukuoka": "2F",
+   "vsparklalaportfukuoka": "4F",
+   "jindinrou": "3F",
+   "lalaport-fc-wagyuburger-oj": "3F",
+   "lalaport-fc-udondaigaku": "3F",
+   "lalaport-fc-wanaka": "3F",
+   "lalaport-fc-chisei": "3F",
+   "lalaport-fc-wappa": "3F",
+   "lalaport-fc-seiyoken": "3F",
+   "lalaport-fc-rikyu": "3F",
+   "lalaport-fc-sutadon": "3F",
+   "lalaport-fc-nikunikuudon": "3F",
+   "lalaport-fc-kanekohannosuke": "3F",
+   "lalaport-fc-taimeiken": "3F",
+   "lalaport-fc-gyoku": "3F",
+   "lalaport-fc-mitsuboshi": "3F",
+   "lalaport-fc-arizuki": "3F",
+   "lalaport-fc-hanbijen": "3F",
+   "lalaport-fc-torizan": "3F"
+  },
+  "source": "https://mitsui-shopping-park.com/lalaport/fukuoka/floor/",
+  "checked": "2026-11-09"
+ },
+ "yumecityshimonoseki": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "メディカル・ワン横(南側)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター 赤のエスカレーター横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "南 スポーツレット付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんの部屋",
+    "where": "北 ネイス体操教室横"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "アクトワン・おもちゃのあおき付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "西 赤のエレベーター側(500席)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "フードコート内キッズコーナー"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "無料の遊び場(ゆめキッズ横)"
+   }
+  ],
+  "tenants": {
+   "littleplanetshimonoseki": "3F"
+  },
+  "source": "https://www.izumi.jp/tenpo/youmecity/floor",
+  "checked": "2026-11-09"
+ },
+ "sp5619dd49b3": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "4F",
+    "kind": "授乳室",
+    "where": "本館 西松屋の北側"
+   },
+   {
+    "floor": "4F",
+    "kind": "キッズスペース",
+    "where": "本館 キッズパーク(授乳室近く)"
+   },
+   {
+    "floor": "B1",
+    "kind": "フードコート",
+    "where": "本館 東側出入口付近"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "本館 案内所(本館入口近く)"
+   }
+  ],
+  "source": "https://www.tokiwa-industry.co.jp/shops/pdf/1.pdf",
+  "checked": "2026-11-09"
+ },
+ "minatenjin": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "B1",
+    "kind": "ベビールーム",
+    "where": "北側トイレ(哺乳瓶マーク)"
+   },
+   {
+    "floor": "7F",
+    "kind": "ベビールーム",
+    "where": "北側トイレ(哺乳瓶マーク)"
+   },
+   {
+    "floor": "7F",
+    "kind": "多目的トイレ",
+    "where": "北側トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "南側トイレ"
+   }
+  ],
+  "tenants": {
+   "ig6212e4c127": "B1"
+  },
+  "source": "https://www.mina-tenjin.com/news/event/floorguide.php",
+  "checked": "2026-11-09"
+ },
+ "sunlivekoga": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "kind": "授乳室",
+    "where": "館内(階の記載なし)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "館内(階の記載なし)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "ふぇすたらんど(プレイランド)"
+   }
+  ],
+  "tenants": {
+   "sunlivekoga-festaland": "2F",
+   "sunlivekoga-nishimatsuya": "2F",
+   "sunlivekoga-firstkitchen": "1F",
+   "sunlivekoga-kfc": "1F",
+   "sunlivekoga-hearthbrown": "1F"
+  },
+  "source": "https://www.sunlive.co.jp/shop/%E3%82%B5%E3%83%B3%E3%83%AA%E3%83%96%E5%8F%A4%E8%B3%80/",
+  "checked": "2026-11-09"
+ },
+ "aeonmallfukutsu": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "センターコート"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "ノースコート北側トイレ(HUG HUG付近)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "ノースコート北側トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビー休憩室",
+    "where": "レストラン街(バーガーキング付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "レストラン街トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "イオンホール横トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "イオン2F ベビー&マタニティ用品横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "イオン2F ちびっこ広場"
+   },
+   {
+    "floor": "2F",
+    "kind": "遊び場",
+    "where": "イオン2F モーリーファンタジー"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "FOOD FOREST(西側)"
+   },
+   {
+    "floor": "3F",
+    "kind": "ベビー休憩室",
+    "where": "フードコート内・南側トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "フードコート南側トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "HMV横トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "ベビー休憩室",
+    "where": "トイザらス・ベビーザらス店内"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "ヒカリパーク(3〜5歳)ライトオン前"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "ぷくぷくぱーく(0〜2歳)"
+   }
+  ],
+  "tenants": {
+   "fukutsu-rs-shabusai": "2F",
+   "fukutsu-rs-bikkuridonkey": "2F",
+   "fukutsu-rs-futaba": "2F",
+   "fukutsu-rs-piasapido": "2F",
+   "fukutsu-rs-sachifukuya": "2F",
+   "fukutsu-rs-benitora": "2F",
+   "fukutsu-rs-takao": "2F",
+   "fukutsu-rs-tullys": "2F",
+   "fukutsu-rs-burgerking": "2F",
+   "fukutsu-rs-osakanakazoku": "2F",
+   "fukutsu-rs-seattlesbest": "2F",
+   "fukutsu-rs-kushiya": "2F",
+   "fukutsu-rs-pinocchio": "2F",
+   "fukutsu-rs-okashibakkashi": "2F",
+   "nekocafemocha_fukutsu": "2F",
+   "fukutsu-toysrus": "3F",
+   "fukutsu-genkikids": "3F",
+   "fukutsu-gachagacha-mori": "3F",
+   "fukutsu-hobbyzone": "3F",
+   "fukutsu-caramelbone": "3F",
+   "fukutsu-cc-carrous": "3F",
+   "fukutsu-thankyoumart": "3F",
+   "fukutsu-rakuichirakuza": "3F",
+   "fukutsu-kids-hikari-park": "3F",
+   "fukutsu-fc-mcdonalds": "3F",
+   "fukutsu-fc-dessert-oukoku": "3F",
+   "fukutsu-fc-baskinrobbins": "3F",
+   "fukutsu-fc-saizeriya": "3F",
+   "fukutsu-fc-gindaco": "3F",
+   "fukutsu-fc-ringerhut": "3F",
+   "fukutsu-fc-sukiya": "3F",
+   "fukutsu-fc-marugame": "3F",
+   "fukutsu-fc-kfc": "3F",
+   "fukutsu-fc-ippudo": "3F",
+   "fukutsu-fc-pepperlunch": "3F",
+   "fukutsu-fc-bibintei": "3F",
+   "fukutsu-fc-misterdonut": "3F"
+  },
+  "source": "https://fukutsu.aeonmall.jp/floormap (PDF 2026.10.30現在)",
+  "checked": "2026-11-09"
+ },
+ "aeonmallkagoshimabay": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "空の広場(モールインフォメーション)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオン鹿児島店サービスカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "赤ちゃん休憩室",
+    "where": "空の広場近く(ジュエリーツツミ横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "アメリカンホリック横(イオンホール近く)"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃん休憩室",
+    "where": "プライズスポットパロ横(フードコート近く)"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃん休憩室",
+    "where": "イオン3F ベビー衣料売場横"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "うんまかテラス"
+   },
+   {
+    "floor": "3F",
+    "kind": "遊び場",
+    "where": "モーリーファンタジー(イオン3F)"
+   }
+  ],
+  "tenants": {
+   "littleplanetkagoshimabay": "2F"
+  },
+  "source": "https://kagoshimabay.aeon-kyushu.info/floormap (PDF)",
+  "checked": "2026-11-09"
+ },
+ "markisfukuokamomochi": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "インフォメーションカウンター"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビーカー貸出",
+    "where": "2Fインフォメーションカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "おむつ替え室"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "おむつ替え室"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "おむつ替え室"
+   },
+   {
+    "floor": "4F",
+    "kind": "おむつ替え",
+    "where": "おむつ替え室"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ"
+   },
+   {
+    "floor": "4F",
+    "kind": "多目的トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "ももキチ フードコート"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "あそびばももち(フードコート内)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "あそびばももち"
+   },
+   {
+    "floor": "RF",
+    "kind": "キッズスペース",
+    "where": "屋上 わいわいひろば"
+   }
+  ],
+  "tenants": {
+   "asobiparkplusmomochi": "3F",
+   "meishimateimarkis": "3F",
+   "hp6e5423ed90": "3F"
+  },
+  "source": "https://www.mec-markis.jp/fukuoka-momochi/service/ , https://www.mec-markis.jp/fukuoka-momochi/floor/",
+  "checked": "2026-11-09"
+ },
+ "branchfukuokashimobaru": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "1Fトイレ(キャンドゥ横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "遊び場",
+    "where": "子ども広場(ふぇすたらんど前)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "2Fトイレ横(ジャザサイズ付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "2Fトイレ"
+   }
+  ],
+  "tenants": {
+   "dondonteibranchshimobaru": "1F",
+   "sp72a8556a9d": "1F"
+  },
+  "source": "https://www.branch-sc.com/f-shimobaru/shop/floor.jsp , https://www.branch-sc.com/f-shimobaru/shop/faq.jsp",
+  "checked": "2026-11-09"
+ },
+ "tosupremiumoutlets": {
+  "kind": "mall",
+  "floors": [
+   "屋外"
+  ],
+  "amenities": [
+   {
+    "floor": "屋外",
+    "kind": "インフォメーション",
+    "where": "インフォメーションセンター(フードコート横)"
+   },
+   {
+    "floor": "屋外",
+    "kind": "授乳室",
+    "where": "インフォメーションセンター内"
+   },
+   {
+    "floor": "屋外",
+    "kind": "授乳室",
+    "where": "1140区 リンツ横"
+   },
+   {
+    "floor": "屋外",
+    "kind": "授乳室",
+    "where": "1650区 ウェッジウッド横"
+   },
+   {
+    "floor": "屋外",
+    "kind": "調乳用お湯",
+    "where": "授乳室(電子レンジあり)"
+   },
+   {
+    "floor": "屋外",
+    "kind": "おむつ替え",
+    "where": "各トイレ(5か所)と授乳室"
+   },
+   {
+    "floor": "屋外",
+    "kind": "ベビーカー・キッズカート貸出",
+    "where": "P3/P4駐車場 連絡橋付近(100円)"
+   },
+   {
+    "floor": "屋外",
+    "kind": "キッズスペース",
+    "where": "プレイグラウンド(北側North Avenue)"
+   },
+   {
+    "floor": "屋外",
+    "kind": "フードコート",
+    "where": "インフォメーションセンター横"
+   }
+  ],
+  "tenants": {
+   "sp5cbb5193c9": "屋外",
+   "tosu-48d2f944": "屋外",
+   "tosu-9e9aa6c6": "屋外",
+   "tosu-f016ae65": "屋外",
+   "tosu-5810d8a7": "屋外",
+   "tosu-0ae6a053": "屋外",
+   "tosu-8756f7d5": "屋外",
+   "tosu-c020f41c": "屋外",
+   "tosu-ba1d6779": "屋外",
+   "tosu-51a8c54b": "屋外",
+   "tosu-c7697fdd": "屋外",
+   "tosu-10242d55": "屋外",
+   "tosu-1ee10264": "屋外",
+   "tosu-7d0b0120": "屋外",
+   "tosu-b89ad5fe": "屋外",
+   "tosu-b80e1825": "屋外",
+   "tosu-51750326": "屋外",
+   "tosu-529fe3ac": "屋外",
+   "tosu-d469033e": "屋外",
+   "tosu-b91cee30": "屋外"
+  },
+  "source": "https://www.premiumoutlets.co.jp/tosu/service/ , https://www.premiumoutlets.co.jp/tosu/brands/",
+  "checked": "2026-11-09"
+ },
+ "sakuramachi-kumamoto": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "サクラマチスクエア内"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビーカー・キッズカート貸出",
+    "where": "2Fインフォメーションカウンター"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "みどりのおへや"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "みどりのおへや(おむつ替え室)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "B1F〜4F各階"
+   },
+   {
+    "floor": "B1",
+    "kind": "フードコート",
+    "where": "B1Fフードホール"
+   },
+   {
+    "floor": "RF",
+    "kind": "遊び場",
+    "where": "屋上サクラマチガーデン(すべり台)"
+   }
+  ],
+  "source": "https://sakuramachi-kumamoto.jp/facility , https://sakuramachi-kumamoto.jp/floorguide",
+  "checked": "2026-11-09"
+ },
+ "konohamooruhashimoto": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "もみじコート・さくらコート(給湯器あり)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "センターコートEVホール付近・もみじコート"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "館内全トイレ・多目的トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "もみじコート"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "センターコート"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "1F(場所詳細は公式未掲載)"
+   },
+   {
+    "kind": "ベビーカー・キッズカート貸出",
+    "where": "各コートEVホール等(100円返却式)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "西区橋本子どもプラザ(行政)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "さくらコート・センターコート・FC付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "さくらコートTAKA-Q奥・もみじコート"
+   }
+  ],
+  "tenants": {
+   "konoha-947ab869": "1F",
+   "konoha-d0d37cd7": "1F",
+   "konoha-b2b8f201": "1F",
+   "konoha-f0a19fa3": "1F",
+   "konoha-97804900": "1F",
+   "konoha-9ef8d372": "1F",
+   "konoha-ef7d4997": "1F",
+   "konoha-0ec428c8": "1F",
+   "konoha-525bd9e9": "1F",
+   "konoha-04044f2c": "1F",
+   "konoha-5deabc9a": "1F",
+   "konoha-938ea5f8": "1F",
+   "konoha-ecd332aa": "1F",
+   "konoha-106a052a": "1F",
+   "konoha-fe90078a": "1F",
+   "konoha-acdbbe0d": "1F",
+   "konoha-b49e26ff": "1F",
+   "konoha-d7905aa5": "1F",
+   "konoha-757b0878": "1F",
+   "konoha-a88bb4a2": "1F",
+   "konoha-65ede60e": "1F",
+   "konoha-728f04b8": "1F",
+   "konoha-bd3833e1": "1F",
+   "konoha-7603b2b2": "1F",
+   "konoha-74142fe1": "1F",
+   "konoha-542b1aea": "1F",
+   "konoha-44acecdc": "1F",
+   "konoha-1c764846": "1F",
+   "konoha-7b54288f": "1F",
+   "konoha-33bd745b": "2F"
+  },
+  "source": "https://konohamall.com/static/detail/children",
+  "checked": "2026-11-09"
+ },
+ "aeonmallyahatahigashi": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃんルーム",
+    "where": "島村楽器付近・博物館側入口C2寄り"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんルーム",
+    "where": "ヴィレッジヴァンガード付近"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃんルーム",
+    "where": "イオン玩具売場・モーリーファンタジー付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "モールインフォメーション(センター)"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター(食品側)"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "フードフォレスト"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "モーリーファンタジー"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "島村楽器付近"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "イオン調剤薬局付近"
+   }
+  ],
+  "tenants": {
+   "yahatahigashi-toysrus": "1F",
+   "yahatahigashi-shabusai": "1F",
+   "yahatahigashi-mollyfantasy": "3F",
+   "yahatahigashi-fc-warataco": "3F",
+   "yahatahigashi-fc-parmenara": "3F",
+   "yahatahigashi-fc-pepperlunch": "3F",
+   "yahatahigashi-fc-ibukiya": "3F",
+   "yahatahigashi-fc-baskinrobbins": "3F",
+   "yahatahigashi-fc-mcdonalds": "3F",
+   "yahatahigashi-fc-misterdonut": "3F",
+   "yahatahigashi-fc-kfc": "3F",
+   "yahatahigashi-fc-ringerhut": "3F",
+   "yahatahigashi-fc-dipperdan": "3F"
+  },
+  "source": "https://yahatahigashi.aeonmall.jp/floormap/",
+  "checked": "2026-11-09"
+ },
+ "yumetownhakata": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "JINS横・フードコート近く"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "本館2F北側"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "子どもの遊び場(フードコート横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "東区東浜子どもプラザ"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(中央広場付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "フードコート横・ゆめキッズ横ほか"
+   }
+  ],
+  "tenants": {
+   "gyumaru-yumetown-hakata": "1F"
+  },
+  "source": "https://www.izumi.jp/tenpo/hakata/floor",
+  "checked": "2026-11-09"
+ },
+ "canalcityhakata": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F"
+  ],
+  "amenities": [
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "ノースビル中洲側入口付近(調乳機)"
+   },
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "オーパ内バンダイナムコCross Store内"
+   },
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "イーストビル(鍵付き個室)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ノースビルEVホール付近(女子トイレ内)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "サウスビルAlpen FUKUOKA内(調乳機)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "ビジネスセンタービル(鍵付き個室)"
+   },
+   {
+    "floor": "B1",
+    "kind": "おむつ替え",
+    "where": "シーコート・ノースビル中洲側入口"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "サウスビルAlpen FUKUOKA内"
+   },
+   {
+    "floor": "B1",
+    "kind": "キッズトイレ",
+    "where": "シーコート・ノースビル中洲側入口"
+   },
+   {
+    "floor": "B1",
+    "kind": "キッズトイレ",
+    "where": "オーパ内バンダイナムコCross Store内"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズトイレ",
+    "where": "サウスビルAlpen FUKUOKA内"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "センターウォーク"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "センターウォーク総合インフォメーション"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "館内14か所"
+   }
+  ],
+  "tenants": {
+   "kaabiikafehakata-11": "B1",
+   "ichirankyanarushiteihakatami": "B1",
+   "canalcity_42": "B1",
+   "themarketf-40": "1F",
+   "canalcity_43": "1F",
+   "taito-station-canalcity": "4F"
+  },
+  "source": "https://canalcity.co.jp/service/",
+  "checked": "2026-11-09"
+ },
+ "sp6f508eb727": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "トイレ横(調乳器・おむつ替えシート)"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "授乳室隣"
+   }
+  ],
+  "source": "https://praliva.jp/service/",
+  "checked": "2026-11-09"
+ },
+ "daimaru-fukuoka-tenjin": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F"
+  ],
+  "amenities": [
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "本館(おむつ替えベッドあり)"
+   },
+   {
+    "floor": "5F",
+    "kind": "授乳室",
+    "where": "東館エルガーラ"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズトイレ",
+    "where": "本館"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "ベビーシート付き化粧室(各階)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "本館 総合案内所"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "本館 総合案内所"
+   },
+   {
+    "floor": "B2",
+    "kind": "ベビーカー貸出",
+    "where": "東館エルガーラ サービスカウンター"
+   }
+  ],
+  "source": "https://www.daimaru-fukuoka.jp/service_guide/okosama/",
+  "checked": "2026-11-09"
+ },
+ "branchhakatapapillon": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "北棟トイレ横(オムツ替え室併設)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "北棟トイレ"
+   },
+   {
+    "floor": "屋外",
+    "kind": "キッズスペース",
+    "where": "あそび広場・遊具&噴水(東棟前)"
+   }
+  ],
+  "tenants": {
+   "sp2ae5162215": "1F"
+  },
+  "source": "https://www.branch-sc.com/h-papillon/shop/floor.jsp",
+  "checked": "2026-11-09"
+ },
+ "aeonmallfukuoka": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "メインプラザ"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "各トイレのベビーベッド"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "ノースモール coca横トイレ(じぶんdeトイレ)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "わくわくパーク(2〜6歳)ノースモール端"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "もくもくパーク(3〜5歳)ノースモール"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "LUCLE PARK(3〜12歳)ノースモール入口前"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム(女性専用)CanDo横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム スタジオアリス横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "赤ちゃんルーム イオン2F ASBeeキッズ横"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "各トイレのベビーベッド"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "すくすくパーク(0〜24ヵ月)ノースモール"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "KIDS PARK(0〜6歳)ウエストモール"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "FOOD FOREST(960席)"
+   }
+  ],
+  "tenants": {
+   "lucleparkrukurupaakuionmooru": "1F",
+   "chikyuunoniwafukuoka": "2F",
+   "inucaferio_aeonfukuoka": "1F",
+   "kidspark-aeonmallfukuoka": "2F",
+   "zetteria-aeonmallfukuoka": "1F",
+   "mokumokupark-aeonmallfukuoka": "1F",
+   "sukusukupark-aeonmallfukuoka": "2F",
+   "wakuwakupark-aeonmallfukuoka": "1F",
+   "aeonfukuoka-fc-kairikiya": "2F",
+   "aeonfukuoka-fc-misterdonut": "2F",
+   "aeonfukuoka-fc-marugame": "2F",
+   "aeonfukuoka-fc-mcdonalds": "2F",
+   "aeonfukuoka-fc-pepperlunch": "2F",
+   "aeonfukuoka-fc-bibintei": "2F",
+   "aeonfukuoka-fc-torimaru-tanita": "2F",
+   "aeonfukuoka-fc-dipperdan": "2F",
+   "aeonfukuoka-fc-tempura-ichidai": "2F",
+   "aeonfukuoka-fc-gindaco": "2F",
+   "aeonfukuoka-fc-baskinrobbins": "2F",
+   "aeonfukuoka-fc-gongcha": "2F"
+  },
+  "source": "https://file-cdn.aeonmall.jp/uploads/ef609507-0290-4829-9839-22fbf726af3a.pdf",
+  "checked": "2026-11-09"
+ },
+ "aeonmallsagayamato": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(イオン食品入口付近)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "イオン2F ベビー売場奥・セイハ英語学院横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "子供の遊び場(イオン2F 東側)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "モーリーファンタジー(イオン2F)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "キッズ・USランド(専門店街)"
+   }
+  ],
+  "source": "https://file-cdn.aeonmall.jp/uploads/895f6bf6-f342-4dfd-92a5-007fe9397c48.pdf",
+  "checked": "2026-11-09"
+ },
+ "yumetownkurume": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(北入口側)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんの部屋",
+    "where": "本館ウエスト側・いぬカフェRio横"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんの部屋",
+    "where": "フードコート西側トイレ横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "フードコート東端(カミナリ食堂横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "無料遊び場(子ども服売場横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "KURUME DINING(本館東側)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "おむつ替え台あり(店内設備)"
+   }
+  ],
+  "tenants": {
+   "ritorupuranettoyumetaunkurum": "2F",
+   "inucaferio_yumetownkurume": "2F"
+  },
+  "source": "https://www.izumi.jp/sites/default/files/node/floor_guide/field_store_floor_pdf/2026-10-23/261023_kurume_floor.pdf",
+  "checked": "2026-11-09"
+ },
+ "toriushisayama": {
+  "kind": "mall",
+  "floors": [
+   "トリアスモール",
+   "WESTゾーン",
+   "EASTゾーン"
+  ],
+  "amenities": [
+   {
+    "floor": "トリアスモール",
+    "kind": "授乳室",
+    "where": "15区画横"
+   },
+   {
+    "floor": "トリアスモール",
+    "kind": "調乳用お湯",
+    "where": "授乳室内ウォーターサーバー・電子レンジ"
+   },
+   {
+    "floor": "トリアスモール",
+    "kind": "キッズトイレ",
+    "where": "35区画横"
+   },
+   {
+    "floor": "トリアスモール",
+    "kind": "おむつ替え",
+    "where": "34・35区画横トイレ"
+   },
+   {
+    "floor": "EASTゾーン",
+    "kind": "おむつ替え",
+    "where": "E9・E3区画横トイレ"
+   },
+   {
+    "floor": "トリアスモール",
+    "kind": "多目的トイレ",
+    "where": "34区画横"
+   },
+   {
+    "floor": "WESTゾーン",
+    "kind": "多目的トイレ",
+    "where": "W17区画横(オストメイト)"
+   },
+   {
+    "floor": "トリアスモール",
+    "kind": "ベビーカー貸出",
+    "where": "トリアスモール通路"
+   },
+   {
+    "floor": "EASTゾーン",
+    "kind": "キッズスペース",
+    "where": "キッズランドUS MAX(E3区画・有料)"
+   }
+  ],
+  "tenants": {
+   "spac77bd6099": "WESTゾーン"
+  },
+  "source": "https://torius.com/map/",
+  "checked": "2026-11-09"
+ },
+ "fukuokaairportdomestic": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "3ヶ所(給湯器・ベビーシート付)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "6ヶ所(給湯器・ベビーシート付)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "2ヶ所(給湯器・ベビーシート付)"
+   },
+   {
+    "floor": "4F",
+    "kind": "授乳室",
+    "where": "1ヶ所(給湯器・ベビーシート付)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "案内所 北・南(到着ロビー)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "案内所 北・南"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "簡易案内所(南側)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "キッズコーナー 6番ゲート付近(保安検査後)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "キッズコーナー 11番ゲート付近(保安検査後)"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "the foodtimes"
+   }
+  ],
+  "tenants": {
+   "apd83ab4b82c": "3F",
+   "ap57978f9aca": "3F",
+   "ap0d80be9b0c": "3F",
+   "ape76279a9ad": "3F",
+   "apdd20f93826": "3F",
+   "ap9c6b1374ec": "3F",
+   "ap842c00d8d2": "3F",
+   "ap092ce9d796": "3F",
+   "ap56c212742b": "3F",
+   "ap16ad0892a7": "3F",
+   "apa4486194bd": "3F",
+   "ap934ce38c18": "3F",
+   "ap64f6682535": "3F",
+   "apfd0fe35c41": "3F",
+   "apa94b6b9bd8": "3F",
+   "ape3926bd148": "3F",
+   "ap830d9cf876": "3F",
+   "apa0e757d5c5": "3F",
+   "ap5965d3612c": "3F",
+   "ap9f682b547a": "3F",
+   "apa6a48bc979": "3F",
+   "ap5d80c35476": "3F",
+   "apd77bad3188": "3F",
+   "ap8b73bd0774": "3F",
+   "ap1315cbf05c": "3F",
+   "apfadb27583d": "3F"
+  },
+  "source": "https://www.fukuoka-airport.jp/service/m-nursing-room.html",
+  "checked": "2026-11-09"
+ },
+ "hakata-hankyu": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "M3F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1Fインフォメーションセンター"
+   },
+   {
+    "floor": "B1",
+    "kind": "インフォメーション",
+    "where": "B1インフォメーションカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1Fインフォメーションセンター"
+   },
+   {
+    "floor": "7F",
+    "kind": "ベビーカー貸出",
+    "where": "こども服中央カウンター"
+   },
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "ベビールーム(授乳室・離乳食スペース)"
+   },
+   {
+    "floor": "7F",
+    "kind": "おむつ替え",
+    "where": "ベビールーム内おむつ替えベッド"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズスペース",
+    "where": "ベビールーム内"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズトイレ",
+    "where": "キッズ専用トイレ"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "ゆったりトイレ 3F〜8F"
+   }
+  ],
+  "source": "https://www.hankyu-dept.co.jp/hakata/service/",
+  "checked": "2026-11-09"
+ },
+ "islandeye": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "中央トイレ(15・16区画間)"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "中央トイレ(37・38区画間)"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "TERIHA DINING(フードホール・西側)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "キッズランドUS(35区画)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "FUN FUN PARK(31区画)"
+   }
+  ],
+  "tenants": {
+   "sp263b0561b4": "1F",
+   "spde36dcb1c3": "1F",
+   "sp37496008af": "1F",
+   "kidsland-977": "2F"
+  },
+  "source": "https://island-eye.com/floor",
+  "checked": "2026-11-09"
+ },
+ "aeonmallkashiihama": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "ベビールーム",
+    "where": "イオン2F イオンモバイル横(赤ちゃんルーム)"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "2F中央 マクドナルド・博多三氣ほか"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "屋外「キッズい〜な広場」食品側入口A横"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(イオン食品側入口A近く)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各階トイレ併設"
+   }
+  ],
+  "tenants": {
+   "burgerkingkashiihama": "1F",
+   "mala-kashiihama": "1F",
+   "kujuucoffee-kashiihama": "1F",
+   "teppanjo-kashiihama": "1F",
+   "bisanu-kashiihama": "1F",
+   "pomunoki-kashiihama": "1F",
+   "saizeriya-kashiihama": "1F",
+   "shoya-kashiihama": "1F",
+   "misdo-kashiihama": "1F",
+   "kfc-kashiihama": "1F",
+   "uoking-kashiihama": "1F",
+   "starbucks-kashiihama": "1F"
+  },
+  "source": "https://kashiihama.aeon-kyushu.info/floormap",
+  "checked": "2026-11-09"
+ },
+ "yumetownsaga": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃんの部屋・授乳室",
+    "where": "ロフト横トイレ(正面西入口近く)"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんの部屋・授乳室",
+    "where": "アカチャンホンポ横トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "赤ちゃんの部屋・授乳室",
+    "where": "ウエストコート スマートクール横"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "balloon kitchen(全席700席)北側"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "無料遊び場 オレンジのエレベーター横"
+   },
+   {
+    "floor": "2F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター 緑のエレベーター横"
+   },
+   {
+    "kind": "キッズトイレ",
+    "where": "各トイレ(トイレ・キッズトイレ表示)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "おむつ替え台あり(公式設備一覧)"
+   }
+  ],
+  "tenants": {
+   "inucaferio_yumetownsaga": "1F",
+   "yumetownsaga-toysrus": "1F"
+  },
+  "source": "https://www.izumi.jp/tenpo/saga/floor",
+  "checked": "2026-11-09"
+ },
+ "riverwalkkitakyushu": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "総合インフォメーション奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "アカチャンホンポ横 エレベーター奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "ミスティックコート側"
+   },
+   {
+    "floor": "4F",
+    "kind": "キッズトイレ",
+    "where": "中華菜館 陽林閣 奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "子供用トイレ",
+    "where": "アカチャンホンポ西側・授乳室横 女性トイレ"
+   },
+   {
+    "floor": "4F",
+    "kind": "フードコート",
+    "where": "タベリバガーデン"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "総合インフォメーション"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "総合インフォメーション(エナジーコート近く)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "各階の多目的トイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "室内遊園地ザキッズ(有料)"
+   }
+  ],
+  "tenants": {
+   "zakizzuribaauookukitakyuushu": "3F"
+  },
+  "source": "https://riverwalk.co.jp/information/info2/",
+  "checked": "2026-11-09"
+ },
+ "sp2bb8bc920e": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "ガーデンウォーク センターステージ側"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "ガーデンウォーク フードテラス(調乳・レンジ)"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "ガーデンウォーク シャングリラ奥"
+   },
+   {
+    "floor": "2F",
+    "kind": "ベビールーム",
+    "where": "イオン ベビー用品売場奥(最大)"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "ガーデンウォーク フードテラス"
+   },
+   {
+    "kind": "調乳用お湯",
+    "where": "1F・2F・3Fの授乳室ほか"
+   },
+   {
+    "floor": "1F",
+    "kind": "子供用トイレ",
+    "where": "ガーデンウォーク センターステージ側"
+   },
+   {
+    "floor": "2F",
+    "kind": "子供用トイレ",
+    "where": "飲食店街入口奥・HMV奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "子供用トイレ",
+    "where": "シャングリラ奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "屋上庭園シャングリラ(ゆうきの山ほか)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "イオン モーリーファンタジー(有料)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "食品側エレベーター前ほか"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター イオン食品レジ横"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "各化粧室にベビーシート"
+   }
+  ],
+  "tenants": {
+   "inucaferio_parkplace": "3F",
+   "hp78e3a72316": "2F"
+  },
+  "source": "https://shop.parkplace-oita.com/service",
+  "checked": "2026-11-09"
+ },
+ "iwataya-honten": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F"
+  ],
+  "amenities": [
+   {
+    "floor": "6F",
+    "kind": "ベビー休憩室",
+    "where": "本館6F ベビー・子供服フロア"
+   },
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "本館6F ベビー・子供服フロア"
+   },
+   {
+    "floor": "B2",
+    "kind": "インフォメーション",
+    "where": "本館地下2階 総合案内所"
+   },
+   {
+    "floor": "B2",
+    "kind": "ベビーカー貸出",
+    "where": "本館地下2階 総合案内所"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "本館・新館の各階化粧室(一部)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "本館1・4・7F、新館B2〜8F(1F除く)"
+   }
+  ],
+  "source": "https://www.iwataya-mitsukoshi.mistore.jp/iwataya/shops.html",
+  "checked": "2026-11-09"
+ },
+ "aeonfukuokahigashi": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "正面入口近く(うどん大文字・博多三氣ほか)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター ATM横"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "ファンタジーキッズリゾート(有料)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "1F・2Fの優先トイレ"
+   }
+  ],
+  "tenants": {
+   "fantajiikizzurizootofukuoka": "2F",
+   "chouchoucrepe-fukuokahigashi": "1F",
+   "hakatasanki-fukuokahigashi": "1F",
+   "udondaimonji-fukuokahigashi": "1F",
+   "misterdonut-fukuokahigashi": "1F",
+   "zetteria-fukuokahigashi": "1F",
+   "bisanu-fukuokahigashi": "1F",
+   "shoya-fukuokahigashi": "1F",
+   "saizeriya-fukuokahigashi": "1F",
+   "merhenland-fukuokahigashi": "2F"
+  },
+  "source": "https://tenpo.aeon-kyushu.info/aeon/detail/fukuokahigashi/ (フロアガイドPDF 2026/10/21版)",
+  "checked": "2026-11-09"
+ },
+ "aeonmallfukuokaito": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "赤ちゃん休憩室",
+    "where": "専門店1F入口近く(La Luuf付近)"
+   },
+   {
+    "floor": "3F",
+    "kind": "赤ちゃん休憩室",
+    "where": "本館イオン ベビー・マタニティ売場奥"
+   },
+   {
+    "floor": "3F",
+    "kind": "フードコート",
+    "where": "本館3F東側"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "スキッズガーデン(本館3F東端)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各階の化粧室横"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "イオンサービスカウンター"
+   }
+  ],
+  "source": "https://fukuokaito.aeon-kyushu.info/floormap (フロアガイドPDF)",
+  "checked": "2026-11-09"
+ },
+ "yumetownyumesaito": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "赤ちゃん休憩室",
+    "where": "赤ちゃんの部屋(ベビー用品売場横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "子供無料遊び場(ベビー用品売場横)"
+   },
+   {
+    "floor": "B1",
+    "kind": "フードコート",
+    "where": "B1西側(サーティワン等)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(南側出入口近く)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "B1〜4F各階のトイレ"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "おむつ替え台あり(館内設備)"
+   }
+  ],
+  "source": "https://www.izumi.jp/tenpo/yume-saito/floor",
+  "checked": "2026-11-09"
+ },
+ "sasebogobangai": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "プロムナード東ゾーン"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "プロムナード東ゾーン"
+   },
+   {
+    "floor": "2F",
+    "kind": "調乳用お湯",
+    "where": "東ゾーン授乳室内(おむつ交換台も)"
+   },
+   {
+    "floor": "3F",
+    "kind": "調乳用お湯",
+    "where": "東ゾーン授乳室内(おむつ交換台も)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "サービスカウンター(東ゾーン)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー・キッズカート貸出",
+    "where": "サービスカウンター(東ゾーン)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "東ゾーン1〜3F・テラスゾーン1〜2F"
+   }
+  ],
+  "source": "https://sasebo-5bangai.com/facility/",
+  "checked": "2026-11-09"
+ },
+ "acrossmall-kasuga": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "ベビー休憩室",
+    "where": "西側エレベーター横(積文館書店近く)"
+   },
+   {
+    "floor": "2F",
+    "kind": "調乳用お湯",
+    "where": "ベビー休憩室内"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "各トイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "フードコート",
+    "where": "東側レストラン街"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "各トイレ(みんなのトイレ)"
+   }
+  ],
+  "tenants": {
+   "doremi-acrossmall-kasuga": "2F"
+  },
+  "source": "https://kasuga.acrossmall.jp/service/",
+  "checked": "2026-11-09"
+ },
+ "hakatariverain": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "5F",
+   "6F"
+  ],
+  "amenities": [
+   {
+    "floor": "B2",
+    "kind": "授乳室",
+    "where": "Aエレベーター・エスカレーター横"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "Cエレベーター近くのトイレ横"
+   },
+   {
+    "floor": "B2",
+    "kind": "多目的トイレ",
+    "where": "Aエレベーター横(ユニバーサルベッド)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "Cエレベーター近く"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "中央エスカレーター横"
+   }
+  ],
+  "tenants": {
+   "fukuokaanpanmankodomomyuujia": "5F",
+   "riverain_01": "2F",
+   "riverain_02": "1F",
+   "riverain_03": "1F",
+   "riverain_04": "1F",
+   "riverain_05": "1F",
+   "riverain_06": "1F",
+   "riverain_07": "B2",
+   "riverain_08": "B2",
+   "riverain_09": "B2",
+   "riverain_10": "B2",
+   "riverain_11": "B2",
+   "riverain_12": "B2",
+   "riverain_17": "B2"
+  },
+  "source": "https://www.hakata-riverainmall.jp/floor/",
+  "checked": "2026-11-09"
+ }
+}

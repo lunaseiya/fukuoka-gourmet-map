@@ -1056,7 +1056,8 @@
    "chikushino-hoshino": "2F",
    "chikushino-elkpancake": "3F",
    "chikushino-karin": "2F",
-   "chikushino-teaway": "1F"
+   "chikushino-teaway": "1F",
+   "chikushino-kudamonocafe": "1F"
   },
   "source": "https://file-cdn.aeonmall.jp/uploads/4a45c71c-3b76-4d00-9015-7c9a486fe85d.pdf",
   "checked": "2026-11-09"
@@ -1391,17 +1392,34 @@
   ],
   "amenities": [
    {
+    "floor": "2F",
     "kind": "授乳室",
-    "where": "館内(階の記載なし)"
+    "where": "ベビー休憩室の奥(女性用個室・お湯あり)"
    },
    {
-    "kind": "多目的トイレ",
-    "where": "館内(階の記載なし)"
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "ベビー休憩室(ふぇすたらんど横・男女OK)"
    },
    {
     "floor": "2F",
     "kind": "キッズスペース",
-    "where": "ふぇすたらんど(プレイランド)"
+    "where": "ふぇすたらんど・Niko Niko Garden"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "正面玄関の東(木製の子供椅子あり)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "食品フロア"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "正面玄関の近く"
    }
   ],
   "tenants": {
@@ -1409,10 +1427,12 @@
    "sunlivekoga-nishimatsuya": "2F",
    "sunlivekoga-firstkitchen": "1F",
    "sunlivekoga-kfc": "1F",
-   "sunlivekoga-hearthbrown": "1F"
+   "sunlivekoga-hearthbrown": "1F",
+   "sunlivekoga-nikonikogarden": "2F",
+   "sunlivekoga-kogashokudou": "1F"
   },
   "source": "https://www.sunlive.co.jp/shop/%E3%82%B5%E3%83%B3%E3%83%AA%E3%83%96%E5%8F%A4%E8%B3%80/",
-  "checked": "2026-11-09"
+  "checked": "2026-10-07(現地の館内フロアガイド)"
  },
  "aeonmallfukutsu": {
   "kind": "mall",

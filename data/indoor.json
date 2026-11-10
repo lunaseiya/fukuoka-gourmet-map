@@ -1363,31 +1363,41 @@
   ],
   "amenities": [
    {
-    "floor": "B1",
-    "kind": "ベビールーム",
-    "where": "北側トイレ(哺乳瓶マーク)"
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "北トイレのそば mamaro(個室型ベビーケアルーム・男性も使える・現地確認)"
    },
    {
-    "floor": "7F",
-    "kind": "ベビールーム",
-    "where": "北側トイレ(哺乳瓶マーク)"
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "北トイレ(女性側)"
    },
    {
     "floor": "7F",
     "kind": "多目的トイレ",
-    "where": "北側トイレ"
+    "where": "北トイレ 広い多目的トイレにおむつ替え台(男性も使える・現地確認)"
+   },
+   {
+    "floor": "7F",
+    "kind": "授乳室",
+    "where": "北トイレ(授乳マーク)"
+   },
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "北トイレ(女性側・授乳マーク)。⚠男性トイレにおむつ替え台なし(現地確認)"
    },
    {
     "floor": "3F",
     "kind": "多目的トイレ",
-    "where": "南側トイレ"
+    "where": "南トイレ"
    }
   ],
   "tenants": {
    "ig6212e4c127": "B1"
   },
-  "source": "https://www.mina-tenjin.com/news/event/floorguide.php",
-  "checked": "2026-11-09"
+  "source": "館内フロアガイド(現地撮影 2026-11-10)",
+  "checked": "2026-11-10"
  },
  "sunlivekoga": {
   "kind": "mall",

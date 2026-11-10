@@ -40,8 +40,13 @@
    },
    {
     "floor": "B1",
+    "kind": "おむつ替え",
+    "where": "西6番街のトイレ 男性トイレの奥にベビーベッド(男性もおむつ替えできる・現地確認 2026-11-10)。女性トイレにもベビーベッド(案内図)"
+   },
+   {
+    "floor": "B1",
     "kind": "多目的トイレ",
-    "where": "西6番街"
+    "where": "西6番街(多機能トイレ。ベビーチェアあり・男女共用)"
    },
    {
     "floor": "B1",
@@ -65,7 +70,7 @@
    }
   ],
   "source": "https://www.tenchika.com/service/child/",
-  "checked": "2026-11-09"
+  "checked": "2026-11-10"
  },
  "aeonmallomuta": {
   "kind": "mall",
@@ -3502,5 +3507,65 @@
   },
   "source": "https://www.jrhakatacity.com/information/service/ / https://www.jrhakatacity.com/floor/floorguide/ / https://www.jrhakatacity.com/kids/ / https://www.hakata-1bangai.com/floorguide/ / https://www.e-ekichika.com/floormap/ / https://www.jrkyushu.co.jp/railway/station/1191771_1601.html",
   "checked": "2026-11-09"
+ },
+ "lachic-fukuoka-tenjin": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F"
+  ],
+  "amenities": [
+   {
+    "floor": "B1",
+    "kind": "おむつ替え",
+    "where": "B1のトイレ 男性・女性どちらにもベビーシート(現地確認)"
+   },
+   {
+    "floor": "B1",
+    "kind": "多目的トイレ",
+    "where": "B1 渡辺通り側(ベビーシートは無かった・現地確認)"
+   },
+   {
+    "floor": "B1",
+    "kind": "ベビー休憩室",
+    "where": "B1 国体道路側"
+   },
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "B1 国体道路側(館内図の授乳室マーク)"
+   },
+   {
+    "floor": "9F",
+    "kind": "多目的トイレ",
+    "where": "9F(ダイソー等のフロア)"
+   },
+   {
+    "floor": "5F",
+    "kind": "多目的トイレ",
+    "where": "5F(福岡三越)"
+   },
+   {
+    "floor": "B2",
+    "kind": "多目的トイレ",
+    "where": "B2(福岡三越 食品)"
+   },
+   {
+    "floor": "B2",
+    "kind": "インフォメーション",
+    "where": "B2 案内所(福岡三越)"
+   }
+  ],
+  "source": "館内フロアガイド(現地撮影 2026-11-10)",
+  "checked": "2026-11-10"
  }
 }

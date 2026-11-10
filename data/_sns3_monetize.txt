@@ -1,0 +1,67 @@
+﻿=== 照合結果 (書き込み) ===
+ ○ snb2eda40b02     御宿 湯のしずく                   booking  https://www.jalan.net/yad378631/
+ ○ snc3b234e0a2     バーガートウカ                    tabelog  https://tabelog.com/fukuoka/A4003/A400303/40047405/
+ ○ sn08253161c7     ハニーガーデン瑞梅寺                 asoview  https://www.asoview.com/base/156227/
+ ○ sn60907854d9     枕崎お魚センター                   tabelog  https://tabelog.com/kagoshima/A4601/A460104/46011546/
+ × sne0782ee3d2     出の山淡水魚水族館                  asoview  インデックスに無し
+ × sn8979195a43     丸岡公園                       asoview  インデックスに無し
+ × sn2acb545cb0     霧島 神話の里公園                  asoview  インデックスに無し
+ × sn4bd50f9b07     タツノオトシゴ養殖場                 asoview  インデックスに無し
+ × sn0f53766afc     きららビーチ焼野                   asoview  インデックスに無し
+ × sn74f008c8e4     金魚と鯉の郷広場                   asoview  インデックスに無し
+ ○ sn940cab0a92     小林 地鶏の里                    tabelog  https://tabelog.com/miyazaki/A4503/A450304/45000391/
+ × snac2b92bba1     のんのこ温水センター                 asoview  インデックスに無し
+ × sn48c48167aa     竹中池公園(そうめん流し・プール)          asoview  インデックスに無し
+ × sn5b4926499d     いおワールド かごしま水族館             asoview  インデックスに無し
+ × sn74f1f1897f     RVパークたかざき                  booking  該当宿なし
+ × snbee299c9dd     嘉島町湧水公園 天然プール              asoview  インデックスに無し
+ ○ sn5f8e54d61f     空火海                        booking  https://www.jalan.net/yad377820/
+ × sn99c8659bcc     シーライフひらど                   asoview  インデックスに無し
+ × sn9f8657d170     Leaf(御船町の一棟貸し)             booking  該当宿なし
+ × sn6039c7d927     サープラ荒尾 あそびタウンOUTLET        asoview  インデックスに無し
+ × sn646eb8afde     グランドーム福岡ふくつ                booking  該当宿なし
+ × snf5e123e609     Carriage Project 馬カフェ      asoview  インデックスに無し
+ ○ sn5707ef2c9a     みどり工場直売所 福岡春日店             tabelog  https://tabelog.com/fukuoka/A4003/A400301/40074994/
+ ○ sned5290d42b     雲仙みかどホテル                   booking  https://www.jalan.net/yad331512/
+ × sn349a22720d     鯉の泳ぐまち(島原)                 asoview  インデックスに無し
+ × sn08193b82ec     一尺屋 海の家                    booking  該当宿なし
+ × sn4d1569908d     田川市民プール                    asoview  インデックスに無し
+ × sn981ba3a6d0     宝満宮 竈門神社                   asoview  インデックスに無し
+ × sn11876dc37a     寿司海都 直方店                   tabelog  検索ヒットなし(4 クエリ試行)
+ × snf3bf50ab1a     雲仙ロープウェイ                   asoview  インデックスに無し
+ × sn97f7ce33a9     花畑園芸公園                     asoview  インデックスに無し
+ × sndb5aa37bfb     トリアスふれあい動物園                asoview  インデックスに無し
+ ○ snc8608cc5c8     ザ・ルイガンズ                    booking  https://www.jalan.net/yad397456/
+ × sn61518df3b3     やまやファクトリーテラス               asoview  インデックスに無し
+ ○ sn92f84be75d     もちだんご村 もち吉 工場直売所           tabelog  https://tabelog.com/fukuoka/A4007/A400701/40073055/
+ × snc055ff1ed9     北山キャンプ場                    booking  該当宿なし
+ × sned5de31ca1     道の駅 鹿北 小栗郷 親水プール           asoview  インデックスに無し
+ × snad4dea0b08     紅葉谷の湯                      asoview  インデックスに無し
+ × sn2f9405a16b     里山温泉 四季彩の湯                 asoview  インデックスに無し
+ × snee35646c8e     歌瀬キャンプ場                    booking  該当宿なし
+ × sn70e7c9e57e     サンスパおおむら                   asoview  インデックスに無し
+ ○ sn52b687316c     森のカフェ 緑の詩                  tabelog  https://tabelog.com/fukuoka/A4009/A400901/40060547/
+ × sn8468a67811     ACUPA(アクパ) 宗像              asoview  インデックスに無し
+ × sn21a10e1642     千仏鍾乳洞                      asoview  インデックスに無し
+ × sn72c1740da0     平塚川添遺跡公園                   asoview  インデックスに無し
+ × sn5633181484     太陽園(みかん狩り)                 asoview  名前が短すぎ
+ × sn18322bccce     ピクニカ(八木山)                  asoview  インデックスに無し
+ × sn461e389fd0     ノボルト                       asoview  インデックスに無し
+ × sne13835185d     吉祥園(みかん・柿狩り)               asoview  名前が短すぎ
+ × sn51e20c6491     林檎と葡萄の樹                    asoview  インデックスに無し
+ × sn1f0ac22cb5     高倉神社(岡垣町)                  asoview  インデックスに無し
+ × sn662e91f6ee     調音の滝公園 流水プール               asoview  インデックスに無し
+ × snfc8a2b213f     くるめ市民流水プール                 asoview  インデックスに無し
+ × sn2609811810     高良大社                       asoview  インデックスに無し
+ × snbd31c434a9     芦屋歴史の里                     asoview  インデックスに無し
+ × sn43ba19139b     ルートイングランディア福岡宮若 脇田温泉       booking  該当宿なし
+ × snc92db906a1     雲仙おもちゃ博物館                  asoview  インデックスに無し
+ × sn6df3735471     棚田親水公園 河川プール               asoview  インデックスに無し
+ × sn33121058cf     松柏園ホテル(ランチビュッフェ)           booking  該当宿なし
+ × sn504f5d1a84     竜王峡                        asoview  名前が短すぎ
+ × sn56c934d69a     若杉の湯                       asoview  インデックスに無し
+ × sn256770c847     健康の森公園市民プール                asoview  インデックスに無し
+ × sn66edd971a7     カラオケまねきねこ 久留米中央公園店         asoview  インデックスに無し
+ × sn729f531d44     オールデイダイニング カメリア(ホテルオークラ福岡) booking  該当宿なし
+付与可能 11 / 64件
+spots.json に書き込みました(バックアップ: .bak_monetize)

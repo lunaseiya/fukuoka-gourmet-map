@@ -71,7 +71,7 @@ cache = json.load(open(CACHE, encoding='utf-8')) if os.path.exists(CACHE) else {
 byn, byid = {}, {s['id']: s for s in spots}
 for s in spots:
     if s.get('pref') == '福岡県' and not s['id'].startswith('ev-') and not s.get('until'):
-        byn.setdefault(norm(s['name']), s)
+        byn.setdefault(norm(s['name']) + '|' + (s.get('city') or ''), s)
 facs = [s for s in spots if s['id'] in indoor and s.get('lat')]
 
 # 入力をまとめる(同じ店が複数の出どころにあれば、true を優先して1件に)
@@ -94,7 +94,7 @@ for f in sorted(glob.glob(os.path.join(SRC, 'shops_*.json'))):
 #   ・保育園/幼稚園・医療・整骨院・美容室・葬祭・住宅展示場などは「客や利用者として入る前提」なので載せない
 #   ・県「子育て応援の店」は店舗の自己申告。買い物・食事で入れる業種(飲食・スーパー・ドラッグストア・ホームセンター・ベビー用品・商業施設・家電・ディスカウント)だけ採る
 #   ・「保育園利用者対象」などの注記がある行は外す
-NG_NAME = re.compile(r'保育|ほいく|幼稚園|こども園|子ども園|託児|ヤクルト|整骨|接骨|鍼灸|整体|歯科|医院|クリニック|病院|薬局|美容|サロン|ヘア|hair|紫雲閣|葬|斎場|霊園|会館$|学習塾|教室|展示場|不動産|ハウス|ホーム株|工務店|住宅|保険|銀行|信用金庫|郵便局|ホテル|旅館|写真|スタジオ|マッサージ', re.I)
+NG_NAME = re.compile(r'保育|ほいく|幼稚園|こども園|子ども園|託児|ヤクルト|整骨|接骨|鍼灸|整体|歯科|医院|クリニック|病院|薬局|美容|サロン|ヘア|hair|紫雲閣|葬|斎場|霊園|会館$|学習塾|教室|展示場|不動産|ハウス|ホーム株|工務店|住宅|保険|ほけん|銀行|信用金庫|郵便局|ホテル|旅館|写真|スタジオ|マッサージ', re.I)
 OK_PREF_KIND = ('飲食', 'スーパー', 'ドラッグストア', 'ホームセンター', 'ベビー用品', '商業施設', '家電', 'ディスカウント')
 dropped = 0
 for k in list(stores):
@@ -141,7 +141,7 @@ for st in stores.values():
         pts.append('子供用トイレあり')
     k = norm(name)
     k2 = norm(re.sub(r'[（(].*$', '', name))
-    hit = byn.get(k) or byn.get(k2)
+    hit = byn.get(k + '|' + city) or byn.get(k2 + '|' + city)   # ⚠名前だけで合わせない(別の市の「中央図書館」が1つにまとまった・2026-11-11)
     g = [st['lat'], st['lng']] if isinstance(st.get('lat'), (int, float)) and isinstance(st.get('lng'), (int, float)) else None
     if not hit and g:   # 館内モードのある施設のすぐそば(同じ建物)で名前が似ていれば、その施設にまとめる
         for fc in facs:
@@ -204,7 +204,7 @@ for st in stores.values():
         'memo': f'{what}がある店。買い物やお出かけの途中の立ち寄りに。',
         'added': TODAY,
     }
-    spots.append(s); byid[sid] = s; byn.setdefault(k, s); new.append((sid, name, city, st.get('chain') or st.get('kind')))
+    spots.append(s); byid[sid] = s; byn.setdefault(k + '|' + city, s); new.append((sid, name, city, st.get('chain') or st.get('kind')))
 
 print('入力', len(stores))
 print('既存を更新', len(upd)); [print('  ', u) for u in upd]

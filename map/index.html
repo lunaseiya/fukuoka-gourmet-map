@@ -1065,6 +1065,27 @@
   #indoorToast .it-text { flex: 1; }
   #indoorToast .it-go { flex: none; border: 0; background: #222; color: #fff; border-radius: 999px; padding: 8px 12px; font-size: 13px; font-weight: 700; }
   #indoorToast .it-x { flex: none; border: 0; background: transparent; font-size: 16px; color: #888; padding: 4px; }
+  /* 📍現在地ボタンを押したときの「近くで探す」(2026-11-11)。選ばなければ消える */
+  #nearAsk {
+    position: fixed; left: 10px; right: 10px; z-index: 56; max-width: 520px; margin: 0 auto;
+    background: #fff; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,.18);
+    padding: 10px 12px 12px; font-size: 13px; line-height: 1.45;
+  }
+  #nearAsk[hidden] { display: none; }
+  #nearAsk .na-head { display: flex; align-items: center; gap: 8px; font-weight: 700; margin-bottom: 8px; }
+  #nearAsk .na-head span { flex: 1; }
+  #nearAsk .na-x { flex: none; border: 0; background: transparent; font-size: 16px; color: #888; padding: 4px; }
+  #nearAsk .na-btns { display: flex; flex-direction: column; gap: 6px; }
+  #nearAsk .na-btn {
+    display: flex; align-items: center; gap: 8px; width: 100%; text-align: left;
+    border: 1px solid #e3ded5; background: #faf8f4; border-radius: 12px; padding: 11px 12px; font-size: 14px; font-weight: 700; color: #222;
+  }
+  #nearAsk .na-btn small { display: block; font-weight: 400; font-size: 11px; color: #777; margin-top: 1px; }
+  #nearAsk .na-btn .na-ic { flex: none; font-size: 20px; width: 26px; text-align: center; }
+  #nearAsk .na-btn.primary { background: #222; border-color: #222; color: #fff; }
+  #nearAsk .na-btn.primary small { color: #ddd; }
+  .cl-tag.t-dist { background: #eef3ff; color: #1f4fb8; font-weight: 700; }
+  .cl-note { font-size: 11px; color: #888; padding: 2px 12px 10px; line-height: 1.5; }
   /* 地下街の番街ラベル(地図を寄せたときだけ) */
   .ug-label {
     font-size: 10.5px; font-weight: 700; color: #7a4b00; background: rgba(255, 236, 196, .92);
@@ -1209,6 +1230,11 @@
   <span class="it-text" id="itText"></span>
   <button class="it-go" id="itGo" type="button">見る</button>
   <button class="it-x" id="itX" type="button" aria-label="閉じる">✕</button>
+</div>
+
+<div id="nearAsk" hidden>
+  <div class="na-head"><span>📍 今いる場所の近くで探しますか？</span><button class="na-x" id="naX" type="button" aria-label="閉じる">✕</button></div>
+  <div class="na-btns" id="naBtns"></div>
 </div>
 
 <div class="lightbox" id="lightbox" role="dialog" aria-label="写真を拡大表示">
@@ -2643,6 +2669,10 @@ function initMap(spots) {
   window._map = map;
   // 現在地が取れたら、館内モードのある施設の近くか見る(近ければ小さな案内を出す・2026-11-09)
   geolocate.on("geolocate", e => { try { Indoor.onPosition(e.coords); } catch (err) {} });
+  // 📍ボタンを自分で押したときだけ「近くで探しますか？」を出す(開いた直後の自動取得では出さない・2026-11-11)
+  map.getContainer().addEventListener("click", e => {
+    if (e.target.closest && e.target.closest(".maplibregl-ctrl-geolocate")) { try { Indoor.onLocateTap(); } catch (err) {} }
+  }, true);
 
   // ズーム/移動のたびにまとめ直す(寄れば自然にピンがほどける)
   let _reMark = null;
@@ -3055,7 +3085,8 @@ const Indoor = (() => {
   }
 
   const AM_ICON = k => /授乳|ベビー|赤ちゃん|調乳/.test(k) ? "🍼" : /おむつ/.test(k) ? "🚼" : /トイレ/.test(k) ? "🚻"
-    : /遊|キッズ|プレイ|パーク/.test(k) ? "🧸" : /フードコート|食/.test(k) ? "🍽" : /カート|ベビーカー/.test(k) ? "🛒"
+    : /遊|キッズ|プレイ|パーク/.test(k) ? "🧸" : /フードコート|食|レストラン|カフェ/.test(k) ? "🍽" : /カート|ベビーカー/.test(k) ? "🛒"
+    : /ロッカー/.test(k) ? "🧳" : /再入場/.test(k) ? "🎫"
     : /エレベ/.test(k) ? "🛗" : /駐車/.test(k) ? "🅿" : /案内|インフォ/.test(k) ? "ℹ" : "・";
 
   function amenities(f) {
@@ -3257,10 +3288,10 @@ const Indoor = (() => {
     body.querySelectorAll("[data-photo]").forEach(img => img.addEventListener("click", () => Lightbox.open("photos/" + img.dataset.photo)));
   }
 
-  function open(id) {
+  function open(id, wantTab) {
     const f = byId(id); if (!f) return;
     cur = f;
-    hideToast();
+    hideToast(); hideNearAsk();
     document.getElementById("inTitle").textContent = (f.kind === "ug" ? "🚇 " : "🏬 ") + f.name + " の館内";
     const here = hereText(f), hereEl = document.getElementById("inHere");
     hereEl.hidden = !here; hereEl.innerHTML = here;
@@ -3287,6 +3318,7 @@ const Indoor = (() => {
     // 図がある施設は、図のある階(1F優先)から開く。地下街は全体図(今いる番街を黄色で示す)
     const fpKeys = Object.keys(fp).sort((a, b) => FLOOR_ORDER(a) - FLOOR_ORDER(b));
     if (f.kind !== "ug" && fpKeys.length) curTab = fp["1F"] ? "1F" : fpKeys[0];
+    if (wantTab && tabs.some(t => t.key === wantTab)) curTab = wantTab;   // 「最寄りのおむつ替え」からは設備のある階/一覧で開く
     document.querySelectorAll("#inTabs .in-tab").forEach(b => b.addEventListener("click", () => { curTab = b.dataset.tab; renderTab(); }));
     document.getElementById("inMapBtn").addEventListener("click", () => {
       close();
@@ -3325,9 +3357,105 @@ const Indoor = (() => {
   document.getElementById("itGo").addEventListener("click", () => { if (toastFac) open(toastFac.id); });
   document.getElementById("itX").addEventListener("click", hideToast);
 
+  // ---- 📍ボタンを押した → 「近くで探しますか？」(最寄りのおむつ替え・館内図・お店)【2026-11-11ユーザー要望】 ----
+  //   展示やお出かけの途中で「今すぐおむつ替えできる場所」を出すのが目的。距離は直線(道のりではない)
+  let askNear = false, nearTimer = null;
+  const BABY_RE = /授乳|おむつ|ベビー休憩|ベビールーム|赤ちゃん休憩|調乳/;
+  const fmtDist = d => d < 950 ? `約${Math.max(10, Math.round(d / 10) * 10)}m` : `約${(d / 1000).toFixed(d < 9950 ? 1 : 0)}km`;
+  const walkMin = d => d <= 1600 ? `・徒歩${Math.max(1, Math.round(d / 70))}分ほど` : "";
+  function hideNearAsk() { const el = document.getElementById("nearAsk"); if (el) el.hidden = true; clearTimeout(nearTimer); }
+  // 授乳室・おむつ替えのある場所を近い順に(館内モードの施設 + おむつ替え台のある登録店)
+  function babyPlaces() {
+    const out = [], inFac = new Set();
+    list().forEach(f => {
+      if (f.kind === "ug" && !(f.conf.amenities || []).length) return;
+      const am = amenities(f).filter(a => BABY_RE.test(a.kind) || BABY_RE.test(a.text));
+      if (!am.length) return;
+      am.sort((a, b) => (/授乳|ベビー休憩|ベビールーム|赤ちゃん/.test(b.kind) ? 1 : 0) - (/授乳|ベビー休憩|ベビールーム|赤ちゃん/.test(a.kind) ? 1 : 0));
+      const d = f.kind === "ug" ? ugLocate(f.conf.corridor, myPos).d : dist(myPos, f);
+      const floors = [...new Set(am.map(a => a.floor).filter(Boolean))].sort((a, b) => FLOOR_ORDER(a) - FLOOR_ORDER(b));
+      out.push({ d, fac: f, name: f.name, sub: (/授乳|ベビー休憩|ベビールーム|赤ちゃん/.test(am[0].kind) ? "授乳室・おむつ替え" : "おむつ替え") + (floors.length ? " " + floors.slice(0, 3).join("・") : ""), tab: am[0].floor && (plans[f.id] || {})[am[0].floor] ? am[0].floor : "__am" });
+      if (f.spot) inFac.add(f.spot.id);
+    });
+    state.spots.forEach(s => {
+      if (inFac.has(s.id) || s.lat == null || s.lng == null) return;
+      if (!(s.kids && s.kids.diaper === true)) return;
+      if (s.in && inFac.has(s.in)) return;   // 館内モードのある施設の中の店は、施設の行にまとめる
+      out.push({ d: dist(myPos, s), spot: s, name: s.name, sub: "おむつ替え台あり" + (s.genre ? "・" + s.genre : "") });
+    });
+    return out.sort((a, b) => a.d - b.d);
+  }
+  function nearShops() {
+    return applyFilters(state.spots).filter(s => s.lat != null && s.lng != null)
+      .map(s => ({ d: dist(myPos, s), spot: s, name: s.name, sub: s.genre || "" })).sort((a, b) => a.d - b.d);
+  }
+  function showNearList(title, rows, note) {
+    const box = document.getElementById("clusterBox");
+    document.getElementById("clusterTitle").textContent = title;
+    document.getElementById("clusterCount").textContent = `近い順 ${rows.length}件`;
+    document.getElementById("clusterList").innerHTML = rows.map((r, i) => {
+      const s = r.spot;
+      const tags = [
+        `<span class="cl-tag t-dist">${fmtDist(r.d)}${walkMin(r.d)}</span>`,
+        r.fac ? `<span class="cl-tag">🏬 館内図で場所を見る ›</span>` : "",
+        s && !s.wish ? `<span class="cl-tag t-visited">🔴 訪問済み</span>` : "",
+        s && isKidsTop(s) ? `<span class="cl-tag t-kids">🌟子連れ大歓迎</span>` : s && kidsLevelOf(s) === 2 ? `<span class="cl-tag t-kids">子連れ歓迎</span>` : ""
+      ].join("");
+      return `<button class="cl-item" data-near="${i}" type="button">
+        <span class="cl-top"><span class="cl-name">${r.fac ? "🏬 " : ""}${escapeHtml(r.name)}</span><span class="cl-genre">${escapeHtml(r.sub || "")}</span></span>
+        <span class="cl-tags">${tags}</span></button>`;
+    }).join("") + `<div class="cl-note">${escapeHtml(note)}</div>`;
+    box.querySelectorAll("[data-near]").forEach(b => b.addEventListener("click", () => {
+      const r = rows[Number(b.dataset.near)];
+      box.classList.remove("open");
+      try { window.icTrack && window.icTrack("near_pick", { id: r.fac ? r.fac.id : r.spot.id }); } catch (e) {}
+      if (r.fac) { open(r.fac.id, r.tab); return; }
+      if (applyFilters(state.spots).some(x => x.id === r.spot.id)) focusSpot(r.spot); else jumpToSpot(r.spot);
+    }));
+    box.classList.add("open");
+  }
+  function showNearAsk() {
+    if (!myPos || !state.spots.length) return;
+    if (document.getElementById("indoor").classList.contains("open")) return;
+    hideToast();
+    const baby = babyPlaces().slice(0, 8), shops = nearShops().slice(0, 10);
+    // 今いる施設(館内モードあり)が分かれば、その館内図を一番上に出す
+    let here = null;
+    list().forEach(f => {
+      const d = f.kind === "ug" ? ugLocate(f.conf.corridor, myPos).d : dist(myPos, f);
+      if (d <= f.radius + Math.min(myPos.acc, 80) && (!here || d < here.d)) here = { f, d };
+    });
+    const btns = [];
+    if (here) btns.push({ k: "here", cls: "primary", ic: here.f.kind === "ug" ? "🚇" : "🏬", t: `${here.f.name} の館内図`, s: "授乳室・おむつ替え・お店の階" });
+    if (baby.length) btns.push({ k: "baby", cls: here ? "" : "primary", ic: "🚼", t: "最寄りのおむつ替え・授乳室", s: `いちばん近いのは ${baby[0].name}(${fmtDist(baby[0].d)})` });
+    if (shops.length) btns.push({ k: "shop", cls: "", ic: "🍽", t: "近くのお店・スポット", s: `いちばん近いのは ${shops[0].name}(${fmtDist(shops[0].d)})` });
+    if (!btns.length) return;
+    document.getElementById("naBtns").innerHTML = btns.map(b =>
+      `<button class="na-btn ${b.cls}" data-k="${b.k}" type="button"><span class="na-ic">${b.ic}</span><span>${escapeHtml(b.t)}<small>${escapeHtml(b.s)}</small></span></button>`).join("");
+    const el = document.getElementById("nearAsk"), h = document.querySelector("header");
+    el.style.top = ((h ? h.getBoundingClientRect().bottom : 60) + 8) + "px";
+    el.hidden = false;
+    clearTimeout(nearTimer); nearTimer = setTimeout(hideNearAsk, 12000);
+    el.querySelectorAll(".na-btn").forEach(b => b.addEventListener("click", () => {
+      hideNearAsk();
+      try { window.icTrack && window.icTrack("near_choose", { kind: b.dataset.k }); } catch (e) {}
+      if (b.dataset.k === "here") open(here.f.id);
+      else if (b.dataset.k === "baby") showNearList("最寄りのおむつ替え・授乳室", baby, "距離は直線です(道のりではありません)。施設は公式の案内で確認した場所、お店は登録情報にある「おむつ替え台あり」の店です。");
+      else showNearList("近くのお店・スポット", shops, "距離は直線です(道のりではありません)。上の絞り込み(子連れOK・年齢など)に合うものを近い順に出しています。");
+    }));
+    try { window.icTrack && window.icTrack("near_ask", {}); } catch (e) {}
+  }
+  function onLocateTap() {
+    if (myPos) { askNear = false; setTimeout(showNearAsk, 350); }   // 位置が分かっていればすぐ出す
+    else askNear = true;                                            // まだなら、取れた時に出す
+  }
+  document.getElementById("naX").addEventListener("click", hideNearAsk);
+
   function onPosition(c) {
     myPos = { lat: c.latitude, lng: c.longitude, acc: c.accuracy || 0 };
     if (!state.spots.length) return;
+    if (askNear) { askNear = false; showNearAsk(); return; }   // 自分で📍を押した直後は「近くで探す」を出す(施設の案内トーストと重ねない)
+    if (!document.getElementById("nearAsk").hidden) return;
     let best = null;
     list().forEach(f => {
       const d = f.kind === "ug" ? ugLocate(f.conf.corridor, myPos).d : dist(myPos, f);
@@ -3377,7 +3505,7 @@ const Indoor = (() => {
     return f ? 18.6 : null;
   }
 
-  return { load, open, close, forSpot, byId, onPosition, drawUnderground, focusZoom, reset: () => { facs = null; } };
+  return { load, open, close, forSpot, byId, onPosition, onLocateTap, drawUnderground, focusZoom, reset: () => { facs = null; } };
 })();
 
 (async function main() {

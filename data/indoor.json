@@ -3577,5 +3577,1666 @@
   ],
   "source": "館内フロアガイド(現地撮影 2026-11-10)",
   "checked": "2026-11-10"
+ },
+ "fukuoka-mitsukoshi": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F"
+  ],
+  "amenities": [
+   {
+    "floor": "B1",
+    "kind": "ベビー休憩室",
+    "where": "地下1階 ラシック/ラララルーム(南側・国体道路側)。おむつ替えベッド・調乳専用浄水給湯器あり"
+   },
+   {
+    "floor": "B1",
+    "kind": "授乳室",
+    "where": "地下1階 ラシック/ラララルーム内"
+   },
+   {
+    "floor": "B1",
+    "kind": "キッズトイレ",
+    "where": "男児用: 地下1階 ラシック/ラララルーム内"
+   },
+   {
+    "floor": "5F",
+    "kind": "キッズトイレ",
+    "where": "女児用: 5階 女性用化粧室内"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "ベビーシート付化粧室: 女性用=地下2階・地下1階北/南・4・5・6・8・9階、男性用=地下1階北・6階・9階"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "多機能化粧室: 地下2階・地下1階・5階・7階・9階(オストメイト対応は地下2階と9階)"
+   },
+   {
+    "floor": "B2",
+    "kind": "インフォメーション",
+    "where": "地下2階 南口案内所"
+   },
+   {
+    "floor": "B2",
+    "kind": "ベビーカー貸出",
+    "where": "地下2階 南口案内所(岩田屋本店・福岡三越・VIOROで利用/返却可)"
+   },
+   {
+    "floor": "B2",
+    "kind": "コインロッカー",
+    "where": "地下2階 中央エレベーター前・多機能トイレ前(常温)/冷蔵コインロッカーも地下2階"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "中央エレベーター・展望エレベーター(いずれもB2F〜9F各階)"
+   },
+   {
+    "floor": "5F",
+    "kind": "カフェ",
+    "where": "5階 キハチカフェ"
+   },
+   {
+    "floor": "4F",
+    "kind": "カフェ",
+    "where": "4階 アフタヌーンティー・ティールーム"
+   }
+  ],
+  "floormap": "https://www.iwataya-mitsukoshi.mistore.jp/mitsukoshi/shops.html",
+  "source": "https://www.iwataya-mitsukoshi.mistore.jp/mitsukoshi/service.html",
+  "checked": "2026-11-11"
+ },
+ "fukuokaparco": {
+  "kind": "mall",
+  "floors": [
+   "本館B1",
+   "本館1F",
+   "本館2F",
+   "本館3F",
+   "本館4F",
+   "本館5F",
+   "本館6F",
+   "本館7F",
+   "本館8F",
+   "新館B2",
+   "新館B1",
+   "新館1F",
+   "新館2F",
+   "新館3F",
+   "新館4F",
+   "新館5F",
+   "新館6F"
+  ],
+  "amenities": [
+   {
+    "floor": "本館6F",
+    "kind": "授乳室",
+    "where": "本館6F ベビールーム(エレベーターホール横・化粧室の並び)。給湯器あり"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "ベビーカー貸出",
+    "where": "本館1F エレベーターホール横に設置"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "インフォメーション",
+    "where": "本館1F インフォメーションカウンター(西鉄電車側の出入口近く)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "本館3F・5F・8F、新館4F・6F(オストメイト対応は本館8F・新館6F)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "本館は新館側のエレベーターホール(3基)。本館地下1Fからオイチカ・ソラリアステージ方面は車いす専用昇降機あり"
+   },
+   {
+    "floor": "本館B1",
+    "kind": "レストラン",
+    "where": "本館B1F オイチカ(レストラン・カフェ街)"
+   },
+   {
+    "floor": "新館B2",
+    "kind": "レストラン",
+    "where": "新館B2F コンネキッチン(レストラン・カフェ)"
+   }
+  ],
+  "tenants": {
+   "fukuokaparco_01": "本館B1",
+   "fukuokaparco_02": "本館B1",
+   "fukuokaparco_03": "本館B1",
+   "fukuokaparco_04": "本館B1",
+   "fukuokaparco_05": "本館B1",
+   "fukuokaparco_06": "本館B1",
+   "fukuokaparco_07": "本館B1",
+   "fukuokaparco_08": "本館B1",
+   "fukuokaparco_09": "本館B1",
+   "fukuokaparco_10": "本館B1",
+   "fukuokaparco_11": "本館B1",
+   "fukuokaparco_12": "本館B1",
+   "fukuokaparco_13": "本館B1",
+   "fukuokaparco_14": "本館B1",
+   "fukuokaparco_15": "本館B1",
+   "sp958a08e130": "本館B1",
+   "fukuokaparco_16": "新館B2",
+   "fukuokaparco_17": "新館B2",
+   "fukuokaparco_18": "新館B2",
+   "fukuokaparco_19": "新館B2",
+   "fukuokaparco_20": "新館B2",
+   "fukuokaparco_23": "新館3F",
+   "chanoma-fukuoka": "新館3F",
+   "fukuokaparco_24": "新館6F",
+   "fukuokaparco_25": "新館6F",
+   "kirby_colorful_store_fukuokaparco": "本館5F"
+  },
+  "floormap": "https://fukuoka.parco.jp/floor/",
+  "source": "https://fukuoka.parco.jp/info/",
+  "checked": "2026-11-11"
+ },
+ "solaria-plaza": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F"
+  ],
+  "amenities": [
+   {
+    "floor": "5F",
+    "kind": "授乳室",
+    "where": "5F 東側(渡辺通り側)のパウダールーム・女性用トイレの並び"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F 北側インフォメーションカウンター(ライオン広場側)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F インフォメーションカウンター(館内用は1か月〜2歳、天神地区用は1か月〜3歳)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "マルチトイレ: 1F・6F"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "ベビーカー・車椅子優先エレベーターあり(各階)"
+   },
+   {
+    "floor": "6F",
+    "kind": "レストラン",
+    "where": "6F レストランフロア"
+   },
+   {
+    "floor": "7F",
+    "kind": "レストラン",
+    "where": "7F レストランフロア(TOHOシネマズ天神も7F)"
+   },
+   {
+    "floor": "B2",
+    "kind": "レストラン",
+    "where": "B2F 食品・レストラン(天神地下街・きらめき通り地下通路に接続)"
+   }
+  ],
+  "tenants": {
+   "hp67d1e4da28": "7F",
+   "hp413da02be4": "7F",
+   "hp6aa51a18ac": "6F",
+   "hp0f0d5d48a2": "6F"
+  },
+  "floormap": "https://www.solariaplaza.com/floor/floor_5f.html",
+  "source": "https://www.solariaplaza.com/info/index_service.html",
+  "checked": "2026-11-11"
+ },
+ "kitte-hakata": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "9F",
+   "10F",
+   "11F"
+  ],
+  "amenities": [
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "6F(博多マルイ)ベビールーム。化粧室の並び。ベビーベッド(おむつ交換台)あり"
+   },
+   {
+    "floor": "10F",
+    "kind": "授乳室",
+    "where": "10F 郵便局側エレベーター横の化粧室の並び。おむつ交換台・自動販売機あり"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "6F・10Fの授乳室内と、B1F・2F〜10Fの多目的トイレ/女性用お手洗い"
+   },
+   {
+    "kind": "キッズトイレ",
+    "where": "お子さま用補助便座: B1F・8F・9F・10Fの女性用お手洗い"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "B1F・2F〜10F(6Fは介助用ベッド付)。ベビーカーごと入れる個室は3F〜7Fの女性用お手洗い"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F インフォメーションカウンター(博多駅側の出入口近く)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F インフォメーションカウンター(本人確認書類が必要・数に限りあり)"
+   },
+   {
+    "floor": "10F",
+    "kind": "コインロッカー",
+    "where": "10F 博多駅側エレベーターホール横(当日限り)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "博多駅側・郵便局側の2か所。全機が車いす・ベビーカー優先"
+   },
+   {
+    "floor": "9F",
+    "kind": "レストラン",
+    "where": "9F レストラン&カフェ「うまいと」"
+   },
+   {
+    "floor": "10F",
+    "kind": "レストラン",
+    "where": "10F レストラン&カフェ「うまいと」"
+   },
+   {
+    "floor": "B1",
+    "kind": "レストラン",
+    "where": "B1F レストラン&カフェ「うまいと」"
+   }
+  ],
+  "floormap": "https://hakata.jp-kitte.jp/shop/floor-top.jsp",
+  "source": "https://hakata.jp-kitte.jp/guide/facility.jsp",
+  "checked": "2026-11-11"
+ },
+ "onefukuoka": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F"
+  ],
+  "amenities": [
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "3F 南西側の化粧室の並び(因幡町通り側のエスカレーター近く)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F インフォメーションカウンター(グランドロビー・明治通り寄り)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F インフォメーションカウンター"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "バリアフリートイレ: B2F・B1F・1F・2F・3F・4F・5F"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "館内中央のエレベーター(B4・B2〜4F・5F)ほか"
+   },
+   {
+    "floor": "B1",
+    "kind": "レストラン",
+    "where": "B1F 天神のれん街/iiTo TENJIN"
+   },
+   {
+    "floor": "5F",
+    "kind": "レストラン",
+    "where": "5F 天神福食堂"
+   },
+   {
+    "floor": "B2",
+    "kind": "カフェ",
+    "where": "B2F 食物販・カフェ"
+   }
+  ],
+  "tenants": {
+   "onefukuoka_01": "B1",
+   "onefukuoka_02": "B1",
+   "onefukuoka_03": "B1",
+   "onefukuoka_04": "B1",
+   "onefukuoka_05": "B1",
+   "onefukuoka_06": "B1",
+   "onefukuoka_07": "B1",
+   "onefukuoka_08": "B1",
+   "onefukuoka_09": "B1",
+   "onefukuoka_10": "B1",
+   "onefukuoka_11": "B1",
+   "onefukuoka_12": "B1",
+   "onefukuoka_13": "B1",
+   "onefukuoka_14": "B1",
+   "onefukuoka_15": "B1",
+   "onefukuoka_16": "B2",
+   "onefukuoka_17": "B2",
+   "onefukuoka_18": "B2",
+   "onefukuoka_19": "B2",
+   "onefukuoka_20": "B2",
+   "onefukuoka_21": "B2",
+   "onefukuoka_22": "B2",
+   "onefukuoka_23": "B2",
+   "onefukuoka_24": "B2",
+   "onefukuoka_25": "B2",
+   "onefukuoka_26": "B2",
+   "onefukuoka_27": "B2",
+   "onefukuoka_28": "B2",
+   "onefukuoka_29": "B2",
+   "onefukuoka_30": "B2",
+   "onefukuoka_31": "B2",
+   "onefukuoka_32": "B2",
+   "onefukuoka_33": "B2",
+   "onefukuoka_34": "B2",
+   "onefukuoka_35": "B2",
+   "onefukuoka_36": "B2",
+   "onefukuoka_37": "1F",
+   "onefukuoka_38": "1F",
+   "onefukuoka_39": "1F",
+   "onefukuoka_40": "1F",
+   "onefukuoka_41": "2F",
+   "onefukuoka_42": "3F",
+   "onefukuoka_43": "3F",
+   "onefukuoka_44": "4F",
+   "onefukuoka_45": "4F",
+   "onefukuoka_46": "5F"
+  },
+  "floormap": "https://onefukuoka-building.jp/shop/floormap",
+  "source": "https://onefukuoka-building.jp/service",
+  "checked": "2026-11-11"
+ },
+ "kokura-izutsuya": {
+  "kind": "mall",
+  "floors": [
+   "本館B1",
+   "本館1F",
+   "本館2F",
+   "本館3F",
+   "本館4F",
+   "本館5F",
+   "本館6F",
+   "本館7F",
+   "本館8F",
+   "本館9F",
+   "新館B1",
+   "新館1F",
+   "新館2F",
+   "新館3F",
+   "新館4F",
+   "新館5F",
+   "新館6F",
+   "新館7F",
+   "新館8F",
+   "新館9F"
+  ],
+  "amenities": [
+   {
+    "floor": "本館7F",
+    "kind": "ベビー休憩室",
+    "where": "本館7F ベビーサロン(ベビー・こども服フロア)。おむつ替え台・食事スペースあり"
+   },
+   {
+    "floor": "本館7F",
+    "kind": "授乳室",
+    "where": "本館7F ベビーサロン内。個室2・調乳用の浄温水あり"
+   },
+   {
+    "floor": "本館7F",
+    "kind": "キッズスペース",
+    "where": "本館7F アイキッズランド(玩具・遊び場)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "赤ちゃんの駅: 本館 地階〜4階・7階、新館 地階〜9階のトイレにベビーチェア・ベビーシート"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "車椅子で利用できるトイレ: 本館1階・4階・6階、新館 地階〜9階"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "インフォメーション",
+    "where": "本館1階 正面案内所(総合案内所)"
+   },
+   {
+    "floor": "本館1F",
+    "kind": "ベビーカー貸出",
+    "where": "本館1階 正面案内所"
+   },
+   {
+    "floor": "新館B1",
+    "kind": "ベビーカー貸出",
+    "where": "新館地階 駐車場サービスカウンター"
+   },
+   {
+    "kind": "コインロッカー",
+    "where": "常温: 本館 地階・東階段・8階、新館9階/保冷: 本館地階/大型: 本館1階 正面玄関"
+   },
+   {
+    "floor": "本館8F",
+    "kind": "レストラン",
+    "where": "本館8F レストラン街「グルメスクエア」"
+   },
+   {
+    "floor": "新館8F",
+    "kind": "レストラン",
+    "where": "新館8F レストラン街「グルメスクエア」"
+   }
+  ],
+  "tenants": {
+   "chuugokuryourikoujiizutsuyao": "新館8F"
+  },
+  "floormap": "https://www.izutsuya.co.jp/storelist/kokura/floorguide/",
+  "source": "https://www.izutsuya.co.jp/storelist/kokura/service_guide/service_05/",
+  "checked": "2026-11-11"
+ },
+ "fukuokashibijutsukan": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "2F キッズスペース「森のたね」内。女性専用の授乳室と、男性の保護者も入れる「赤ちゃんの休憩室」(コレクション展示室 近現代美術の入口そば)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "2F キッズスペース「森のたね」(近現代美術室A・Bの並び。畳・絵本・遊べるオブジェ。飲食不可)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "館内すべてのトイレエリア内で可。男女トイレにベビーチェア付き個室あり"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F 総合案内の後方「みんなのトイレ」(ベビーシート・ベビーチェア・収納式多目的シート・オストメイト)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F チケットカウンター後方「みんなのトイレ」(特別展示室の入口手前。こどもトイレも同じ並び)"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズトイレ",
+    "where": "2F ロビーのトイレ(特別展示室の入口手前)にこどもトイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F 総合案内(無料)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F 総合案内(南口を入ってすぐ・ミュージアムホール前)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "1台。1F 総合案内横 ⇔ 2F レストラン横"
+   },
+   {
+    "kind": "コインロッカー",
+    "where": "コインリターン式。1F ミュージアムショップ横 / 2F ロビー / 2F レストラン前"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "1F カフェ「アクアム」(大濠公園口・アプローチ広場横)"
+   },
+   {
+    "floor": "2F",
+    "kind": "レストラン",
+    "where": "2F レストラン「プルヌス」(ギャラリーA-Fの手前・エレベーター横)"
+   }
+  ],
+  "floormap": "https://www.fukuoka-art-museum.jp/guide/floor/",
+  "source": "https://www.fukuoka-art-museum.jp/guide/barrierfree/",
+  "checked": "2026-11-11"
+ },
+ "kyuushuukokuritsuhakubutsuka": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "1F エントランスホール西側、Mカフェとミュージアムホールの間のトイレ並び。利用は1F総合案内所に声かけ(男性が入るときは必ず事前に)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "全階(1F・3F・4F)の女性化粧室と多目的トイレに交換台(多目的トイレは男性も利用可)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F エントランスホールの西側(授乳室の並び)と東側(あじっぱの奥)"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F 特別展示室の出入口前ロビー"
+   },
+   {
+    "floor": "4F",
+    "kind": "多目的トイレ",
+    "where": "4F 文化交流展示室の周囲"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F 総合案内所(8台・室内用。3F特別展示室・4F文化交流展示室とも使用可、混雑時は入室を断られる場合あり)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F エントランスホール 総合案内所"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "1F「あじっぱ」(体験型展示室・無料。ミュージアムホールの東隣)"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F エントランスホール南側(券売所の並び)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "1F 東側(ミュージアムショップ奥)から3F・4Fへ。2Fは学芸エリアで立入不可"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "1F Mカフェ(天満宮側アクセストンネルの出入口横)"
+   },
+   {
+    "kind": "レストラン",
+    "where": "レストラン「太宰府 いい乃じ」"
+   }
+  ],
+  "floormap": "https://www.kyuhaku.jp/visit/img/9haku_map05.pdf",
+  "source": "https://www.kyuhaku.jp/visit/visit_qanda.html",
+  "checked": "2026-11-11"
+ },
+ "fukuokashikagakukan": {
+  "kind": "mall",
+  "floors": [
+   "3F",
+   "4F",
+   "5F",
+   "6F"
+  ],
+  "amenities": [
+   {
+    "floor": "4F",
+    "kind": "授乳室",
+    "where": "4F エレベーター横(おやこひろばのすぐそば)"
+   },
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "6F エレベーター横(ドームシアター入口の手前)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "各階(3F〜6F)の多目的トイレに交換台"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F 総合案内の奥(エレベーターの先)"
+   },
+   {
+    "floor": "4F",
+    "kind": "多目的トイレ",
+    "where": "4F エレベーターの先(交流室1の横)"
+   },
+   {
+    "floor": "5F",
+    "kind": "多目的トイレ",
+    "where": "5F 基本展示室の西側(エレベーター側)と東側(ロボスクエア横)"
+   },
+   {
+    "floor": "6F",
+    "kind": "多目的トイレ",
+    "where": "6F ドームシアター横と、サイエンスホール側"
+   },
+   {
+    "floor": "4F",
+    "kind": "キッズスペース",
+    "where": "4F おやこひろば(エスカレーターを上がって左・サイエンスナビの隣)"
+   },
+   {
+    "kind": "ベビーカー貸出",
+    "where": "貸出用ベビーカーあり(無料)"
+   },
+   {
+    "floor": "3F",
+    "kind": "インフォメーション",
+    "where": "3F 総合案内／チケットカウンター(科学館の入口階)"
+   },
+   {
+    "floor": "3F",
+    "kind": "コインロッカー",
+    "where": "3F 総合案内／チケットカウンターの横(100円リターン式)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "各階の西側(総合案内の奥)"
+   },
+   {
+    "floor": "6F",
+    "kind": "飲食スペース",
+    "where": "6F ホワイエで持ち込み飲食可(団体利用・イベント時は不可の場合あり)"
+   },
+   {
+    "floor": "5F",
+    "kind": "再入場",
+    "where": "5F 基本展示室は当日なら何度でも再入場可"
+   }
+  ],
+  "floormap": "https://www.fukuokacity-kagakukan.jp/floorguide/",
+  "source": "https://www.fukuokacity-kagakukan.jp/use/faq.html",
+  "checked": "2026-11-11"
+ },
+ "kurumeshibijutsukan": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "kind": "授乳室",
+    "where": "美術館(本館)内に授乳室あり(石橋文化センター園内散策マップの表示。階は公式に記載なし)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "美術館(本館)内にベビーシートあり(園内散策マップの表示。階は公式に記載なし)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "本館1F 多目的ルーム1の横(男女トイレの並び)"
+   },
+   {
+    "kind": "カフェ",
+    "where": "園内の楽水亭(カフェ&ギャラリーショップ・美術館の西隣、池のほとり。ベビーシート・ベビーチェアあり)"
+   }
+  ],
+  "floormap": "https://www.ishibashi-bunka.jp/kcam/visit/",
+  "source": "https://www.ishibashi-bunka.jp/garden/pdf/icc_map.pdf",
+  "checked": "2026-11-11"
+ },
+ "aso163265": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "2F こどもミュージアムの隣(エレベーター横・「北九州市のあゆみ」の手前)。給湯設備(70℃)とベビーベッドあり"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "各階の多目的トイレ(館内6か所)と2F授乳室にベビーベッド"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F アースモールの中ほど(ミュージアムショップ寄り)と、エンバイラマ館の手前"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F こどもミュージアム前"
+   },
+   {
+    "floor": "2F",
+    "kind": "キッズスペース",
+    "where": "2F こどもミュージアム(恐竜パズル・絵本など)と、プレイルーム(幼児対象)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F インフォメーション(台数に限り・予約不可)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F 一般出入口を入ってすぐ"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F エントランス(ミュージアムショップの並び)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "1F エントランス ⇔ 2F こどもミュージアム横 ⇔ 3F"
+   },
+   {
+    "floor": "1F",
+    "kind": "飲食スペース",
+    "where": "館内にレストランは無い。休憩ルームで飲食可(団体予約席の札があるテーブルは不可)"
+   },
+   {
+    "kind": "再入場",
+    "where": "当日の入館券があれば常設展示エリアは当日何度でも再入場可(特別展は不可の場合あり)"
+   }
+  ],
+  "floormap": "https://www.kmnh.jp/guide/floormap/",
+  "source": "https://www.kmnh.jp/guide/family/",
+  "checked": "2026-11-11"
+ },
+ "kitakyushu-manga-museum": {
+  "kind": "mall",
+  "floors": [
+   "5F",
+   "6F"
+  ],
+  "amenities": [
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "6F(常設展示・閲覧ゾーンの階)。利用は受付に声かけ。室内におむつ交換台あり"
+   },
+   {
+    "floor": "6F",
+    "kind": "おむつ替え",
+    "where": "6F 授乳室内と、6F 多目的トイレ内"
+   },
+   {
+    "floor": "6F",
+    "kind": "多目的トイレ",
+    "where": "6F(おむつ交換台あり)"
+   },
+   {
+    "kind": "コインロッカー",
+    "where": "エントランス付近(100円返却式)。入らない荷物は受付で預かり可"
+   },
+   {
+    "kind": "再入場",
+    "where": "当日に限り常設展示コーナー・閲覧コーナーへ再入場可(半券を受付で提示)。館内は飲食不可"
+   }
+  ],
+  "floormap": "https://www.ktqmm.jp/about/floormap",
+  "source": "https://www.ktqmm.jp/about/faq",
+  "checked": "2026-11-11"
+ },
+ "fukuokakenseishounenkagakuka": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "ベビー休憩室",
+    "where": "1F「赤ちゃんコーナー」(救護室の隣・トイレの並び。出入口を入って中庭の向こう側)"
+   },
+   {
+    "floor": "3F",
+    "kind": "ベビー休憩室",
+    "where": "3F「赤ちゃんコーナー」(キッズコーナー「めばえ」のすぐ横)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "3F キッズコーナー「めばえ」(未就学児向け・知育玩具)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F 赤ちゃんコーナーの隣"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F 総合案内(出入口を入ってすぐ・中庭の手前)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "各階 中庭(吹き抜け)に面した中央"
+   },
+   {
+    "floor": "1F",
+    "kind": "飲食スペース",
+    "where": "1F イートエリア(持ち込みの食事はここで)。館内は自動販売機のみでレストランは無い。各階にドリンクエリア"
+   },
+   {
+    "kind": "再入場",
+    "where": "土日祝と夏休み・春休みなど長期休業期間の平日は、一度玄関を出ると再入館不可"
+   }
+  ],
+  "floormap": "https://science.pref.fukuoka.jp/floorguide/",
+  "source": "https://science.pref.fukuoka.jp/floorguide/",
+  "checked": "2026-11-11"
+ },
+ "fukuoka-city-museum": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "1F 総合案内の東隣(コインロッカーの先)。授乳用の個室2・共有スペースにシンクとロータイプのおむつ替えベッド。利用は近くのスタッフに声かけ"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "1F 北側の女性トイレ(エントランスホール奥・大階段の裏)と、授乳室内"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "2F 北側の男性トイレ・女性トイレ(企画展示室の入口横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F 北側トイレ(エントランスホール奥)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F 北側トイレ(企画展示室の入口横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F 総合案内(無料)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F 総合案内(正面玄関を入って右)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "1F 体験学習室「みたいけんラボ」(エントランスホール東側。アジア各地のおもちゃ・楽器・民族衣装を手に取れる)"
+   },
+   {
+    "kind": "コインロッカー",
+    "where": "1F 総合案内横 / 2F 読書室横(100円は戻る)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "1F 講座室1の前(西側) ⇔ 2F 常設展示室の出口側"
+   },
+   {
+    "floor": "2F",
+    "kind": "飲食スペース",
+    "where": "2F 喫茶・談話室(持ち込みの飲食可)。レストランの営業は終了。館外西側のオープンテラスに自動販売機"
+   }
+  ],
+  "floormap": "https://museum.city.fukuoka.jp/about/floormap.html",
+  "source": "https://museum.city.fukuoka.jp/about/information.html",
+  "checked": "2026-11-11"
+ },
+ "fukuoka-asian-art-museum": {
+  "kind": "mall",
+  "floors": [
+   "7F",
+   "8F"
+  ],
+  "amenities": [
+   {
+    "floor": "8F",
+    "kind": "授乳室",
+    "where": "8F 図書閲覧室の東隣・化粧室の並び(事務室入口の手前)。ソファー・おむつ替えベッド・畳スペース・小さな流し"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "館内すべての男性トイレ・女性トイレに交換台(ベビーチェア付き個室もあり)"
+   },
+   {
+    "floor": "7F",
+    "kind": "多目的トイレ",
+    "where": "7F アジアギャラリー横の化粧室の中央「みんなのトイレ」(ベビーチェア・子ども用便座とふみ台)"
+   },
+   {
+    "floor": "8F",
+    "kind": "多目的トイレ",
+    "where": "8F 階段横「みんなのトイレ」(授乳室のすぐ北)"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズトイレ",
+    "where": "7F 女性トイレに子ども用個室"
+   },
+   {
+    "floor": "7F",
+    "kind": "キッズスペース",
+    "where": "7F キッズコーナー(アートカフェの並び・アジアギャラリーの出口側。アジアの絵本)"
+   },
+   {
+    "floor": "7F",
+    "kind": "ベビーカー貸出",
+    "where": "7F 総合案内(無料)"
+   },
+   {
+    "floor": "7F",
+    "kind": "インフォメーション",
+    "where": "7F 総合案内(エレベーターを降りて正面)"
+   },
+   {
+    "floor": "7F",
+    "kind": "コインロッカー",
+    "where": "7F 総合案内の横(無料)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "美術館専用の直通3基と、博多リバレインCエレベーター1基(B4〜B1・1・2・4・7・8F)。地下鉄中洲川端駅6番出口からB2で直結"
+   },
+   {
+    "floor": "7F",
+    "kind": "カフェ",
+    "where": "7F アートカフェ(飲食はここだけ可)"
+   }
+  ],
+  "floormap": "https://faam.city.fukuoka.lg.jp/guidance/map/",
+  "source": "https://faam.city.fukuoka.lg.jp/guidance/accessibility/",
+  "checked": "2026-11-11"
+ },
+ "fukuoka-prefectural-museum-of-art": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F",
+   "4F"
+  ],
+  "amenities": [
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "2F(ハイビジョンギャラリー・事務室の階)"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "3F 多目的トイレ内におむつ替えシート(3F展示室=特別展の階)"
+   },
+   {
+    "floor": "4F",
+    "kind": "おむつ替え",
+    "where": "4F 女性用トイレ内におむつ替えシート(4F展示室=コレクション展の階)"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F"
+   },
+   {
+    "kind": "ベビーカー貸出",
+    "where": "貸出用のベビーカー・車椅子あり"
+   },
+   {
+    "kind": "コインロッカー",
+    "where": "1F・3F・4F"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "各階"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "1F 喫茶室"
+   }
+  ],
+  "floormap": "https://fukuoka-kenbi.jp/floor-guide/",
+  "source": "https://fukuoka-kenbi.jp/floor-guide/",
+  "checked": "2026-11-11"
+ },
+ "kitakyushu-municipal-museum-of-art": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "利用は受付(ロビー階の総合案内)に声かけ。場所は公式フロアガイドに記載なし"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "ロビー階のトイレ内におむつ交換台(エントランスホール奥・企画展示室Aの入口横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F エントランスホール奥「みんなのトイレ」(企画展示室Aの入口横)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "受付(ロビー階)で無料貸出"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F エントランスホール 総合案内・チケットカウンター"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F エントランスホール入口の右手(100円返却式)。入らない荷物は受付へ"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "1F エントランスホール左手(エデュケーションルームA横) ⇔ 2F ⇔ 3F コレクション展示室"
+   },
+   {
+    "floor": "2F",
+    "kind": "カフェ",
+    "where": "本館2F カフェ・ミュゼ(入館料なしで利用可)"
+   }
+  ],
+  "floormap": "https://kmma.jp/visitor/honkan/floorguide/",
+  "source": "https://kmma.jp/faq/",
+  "checked": "2026-11-11"
+ },
+ "ooitakentachibijutsukanopam": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "1F 展示室Aの裏手(アトリウムから見て奥)のトイレ並び"
+   },
+   {
+    "floor": "2F",
+    "kind": "授乳室",
+    "where": "2F 情報コーナーとカフェの間の階段奥・ロッカーの先"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F 展示室A裏手のトイレ並び(オストメイト対応あり)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F アトリエ・情報コーナーの裏手"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F ホワイエ奥(コレクション展示室と展示室Bの間)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F インフォメーション(エントランス入ってすぐ)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F アトリウム・エントランス側"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F 展示室A裏手・階段横"
+   },
+   {
+    "floor": "2F",
+    "kind": "コインロッカー",
+    "where": "2F 階段横(授乳室の手前)"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "1F アトリウム(展示室Aの向かい)"
+   },
+   {
+    "floor": "2F",
+    "kind": "カフェ",
+    "where": "2F café Charité(情報コーナーの隣)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "アトリウム中央とエントランス横の2か所(1〜3F)"
+   }
+  ],
+  "floormap": "https://www.opam.jp/info/information/floormap.html",
+  "source": "https://www.opam.jp/info/information/barrier_free.html",
+  "checked": "2026-11-11"
+ },
+ "aso159164": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "1F(場所はフロアスタッフへ)"
+   },
+   {
+    "kind": "ベビーカー貸出",
+    "where": "3台・フロアスタッフに申し出"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F ロッカー室(エントランスホールとミュージアムショップの間・コイン返却式)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "1F エントランスホール横(会議室側)のトイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F 歴史文化展示ゾーン ロビー横のトイレ"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F 企画展示室ロビーのトイレ"
+   },
+   {
+    "floor": "2F",
+    "kind": "レストラン",
+    "where": "2F 長崎奉行所ゾーン側 ミュージアムレストラン銀嶺"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "エントランスホール横(1〜3F)・駐車場側"
+   }
+  ],
+  "floormap": "https://www.nmhc.jp/floor-guide/",
+  "source": "https://www.nmhc.jp/visitor_information/info/",
+  "checked": "2026-11-11"
+ },
+ "saga-prefectural-art-museum": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "3F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "美術館1F OKADA-ROOM付近(博物館との連絡通路沿い)"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "美術館1F 多目的トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "博物館1F 男性・女性トイレ"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "美術館1F 受付の先(オストメイト対応)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "博物館1F"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "博物館・美術館それぞれの入口"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "博物館1F 絵本・無料の塗り絵コーナー"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "美術館入口横・博物館入口横"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "博物館1F ミュージアムカフェ"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "博物館(2F・3Fの展示室へ)"
+   }
+  ],
+  "floormap": "https://saga-museum.jp/museum/facility/floor.html",
+  "source": "https://saga-museum.jp/museum/information/barrier-free.html",
+  "checked": "2026-11-11"
+ },
+ "nagasaki-prefectural-art-museum": {
+  "kind": "mall",
+  "floors": [
+   "1F",
+   "2F",
+   "RF"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "授乳室",
+    "where": "ギャラリー棟1F 情報コーナー奥・ロッカーとトイレの並び(給湯器・ベビーシートあり/救護室兼用)"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "1F 授乳室内と多目的トイレ(男性用)にベビーシート"
+   },
+   {
+    "floor": "2F",
+    "kind": "おむつ替え",
+    "where": "2F 多目的トイレにベビーシート"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズトイレ",
+    "where": "1F 多目的トイレに子ども専用トイレ(オストメイト設備あり)"
+   },
+   {
+    "floor": "2F",
+    "kind": "多目的トイレ",
+    "where": "2F"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "1F 受付(エントランスロビー)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "1F エントランスロビー"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "ギャラリー棟1F 情報コーナーの奥(100円返却式)"
+   },
+   {
+    "floor": "2F",
+    "kind": "カフェ",
+    "where": "2F 橋の回廊(運河の上・ギャラリー棟と美術館棟の間)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "ギャラリー棟(ショップ横)と美術館棟に各1・車椅子対応"
+   }
+  ],
+  "floormap": "https://www.nagasaki-museum.jp/visitor/facility",
+  "source": "https://www.nagasaki-museum.jp/visitor/info",
+  "checked": "2026-11-11"
+ },
+ "cam-kumamoto": {
+  "kind": "mall",
+  "floors": [
+   "3F",
+   "5F"
+  ],
+  "amenities": [
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "3F ベビールーム(街なか子育てひろばのすぐ隣・授乳用ソファ/オムツ交換台/水道)"
+   },
+   {
+    "floor": "3F",
+    "kind": "おむつ替え",
+    "where": "3F ベビールーム内のオムツ交換台(使用済みオムツは持ち帰り)"
+   },
+   {
+    "floor": "3F",
+    "kind": "キッズスペース",
+    "where": "3F 街なか子育てひろば(ホームギャラリーの奥・10:00〜15:30は子育てひろば、15:30〜20:00はキッズスペース)"
+   },
+   {
+    "floor": "3F",
+    "kind": "多目的トイレ",
+    "where": "3F ベビールームの並び(ギャラリーIIIの手前)"
+   },
+   {
+    "floor": "5F",
+    "kind": "多目的トイレ",
+    "where": "5F キッズファクトリー前"
+   },
+   {
+    "floor": "5F",
+    "kind": "キッズスペース",
+    "where": "5F キッズファクトリー(子供用アトリエ・ワークショップ開催時)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "3F玄関横・アートラボマーケット横(5Fへ)"
+   }
+  ],
+  "floormap": "https://www.camk.jp/information/floor/",
+  "source": "https://www.camk.jp/information/floor/facilities/",
+  "checked": "2026-11-11"
+ },
+ "kumamoto-prefectural-museum-of-art": {
+  "kind": "mall",
+  "floors": [
+   "B1",
+   "1F",
+   "2F"
+  ],
+  "amenities": [
+   {
+    "kind": "授乳室",
+    "where": "あり(場所は館内スタッフに申し出)"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "別棟展示室の多目的トイレ(ベビーベッドあり)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "別棟展示室(オストメイト対応)"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "吹き抜けホール(オストメイト対応・ユニバーサルシートあり)"
+   },
+   {
+    "kind": "ベビーカー貸出",
+    "where": "館内スタッフに申し出"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "1F 入口を入って右手(100円返却式)"
+   },
+   {
+    "floor": "1F",
+    "kind": "カフェ",
+    "where": "1F 喫茶室 桜Café(エントランスホールの先)"
+   },
+   {
+    "kind": "エレベーター",
+    "where": "エントランスホール奥(B1〜2F)"
+   }
+  ],
+  "floormap": "https://www.pref.kumamoto.jp/uploaded/attachment/208000.pdf",
+  "source": "https://www.pref.kumamoto.jp/site/museum/52541.html",
+  "checked": "2026-11-11"
+ },
+ "yamaguchi-prefectural-art-museum": {
+  "kind": "mall",
+  "amenities": [
+   {
+    "kind": "授乳室",
+    "where": "あり(利用時は総合案内に声をかける)"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "トイレにおむつ替え用ベッド"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "多機能トイレ(オストメイト対応)"
+   },
+   {
+    "kind": "ベビーカー貸出",
+    "where": "総合案内で貸出"
+   },
+   {
+    "kind": "インフォメーション",
+    "where": "総合案内"
+   }
+  ],
+  "source": "https://y-pam.jp/info/",
+  "checked": "2026-11-11"
+ },
+ "tsuruya-kumamoto": {
+  "kind": "mall",
+  "floors": [
+   "B2",
+   "B1",
+   "1F",
+   "2F",
+   "3F",
+   "4F",
+   "5F",
+   "6F",
+   "7F",
+   "8F",
+   "RF",
+   "東館B1",
+   "東館1F",
+   "東館2F",
+   "東館3F",
+   "東館4F",
+   "東館5F",
+   "東館6F",
+   "東館7F",
+   "東館8F"
+  ],
+  "amenities": [
+   {
+    "floor": "6F",
+    "kind": "ベビー休憩室",
+    "where": "本館6F ベビーサロン「たんぽぽファーム」(ベビー用品売場の奥・電車通り側の角。授乳・おむつ替え・休憩、ベビーカーのまま入れる)"
+   },
+   {
+    "floor": "RF",
+    "kind": "ベビー休憩室",
+    "where": "本館屋上 ベビーサロン「みつばちファーム」(屋上遊び場スマイリアの横)"
+   },
+   {
+    "floor": "6F",
+    "kind": "授乳室",
+    "where": "本館6F たんぽぽファーム内"
+   },
+   {
+    "floor": "RF",
+    "kind": "授乳室",
+    "where": "本館屋上 みつばちファーム内"
+   },
+   {
+    "floor": "3F",
+    "kind": "授乳室",
+    "where": "本館3F 授乳スペース"
+   },
+   {
+    "floor": "東館B1",
+    "kind": "授乳室",
+    "where": "東館B1 レディスパウダールーム内の授乳スペース"
+   },
+   {
+    "kind": "おむつ替え",
+    "where": "ベビーシート: 本館B2・1〜4・6〜8F・屋上、東館B1・2〜7F"
+   },
+   {
+    "floor": "6F",
+    "kind": "おむつ替え",
+    "where": "本館6F 蓮政寺公園側のトイレ(女性・多目的)とたんぽぽファーム"
+   },
+   {
+    "kind": "多目的トイレ",
+    "where": "本館1・6・7F、東館B1・2〜7F(多目的シートは本館1Fと東館7F)"
+   },
+   {
+    "floor": "1F",
+    "kind": "ベビーカー貸出",
+    "where": "本館1F 正面玄関・東側玄関、B2 連絡通路、東館1F 正面玄関(約50台)"
+   },
+   {
+    "floor": "6F",
+    "kind": "キッズスペース",
+    "where": "本館6F こどもの遊び場(玩具売場の隣・蓮政寺公園側)"
+   },
+   {
+    "floor": "RF",
+    "kind": "キッズスペース",
+    "where": "本館屋上 スマイリア(屋上遊び場)"
+   },
+   {
+    "floor": "1F",
+    "kind": "インフォメーション",
+    "where": "本館1F 総合案内所(上通側正面玄関)・東館1F 案内所"
+   },
+   {
+    "floor": "1F",
+    "kind": "コインロッカー",
+    "where": "本館1F 中央西側玄関、東館2F ほか"
+   },
+   {
+    "floor": "B2",
+    "kind": "コインロッカー",
+    "where": "本館B2・B1 冷蔵コインロッカー"
+   },
+   {
+    "floor": "7F",
+    "kind": "レストラン",
+    "where": "本館7F 鶴屋レストランアベニュー(11:00〜21:00)"
+   }
+  ],
+  "floormap": "https://www.tsuruya-dept.co.jp/floor/index.html",
+  "source": "https://www.tsuruya-dept.co.jp/service/index.html",
+  "checked": "2026-11-11"
+ },
+ "yamakataya-kagoshima": {
+  "kind": "mall",
+  "floors": [
+   "1号館B1",
+   "1号館1F",
+   "1号館2F",
+   "1号館3F",
+   "1号館中4F",
+   "1号館4F",
+   "1号館5F",
+   "1号館6F",
+   "1号館7F",
+   "2号館B1",
+   "2号館1F",
+   "2号館2F",
+   "2号館3F",
+   "2号館4F",
+   "2号館5F",
+   "2号館6F",
+   "3号館3F",
+   "4号館1F",
+   "4号館2F"
+  ],
+  "amenities": [
+   {
+    "floor": "2号館4F",
+    "kind": "ベビー休憩室",
+    "where": "2号館4F ベビールーム(マタニティ・ベビーカー売場の奥、エレベーター・トイレの先)"
+   },
+   {
+    "floor": "2号館4F",
+    "kind": "キッズスペース",
+    "where": "2号館4F あそびのひろば(エスカレーター横・ボーネルンドの隣)"
+   },
+   {
+    "floor": "1号館1F",
+    "kind": "インフォメーション",
+    "where": "1号館1F 店内案内所(正面玄関横)"
+   },
+   {
+    "floor": "1号館1F",
+    "kind": "多目的トイレ",
+    "where": "1号館1F 朝日通り側西玄関の近く"
+   },
+   {
+    "floor": "1号館7F",
+    "kind": "レストラン",
+    "where": "1号館7F ななテラス(山形屋食堂・レストラン ル ドーム)"
+   }
+  ],
+  "floormap": "https://www.yamakataya.co.jp/pages/floor-guide",
+  "source": "https://www.yamakataya.co.jp/pages/floor-guide",
+  "checked": "2026-11-11"
  }
 }

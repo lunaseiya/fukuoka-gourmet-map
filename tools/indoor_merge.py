@@ -45,6 +45,8 @@ for fid, d in done.items():
     ten = {k: v for k, v in (d.get('tenants') or {}).items() if k in ids and v}
     if ten:
         e['tenants'] = ten
+    if d.get('floormap'):   # 公式フロアガイドのURL(館内モードの「公式のフロアマップ ↗」に出る・2026-11-11)
+        e['floormap'] = d['floormap']
     e['source'] = d.get('source') or e.get('source')
     e['checked'] = d.get('checked') or '2026-11-09'
     conf[fid] = e

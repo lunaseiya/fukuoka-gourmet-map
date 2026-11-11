@@ -27,7 +27,8 @@ GREEN, YELLOW, WHITE = (31, 122, 46), (255, 229, 84), (255, 255, 255)
 def counts(today=None):
     today = today or datetime.date.today()
     d = json.load(open(os.path.join(ROOT, 'data', 'spots.json'), encoding='utf-8'))
-    live = [s for s in d if not s.get('until') or s['until'] >= today.isoformat()]
+    # utility(立ち寄り用の公共施設・店。ふだんのタブに出さない)は、マップ上部の件数と同じく数えない(2026-11-11)
+    live = [s for s in d if not s.get('utility') and (not s.get('until') or s['until'] >= today.isoformat())]
     week = 0
     for s in live:
         a = s.get('added')

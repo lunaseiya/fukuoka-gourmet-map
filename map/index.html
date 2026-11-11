@@ -1288,7 +1288,7 @@ function isAddedThisWeek(spot) {
 function renderGrowbar() {
   const el = document.getElementById("growbar");
   if (!el || !state.spots.length) return;
-  const live = state.spots.filter(s => !isExpired(s));
+  const live = state.spots.filter(s => !isExpired(s) && !s.utility);   // 立ち寄り用の公共施設は「おでかけ先」の数に入れない
   const week = live.filter(isAddedThisWeek).length;
   const on = state.filter === "newweek";
   el.innerHTML = `<span>🌱 九州の子連れおでかけ <span class="g-total">${live.length.toLocaleString()}件</span></span>`
@@ -1336,6 +1336,7 @@ const KIDS_FACILITY = [
   ["kidsChair", "🪑", "子供椅子"],
   ["kidsMenu",  "🍽", "キッズメニュー"],
   ["diaper",    "🚼", "おむつ替え"],
+  ["nursing",   "🍼", "授乳室"],          // 2026-11-11 公共施設(赤ちゃんの駅)の登録で追加
   ["kidsSpace", "🧸", "キッズスペース"],
   ["tatami",    "🧎", "座敷・小上がり"],
   ["sofa",        "🛋", "ソファ席"],
@@ -1350,7 +1351,7 @@ const KIDS_FACILITY = [
 //   可  (1) = 子供と座れる/入れるが店は大人向け: ソファ席・掘りごたつ・ベビーカー入店可・トイレの補助チェア・
 //             建物(モール)のおむつ替え等、△(子供用の食器・板のソファ)は2つ以上で可。△1つだけは入れない
 //   tatami:"banquet"(宴会用の座敷)は数えない。新項目が未入力の店は verdict の文言からも拾う
-const KIDS_WELCOME = ["kidsChair", "kidsMenu", "diaper", "kidsSpace"];
+const KIDS_WELCOME = ["kidsChair", "kidsMenu", "diaper", "nursing", "kidsSpace"];
 const KIDS_CAN     = ["horigotatsu", "babyKeep", "stroller"];
 const NEG = "(?!.{0,4}(なし|無し|はない|ありません))";
 // ★喫煙可の店は無条件に「歓迎」にしない(2026-10-19ユーザー確定)。最大でも「可」
@@ -1522,6 +1523,9 @@ function applyFilters(spots) {
   if (state.q.trim()) return spots.filter(s => matchQuery(s, state.q));
   return spots.filter(s => {
     if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
+    // utility:true = おむつ替え・授乳のために立ち寄る公共施設(公民館・役所・図書館など・2026-11-11)。
+    //   「遊び場」ではないのでふだんのタブには出さない。検索と「📍→最寄りのおむつ替え・授乳室」から開いたときだけ出す
+    if (s.utility && !state.showUtility) return false;
     if (!spotCats(s).includes(state.category)) return false;
     // すべて=赤(訪問済み)+青(行きたい)を同時表示。タブで絞り込み
     if (state.filter === "visited" && s.wish) return false;
@@ -1777,6 +1781,9 @@ function cardHtml(spot) {
 function areaTabSpots(spots) {
   return spots.filter(s => {
     if (isExpired(s)) return false;            // 会期切れの企画展は自動で消す
+    // utility:true = おむつ替え・授乳のために立ち寄る公共施設(公民館・役所・図書館など・2026-11-11)。
+    //   「遊び場」ではないのでふだんのタブには出さない。検索と「📍→最寄りのおむつ替え・授乳室」から開いたときだけ出す
+    if (s.utility && !state.showUtility) return false;
     if (!spotCats(s).includes(state.category)) return false;
     if (state.filter === "visited" && s.wish) return false;
     if (state.filter === "kids" && !isKidsOk(s)) return false;
@@ -2152,6 +2159,7 @@ function bindJumpLinks(root) {
 }
 
 function jumpToSpot(spot) {
+  if (spot.utility) state.showUtility = true;   // 公共施設(ふだんは隠している)を名指しで開くときは地図にも出す
   // 検索中はカテゴリ横断で出しているので、タブ切り替えはしない
   if (state.q.trim()) { renderAll(); focusSpot(spot); window.scrollTo({ top: 0, behavior: "smooth" }); return; }
   // 別カテゴリのスポットならタブを切り替える
@@ -3379,9 +3387,12 @@ const Indoor = (() => {
     });
     state.spots.forEach(s => {
       if (inFac.has(s.id) || s.lat == null || s.lng == null) return;
-      if (!(s.kids && s.kids.diaper === true)) return;
+      const k = s.kids || {};
+      if (!(k.diaper === true || k.nursing === true)) return;
+      if (isExpired(s)) return;
       if (s.in && inFac.has(s.in)) return;   // 館内モードのある施設の中の店は、施設の行にまとめる
-      out.push({ d: dist(myPos, s), spot: s, name: s.name, sub: "おむつ替え台あり" + (s.genre ? "・" + s.genre : "") });
+      const what = k.diaper === true && k.nursing === true ? "おむつ替え・授乳室あり" : k.diaper === true ? "おむつ替え台あり" : "授乳室あり";
+      out.push({ d: dist(myPos, s), spot: s, name: s.name, sub: what + (s.genre ? "・" + s.genre : "") });
     });
     return out.sort((a, b) => a.d - b.d);
   }
@@ -3410,6 +3421,7 @@ const Indoor = (() => {
       box.classList.remove("open");
       try { window.icTrack && window.icTrack("near_pick", { id: r.fac ? r.fac.id : r.spot.id }); } catch (e) {}
       if (r.fac) { open(r.fac.id, r.tab); return; }
+      if (r.spot.utility) state.showUtility = true;   // 公共施設はここから開いたときだけ地図に出す
       if (applyFilters(state.spots).some(x => x.id === r.spot.id)) focusSpot(r.spot); else jumpToSpot(r.spot);
     }));
     box.classList.add("open");

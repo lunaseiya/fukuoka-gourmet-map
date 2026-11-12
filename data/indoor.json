@@ -5238,5 +5238,50 @@
   "floormap": "https://www.yamakataya.co.jp/pages/floor-guide",
   "source": "https://www.yamakataya.co.jp/pages/floor-guide",
   "checked": "2026-11-11"
+ },
+ "shop-3651fe2f49": {
+  "kind": "mall",
+  "floors": [
+   "1F"
+  ],
+  "amenities": [
+   {
+    "floor": "1F",
+    "kind": "ベビールーム",
+    "where": "アカチャンホンポ横「あかちゃん休憩室」(授乳室・おむつ交換台。入口の画面で空き具合が分かる)"
+   },
+   {
+    "floor": "1F",
+    "kind": "おむつ替え",
+    "where": "トイレ4か所。男女それぞれのトイレにあるか、無い所は多目的トイレにある(現地確認 2026-11-12)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "イオン衣料品売場の東側(マクドナルド寄り)"
+   },
+   {
+    "floor": "1F",
+    "kind": "多目的トイレ",
+    "where": "フードコートの東側"
+   },
+   {
+    "floor": "1F",
+    "kind": "フードコート",
+    "where": "南側中央 牧のうどん・リンガーハット・ペッパーランチほか(子供椅子・小上がり席)"
+   },
+   {
+    "floor": "1F",
+    "kind": "キッズスペース",
+    "where": "東側 モーリーファンタジー内「わいわいぱーく」(有料)"
+   }
+  ],
+  "tenants": {
+   "shop-27704a6519": "1F",
+   "shop-52c3168a07": "1F",
+   "specda2f188e": "1F"
+  },
+  "source": "現地のフロアガイド(2026-11-12 撮影)をもとに描き直し",
+  "checked": "2026-11-12"
  }
 }

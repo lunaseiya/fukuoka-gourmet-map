@@ -154,22 +154,25 @@
   "publish_at": "2026-11-12 17:00",
   "where": "cTU3lihRozg",
   "text": "正直、うれしい半分・さみしい半分です。\nみなさんはどっちですか？",
-  "status": "pending"
+  "status": "done",
+  "posted_at": "2026-11-12 17:10"
  },
  {
   "topic": "ShinShinすかいらーく",
   "platform": "instagram",
   "publish_at": "2026-11-12 17:00",
-  "where": "IG リール(ShinShin すかいらーくグループに)",
+  "where": "IG リール Dfok-q-Bq_3",
   "text": "正直、うれしい半分・さみしい半分です。\nみなさんはどっちですか？🍜",
-  "status": "pending"
+  "status": "done",
+  "posted_at": "2026-11-12 17:10"
  },
  {
   "topic": "ShinShinすかいらーく",
   "platform": "tiktok",
   "publish_at": "2026-11-12 17:00",
-  "where": "TikTok 11/12 17:00(ShinShin)",
+  "where": "7707178327747923208",
   "text": "うれしい？さみしい？福岡の人の本音が知りたいです👇",
-  "status": "pending"
+  "status": "done",
+  "posted_at": "2026-11-12 17:10"
  }
 ]

@@ -160221,5 +160221,61 @@
    "shop-3651fe2f49_11_だがし家ちゃりんこ.jpg",
    "shop-3651fe2f49_12_入口のオブジェ.jpg"
   ]
+ },
+ {
+  "id": "nagatare-kaihin-park",
+  "name": "長垂海浜公園",
+  "area": "今宿",
+  "city": "福岡市西区",
+  "pref": "福岡県",
+  "genre": "公園(海辺)",
+  "address": "福岡県福岡市西区今宿駅前1丁目",
+  "lat": 33.580471,
+  "lng": 130.280378,
+  "visited": "2026-11-12",
+  "with": "family",
+  "kids": {
+   "stroller": true,
+   "diaper": false,
+   "nursing": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": "ok"
+  },
+  "verdict": "⭐松林と砂浜のある海辺の公園。複合遊具(滑り台・吊り橋。対象年齢6〜12歳の表示)にスプリング遊具・ブランコ・あずまや。⚠トイレは男・女・多目的の3つで、おむつ替えシートは無かった(現地確認・2026年11月)。東側ではカフェ・レストランの入る新しい施設を工事中で、2027年3月頃に開業予定(事業者の発表)。工事中も海岸と遊具は使える。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "nagatare-kaihin-park.jpg",
+  "wish": false,
+  "category": "play",
+  "ages": [
+   "toddler",
+   "kids"
+  ],
+  "ages_src": "manual",
+  "added": "2026-11-12",
+  "web": "https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/nagatarekaihinkouen.html",
+  "points": [
+   "海のそばに複合遊具(滑り台・吊り橋)",
+   "スプリング遊具・ブランコ・あずまや",
+   "松林の木陰と砂浜",
+   "東側にカフェやレストランの入る施設を工事中(2027年3月頃の予定)",
+   "⚠ トイレにおむつ替えシートなし(現地確認・2026年11月)",
+   "⚠ 複合遊具は対象年齢6〜12歳の表示"
+  ],
+  "memo": "松林と砂浜のある海辺の公園。複合遊具とスプリング遊具、ブランコ、あずまやがある。トイレは男・女・多目的の3つで、おむつ替えシートは無かった(現地確認・2026年11月)。東側ではカフェやレストランの入る新しい施設を工事中で、2027年3月頃に開業予定。",
+  "photos": [
+   "nagatare-kaihin-park_01_複合遊具(海のそば).jpg",
+   "nagatare-kaihin-park_02_複合遊具(滑り台).jpg",
+   "nagatare-kaihin-park_03_複合遊具(吊り橋).jpg",
+   "nagatare-kaihin-park_04_スプリング遊具とあずまや.jpg",
+   "nagatare-kaihin-park_05_松林と海.jpg",
+   "nagatare-kaihin-park_06_トイレ(男・女・多目的).jpg",
+   "nagatare-kaihin-park_07_工事中の新しい施設(2026年11月).jpg"
+  ]
  }
 ]

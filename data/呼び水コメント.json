@@ -119,7 +119,7 @@
  {
   "topic": "山ちゃんうどん跡と新宮",
   "platform": "youtube",
-  "publish_at": "2026-11-12 17:00",
+  "publish_at": "2026-11-13 17:00",
   "where": "DyVDYUYmSeM",
   "text": "山ちゃんうどんで、何を食べてましたか？\n思い出があれば教えてください。ケーズデンキの工事が進んだら、同じ場所からまた撮ります。",
   "status": "pending"
@@ -146,6 +146,14 @@
   "publish_at": "2026-11-13 07:00",
   "where": "tGRUUE-Y90M",
   "text": "九大跡地の新しい街、どんなお店や公園ができたら行きたいですか？\n工事が進んだら、また撮りに行きます。",
+  "status": "pending"
+ },
+ {
+  "topic": "ShinShinすかいらーく",
+  "platform": "youtube",
+  "publish_at": "2026-11-12 17:00",
+  "where": "ksGTC_fAoq0",
+  "text": "ShinShinが近所にできたら通いますか？\n次に全国へ行ってほしい福岡の店も教えてください。",
   "status": "pending"
  }
 ]

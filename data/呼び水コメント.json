@@ -323,5 +323,21 @@
   "publish_at": "2026-11-17 18:00",
   "platform": "tiktok",
   "where": "TikTok 7708466645592821000"
+ },
+ {
+  "platform": "youtube",
+  "publish_at": "2026-11-17 07:00",
+  "status": "pending",
+  "text": "清流公園の南端は12月に全エリアオープンの予定です🚢 入るお店はまだ発表前。どんなお店が入ってほしいですか？",
+  "topic": "清流公園 南端広場",
+  "where": "YouTube LOC_tTVAzkE"
+ },
+ {
+  "platform": "instagram",
+  "publish_at": "2026-11-17 21:00",
+  "status": "pending",
+  "text": "清流公園の南端は12月に全エリアオープンの予定です🚢 入るお店はまだ発表前。どんなお店が入ってほしいですか？",
+  "topic": "清流公園 南端広場",
+  "where": "Instagram 予約(位置=清流公園 博多区中洲1丁目)"
  }
 ]

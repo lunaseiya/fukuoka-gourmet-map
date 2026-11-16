@@ -160709,5 +160709,53 @@
   ],
   "memo": "国体道路沿い、めんちゃんこ亭と同じビルにある「うどん居酒屋」のウエスト。昼はうどん・丼のセット、夜は居酒屋使い。11:00〜23:30(L.O.23:00)、駐車場なし。",
   "kidsLevel": 1
+ },
+ {
+  "id": "ureshino-kotobukiya",
+  "name": "嬉野温泉 ことぶき屋",
+  "area": "嬉野温泉",
+  "city": "嬉野市",
+  "pref": "佐賀県",
+  "genre": "素泊まりの宿・日帰り温泉",
+  "lat": 33.097013,
+  "lng": 129.986058,
+  "address": "佐賀県嬉野市嬉野町大字下宿乙817-8",
+  "visited": "2026-11-14",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": true,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-11-14泊(ハウステンボスの大花火の帰りに素泊まり)。嬉野温泉本通り、十八親和銀行の向かい。築70年ほどの建物を改修して2022年4月にリニューアルした素泊まりの宿。館内に嬉野伝統芸能保存会の稽古場「いこい座」があり、廊下に芸妓さんの写真が並ぶ、芸者さんの楽屋のような渋い雰囲気。源泉かけ流しの湯(宿の表記)。部屋は和室なので小さい子も過ごせた。⚠部屋にトイレ・洗面はなく共用。⚠食事なし(共用の電子レンジあり)。チェックイン15:00〜22:00、アウト10:00。チェックアウトは鍵をカゴに返すだけ。駐車場10台(無料・先着)。日帰り入浴・貸切湯あり(料金は宿に確認)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "ureshino-kotobukiya.jpg",
+  "wish": false,
+  "category": "onsen",
+  "stay": true,
+  "dayUse": true,
+  "booking": "https://www.jalan.net/yad357256/",
+  "photos": [
+   "ureshino-kotobukiya_01_外観.jpg",
+   "ureshino-kotobukiya_02_和室.jpg",
+   "ureshino-kotobukiya_03_共用の洗面とトイレ.jpg",
+   "ureshino-kotobukiya_04_看板(夜).jpg"
+  ],
+  "added": "2026-11-16",
+  "points": [
+   "和室なので小さい子も過ごせた",
+   "⚠ トイレ・洗面は共用(部屋になし)",
+   "⚠ 食事なしの素泊まり",
+   "チェックアウトは鍵をカゴに返すだけ"
+  ],
+  "memo": "芸者さんの楽屋のような渋い素泊まりの宿。源泉かけ流しの湯。部屋は和室、トイレ・洗面は共用。花火やテーマパークの帰りに寝るだけならあり。",
+  "kidsLevel": 1
  }
 ]

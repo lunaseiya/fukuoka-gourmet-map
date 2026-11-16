@@ -1366,6 +1366,8 @@ function kidsLevelOf(spot) {
   return (lv === 2 && isSmokingOk(spot)) ? 1 : lv;
 }
 function kidsLevelRaw(spot) {
+  // 現地の実感で段を上書き(設備はあるが実際は使えない等)【2026-11-16 ウエスト天神店】
+  if (spot.kidsLevel === 0 || spot.kidsLevel === 1 || spot.kidsLevel === 2) return spot.kidsLevel;
   const k = spot.kids || {};
   const v = spot.verdict || "";
   // 家族風呂・貸切風呂は家族のために用意された設備

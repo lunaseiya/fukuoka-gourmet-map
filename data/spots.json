@@ -160662,5 +160662,51 @@
   "web": "https://iko-yo.net/events/607958",
   "in": "branchhakatapapillon",
   "added": "2026-11-12"
+ },
+ {
+  "id": "west-tenjin",
+  "name": "ウエスト 天神店",
+  "area": "天神・今泉",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "うどん・居酒屋",
+  "lat": 33.586833,
+  "lng": 130.398356,
+  "address": "福岡県福岡市中央区天神2-3-10 天神パインクレスト1F",
+  "visited": "2026-11-16",
+  "with": "solo",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-11-16訪問(平日ランチ)。国体道路沿い、めんちゃんこ亭と同じ天神パインクレストの1階にある「うどん居酒屋」業態のウエスト。昼はうどん・丼のセット、夜はもつ鍋やドリンクで居酒屋使い。天神店オリジナルのミニ丼セットあり。⭐子供椅子(木製・テーブルバー付き)あり。⚠平日のランチは混んでいて回転重視、子連れとして気を配ってもらう感じではなく1人客と同じ扱いだった。子連れはピークを外すと安心。全席禁煙(喫煙室あり・食べログ)。11:00〜23:30(L.O.23:00)。⚠クレジットカード不可(電子マネー・PayPay可)。駐車場なし。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "west-tenjin.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "web": "https://www.shop-west.jp/",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40024290/",
+  "photos": [
+   "west-tenjin_01_外観.jpg",
+   "west-tenjin_02_入口.jpg",
+   "west-tenjin_03_子供椅子.jpg"
+  ],
+  "added": "2026-11-16",
+  "smoking": "separate",
+  "points": [
+   "子供椅子あり",
+   "天神店オリジナルのミニ丼セット",
+   "⚠ ランチは混雑・子連れはピークを外して",
+   "⚠ クレジットカード不可(PayPay可)"
+  ],
+  "memo": "国体道路沿い、めんちゃんこ亭と同じビルにある「うどん居酒屋」のウエスト。昼はうどん・丼のセット、夜は居酒屋使い。11:00〜23:30(L.O.23:00)、駐車場なし。"
  }
 ]

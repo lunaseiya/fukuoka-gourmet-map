@@ -68,7 +68,7 @@ html{scroll-behavior:smooth}
     <div class="built" id="built"></div>
   </header>
   <nav aria-label="セクション">
-    <a href="#urgent">急ぎ</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#schedule">投稿予定</a>
+    <a href="#urgent">急ぎ</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#hotel">ホテル</a><a href="#schedule">投稿予定</a>
   </nav>
   <div class="tools"><label><input type="checkbox" id="hideDone"> 投稿済みを隠す</label></div>
 
@@ -93,6 +93,10 @@ html{scroll-behavior:smooth}
   <section id="patrol"><h2>工事の定点 <span class="n" id="n-patrol"></span></h2>
     <p class="lead">工事中パトロールのフォルダ。前回の撮影から日が空いている現場を再訪の候補に。</p>
     <div class="list" id="l-patrol"></div></section>
+
+  <section id="hotel"><h2>ホテル開業ウォッチ <span class="n" id="n-hotel"></span></h2>
+    <p class="lead">工事回で外観を撮る → 開業の1〜2か月前に、数字を添えて宿泊PRの営業。断られたら基本は見送り。</p>
+    <div class="list" id="l-hotel"></div></section>
 
   <section id="schedule"><h2>投稿予定 <span class="n" id="n-schedule"></span></h2>
     <div class="sched" id="l-schedule"></div></section>
@@ -151,6 +155,12 @@ function render(){
       <div class="name">${esc(r.name)}</div>
       <div class="meta">${esc([r.plan, r.note].filter(Boolean).join(' ・ '))}</div></div>`).join('');
   $('n-patrol').textContent = `${D.patrol.length}現場`;
+  $('l-hotel').innerHTML = (D.hotels||[]).map(r => `<div class="item" data-st="${esc(r.st)}">
+      <div class="when"><b>${esc(r.no)}</b><span>${esc(r.when)}</span></div>
+      <div class="row">${chip(r.st)}<span class="chip kind">${esc(r.area)}</span>${r.n?`<span class="chip kind">素材${r.n}本</span>`:''}</div>
+      <div class="name">${esc(r.name)}</div>
+      <div class="meta">${esc(r.pitch)}</div></div>`).join('') || '<p class="empty">ホテルの登録はありません。</p>';
+  $('n-hotel').textContent = `${(D.hotels||[]).length}軒`;
   const PL = {youtube:'YouTube', instagram:'Instagram', tiktok:'TikTok'};
   $('l-schedule').innerHTML = D.schedule.map(r => `<div><span>${md(r.at.slice(0,10))} ${r.at.slice(11,16)}</span><span class="pl pl-${r.plat}">${PL[r.plat]||r.plat}</span><span>${esc(r.topic)}</span></div>`).join('')
     || '<p class="empty">予約中の投稿はありません。</p>';

@@ -154,6 +154,30 @@ def patrol():
     return out
 
 
+def hotels():
+    """ホテル開業ウォッチ(工事中パトロール/12 の H01〜)。工事回で撮る → 開業1〜2か月前に宿泊PRの営業(断られたら見送り)"""
+    base = os.path.join(ROOT, '工事中パトロール', '12_ホテル開業ウォッチ(開業順・営業して宿泊PR)')
+    out = []
+    for f in sorted(os.listdir(base)) if os.path.isdir(base) else []:
+        m = re.match(r'(H\d\d)_([^_]+)_([^_]+)_(.+)', f)
+        if not m:
+            continue
+        n, last = folder_info('工事中パトロール/12_ホテル開業ウォッチ(開業順・営業して宿泊PR)/' + f)
+        st, note = ('撮影済' if n else '未撮影'), ''
+        for l in LEDGER:   # 営業・案件化の段階は台帳で上書き(例 {"match":"&Here","status":"営業中"})
+            if l.get('hotel') and re.search(l['match'], f):
+                st, note = l.get('status', st), l.get('note', '')
+        ym = re.search(r'(20\d\d)年(?:(\d+)月)?', m.group(2))
+        pitch = ''
+        if ym and ym.group(2):
+            y, mo = int(ym.group(1)), int(ym.group(2))
+            py, pm = (y, mo - 2) if mo > 2 else (y - 1, mo + 10)
+            pitch = f'営業の目安 {py}年{pm}月ごろ'
+        out.append(dict(no=m.group(1), when=m.group(2), area=m.group(3), name=m.group(4), st=st, n=n,
+                        last=last.isoformat() if last else '', pitch=' ・ '.join(x for x in (pitch, note) if x)))
+    return out
+
+
 def schedule():
     rows = [e for e in POSTS if e['publish_at'] >= NOW.strftime('%Y-%m-%d %H:%M')]
     rows.sort(key=lambda e: e['publish_at'])
@@ -162,7 +186,7 @@ def schedule():
 
 def main():
     data = dict(built=NOW.strftime('%Y-%m-%d %H:%M'), today=TODAY.isoformat(), closings=closings(), openings=openings(),
-                flashes=flashes(), patrol=patrol(), schedule=schedule())
+                flashes=flashes(), patrol=patrol(), hotels=hotels(), schedule=schedule())
     tpl = open(os.path.join(HERE, 'board_template.html'), encoding='utf-8').read()
     page = tpl.replace('/*__DATA__*/null', json.dumps(data, ensure_ascii=False).replace('</', '<\\/'))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

@@ -35,3 +35,15 @@ tools/_*.py
 
 # 過去動画の索引キャッシュ(video_archive.py plan/download)。**200MB超**で公開不要(2026-10-16)
 data/video_cache/
+
+# 撮影の判断用の非公開データ(2026-11-17 ユーザー確定「他人に知られないほうが独占して動画を出せる」)。
+# 見納め・速報・跡地・撮影ボードの状態・呼び水・IGの伸びは公開しない。マップには自分が投稿したものだけ載せる
+data/closings.json
+data/見納めリスト.txt
+data/速報*
+data/モール閉店_既読.json
+data/モール開店_既読.json
+data/跡地ウォッチ.json
+data/撮影ボード_状態.json
+data/呼び水コメント.json
+data/IG伸び台帳.json

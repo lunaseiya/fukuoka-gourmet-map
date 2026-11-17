@@ -1,0 +1,169 @@
+<title>撮影ボード</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=BIZ+UDPGothic:wght@400;700&family=M+PLUS+Rounded+1c:wght@800&display=swap">
+<style>
+/* 撮影の判断用ボード。上から「急ぎ → 見納め → 開店予定 → 速報 → 工事の定点 → 投稿予定」。状態はチップの色で見る */
+:root{
+  --bg:#f3f4f2; --card:#ffffff; --ink:#1d2321; --sub:#5d6662; --line:#dcdfdb;
+  --close:#2b3a6b; --open:#c8322a; --amber:#b7791f;
+  --st-todo:#c8322a; --st-shot:#b7791f; --st-sched:#2b6cb0; --st-done:#2f855a; --st-skip:#8a918d;
+  --f-disp:"M PLUS Rounded 1c","BIZ UDPGothic",system-ui,sans-serif;
+  --f-body:"BIZ UDPGothic","Hiragino Kaku Gothic ProN","Yu Gothic",system-ui,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#151917; --card:#1e2422; --ink:#e7ebe8; --sub:#9aa39e; --line:#2f3733;
+  --close:#8fa3e6; --open:#f07b72; --amber:#e3b25a;
+  --st-todo:#f07b72; --st-shot:#e3b25a; --st-sched:#7fb0ea; --st-done:#6cc396; --st-skip:#7d8581; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151917; --card:#1e2422; --ink:#e7ebe8; --sub:#9aa39e; --line:#2f3733;
+  --close:#8fa3e6; --open:#f07b72; --amber:#e3b25a;
+  --st-todo:#f07b72; --st-shot:#e3b25a; --st-sched:#7fb0ea; --st-done:#6cc396; --st-skip:#7d8581; color-scheme:dark}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.55}
+.wrap{max-width:760px;margin:0 auto;padding-block:18px 60px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1{font-family:var(--f-disp);font-size:26px;margin:0;letter-spacing:.02em}
+.built{color:var(--sub);font-size:12px}
+header{display:flex;flex-wrap:wrap;align-items:baseline;justify-content:space-between;gap:6px 12px}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--bg);display:flex;gap:6px;overflow-x:auto;padding:10px 0;margin-top:8px;border-bottom:1px solid var(--line)}
+nav a{flex:none;text-decoration:none;color:var(--ink);border:1px solid var(--line);background:var(--card);border-radius:999px;padding:5px 12px;font-size:13px;font-weight:700}
+nav a:focus-visible,button:focus-visible{outline:2px solid var(--st-sched);outline-offset:2px}
+.tools{display:flex;gap:8px;align-items:center;margin:10px 0 0;font-size:13px;color:var(--sub)}
+.tools label{display:flex;gap:6px;align-items:center;cursor:pointer}
+section{margin-top:26px}
+h2{font-family:var(--f-disp);font-size:19px;margin:0 0 4px;display:flex;align-items:center;gap:8px;text-wrap:balance}
+h2 .n{font-family:var(--f-body);font-size:12px;color:var(--sub);font-weight:700}
+.lead{color:var(--sub);font-size:12.5px;margin:0 0 10px}
+.list{display:grid;gap:8px}
+.item{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px 12px;display:grid;grid-template-columns:64px 1fr;gap:4px 12px;min-width:0}
+.item.hide{display:none}
+.when{grid-row:span 3;text-align:center;align-self:start}
+.when b{display:block;font-family:var(--f-disp);font-size:22px;line-height:1.1;font-variant-numeric:tabular-nums}
+.when span{font-size:11px;color:var(--sub)}
+.when.k-close b{color:var(--close)} .when.k-open b{color:var(--open)}
+.when.urgent b{color:var(--st-todo)}
+.name{font-weight:700;min-width:0;overflow-wrap:anywhere}
+.meta{font-size:12.5px;color:var(--sub);min-width:0;overflow-wrap:anywhere}
+.row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+.chip{font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 7px;border:1.5px solid currentColor;white-space:nowrap}
+.st-未撮影{color:var(--st-todo)} .st-撮影済{color:var(--st-shot)} .st-予約済{color:var(--st-sched)} .st-投稿済{color:var(--st-done)} .st-見送り{color:var(--st-skip)}
+.kind{color:var(--sub);border-color:var(--line);border-width:1px}
+.kind.close{color:var(--close);border-color:currentColor} .kind.open{color:var(--open);border-color:currentColor}
+a.src{color:var(--st-sched);font-size:12px}
+.folder{font-size:11.5px;color:var(--sub);background:var(--bg);border-radius:6px;padding:2px 6px;overflow-wrap:anywhere}
+details{margin-top:8px} summary{cursor:pointer;color:var(--sub);font-size:13px;font-weight:700}
+.empty{color:var(--sub);font-size:13px;padding:10px 0}
+.sched{display:grid;gap:4px}
+.sched div{display:grid;grid-template-columns:96px 74px 1fr;gap:8px;font-size:13px;padding:5px 0;border-bottom:1px dashed var(--line);min-width:0}
+.sched span:last-child{min-width:0;overflow-wrap:anywhere}
+.pl{font-weight:700} .pl-youtube{color:#d23} .pl-instagram{color:#b4307f} .pl-tiktok{color:var(--ink)}
+@media (max-width:420px){.item{grid-template-columns:54px 1fr}.when b{font-size:19px}.sched div{grid-template-columns:84px 64px 1fr}}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto}}
+html{scroll-behavior:smooth}
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>撮影ボード</h1>
+    <div class="built" id="built"></div>
+  </header>
+  <nav aria-label="セクション">
+    <a href="#urgent">急ぎ</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#schedule">投稿予定</a>
+  </nav>
+  <div class="tools"><label><input type="checkbox" id="hideDone"> 投稿済みを隠す</label></div>
+
+  <section id="urgent"><h2>急ぎ <span class="n" id="n-urgent"></span></h2>
+    <p class="lead">見納めは閉店の5週前から、開店は4週前から。投稿済みは除いています。</p>
+    <div class="list" id="l-urgent"></div></section>
+
+  <section id="closing"><h2>見納め <span class="n" id="n-closing"></span></h2>
+    <p class="lead">閉店・閉館・建て替え。撮りどきは閉店日の4週前〜前日。</p>
+    <div class="list" id="l-closing"></div>
+    <details><summary id="s-closing-unk">日付が未確認のもの</summary><div class="list" id="l-closing-unk" style="margin-top:8px"></div></details></section>
+
+  <section id="opening"><h2>開店予定 <span class="n" id="n-opening"></span></h2>
+    <p class="lead">福岡市と近郊を先に。撮りどきは開業の4週前〜当日。</p>
+    <div class="list" id="l-opening"></div>
+    <details><summary id="s-opening-far">福岡県のほかの地域・時期未定</summary><div class="list" id="l-opening-far" style="margin-top:8px"></div></details></section>
+
+  <section id="flash"><h2>速報の候補 <span class="n" id="n-flash"></span></h2>
+    <p class="lead">PR TIMES・報道・モール公式から直近10日。点数が高い順。</p>
+    <div class="list" id="l-flash"></div></section>
+
+  <section id="patrol"><h2>工事の定点 <span class="n" id="n-patrol"></span></h2>
+    <p class="lead">工事中パトロールのフォルダ。前回の撮影から日が空いている現場を再訪の候補に。</p>
+    <div class="list" id="l-patrol"></div></section>
+
+  <section id="schedule"><h2>投稿予定 <span class="n" id="n-schedule"></span></h2>
+    <div class="sched" id="l-schedule"></div></section>
+</div>
+
+<script>
+const D = /*__DATA__*/null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const md = iso => iso ? `${+iso.slice(5,7)}/${+iso.slice(8,10)}` : '';
+const chip = st => `<span class="chip st-${esc(st)}">${esc(st)}</span>`;
+const src = (u, t='出典') => u ? `<a class="src" href="${esc(u)}" target="_blank" rel="noopener">${t}</a>` : '';
+
+function card(r, kind){
+  const left = r.left;
+  const whenTop = left == null ? '—' : left <= 0 ? '今日' : `あと${left}日`;
+  const urgent = left != null && left <= 14 && r.st !== '投稿済';
+  return `<div class="item" data-st="${esc(r.st)}">
+    <div class="when k-${kind} ${urgent?'urgent':''}"><b>${left == null ? '?' : md(r.date)}</b><span>${esc(whenTop)}</span></div>
+    <div class="row">${chip(r.st)}<span class="chip kind ${kind}">${kind==='close'?'閉店':'開店'}</span>${r.kind?`<span class="chip kind">${esc(r.kind)}</span>`:''}</div>
+    <div class="name">${esc(r.name)}</div>
+    <div class="meta">${esc([r.area, r.when && left==null ? r.when : '', r.note].filter(Boolean).join(' ・ '))} ${src(r.url)}
+      ${r.folder ? `<div class="folder">フォルダ: ${esc(r.folder)}</div>` : ''}</div>
+  </div>`;
+}
+
+function render(){
+  if (!D){ document.querySelector('.wrap').insertAdjacentHTML('beforeend','<p class="empty">データがまだありません。</p>'); return; }
+  $('built').textContent = `更新 ${D.built}`;
+  const cl = D.closings, dated = cl.filter(r => r.left != null), unk = cl.filter(r => r.left == null);
+  const op = D.openings, near = op.filter(r => r.near && r.left != null), far = op.filter(r => !(r.near && r.left != null));
+  const urgent = [
+    ...dated.filter(r => r.left <= 35 && r.st !== '投稿済').map(r => card(r,'close')),
+    ...near.filter(r => r.left <= 28 && r.st !== '投稿済').map(r => card(r,'open')),
+  ];
+  $('l-urgent').innerHTML = urgent.join('') || '<p class="empty">今は急ぎの撮影はありません。</p>';
+  $('n-urgent').textContent = `${urgent.length}件`;
+  $('l-closing').innerHTML = dated.map(r => card(r,'close')).join('') || '<p class="empty">日付つきの見納めはありません。</p>';
+  $('n-closing').textContent = `${dated.length}件`;
+  $('l-closing-unk').innerHTML = unk.map(r => card(r,'close')).join('');
+  $('s-closing-unk').textContent = `日付が未確認のもの(${unk.length}件・記事で確認)`;
+  $('l-opening').innerHTML = near.map(r => card(r,'open')).join('');
+  $('n-opening').textContent = `${near.length}件`;
+  $('l-opening-far').innerHTML = far.map(r => card(r,'open')).join('');
+  $('s-opening-far').textContent = `福岡県のほかの地域・時期未定(${far.length}件)`;
+  $('l-flash').innerHTML = D.flashes.map(r => `<div class="item" data-st="${esc(r.st)}">
+      <div class="when k-${r.close?'close':'open'}"><b>${r.score}</b><span>点</span></div>
+      <div class="row">${chip(r.st)}<span class="chip kind ${r.close?'close':'open'}">${r.close?'閉店':'出店・開店'}</span>${r.media>1?`<span class="chip kind">${r.media}媒体</span>`:''}</div>
+      <div class="name">${esc(r.name)}</div>
+      <div class="meta">${esc(r.at)} ${esc(r.src)}${r.places.length?' ・ 素材あり: '+esc(r.places.join('・')):''} ${src(r.url,'記事')}</div></div>`).join('')
+    || '<p class="empty">直近10日の候補はありません。</p>';
+  $('n-flash').textContent = `${D.flashes.length}件`;
+  $('l-patrol').innerHTML = D.patrol.map(r => `<div class="item" data-st="${esc(r.st)}">
+      <div class="when"><b>${r.no}</b><span>${r.since==null?'未撮影':r.since+'日前'}</span></div>
+      <div class="row">${chip(r.st)}${r.n?`<span class="chip kind">素材${r.n}本</span>`:''}</div>
+      <div class="name">${esc(r.name)}</div>
+      <div class="meta">${esc([r.plan, r.note].filter(Boolean).join(' ・ '))}</div></div>`).join('');
+  $('n-patrol').textContent = `${D.patrol.length}現場`;
+  const PL = {youtube:'YouTube', instagram:'Instagram', tiktok:'TikTok'};
+  $('l-schedule').innerHTML = D.schedule.map(r => `<div><span>${md(r.at.slice(0,10))} ${r.at.slice(11,16)}</span><span class="pl pl-${r.plat}">${PL[r.plat]||r.plat}</span><span>${esc(r.topic)}</span></div>`).join('')
+    || '<p class="empty">予約中の投稿はありません。</p>';
+  $('n-schedule').textContent = `${D.schedule.length}本`;
+  applyHide();
+}
+
+function applyHide(){
+  const on = $('hideDone').checked;
+  document.querySelectorAll('.item').forEach(el => el.classList.toggle('hide', on && el.dataset.st === '投稿済'));
+  try { localStorage.setItem('board.hideDone', on ? '1' : '0'); } catch(e) {}
+}
+try { $('hideDone').checked = localStorage.getItem('board.hideDone') === '1'; } catch(e) {}
+$('hideDone').addEventListener('change', applyHide);
+render();
+</script>

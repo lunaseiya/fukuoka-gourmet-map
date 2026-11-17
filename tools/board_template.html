@@ -46,7 +46,7 @@ h2 .n{font-family:var(--f-body);font-size:12px;color:var(--sub);font-weight:700}
 .meta{font-size:12.5px;color:var(--sub);min-width:0;overflow-wrap:anywhere}
 .row{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
 .chip{font-size:11.5px;font-weight:700;border-radius:6px;padding:1px 7px;border:1.5px solid currentColor;white-space:nowrap}
-.st-未撮影{color:var(--st-todo)} .st-撮影済{color:var(--st-shot)} .st-予約済{color:var(--st-sched)} .st-投稿済{color:var(--st-done)} .st-見送り{color:var(--st-skip)}
+.st-未撮影{color:var(--st-todo)} .st-撮影済{color:var(--st-shot)} .st-予約済{color:var(--st-sched)} .st-投稿済{color:var(--st-done)} .st-見送り{color:var(--st-skip)} .st-レビュー待ち{color:var(--st-todo)} .st-予約待ち{color:var(--amber)} .st-作成可能{color:var(--st-sched)} .st-制作中{color:var(--st-sched)} .st-素材待ち{color:var(--st-skip)} .st-保留{color:var(--st-skip)}
 .kind{color:var(--sub);border-color:var(--line);border-width:1px}
 .kind.close{color:var(--close);border-color:currentColor} .kind.open{color:var(--open);border-color:currentColor}
 a.src{color:var(--st-sched);font-size:12px}
@@ -68,13 +68,18 @@ html{scroll-behavior:smooth}
     <div class="built" id="built"></div>
   </header>
   <nav aria-label="セクション">
-    <a href="#urgent">急ぎ</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#hotel">ホテル</a><a href="#schedule">投稿予定</a>
+    <a href="#urgent">急ぎ</a><a href="#work">制作</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#hotel">ホテル</a><a href="#schedule">投稿予定</a>
   </nav>
   <div class="tools"><label><input type="checkbox" id="hideDone"> 投稿済みを隠す</label></div>
 
   <section id="urgent"><h2>急ぎ <span class="n" id="n-urgent"></span></h2>
     <p class="lead">見納めは閉店の5週前から、開店は4週前から。投稿済みは除いています。</p>
     <div class="list" id="l-urgent"></div></section>
+
+  <section id="work"><h2>制作の進み具合 <span class="n" id="n-work"></span></h2>
+    <p class="lead">レビュー待ち=あなたの確認待ち。作成可能=素材は揃っていて、合図があれば作れる。</p>
+    <div class="list" id="l-work"></div>
+    <details><summary id="s-unreg">台帳にない最近の素材フォルダ</summary><p class="lead" style="margin-top:6px">投げたけど話していない素材かもしれません。どうするか教えてください。</p><div class="list" id="l-unreg"></div></details></section>
 
   <section id="closing"><h2>見納め <span class="n" id="n-closing"></span></h2>
     <p class="lead">閉店・閉館・建て替え。撮りどきは閉店日の4週前〜前日。</p>
@@ -161,6 +166,18 @@ function render(){
       <div class="name">${esc(r.name)}</div>
       <div class="meta">${esc(r.pitch)}</div></div>`).join('') || '<p class="empty">ホテルの登録はありません。</p>';
   $('n-hotel').textContent = `${(D.hotels||[]).length}軒`;
+  const W = D.pipeline || [];
+  const cnt = s => W.filter(r => r.stage === s).length;
+  $('n-work').textContent = `レビュー待ち${cnt('レビュー待ち')}・予約待ち${cnt('予約待ち')}・作成可能${cnt('作成可能')}`;
+  $('l-work').innerHTML = W.map(r => `<div class="item" data-st="${esc(r.stage)}">
+      <div class="when"><b>${r.left==null ? (r.n ? r.n : '—') : r.left<=0 ? '今日' : md(r.d)}</b><span>${r.left==null ? (r.n ? '素材' : '') : r.left<=0 ? 'できる' : 'から'}</span></div>
+      <div class="row">${chip(r.stage)}</div>
+      <div class="name">${esc(r.title)}</div>
+      <div class="meta">次: ${esc(r.next||'')}${r.note ? ' ・ '+esc(r.note) : ''}${r.folder ? `<div class="folder">フォルダ: ${esc(r.folder)}</div>` : ''}</div></div>`).join('');
+  const U = D.unregistered || [];
+  $('s-unreg').textContent = `台帳にない最近の素材フォルダ(${U.length}件)`;
+  $('l-unreg').innerHTML = U.map(r => `<div class="item"><div class="when"><b>${r.n}</b><span>素材</span></div>
+      <div class="row"><span class="chip kind">更新 ${md(r.upd)}</span></div><div class="name">${esc(r.title)}</div><div class="meta"></div></div>`).join('');
   const PL = {youtube:'YouTube', instagram:'Instagram', tiktok:'TikTok'};
   $('l-schedule').innerHTML = D.schedule.map(r => `<div><span>${md(r.at.slice(0,10))} ${r.at.slice(11,16)}</span><span class="pl pl-${r.plat}">${PL[r.plat]||r.plat}</span><span>${esc(r.topic)}</span></div>`).join('')
     || '<p class="empty">予約中の投稿はありません。</p>';

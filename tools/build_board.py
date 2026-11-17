@@ -178,6 +178,33 @@ def hotels():
     return out
 
 
+STAGES = ['レビュー待ち', '予約待ち', '作成可能', '制作中', '素材待ち', '予約済', '投稿済', '保留']
+SYS_DIRS = re.compile(r'^(\(\d+\)|\d\.|0\.|4\.|5\.|6\.|8\.|9\.|_tmp|撮影ボード|速報テンプレ|判断ファイル|工事中パトロール|さよならシリーズ|ハウステンボス素材|保留)')
+
+
+def pipeline():
+    """制作の進み具合(data/制作台帳.json)。Claude が段階を進めるたびに書き換える。
+    台帳に無い最近の素材フォルダは「未登録」として出す(投げたのに忘れている素材を拾う)"""
+    led = jl('制作台帳.json', [])
+    rows = []
+    for e in led:
+        n, last = folder_info(e['folder']) if e.get('folder') else (0, None)
+        rows.append(dict(e, n=n, d=e.get('date', ''), left=(iso(e['date']) - TODAY).days if iso(e.get('date', '')) else None))
+    rows.sort(key=lambda r: (STAGES.index(r['stage']) if r['stage'] in STAGES else 99, r.get('d', '')))
+    known = {e.get('folder', '').split('/')[0] for e in led}
+    fresh = []
+    for f in os.listdir(ROOT):
+        p = os.path.join(ROOT, f)
+        if not os.path.isdir(p) or SYS_DIRS.match(f) or f in known:
+            continue
+        n, last = folder_info(f)
+        mt = max((os.path.getmtime(os.path.join(dp, x)) for dp, _, fs in os.walk(p) for x in fs if MEDIA.search(x)), default=0)
+        if n and mt and (NOW.timestamp() - mt) < 45 * 86400:
+            fresh.append(dict(title=f, n=n, upd=datetime.date.fromtimestamp(mt).isoformat()))
+    fresh.sort(key=lambda r: r['upd'], reverse=True)
+    return rows, fresh
+
+
 def schedule():
     rows = [e for e in POSTS if e['publish_at'] >= NOW.strftime('%Y-%m-%d %H:%M')]
     rows.sort(key=lambda e: e['publish_at'])
@@ -187,6 +214,7 @@ def schedule():
 def main():
     data = dict(built=NOW.strftime('%Y-%m-%d %H:%M'), today=TODAY.isoformat(), closings=closings(), openings=openings(),
                 flashes=flashes(), patrol=patrol(), hotels=hotels(), schedule=schedule())
+    data['pipeline'], data['unregistered'] = pipeline()
     tpl = open(os.path.join(HERE, 'board_template.html'), encoding='utf-8').read()
     page = tpl.replace('/*__DATA__*/null', json.dumps(data, ensure_ascii=False).replace('</', '<\\/'))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

@@ -115,6 +115,20 @@
     "shares": null,
     "taken_at": "2026-11-15 17:30",
     "src": "memory(過去の実測)"
+   },
+   {
+    "views": 256000,
+    "reach": 215000,
+    "inter": 2875,
+    "likes": 1457,
+    "comments": 65,
+    "saves": 747,
+    "shares": 0,
+    "profile": 120,
+    "follows": 120,
+    "follower_pct": 0.7,
+    "taken_at": "2026-11-17 21:49",
+    "h": 60.8
    }
   ]
  },
@@ -233,6 +247,20 @@
     "shares": null,
     "taken_at": "2026-11-13 00:40",
     "src": "memory(過去の実測)"
+   },
+   {
+    "views": 26000,
+    "reach": 20000,
+    "inter": 381,
+    "likes": 195,
+    "comments": 117,
+    "saves": 23,
+    "shares": 0,
+    "profile": 8,
+    "follows": 8,
+    "follower_pct": 9.2,
+    "taken_at": "2026-11-17 16:13",
+    "h": 119.2
    }
   ]
  },
@@ -254,6 +282,20 @@
     "follower_pct": 26.7,
     "taken_at": "2026-11-17 09:55",
     "h": 12.9
+   },
+   {
+    "views": 1106,
+    "reach": 898,
+    "inter": 11,
+    "likes": 7,
+    "comments": 1,
+    "saves": 1,
+    "shares": 0,
+    "profile": 0,
+    "follows": 0,
+    "follower_pct": 20.2,
+    "taken_at": "2026-11-17 17:40",
+    "h": 20.7
    }
   ]
  },
@@ -298,5 +340,32 @@
     "h": 36.9
    }
   ]
+ },
+ "Df1eB8gh0xO": {
+  "topic": "成城石井 九州初出店",
+  "publish_at": "2026-11-17 17:10",
+  "type": "ニュース",
+  "snaps": [
+   {
+    "views": 44000,
+    "reach": 33000,
+    "inter": 782,
+    "likes": 464,
+    "comments": 29,
+    "saves": 195,
+    "shares": 0,
+    "profile": 10,
+    "follows": 10,
+    "follower_pct": 0.7,
+    "taken_at": "2026-11-17 21:49",
+    "h": 4.7
+   }
+  ]
+ },
+ "Df14XZvBi9v": {
+  "topic": "清流公園 南端広場",
+  "publish_at": "2026-11-17 21:00",
+  "type": "工事・再開発",
+  "snaps": []
  }
 }

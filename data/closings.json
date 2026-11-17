@@ -207,5 +207,24 @@
   "when_iso": "",
   "src": "manual",
   "pub": ""
+ },
+ {
+  "name": "DEAN & DELUCA アミュプラザ博多店 閉店(B1・九州2号店・2016年4月開業)",
+  "when": "2026年12月13日",
+  "note": "公式告知 2026-11-15(最終営業日20:00)。後継テナントは未発表(成城石井の跡地説は推測)。さよならシリーズ/",
+  "url": "https://www.deandeluca.co.jp/deandeluca_news/detail/60",
+  "area": "福岡市博多区博多駅中央街",
+  "when_iso": "2026-12-13",
+  "src": "manual",
+  "pub": ""
+ },
+ {
+  "name": "元祖博多だるま(2F) 閉店(JR博多シティ(DEITOS))",
+  "when": "2026年12月18日",
+  "when_iso": "2026-12-18",
+  "area": "JR博多シティ(DEITOS)",
+  "url": "https://www.jrhakatacity.com/floor/open_close/",
+  "src": "モール公式",
+  "pub": "2026-11-17"
  }
 ]

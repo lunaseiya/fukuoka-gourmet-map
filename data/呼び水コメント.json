@@ -320,10 +320,11 @@
  {
   "topic": "ゆめぎんが ビーコロコレクション展",
   "text": "装置は約20台、11月23日までです🍬 みなさんはどの装置が気になりますか？",
-  "status": "pending",
+  "status": "done",
   "publish_at": "2026-11-17 18:00",
   "platform": "tiktok",
-  "where": "TikTok 7708466645592821000"
+  "where": "TikTok 7708466645592821000",
+  "posted_at": "2026-11-17 18:48"
  },
  {
   "platform": "youtube",
@@ -337,10 +338,11 @@
  {
   "platform": "instagram",
   "publish_at": "2026-11-17 21:00",
-  "status": "pending",
+  "status": "done",
   "text": "清流公園の南端は12月に全エリアオープンの予定です🚢 入るお店はまだ発表前。どんなお店が入ってほしいですか？",
   "topic": "清流公園 南端広場",
-  "where": "Instagram 予約(位置=清流公園 博多区中洲1丁目)"
+  "where": "Instagram 予約(位置=清流公園 博多区中洲1丁目)",
+  "posted_at": "2026-11-17 21:49"
  },
  {
   "topic": "天神 来春までに3か所",
@@ -381,5 +383,64 @@
   "where": "Instagram 予約(位置=嬉野温泉 ことぶき屋)",
   "text": "大浴場は岩湯の内風呂で、朝6〜9時も入れました♨ 嬉野温泉で泊まるなら、旅館派ですか？素泊まり派ですか？",
   "status": "pending"
+ },
+ {
+  "topic": "ホライゾンアドベンチャー見納め",
+  "platform": "youtube",
+  "publish_at": "2026-11-20 07:00",
+  "where": "YouTube e3ZucEhKHuI",
+  "text": "33年、累計2000万人が体験したアトラクションでした🌊 みなさんはどの席で見ていましたか？",
+  "status": "pending"
+ },
+ {
+  "topic": "ホライゾンアドベンチャー見納め",
+  "platform": "instagram",
+  "publish_at": "2026-11-19 21:00",
+  "where": "Instagram 予約(位置=ハウステンボス)",
+  "text": "33年、累計2000万人が体験したアトラクションでした🌊 みなさんはどの席で見ていましたか？",
+  "status": "pending"
+ },
+ {
+  "topic": "パノラマ・ラッシュ工事中",
+  "platform": "youtube",
+  "publish_at": "2026-11-21 07:00",
+  "where": "YouTube Yz8jAU77my8",
+  "text": "公式発表では高さ約30m・最大時速75km、2027年春オープン予定です🎢 みなさんは乗ってみたいですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "パノラマ・ラッシュ工事中",
+  "platform": "instagram",
+  "publish_at": "2026-11-21 21:00",
+  "where": "Instagram 予約(位置=ハウステンボス)",
+  "text": "公式発表では高さ約30m・最大時速75km、2027年春オープン予定です🎢 みなさんは乗ってみたいですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "成城石井 九州初出店",
+  "platform": "youtube",
+  "publish_at": "2026-11-17 17:10",
+  "where": "YouTube A0FiPdwML7k",
+  "text": "開業日や何階にできるかは、まだ発表前です🛒 成城石井で真っ先に買いたいものは何ですか？",
+  "status": "done",
+  "posted_at": "2026-11-17 17:38"
+ },
+ {
+  "topic": "成城石井 九州初出店",
+  "platform": "instagram",
+  "publish_at": "2026-11-17 17:10",
+  "where": "Instagram 予約(位置=アミュプラザ博多)",
+  "text": "開業日や何階にできるかは、まだ発表前です🛒 成城石井で真っ先に買いたいものは何ですか？",
+  "status": "done",
+  "posted_at": "2026-11-17 17:39"
+ },
+ {
+  "topic": "成城石井 九州初出店",
+  "platform": "tiktok",
+  "publish_at": "2026-11-17 17:01",
+  "where": "TikTok 7709047234893073682",
+  "text": "開業日や何階にできるかは、まだ発表前です🛒 成城石井で真っ先に買いたいものは何ですか？",
+  "status": "done",
+  "posted_at": "2026-11-17 17:40"
  }
 ]

@@ -60,6 +60,10 @@ def main():
     if '--no-news' not in sys.argv:
         sys.stdout.flush()
         subprocess.run([sys.executable, '-X', 'utf8', os.path.join(os.path.dirname(__file__), 'news_watch.py')])
+    # 撮影ボード(ユーザー専用の非公開ページ)を作り直す。Claude は同じファイルを Artifact で publish し直す
+    sys.stdout.flush()
+    subprocess.run([sys.executable, '-X', 'utf8', os.path.join(os.path.dirname(__file__), 'build_board.py')])
+    print('→ 撮影ボードを作り直した。Artifact を同じファイル(ショート動画用/撮影ボード/撮影ボード.html)で publish し直す')
 
 
 main()

@@ -245,6 +245,27 @@ SEEDS = [
     ('九州大学箱崎キャンパス跡地 第1期まちびらき(BOX FUKUOKA・フクオカサスティナブルフードパーク・ライフスタイルセンター)',
      '複合', '2028年度', _KYUDAI, 'まちびらき', '', '福岡市東区箱崎'),
     ('九州大学箱崎キャンパス跡地 概成', '複合', '2036年度', _KYUDAI, '完成', '', '福岡市東区箱崎'),
+    # ■ ホテル(2026-11-17 ユーザー「工事を撮影するなら福岡なので、福岡の開業リストは集めて欲しい」)。
+    #   ねらい: 工事中を撮る(工事回の到達)→ 開業前後に宿泊PRを相談する。エースホテル(天神大樹)・
+    #   ソラリア西鉄ホテル福岡エアポート(TABISIA)は親の複合施設のテナント欄にあるので重ねない
+    ('&Here FUKUOKA HAKATA(98室)', 'ホテル', '2027年2月', 'https://www.jalan.net/yad345041/', '開業',
+     '2027年2月2日開業(予約サイト掲載)。祇園町4-58・祇園駅徒歩3分。新築か改装かは未確認', '福岡市博多区祇園町'),
+    ('(仮称)博多駅前3丁目ホテル(JR九州ホテルズ・約150室)', 'ホテル', '2028年度',
+     'https://www.jrkyushu.co.jp/news/__icsFiles/afieldfile/2025/06/27/20250627_hotel_Store_opening_plan.pdf', '開業',
+     '博多駅前3丁目141番他・博多口徒歩7分。着工時期は未発表', '福岡市博多区博多駅前'),
+    ('ANAクラウンプラザホテル福岡 建替', 'ホテル', '2028年', 'https://kansai-sanpo.com/fukuoka-new-hotels/', '開業',
+     '⚠まとめサイトのみ・建替後の名称と室数は未確定(要一次確認)', '福岡市博多区博多駅前'),
+    ('(仮称)福岡家裁跡 インターコンチネンタル ホテルズ&リゾーツ 福岡(117室)', 'ホテル', '2030年',
+     'https://hotelbank.jp/new-hotels/fukuoka-hotel-development-2026-05/', '開業', '2030年第1四半期(hotelbank)。ホテルは4〜9階',
+     '福岡市中央区大手門'),
+    ('カイタックホテル(仮・警固1丁目・180室)', 'ホテル', '2030年', 'https://stay-holiday.com/room/1429/', '開業',
+     '⚠まとめサイトのみ(2026年7月情報)。CAITAC LIVINCOURT FUKUOKA(2027年)と同じ計画かは未確認', '福岡市中央区警固'),
+    ('博多祇園 ホテル開発プロジェクト(117室)', 'ホテル', '2026年秋', 'https://hotelbank.jp/new-hotels/fukuoka-hotel-development-2026-05/',
+     '開業', '⚠名称・所在地とも未発表。秋の予定が過ぎているので要確認', '福岡市博多区祇園町'),
+    ('コートヤード・バイ・マリオット小倉(旧ホテルクラウンパレス小倉・リブランド)', 'ホテル', '2027年4月',
+     'https://hotetoku.com/columns/new-hotels-2027', '開業', '2027/04/01・約200室・改装(外から工事は見えにくい)', '北九州市小倉北区馬借'),
+    ('コートヤード・バイ・マリオット北九州(旧ホテルクラウンパレス北九州・リブランド)', 'ホテル', '2027年春',
+     'https://hotetoku.com/columns/new-hotels-2027', '開業', '220室・改装', '北九州市八幡西区東曲里町'),
 ]
 
 # ウォッチ対象の初期値(data/openings_watch.json が無いときに書き出す)
@@ -1237,6 +1258,11 @@ def main():
             subprocess.run([sys.executable, os.path.join(HERE, 'sync_openings_from_watch.py')], check=True)
         except Exception as e:
             print('  ! これから一覧への反映に失敗: %s' % repr(e)[:100])
+        # 2026-11-17: 閉店・閉館・建て替え(見納め)も週1の巡回で一緒に回す → data/見納めリスト.txt
+        try:
+            subprocess.run([sys.executable, '-X', 'utf8', os.path.join(HERE, 'closing_watch.py')], check=True)
+        except Exception as e:
+            print('  ! 見納めウォッチに失敗: %s' % repr(e)[:100])
     if '--center' in args:
         show_higashi(items, pred=is_center, head='天神・博多(テナントの入居・移転も・子連れ/観光に関係するもの)')
         print('OPENING_WATCH_DONE')

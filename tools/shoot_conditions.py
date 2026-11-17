@@ -103,6 +103,10 @@ def main():
         print(f'{k:<10} {WD[day.weekday()]} {kubun:<9} {(wx or "-")[:28]:<30} {pops_s:<14} {judge}  ' + ' / '.join(note))
         prev_rain = rainy
     print('\n出典: 気象庁 福岡地方の予報(3日目まで)・福岡県の週間予報')
+    # 見納め(閉店・閉館・建て替え)は撮れる期間がシビアなので、撮影先を聞かれたら必ず並べる(2026-11-17 ユーザー確定)
+    import subprocess, os
+    sys.stdout.flush()
+    subprocess.run([sys.executable, '-X', 'utf8', os.path.join(os.path.dirname(os.path.abspath(__file__)), 'closing_watch.py'), '--due'])
 
 
 if __name__ == '__main__':

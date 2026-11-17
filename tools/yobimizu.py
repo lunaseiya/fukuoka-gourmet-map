@@ -53,6 +53,9 @@ def main():
     print(f'== 次の予定: {len(nxt)}件 ==')
     for i, e in nxt[:5]:
         print(f"[{i}] {e['publish_at']} {e['platform']} {e['topic']}")
+    # ついでに IG の伸び方を 3h/24h/72h で取る(2026-11-17 ユーザー確定)
+    import subprocess
+    subprocess.run([sys.executable, '-X', 'utf8', os.path.join(os.path.dirname(__file__), 'ig_growth.py'), 'due'])
 
 
 main()

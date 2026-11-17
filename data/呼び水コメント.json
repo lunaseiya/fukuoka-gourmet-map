@@ -296,7 +296,8 @@
   "publish_at": "2026-11-16 21:00",
   "where": "IG リール(福岡空港 the foodtimes)",
   "text": "窓ぎわで息子が飛行機に夢中で、ゆっくり食べられました✈ 空港のごはん、みなさんはどこ派ですか？",
-  "status": "pending"
+  "status": "done",
+  "posted_at": "2026-11-16 21:48"
  },
  {
   "topic": "ゆめぎんが ビーコロコレクション展",
@@ -327,10 +328,11 @@
  {
   "platform": "youtube",
   "publish_at": "2026-11-17 07:00",
-  "status": "pending",
+  "status": "done",
   "text": "清流公園の南端は12月に全エリアオープンの予定です🚢 入るお店はまだ発表前。どんなお店が入ってほしいですか？",
   "topic": "清流公園 南端広場",
-  "where": "YouTube LOC_tTVAzkE"
+  "where": "YouTube LOC_tTVAzkE",
+  "posted_at": "2026-11-17 07:27"
  },
  {
   "platform": "instagram",
@@ -339,5 +341,45 @@
   "text": "清流公園の南端は12月に全エリアオープンの予定です🚢 入るお店はまだ発表前。どんなお店が入ってほしいですか？",
   "topic": "清流公園 南端広場",
   "where": "Instagram 予約(位置=清流公園 博多区中洲1丁目)"
+ },
+ {
+  "topic": "天神 来春までに3か所",
+  "platform": "youtube",
+  "publish_at": "2026-11-18 07:00",
+  "where": "YouTube UqBJM5Z8LRc",
+  "text": "天神大樹は5月末、アミュプラザ天神は春、須崎公園は3月の予定です🏗 3つのうち、どこが一番楽しみですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "天神 来春までに3か所",
+  "platform": "instagram",
+  "publish_at": "2026-11-18 21:00",
+  "where": "Instagram 予約(位置=天神)",
+  "text": "天神大樹は5月末、アミュプラザ天神は春、須崎公園は3月の予定です🏗 3つのうち、どこが一番楽しみですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "天神 来春までに3か所",
+  "platform": "tiktok",
+  "publish_at": "2026-11-26 18:00",
+  "where": "TikTok 7709000967861079304",
+  "text": "天神大樹は5月末、アミュプラザ天神は春、須崎公園は3月の予定です🏗 3つのうち、どこが一番楽しみですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "嬉野温泉ことぶき屋",
+  "platform": "youtube",
+  "publish_at": "2026-11-19 07:00",
+  "where": "YouTube GwCoIGN4nns",
+  "text": "大浴場は岩湯の内風呂で、朝6〜9時も入れました♨ 嬉野温泉で泊まるなら、旅館派ですか？素泊まり派ですか？",
+  "status": "pending"
+ },
+ {
+  "topic": "嬉野温泉ことぶき屋",
+  "platform": "instagram",
+  "publish_at": "2026-11-20 09:00",
+  "where": "Instagram 予約(位置=嬉野温泉 ことぶき屋)",
+  "text": "大浴場は岩湯の内風呂で、朝6〜9時も入れました♨ 嬉野温泉で泊まるなら、旅館派ですか？素泊まり派ですか？",
+  "status": "pending"
  }
 ]

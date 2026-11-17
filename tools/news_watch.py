@@ -167,7 +167,8 @@ def on_map(title):
     names = _NAMES
     words = set(re.findall(r'「([^」]{2,20})」', title) + re.findall(r'[ァ-ヶー]{3,}|[A-Za-z][A-Za-z&. ]{2,}[A-Za-z]', title))
     words = {w.strip() for w in words if len(w.strip()) >= 4 and not re.fullmatch(r'オープン|ニューオープン|グランドオープン|リニューアル|スーパー|ラーメン|カフェ|ショップ|ストア|フード|グルメ|スイーツ|ベーカリー|レストラン|ステーキ|ビストロ|サウナ|スパ|ホテル|パン|ニュース|デザイン|.*(アミュ|イオン|ららぽーと|キャナル|パルコ|マルイ|ソラリア|大丸|岩田屋|公園|駅|モール|プラザ|シティ|ビル).*', w.strip())}
-    hit = [(w, n) for w in words for n in names if w.lower() in n.lower()]
+    # 店名はマップ側の名前の「頭」と一致したときだけ(「マリノア」が日産マリノア店に、「オランダ」が別店に当たった)
+    hit = [(w, n) for w in words for n in names if n.lower().startswith(w.lower())]
     return hit[0] if hit else None
 
 
@@ -206,7 +207,7 @@ def main():
     #   (2026-11-17 ユーザー指摘: カインズ新宮もウルフギャング(グランドハイアット)も前からある)
     today = datetime.date.today().isoformat()
     for e in rows:
-        e['fresh'] = any(m == 'PR TIMES' for m in e['media']) or len(e['media']) >= 2
+        e['fresh'] = any(m.endswith('PR TIMES') for m in e['media']) or len(e['media']) >= 2
         e['close'] = bool(CLOSE_RE.search(e['title']))
         if e['close']:
             e['when'], e['when_iso'] = cw.when_of(e['title'])
@@ -217,7 +218,7 @@ def main():
                 e['fresh'] = True
         # マップに既にある店の名前 = 古い記事の再掲か、知っている店の新店のどちらか。
         # PR TIMES・地元の報道なら新店(2026-11-17 ざいとん博多バスターミナル店を取りこぼした)、それ以外は要確認
-        if e['map'] and not (any(m == 'PR TIMES' for m in e['media']) or LOCAL_SRC_RE.search(' '.join(e['media']))):
+        if e['map'] and not (any(m.endswith('PR TIMES') for m in e['media']) or LOCAL_SRC_RE.search(' '.join(e['media']))):
             e['fresh'] = False
     rows.sort(key=lambda e: -e['score'])
     if not show_all:

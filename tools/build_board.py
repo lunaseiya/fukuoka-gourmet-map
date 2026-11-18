@@ -213,7 +213,8 @@ def schedule():
 
 def main():
     data = dict(built=NOW.strftime('%Y-%m-%d %H:%M'), today=TODAY.isoformat(), closings=closings(), openings=openings(),
-                flashes=flashes(), patrol=patrol(), hotels=hotels(), schedule=schedule())
+                flashes=flashes(), patrol=patrol(), hotels=hotels(), schedule=schedule(),
+                kako=jl('過去今未来_候補.json', []))
     data['pipeline'], data['unregistered'] = pipeline()
     tpl = open(os.path.join(HERE, 'board_template.html'), encoding='utf-8').read()
     page = tpl.replace('/*__DATA__*/null', json.dumps(data, ensure_ascii=False).replace('</', '<\\/'))

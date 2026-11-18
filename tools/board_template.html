@@ -68,7 +68,7 @@ html{scroll-behavior:smooth}
     <div class="built" id="built"></div>
   </header>
   <nav aria-label="セクション">
-    <a href="#urgent">急ぎ</a><a href="#work">制作</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#hotel">ホテル</a><a href="#schedule">投稿予定</a>
+    <a href="#urgent">急ぎ</a><a href="#work">制作</a><a href="#closing">見納め</a><a href="#opening">開店予定</a><a href="#flash">速報</a><a href="#patrol">工事の定点</a><a href="#kako">過去今未来</a><a href="#hotel">ホテル</a><a href="#schedule">投稿予定</a>
   </nav>
   <div class="tools"><label><input type="checkbox" id="hideDone"> 投稿済みを隠す</label></div>
 
@@ -98,6 +98,10 @@ html{scroll-behavior:smooth}
   <section id="patrol"><h2>工事の定点 <span class="n" id="n-patrol"></span></h2>
     <p class="lead">工事中パトロールのフォルダ。前回の撮影から日が空いている現場を再訪の候補に。</p>
     <div class="list" id="l-patrol"></div></section>
+
+  <section id="kako"><h2>過去・今・未来カルーセル <span class="n" id="n-kako"></span></h2>
+    <p class="lead">TikTok向け。過去=国土地理院の空中写真など、今=自前の撮影、未来=公表資料。◯=手元にある △=これから集める ✕=無い。</p>
+    <div class="list" id="l-kako"></div></section>
 
   <section id="hotel"><h2>ホテル開業ウォッチ <span class="n" id="n-hotel"></span></h2>
     <p class="lead">工事回で外観を撮る → 開業の1〜2か月前に、数字を添えて宿泊PRの営業。断られたら基本は見送り。</p>
@@ -160,6 +164,13 @@ function render(){
       <div class="name">${esc(r.name)}</div>
       <div class="meta">${esc([r.plan, r.note].filter(Boolean).join(' ・ '))}</div></div>`).join('');
   $('n-patrol').textContent = `${D.patrol.length}現場`;
+  const K = D.kako || [];
+  $('l-kako').innerHTML = K.map((r,i) => `<div class="item">
+      <div class="when"><b>${i+1}</b><span>${esc(r.state)}</span></div>
+      <div class="row"><span class="chip kind">過去 ${esc(r.past)}</span><span class="chip kind">今 ${esc(r.now)}</span><span class="chip kind">未来 ${esc(r.future)}</span></div>
+      <div class="name">${esc(r.name)}</div>
+      <div class="meta">${esc([r.hook && '切り口: '+r.hook, r.note].filter(Boolean).join(' ・ '))}</div></div>`).join('');
+  $('n-kako').textContent = `${K.length}か所`;
   $('l-hotel').innerHTML = (D.hotels||[]).map(r => `<div class="item" data-st="${esc(r.st)}">
       <div class="when"><b>${esc(r.no)}</b><span>${esc(r.when)}</span></div>
       <div class="row">${chip(r.st)}<span class="chip kind">${esc(r.area)}</span>${r.n?`<span class="chip kind">素材${r.n}本</span>`:''}</div>

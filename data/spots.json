@@ -161612,5 +161612,51 @@
    "⚠ ベビーカーで入れるかは未確認"
   ],
   "memo": "湧き水が流れるトンネルの中を歩ける公園。水の玉が止まって見える「ウォーターパール」が見どころ。水の資料館「湧水館」もある(月曜休・祝日は開館)。4〜10月 9:00〜18:00、11〜3月 9:00〜17:00(SNS投稿より・要確認)。ネット調べ(未訪問)。"
+ },
+ {
+  "id": "kitanomegumi-fukuokakuukouguchi",
+  "name": "北海道らーめん 北の恵み 福岡空港口店",
+  "area": "堅粕(福岡空港そば)",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "味噌ラーメン・ラーメン",
+  "lat": 33.600275,
+  "lng": 130.437218,
+  "address": "福岡県福岡市博多区堅粕大字48-3",
+  "visited": "2026-11-19",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": false,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "⭐豚骨の街・福岡で1971年創業の北海道らーめんの店。赤い三角屋根が目印。子供椅子・ボックス席・お子さまセット(ミニらーめん・ミニミニチャーハン・アイス・おもちゃ)があり、子連れで入りやすい。みそバターはやさしくまろやかで、卓上の辛味噌でキレが出る。全席禁煙(食べログ掲載)。11:00〜22:00(L.O.21:30)。駐車場あり(約10台)。⚠昼どきは2〜3組待ちのことがある。トイレのおむつ替えは未確認。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "kitanomegumi-fukuokakuukouguchi.jpg",
+  "wish": false,
+  "photos": [
+   "kitanomegumi-fukuokakuukouguchi_01_外観.jpg",
+   "kitanomegumi-fukuokakuukouguchi_02_みそバターらーめん.jpg",
+   "kitanomegumi-fukuokakuukouguchi_03_子供椅子.jpg",
+   "kitanomegumi-fukuokakuukouguchi_04_ボックス席.jpg",
+   "kitanomegumi-fukuokakuukouguchi_05_お子さまセット.jpg"
+  ],
+  "points": [
+   "子供椅子あり(ベルトなし)",
+   "お子さまセットあり(おもちゃ付き)",
+   "ボックス席あり",
+   "駐車場あり",
+   "⚠ 昼どきは少し待つことがある"
+  ],
+  "memo": "豚骨の街で1971年から続く北海道らーめんの店。赤い三角屋根が目印で、福岡空港のすぐそば。みそ・しお・しょうゆがあり、みそバターはやさしくまろやか。卓上の辛味噌を入れるとキレが出る。席はカウンターとボックス席。全席禁煙。11:00〜22:00(L.O.21:30)。おむつ替えは未確認。TEL 092-412-8730。",
+  "added": "2026-11-20",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40022788/"
  }
 ]

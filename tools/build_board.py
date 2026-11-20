@@ -143,6 +143,11 @@ def patrol():
     base = os.path.join(ROOT, '工事中パトロール')
     readme = open(os.path.join(base, 'README_一覧.txt'), encoding='utf-8', errors='ignore').read()
     out = []
+    # 公表の更新(tools/patrol_watch.py)。再訪の候補は「更新あり」の現場だけ(2026-11-20 ユーザー確定)
+    upd = {}
+    for e in jl('工事現場_更新.json', []):
+        if not e.get('done'):
+            upd.setdefault(e['no'], []).append(dict(at=e['at'], kind=e['kind'], what=e['what'], url=e['url']))
     for f in sorted(os.listdir(base)):
         if not re.match(r'\d\d_', f) or not os.path.isdir(os.path.join(base, f)):
             continue
@@ -150,7 +155,9 @@ def patrol():
         st, note, _ = status_of(f[3:])
         n, last = folder_info('工事中パトロール/' + f)
         out.append(dict(name=f[3:], no=f[:2], plan=(m.group(1).strip() if m else '')[:110], n=n,
-                        last=last.isoformat() if last else '', since=(TODAY - last).days if last else None, st=st, note=note))
+                        last=last.isoformat() if last else '', since=(TODAY - last).days if last else None, st=st, note=note,
+                        upd=upd.get(f[:2], [])[:5]))
+    out.sort(key=lambda r: (0 if r['upd'] else 1, r['no']))
     return out
 
 

@@ -96,7 +96,7 @@ html{scroll-behavior:smooth}
     <div class="list" id="l-flash"></div></section>
 
   <section id="patrol"><h2>工事の定点 <span class="n" id="n-patrol"></span></h2>
-    <p class="lead">工事中パトロールのフォルダ。前回の撮影から日が空いている現場を再訪の候補に。</p>
+    <p class="lead">再訪するのは「公表の更新あり」の現場だけ(週1回、公式ページと報道を見ています)。更新が無い現場は行きません。</p>
     <div class="list" id="l-patrol"></div></section>
 
   <section id="kako"><h2>過去・今・未来カルーセル <span class="n" id="n-kako"></span></h2>
@@ -160,10 +160,11 @@ function render(){
   $('n-flash').textContent = `${D.flashes.length}件`;
   $('l-patrol').innerHTML = D.patrol.map(r => `<div class="item" data-st="${esc(r.st)}">
       <div class="when"><b>${r.no}</b><span>${r.since==null?'未撮影':r.since+'日前'}</span></div>
-      <div class="row">${chip(r.st)}${r.n?`<span class="chip kind">素材${r.n}本</span>`:''}</div>
+      <div class="row">${chip(r.st)}${(r.upd||[]).length?`<span class="chip kind">公表の更新あり ${r.upd.length}件</span>`:''}${r.n?`<span class="chip kind">素材${r.n}本</span>`:''}</div>
       <div class="name">${esc(r.name)}</div>
+      ${(r.upd||[]).map(u=>`<div class="meta">${esc(u.at)} ${esc(u.kind)}: ${esc(u.what)} ${src(u.url,'開く')}</div>`).join('')}
       <div class="meta">${esc([r.plan, r.note].filter(Boolean).join(' ・ '))}</div></div>`).join('');
-  $('n-patrol').textContent = `${D.patrol.length}現場`;
+  $('n-patrol').textContent = `${D.patrol.filter(r=>(r.upd||[]).length).length}現場に更新 / ${D.patrol.length}現場`;
   const K = D.kako || [];
   $('l-kako').innerHTML = K.map((r,i) => `<div class="item">
       <div class="when"><b>${i+1}</b><span>${esc(r.state)}</span></div>

@@ -13,6 +13,5 @@
 - 楽市街道 箱崎店(`rakuichikaido-hakozaki`): 公式のフロアマップ・館内図が見つからない(ドン・キホーテ店舗ページは周辺地図のみ。路面型の複合施設)
 - 香椎 FOREST TOWN(`foresttown-kashii`): 公式サイト・フロアマップが見つからない
 - 浜屋百貨店(長崎・未登録)(`hamaya-nagasaki`): 公式サイト(hamaya-dept.co.jp)が名前解決できず開けない。公式のフロアガイドを確認できなかった
-- ソラリアステージ(未登録)(`solaria-stage`): 公式サイト(施設案内・フロアガイド)に授乳室・おむつ替え・ベビーカー・多目的トイレの記載が無く、フロアマップの図も載っていない
 - 佐賀県立宇宙科学館 ゆめぎんが(`sagakenritsuuchuukagakukanyu`): 公式サイト(yumeginga.jp)がメンテナンス中の告知のみで、フロア情報を確認できない
 - 宮崎県総合博物館(`miyazakikensougouhakubutsuka`): 公式サイト(miyazaki-archive.jp)が全サービス停止中の告知のみで、施設案内・フロア情報を確認できない

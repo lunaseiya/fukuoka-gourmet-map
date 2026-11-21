@@ -53,6 +53,16 @@ def main():
     print(f'== 次の予定: {len(nxt)}件 ==')
     for i, e in nxt[:5]:
         print(f"[{i}] {e['publish_at']} {e['platform']} {e['topic']}")
+    # 週末カルーセルの出し忘れ防止(2026-11-21 ユーザー確定)。木曜19時〜土曜に、
+    # その週末(土曜始まり)の data/carousel_<土曜> が無ければ知らせる。連休で日付をずらした回は直近5日のフォルダも見る
+    wd = now.weekday()
+    if (wd == 3 and now.hour >= 19) or wd in (4, 5):
+        sat = now.date() + datetime.timedelta(days=(5 - wd))
+        base = os.path.join(os.path.dirname(__file__), '..', 'data')
+        near = [(sat + datetime.timedelta(days=k)).isoformat() for k in range(-3, 3)]
+        if not any(os.path.isdir(os.path.join(base, 'carousel_' + x)) for x in near):
+            print(f'== ⚠週末カルーセルが未作成({sat.month}/{sat.day}の週末) ==')
+            print('    weekly-event-post スキルで候補20件を収集して一覧を出し、PushNotification でユーザーに知らせる')
     # ついでに IG の伸び方を 3h/24h/72h で取る(2026-11-17 ユーザー確定)
     import subprocess
     subprocess.run([sys.executable, '-X', 'utf8', os.path.join(os.path.dirname(__file__), 'ig_growth.py'), 'due'])

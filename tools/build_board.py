@@ -223,6 +223,9 @@ def main():
                 flashes=flashes(), patrol=patrol(), hotels=hotels(), schedule=schedule(),
                 kako=jl('過去今未来_候補.json', []))
     data['pipeline'], data['unregistered'] = pipeline()
+    # 撮影リスト(data/撮影リスト.json)。ユーザーが「撮りに行く」と決めたもの。撮るもの・現地で聞くことを手で書く(2026-11-22)
+    data['shotlist'] = [dict(e, left=(iso(e['limit']) - TODAY).days if iso(e.get('limit', '')) else None)
+                        for e in jl('撮影リスト.json', [])]
     tpl = open(os.path.join(HERE, 'board_template.html'), encoding='utf-8').read()
     page = tpl.replace('/*__DATA__*/null', json.dumps(data, ensure_ascii=False).replace('</', '<\\/'))
     os.makedirs(os.path.dirname(OUT), exist_ok=True)

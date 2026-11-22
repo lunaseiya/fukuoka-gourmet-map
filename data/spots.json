@@ -162056,5 +162056,44 @@
   "untilLabel": "11月23日",
   "official": "https://nogata.aeonmall.jp/event/31712648-1851-41e4-895d-9a92700c17e2",
   "added": "2026-11-21"
+ },
+ {
+  "id": "tunapaha-plus2-solaria-stage",
+  "name": "不思議香菜 ツナパハ+2(ソラリアステージ)",
+  "area": "天神(ソラリアステージ 地下2階)",
+  "city": "福岡市中央区",
+  "pref": "福岡県",
+  "genre": "スリランカカリー・カレー",
+  "lat": 33.589438,
+  "lng": 130.397498,
+  "address": "福岡県福岡市中央区天神2丁目11-3 ソラリアステージ 地下2階",
+  "visited": "2026-11-22",
+  "with": "solo",
+  "kids": null,
+  "verdict": "⚠2026年12月25日で閉店(店頭の掲示)。天神西通りの本店は2026年4月に閉店ずみ。お引越し先は公式HP・公式Instagram・LINEでお知らせ予定で、それまでは姉妹店のヌワラエリヤ(赤坂・警固交差点)へ、と店頭で案内されている。黄色いごはんに赤いスリランカカリー。ソラリアステージで約8年営業。子連れの設備は未確認。",
+  "video": {
+   "youtube": "https://youtube.com/shorts/UwE33Zi5Koo",
+   "tiktok": "https://www.tiktok.com/@tencone/video/7710977577111850247",
+   "instagram": "https://www.instagram.com/lunamasao/reel/DgC2lFZIDPu/"
+  },
+  "thumb": "tunapaha-plus2-solaria-stage.jpg",
+  "wish": false,
+  "in": "shop-872fb3cba5",
+  "until": "2026-12-25",
+  "untilLabel": "12月25日",
+  "photos": [
+   "tunapaha-plus2-solaria-stage_01_看板.jpg",
+   "tunapaha-plus2-solaria-stage_02_スリランカカリー.jpg",
+   "tunapaha-plus2-solaria-stage_03_閉店のお知らせ(2026-11-22).jpg"
+  ],
+  "points": [
+   "⚠ 2026年12月25日で閉店",
+   "このあとは姉妹店のヌワラエリヤへ(店頭の案内)",
+   "ソラリアステージ 地下2階"
+  ],
+  "memo": "天神で親しまれたスリランカカリーの店。12月25日で閉店と店頭に掲示がある。本店(天神西通り)は4月に閉店ずみ。お引越し先はこれからお知らせ予定で、それまでは赤坂・警固交差点のヌワラエリヤへ、と案内されている。子連れの設備は未確認。",
+  "posted": "2026-11-22",
+  "added": "2026-11-22",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40042601/"
  }
 ]

@@ -595,9 +595,19 @@
    "status": "planned",
    "when": "2029-03-01",
    "when_text": "2028年度",
-   "note": "",
-   "kids_note": null,
+   "note": "野村不動産・竹中工務店の建て替え。地上21階・地下3階・高さ約106m・オフィス+商業。2025-12-16着工、竣工2028年度(開業月は未公表)。地下鉄天神駅直結の地下広場、明治通り〜昭和通りの貫通通路",
+   "kids_note": "地下鉄から直結の地下広場と、明治通り〜昭和通りの通り抜けができる",
    "sources": [
+    {
+     "t": "野村不動産・竹中工務店リリース 2025-12-16",
+     "u": "https://www.takenaka.co.jp/news/2025/12/04/pdf/20251216_Release_fukuoka.pdf",
+     "d": "2026-11-21"
+    },
+    {
+     "t": "福岡市 記者発表 2025-07-28",
+     "u": "https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/midori/menu1/documents/tennzinnsennta-biru.pdf",
+     "d": "2026-11-21"
+    },
     {
      "t": "再開発調査兵団",
      "u": "https://saitoshika-west.com/blog-entry-9653.html",
@@ -606,7 +616,7 @@
    ],
    "videos": [],
    "spot": null,
-   "updated": "2026-11-08"
+   "updated": "2026-11-21"
   },
   {
    "id": "intercontinental-fukuoka",

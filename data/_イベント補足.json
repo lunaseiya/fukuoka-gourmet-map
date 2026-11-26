@@ -2269,5 +2269,144 @@
    "初回は会員登録が必要(年会費600円)"
   ],
   "search": "リトルプラネット 久留米 サンサンキッズTV"
+ },
+ "https://www.k-rhm.jp/news/detail.php?id=355": {
+  "time": "9:00〜17:00(最終入館16:30)",
+  "price": "大人500円・中学生以下250円(4歳未満無料)",
+  "search": "九州鉄道記念館 秋のファミリーフェスタ",
+  "venues": [
+   "九州鉄道記念館"
+  ],
+  "detail": [
+   "ミニ新幹線に乗れる",
+   "運転士や車掌の体験",
+   "こども縁日とナゾトキ",
+   "くまモン号の車両展示"
+  ]
+ },
+ "https://kashiihama.aeon-kyushu.info/event/8929e1fb-12f0-4663-adaf-36c3fbcc14b6": {
+  "search": "イオンモール香椎浜 デコ活チャレンジ",
+  "detail": [
+   "0円服の交換会がある",
+   "体験型のワークショップ",
+   "館内をまわるクイズラリー",
+   "屋内なので雨の日でも行ける"
+  ]
+ },
+ "https://chikushino.aeonmall.jp/event/dba8de01-1859-4ffa-915d-c68cc60b4471": {
+  "search": "イオンモール筑紫野 リドラの謎解きラリー",
+  "price": "無料",
+  "detail": [
+   "5枚の謎を解いてボスの正体を当てる",
+   "館内のチェックポイントを回る",
+   "家族で協力して解くラリー",
+   "受付は1階ウエストコート"
+  ],
+  "time": "10:00〜17:00(最終受付16:00)",
+  "free": true,
+  "place": "1階 明月堂前"
+ },
+ "https://omuta.aeonmall.jp/event/269c6f03-c2ec-4ee1-8704-1b5a7a7cbecc": {
+  "search": "イオンモール大牟田 小島よしお",
+  "detail": [
+   "11:30と14:00の2回・観覧無料",
+   "優先観覧エリアは整理券が必要",
+   "握手と写真撮影会の特別企画も"
+  ]
+ },
+ "https://iko-yo.net/events/606639": {
+  "time": "10:00〜19:00",
+  "price": "入場無料(有料コンテンツあり)",
+  "free": true,
+  "search": "オドフェス2026 小戸公園",
+  "venues": [
+   "小戸公園 芝生広場"
+  ],
+  "addr": "福岡市西区小戸2-6-1",
+  "detail": [
+   "キッチンカーなど50店以上が並ぶ",
+   "キッズチームのダンスステージ",
+   "スナッグゴルフやキックターゲット",
+   "スタンプラリーあり・小雨決行"
+  ],
+  "photo2": "C:/Users/totor/Dropbox/ショート動画用/4.MAP生成/data/carousel_2026-11-28/_素材_オドフェス会場(公式サイト・2025年の様子).jpg"
+ },
+ "https://hakata-shimin.info/#zenjitsusai2026": {
+  "time": "10:00〜16:00",
+  "price": "入場無料(予約制の工作は300円〜)",
+  "search": "博多市民センター 文化祭 前日祭",
+  "venues": [
+   "博多市民センター"
+  ],
+  "reserve": "工作は電話 092-472-5991",
+  "detail": [
+   "松ぼっくりのツリー作り 無料(50個)",
+   "プラレールが走る鉄道の作品展",
+   "消防音楽隊コンサート 13時〜(10時から整理券)",
+   "クイズラリーは参加賞あり"
+  ],
+  "poster": "https://hakata-shimin.info/wp-content/uploads/2026/10/%E5%89%8D%E6%97%A5%E7%A5%AD%E3%83%81%E3%83%A9%E3%82%B7%E8%A1%A8-724x1024.png",
+  "free": true
+ },
+ "https://www.fukuokacity-kagakukan.jp/news/2026/11/1128-2.html": {
+  "time": "①11:00〜11:20 ②14:00〜14:20",
+  "place": "3〜5階",
+  "search": "福岡市科学館 ピングー グリーティング",
+  "price": "公式に記載なし",
+  "detail": [
+   "ピングーが館内をお散歩する",
+   "11:00と14:00の2回・各20分",
+   "2ショット撮影はできない",
+   "時間と場所は変わることがある"
+  ]
+ },
+ "https://fukutsu.aeonmall.jp/event/732a890e-db5d-43d3-b6ae-cdaf28c9e34c": {
+  "search": "イオンモール福津 LaQであそぼう",
+  "detail": [
+   "LaQでクリスマスの飾りを作る",
+   "LaQハカセグリーンがやってくる",
+   "はじめてでも作れる",
+   "参加無料・受付は終了30分前まで"
+  ],
+  "time": "土 10〜18時 / 日 10〜17時"
+ },
+ "https://omuta.aeonmall.jp/event/0b3e4053-37d4-4ef3-b1ef-7f6e32eb2f05": {
+  "search": "イオンモール大牟田 アンパンマンショー",
+  "detail": [
+   "アンパンマンのショー(各30分ほど)",
+   "11:00と14:00の2回",
+   "観覧無料・整理券が必要",
+   "ショーのあとに写真の時間あり"
+  ]
+ },
+ "https://tenpo.aeon-kyushu.info/detail/marina-town/event-news/2016513/": {
+  "time": "10:00〜17:00(1時間ごと7回)",
+  "place": "1階 センターコート",
+  "price": "500円(公式Instagramフォローで200円引き)",
+  "search": "イオンマリナタウン ちいかわ ビニペタ",
+  "detail": [
+   "絵具でちいかわのビニペタを作る",
+   "整理券は9:30から1階センターコートで",
+   "合計100名・各回10〜16名",
+   "選べるキャラクターには限りがある"
+  ]
+ },
+ "https://www.crossroadfukuoka.jp/event/11715": {
+  "time": "8:00〜15:00",
+  "price": "入場無料",
+  "free": true,
+  "search": "築城基地航空祭 2026",
+  "venues": [
+   "航空自衛隊 築城基地"
+  ],
+  "addr": "福岡県築上郡築上町西八田",
+  "poster": "https://www.crossroadfukuoka.jp/storage/tourism_attractions/11715/responsive_images/ZiaqhGSpcDOm9EP8Lj6cofvWGE1qAYvRYMiWozC6__1721_1147.jpg",
+  "detail": [
+   "F-2やF-15などの戦闘機が飛ぶ",
+   "輸送機やヘリを地上で近くから見られる",
+   "子供向けにキッズ・カーが走る",
+   "入場無料・JR築城駅から歩いて約5分"
+  ],
+  "photo2": "C:/Users/totor/Dropbox/ショート動画用/4.MAP生成/data/carousel_2026-11-28/_素材_築城基地の行き方(自作の図).jpg"
  }
 }

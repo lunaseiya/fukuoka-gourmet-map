@@ -162189,5 +162189,44 @@
   "memo": "カツがのった金沢カレー。子連れ向けのつくりではないので、大人だけのときに。",
   "added": "2026-11-26",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40005187/"
+ },
+ {
+  "id": "gion-tei-hakata-bt",
+  "name": "まんぷく食堂 ぎおん亭(博多バスターミナル8階)",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "とんてき・とんかつ定食",
+  "lat": 33.5913,
+  "lng": 130.41912,
+  "address": "福岡県福岡市博多区博多駅中央街2-1 博多バスターミナル8階",
+  "visited": null,
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": true,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "とんてき・とんかつの定食屋。店の入口にベルト付きの子供椅子が2脚ある(2026-11-26 現地で確認)。食事はまだしていない。おむつ替えは同じ8階の誰でもトイレでできる。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": null,
+  "wish": true,
+  "in": "shop-4a528e50dc",
+  "photos": [
+   "gion-tei-hakata-bt_01_ベルト付きの子供椅子.jpg"
+  ],
+  "points": [
+   "ベルト付きの子供椅子あり(現地確認)",
+   "おむつ替えは同じ階の誰でもトイレで"
+  ],
+  "memo": "とんてき・とんかつの定食屋。入口にベルト付きの子供椅子が置いてある。",
+  "added": "2026-11-26"
  }
 ]

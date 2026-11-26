@@ -162144,5 +162144,50 @@
   "memo": "博多駅地下街の老舗の博多ラーメン店。小説『君の膵臓をたべたい』や漫画『クッキングパパ』に登場(店頭の掲示より)。営業時間・定休日は要確認。",
   "kidsLevel": 0,
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40000216/"
+ },
+ {
+  "id": "gogocurry-hakata-bt",
+  "name": "ゴーゴーカレー 博多バスターミナル(8階 博多味のタウン)",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "カレー",
+  "lat": 33.5914,
+  "lng": 130.41925,
+  "address": "福岡県福岡市博多区博多駅中央街2-1 博多バスターミナル8階",
+  "visited": "2026-11-26",
+  "with": "family",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": null,
+   "serveMin": null,
+   "noise": null
+  },
+  "kidsLevel": 0,
+  "verdict": "金沢カレーの店。カツがのった濃いルーのカレー。子連れ向けのつくりではない(2026-11-26 実食)。子供椅子の案内はなく、子供用のスプーン・フォークも出なかった。店の前の通路に子供椅子が1脚置いてあったが、この店のものか隣の店のものかは分からない。席は半分がソファ。おむつ替えは同じ8階の誰でもトイレでできる。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "gogocurry-hakata-bt.jpg",
+  "wish": false,
+  "in": "shop-4a528e50dc",
+  "photos": [
+   "gogocurry-hakata-bt_01_ロースカツカレー.jpg",
+   "gogocurry-hakata-bt_02_店内.jpg",
+   "gogocurry-hakata-bt_03_ソファ席.jpg"
+  ],
+  "points": [
+   "ソファ席あり(半分ほど)",
+   "⚠ 子供椅子の案内なし",
+   "⚠ 子供用のスプーン・フォークなし",
+   "おむつ替えは同じ階の誰でもトイレで"
+  ],
+  "memo": "カツがのった金沢カレー。子連れ向けのつくりではないので、大人だけのときに。",
+  "added": "2026-11-26",
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40005187/"
  }
 ]

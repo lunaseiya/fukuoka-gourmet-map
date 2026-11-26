@@ -108605,7 +108605,7 @@
   "lat": 33.589438,
   "lng": 130.397498,
   "address": "福岡県福岡市中央区天神２丁目１１－３",
-  "visited": null,
+  "visited": "2026-11-20",
   "with": "family",
   "kids": {
    "stroller": null,
@@ -108625,7 +108625,7 @@
    "instagram": null
   },
   "thumb": "shop-872fb3cba5.jpg",
-  "wish": true,
+  "wish": false,
   "web": "https://www.city.fukuoka.lg.jp/kodomo-mirai/jigyo-tyosei/child/baby-station.html",
   "category": "play",
   "utility": true,
@@ -162231,7 +162231,7 @@
  },
  {
   "id": "ev-dba8de01-1859-4ffa-915d-c-aeonmallch",
-  "name": "明治安田 福岡支社 Presents「リドラの謎解きラリー 松丸探偵と５任の容疑者」",
+  "name": "明治安田 福岡支社 Presents「リドラの謎解きラリー 松丸探偵と５人の容疑者」",
   "area": "イオンモール筑紫野",
   "city": "筑紫野市",
   "pref": "福岡県",

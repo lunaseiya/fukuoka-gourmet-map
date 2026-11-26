@@ -108363,7 +108363,7 @@
   "lat": 33.591347,
   "lng": 130.41919,
   "address": "福岡県福岡市博多区博多駅中央街2-1",
-  "visited": null,
+  "visited": "2026-11-26",
   "with": "family",
   "kids": {
    "stroller": null,
@@ -108376,14 +108376,14 @@
    "serveMin": null,
    "noise": null
   },
-  "verdict": "おむつ替え・授乳室がある店(自治体の「赤ちゃんの駅」一覧より)。おむつ替えあり。 授乳室あり。 TEL 092-431-1666。 ⚠自治体の「赤ちゃんの駅」一覧の記載で、現地ではまだ確認していない。",
+  "verdict": "8階の誰でもトイレにおむつ交換台とベビーチェアがある(2026-11-26 現地確認)。女性トイレ側のおむつ替えは女性専用なので、パパは誰でもトイレへ。授乳室は自治体の「赤ちゃんの駅」一覧に記載あり(場所は現地未確認)。TEL 092-431-1666。",
   "video": {
    "youtube": null,
    "tiktok": null,
    "instagram": null
   },
   "thumb": null,
-  "wish": true,
+  "wish": false,
   "web": "https://www.city.fukuoka.lg.jp/kodomo-mirai/jigyo-tyosei/child/baby-station.html",
   "category": "play",
   "utility": true,
@@ -108393,12 +108393,17 @@
   ],
   "ages_src": "auto",
   "points": [
-   "おむつ替えあり",
-   "授乳室あり",
-   "⚠ 現地未確認(自治体の「赤ちゃんの駅」一覧より)"
+   "8階の誰でもトイレにおむつ交換台とベビーチェア(男女どちらも使える)",
+   "8階の女性トイレにもおむつ替えの表示(女性専用)",
+   "授乳室あり(自治体の「赤ちゃんの駅」一覧より・場所は現地未確認)"
   ],
-  "memo": "おむつ替え・授乳室がある店。買い物やお出かけの途中の立ち寄りに。",
-  "added": "2026-11-11"
+  "memo": "8階(博多味のタウン)の誰でもトイレでおむつ替えができる。パパだけのときはこちらへ。",
+  "added": "2026-11-11",
+  "photos": [
+   "shop-4a528e50dc_01_8階_誰でもトイレのおむつ交換台.jpg",
+   "shop-4a528e50dc_02_8階_誰でもトイレの入口.jpg",
+   "shop-4a528e50dc_03_8階_フロア案内.jpg"
+  ]
  },
  {
   "id": "shop-0c478ce193",
@@ -162095,5 +162100,49 @@
   "posted": "2026-11-22",
   "added": "2026-11-22",
   "tabelog": "https://tabelog.com/fukuoka/A4001/A400103/40042601/"
+ },
+ {
+  "id": "nadai-ramentei-hakataeki",
+  "name": "名代ラーメン亭 博多駅地下街店",
+  "area": "博多駅",
+  "city": "福岡市博多区",
+  "pref": "福岡県",
+  "genre": "ラーメン(博多豚骨)",
+  "lat": 33.58975,
+  "lng": 130.4203,
+  "address": "福岡県福岡市博多区博多駅中央街1-1 博多駅地下街",
+  "in": "hakataeki",
+  "visited": "2026-11-22",
+  "with": "solo",
+  "kids": {
+   "stroller": null,
+   "diaper": null,
+   "tatami": null,
+   "kidsChair": false,
+   "serveMin": null,
+   "noise": null
+  },
+  "verdict": "2026-11-22訪問。博多駅地下街の端にある老舗の博多ラーメン店。小説『君の膵臓をたべたい』で主人公とヒロインが福岡旅行で行った店として、漫画『クッキングパパ』にも登場(店頭の掲示より)。普通麺はもちっと弾力、スープはコクのあるあっさり豚骨、セットのチャーハンはしっかり味(実食)。⚠店内は狭く、並ぶこともあり相席をお願いされる。家族で行くならテーブル席を自分から頼むやり取りが必要。子供向けに用意されたものはほぼ無い。営業時間・定休日は要確認(以前の掲載では10:00〜20:30・無休)。",
+  "video": {
+   "youtube": null,
+   "tiktok": null,
+   "instagram": null
+  },
+  "thumb": "nadai-ramentei-hakataeki.jpg",
+  "wish": false,
+  "category": "gourmet",
+  "photos": [
+   "nadai-ramentei-hakataeki_01_外観.jpg",
+   "nadai-ramentei-hakataeki_02_小説に登場の掲示.jpg"
+  ],
+  "added": "2026-11-24",
+  "points": [
+   "⚠ 店内は狭く、混むと相席",
+   "⚠ 家族はテーブル席を自分から頼む必要あり",
+   "⚠ 子供向けの用意はほぼ無し"
+  ],
+  "memo": "博多駅地下街の老舗の博多ラーメン店。小説『君の膵臓をたべたい』や漫画『クッキングパパ』に登場(店頭の掲示より)。営業時間・定休日は要確認。",
+  "kidsLevel": 0,
+  "tabelog": "https://tabelog.com/fukuoka/A4001/A400101/40000216/"
  }
 ]

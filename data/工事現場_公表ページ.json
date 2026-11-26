@@ -1,42 +1,184 @@
 [
- {"no": "01", "name": "清流公園 南端広場", "must": "清流公園",
-  "pages": ["https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html"],
-  "news": ["清流公園 中洲"]},
- {"no": "02", "name": "天神(アミュプラザ天神・天神大樹・須崎公園2期)", "must": "アミュプラザ天神|天神大樹|エースホテル|須崎公園|イムズ跡",
-  "pages": ["https://www.amu-tenjin.com/"],
-  "news": ["アミュプラザ天神", "天神大樹 OR エースホテル福岡", "須崎公園"]},
- {"no": "03", "name": "マリノア跡 三井アウトレット+長垂海浜公園", "must": "マリノア|三井アウトレットパーク|長垂",
-  "pages": ["https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/nagatarekaihinkouen.html"],
-  "news": ["三井アウトレットパーク 福岡 マリノア", "長垂海浜公園"]},
- {"no": "04", "name": "福岡空港エリア(TABISIA+東平尾公園)", "must": "TABISIA|タビシア|東平尾公園|国内線.*複合施設",
-  "pages": ["https://www.fukuoka-airport.jp/tabisia/"],
-  "news": ["福岡空港 TABISIA OR タビシア", "東平尾公園"]},
- {"no": "05", "name": "アイランドシティ これからできるもの", "must": "アイランドシティ|照葉|はばたき公園",
+ {
+  "no": "01",
+  "name": "清流公園 南端広場",
+  "must": "清流公園",
+  "pages": [
+   "https://www.city.fukuoka.lg.jp/jutaku-toshi/midorikatuyou/shisei/miryokuahurerukouendukuri.html"
+  ],
+  "news": [
+   "清流公園 中洲"
+  ]
+ },
+ {
+  "no": "02",
+  "name": "天神(アミュプラザ天神・天神大樹・須崎公園2期)",
+  "must": "アミュプラザ天神|天神大樹|エースホテル|須崎公園|イムズ跡",
+  "pages": [
+   "https://www.amu-tenjin.com/"
+  ],
+  "news": [
+   "アミュプラザ天神",
+   "天神大樹 OR エースホテル福岡",
+   "須崎公園"
+  ]
+ },
+ {
+  "no": "03",
+  "name": "マリノア跡 三井アウトレット+長垂海浜公園",
+  "must": "マリノア|三井アウトレットパーク|長垂",
+  "pages": [
+   "https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/nagatarekaihinkouen.html"
+  ],
+  "news": [
+   "三井アウトレットパーク 福岡 マリノア",
+   "長垂海浜公園"
+  ]
+ },
+ {
+  "no": "04",
+  "name": "福岡空港エリア(TABISIA+東平尾公園)",
+  "must": "TABISIA|タビシア|東平尾公園|国内線.*複合施設",
+  "pages": [
+   "https://www.fukuoka-airport.jp/tabisia/"
+  ],
+  "news": [
+   "福岡空港 TABISIA OR タビシア",
+   "東平尾公園"
+  ]
+ },
+ {
+  "no": "05",
+  "name": "アイランドシティ これからできるもの",
+  "must": "アイランドシティ|照葉|はばたき公園",
   "pages": [],
-  "news": ["アイランドシティ (開業 OR 着工 OR 完成 OR 公園)", "はばたき公園"]},
- {"no": "06", "name": "箱崎・貝塚(九大跡地+JR貝塚新駅)", "must": "九大.*跡地|九州大学箱崎|箱崎キャンパス|貝塚.*新駅|貝塚駅",
+  "news": [
+   "アイランドシティ (開業 OR 着工 OR 完成 OR 公園)",
+   "はばたき公園"
+  ]
+ },
+ {
+  "no": "06",
+  "name": "箱崎・貝塚(九大跡地+JR貝塚新駅)",
+  "must": "九大.*跡地|九州大学箱崎|箱崎キャンパス|貝塚.*新駅|貝塚駅",
   "pages": [],
-  "news": ["九大箱崎キャンパス跡地", "JR 貝塚 新駅"]},
- {"no": "07", "name": "博多駅南 音羽公園", "must": "音羽公園",
+  "news": [
+   "九大箱崎キャンパス跡地",
+   "JR 貝塚 新駅"
+  ]
+ },
+ {
+  "no": "07",
+  "name": "博多駅南 音羽公園",
+  "must": "音羽公園",
   "pages": [],
-  "news": ["音羽公園 博多"]},
- {"no": "08", "name": "香椎浜北公園 ウミノテラス", "must": "香椎浜北公園|ウミノテラス",
-  "pages": ["https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/kasiihamakitakouen.html"],
-  "news": ["香椎浜北公園 OR ウミノテラス"]},
- {"no": "09", "name": "新天町・福岡パルコ", "must": "新天町|パルコ|PARCO",
+  "news": [
+   "音羽公園 博多"
+  ]
+ },
+ {
+  "no": "08",
+  "name": "香椎浜北公園 ウミノテラス",
+  "must": "香椎浜北公園|ウミノテラス",
+  "pages": [
+   "https://www.city.fukuoka.lg.jp/jutaku-toshi/park-pfi/shisei/kasiihamakitakouen.html"
+  ],
+  "news": [
+   "香椎浜北公園 OR ウミノテラス"
+  ]
+ },
+ {
+  "no": "09",
+  "name": "新天町・福岡パルコ",
+  "must": "新天町|パルコ|PARCO",
   "pages": [],
-  "news": ["福岡パルコ (閉館 OR 再開発 OR 建て替え)", "新天町 (再開発 OR 閉店 OR 仮店舗)"]},
- {"no": "10", "name": "福岡高速3号線 空港線延伸", "must": "空港線|福岡高速3号|3号線延伸",
-  "pages": ["https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/jyokyo.shtml", "https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/gaiyou.shtml",
-            "https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/douga.shtml"],
-  "news": ["福岡高速 空港線 延伸"]},
- {"no": "12", "name": "ホテル開業ウォッチ", "must": "&Here|アンドヒア|エースホテル|ソラリア西鉄ホテル福岡エアポート|LIVINCOURT|ANAクラウンプラザ福岡|インターコンチネンタル福岡|カイタック",
+  "news": [
+   "福岡パルコ (閉館 OR 再開発 OR 建て替え)",
+   "新天町 (再開発 OR 閉店 OR 仮店舗)"
+  ]
+ },
+ {
+  "no": "10",
+  "name": "福岡高速3号線 空港線延伸",
+  "must": "空港線|福岡高速3号|3号線延伸",
+  "pages": [
+   "https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/jyokyo.shtml",
+   "https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/gaiyou.shtml",
+   "https://www.fk-tosikou.or.jp/kigyo/torikumi/3gou/douga.shtml"
+  ],
+  "news": [
+   "福岡高速 空港線 延伸"
+  ]
+ },
+ {
+  "no": "12",
+  "name": "ホテル開業ウォッチ",
+  "must": "&Here|アンドヒア|エースホテル|ソラリア西鉄ホテル福岡エアポート|LIVINCOURT|ANAクラウンプラザ福岡|インターコンチネンタル福岡|カイタック",
   "pages": [],
-  "news": ["福岡 ホテル (開業 OR 着工 OR 建替) (エースホテル OR インターコンチネンタル OR ANAクラウンプラザ OR カイタック OR \"&Here\")"]},
- {"no": "13", "name": "九産大 産学共創センター+くすの葉広場", "must": "九州産業大学|九産大",
-  "pages": ["https://prtimes.jp/main/html/rd/p/000000008.000157401.html"],
-  "news": ["九州産業大学 (産学共創センター OR くすの葉広場)"]},
- {"no": "14", "name": "千鳥橋JCT", "must": "千鳥橋",
-  "pages": ["https://www.fk-tosikou.or.jp/douro/oshirase/000901.shtml", "http://www.fk-tosikou-re-2026.jp/"],
-  "news": ["千鳥橋JCT OR 千鳥橋ジャンクション"]}
+  "news": [
+   "福岡 ホテル (開業 OR 着工 OR 建替) (エースホテル OR インターコンチネンタル OR ANAクラウンプラザ OR カイタック OR \"&Here\")"
+  ]
+ },
+ {
+  "no": "13",
+  "name": "九産大 産学共創センター+くすの葉広場",
+  "must": "九州産業大学|九産大",
+  "pages": [
+   "https://prtimes.jp/main/html/rd/p/000000008.000157401.html"
+  ],
+  "news": [
+   "九州産業大学 (産学共創センター OR くすの葉広場)"
+  ]
+ },
+ {
+  "no": "14",
+  "name": "千鳥橋JCT",
+  "must": "千鳥橋",
+  "pages": [
+   "https://www.fk-tosikou.or.jp/douro/oshirase/000901.shtml",
+   "http://www.fk-tosikou-re-2026.jp/"
+  ],
+  "news": [
+   "千鳥橋JCT OR 千鳥橋ジャンクション"
+  ]
+ },
+ {
+  "no": "18",
+  "name": "新宮スマートIC+三代・的野線(国道3号 大森交差点)",
+  "must": "新宮スマート|新宮町.*(IC|インター)|三代.*的野|三代土地区画|ナフコ.*新宮|新宮.*ナフコ",
+  "pages": [
+   "https://www.town.shingu.fukuoka.jp/soshiki/toshi_seibi/6/smartic/",
+   "https://www.town.shingu.fukuoka.jp/soshiki/toshi_seibi/6/1/tochikukakuseirizigyou/5159.html"
+  ],
+  "news": [
+   "新宮スマートIC OR 新宮スマートインターチェンジ",
+   "新宮町 (三代的野線 OR 三代土地区画整理 OR ナフコ)"
+  ]
+ },
+ {
+  "no": "19",
+  "name": "西九州道 今宿道路の高架延伸(糸島)",
+  "must": "今宿道路|二丈IC|前原東|西九州(自動車)?道.*(延伸|開通|高架|工事|切替|規制|事業)|国道202号.*(糸島|切替|規制)",
+  "pages": [
+   "https://www.qsr.mlit.go.jp/fukkoku/"
+  ],
+  "news": [
+   "西九州自動車道 (今宿道路 OR 糸島 OR 二丈)"
+  ]
+ },
+ {
+  "no": "21",
+  "name": "道路・渋滞対策の新しい公表(都市高速・国道3号・福岡空港まわり)",
+  "must": "渋滞対策|主要渋滞|車線運用|(都市高速|福岡高速|東浜|貝塚JCT|呉服町|香椎線|千鳥橋).*(延伸|新設|車線|拡幅|改良|対策|計画|事業化|出入口|ランプ|運用)|博多バイパス|国道3号.*(立体|拡幅|4車線|6車線|バイパス|渋滞)|福岡空港.*(連絡バス|アクセス道路|専用道|連絡通路)",
+  "pages": [
+   "https://www.fk-tosikou.or.jp/kigyo/torikumi/jiko-taisaku/fukuoka.shtml",
+   "https://www.fk-tosikou.or.jp/douro/oshirase/"
+  ],
+  "news": [
+   "福岡都市高速 (渋滞対策 OR 車線 OR 延伸 OR 新設 OR 出入口)",
+   "福岡県交通渋滞対策協議会 OR \"主要渋滞箇所\" 福岡",
+   "国道3号 福岡 (立体化 OR 拡幅 OR バイパス OR 渋滞対策)",
+   "福岡空港 (国内線 国際線 連絡 OR アクセス道路 OR 専用道)"
+  ]
+ }
 ]

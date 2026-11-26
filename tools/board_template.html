@@ -141,13 +141,15 @@ function render(){
   if (!D){ document.querySelector('.wrap').insertAdjacentHTML('beforeend','<p class="empty">データがまだありません。</p>'); return; }
   $('built').textContent = `更新 ${D.built}`;
   const SL = D.shotlist || [];
+  // 立つ場所: 住所はナビに入れられるようにそのまま出す(タップで地図)。駐車は確かめた分だけ
+  const spots = a => (a||[]).length ? `<div class="meta"><b>立つ場所・駐車</b><ul class="sl">${a.map(x=>`<li><b>${esc(x.at)}</b>${x.addr ? `<br>住所: <a href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(x.addr)}" target="_blank" rel="noopener">${esc(x.addr)}</a>` : ''}${x.park ? `<br>駐車: ${esc(x.park)}` : ''}${x.memo ? `<br>${esc(x.memo)}` : ''}</li>`).join('')}</ul></div>` : '';
   const ul = (t, a) => (a||[]).length ? `<div class="meta"><b>${t}</b><ul class="sl">${a.map(x=>`<li>${esc(x)}</li>`).join('')}</ul></div>` : '';
   $('l-shotlist').innerHTML = SL.map(r => `<div class="item" data-st="${esc(r.st)}">
       <div class="when ${r.left!=null && r.left<=14 ? 'urgent':''}"><b>${r.left==null ? '—' : md(r.limit)}</b><span>${r.left==null ? '期限なし' : r.left<=0 ? '今日まで' : 'あと'+r.left+'日'}</span></div>
       <div class="row">${chip(r.st)}<span class="chip kind">${esc(r.area)}</span></div>
       <div class="name">${esc(r.name)}</div>
       <div class="meta">${esc(r.why)} ${src(r.url)}</div>
-      ${ul('撮るもの', r.shots)}${ul('現地で聞くこと', r.ask)}
+      ${spots(r.spots)}${ul('撮るもの', r.shots)}${ul('現地で聞くこと', r.ask)}
       ${r.note ? `<div class="meta">メモ: ${esc(r.note)}</div>` : ''}</div>`).join('') || '<p class="empty">撮影リストは空です。</p>';
   $('n-shotlist').textContent = `${SL.length}件`;
   const cl = D.closings, dated = cl.filter(r => r.left != null), unk = cl.filter(r => r.left == null);
